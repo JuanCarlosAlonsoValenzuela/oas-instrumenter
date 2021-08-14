@@ -73,131 +73,128 @@ paths:
           schema:
             $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
 
-  #        '400':
-  #          description: >-
-  #            Bad request, for example invalid location type, service type or country.
-  #          headers:
-  #            Content-Type:
-  #              type: string
-  #              default: application/problem+json
-  #          schema:
-  #            type: object
-  #            allOf:
-  #              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-  #            example:
-  #              status: 400
-  #              title: 'Unknown Service Type'
-  #              detail: 'Provided serviceType xyz is not known.'
-  #
-  #        '401':
-  #          description: >-
-  #            Unauthorized. Provided key is invalid for requested resource.
-  #          headers:
-  #            Content-Type:
-  #              type: string
-  #              default: application/problem+json
-  #          schema:
-  #            type: object
-  #            allOf:
-  #              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-  #            example:
-  #              status: 401
-  #              title: 'Unauthorized'
-  #              detail: 'Invalid token'
-  #
-  #        '500':
-  #          description: >-
-  #            Internal Server Error
-  #          headers:
-  #            Content-Type:
-  #              type: string
-  #              default: application/problem+json
-  #          schema:
-  #            type: object
-  #            allOf:
-  #              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-  #            example:
-  #              status: 500
-  #              title: 'Internal Server Error'
-  #              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
+        '400':
+          description: "Bad request, for example invalid location type, service type or country."
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 400
+              title: 'Unknown Service Type'
+              detail: 'Provided serviceType xyz is not known.'
 
-#  '/find-by-geo':
-#    x-summary: DHL Service Point locations found by geo coordinates
-#
-#    get:
-#      summary: Search for DHL Service Point locations by geo coordinates
-#      operationId: findByGeo
-#
-#      tags:
-#        - locations
-#
-#      produces:
-#        - application/json
-#
-#      parameters:
-#        - $ref: '#/parameters/latitude'
-#        - $ref: '#/parameters/longitude'
-#        - $ref: '#/parameters/providerType'
-#        - $ref: '#/parameters/locationType'
-#        - $ref: '#/parameters/serviceType'
-#        - $ref: '#/parameters/radius'
-#        - $ref: '#/parameters/limit'
-#
-#      responses:
-#        '200':
-#          description: >-
-#            List of DHL Service Point locations.
-#          schema:
-#            $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
-#
-#        '400':
-#          description: >-
-#            Bad request, for example invalid location type, service type or country.
-#          headers:
-#            Content-Type:
-#              type: string
-#              default: application/problem+json
-#          schema:
-#            type: object
-#            allOf:
-#              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-#            example:
-#              status: 400
-#              title: 'Unknown Service Type'
-#              detail: 'Provided serviceType xyz is not known.'
-#
-#        '401':
-#          description: >-
-#            Unauthorized. Provided key is invalid.
-#          headers:
-#            Content-Type:
-#              type: string
-#              default: application/problem+json
-#          schema:
-#            type: object
-#            allOf:
-#              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-#            example:
-#              status: 401
-#              title: 'Unauthorized'
-#              detail: 'Invalid token'
-#
-#        '500':
-#          description: >-
-#            Internal Server Error
-#          headers:
-#            Content-Type:
-#              type: string
-#              default: application/problem+json
-#          schema:
-#            type: object
-#            allOf:
-#              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-#            example:
-#              status: 500
-#              title: 'Internal Server Error'
-#              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
-#
+        '401':
+          description: "Unauthorized. Provided key is invalid for requested resource."
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 401
+              title: 'Unauthorized'
+              detail: 'Invalid token'
+
+        '500':
+          description: "Internal Server Error"
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 500
+              title: 'Internal Server Error'
+              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
+
+  '/find-by-geo':
+    x-summary: DHL Service Point locations found by geo coordinates
+
+    get:
+      summary: Search for DHL Service Point locations by geo coordinates
+      operationId: findByGeo
+
+      tags:
+        - locations
+
+      produces:
+        - application/json
+
+      parameters:
+        - $ref: '#/parameters/latitude'
+        - $ref: '#/parameters/longitude'
+        - $ref: '#/parameters/providerType'
+        - $ref: '#/parameters/locationType'
+        - $ref: '#/parameters/serviceType'
+        - $ref: '#/parameters/radius'
+        - $ref: '#/parameters/limit'
+
+      responses:
+        '200':
+          description: >-
+            List of DHL Service Point locations.
+          schema:
+            $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
+
+        '400':
+          description: >-
+            Bad request, for example invalid location type, service type or country.
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 400
+              title: 'Unknown Service Type'
+              detail: 'Provided serviceType xyz is not known.'
+
+        '401':
+          description: >-
+            Unauthorized. Provided key is invalid.
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 401
+              title: 'Unauthorized'
+              detail: 'Invalid token'
+
+        '500':
+          description: >-
+            Internal Server Error
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 500
+              title: 'Internal Server Error'
+              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
+
 #  '/find-by-keyword-id':
 #    x-summary: DHL Service Point locations found by keywordId, countryCode and postalCode
 #
@@ -275,7 +272,7 @@ paths:
 #              status: 500
 #              title: 'Internal Server Error'
 #              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
-#
+
 #  '/locations/{id}':
 #    x-summary: One DHL Service Point location
 #    parameters:
@@ -578,15 +575,15 @@ definitions:
               #                  /definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/countryCode
               postalCode:
                 type: string
-                  #                $ref: >-
+                #                $ref: >-
                 #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/postalCode
               addressLocality:
                 type: string
-                  #                $ref: >-
+                #                $ref: >-
                 #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/addressLocality
               streetAddress:
                 type: string
-                  #                $ref: >-
+                #                $ref: >-
                 #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/streetAddress
           geo:
             type: object

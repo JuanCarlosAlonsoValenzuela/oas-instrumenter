@@ -10,6 +10,8 @@ import java.util.Map.Entry;
 
 import java.util.*;
 
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
+
 public class DeclsClass {
 
     private String packageName;
@@ -50,7 +52,7 @@ public class DeclsClass {
     // DeclsClass for ENTER
     public static DeclsClass getDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
                                                        String variableNameInput, List<Parameter> parameters, String variableNameOutput,
-                                                       ApiResponses apiResponses, int exitNumber) {
+                                                       ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
         String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableNameInput + ")";
@@ -67,8 +69,10 @@ public class DeclsClass {
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
                 DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), variableNameOutput,
-                        mapOfProperties, exitNumber);
+                        mapOfProperties, numberOfExits);
                 declsExits.add(declsExit);
+
+                numberOfExits = numberOfExits + 1;
 
             }
 

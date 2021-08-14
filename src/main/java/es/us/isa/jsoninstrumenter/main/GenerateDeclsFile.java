@@ -22,11 +22,13 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+//    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
+    public static int numberOfExits;
 
     public static void main(String[] args) {
+        numberOfExits = 1;
 
         ParseOptions parseOptions = new ParseOptions();
         parseOptions.setResolveFully(true);
@@ -71,16 +73,11 @@ public class GenerateDeclsFile {
                 declsClasses.addAll(declsClassOutput);
 
                 ///////////////////////// ENTER AND EXIT /////////////////////////////
-//                DeclsClass declsClassEnter = getDeclsClassEnterAndExit("main", operationEndpoint, operationName, "Input", operation.getParameters());
-
                 // TODO: Derive the output name automatically (list of outputs)
                 // TODO: Check that the exit numbers correspond (Create a map?)
                 DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit("main", operationEndpoint, operationName,
-                        "Input", operation.getParameters(), "Output_200", operation.getResponses(), 1);
+                        "Input", operation.getParameters(), "Output_200", operation.getResponses());
 
-//                DeclsExit declsExit = new DeclsExit("main", operationEndpoint, operationName, "Input", "input", 1,operation.getParameters());
-
-//                declsClassEnter.setDeclsExits(Collections.singletonList(declsExit));
                 declsClasses.add(declsClassEnterAndExit);
 
 

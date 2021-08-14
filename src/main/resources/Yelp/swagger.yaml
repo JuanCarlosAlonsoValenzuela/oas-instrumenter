@@ -161,8 +161,8 @@ paths:
           description: Returns all businesses
           schema:
             $ref: '#/definitions/BusinessesResult'
-#        400:
-#          description: bad request
+        400:
+          description: bad request
 #  /businesses/matches:
 #    get:
 #      operationId: getbusinessesMatches
