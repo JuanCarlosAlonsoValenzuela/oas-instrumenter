@@ -152,11 +152,11 @@ public class DeclsClass {
         }
 
         for(DeclsEnter declsEnter: declsEnters) {
-            res = res + "\n" + declsEnter;
+            res = res + "\n" + declsEnter + "\n";
         }
 
         for(DeclsExit declsExit: declsExits) {
-            res = res + "\n" + declsExit;
+            res = res + "\n" + declsExit + "\n";
         }
 
         return  res;
