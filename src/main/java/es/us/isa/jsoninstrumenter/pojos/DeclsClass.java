@@ -1,14 +1,11 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
-import io.swagger.annotations.Api;
-import io.swagger.v3.oas.models.media.Content;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
 
-import javax.print.attribute.standard.Media;
 import java.util.Map.Entry;
 
 import java.util.*;

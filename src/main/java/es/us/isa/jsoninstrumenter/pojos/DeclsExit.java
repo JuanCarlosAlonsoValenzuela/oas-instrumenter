@@ -1,9 +1,7 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
 import io.swagger.v3.oas.models.media.Schema;
-import io.swagger.v3.oas.models.parameters.Parameter;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 

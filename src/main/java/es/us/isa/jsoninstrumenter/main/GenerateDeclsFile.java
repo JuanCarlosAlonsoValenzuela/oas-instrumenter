@@ -2,21 +2,18 @@ package es.us.isa.jsoninstrumenter.main;
 
 import es.us.isa.jsoninstrumenter.pojos.Comparability;
 import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
-import es.us.isa.jsoninstrumenter.pojos.DeclsExit;
 import es.us.isa.jsoninstrumenter.pojos.DeclsFile;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem.HttpMethod;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
-import io.swagger.v3.oas.models.responses.ApiResponses;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map.Entry;
 
