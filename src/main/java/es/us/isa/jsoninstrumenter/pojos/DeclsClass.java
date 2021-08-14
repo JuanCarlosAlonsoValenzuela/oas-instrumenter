@@ -19,23 +19,46 @@ public class DeclsClass {
     private List<DeclsEnter> declsEnters;
     private List<DeclsExit> declsExits;
 
-    // DeclsClass with List of parameters
+    // DeclsClass with List of parameters (Input)
     public DeclsClass(String packageName, String className, String objectName, List<Parameter> parameters){
         this.packageName = packageName;
         this.className = className;
         this.declsEnters = new ArrayList<>();
         this.declsExits = new ArrayList<>();
-        this.declsObjects = Collections.singletonList(new DeclsObject(packageName, objectName, parameters));
+        this.declsObjects = Collections.singletonList(new DeclsObject(packageName, objectName, "this", parameters));
 
     }
 
-    // DeclsClass with only DeclsObject
+    // DeclsClass with only DeclsObject (Output)
     public DeclsClass(String packageName, String className, DeclsObject declsObject) {
         this.packageName = packageName;
         this.className = className;
         this.declsEnters = new ArrayList<>();
         this.declsExits = new ArrayList<>();
         this.declsObjects = Collections.singletonList(declsObject);
+
+    }
+
+    public DeclsClass(String packageName, String className) {
+        this.packageName = packageName;
+        this.className = className;
+        this.declsEnters = new ArrayList<>();
+        this.declsExits = new ArrayList<>();
+        this.declsObjects = new ArrayList<>();
+
+    }
+
+    // DeclsClass for ENTER
+    public static DeclsClass getDeclsClassEnter(String packageName, String endpoint, String operationName, String variableName, List<Parameter> parameters) {
+        DeclsClass declsClass = new DeclsClass(packageName, endpoint);
+
+//        String enterName = packageName + "." + endpoint + "." + operationName + "(" + packageName + ".Input)";
+        String enterName = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableName + ")";
+
+        DeclsEnter declsEnter = new DeclsEnter(packageName, enterName, variableName, "input", parameters);
+        declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
+
+        return declsClass;
 
     }
 

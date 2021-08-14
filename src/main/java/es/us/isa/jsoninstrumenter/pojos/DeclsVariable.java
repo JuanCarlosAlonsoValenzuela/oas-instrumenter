@@ -17,14 +17,14 @@ public class DeclsVariable {
 
     // TODO: Change to simple constructor
     // TODO: Array, boolean and object
-    public static List<DeclsVariable> getListOfDeclsVariables(String packageName, String objectName, List<Parameter> parameters) {
+    public static List<DeclsVariable> getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         // Father parameter
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
-        DeclsVariable father = new DeclsVariable("this", "variable", packageName + "." + objectName, "java.lang.String", null);
+        DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." + objectName, "java.lang.String", null);
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
         for(Parameter parameter: parameters) {
-            DeclsVariable declsVariable = new DeclsVariable("this."+ parameter.getName(), "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()), translateDatatype(parameter.getSchema().getType()), father.getVariableName());
+            DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(), "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()), translateDatatype(parameter.getSchema().getType()), father.getVariableName());
             enclosedVariables.add(declsVariable);
         }
 

@@ -16,10 +16,10 @@ public class DeclsObject {
     private List<DeclsVariable> declsVariables;
 
     // DeclsObject With input Variables
-    public DeclsObject(String packageName, String objectName, List<Parameter> parameters) {
+    public DeclsObject(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = getListOfDeclsVariables(packageName, objectName, parameters);
+        this.declsVariables = getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters);
 
     }
 

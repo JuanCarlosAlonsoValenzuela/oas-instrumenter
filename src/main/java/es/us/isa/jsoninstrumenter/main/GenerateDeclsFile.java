@@ -20,12 +20,13 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.getDeclsClassEnter;
 
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-//    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
 
     public static void main(String[] args) {
@@ -35,9 +36,6 @@ public class GenerateDeclsFile {
         parseOptions.setFlatten(true);
         OpenAPI specification = new OpenAPIV3Parser().read(openApiSpecPath, null, parseOptions);
 
-        // For operation
-        // Extract parameters
-        // Extract response
 
         Paths paths = specification.getPaths();
         // A path (endpoint) contains several operations (http methods/verbs)
@@ -53,12 +51,12 @@ public class GenerateDeclsFile {
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
+                String operationEndpoint = path.getKey().replace("/", "");
 //                System.out.println(operation);
 
                 // Set the operation name for the .decls file
                 String operationName;
                 if (operation.getOperationId() == null) {
-                    String operationEndpoint = path.getKey();
                     String httpMethod = operationEntry.getKey().toString();
                     operationName = operationEndpoint + "_" + httpMethod;
                 } else {
@@ -73,10 +71,14 @@ public class GenerateDeclsFile {
 
                 ///////////////////////// OUTPUT /////////////////////////////
                 List<DeclsClass> declsClassOutput = generateOutputDeclsClasses("main", operation.getResponses());
-
                 declsClasses.addAll(declsClassOutput);
 
+                ///////////////////////// ENTER /////////////////////////////
+                DeclsClass declsClassEnter = getDeclsClassEnter("main", operationEndpoint, operationName, "Input", operation.getParameters());
+                declsClasses.add(declsClassEnter);
 
+
+                // PRINT TRACE
                 DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
                 System.out.println(declsFile);
 
