@@ -3,6 +3,7 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class DeclsObject {
     public DeclsObject(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters);
+        this.declsVariables = Collections.singletonList(getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters));
 
     }
 

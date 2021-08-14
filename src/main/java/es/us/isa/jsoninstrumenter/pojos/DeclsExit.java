@@ -1,12 +1,26 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.parameters.Parameter;
+
 import java.util.List;
+
+import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
 
 public class DeclsExit {
 
     private String exitName;
     private int exitNumber;
-    private List<DeclsVariable> declsVariables;
+    private DeclsVariable inputDeclsVariable;
+    private DeclsVariable outputDeclsVariable;
+
+
+    public DeclsExit(String packageName, String endpoint, String operationName, String variableName, String rootVariableName, int exitNumber, List<Parameter> parameters) {
+        // TODO: convert exit name to function (same as enterName)
+        String exitName = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableName + ")";
+        this.exitName = exitName;
+        this.exitNumber = exitNumber;
+        this.inputDeclsVariable = getListOfDeclsVariables(packageName, variableName, rootVariableName, parameters);
+    }
 
     public String getExitName() {
         return exitName;
@@ -24,12 +38,20 @@ public class DeclsExit {
         this.exitNumber = exitNumber;
     }
 
-    public List<DeclsVariable> getDeclsVariables() {
-        return declsVariables;
+    public DeclsVariable getInputDeclsVariable() {
+        return inputDeclsVariable;
     }
 
-    public void setDeclsVariables(List<DeclsVariable> declsVariables) {
-        this.declsVariables = declsVariables;
+    public void setInputDeclsVariable(DeclsVariable inputDeclsVariable) {
+        this.inputDeclsVariable = inputDeclsVariable;
+    }
+
+    public DeclsVariable getOutputDeclsVariable() {
+        return outputDeclsVariable;
+    }
+
+    public void setOutputDeclsVariable(DeclsVariable outputDeclsVariable) {
+        this.outputDeclsVariable = outputDeclsVariable;
     }
 
     // TODO: Consider changing the type from subexit to subexit in certain cases
@@ -37,9 +59,10 @@ public class DeclsExit {
         String res = "ppt " + exitName + ":::EXIT" + exitNumber + "\n" +
                 "ppt-type subexit";
 
-        for(DeclsVariable declsVariable: declsVariables) {
-            res = res + "\n" + declsVariable;
-        }
+
+        res = res + "\n" + inputDeclsVariable;
+        res = res + "\n" + outputDeclsVariable;
+
 
         return res;
     }

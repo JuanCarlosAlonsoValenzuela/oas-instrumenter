@@ -2,6 +2,7 @@ package es.us.isa.jsoninstrumenter.main;
 
 import es.us.isa.jsoninstrumenter.pojos.Comparability;
 import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
+import es.us.isa.jsoninstrumenter.pojos.DeclsExit;
 import es.us.isa.jsoninstrumenter.pojos.DeclsFile;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem.HttpMethod;
@@ -73,8 +74,12 @@ public class GenerateDeclsFile {
                 List<DeclsClass> declsClassOutput = generateOutputDeclsClasses("main", operation.getResponses());
                 declsClasses.addAll(declsClassOutput);
 
-                ///////////////////////// ENTER /////////////////////////////
+                ///////////////////////// ENTER AND EXIT /////////////////////////////
                 DeclsClass declsClassEnter = getDeclsClassEnter("main", operationEndpoint, operationName, "Input", operation.getParameters());
+
+                DeclsExit declsExit = new DeclsExit("main", operationEndpoint, operationName, "Input", "input", 1,operation.getParameters());
+
+                declsClassEnter.setDeclsExits(Collections.singletonList(declsExit));
                 declsClasses.add(declsClassEnter);
 
 

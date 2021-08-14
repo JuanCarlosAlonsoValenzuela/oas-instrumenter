@@ -17,7 +17,7 @@ public class DeclsVariable {
 
     // TODO: Change to simple constructor
     // TODO: Array, boolean and object
-    public static List<DeclsVariable> getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
+    public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         // Father parameter
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." + objectName, "java.lang.String", null);
@@ -29,7 +29,7 @@ public class DeclsVariable {
         }
 
         father.setEnclosedVariables(enclosedVariables);
-        return Collections.singletonList(father);
+        return father;
 
     }
 

@@ -52,7 +52,6 @@ public class DeclsClass {
     public static DeclsClass getDeclsClassEnter(String packageName, String endpoint, String operationName, String variableName, List<Parameter> parameters) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-//        String enterName = packageName + "." + endpoint + "." + operationName + "(" + packageName + ".Input)";
         String enterName = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableName + ")";
 
         DeclsEnter declsEnter = new DeclsEnter(packageName, enterName, variableName, "input", parameters);
