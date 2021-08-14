@@ -20,8 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map.Entry;
 
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.getDeclsClassEnter;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 
 public class GenerateDeclsFile {
 
@@ -75,12 +74,17 @@ public class GenerateDeclsFile {
                 declsClasses.addAll(declsClassOutput);
 
                 ///////////////////////// ENTER AND EXIT /////////////////////////////
-                DeclsClass declsClassEnter = getDeclsClassEnter("main", operationEndpoint, operationName, "Input", operation.getParameters());
+//                DeclsClass declsClassEnter = getDeclsClassEnterAndExit("main", operationEndpoint, operationName, "Input", operation.getParameters());
 
-                DeclsExit declsExit = new DeclsExit("main", operationEndpoint, operationName, "Input", "input", 1,operation.getParameters());
+                // TODO: Derive the output name automatically (list of outputs)
+                // TODO: Check that the exit numbers correspond (Create a map?)
+                DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit("main", operationEndpoint, operationName,
+                        "Input", operation.getParameters(), "Output_200", operation.getResponses(), 1);
 
-                declsClassEnter.setDeclsExits(Collections.singletonList(declsExit));
-                declsClasses.add(declsClassEnter);
+//                DeclsExit declsExit = new DeclsExit("main", operationEndpoint, operationName, "Input", "input", 1,operation.getParameters());
+
+//                declsClassEnter.setDeclsExits(Collections.singletonList(declsExit));
+                declsClasses.add(declsClassEnterAndExit);
 
 
                 // PRINT TRACE

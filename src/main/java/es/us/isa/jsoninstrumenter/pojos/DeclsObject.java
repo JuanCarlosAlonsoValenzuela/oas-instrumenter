@@ -7,8 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.generateDeclsVariablesOfOutput;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 
 public class DeclsObject {
 
@@ -28,7 +27,7 @@ public class DeclsObject {
     public DeclsObject(String packageName, String objectName, Map<String, Schema> mapOfProperties) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = generateDeclsVariablesOfOutput(packageName, objectName, mapOfProperties);
+        this.declsVariables = generateDeclsVariablesOfOuptput("this", "variable", packageName, objectName, mapOfProperties);
 
     }
 

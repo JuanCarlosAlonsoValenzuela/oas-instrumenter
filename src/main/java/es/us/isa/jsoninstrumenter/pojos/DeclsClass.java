@@ -7,6 +7,8 @@ import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
+
+import javax.print.attribute.standard.Media;
 import java.util.Map.Entry;
 
 import java.util.*;
@@ -49,13 +51,33 @@ public class DeclsClass {
     }
 
     // DeclsClass for ENTER
-    public static DeclsClass getDeclsClassEnter(String packageName, String endpoint, String operationName, String variableName, List<Parameter> parameters) {
+    public static DeclsClass getDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
+                                                       String variableNameInput, List<Parameter> parameters, String variableNameOutput,
+                                                       ApiResponses apiResponses, int exitNumber) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-        String enterName = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableName + ")";
+        String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableNameInput + ")";
 
-        DeclsEnter declsEnter = new DeclsEnter(packageName, enterName, variableName, "input", parameters);
+        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration, variableNameInput, "input", parameters);
         declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
+
+        // for loop that adds all the possible subexits
+        List<DeclsExit> declsExits = new ArrayList<>();
+
+        for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
+            String objectName = "Output_" + apiResponse.getKey();
+
+            for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
+                Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
+                DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), variableNameOutput,
+                        mapOfProperties, exitNumber);
+                declsExits.add(declsExit);
+
+            }
+
+        }
+
+        declsClass.setDeclsExits(declsExits);
 
         return declsClass;
 

@@ -1,25 +1,34 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 
 public class DeclsExit {
 
     private String exitName;
     private int exitNumber;
-    private DeclsVariable inputDeclsVariable;
-    private DeclsVariable outputDeclsVariable;
+    private List<DeclsVariable> enterDeclsVariables;
+    private List<DeclsVariable> exitDeclsVariables;
 
 
-    public DeclsExit(String packageName, String endpoint, String operationName, String variableName, String rootVariableName, int exitNumber, List<Parameter> parameters) {
+    public DeclsExit(String packageName, String EnterExitPptDeclaration, List<DeclsVariable> enterVariables,
+                     String variableNameOutput, Map<String, Schema> mapOfProperties, int exitNumber) {
         // TODO: convert exit name to function (same as enterName)
-        String exitName = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableName + ")";
-        this.exitName = exitName;
+        this.exitName = EnterExitPptDeclaration;
         this.exitNumber = exitNumber;
-        this.inputDeclsVariable = getListOfDeclsVariables(packageName, variableName, rootVariableName, parameters);
+        this.enterDeclsVariables = enterVariables;
+
+        // TODO: Change singleton to normal list (a method can have several exits)
+        // TODO: for loop increasing exitNumber
+        this.exitDeclsVariables = generateDeclsVariablesOfOuptput("return", "return", packageName, variableNameOutput, mapOfProperties);
+//
+
     }
 
     public String getExitName() {
@@ -38,20 +47,20 @@ public class DeclsExit {
         this.exitNumber = exitNumber;
     }
 
-    public DeclsVariable getInputDeclsVariable() {
-        return inputDeclsVariable;
+    public List<DeclsVariable> getEnterDeclsVariables() {
+        return enterDeclsVariables;
     }
 
-    public void setInputDeclsVariable(DeclsVariable inputDeclsVariable) {
-        this.inputDeclsVariable = inputDeclsVariable;
+    public void setEnterDeclsVariables(List<DeclsVariable> enterDeclsVariables) {
+        this.enterDeclsVariables = enterDeclsVariables;
     }
 
-    public DeclsVariable getOutputDeclsVariable() {
-        return outputDeclsVariable;
+    public List<DeclsVariable> getExitDeclsVariables() {
+        return exitDeclsVariables;
     }
 
-    public void setOutputDeclsVariable(DeclsVariable outputDeclsVariable) {
-        this.outputDeclsVariable = outputDeclsVariable;
+    public void setExitDeclsVariables(List<DeclsVariable> exitDeclsVariables) {
+        this.exitDeclsVariables = exitDeclsVariables;
     }
 
     // TODO: Consider changing the type from subexit to subexit in certain cases
@@ -60,9 +69,16 @@ public class DeclsExit {
                 "ppt-type subexit";
 
 
-        res = res + "\n" + inputDeclsVariable;
-        res = res + "\n" + outputDeclsVariable;
+//        res = res + "\n" + enterDeclsVariables;
+//        res = res + "\n" + exitDeclsVariables;
 
+        for(DeclsVariable enterDeclsVariable: this.enterDeclsVariables) {
+            res = res + "\n" + enterDeclsVariable;
+        }
+
+        for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
+            res = res + "\n" + exitDeclsVariable;
+        }
 
         return res;
     }

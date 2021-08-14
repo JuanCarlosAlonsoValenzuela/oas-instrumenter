@@ -33,12 +33,13 @@ public class DeclsVariable {
 
     }
 
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String packageName, String objectName, Map<String, Schema> mapOfProperties) {
+    // Used for both output and exit
+    public static List<DeclsVariable> generateDeclsVariablesOfOuptput(String variableName, String varKind, String packageName, String variableNameOutput, Map<String, Schema> mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
-        DeclsVariable father = new DeclsVariable("this", "variable", packageName + "." + objectName, "java.lang.String", null);
+        DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);
 
-        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, "this");
+        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind);
         father.setEnclosedVariables(enclosedVars);
 
         return Collections.singletonList(father);
@@ -46,7 +47,7 @@ public class DeclsVariable {
 
     // TODO: Add father variable
     // TODO: Use res as a parameter? (or res.addAll)
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Map<String, Schema> mapOfProperties, String variablePath) {
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Map<String, Schema> mapOfProperties, String variablePath, String varKind) {
         List<DeclsVariable> res = new ArrayList<>();
 
         for(Entry<String, Schema> property: mapOfProperties.entrySet()) {
@@ -59,11 +60,11 @@ public class DeclsVariable {
                 // TODO: Use the entry as input
 //                public DeclsVariable(String variableName, String varKind, String decType, String repType, String enclosingVar)
 //                DeclsVariable father = new DeclsVariable("this", "variable", packageName + "." + objectName, "java.lang.String", null);
-                DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "variable", "java.lang.String", "java.lang.String", variablePath);
+                DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind, "java.lang.String", "java.lang.String", variablePath);
 
                 // Recursive call
                 // TODO: UPDATE and Complete parameterName as new father (this.x.y ,etc.)
-                List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(property.getValue().getProperties(), variablePath + "." + parameterName);
+                List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(property.getValue().getProperties(), variablePath + "." + parameterName, varKind);
 
                 // Set enclosed variables
                 declsVariable.setEnclosedVariables(enclosedVariables);
