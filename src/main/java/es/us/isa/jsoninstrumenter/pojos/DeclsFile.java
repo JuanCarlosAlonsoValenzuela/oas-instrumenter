@@ -43,7 +43,7 @@ public class DeclsFile {
                 "var-comparability " + comparability + "\n";
 
         for(DeclsClass declsClass: declsClasses) {
-            res = res + "\n" + declsClass;
+            res = res + "\n" + declsClass + "\n";
         }
 
         return res;

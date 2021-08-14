@@ -121,35 +121,35 @@ paths:
   #              title: 'Internal Server Error'
   #              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
 
-  '/find-by-geo':
-    x-summary: DHL Service Point locations found by geo coordinates
-
-    get:
-      summary: Search for DHL Service Point locations by geo coordinates
-      operationId: findByGeo
-
-      tags:
-        - locations
-
-      produces:
-        - application/json
-
-      parameters:
-        - $ref: '#/parameters/latitude'
-        - $ref: '#/parameters/longitude'
-        - $ref: '#/parameters/providerType'
-        - $ref: '#/parameters/locationType'
-        - $ref: '#/parameters/serviceType'
-        - $ref: '#/parameters/radius'
-        - $ref: '#/parameters/limit'
-
-      responses:
-        '200':
-          description: >-
-            List of DHL Service Point locations.
-          schema:
-            $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
-
+#  '/find-by-geo':
+#    x-summary: DHL Service Point locations found by geo coordinates
+#
+#    get:
+#      summary: Search for DHL Service Point locations by geo coordinates
+#      operationId: findByGeo
+#
+#      tags:
+#        - locations
+#
+#      produces:
+#        - application/json
+#
+#      parameters:
+#        - $ref: '#/parameters/latitude'
+#        - $ref: '#/parameters/longitude'
+#        - $ref: '#/parameters/providerType'
+#        - $ref: '#/parameters/locationType'
+#        - $ref: '#/parameters/serviceType'
+#        - $ref: '#/parameters/radius'
+#        - $ref: '#/parameters/limit'
+#
+#      responses:
+#        '200':
+#          description: >-
+#            List of DHL Service Point locations.
+#          schema:
+#            $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
+#
 #        '400':
 #          description: >-
 #            Bad request, for example invalid location type, service type or country.
@@ -197,7 +197,7 @@ paths:
 #              status: 500
 #              title: 'Internal Server Error'
 #              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
-
+#
 #  '/find-by-keyword-id':
 #    x-summary: DHL Service Point locations found by keywordId, countryCode and postalCode
 #
@@ -275,7 +275,7 @@ paths:
 #              status: 500
 #              title: 'Internal Server Error'
 #              detail: 'The server encountered an unexpected condition which prevented it from fulfilling the request'
-
+#
 #  '/locations/{id}':
 #    x-summary: One DHL Service Point location
 #    parameters:

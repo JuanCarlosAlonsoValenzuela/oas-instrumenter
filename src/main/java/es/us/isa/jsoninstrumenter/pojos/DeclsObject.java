@@ -5,7 +5,6 @@ import io.swagger.v3.oas.models.parameters.Parameter;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.generateDeclsVariablesOfOutput;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;

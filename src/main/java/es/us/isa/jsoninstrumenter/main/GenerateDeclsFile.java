@@ -14,15 +14,19 @@ import io.swagger.v3.parser.core.models.ParseOptions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map.Entry;
+
+import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
 
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
 //    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
-    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
+    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+//    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
 
     public static void main(String[] args) {
 
@@ -49,7 +53,7 @@ public class GenerateDeclsFile {
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
-                System.out.println(operation);
+//                System.out.println(operation);
 
                 // Set the operation name for the .decls file
                 String operationName;
@@ -61,18 +65,20 @@ public class GenerateDeclsFile {
                     operationName = operation.getOperationId();
                 }
 
+                List<DeclsClass> declsClasses = new ArrayList<>();
                 ///////////////////////// INPUT /////////////////////////////
                 // Extracting the input parameters
                 DeclsClass declsClassInput = new DeclsClass("main", "Input", "Input", operation.getParameters());
-
-                DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, Collections.singletonList(declsClassInput));
-
-//                System.out.println(declsFile);
+                declsClasses.add(declsClassInput);
 
                 ///////////////////////// OUTPUT /////////////////////////////
-//                DeclsClass declsClassOutput = new DeclsClass("main", "Output", "Output", operation.getResponses())
+                List<DeclsClass> declsClassOutput = generateOutputDeclsClasses("main", operation.getResponses());
 
-//                List<DeclsClass> declsClassOutputs = generateOutputDeclsClasses("main")
+                declsClasses.addAll(declsClassOutput);
+
+
+                DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
+                System.out.println(declsFile);
 
 
 

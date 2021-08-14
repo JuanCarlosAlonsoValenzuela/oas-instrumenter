@@ -35,6 +35,7 @@ public class DeclsVariable {
 
     public static List<DeclsVariable> generateDeclsVariablesOfOutput(String packageName, String objectName, Map<String, Schema> mapOfProperties) {
         // TODO: Set decType and repType
+        // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable("this", "variable", packageName + "." + objectName, "java.lang.String", null);
 
         List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, "this");
@@ -87,7 +88,6 @@ public class DeclsVariable {
         }
 
         return res;
-
 
     }
 

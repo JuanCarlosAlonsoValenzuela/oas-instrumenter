@@ -19,7 +19,7 @@ public class DeclsClass {
     private List<DeclsEnter> declsEnters;
     private List<DeclsExit> declsExits;
 
-    // DeclsClass With Object
+    // DeclsClass with List of parameters
     public DeclsClass(String packageName, String className, String objectName, List<Parameter> parameters){
         this.packageName = packageName;
         this.className = className;
@@ -29,40 +29,35 @@ public class DeclsClass {
 
     }
 
+    // DeclsClass with only DeclsObject
+    public DeclsClass(String packageName, String className, DeclsObject declsObject) {
+        this.packageName = packageName;
+        this.className = className;
+        this.declsEnters = new ArrayList<>();
+        this.declsExits = new ArrayList<>();
+        this.declsObjects = Collections.singletonList(declsObject);
+
+    }
+
+
     // Generate outputs
     // ClassName is derived (e.g., output_200)
     // ObjectName is derived (e.g., output_200)
-    // TODO: Complete
-    public List<DeclsClass> generateOutputDeclsClasses(String packageName, ApiResponses apiResponses) {
+    public static List<DeclsClass> generateOutputDeclsClasses(String packageName, ApiResponses apiResponses) {
         List<DeclsClass> res = new ArrayList<>();
 
         // Create a new class for each of the possible response formats
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-
-            String className = "Output_" + apiResponse.getKey();
+            String objectName = "Output_" + apiResponse.getKey();
 
             // TODO: Take into account that there is one class per mediaType
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
-                // TODO: Call method using mapOfProperties as parameter
+                DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
+                DeclsClass declsClass = new DeclsClass(packageName, objectName, declsObject);
 
-                for(Entry<String, Schema> property: mapOfProperties.entrySet()) {
-                    String parameterName = property.getKey();
-
-                    // TODO: Consider array
-                    if(property.getValue().getType().equals("object")) {
-                        // TODO: object
-                        // TODO: Recursive method
-                    } else {
-                        // TODO: Other datatype (Use translation)
-                    }
-                }
-
-
+                res.add(declsClass);
             }
-
-
-
         }
 
         return res;
