@@ -24,7 +24,7 @@ public class DeclsExit {
 
         // TODO: Change singleton to normal list (a method can have several exits)
         // TODO: for loop increasing exitNumber
-        this.exitDeclsVariables = generateDeclsVariablesOfOuptput("return", "return", packageName, variableNameOutput, mapOfProperties);
+        this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,  variableNameOutput, mapOfProperties);
 //
 
     }

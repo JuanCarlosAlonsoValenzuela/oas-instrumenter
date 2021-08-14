@@ -22,8 +22,8 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-//    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
     public static int numberOfExits;
 
@@ -65,11 +65,11 @@ public class GenerateDeclsFile {
                 List<DeclsClass> declsClasses = new ArrayList<>();
                 ///////////////////////// INPUT /////////////////////////////
                 // Extracting the input parameters
-                DeclsClass declsClassInput = new DeclsClass("main", "Input", "Input", operation.getParameters());
+                DeclsClass declsClassInput = new DeclsClass("main", operationName + "_Input", operationName + "_Input", operation.getParameters());
                 declsClasses.add(declsClassInput);
 
                 ///////////////////////// OUTPUT /////////////////////////////
-                List<DeclsClass> declsClassOutput = generateOutputDeclsClasses("main", operation.getResponses());
+                List<DeclsClass> declsClassOutput = generateOutputDeclsClasses(operationName, "main", operation.getResponses());
                 declsClasses.addAll(declsClassOutput);
 
                 ///////////////////////// ENTER AND EXIT /////////////////////////////

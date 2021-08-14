@@ -20,11 +20,14 @@ public class DeclsVariable {
     public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         // Father parameter
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
-        DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." + objectName, "java.lang.String", null);
+        DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." +
+                objectName, "java.lang.String", null);
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
         for(Parameter parameter: parameters) {
-            DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(), "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()), translateDatatype(parameter.getSchema().getType()), father.getVariableName());
+            DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
+                    "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()),
+                    translateDatatype(parameter.getSchema().getType()), father.getVariableName());
             enclosedVariables.add(declsVariable);
         }
 
@@ -34,7 +37,7 @@ public class DeclsVariable {
     }
 
     // Used for both output and exit
-    public static List<DeclsVariable> generateDeclsVariablesOfOuptput(String variableName, String varKind, String packageName, String variableNameOutput, Map<String, Schema> mapOfProperties) {
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName, String variableNameOutput, Map<String, Schema> mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);

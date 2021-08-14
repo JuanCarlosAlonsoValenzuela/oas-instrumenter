@@ -55,20 +55,22 @@ public class DeclsClass {
                                                        ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-        String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + variableNameInput + ")";
+        String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + variableNameInput + ")";
 
-        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration, variableNameInput, "input", parameters);
+
+        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration,
+                operationName + "_" + variableNameInput, "input", parameters);
         declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
 
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-            String objectName = "Output_" + apiResponse.getKey();
+            String objectName = operationName + "_Output_" + apiResponse.getKey();
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
-                DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), variableNameOutput,
+                DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), objectName,
                         mapOfProperties, numberOfExits);
                 declsExits.add(declsExit);
 
@@ -88,12 +90,12 @@ public class DeclsClass {
     // Generate outputs
     // ClassName is derived (e.g., output_200)
     // ObjectName is derived (e.g., output_200)
-    public static List<DeclsClass> generateOutputDeclsClasses(String packageName, ApiResponses apiResponses) {
+    public static List<DeclsClass> generateOutputDeclsClasses(String operationName, String packageName, ApiResponses apiResponses) {
         List<DeclsClass> res = new ArrayList<>();
 
         // Create a new class for each of the possible response formats
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-            String objectName = "Output_" + apiResponse.getKey();
+            String objectName = operationName + "_Output_" + apiResponse.getKey();
 
             // TODO: Take into account that there is one class per mediaType
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
