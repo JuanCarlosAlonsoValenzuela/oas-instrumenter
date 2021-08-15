@@ -69,7 +69,7 @@ public class DeclsClass {
             String objectName = operationName + "_Output_" + apiResponse.getKey();
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-                Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
+                Schema mapOfProperties = mediaType.getSchema();
                 DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), objectName,
                         mapOfProperties, numberOfExits);
                 declsExits.add(declsExit);
@@ -99,8 +99,12 @@ public class DeclsClass {
 
             // TODO: Take into account that there is one class per mediaType
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-                Map<String, Schema> mapOfProperties = mediaType.getSchema().getProperties();
+                Schema mapOfProperties = mediaType.getSchema();
+
+                // Create the object
                 DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
+
+                // Create the class that will contain the object
                 DeclsClass declsClass = new DeclsClass(packageName, objectName, declsObject);
 
                 res.add(declsClass);

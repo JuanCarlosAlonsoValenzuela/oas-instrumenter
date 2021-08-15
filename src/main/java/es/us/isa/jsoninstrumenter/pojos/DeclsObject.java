@@ -24,7 +24,7 @@ public class DeclsObject {
     }
 
     // DeclsObject With Output
-    public DeclsObject(String packageName, String objectName, Map<String, Schema> mapOfProperties) {
+    public DeclsObject(String packageName, String objectName, Schema mapOfProperties) {
         this.packageName = packageName;
         this.objectName = objectName;
         this.declsVariables = generateDeclsVariablesOfOutput("this", "variable", packageName, objectName, mapOfProperties);

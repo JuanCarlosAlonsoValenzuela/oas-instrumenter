@@ -16,7 +16,7 @@ public class DeclsExit {
 
 
     public DeclsExit(String packageName, String EnterExitPptDeclaration, List<DeclsVariable> enterVariables,
-                     String variableNameOutput, Map<String, Schema> mapOfProperties, int exitNumber) {
+                     String variableNameOutput, Schema mapOfProperties, int exitNumber) {
         // TODO: convert exit name to function (same as enterName)
         this.exitName = EnterExitPptDeclaration;
         this.exitNumber = exitNumber;

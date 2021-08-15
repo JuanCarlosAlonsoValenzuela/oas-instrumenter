@@ -22,8 +22,8 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+//    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
     public static int numberOfExits;
 
@@ -42,7 +42,6 @@ public class GenerateDeclsFile {
 
             PathItem pathItem = path.getValue();
             // TODO: Parámetros comunes a todas las operaciones
-            // TODO: If operationId == null -> operationName = endpoint_httpmethod
             // TODO: Extract responses of operation
             // TODO: Extract parameters of operation
             // TODO: Extract the request body
@@ -63,18 +62,15 @@ public class GenerateDeclsFile {
                 }
 
                 List<DeclsClass> declsClasses = new ArrayList<>();
-                ///////////////////////// INPUT /////////////////////////////
                 // Extracting the input parameters
                 DeclsClass declsClassInput = new DeclsClass("main", operationName + "_Input", operationName + "_Input", operation.getParameters());
                 declsClasses.add(declsClassInput);
 
-                ///////////////////////// OUTPUT /////////////////////////////
+                // Extracting the output parameters
                 List<DeclsClass> declsClassOutput = generateOutputDeclsClasses(operationName, "main", operation.getResponses());
                 declsClasses.addAll(declsClassOutput);
 
-                ///////////////////////// ENTER AND EXIT /////////////////////////////
-                // TODO: Derive the output name automatically (list of outputs)
-                // TODO: Check that the exit numbers correspond (Create a map?)
+                // Extracting enter and exits
                 DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit("main", operationEndpoint, operationName,
                         "Input", operation.getParameters(), "Output_200", operation.getResponses());
 

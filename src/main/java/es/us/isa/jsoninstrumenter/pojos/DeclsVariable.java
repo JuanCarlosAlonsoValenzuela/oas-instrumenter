@@ -1,5 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
@@ -37,11 +38,13 @@ public class DeclsVariable {
     }
 
     // Used for both output and exit
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName, String variableNameOutput, Map<String, Schema> mapOfProperties) {
+    // Creates the father variable
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName, String variableNameOutput, Schema mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);
 
+        // Creates the son variables
         List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind);
         father.setEnclosedVariables(enclosedVars);
 
@@ -50,24 +53,30 @@ public class DeclsVariable {
 
     // TODO: Add father variable
     // TODO: Use res as a parameter? (or res.addAll)
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Map<String, Schema> mapOfProperties, String variablePath, String varKind) {
+    // TODO: Split into several functions to ease maintenance
+    // Recursive method
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath, String varKind) {
         List<DeclsVariable> res = new ArrayList<>();
 
-        for(Entry<String, Schema> property: mapOfProperties.entrySet()) {
-            String parameterName = property.getKey();
+//        Map<String, Schema> map = mapOfProperties.getProperties();
+        Set<String> parameterNames = mapOfProperties.getProperties().keySet();
+
+        for(String parameterName: parameterNames) {
+            Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
+            String parameterType = schema.getType();
 
             // TODO: Consider array
-            if(property.getValue().getType().equalsIgnoreCase("object")) { // TODO: Recursive call
+            if(parameterType.equalsIgnoreCase("object")) {
                 // TODO: change dec-type and rec-type
                 // TODO: "Increment" the parameter name
                 // TODO: Use the entry as input
-//                public DeclsVariable(String variableName, String varKind, String decType, String repType, String enclosingVar)
-//                DeclsVariable father = new DeclsVariable("this", "variable", packageName + "." + objectName, "java.lang.String", null);
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind, "java.lang.String", "java.lang.String", variablePath);
 
                 // Recursive call
                 // TODO: UPDATE and Complete parameterName as new father (this.x.y ,etc.)
-                List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(property.getValue().getProperties(), variablePath + "." + parameterName, varKind);
+                List<DeclsVariable> enclosedVariables =
+                        generateDeclsVariablesOfOutput(schema,
+                                variablePath + "." + parameterName, varKind);
 
                 // Set enclosed variables
                 declsVariable.setEnclosedVariables(enclosedVariables);
@@ -75,19 +84,36 @@ public class DeclsVariable {
                 // Add to list
                 res.add(declsVariable);
 
+            } else if(parameterType.equalsIgnoreCase("array")) {
+                // TODO: Array of enums
+                // TODO: Array inside array
+                ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
+                String itemsDatatype = arraySchema.getItems().getType();
 
-            } else { // TODO: Other datatype (base case)
+                // TODO: Three possible situations:
+                if(itemsDatatype.equalsIgnoreCase("object")) { // TODO: 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
+                    // TODO: Object Recursive call
+                } else if(itemsDatatype.equalsIgnoreCase("array")) { // TODO: 2. The content is another ARRAY (recursive call) [][]
+                    // TODO: Recursive call
+                } else {    // 3. The content is a primitive type (base case)
+                    String translatedDatatype = translateDatatype(itemsDatatype) + "[]";
+                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "field" + parameterName,
+                            translatedDatatype, translatedDatatype, variablePath);
+                    res.add(declsVariable);
+                }
+
+            } else {
+
                 // Create new variable
-                // TODO: Name extension (Include as parameter) (this.x.y ,etc.)
-                String datatype = property.getValue().getType();
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "field " + parameterName,
-                        translateDatatype(datatype), translateDatatype(datatype), variablePath);
+                        translateDatatype(parameterType), translateDatatype(parameterType), variablePath);
 
                 // Add to list
                 res.add(declsVariable);
 
-
             }
+
+
 
         }
 
