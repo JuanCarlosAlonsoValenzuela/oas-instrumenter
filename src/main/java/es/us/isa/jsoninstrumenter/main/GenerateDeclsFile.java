@@ -62,6 +62,7 @@ public class GenerateDeclsFile {
                 declsClasses.addAll(declsClassOutput);
 
                 // Extracting enter and exits
+                // TODO: Automatically derive the "Output_200"
                 DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit("main", operationEndpoint, operationName,
                         "Input", operation.getParameters(), "Output_200", operation.getResponses());
 

@@ -42,9 +42,9 @@ paths:
               name:
                 description: "Airport name"
                 type: string
-              location:
-                description: "Airport location"
-                type: string
+              version:
+                description: "API version"
+                type: number
 
 
 #        default:

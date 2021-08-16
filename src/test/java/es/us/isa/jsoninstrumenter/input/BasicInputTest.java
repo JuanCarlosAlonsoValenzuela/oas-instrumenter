@@ -7,7 +7,6 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
-import org.junit.Assert;
 import org.junit.Test;
 import io.swagger.v3.oas.models.PathItem;
 import static org.junit.Assert.*;
@@ -25,8 +24,6 @@ import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
 
 
 public class BasicInputTest {
-
-    // jUnit for swagger with multiple operations
 
     @Test
     public void testGenerationOfBasicInputs() {
@@ -110,11 +107,6 @@ public class BasicInputTest {
 
         assertEquals("The expected number of classes is one", declsClassList.size(), 1);
 
-
-
     }
 
-    // TODO: Create a test for classes (Check toString)
-    // TODO: Create the test for blank lines
-    // TODO: Test cases for datatypes
 }
