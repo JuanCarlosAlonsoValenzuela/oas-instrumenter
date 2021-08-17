@@ -133,9 +133,6 @@ public class PrimitiveArrayOutputTest {
                 assertTrue("This variable should be an array", serviceTypes2.isArray());
                 assertEquals("Unexpected number of son variables", 0, serviceTypes2.getEnclosedVariables().size());
 
-
-
-
             }
 
             assertEquals("The expected total number of classes is one", declsClassList.size(), 1);
