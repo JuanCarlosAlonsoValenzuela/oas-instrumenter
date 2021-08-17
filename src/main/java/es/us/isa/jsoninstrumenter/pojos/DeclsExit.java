@@ -65,10 +65,6 @@ public class DeclsExit {
         String res = "ppt " + exitName + ":::EXIT" + exitNumber + "\n" +
                 "ppt-type subexit";
 
-
-//        res = res + "\n" + enterDeclsVariables;
-//        res = res + "\n" + exitDeclsVariables;
-
         for(DeclsVariable enterDeclsVariable: this.enterDeclsVariables) {
             res = res + "\n" + enterDeclsVariable;
         }

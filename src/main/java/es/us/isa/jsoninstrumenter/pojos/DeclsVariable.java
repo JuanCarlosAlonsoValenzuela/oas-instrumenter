@@ -161,15 +161,13 @@ public class DeclsVariable {
     public static String translateDatatype(String input) {
 
         switch (input.toLowerCase()) {
-            case "string":
-                return "java.lang.String";
             case "number":
                 return "double";
             case "integer":
                 return "int";
             case "boolean":
                 return "boolean";
-            default:
+            default:    // Including case "string"
                 return "java.lang.String";
         }
 

@@ -20,7 +20,7 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.getDeclsClassEnterAndE
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
-public class BasicPrimitiveArrayExitTest {
+public class PrimitiveArrayExitTest {
 
     @Test
     public void testGenerationOfPrimitiveExitArray() {

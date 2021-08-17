@@ -21,7 +21,7 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsCla
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
-public class BasicPrimitiveArrayOutputTest {
+public class PrimitiveArrayOutputTest {
 
     @Test
     public void testGenerationOfPrimitiveOutputArray() {
