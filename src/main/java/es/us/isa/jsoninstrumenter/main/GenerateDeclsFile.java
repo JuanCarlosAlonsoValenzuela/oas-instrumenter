@@ -10,8 +10,8 @@ import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,8 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 
 public class GenerateDeclsFile {
 
-    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
+//    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
+
     private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger_arrayBaseCase.yaml";
@@ -41,7 +42,7 @@ public class GenerateDeclsFile {
         for(Entry<String, PathItem> path: paths.entrySet()) {
 
             PathItem pathItem = path.getValue();
-            // TODO: Parámetros comunes a todas las operaciones
+            // TODO: Common parameters for all the operations
             // TODO: Extract the request body
             // TODO: Consider the "in" property (query, header, path, etc.) when extracting parameters
 
@@ -65,9 +66,6 @@ public class GenerateDeclsFile {
                         "Input", operation.getParameters(), operation.getResponses());
 
                 declsClasses.add(declsClassEnterAndExit);
-
-
-
 
 
             }
