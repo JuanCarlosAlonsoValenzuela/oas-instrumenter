@@ -51,7 +51,7 @@ public class DeclsClass {
 
     // DeclsClass for ENTER
     public static DeclsClass getDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
-                                                       String variableNameInput, List<Parameter> parameters, String variableNameOutput,
+                                                       String variableNameInput, List<Parameter> parameters,
                                                        ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 

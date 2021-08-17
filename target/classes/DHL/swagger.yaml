@@ -72,21 +72,21 @@ paths:
             List of DHL Service Point locations.
           schema:
             $ref: '#/definitions/supermodelIoLogisticsPUDOLocations'
-#
-#        '400':
-#          description: "Bad request, for example invalid location type, service type or country."
-#          headers:
-#            Content-Type:
-#              type: string
-#              default: application/problem+json
-#          schema:
-#            type: object
-#            allOf:
-#              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
-#            example:
-#              status: 400
-#              title: 'Unknown Service Type'
-#              detail: 'Provided serviceType xyz is not known.'
+
+        '400':
+          description: "Bad request, for example invalid location type, service type or country."
+          headers:
+            Content-Type:
+              type: string
+              default: application/problem+json
+          schema:
+            type: object
+            allOf:
+              - $ref: '#/definitions/supermodelIoLogisticsPUDOApiProblemDetail'
+            example:
+              status: 400
+              title: 'Unknown Service Type'
+              detail: 'Provided serviceType xyz is not known.'
 #
 #        '401':
 #          description: "Unauthorized. Provided key is invalid for requested resource."
