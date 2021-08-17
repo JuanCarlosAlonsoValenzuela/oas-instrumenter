@@ -3,7 +3,6 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.Schema;
 
 import java.util.List;
-import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 

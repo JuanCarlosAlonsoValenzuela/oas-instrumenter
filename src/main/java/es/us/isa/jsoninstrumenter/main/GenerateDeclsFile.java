@@ -22,8 +22,8 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 public class GenerateDeclsFile {
 
     private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-//    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
+    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger_arrayBaseCase.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
     public static int numberOfExits = 1;

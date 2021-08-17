@@ -1,7 +1,6 @@
 package es.us.isa.jsoninstrumenter.exit;
 
 import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
-import es.us.isa.jsoninstrumenter.pojos.DeclsEnter;
 import es.us.isa.jsoninstrumenter.pojos.DeclsExit;
 import es.us.isa.jsoninstrumenter.pojos.DeclsVariable;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -22,14 +21,6 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class BasicExitTest {
-
-    // TODO: Add e2e test
-    // TODO: Check that the exit number is correctly increased
-    // TODO: jUnit for swagger with multiple operations
-    // TODO: Create a test for classes (Check toString)
-    // TODO: Create the test for blank lines
-    // TODO: Test cases for datatypes (int, string, double, etc.)
-    // TODO: Test cases for datatype translation
 
     @Test
     public void testGenerationOfBasicExit() {
