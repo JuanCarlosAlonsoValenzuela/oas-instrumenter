@@ -26,13 +26,12 @@ public class GenerateDeclsFile {
     private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger_arrayBaseCase.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
-    public static int numberOfExits;
+    public static int numberOfExits = 1;
 
     // TODO: Refactor package name
     public static final String packageName = "main";
 
     public static void main(String[] args) {
-        numberOfExits = 1;
         OpenAPI specification = getOpenAPISpecification();
         Paths paths = specification.getPaths();
 

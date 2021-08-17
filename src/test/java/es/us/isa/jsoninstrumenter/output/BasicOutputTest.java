@@ -23,13 +23,6 @@ import static org.junit.Assert.assertEquals;
 
 public class BasicOutputTest {
 
-    // TODO: Add e2e test
-    // TODO: Check that the exit number is correctly increased
-    // TODO: jUnit for swagger with multiple operations
-    // TODO: Create a test for classes (Check toString)
-    // TODO: Create the test for blank lines
-    // TODO: Test cases for datatypes (int, string, double, etc.)
-    // TODO: Test cases for datatype translation
 
     // Operation with a single response
     @Test
