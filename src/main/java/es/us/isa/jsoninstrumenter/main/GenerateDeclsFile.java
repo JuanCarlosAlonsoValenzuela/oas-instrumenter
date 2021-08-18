@@ -33,15 +33,11 @@ public class GenerateDeclsFile {
 
     private static List<DeclsClass> declsClasses = new ArrayList<>();
 
-
-    // TODO: Refactor package name
     public static final String packageName = "main";
 
     public static void main(String[] args) {
         OpenAPI specification = getOpenAPISpecification();
         Paths paths = specification.getPaths();
-
-//        List<DeclsClass> declsClasses = new ArrayList<>();
 
         // A path (endpoint) contains several operations (http methods/verbs)
         for(Entry<String, PathItem> path: paths.entrySet()) {
@@ -66,13 +62,10 @@ public class GenerateDeclsFile {
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
-                setDeclsClassEnterAndExit("main", operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         "Input", operation.getParameters(), operation.getResponses());
 
-
-
             }
-
 
         }
 

@@ -76,8 +76,7 @@ public class DeclsVariable {
 
                 // Recursive call for son variables
                 List<DeclsVariable> enclosedVariables =
-                        generateDeclsVariablesOfOutput(schema,
-                                variablePath + "." + parameterName, varKind, false, nestingLevel);
+                        generateDeclsVariablesOfOutput(schema, variablePath + "." + parameterName, varKind, false, nestingLevel);
                 // Set enclosed variables
                 declsVariable.setEnclosedVariables(enclosedVariables);
                 // Add to list
@@ -115,8 +114,6 @@ public class DeclsVariable {
 
         // TODO: Three possible situations:
         if(itemsDatatype.equalsIgnoreCase("object")) { // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
-            // TODO: Create a new class with an object
-            // TODO: All the objects have nesting of []s
 
             // Generate the father variable
             // TODO: Create a new class with the created object
@@ -142,7 +139,7 @@ public class DeclsVariable {
         }
         return res;
     }
-    
+
     public static List<DeclsVariable> getDeclsVariablesOfRecursiveArray(String variablePath, String varKind, String parameterName,
                                                                         ArraySchema arraySchema, int nestingLevel) {
         List<DeclsVariable> res = new ArrayList<>();
