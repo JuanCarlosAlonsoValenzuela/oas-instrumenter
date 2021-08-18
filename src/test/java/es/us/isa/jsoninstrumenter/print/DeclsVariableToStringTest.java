@@ -18,6 +18,7 @@ public class DeclsVariableToStringTest {
     // TODO: Create the test for blank lines
     // TODO: Test cases for datatypes (int, string, double, etc.)
     // TODO: Test cases for datatype translation
+    // TODO: Test print nested arrays
 
     // Basic constructor
     @Test

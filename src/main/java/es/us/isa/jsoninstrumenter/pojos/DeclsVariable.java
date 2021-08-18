@@ -48,7 +48,7 @@ public class DeclsVariable {
         DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);
 
         // Creates the son variables
-        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, false);
+        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, false, 1);
         father.setEnclosedVariables(enclosedVars);
 
         return Collections.singletonList(father);
@@ -57,7 +57,8 @@ public class DeclsVariable {
     // TODO: Use res as a parameter? (or res.addAll)
     // TODO: Split into several functions to ease maintenance
     // Recursive method
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath, String varKind, boolean isArray) {
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath,
+                                                                     String varKind, boolean isArray, int nestingLevel) {
         List<DeclsVariable> res = new ArrayList<>();
 
         Set<String> parameterNames = mapOfProperties.getProperties().keySet();
@@ -67,9 +68,6 @@ public class DeclsVariable {
             String parameterType = schema.getType();
 
             // TODO: Consider array
-            if(parameterType == null) {
-                System.out.println("Create breakpoint");
-            }
             if(parameterType.equalsIgnoreCase("object")) {
                 // TODO: change dec-type and rec-type
                 // TODO: "Increment" the parameter name
@@ -80,7 +78,7 @@ public class DeclsVariable {
                 // Recursive call for son variables
                 List<DeclsVariable> enclosedVariables =
                         generateDeclsVariablesOfOutput(schema,
-                                variablePath + "." + parameterName, varKind, false);
+                                variablePath + "." + parameterName, varKind, false, nestingLevel);
 
                 // Set enclosed variables
                 declsVariable.setEnclosedVariables(enclosedVariables);
@@ -104,13 +102,13 @@ public class DeclsVariable {
                     // Consider changing the repType
 
                     List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
-                            packageName + "." + parameterName, "java.lang.String");
+                            packageName + "." + parameterName, "java.lang.String", nestingLevel);
 
                     // Recursive call for son variables
                     // Iterate over items
                     // TODO: Correct the bug in var-kind (new objects)
                     List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(arraySchema.getItems(),
-                                    variablePath + "." + parameterName + "[..]", varKind, true);
+                                    variablePath + "." + parameterName + "[..]", varKind, true, nestingLevel);
 
                     // Set the son variables and add to res
                     declsVariables.get(1).setEnclosedVariables(enclosedVariables);
@@ -119,14 +117,75 @@ public class DeclsVariable {
                     res.addAll(declsVariables);
 
 
-                } else if(itemsDatatype.equalsIgnoreCase("array")) { // TODO: 2. The content is another ARRAY (recursive call) [][]
+                } else if(itemsDatatype.equalsIgnoreCase("array")) { // 2. The content is another ARRAY (recursive call) [][]
                     // TODO: Recursive call
                     // TODO: Check the number of []s
+
+                    Schema subArraySchema = ((ArraySchema) arraySchema.getItems()).getItems();
+                    if(subArraySchema.getType().equals("object")) { // 1. Type object (Recursive call with increased [])
+
+                        // TODO: This code is triplicated (Refactorize to avoid inconsistencies)
+                        // (arraySchema has been changed to subArraySchema)
+                        List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
+                                packageName + "." + parameterName, "java.lang.String", nestingLevel + 1);
+
+                        // Recursive call for son variables
+                        // Iterate over items
+                        // TODO: Correct the bug in var-kind (new objects)
+                        List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(subArraySchema,
+                                variablePath + "." + parameterName + "[..]", varKind, true, nestingLevel + 1);
+
+                        // Set the son variables and add to res
+                        declsVariables.get(1).setEnclosedVariables(enclosedVariables);
+
+                        // Add to list
+                        res.addAll(declsVariables);
+
+                    } else if(subArraySchema.getType().equals("array")) { // TODO: 2. Array (Repeat iteratively)
+                        int newNestingLevel = nestingLevel;
+                        Schema recursiveArraySchema = subArraySchema;
+                        while(recursiveArraySchema.getType().equals("array")) {
+                            newNestingLevel++;
+                            recursiveArraySchema = ((ArraySchema) recursiveArraySchema).getItems();
+                        }
+                        if(recursiveArraySchema.getType().equals("object")) {
+                            // TODO: This code is triplicated (Refactorize to avoid inconsistencies)
+                            // (arraySchema has been changed to subArraySchema)
+                            List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
+                                    packageName + "." + parameterName, "java.lang.String", nestingLevel + 1);
+
+                            // Recursive call for son variables
+                            // Iterate over items
+                            // TODO: Correct the bug in var-kind (new objects)
+                            List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(recursiveArraySchema,
+                                    variablePath + "." + parameterName + "[..]", varKind, true, nestingLevel + 1);
+
+                            // Set the son variables and add to res
+                            declsVariables.get(1).setEnclosedVariables(enclosedVariables);
+
+                            // Add to list
+                            res.addAll(declsVariables);
+                        } else {
+                            // TODO: This code is duplicated (Refactor)
+                            String translatedDatatype = translateDatatype(recursiveArraySchema.getType());
+                            List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
+                                    translatedDatatype, translatedDatatype, newNestingLevel);
+                            res.addAll(declsVariablesArrays);
+                        }
+
+                    } else {    // 3. Primitive type (Base case)
+                        // TODO: This code is duplicated (Refactor)
+                        String translatedDatatype = translateDatatype(subArraySchema.getType());
+                        List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
+                                translatedDatatype, translatedDatatype, nestingLevel + 1);
+                        res.addAll(declsVariablesArrays);
+
+                    }
 
                 } else {    // 3. The content is a primitive type (base case)
                     String translatedDatatype = translateDatatype(itemsDatatype);
                     List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
-                            translatedDatatype, translatedDatatype);
+                            translatedDatatype, translatedDatatype, nestingLevel);
 
                     res.addAll(declsVariablesArrays);
                 }
@@ -141,12 +200,8 @@ public class DeclsVariable {
 
             }
 
-
-
         }
-
         return res;
-
     }
 
     // Converts the datatype name from OAS to daikon
@@ -167,12 +222,15 @@ public class DeclsVariable {
 
     }
 
-    public static List<DeclsVariable> getDeclsVariablesArray(String variablePath, String parameterName, String decType, String repType) {
+    public static List<DeclsVariable> getDeclsVariablesArray(String variablePath, String parameterName,
+                                                             String decType, String repType, int nestingLevel) {
         List<DeclsVariable> res = new ArrayList<>();
+
+        String arrayIndicator = new String(new char[nestingLevel]).replace("\0", "[]");
 
         String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
-        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + "[]", repType + "[]", variablePath));
+        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, repType + arrayIndicator, variablePath));
 
         // TODO: Check whether I should include []s in dectype and reptype (Inconsistency in docs)
         // The enclosing var name contains the name of the variable (this.array)

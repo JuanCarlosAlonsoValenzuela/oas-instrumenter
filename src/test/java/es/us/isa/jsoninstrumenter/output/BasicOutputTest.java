@@ -38,7 +38,6 @@ public class BasicOutputTest {
 
         Paths paths = specification.getPaths();
 
-//        List<DeclsClass> declsClassList = new ArrayList<>();
 
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
