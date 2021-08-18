@@ -27,7 +27,7 @@ public class GenerateDeclsFile {
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger_arrayBaseCase.yaml";
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
-    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysPrimitive.yaml";
+    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysObject.yaml";
 
     public static int numberOfExits = 1;
 

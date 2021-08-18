@@ -66,4 +66,9 @@ definitions:
           items:
             type: array
             items:
-              type: string
+              type: object
+              properties:
+                locationId:
+                  type: string
+                provider:
+                  type: string

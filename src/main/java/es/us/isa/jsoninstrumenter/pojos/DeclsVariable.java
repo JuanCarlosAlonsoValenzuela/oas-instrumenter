@@ -141,8 +141,8 @@ public class DeclsVariable {
                         // Add to list
                         res.addAll(declsVariables);
 
-                    } else if(subArraySchema.getType().equals("array")) { // TODO: 2. Array (Repeat iteratively)
-                        int newNestingLevel = nestingLevel;
+                    } else if(subArraySchema.getType().equals("array")) { // 2. Array (Repeat iteratively)
+                        int newNestingLevel = nestingLevel + 1;
                         Schema recursiveArraySchema = subArraySchema;
                         while(recursiveArraySchema.getType().equals("array")) {
                             newNestingLevel++;
@@ -152,13 +152,13 @@ public class DeclsVariable {
                             // TODO: This code is triplicated (Refactorize to avoid inconsistencies)
                             // (arraySchema has been changed to subArraySchema)
                             List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
-                                    packageName + "." + parameterName, "java.lang.String", nestingLevel + 1);
+                                    packageName + "." + parameterName, "java.lang.String", newNestingLevel);
 
                             // Recursive call for son variables
                             // Iterate over items
                             // TODO: Correct the bug in var-kind (new objects)
                             List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(recursiveArraySchema,
-                                    variablePath + "." + parameterName + "[..]", varKind, true, nestingLevel + 1);
+                                    variablePath + "." + parameterName + "[..]", varKind, true, newNestingLevel);
 
                             // Set the son variables and add to res
                             declsVariables.get(1).setEnclosedVariables(enclosedVariables);
