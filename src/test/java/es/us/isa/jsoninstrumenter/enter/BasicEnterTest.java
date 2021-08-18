@@ -11,13 +11,11 @@ import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.getOperationName;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.getDeclsClassEnterAndExit;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
@@ -36,8 +34,6 @@ public class BasicEnterTest {
 
         Paths paths = specification.getPaths();
 
-        List<DeclsClass> declsClassList = new ArrayList<>();
-
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
 
@@ -49,10 +45,13 @@ public class BasicEnterTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         "Input", operation.getParameters(), operation.getResponses());
 
-                declsClassList.add(declsClassEnterAndExit);
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+                assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);
+
+                DeclsClass declsClassEnterAndExit = allDeclsClasses.get(0);
 
                 System.out.println(declsClassEnterAndExit);
 
@@ -109,7 +108,7 @@ public class BasicEnterTest {
 
             }
 
-            assertEquals("The expected total number of classes is one", declsClassList.size(), 1);
+            assertEquals("The expected total number of classes is one", getAllDeclsClasses().size(), 1);
 
         }
 

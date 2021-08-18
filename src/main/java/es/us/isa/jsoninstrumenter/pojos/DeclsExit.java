@@ -60,7 +60,7 @@ public class DeclsExit {
         this.exitDeclsVariables = exitDeclsVariables;
     }
 
-    // TODO: Consider changing the type from subexit to subexit in certain cases
+    // TODO: Consider changing the type from subexit to exit in certain cases
     public String toString() {
         String res = "ppt " + exitName + ":::EXIT" + exitNumber + "\n" +
                 "ppt-type subexit";

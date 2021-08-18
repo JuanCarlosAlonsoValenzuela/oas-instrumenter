@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.getOperationName;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -25,6 +24,7 @@ public class PrimitiveArrayOutputTest {
 
     @Test
     public void testGenerationOfPrimitiveOutputArray() {
+        deleteAllDeclsClasses();
 
         String oasPath = "src/test/resources/DHL/swagger_primitiveOutputArray.yaml";
 
@@ -36,7 +36,6 @@ public class PrimitiveArrayOutputTest {
 
         Paths paths = specification.getPaths();
 
-        List<DeclsClass> declsClassList = new ArrayList<>();
 
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
@@ -49,12 +48,13 @@ public class PrimitiveArrayOutputTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                List<DeclsClass> declsClassesOutput = generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
+                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
-                assertEquals("The expected number of output classes is one", declsClassesOutput.size(), 1);
-                declsClassList.addAll(declsClassesOutput);
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
 
-                DeclsClass declsClassOutput = declsClassesOutput.get(0);
+                assertEquals("The expected number of output classes is one", allDeclsClasses.size(), 1);
+
+                DeclsClass declsClassOutput = allDeclsClasses.get(0);
                 System.out.println(declsClassOutput);
 
                 // CLASS
@@ -134,8 +134,6 @@ public class PrimitiveArrayOutputTest {
                 assertEquals("Unexpected number of son variables", 0, serviceTypes2.getEnclosedVariables().size());
 
             }
-
-            assertEquals("The expected total number of classes is one", declsClassList.size(), 1);
 
         }
 

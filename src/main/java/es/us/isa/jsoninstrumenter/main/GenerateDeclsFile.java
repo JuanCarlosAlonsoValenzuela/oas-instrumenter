@@ -29,6 +29,9 @@ public class GenerateDeclsFile {
 //    private static String openApiSpecPath = "src/main/resources/Yelp/swagger.yaml";
     public static int numberOfExits = 1;
 
+    private static List<DeclsClass> declsClasses = new ArrayList<>();
+
+
     // TODO: Refactor package name
     public static final String packageName = "main";
 
@@ -36,7 +39,7 @@ public class GenerateDeclsFile {
         OpenAPI specification = getOpenAPISpecification();
         Paths paths = specification.getPaths();
 
-        List<DeclsClass> declsClasses = new ArrayList<>();
+//        List<DeclsClass> declsClasses = new ArrayList<>();
 
         // A path (endpoint) contains several operations (http methods/verbs)
         for(Entry<String, PathItem> path: paths.entrySet()) {
@@ -55,17 +58,15 @@ public class GenerateDeclsFile {
 
                 // Extracting the input parameters
                 DeclsClass declsClassInput = new DeclsClass(packageName, operationName + "_Input", operationName + "_Input", operation.getParameters());
-                declsClasses.add(declsClassInput);
+                addNewDeclsClass(declsClassInput);
 
                 // Extracting the output parameters
-                List<DeclsClass> declsClassOutput = generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
-                declsClasses.addAll(declsClassOutput);
+                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
-                DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit("main", operationEndpoint, operationName,
+                setDeclsClassEnterAndExit("main", operationEndpoint, operationName,
                         "Input", operation.getParameters(), operation.getResponses());
 
-                declsClasses.add(declsClassEnterAndExit);
 
 
             }
@@ -100,6 +101,23 @@ public class GenerateDeclsFile {
         parseOptions.setFlatten(true);
 
         return new OpenAPIV3Parser().read(openApiSpecPath, null, parseOptions);
+    }
+
+    public static void addNewDeclsClass(DeclsClass declsClass){
+        declsClasses.add(declsClass);
+    }
+
+    public static void addNewDeclsClasses(List<DeclsClass> declsClassList){
+        declsClasses.addAll(declsClassList);
+    }
+
+    public static List<DeclsClass> getAllDeclsClasses(){
+        return declsClasses;
+    }
+
+    // TODO: Convert test cases to e2e
+    public static void deleteAllDeclsClasses(){
+        declsClasses.clear();
     }
 
     // Input file

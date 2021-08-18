@@ -1,15 +1,12 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
 import io.swagger.v3.oas.models.media.ArraySchema;
-import io.swagger.v3.oas.models.media.ObjectSchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
 import java.util.*;
-import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
 
 public class DeclsVariable {
 
@@ -44,7 +41,8 @@ public class DeclsVariable {
 
     // Used for both output and exit
     // Creates the father variable
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName, String variableNameOutput, Schema mapOfProperties) {
+    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
+                                                                     String variableNameOutput, Schema mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);
@@ -56,14 +54,12 @@ public class DeclsVariable {
         return Collections.singletonList(father);
     }
 
-    // TODO: Add father variable
     // TODO: Use res as a parameter? (or res.addAll)
     // TODO: Split into several functions to ease maintenance
     // Recursive method
     public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath, String varKind, boolean isArray) {
         List<DeclsVariable> res = new ArrayList<>();
 
-//        Map<String, Schema> map = mapOfProperties.getProperties();
         Set<String> parameterNames = mapOfProperties.getProperties().keySet();
 
         for(String parameterName: parameterNames) {
@@ -93,15 +89,13 @@ public class DeclsVariable {
                 res.add(declsVariable);
 
             } else if(parameterType.equalsIgnoreCase("array")) {
-                // TODO: Create jUnits for every possible situation
-                // TODO: Array of enums
+                // TODO: Array of type enum
                 ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
                 String itemsDatatype = arraySchema.getItems().getType();
 
                 // TODO: Three possible situations:
                 if(itemsDatatype.equalsIgnoreCase("object")) { // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
                     // TODO: Create a new class with an object
-                    // TODO: Object Recursive call
                     // TODO: All the objects have nesting of []s
 
                     // Generate the father variable

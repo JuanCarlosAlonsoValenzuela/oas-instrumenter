@@ -11,13 +11,12 @@ import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.getDeclsClassEnterAndExit;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
@@ -25,6 +24,7 @@ public class NestedObjectExitTest {
 
     @Test
     public void testGenerationOfNestedObjectExitTest() {
+        deleteAllDeclsClasses();
 
         String oasPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 
@@ -35,8 +35,6 @@ public class NestedObjectExitTest {
         OpenAPI specification = new OpenAPIV3Parser().read(oasPath, null, parseOptions);
 
         Paths paths = specification.getPaths();
-
-        List<DeclsClass> declsClassList = new ArrayList<>();
 
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
@@ -49,10 +47,14 @@ public class NestedObjectExitTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                DeclsClass declsClassEnterAndExit = getDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         "Input", operation.getParameters(), operation.getResponses());
 
-                declsClassList.add(declsClassEnterAndExit);
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+                assertEquals("Incorrect number of classes", 1, allDeclsClasses.size());
+
+                DeclsClass declsClassEnterAndExit = allDeclsClasses.get(0);
+
                 System.out.println(declsClassEnterAndExit);
 
                 // CLASS
@@ -194,8 +196,6 @@ public class NestedObjectExitTest {
 
 
             }
-
-            assertEquals("The expected total number of classes is one", declsClassList.size(), 1);
 
         }
 

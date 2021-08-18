@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 
 import java.util.*;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 
 public class DeclsClass {
 
@@ -50,9 +50,9 @@ public class DeclsClass {
     }
 
     // DeclsClass for ENTER
-    public static DeclsClass getDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
-                                                       String variableNameInput, List<Parameter> parameters,
-                                                       ApiResponses apiResponses) {
+    public static void setDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
+                                                 String variableNameInput, List<Parameter> parameters,
+                                                 ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
         String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + variableNameInput + ")";
@@ -82,7 +82,7 @@ public class DeclsClass {
 
         declsClass.setDeclsExits(declsExits);
 
-        return declsClass;
+        addNewDeclsClass(declsClass);
 
     }
 
@@ -90,7 +90,7 @@ public class DeclsClass {
     // Generate outputs
     // ClassName is derived (e.g., output_200)
     // ObjectName is derived (e.g., output_200)
-    public static List<DeclsClass> generateOutputDeclsClasses(String operationName, String packageName, ApiResponses apiResponses) {
+    public static void generateOutputDeclsClasses(String operationName, String packageName, ApiResponses apiResponses) {
         List<DeclsClass> res = new ArrayList<>();
 
         // Create a new class for each of the possible response formats
@@ -111,7 +111,7 @@ public class DeclsClass {
             }
         }
 
-        return res;
+        addNewDeclsClasses(res);
     }
 
     public String getPackageName() { return packageName; }

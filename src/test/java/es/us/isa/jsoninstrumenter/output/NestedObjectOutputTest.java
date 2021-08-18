@@ -15,8 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.getOperationName;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -25,6 +24,7 @@ public class NestedObjectOutputTest {
 
     @Test
     public void testGenerationOfNestedObjectOutputTest() {
+        deleteAllDeclsClasses();
 
         String oasPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 
@@ -36,7 +36,6 @@ public class NestedObjectOutputTest {
 
         Paths paths = specification.getPaths();
 
-        List<DeclsClass> declsClassList = new ArrayList<>();
 
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
@@ -49,12 +48,15 @@ public class NestedObjectOutputTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                List<DeclsClass> declsClassesOutput = generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
-                assertEquals("The expected number of output classes is one", declsClassesOutput.size(), 1);
-                declsClassList.addAll(declsClassesOutput);
 
-                DeclsClass declsClassOutput = declsClassesOutput.get(0);
+                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
+
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+
+                assertEquals("The expected number of output classes is one", allDeclsClasses.size(), 1);
+
+                DeclsClass declsClassOutput = allDeclsClasses.get(0);
                 System.out.println(declsClassOutput);
 
                 // CLASS
@@ -180,7 +182,6 @@ public class NestedObjectOutputTest {
 
             }
 
-            assertEquals("The expected total number of classes is one", declsClassList.size(), 1);
 
         }
 
