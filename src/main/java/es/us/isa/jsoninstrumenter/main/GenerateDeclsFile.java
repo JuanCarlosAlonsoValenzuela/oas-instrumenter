@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
@@ -81,9 +82,16 @@ public class GenerateDeclsFile {
                 // The enter and exits belong to the same class
                 if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
                         declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
-                    for(DeclsEnter declsEnter:  declsClass.getDeclsEnters()) {
-                        // TODO: Complete
-                    }
+                    // TODO: Convert the list of declsEnter to a single declsEnter
+                    DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
+
+                    // Get the correct declsExit by the responseCode
+                    DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
+                            .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
+
+                    // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
+                    Map<String, String> queryParameters = testCase.getQueryParameters();
+                    System.out.println(queryParameters);
                 }
 
             }

@@ -2,9 +2,8 @@ package es.us.isa.jsoninstrumenter.util;
 
 import es.us.isa.jsoninstrumenter.pojos.TestCase;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static es.us.isa.jsoninstrumenter.util.CSVManager.readCSV;
 
@@ -31,10 +30,10 @@ public class TestCaseFileManager {
         for(int i = 1; i < testCaseCSV.size(); i++) {
             List<String> row = testCaseCSV.get(i);
 
-            List<String> headerParameters = Arrays.asList(row.get(headerParametersIndex).split("\\s*;\\s*"));
-            List<String> pathParameters = Arrays.asList(row.get(pathParametersIndex).split("\\s*;\\s*"));
-            List<String> queryParameters = Arrays.asList(row.get(queryParametersIndex).split("\\s*;\\s*"));
-            List<String> formParameters = Arrays.asList(row.get(formParametersIndex).split("\\s*;\\s*"));
+            Map<String, String> headerParameters = stringToMap(row.get(headerParametersIndex));
+            Map<String, String> pathParameters = stringToMap(row.get(pathParametersIndex));
+            Map<String, String> queryParameters = stringToMap(row.get(queryParametersIndex));
+            Map<String, String> formParameters = stringToMap(row.get(formParametersIndex));
 
             TestCase testCase = new TestCase(row.get(testCaseIdIndex), row.get(operationIdIndex), row.get(pathIndex),
                     row.get(httpMethodIndex), headerParameters, pathParameters, queryParameters,
@@ -56,6 +55,15 @@ public class TestCaseFileManager {
             }
         }
         throw new NullPointerException("Element " + header + " not found in the csv headers");
+    }
+
+    private static Map<String, String> stringToMap(String str) {
+        if(str.trim().isEmpty()){
+            return new HashMap<>();
+        }else {
+            return Arrays.asList(str.split("\\s*;\\s*")).stream().map(s -> s.split("="))
+                    .collect(Collectors.toMap(a -> a[0], a -> a[1]));
+        }
     }
 
 }

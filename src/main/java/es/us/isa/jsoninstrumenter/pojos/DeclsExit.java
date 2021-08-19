@@ -3,6 +3,7 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.Schema;
 
 import java.lang.reflect.Parameter;
+import java.util.Arrays;
 import java.util.List;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
@@ -13,6 +14,7 @@ public class DeclsExit {
     private String packageName;
     private String endpoint;
     private String operationName;
+    private String statusCode;
     private String variableNameInput;
     private int exitNumber;
     private List<DeclsVariable> enterDeclsVariables;
@@ -27,6 +29,10 @@ public class DeclsExit {
         this.variableNameInput = variableNameInput;
 
         this.exitNumber = exitNumber;
+
+        // TODO: Refactor the method used for obtaining the responseCode
+        List<String> variableNameOutputList = Arrays.asList(variableNameOutput.split("_"));
+        this.statusCode = variableNameOutputList.get(variableNameOutputList.size()-1);
         this.enterDeclsVariables = enterVariables;
 
         // TODO: Change singleton to normal list (a method can have several exits)
@@ -37,6 +43,14 @@ public class DeclsExit {
     public String getExitName() {
         return this.packageName + "." + this.endpoint + "." + this.operationName + "(" +
                 this.packageName + "." + this.operationName + "_" + this.variableNameInput + ")";
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
     }
 
     public String getPackageName() {

@@ -1,6 +1,7 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
 import java.util.List;
+import java.util.Map;
 
 public class TestCase {
 
@@ -8,17 +9,17 @@ public class TestCase {
     private String operationId;
     private String path;
     private String httpMethod;
-    private List<String> headerParameters;
-    private List<String> pathParameters;
-    private List<String> queryParameters;
-    private List<String> formParameters;
+    private Map<String, String> headerParameters;
+    private Map<String, String> pathParameters;
+    private Map<String, String> queryParameters;
+    private Map<String, String> formParameters;
     private String bodyParameter;
     private String statusCode;
     private String responseBody;
 
     public TestCase(String testCaseId, String operationId, String path, String httpMethod,
-                    List<String> headerParameters, List<String> pathParameters,
-                    List<String> queryParameters, List<String> formParameters,
+                    Map<String, String> headerParameters, Map<String, String> pathParameters,
+                    Map<String, String> queryParameters, Map<String, String> formParameters,
                     String bodyParameter, String statusCode, String responseBody) {
         this.testCaseId = testCaseId;
         this.operationId = operationId;
@@ -65,35 +66,35 @@ public class TestCase {
         this.httpMethod = httpMethod;
     }
 
-    public List<String> getHeaderParameters() {
+    public Map<String, String> getHeaderParameters() {
         return headerParameters;
     }
 
-    public void setHeaderParameters(List<String> headerParameters) {
+    public void setHeaderParameters(Map<String, String> headerParameters) {
         this.headerParameters = headerParameters;
     }
 
-    public List<String> getPathParameters() {
+    public Map<String, String> getPathParameters() {
         return pathParameters;
     }
 
-    public void setPathParameters(List<String> pathParameters) {
+    public void setPathParameters(Map<String, String> pathParameters) {
         this.pathParameters = pathParameters;
     }
 
-    public List<String> getQueryParameters() {
+    public Map<String, String> getQueryParameters() {
         return queryParameters;
     }
 
-    public void setQueryParameters(List<String> queryParameters) {
+    public void setQueryParameters(Map<String, String> queryParameters) {
         this.queryParameters = queryParameters;
     }
 
-    public List<String> getFormParameters() {
+    public Map<String, String> getFormParameters() {
         return formParameters;
     }
 
-    public void setFormParameters(List<String> formParameters) {
+    public void setFormParameters(Map<String, String> formParameters) {
         this.formParameters = formParameters;
     }
 
@@ -136,4 +137,5 @@ public class TestCase {
                 ", responseBody='" + responseBody + '\'' +
                 '}';
     }
+    
 }
