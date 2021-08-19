@@ -4,6 +4,7 @@ import io.swagger.v3.oas.models.parameters.Parameter;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
 
@@ -80,6 +81,20 @@ public class DeclsEnter {
         for(DeclsVariable declsVariable: declsVariables) {
             res = res + "\n" + declsVariable;
         }
+
+        return res;
+    }
+
+    public String generateDtrace(TestCase testCase) {
+
+        String res = "ppt " + this.getEnterName() + ":::ENTER";
+
+        for(DeclsVariable declsVariable: declsVariables) {
+            res = res + "\n" + declsVariable.generateDtrace(testCase);
+        }
+
+        res = res + "\n";
+
 
         return res;
     }

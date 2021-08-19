@@ -13,6 +13,7 @@ import org.junit.Test;
 //import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -32,6 +33,8 @@ public class GenerateDeclsFile {
     private static List<DeclsClass> declsClasses = new ArrayList<>();
 
     public static final String packageName = "main";
+
+    public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "double", "int", "boolean");
 
     public static void main(String[] args) {
         OpenAPI specification = getOpenAPISpecification();
@@ -75,7 +78,7 @@ public class GenerateDeclsFile {
         // Generate dTrace file
         List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
         for(TestCase testCase: testCases) {
-            System.out.println(testCase);
+//            System.out.println(testCase);
             // TODO: operationEndpoint + "_" + httpMethod vs operationId
             // TODO: Extract ENTER
             for(DeclsClass declsClass: declsFile.getClasses()) {
@@ -90,8 +93,10 @@ public class GenerateDeclsFile {
                             .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
 
                     // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
-                    Map<String, String> queryParameters = testCase.getQueryParameters();
-                    System.out.println(queryParameters);
+                    Map<String, String> queryParametersValues = testCase.getQueryParameters();
+                    System.out.println(declsEnter.generateDtrace(testCase));
+
+
                 }
 
             }

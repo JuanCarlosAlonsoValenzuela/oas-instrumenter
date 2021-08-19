@@ -7,6 +7,7 @@ import io.swagger.v3.oas.models.parameters.Parameter;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.primitiveTypes;
 
 public class DeclsVariable {
 
@@ -349,4 +350,46 @@ public class DeclsVariable {
 
         return res;
     }
+
+    public String generateDtrace(TestCase testCase) {
+        // TODO: Check whether is necessary to use:
+        // enclosing-var
+        // array flag
+
+        // Father variable
+        // TODO: Use "" for strings (check reptype= java.lang.String)
+        // TODO: Use dec-type for objects
+
+        Map<String, String> queryParametersValues = testCase.getQueryParameters();
+
+
+        String value = null;
+        // TODO: Consider arrays
+        if(primitiveTypes.contains(this.decType)) { // If primitive value
+
+            // TODO: Consider refactoring this line to make it more intuitive
+            List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+            if(hierarchy.size() > 1) {
+                value = queryParametersValues.get(hierarchy.get(hierarchy.size()-1));
+            } else {
+                value = variableName;
+            }
+
+            if(this.repType.equals("java.lang.String") && value != null) {
+                value = "\"" + value + "\"";
+            }
+        } else {    // If type = object
+            value = "\"" + testCase.getTestCaseId() + "_input" + "\"";
+        }
+
+        String res = this.variableName + "\n" +
+                value + "\n" + "1";
+
+        for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
+            res = res + "\n" + declsVariable.generateDtrace(testCase);
+        }
+
+        return res;
+    }
+
 }
