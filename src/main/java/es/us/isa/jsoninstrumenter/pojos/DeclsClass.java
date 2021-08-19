@@ -1,5 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import com.fasterxml.jackson.databind.deser.impl.CreatorCandidate;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
@@ -55,11 +56,10 @@ public class DeclsClass {
                                                  ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-        String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + variableNameInput + ")";
+        DeclsEnter declsEnter = new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input");
 
-
-        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration,
-                operationName + "_" + variableNameInput, "input", parameters);
+//        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration,
+//                operationName + "_" + variableNameInput, "input", parameters);
         declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
 
         // for loop that adds all the possible subexits
@@ -70,7 +70,10 @@ public class DeclsClass {
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Schema mapOfProperties = mediaType.getSchema();
-                DeclsExit declsExit = new DeclsExit(packageName, enterExitPptDeclaration, declsEnter.getDeclsVariables(), objectName,
+
+//                String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + variableNameInput + ")";
+
+                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, declsEnter.getDeclsVariables(), objectName,
                         mapOfProperties, numberOfExits);
                 declsExits.add(declsExit);
 
