@@ -87,10 +87,10 @@ public class DeclsEnter {
 
     public String generateDtrace(TestCase testCase) {
 
-        String res = "ppt " + this.getEnterName() + ":::ENTER";
+        String res = this.getEnterName() + ":::ENTER";
 
         for(DeclsVariable declsVariable: declsVariables) {
-            res = res + "\n" + declsVariable.generateDtrace(testCase);
+            res = res + "\n" + declsVariable.generateDtraceEnter(testCase);
         }
 
         res = res + "\n";

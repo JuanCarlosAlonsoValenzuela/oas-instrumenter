@@ -86,15 +86,19 @@ public class GenerateDeclsFile {
                 if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
                         declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
                     // TODO: Convert the list of declsEnter to a single declsEnter
+                    // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
                     DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
+                    System.out.println(declsEnter.generateDtrace(testCase));
+
 
                     // Get the correct declsExit by the responseCode
                     DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
                             .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
 
-                    // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
-                    Map<String, String> queryParametersValues = testCase.getQueryParameters();
-                    System.out.println(declsEnter.generateDtrace(testCase));
+
+
+
+                    System.out.println(declsExit.generateDtrace(testCase));
 
 
                 }

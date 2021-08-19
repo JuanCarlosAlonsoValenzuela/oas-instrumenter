@@ -3,11 +3,15 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.primitiveTypes;
+import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJson;
 
 public class DeclsVariable {
 
@@ -351,23 +355,15 @@ public class DeclsVariable {
         return res;
     }
 
-    public String generateDtrace(TestCase testCase) {
-        // TODO: Check whether is necessary to use:
-        // enclosing-var
-        // array flag
-
-        // Father variable
-        // TODO: Use "" for strings (check reptype= java.lang.String)
-        // TODO: Use dec-type for objects
-
+    // TODO: Add to the method again
+    private static String getValueOfParameterForDtraceFile(TestCase testCase, String variableName, String decType, String repType) {
         Map<String, String> queryParametersValues = testCase.getQueryParameters();
-
-
         String value = null;
         // TODO: Consider arrays
-        if(primitiveTypes.contains(this.decType)) { // If primitive value
+        // TODO: Consider path, header and form variables
+        if(primitiveTypes.contains(decType)) { // If primitive value
 
-            // TODO: Consider refactoring this line to make it more intuitive
+            // Get the variable name (Without Wrapping)
             List<String> hierarchy = Arrays.asList(variableName.split("\\."));
             if(hierarchy.size() > 1) {
                 value = queryParametersValues.get(hierarchy.get(hierarchy.size()-1));
@@ -375,18 +371,67 @@ public class DeclsVariable {
                 value = variableName;
             }
 
-            if(this.repType.equals("java.lang.String") && value != null) {
+            if(repType.equals("java.lang.String") && value != null) {
                 value = "\"" + value + "\"";
             }
         } else {    // If type = object
-            value = "\"" + testCase.getTestCaseId() + "_input" + "\"";
+            value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
+        }
+
+        return value;
+    }
+
+    public String generateDtraceEnter(TestCase testCase) {
+
+        // Father variable
+        String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
+
+        String res = this.variableName + "\n" +
+                value + "\n" + "1";
+
+        // Son variables
+        for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
+            res = res + "\n" + declsVariable.generateDtraceEnter(testCase);
+        }
+
+        return res;
+    }
+
+    public String generateDtraceExit(TestCase testCase) {
+        // TODO: Consider arrays
+        // TODO: Consider path, header and form variables
+
+        // TODO: Contrastar el datatype con el dtrace
+        // TODO: Check all datatypes (boolean, string, int, double, object)
+
+        JSONObject json = stringToJson(testCase.getResponseBody());
+
+        String value = null;
+
+        if(primitiveTypes.contains(this.decType)) { // If primitive type
+
+            // Get the variable name (Withut wrapping)
+            List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
+            if(hierarchy.size() > 1) {
+                value = String.valueOf(json.get(hierarchy.get(hierarchy.size()-1)));
+            } else {
+                value = variableName;
+            }
+
+            if(repType.equals("java.lang.String") && value != null) {
+                value = "\"" + value + "\"";
+            }
+
+        } else {    // If type = object
+            value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
         }
 
         String res = this.variableName + "\n" +
                 value + "\n" + "1";
 
+        // Son variables
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
-            res = res + "\n" + declsVariable.generateDtrace(testCase);
+            res = res + "\n" + declsVariable.generateDtraceExit(testCase);
         }
 
         return res;

@@ -2,7 +2,6 @@ package es.us.isa.jsoninstrumenter.pojos;
 
 import io.swagger.v3.oas.models.media.Schema;
 
-import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.List;
 
@@ -121,6 +120,22 @@ public class DeclsExit {
         for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
             res = res + "\n" + exitDeclsVariable;
         }
+
+        return res;
+    }
+
+    public String generateDtrace(TestCase testCase) {
+        String res = this.getExitName() + ":::EXIT" + exitNumber;
+
+        for(DeclsVariable enterDeclsVariable: this.enterDeclsVariables) {
+            res = res + "\n" + enterDeclsVariable.generateDtraceEnter(testCase);
+        }
+
+        for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
+            res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase);
+        }
+
+        res = res + "\n";
 
         return res;
     }
