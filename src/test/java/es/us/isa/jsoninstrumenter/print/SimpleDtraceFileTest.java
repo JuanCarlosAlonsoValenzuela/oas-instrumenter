@@ -76,21 +76,21 @@ public class SimpleDtraceFileTest {
                     DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
 
                     // Checks in ENTER
-//                    String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
-//                    assertEquals("Incorrect enter name", "main.airport.findAirports(main.findAirports_Input):::ENTER", enterDtraceLines[0]);
-//                    assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
-//                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_input_input\"", enterDtraceLines[2]);
-//                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
-//
+                    String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
+                    assertEquals("Incorrect enter name", "main.airport.findAirports(main.findAirports_Input):::ENTER", enterDtraceLines[0]);
+                    assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
+                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_input_input\"", enterDtraceLines[2]);
+                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
+
                     // iata
-//                    assertEquals("Incorrect variable name", "input.iata", enterDtraceLines[4]);
-//                    assertEquals("Incorrect variable value", "\"BCS\"", enterDtraceLines[5]);
-//                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[6]);
-//
+                    assertEquals("Incorrect variable name", "input.iata", enterDtraceLines[4]);
+                    assertEquals("Incorrect variable value", "\"BCS\"", enterDtraceLines[5]);
+                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[6]);
+
                     // icao
-//                    assertEquals("Incorrect variable name", "input.icao", enterDtraceLines[7]);
-//                    assertEquals("Incorrect variable value", "null", enterDtraceLines[8]);
-//                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[9]);
+                    assertEquals("Incorrect variable name", "input.icao", enterDtraceLines[7]);
+                    assertEquals("Incorrect variable value", "null", enterDtraceLines[8]);
+                    assertEquals("Incorrect end of trace", "1", enterDtraceLines[9]);
 
 
                     // Get the correct declsExit by the responseCode
