@@ -23,8 +23,9 @@ public class GenerateDeclsFile {
 
 //    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
 
-    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
-    private static String testCasesFilePath = "src/test/resources/airportInfo/testCases_simplified.csv";
+    private static String openApiSpecPath = "src/main/resources/Spotify/swagger_categoryById.yaml";
+    private static String testCasesFilePath = "src/main/resources/Spotify/dtrace.csv";
+    private static boolean generateDtrace = true;
 
     public static int numberOfExits = 1;
 
@@ -68,36 +69,36 @@ public class GenerateDeclsFile {
 
         }
 
-        // PRINT TRACE
+        // PRINT DECLS file
         DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
         System.out.println(declsFile);
 
 
-        // Generate dTrace file
-        List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
-        for(TestCase testCase: testCases) {
-//            System.out.println(testCase);
-            // TODO: operationEndpoint + "_" + httpMethod vs operationId
-            // TODO: Extract ENTER
-            for(DeclsClass declsClass: declsFile.getClasses()) {
-                // The enter and exits belong to the same class
-                if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
-                        declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
-                    // TODO: Convert the list of declsEnter to a single declsEnter
-                    // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
-                    DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
-                    System.out.println(declsEnter.generateDtrace(testCase));
+        if(generateDtrace){
+            // Generate dTrace file
+            List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
+            for(TestCase testCase: testCases) {
+                // TODO: operationEndpoint + "_" + httpMethod vs operationId
+                // TODO: Extract ENTER
+                for(DeclsClass declsClass: declsFile.getClasses()) {
+                    // The enter and exits belong to the same class
+                    if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
+                            declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
+                        // TODO: Convert the list of declsEnter to a single declsEnter
+                        // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
+                        DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
+                        System.out.println(declsEnter.generateDtrace(testCase));
 
 
-                    // Get the correct declsExit by the responseCode
-                    DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
-                            .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
+                        // Get the correct declsExit by the responseCode
+                        DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
+                                .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
 
 
+                        System.out.println(declsExit.generateDtrace(testCase));
 
 
-                    System.out.println(declsExit.generateDtrace(testCase));
-
+                    }
 
                 }
 
@@ -105,16 +106,7 @@ public class GenerateDeclsFile {
 
         }
 
-
-
-
-        // TODO: Deal with null values
-
         // TODO: Discard authentication parameters (by discarding them from the objects)
-        // TODO: Extract EXIT (input and output) (use the response code)
-
-
-
 
     }
 
@@ -123,7 +115,7 @@ public class GenerateDeclsFile {
         String operationName;
         if (operation.getOperationId() == null) {
             String httpMethod = operationEntry.getKey().toString();
-            operationName = operationEndpoint + "_" + httpMethod;
+            operationName = operationEndpoint + "_" + httpMethod.toLowerCase();
         } else {
             operationName = operation.getOperationId();
         }

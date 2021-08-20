@@ -23,6 +23,9 @@ public class SimpleDtraceFileTest {
     @Test
     public void testPrintSimpleDtraceFile() {
 
+        // TODO: Refactor
+        numberOfExits = 1;
+
         deleteAllDeclsClasses();
 
         String oasPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";

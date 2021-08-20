@@ -1,11 +1,13 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
 import io.swagger.v3.oas.models.media.Schema;
+import org.json.simple.JSONObject;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
+import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJson;
 
 public class DeclsExit {
 
@@ -132,7 +134,8 @@ public class DeclsExit {
         }
 
         for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
-            res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase);
+            JSONObject json = stringToJson(testCase.getResponseBody());
+            res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase, json, false);
         }
 
         res = res + "\n";

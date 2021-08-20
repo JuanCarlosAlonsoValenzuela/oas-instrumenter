@@ -3,6 +3,7 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -239,11 +240,13 @@ public class DeclsVariable {
 
         String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
-        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, repType + arrayIndicator, variablePath));
+        // TODO: The rep type used to contain the array indicator too (changed when testing Spotify), Chicory uses hashcode for repType
+        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, repType, variablePath));
 
         // TODO: Check whether I should include []s in dectype and reptype (Inconsistency in docs)
         // The enclosing var name contains the name of the variable (this.array)
-        res.add(new DeclsVariable(variableName + "[..]", "array", decType, repType, variableName));
+        // TODO: The rep type DID NOT used to contain the array indicator too (changed when testing Spotify), Chicory uses hashcode for repType
+        res.add(new DeclsVariable(variableName + "[..]", "array", decType, repType  + arrayIndicator, variableName));
 
         return res;
     }
@@ -355,9 +358,13 @@ public class DeclsVariable {
         return res;
     }
 
-    // TODO: Add to the method again
+
     private static String getValueOfParameterForDtraceFile(TestCase testCase, String variableName, String decType, String repType) {
         Map<String, String> queryParametersValues = testCase.getQueryParameters();
+        Map<String, String> pathParametersValues = testCase.getPathParameters();
+        Map<String, String> headerParametersValues = testCase.getHeaderParameters();
+        Map<String, String> formParametersValues = testCase.getFormParameters();
+
         String value = null;
         // TODO: Consider arrays
         // TODO: Consider path, header and form variables
@@ -366,7 +373,17 @@ public class DeclsVariable {
             // Get the variable name (Without Wrapping)
             List<String> hierarchy = Arrays.asList(variableName.split("\\."));
             if(hierarchy.size() > 1) {
-                value = queryParametersValues.get(hierarchy.get(hierarchy.size()-1));
+                String key = hierarchy.get(hierarchy.size()-1);
+                value = queryParametersValues.get(key);
+                if(value == null) {
+                    value = pathParametersValues.get(key);
+                }
+                if(value == null) {
+                    value = headerParametersValues.get(key);
+                }
+                if(value == null) {
+                    value = formParametersValues.get(key);
+                }
             } else {
                 value = variableName;
             }
@@ -382,6 +399,7 @@ public class DeclsVariable {
     }
 
     public String generateDtraceEnter(TestCase testCase) {
+        // TODO: Consider arrays
 
         // Father variable
         String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
@@ -397,23 +415,22 @@ public class DeclsVariable {
         return res;
     }
 
-    public String generateDtraceExit(TestCase testCase) {
+    public String generateDtraceExit(TestCase testCase, JSONObject json, Boolean isElementOfArray) {
         // TODO: Consider arrays
+        // TODO: Consider objects
         // TODO: Consider path, header and form variables
-
-        // TODO: Contrastar el datatype con el dtrace
         // TODO: Check all datatypes (boolean, string, int, double, object)
 
-        JSONObject json = stringToJson(testCase.getResponseBody());
+//        JSONObject json = stringToJson(testCase.getResponseBody());
 
         String value = null;
 
         if(primitiveTypes.contains(this.decType)) { // If primitive type
-
             // Get the variable name (Withut wrapping)
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
+            String key = hierarchy.get(hierarchy.size()-1);
             if(hierarchy.size() > 1) {
-                value = String.valueOf(json.get(hierarchy.get(hierarchy.size()-1)));
+                value = String.valueOf(json.get(key));
             } else {
                 value = variableName;
             }
@@ -422,8 +439,29 @@ public class DeclsVariable {
                 value = "\"" + value + "\"";
             }
 
+            if(isElementOfArray) {
+                value = "[" + value + "]";
+            }
+
+        } else if (varKind.equals("array")) {       // If array TODO: Consider recursivity (Primitive, object and another array)
+            // TODO: factor común
+            List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
+            String key = hierarchy.get(hierarchy.size()-1);
+            JSONArray elements = (JSONArray) json.get(key);
+
+            String hashcode = "";   // TODO: Refactor
+            for(int i = 1; i <= elements.size(); i++) {
+                hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + this.variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+            }
+
+            // TODO: Nesting
+            value = "[" + hashcode.trim() + "]";
+
         } else {    // If type = object
             value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
+            if(isElementOfArray) {
+                value = "[" + value + "]";
+            }
         }
 
         String res = this.variableName + "\n" +
@@ -431,7 +469,21 @@ public class DeclsVariable {
 
         // Son variables
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
-            res = res + "\n" + declsVariable.generateDtraceExit(testCase);
+            if(varKind.equals("array")) {
+                // TODO: Factor común
+                List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
+                String key = hierarchy.get(hierarchy.size()-1);
+                JSONArray elements = (JSONArray) json.get(key);
+
+                for(int i=0; i<elements.size(); i++) {
+                    JSONObject element = (JSONObject) elements.get(0);
+                    res = res + "\n" + declsVariable.generateDtraceExit(testCase, element, true);
+                }
+
+
+            } else {    // The element was an object or primitive
+                res = res + "\n" + declsVariable.generateDtraceExit(testCase, json, false);
+            }
         }
 
         return res;
