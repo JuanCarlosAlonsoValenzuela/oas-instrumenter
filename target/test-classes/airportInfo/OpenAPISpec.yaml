@@ -4,9 +4,9 @@ info:
   description: 'Fastest and most complete database of airport codes and data, including
     address, phone number, website and more. '
   title: airportInfo
-  version: apiversion_0dede419-a738-4de7-a7c4-5a2febd4c628
+  version: 1.0
 schemes:
-- https
+  - https
 swagger: '2.0'
 paths:
   /airport:
@@ -14,16 +14,18 @@ paths:
       description: Lookup an airport by its IATA or ICAO code
       operationId: findAirports
       parameters:
-      - description: IATA code of the airport to retrieve
-        in: query
-        name: iata
-        required: false
-        type: string
-      - description: ICAO code of the airport to retrieve
-        in: query
-        name: icao
-        required: false
-        type: string
+        - description: IATA code of the airport to retrieve
+          in: query
+          name: iata
+          required: false
+          type: string
+        - description: ICAO code of the airport to retrieve
+          in: query
+          name: icao
+          required: false
+          type: string
+      x-dependencies:
+        - Or(iata, icao);
       responses:
         '200':
           description: OK
@@ -42,11 +44,32 @@ paths:
               name:
                 description: "Airport name"
                 type: string
-              version:
-                description: "API version"
+              location:
+                description: "Airport location"
+                type: string
+              street_number:
+                type: string
+              street:
+                type: string
+              city:
+                type: string
+              county:
+                type: string
+              state:
+                type: string
+              country_iso:
+                type: string
+              country:
+                type: string
+              postal_code:
+                type: string
+              phone:
+                type: string
+              latitude:
                 type: number
-
-
-#        default:
-#          description: Unexpected error
-#      summary: ''
+              longitude:
+                type: number
+              uct:
+                type: integer
+              website:
+                type: string

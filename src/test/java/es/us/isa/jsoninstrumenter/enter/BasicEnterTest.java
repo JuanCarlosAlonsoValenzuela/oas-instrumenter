@@ -23,8 +23,9 @@ public class BasicEnterTest {
 
     @Test
     public void testGenerationOfBasicEnter() {
+        deleteAllDeclsClasses();
 
-        String oasPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
+        String oasPath = "src/test/resources/airportInfo/swagger_simplified.yaml";
 
         // Equivalent to the getOpenAPISpecification private function
         ParseOptions parseOptions = new ParseOptions();

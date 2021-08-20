@@ -8,14 +8,12 @@ import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
-import org.junit.Test;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
@@ -25,8 +23,8 @@ public class GenerateDeclsFile {
 
 //    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
 
-    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
-    private static String testCasesFilePath = "src/main/resources/AirportInfo/testCases.csv";
+    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
+    private static String testCasesFilePath = "src/test/resources/airportInfo/testCases_simplified.csv";
 
     public static int numberOfExits = 1;
 

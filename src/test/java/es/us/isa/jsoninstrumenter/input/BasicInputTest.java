@@ -9,6 +9,8 @@ import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
 import org.junit.Test;
 import io.swagger.v3.oas.models.PathItem;
+
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static org.junit.Assert.*;
 
 import io.swagger.v3.oas.models.Operation;
@@ -19,15 +21,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.getOperationName;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-
 
 public class BasicInputTest {
 
     @Test
     public void testGenerationOfBasicInputs() {
-        String oasPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
+        deleteAllDeclsClasses();
+        String oasPath = "src/test/resources/airportInfo/swagger_simplified.yaml";
 
         // Equivalent to the getOpenAPISpecification private function
         ParseOptions parseOptions = new ParseOptions();
