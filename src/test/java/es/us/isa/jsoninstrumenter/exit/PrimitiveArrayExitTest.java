@@ -136,7 +136,7 @@ public class PrimitiveArrayExitTest {
                 assertEquals("Incorrect variable name", "return.serviceTypes", serviceTypes1.getVariableName());
                 assertEquals("Incorrect var-kind", "field serviceTypes", serviceTypes1.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String[]", serviceTypes1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", serviceTypes1.getRepType());
+                assertEquals("Incorrect repType", "java.lang.String", serviceTypes1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", serviceTypes1.getEnclosingVar());
                 // The first ocurrence should not be an array (flaga array 1)
                 assertFalse("This variable should not be an array", serviceTypes1.isArray());
@@ -145,8 +145,8 @@ public class PrimitiveArrayExitTest {
                 DeclsVariable serviceTypes2 = declsSonVariables.get(4);
                 assertEquals("Incorrect variable name", "return.serviceTypes[..]", serviceTypes2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", serviceTypes2.getVarKind());
-                assertEquals("Incorrect decType", "java.lang.String", serviceTypes2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", serviceTypes2.getRepType());
+                assertEquals("Incorrect decType", "java.lang.String[]", serviceTypes2.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String[]", serviceTypes2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.serviceTypes", serviceTypes2.getEnclosingVar());
                 // The first ocurrence should not be an array (flaga array 1)
                 assertTrue("This variable should be an array", serviceTypes2.isArray());

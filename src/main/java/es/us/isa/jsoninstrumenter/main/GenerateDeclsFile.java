@@ -25,7 +25,7 @@ public class GenerateDeclsFile {
 
     private static String openApiSpecPath = "src/main/resources/Spotify/swagger_categoryById.yaml";
     private static String testCasesFilePath = "src/main/resources/Spotify/dtrace.csv";
-    private static boolean generateDtrace = false;
+    private static boolean generateDtrace = true;
 
     public static int numberOfExits = 1;
 

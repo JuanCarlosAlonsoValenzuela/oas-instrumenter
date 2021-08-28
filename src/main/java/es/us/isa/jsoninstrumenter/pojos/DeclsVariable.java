@@ -118,7 +118,7 @@ public class DeclsVariable {
         ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
         String itemsDatatype = arraySchema.getItems().getType();
 
-        // TODO: Three possible situations:
+        // Three possible situations:
         if(itemsDatatype.equalsIgnoreCase("object")) { // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
 
             // Generate the father variable
@@ -132,6 +132,7 @@ public class DeclsVariable {
             res.addAll(declsVariables);
 
         } else if(itemsDatatype.equalsIgnoreCase("array")) { // 2. The content is another ARRAY (recursive call) [][]
+            // TODO: Adapt to change observed in Spotify (i.e., there are no primitive variables inside an array)
             List<DeclsVariable> declsVariableList = getDeclsVariablesOfRecursiveArray(variablePath, varKind, parameterName, arraySchema, nestingLevel);
             // Add to list
             res.addAll(declsVariableList);
@@ -246,7 +247,7 @@ public class DeclsVariable {
         // TODO: Check whether I should include []s in dectype and reptype (Inconsistency in docs)
         // The enclosing var name contains the name of the variable (this.array)
         // TODO: The rep type DID NOT used to contain the array indicator too (changed when testing Spotify), Chicory uses hashcode for repType
-        res.add(new DeclsVariable(variableName + "[..]", "array", decType, repType  + arrayIndicator, variableName));
+        res.add(new DeclsVariable(variableName + "[..]", "array", decType + arrayIndicator, repType  + arrayIndicator, variableName));
 
         return res;
     }
@@ -265,8 +266,14 @@ public class DeclsVariable {
     public DeclsVariable(String variableName, String varKind, String decType, String repType, String enclosingVar, boolean isArray) {
         this.variableName = variableName;
         this.varKind = varKind;
-        this.decType = decType;
-        this.repType = repType;
+
+        if(isArray) {
+            this.decType = decType + "[]";
+            this.repType = repType + "[]";
+        } else {
+            this.decType = decType;
+            this.repType = repType;
+        }
         this.enclosingVar = enclosingVar;
         this.enclosedVariables = new ArrayList<>();
         this.isArray = isArray;
@@ -425,7 +432,9 @@ public class DeclsVariable {
 
         String value = null;
 
-        if(primitiveTypes.contains(this.decType)) { // If primitive type
+        if(     // See Spotify example
+                (primitiveTypes.contains(this.decType) || primitiveTypes.contains(this.decType.replace("[]", ""))) && !varKind.equals("array")
+        ) { // If primitive type
             // Get the variable name (Withut wrapping)
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
             String key = hierarchy.get(hierarchy.size()-1);
@@ -435,7 +444,7 @@ public class DeclsVariable {
                 value = variableName;
             }
 
-            if(repType.equals("java.lang.String") && value != null) {
+            if(repType.replace("[]", "").equals("java.lang.String") && value != null) {
                 value = "\"" + value + "\"";
             }
 

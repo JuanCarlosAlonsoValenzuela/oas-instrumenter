@@ -63,8 +63,8 @@ public class DeclsVariableToStringTest {
         assertEquals("Incorrect var-kind line", "\tvar-kind varKind", declsVariableLines[1]);
         assertEquals("Incorrect dec-type line", "\tenclosing-var enclosingVar", declsVariableLines[2]);
         assertEquals("Incorrect dec-type line", "\tarray 1", declsVariableLines[3]);
-        assertEquals("Incorrect dec-type line", "\tdec-type int", declsVariableLines[4]);
-        assertEquals("Incorrect rep-type line", "\trep-type double", declsVariableLines[5]);
+        assertEquals("Incorrect dec-type line", "\tdec-type int[]", declsVariableLines[4]);
+        assertEquals("Incorrect rep-type line", "\trep-type double[]", declsVariableLines[5]);
 
     }
 

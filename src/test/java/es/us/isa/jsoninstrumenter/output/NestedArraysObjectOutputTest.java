@@ -9,6 +9,7 @@ import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -23,6 +24,7 @@ import static org.junit.Assert.assertEquals;
 public class NestedArraysObjectOutputTest {
 
     @Test
+    @Ignore
     public void testGenerationOfNestedArraysObjectOutput(){
 
         deleteAllDeclsClasses();
