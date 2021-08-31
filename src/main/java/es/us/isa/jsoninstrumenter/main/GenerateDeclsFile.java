@@ -11,6 +11,9 @@ import io.swagger.v3.parser.core.models.ParseOptions;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,8 +76,14 @@ public class GenerateDeclsFile {
         DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
         System.out.println(declsFile);
 
+        String declsFilePath = getOutputPath("declsFile.decls");
+        writeFile(declsFilePath, declsFile.toString());
+
+
 
         if(generateDtrace){
+
+            String dtraceContent = "";
             // Generate dTrace file
             List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
             for(TestCase testCase: testCases) {
@@ -88,6 +97,7 @@ public class GenerateDeclsFile {
                         // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
                         DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
                         System.out.println(declsEnter.generateDtrace(testCase));
+                        dtraceContent = dtraceContent + declsEnter.generateDtrace(testCase) + "\n";
 
 
                         // Get the correct declsExit by the responseCode
@@ -96,6 +106,7 @@ public class GenerateDeclsFile {
 
 
                         System.out.println(declsExit.generateDtrace(testCase));
+                        dtraceContent = dtraceContent + declsExit.generateDtrace(testCase)  + "\n";
 
 
                     }
@@ -103,6 +114,10 @@ public class GenerateDeclsFile {
                 }
 
             }
+
+
+            String dtraceFilePath = getOutputPath("dtraceFile.dtrace");
+            writeFile(dtraceFilePath, dtraceContent);
 
         }
 
@@ -148,6 +163,28 @@ public class GenerateDeclsFile {
     public static void deleteAllDeclsClasses(){
         declsClasses.clear();
     }
+
+    private static String getOutputPath(String filename) {
+        Path path = java.nio.file.Paths.get(openApiSpecPath);
+        Path dir = path.getParent();
+        Path fn = path.getFileSystem().getPath(filename);
+        Path target = (dir == null) ? fn : dir.resolve(fn);
+
+        return target.toString();
+    }
+
+    private static void writeFile(String filepath, String content) {
+        try {
+            FileWriter myWriter = new FileWriter(filepath);
+            myWriter.write(content);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
 
     // Input file
     // Distinguish program point declaration from variable declarations
