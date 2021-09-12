@@ -78,6 +78,50 @@ variable this.locations[..]
 	dec-type main.locations[]
 	rep-type java.lang.String[]
 
+ppt main.findByAddress_Output_200_locations_openingHours:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.findByAddress_Output_200_locations_openingHours
+	rep-type java.lang.String
+variable this.closes
+	var-kind field closes
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.opens
+	var-kind field opens
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.dayOfWeek
+	var-kind field dayOfWeek
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.findByAddress_Output_200_locations_closurePeriods:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.findByAddress_Output_200_locations_closurePeriods
+	rep-type java.lang.String
+variable this.type
+	var-kind field type
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.fromDate
+	var-kind field fromDate
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.toDate
+	var-kind field toDate
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
 ppt main.findByAddress_Output_200_locations:::OBJECT
 ppt-type object
 variable this
@@ -130,6 +174,100 @@ variable this.distance
 	enclosing-var this
 	dec-type double
 	rep-type double
+variable this.place
+	var-kind variable
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.address
+	var-kind variable
+	enclosing-var this.place
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.address.countryCode
+	var-kind field countryCode
+	enclosing-var this.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.address.postalCode
+	var-kind field postalCode
+	enclosing-var this.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.address.addressLocality
+	var-kind field addressLocality
+	enclosing-var this.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.address.streetAddress
+	var-kind field streetAddress
+	enclosing-var this.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.geo
+	var-kind variable
+	enclosing-var this.place
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.place.geo.latitude
+	var-kind field latitude
+	enclosing-var this.place.geo
+	dec-type double
+	rep-type double
+variable this.place.geo.longitude
+	var-kind field longitude
+	enclosing-var this.place.geo
+	dec-type double
+	rep-type double
+variable this.serviceTypes
+	var-kind field serviceTypes
+	enclosing-var this
+	dec-type java.lang.String[]
+	rep-type java.lang.String
+variable this.serviceTypes[..]
+	var-kind array
+	enclosing-var this.serviceTypes
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable this.averageCapacityDayOfWeek
+	var-kind field averageCapacityDayOfWeek
+	enclosing-var this
+	dec-type main.averageCapacityDayOfWeek[]
+	rep-type java.lang.String
+variable this.averageCapacityDayOfWeek[..]
+	var-kind array
+	enclosing-var this.averageCapacityDayOfWeek
+	array 1
+	dec-type main.averageCapacityDayOfWeek[]
+	rep-type java.lang.String[]
+variable this.availableCapacity
+	var-kind field availableCapacity
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.openingHours
+	var-kind field openingHours
+	enclosing-var this
+	dec-type main.openingHours[]
+	rep-type java.lang.String
+variable this.openingHours[..]
+	var-kind array
+	enclosing-var this.openingHours
+	array 1
+	dec-type main.openingHours[]
+	rep-type java.lang.String[]
+variable this.closurePeriods
+	var-kind field closurePeriods
+	enclosing-var this
+	dec-type main.closurePeriods[]
+	rep-type java.lang.String
+variable this.closurePeriods[..]
+	var-kind array
+	enclosing-var this.closurePeriods
+	array 1
+	dec-type main.closurePeriods[]
+	rep-type java.lang.String[]
 
 ppt main.findByAddress_Output_200_locations_location_ids:::OBJECT
 ppt-type object
@@ -144,6 +282,23 @@ variable this.locationId
 	rep-type java.lang.String
 variable this.provider
 	var-kind field provider
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.findByAddress_Output_200_locations_averageCapacityDayOfWeek:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.findByAddress_Output_200_locations_averageCapacityDayOfWeek
+	rep-type java.lang.String
+variable this.dayOfWeek
+	var-kind field dayOfWeek
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.capacity
+	var-kind field capacity
 	enclosing-var this
 	dec-type java.lang.String
 	rep-type java.lang.String
@@ -302,7 +457,149 @@ variable return.locations[..]
 	dec-type main.locations[]
 	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations(main.findByAddress_locations_Input):::EXIT2
+ppt main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_locations_openingHours_Input):::EXIT2
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.findByAddress_Input
+	rep-type java.lang.String
+variable input.countryCode
+	var-kind field countryCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.addressLocality
+	var-kind field addressLocality
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.postalCode
+	var-kind field postalCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.streetAddress
+	var-kind field streetAddress
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.providerType
+	var-kind field providerType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.locationType
+	var-kind field locationType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.serviceType
+	var-kind field serviceType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.radius
+	var-kind field radius
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable input.limit
+	var-kind field limit
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable return
+	var-kind return
+	dec-type main.findByAddress_Output_200_locations_openingHours
+	rep-type java.lang.String
+variable return.closes
+	var-kind field closes
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.opens
+	var-kind field opens
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.dayOfWeek
+	var-kind field dayOfWeek
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.find-by-address.findByAddress_locations_closurePeriods(main.findByAddress_locations_closurePeriods_Input):::EXIT3
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.findByAddress_Input
+	rep-type java.lang.String
+variable input.countryCode
+	var-kind field countryCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.addressLocality
+	var-kind field addressLocality
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.postalCode
+	var-kind field postalCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.streetAddress
+	var-kind field streetAddress
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.providerType
+	var-kind field providerType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.locationType
+	var-kind field locationType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.serviceType
+	var-kind field serviceType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.radius
+	var-kind field radius
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable input.limit
+	var-kind field limit
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable return
+	var-kind return
+	dec-type main.findByAddress_Output_200_locations_closurePeriods
+	rep-type java.lang.String
+variable return.type
+	var-kind field type
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.fromDate
+	var-kind field fromDate
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.toDate
+	var-kind field toDate
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.find-by-address.findByAddress_locations(main.findByAddress_locations_Input):::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
@@ -403,8 +700,102 @@ variable return.distance
 	enclosing-var return
 	dec-type double
 	rep-type double
+variable return.place
+	var-kind return
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.address
+	var-kind return
+	enclosing-var return.place
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.address.countryCode
+	var-kind field countryCode
+	enclosing-var return.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.address.postalCode
+	var-kind field postalCode
+	enclosing-var return.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.address.addressLocality
+	var-kind field addressLocality
+	enclosing-var return.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.address.streetAddress
+	var-kind field streetAddress
+	enclosing-var return.place.address
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.geo
+	var-kind return
+	enclosing-var return.place
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.place.geo.latitude
+	var-kind field latitude
+	enclosing-var return.place.geo
+	dec-type double
+	rep-type double
+variable return.place.geo.longitude
+	var-kind field longitude
+	enclosing-var return.place.geo
+	dec-type double
+	rep-type double
+variable return.serviceTypes
+	var-kind field serviceTypes
+	enclosing-var return
+	dec-type java.lang.String[]
+	rep-type java.lang.String
+variable return.serviceTypes[..]
+	var-kind array
+	enclosing-var return.serviceTypes
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable return.averageCapacityDayOfWeek
+	var-kind field averageCapacityDayOfWeek
+	enclosing-var return
+	dec-type main.averageCapacityDayOfWeek[]
+	rep-type java.lang.String
+variable return.averageCapacityDayOfWeek[..]
+	var-kind array
+	enclosing-var return.averageCapacityDayOfWeek
+	array 1
+	dec-type main.averageCapacityDayOfWeek[]
+	rep-type java.lang.String[]
+variable return.availableCapacity
+	var-kind field availableCapacity
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.openingHours
+	var-kind field openingHours
+	enclosing-var return
+	dec-type main.openingHours[]
+	rep-type java.lang.String
+variable return.openingHours[..]
+	var-kind array
+	enclosing-var return.openingHours
+	array 1
+	dec-type main.openingHours[]
+	rep-type java.lang.String[]
+variable return.closurePeriods
+	var-kind field closurePeriods
+	enclosing-var return
+	dec-type main.closurePeriods[]
+	rep-type java.lang.String
+variable return.closurePeriods[..]
+	var-kind array
+	enclosing-var return.closurePeriods
+	array 1
+	dec-type main.closurePeriods[]
+	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_locations_location_ids_Input):::EXIT3
+ppt main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_locations_location_ids_Input):::EXIT5
 ppt-type subexit
 variable input
 	var-kind variable
@@ -470,7 +861,73 @@ variable return.provider
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT4
+ppt main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_locations_averageCapacityDayOfWeek_Input):::EXIT6
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.findByAddress_Input
+	rep-type java.lang.String
+variable input.countryCode
+	var-kind field countryCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.addressLocality
+	var-kind field addressLocality
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.postalCode
+	var-kind field postalCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.streetAddress
+	var-kind field streetAddress
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.providerType
+	var-kind field providerType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.locationType
+	var-kind field locationType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.serviceType
+	var-kind field serviceType
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.radius
+	var-kind field radius
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable input.limit
+	var-kind field limit
+	enclosing-var input
+	dec-type double
+	rep-type double
+variable return
+	var-kind return
+	dec-type main.findByAddress_Output_200_locations_averageCapacityDayOfWeek
+	rep-type java.lang.String
+variable return.dayOfWeek
+	var-kind field dayOfWeek
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.capacity
+	var-kind field capacity
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT7
 ppt-type subexit
 variable input
 	var-kind variable

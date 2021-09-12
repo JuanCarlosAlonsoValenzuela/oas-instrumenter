@@ -564,160 +564,160 @@ definitions:
       distance:
         type: number
         description: Distance in meters (m) from the requested geographical coordinates.
-#      place:
-#        type: object
-#        properties:
-#          address:
-#            type: object
-#            properties:
-#              countryCode:
-#                type: string
-#              #                $ref: >-
-#              #                  /definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/countryCode
-#              postalCode:
-#                type: string
-#                #                $ref: >-
-#                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/postalCode
-#              addressLocality:
-#                type: string
-#                #                $ref: >-
-#                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/addressLocality
-#              streetAddress:
-#                type: string
-#                #                $ref: >-
-#                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/streetAddress
-#          geo:
-#            type: object
-#            description: The geo coordinates of the DHL Service Point location.
-#            properties:
-#              latitude:
-#                type: number
-#                description: Latitude
-#              longitude:
-#                type: number
-#                description: Longitude
-#      serviceTypes:
-#        description: >-
-#          The list of services available at the DHL Service Point location.
-#
-#          - parcel:pick-up - Consumers can pick up DHL Parcel shipments. This
-#          applies to last mile. - parcel:drop-off - Consumers can drop off DHL
-#          Parcel shipments. This applies to first mile. - express:pick-up -
-#          Consumers can pick up DHL Express shipments. This applies to last
-#          mile. - express:drop-off - Consumers can drop off DHL Express
-#          shipments. This applies to first mile. - parcel:pick-up-registered -
-#          Automated locker station for DHL Parcel pick-up for pre-registered
-#          consumers (e.g. Parcel Locker, Packstation, SwipBox, Lean Parcel
-#          Locker) - parcel:pick-up-unregistered - Automated locker station for
-#          DHL Parcel pick-up for unregistered consumers (e.g. Parcel Locker,
-#          Packstation, SwipBox, Lean Parcel Locker) -
-#          parcel:drop-off-unregistered - Automated locker station for DHL Parcel
-#          drop-off for unregistered consumers (e.g. Parcel Locker, Packstation,
-#          SwipBox, Lean Parcel Locker) - letter-service - Letter services are
-#          offered (e.g. Post Office offering). - postbank - Offering of services
-#          of the German financial institution Deutsche Postbank AG, a subsidiary
-#          of Deutsche Bank AG. The individual offering can be looked up at
-#          Deutsche Postbank AG. - cash-on-delivery - Offering of "cash on
-#          delivery". A shipment is only handed over to the recipient against
-#          payment. - franking - Offering of labels for franking. This does not
-#          include the product "Mobile Paketmarke". - cash-service - Cash service
-#          is offered via cash or card payment service. In Germany Giro, Maestro,
-#          Postcard and cash payment is supported. - packaging-material -
-#          Offering for packing material such as packages for parcels, envelopes
-#          for letters, paper, pencils, pens. - postident - Postident is a
-#          service to reliably verify the identity of a consumer. This service is
-#          commonly used for online bank account identity verification. -
-#          age-verification - Reliable verification of the customers age. This
-#          service is commonly used to verify that the consumer has reached a
-#          specific age for an online offering (e.g. 14 or 18 years). -
-#          handicapped-access - Disabled fair access. - parking - Parking area
-#          close by.
-#
-#        type: array
-#        items:
-#          type: string
-#          enum:
-#            - 'parcel:pick-up'
-#            - 'parcel:drop-off'
-#            - 'express:pick-up'
-#            - 'express:drop-off'
-#            - 'parcel:pick-up-registered'
-#            - 'parcel:pick-up-unregistered'
-#            - 'parcel:drop-off-unregistered'
-#            - "letter-service"
-#            - "postbank"
-#            - "cash-on-delivery"
-#            - "franking"
-#            - "cash-service"
-#            - "packaging-material"
-#            - "postident"
-#            - "age-verification"
-#            - "handicapped-access"
-#            - "parking"
-#            - "express:drop-off-prelabeled"
-#            - "express:drop-off-easy"
-#            - "express:drop-off-account"
-#      averageCapacityDayOfWeek:
-#        description: >-
-#          Indicates the average capacity of the parcel locker on the listed day. If this information is not available,
-#          only an aggregated average capacity indication based on the last weeks will be provided as availableCapacity.
-#        type: array
-#        items:
-#          type: object
-#          properties:
-#            dayOfWeek:
-#              type: string
-#              description: The day of the week as defined at https://schema.org/DayOfWeek
-#              enum:
-#                - Monday
-#                - Tuesday
-#                - Wednesday
-#                - Thursday
-#                - Friday
-#                - Saturday
-#                - Sunday
-#            capacity:
-#              $ref: '#/definitions/supermodelIoSchemaorgCapacity'
-#      availableCapacity:
-#        description: >-
-#          Fallback indication showing an aggregated average capacity indication based on the last weeks. This response
-#          is only returned when there is no daily average capacity indication provided for this parcel locker.
-#        $ref: '#/definitions/supermodelIoSchemaorgCapacity'
-#      openingHours:
-#        type: array
-#        description: >-
-#          List of the opening hours of the DHL Service Point location.
-#          http://supermodel.io/schemaorg/OpeningHoursSpecification.
-#        items:
-#          type: object
-#          properties:
-#            closes:
-#              type: string
-#            #              $ref: '#/definitions/supermodelIoSchemaorgPropertiesCloses'
-#            opens:
-#              type: string
-#            #              $ref: '#/definitions/supermodelIoSchemaorgPropertiesOpens'
-#            dayOfWeek:
-#              type: string
-##              $ref: '#/definitions/supermodelIoSchemaorgPropertiesDayOfWeek'
-#      closurePeriods:
-#        type: array
-#        description: >-
-#          Periods where the DHL Service Point location is closed in the addition
-#          to opening hours.
-#        items:
-#          type: object
-#          properties:
-#            type:
-#              type: string
-#              description: Reason for the closure
-#              example: holiday
-#            fromDate:
-#              type: string
-#            #              $ref: '#/definitions/supermodelIoLogisticsSupportingTimestamp'
-#            toDate:
-#              type: string
-#    #              $ref: '#/definitions/supermodelIoLogisticsSupportingTimestamp'
+      place:
+        type: object
+        properties:
+          address:
+            type: object
+            properties:
+              countryCode:
+                type: string
+              #                $ref: >-
+              #                  /definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/countryCode
+              postalCode:
+                type: string
+                #                $ref: >-
+                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/postalCode
+              addressLocality:
+                type: string
+                #                $ref: >-
+                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/addressLocality
+              streetAddress:
+                type: string
+                #                $ref: >-
+                #/definitions/supermodelIoLogisticsSupportingPlace/properties/address/properties/streetAddress
+          geo:
+            type: object
+            description: The geo coordinates of the DHL Service Point location.
+            properties:
+              latitude:
+                type: number
+                description: Latitude
+              longitude:
+                type: number
+                description: Longitude
+      serviceTypes:
+        description: >-
+          The list of services available at the DHL Service Point location.
+
+          - parcel:pick-up - Consumers can pick up DHL Parcel shipments. This
+          applies to last mile. - parcel:drop-off - Consumers can drop off DHL
+          Parcel shipments. This applies to first mile. - express:pick-up -
+          Consumers can pick up DHL Express shipments. This applies to last
+          mile. - express:drop-off - Consumers can drop off DHL Express
+          shipments. This applies to first mile. - parcel:pick-up-registered -
+          Automated locker station for DHL Parcel pick-up for pre-registered
+          consumers (e.g. Parcel Locker, Packstation, SwipBox, Lean Parcel
+          Locker) - parcel:pick-up-unregistered - Automated locker station for
+          DHL Parcel pick-up for unregistered consumers (e.g. Parcel Locker,
+          Packstation, SwipBox, Lean Parcel Locker) -
+          parcel:drop-off-unregistered - Automated locker station for DHL Parcel
+          drop-off for unregistered consumers (e.g. Parcel Locker, Packstation,
+          SwipBox, Lean Parcel Locker) - letter-service - Letter services are
+          offered (e.g. Post Office offering). - postbank - Offering of services
+          of the German financial institution Deutsche Postbank AG, a subsidiary
+          of Deutsche Bank AG. The individual offering can be looked up at
+          Deutsche Postbank AG. - cash-on-delivery - Offering of "cash on
+          delivery". A shipment is only handed over to the recipient against
+          payment. - franking - Offering of labels for franking. This does not
+          include the product "Mobile Paketmarke". - cash-service - Cash service
+          is offered via cash or card payment service. In Germany Giro, Maestro,
+          Postcard and cash payment is supported. - packaging-material -
+          Offering for packing material such as packages for parcels, envelopes
+          for letters, paper, pencils, pens. - postident - Postident is a
+          service to reliably verify the identity of a consumer. This service is
+          commonly used for online bank account identity verification. -
+          age-verification - Reliable verification of the customers age. This
+          service is commonly used to verify that the consumer has reached a
+          specific age for an online offering (e.g. 14 or 18 years). -
+          handicapped-access - Disabled fair access. - parking - Parking area
+          close by.
+
+        type: array
+        items:
+          type: string
+          enum:
+            - 'parcel:pick-up'
+            - 'parcel:drop-off'
+            - 'express:pick-up'
+            - 'express:drop-off'
+            - 'parcel:pick-up-registered'
+            - 'parcel:pick-up-unregistered'
+            - 'parcel:drop-off-unregistered'
+            - "letter-service"
+            - "postbank"
+            - "cash-on-delivery"
+            - "franking"
+            - "cash-service"
+            - "packaging-material"
+            - "postident"
+            - "age-verification"
+            - "handicapped-access"
+            - "parking"
+            - "express:drop-off-prelabeled"
+            - "express:drop-off-easy"
+            - "express:drop-off-account"
+      averageCapacityDayOfWeek:
+        description: >-
+          Indicates the average capacity of the parcel locker on the listed day. If this information is not available,
+          only an aggregated average capacity indication based on the last weeks will be provided as availableCapacity.
+        type: array
+        items:
+          type: object
+          properties:
+            dayOfWeek:
+              type: string
+              description: The day of the week as defined at https://schema.org/DayOfWeek
+              enum:
+                - Monday
+                - Tuesday
+                - Wednesday
+                - Thursday
+                - Friday
+                - Saturday
+                - Sunday
+            capacity:
+              $ref: '#/definitions/supermodelIoSchemaorgCapacity'
+      availableCapacity:
+        description: >-
+          Fallback indication showing an aggregated average capacity indication based on the last weeks. This response
+          is only returned when there is no daily average capacity indication provided for this parcel locker.
+        $ref: '#/definitions/supermodelIoSchemaorgCapacity'
+      openingHours:
+        type: array
+        description: >-
+          List of the opening hours of the DHL Service Point location.
+          http://supermodel.io/schemaorg/OpeningHoursSpecification.
+        items:
+          type: object
+          properties:
+            closes:
+              type: string
+            #              $ref: '#/definitions/supermodelIoSchemaorgPropertiesCloses'
+            opens:
+              type: string
+            #              $ref: '#/definitions/supermodelIoSchemaorgPropertiesOpens'
+            dayOfWeek:
+              type: string
+#              $ref: '#/definitions/supermodelIoSchemaorgPropertiesDayOfWeek'
+      closurePeriods:
+        type: array
+        description: >-
+          Periods where the DHL Service Point location is closed in the addition
+          to opening hours.
+        items:
+          type: object
+          properties:
+            type:
+              type: string
+              description: Reason for the closure
+              example: holiday
+            fromDate:
+              type: string
+            #              $ref: '#/definitions/supermodelIoLogisticsSupportingTimestamp'
+            toDate:
+              type: string
+    #              $ref: '#/definitions/supermodelIoLogisticsSupportingTimestamp'
     example:
       url: /locations/8003-4103535
       location:
