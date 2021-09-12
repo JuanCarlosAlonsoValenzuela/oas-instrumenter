@@ -20,15 +20,16 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
+import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
 import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
 
 public class GenerateDeclsFile {
 
 //    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
 
-    private static String openApiSpecPath = "src/main/resources/Spotify/swagger_categoryById.yaml";
+    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
     private static String testCasesFilePath = "src/main/resources/Spotify/dtrace.csv";
-    private static boolean generateDtrace = true;
+    private static boolean generateDtrace = false;
 
     public static int numberOfExits = 1;
 
@@ -58,13 +59,17 @@ public class GenerateDeclsFile {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
+                // TODO: Nesting
+                // TODO: Uncomment
                 DeclsClass declsClassInput = new DeclsClass(packageName, operationName + "_Input", operationName + "_Input", operation.getParameters());
                 addNewDeclsClass(declsClassInput);
 
+                // TODO: Uncomment
                 // Extracting the output parameters
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
+                // TODO: Uncomment
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         "Input", operation.getParameters(), operation.getResponses());
 
@@ -171,18 +176,6 @@ public class GenerateDeclsFile {
         Path target = (dir == null) ? fn : dir.resolve(fn);
 
         return target.toString();
-    }
-
-    private static void writeFile(String filepath, String content) {
-        try {
-            FileWriter myWriter = new FileWriter(filepath);
-            myWriter.write(content);
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
     }
 
 

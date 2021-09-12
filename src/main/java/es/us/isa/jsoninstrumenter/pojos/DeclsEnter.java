@@ -10,7 +10,6 @@ import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVaria
 
 public class DeclsEnter {
 
-//    private String enterName;
     private String packageName;
     private String endpoint;
     private String operationName;

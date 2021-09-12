@@ -6,12 +6,12 @@ import org.json.simple.JSONObject;
 import java.util.Arrays;
 import java.util.List;
 
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJson;
 
 public class DeclsExit {
 
-//    private String exitName;
     private String packageName;
     private String endpoint;
     private String operationName;
@@ -23,13 +23,14 @@ public class DeclsExit {
 
 
     public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
-                     List<DeclsVariable> enterVariables, String variableNameOutput, Schema mapOfProperties, int exitNumber) {
+                     List<DeclsVariable> enterVariables, String variableNameOutput, Schema mapOfProperties) {
         this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
 
-        this.exitNumber = exitNumber;
+        this.exitNumber = numberOfExits;
+        numberOfExits = numberOfExits + 1;
 
         // TODO: Refactor the method used for obtaining the responseCode
         List<String> variableNameOutputList = Arrays.asList(variableNameOutput.split("_"));
@@ -38,7 +39,10 @@ public class DeclsExit {
 
         // TODO: Change singleton to normal list (a method can have several exits)
         // TODO: for loop increasing exitNumber
-        this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,  variableNameOutput, mapOfProperties);
+
+        // TODO: UNCOMMENT
+        this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,
+                variableNameOutput, mapOfProperties);
     }
 
     public String getExitName() {

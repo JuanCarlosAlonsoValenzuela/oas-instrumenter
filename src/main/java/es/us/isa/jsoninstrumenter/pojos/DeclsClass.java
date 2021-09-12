@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
-import com.fasterxml.jackson.databind.deser.impl.CreatorCandidate;
+import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
@@ -32,12 +32,12 @@ public class DeclsClass {
     }
 
     // DeclsClass with only DeclsObject (Output)
-    public DeclsClass(String packageName, String className, DeclsObject declsObject) {
+    public DeclsClass(String packageName, String className, List<DeclsObject> declsObject) {
         this.packageName = packageName;
         this.className = className;
         this.declsEnters = new ArrayList<>();
         this.declsExits = new ArrayList<>();
-        this.declsObjects = Collections.singletonList(declsObject);
+        this.declsObjects = declsObject;
 
     }
 
@@ -48,6 +48,10 @@ public class DeclsClass {
         this.declsExits = new ArrayList<>();
         this.declsObjects = new ArrayList<>();
 
+    }
+
+    public void addDeclsObject(DeclsObject declsObject) {
+        this.declsObjects.add(declsObject);
     }
 
     // DeclsClass for ENTER
@@ -71,24 +75,84 @@ public class DeclsClass {
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Schema mapOfProperties = mediaType.getSchema();
 
-//                String enterExitPptDeclaration = packageName + "." + endpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + variableNameInput + ")";
+                List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
+                        variableNameInput, declsEnter.getDeclsVariables(), objectName, mapOfProperties);
+                declsExits.addAll(nestedDeclsExits);
+            }
+        }
 
-                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, declsEnter.getDeclsVariables(), objectName,
-                        mapOfProperties, numberOfExits);
-                declsExits.add(declsExit);
+        declsClass.setDeclsExits(declsExits);
+        addNewDeclsClass(declsClass);
 
-                numberOfExits = numberOfExits + 1;
+    }
+
+    // TODO: Move to other class
+    public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, Schema mapOfProperties) {
+        List<DeclsObject> res = new ArrayList<>();
+
+        Map<String, Schema> allSchemas = new HashMap<>();
+        allSchemas.put("", mapOfProperties);
+        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+
+        for(String nestedSchema: allSchemas.keySet()) {
+            DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
+            res.add(declsObject);
+        }
+
+        return res;
+    }
+
+    // TODO: Move to another class
+    // TODO: Convert to map? <Nesting name (String), List<DeclExit>>
+    public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
+                                                         List<DeclsVariable> enterVariables, String variableNameOutput, Schema mapOfProperties) {
+
+        List<DeclsExit> res = new ArrayList<>();
+
+        Map<String, Schema> allSchemas = new HashMap<>();
+        allSchemas.put("", mapOfProperties);
+        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+
+        for(String nestedSchema: allSchemas.keySet()) {
+            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName + nestedSchema,
+                    variableNameInput, enterVariables, variableNameOutput + nestedSchema, allSchemas.get(nestedSchema));
+            res.add(declsExit);
+        }
+
+        return res;
+    }
+
+    // TODO: Move to another class?
+    public static Map<String, Schema> getAllNestedSchemas(String nameSuffix, Schema mapOfProperties) {
+        Map<String, Schema> res = new HashMap<>();
+        Set<String> parameterNames = mapOfProperties.getProperties().keySet();
+
+        for(String parameterName: parameterNames) {
+            Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
+            String parameterType = schema.getType();
+
+            if(parameterType.equalsIgnoreCase("object")) {
+                // Recursive call with object.getParameter
+                res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
+
+            } else if(parameterType.equalsIgnoreCase("array")) {
+                ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
+                String itemsDatatype = arraySchema.getItems().getType();
+
+                if(itemsDatatype.equalsIgnoreCase("object")) {
+                    Schema subSchema = arraySchema.getItems();
+                    res.put(nameSuffix + "_" + parameterName, subSchema);
+                    res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, subSchema));
+                } else if(itemsDatatype.equalsIgnoreCase("array")){
+                    // TODO: Nested arrays (Consider simply flattening the array)
+                }
 
             }
 
         }
 
-        declsClass.setDeclsExits(declsExits);
-
-        addNewDeclsClass(declsClass);
-
+        return res;
     }
-
 
     // Generate outputs
     // ClassName is derived (e.g., output_200)
@@ -104,17 +168,25 @@ public class DeclsClass {
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Schema mapOfProperties = mediaType.getSchema();
 
-                // Create the object
-                DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
 
-                // Create the class that will contain the object
-                DeclsClass declsClass = new DeclsClass(packageName, objectName, declsObject);
+
+                // Create the objects and automatically add them to the class
+//                DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
+                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mapOfProperties);
+
+                // Create the class that will contain the objects
+                DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);
+//                reverseDeclsObjectsOrder(declsClass);
 
                 res.add(declsClass);
             }
         }
 
         addNewDeclsClasses(res);
+    }
+
+    public static void reverseDeclsObjectsOrder(DeclsClass declsClass){
+        Collections.reverse(declsClass.getDeclsObjects());
     }
 
     public String getPackageName() { return packageName; }
@@ -158,7 +230,7 @@ public class DeclsClass {
                 "ppt-type class" + "\n";
 
         for(DeclsObject declsObject: declsObjects) {
-            res = res + "\n" + declsObject;
+            res = res + "\n" + declsObject + "\n";
         }
 
         for(DeclsEnter declsEnter: declsEnters) {
