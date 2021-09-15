@@ -3,7 +3,6 @@ package es.us.isa.jsoninstrumenter.pojos;
 import io.swagger.v3.oas.models.media.Schema;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -118,7 +117,6 @@ public class DeclsExit {
         this.exitDeclsVariables = exitDeclsVariables;
     }
 
-    // TODO: Consider changing the type from subexit to exit in certain cases
     public String toString() {
         String res = "ppt " + this.getExitName() + ":::EXIT" + exitNumber + "\n" +
                 "ppt-type subexit";
@@ -176,11 +174,13 @@ public class DeclsExit {
     public String generateSingleDtrace(TestCase testCase, JSONObject jsonElement) {
         String res = this.getExitName() + ":::EXIT" + exitNumber;
 
+        if(exitNumber==4){      // TODO: Delete
+            System.out.println("Breakpoint");
+        }
+
         res = res + "\n" + enterDeclsVariables.generateDtraceEnter(testCase);
 
-        DeclsVariable exitDeclsVariable = this.exitDeclsVariables;
-
-        res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase, jsonElement, false) + "\n\n";
+        res = res + "\n" + this.exitDeclsVariables.generateDtraceExit(testCase, jsonElement, false) + "\n\n";
 
         return res;
 

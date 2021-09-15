@@ -136,7 +136,7 @@ variable this.url
 variable this.location
 	var-kind variable
 	enclosing-var this
-	dec-type main.findByAddress_Output_200_locationslocation
+	dec-type main.findByAddress_Output_200_locations_location
 	rep-type java.lang.String
 variable this.location.ids
 	var-kind field ids
@@ -177,12 +177,12 @@ variable this.distance
 variable this.place
 	var-kind variable
 	enclosing-var this
-	dec-type main.findByAddress_Output_200_locationsplace
+	dec-type main.findByAddress_Output_200_locations_place
 	rep-type java.lang.String
 variable this.place.address
 	var-kind variable
 	enclosing-var this.place
-	dec-type main.findByAddress_Output_200_locationsaddress
+	dec-type main.findByAddress_Output_200_locations_address
 	rep-type java.lang.String
 variable this.place.address.countryCode
 	var-kind field countryCode
@@ -207,7 +207,7 @@ variable this.place.address.streetAddress
 variable this.place.geo
 	var-kind variable
 	enclosing-var this.place
-	dec-type main.findByAddress_Output_200_locationsgeo
+	dec-type main.findByAddress_Output_200_locations_geo
 	rep-type java.lang.String
 variable this.place.geo.latitude
 	var-kind field latitude
@@ -316,7 +316,7 @@ variable this
 variable this.supermodelIoLogisticsPUDOApiProblemDetail
 	var-kind variable
 	enclosing-var this
-	dec-type main.findByAddress_Output_400supermodelIoLogisticsPUDOApiProblemDetail
+	dec-type main.findByAddress_Output_400_supermodelIoLogisticsPUDOApiProblemDetail
 	rep-type java.lang.String
 variable this.supermodelIoLogisticsPUDOApiProblemDetail.status
 	var-kind field status
@@ -662,7 +662,7 @@ variable return.url
 variable return.location
 	var-kind return
 	enclosing-var return
-	dec-type main.findByAddress_Output_200_locationslocation
+	dec-type main.findByAddress_Output_200_locations_location
 	rep-type java.lang.String
 variable return.location.ids
 	var-kind field ids
@@ -703,12 +703,12 @@ variable return.distance
 variable return.place
 	var-kind return
 	enclosing-var return
-	dec-type main.findByAddress_Output_200_locationsplace
+	dec-type main.findByAddress_Output_200_locations_place
 	rep-type java.lang.String
 variable return.place.address
 	var-kind return
 	enclosing-var return.place
-	dec-type main.findByAddress_Output_200_locationsaddress
+	dec-type main.findByAddress_Output_200_locations_address
 	rep-type java.lang.String
 variable return.place.address.countryCode
 	var-kind field countryCode
@@ -733,7 +733,7 @@ variable return.place.address.streetAddress
 variable return.place.geo
 	var-kind return
 	enclosing-var return.place
-	dec-type main.findByAddress_Output_200_locationsgeo
+	dec-type main.findByAddress_Output_200_locations_geo
 	rep-type java.lang.String
 variable return.place.geo.latitude
 	var-kind field latitude
@@ -985,7 +985,7 @@ variable return
 variable return.supermodelIoLogisticsPUDOApiProblemDetail
 	var-kind return
 	enclosing-var return
-	dec-type main.findByAddress_Output_400supermodelIoLogisticsPUDOApiProblemDetail
+	dec-type main.findByAddress_Output_400_supermodelIoLogisticsPUDOApiProblemDetail
 	rep-type java.lang.String
 variable return.supermodelIoLogisticsPUDOApiProblemDetail.status
 	var-kind field status

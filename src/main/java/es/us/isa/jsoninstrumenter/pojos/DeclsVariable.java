@@ -459,12 +459,14 @@ public class DeclsVariable {
         ) { // If primitive type
             // Get the variable name (Withut wrapping)
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
-            String key = hierarchy.get(hierarchy.size()-1);
-            if(hierarchy.size() > 1) {
-                value = String.valueOf(json.get(key));
-            } else {
-                value = variableName;
-            }
+            hierarchy = hierarchy.subList(1, hierarchy.size());
+//            String key = hierarchy.get(hierarchy.size()-1);
+//            if(hierarchy.size() > 1) {
+            value = getPrimitiveValueFromHierarchy(json, hierarchy);
+
+//            } else {
+//                value = variableName;
+//            }
 
             if(repType.replace("[]", "").equals("java.lang.String") && value != null) {
                 value = "\"" + value + "\"";
@@ -523,7 +525,26 @@ public class DeclsVariable {
         return res;
     }
 
-    public static JSONArray getArrayFromHierarchy(JSONObject json, List<String> hierarchy){
+    public static String getPrimitiveValueFromHierarchy(JSONObject json, List<String> hierarchy) {
+        String key = hierarchy.get(0);
+
+        if(hierarchy.size() == 1) {
+            return String.valueOf(json.get(key));
+        } else {
+            Object jsonSon = json.get(key);
+
+            if(jsonSon instanceof JSONObject) {     // If JSONObject
+                JSONObject jsonSonObject = (JSONObject) jsonSon;
+                return getPrimitiveValueFromHierarchy(jsonSonObject, hierarchy.subList(1, hierarchy.size()));
+            } else {    // If JSONArray
+                // TODO: Complete
+                return null;
+            }
+        }
+
+    }
+
+    public static JSONArray getArrayFromHierarchy(JSONObject json, List<String> hierarchy) {
         String key = hierarchy.get(0);
 
         if(hierarchy.size() ==1){

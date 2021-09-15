@@ -106,13 +106,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"17:00:00"
+"return.closes"
 1
 return.opens
-"08:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Monday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -150,13 +150,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"17:00:00"
+"return.closes"
 1
 return.opens
-"08:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Tuesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -194,13 +194,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"17:00:00"
+"return.closes"
 1
 return.opens
-"08:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Wednesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -238,13 +238,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"17:00:00"
+"return.closes"
 1
 return.opens
-"08:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Thursday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -282,13 +282,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"17:00:00"
+"return.closes"
 1
 return.opens
-"08:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Friday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -326,13 +326,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"12:00:00"
+"return.closes"
 1
 return.opens
-"10:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Saturday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -370,13 +370,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Monday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -414,13 +414,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Tuesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -458,13 +458,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Wednesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -502,13 +502,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Thursday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -546,13 +546,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Friday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -590,13 +590,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Saturday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -634,13 +634,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Sunday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -678,13 +678,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Monday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -722,13 +722,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Tuesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -766,13 +766,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Wednesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -810,13 +810,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Thursday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -854,13 +854,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Friday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -898,13 +898,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Saturday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -942,13 +942,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Sunday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -986,13 +986,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Monday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1030,13 +1030,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Tuesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1074,13 +1074,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Wednesday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1118,13 +1118,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Thursday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1162,13 +1162,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Friday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1206,13 +1206,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Saturday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
@@ -1250,13 +1250,13 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.closes
-"23:59:59"
+"return.closes"
 1
 return.opens
-"00:00:00"
+"return.opens"
 1
 return.dayOfWeek
-"http://schema.org/Sunday"
+"return.dayOfWeek"
 1
 
 main.find-by-address.findByAddress_locations(main.findByAddress_Input):::EXIT4
@@ -1294,7 +1294,7 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.url
-"/locations/8003-4008202"
+"return.url"
 1
 return.location
 "test_1ji7sea6bstba_findByAddress_return.location_output"
@@ -1306,19 +1306,19 @@ return.location.ids[..]
 ["test_1ji7sea6bstba_findByAddress_return.location.ids_output_1"]
 1
 return.location.keyword
-"null"
+"Postfiliale"
 1
 return.location.keywordId
-"null"
+"502"
 1
 return.location.type
-"null"
+"postoffice"
 1
 return.name
-"Postfiliale 502"
+"return.name"
 1
 return.distance
-26
+return.distance
 1
 return.place
 "test_1ji7sea6bstba_findByAddress_return.place_output"
@@ -1327,28 +1327,28 @@ return.place.address
 "test_1ji7sea6bstba_findByAddress_return.place.address_output"
 1
 return.place.address.countryCode
-"null"
+"DE"
 1
 return.place.address.postalCode
-"null"
+"53113"
 1
 return.place.address.addressLocality
-"null"
+"Bonn"
 1
 return.place.address.streetAddress
-"null"
+"Charles-de-Gaulle-Str. 20"
 1
 return.place.geo
 "test_1ji7sea6bstba_findByAddress_return.place.geo_output"
 1
 return.place.geo.latitude
-null
+50.7160101
 1
 return.place.geo.longitude
-null
+7.1298043
 1
 return.serviceTypes
-"["parcel:pick-up","postident","cash-on-delivery","letter-service","parcel:drop-off","parking","age-verification"]"
+"return.serviceTypes"
 1
 return.serviceTypes[..]
 ["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_3" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_4" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_5" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_6" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_7"]
@@ -1360,7 +1360,7 @@ return.averageCapacityDayOfWeek[..]
 []
 1
 return.availableCapacity
-"null"
+"return.availableCapacity"
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -1410,7 +1410,7 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.url
-"/locations/8007-453113145"
+"return.url"
 1
 return.location
 "test_1ji7sea6bstba_findByAddress_return.location_output"
@@ -1422,19 +1422,19 @@ return.location.ids[..]
 ["test_1ji7sea6bstba_findByAddress_return.location.ids_output_1"]
 1
 return.location.keyword
-"null"
+"Packstation"
 1
 return.location.keywordId
-"null"
+"145"
 1
 return.location.type
-"null"
+"locker"
 1
 return.name
-"Packstation 145"
+"return.name"
 1
 return.distance
-42
+return.distance
 1
 return.place
 "test_1ji7sea6bstba_findByAddress_return.place_output"
@@ -1443,28 +1443,28 @@ return.place.address
 "test_1ji7sea6bstba_findByAddress_return.place.address_output"
 1
 return.place.address.countryCode
-"null"
+"DE"
 1
 return.place.address.postalCode
-"null"
+"53113"
 1
 return.place.address.addressLocality
-"null"
+"Bonn"
 1
 return.place.address.streetAddress
-"null"
+"Charles-de-Gaulle-Str. 20"
 1
 return.place.geo
 "test_1ji7sea6bstba_findByAddress_return.place.geo_output"
 1
 return.place.geo.latitude
-null
+50.715815
 1
 return.place.geo.longitude
-null
+7.129564
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"return.serviceTypes"
 1
 return.serviceTypes[..]
 ["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
@@ -1476,7 +1476,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+"return.availableCapacity"
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -1526,7 +1526,7 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.url
-"/locations/8007-453113150"
+"return.url"
 1
 return.location
 "test_1ji7sea6bstba_findByAddress_return.location_output"
@@ -1538,19 +1538,19 @@ return.location.ids[..]
 ["test_1ji7sea6bstba_findByAddress_return.location.ids_output_1"]
 1
 return.location.keyword
-"null"
+"Packstation"
 1
 return.location.keywordId
-"null"
+"150"
 1
 return.location.type
-"null"
+"locker"
 1
 return.name
-"Packstation 150"
+"return.name"
 1
 return.distance
-292
+return.distance
 1
 return.place
 "test_1ji7sea6bstba_findByAddress_return.place_output"
@@ -1559,28 +1559,28 @@ return.place.address
 "test_1ji7sea6bstba_findByAddress_return.place.address_output"
 1
 return.place.address.countryCode
-"null"
+"DE"
 1
 return.place.address.postalCode
-"null"
+"53113"
 1
 return.place.address.addressLocality
-"null"
+"Bonn"
 1
 return.place.address.streetAddress
-"null"
+"Sträßchensweg 10"
 1
 return.place.geo
 "test_1ji7sea6bstba_findByAddress_return.place.geo_output"
 1
 return.place.geo.latitude
-null
+50.713538
 1
 return.place.geo.longitude
-null
+7.131924
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"return.serviceTypes"
 1
 return.serviceTypes[..]
 ["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
@@ -1592,7 +1592,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+"return.availableCapacity"
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -1642,7 +1642,7 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.url
-"/locations/8007-453113139"
+"return.url"
 1
 return.location
 "test_1ji7sea6bstba_findByAddress_return.location_output"
@@ -1654,19 +1654,19 @@ return.location.ids[..]
 ["test_1ji7sea6bstba_findByAddress_return.location.ids_output_1"]
 1
 return.location.keyword
-"null"
+"Packstation"
 1
 return.location.keywordId
-"null"
+"139"
 1
 return.location.type
-"null"
+"locker"
 1
 return.name
-"Packstation 139"
+"return.name"
 1
 return.distance
-310
+return.distance
 1
 return.place
 "test_1ji7sea6bstba_findByAddress_return.place_output"
@@ -1675,28 +1675,28 @@ return.place.address
 "test_1ji7sea6bstba_findByAddress_return.place.address_output"
 1
 return.place.address.countryCode
-"null"
+"DE"
 1
 return.place.address.postalCode
-"null"
+"53113"
 1
 return.place.address.addressLocality
-"null"
+"Bonn"
 1
 return.place.address.streetAddress
-"null"
+"Heinrich-Brüning-Str. 5"
 1
 return.place.geo
 "test_1ji7sea6bstba_findByAddress_return.place.geo_output"
 1
 return.place.geo.latitude
-null
+50.715995
 1
 return.place.geo.longitude
-null
+7.12575
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"return.serviceTypes"
 1
 return.serviceTypes[..]
 ["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
@@ -1708,7 +1708,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+"return.availableCapacity"
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -1758,10 +1758,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.locationId
-"8003-4008202"
+"return.locationId"
 1
 return.provider
-"parcel"
+"return.provider"
 1
 
 main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_Input):::EXIT5
@@ -1799,10 +1799,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.locationId
-"8007-453113145"
+"return.locationId"
 1
 return.provider
-"parcel"
+"return.provider"
 1
 
 main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_Input):::EXIT5
@@ -1840,10 +1840,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.locationId
-"8007-453113150"
+"return.locationId"
 1
 return.provider
-"parcel"
+"return.provider"
 1
 
 main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_Input):::EXIT5
@@ -1881,10 +1881,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.locationId
-"8007-453113139"
+"return.locationId"
 1
 return.provider
-"parcel"
+"return.provider"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -1922,10 +1922,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Monday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -1963,10 +1963,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Tuesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2004,10 +2004,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Wednesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2045,10 +2045,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Thursday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2086,10 +2086,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Friday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2127,10 +2127,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Saturday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2168,10 +2168,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Sunday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2209,10 +2209,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Monday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2250,10 +2250,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Tuesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2291,10 +2291,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Wednesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2332,10 +2332,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Thursday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2373,10 +2373,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Friday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2414,10 +2414,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Saturday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2455,10 +2455,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Sunday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2496,10 +2496,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Monday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2537,10 +2537,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Tuesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2578,10 +2578,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Wednesday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2619,10 +2619,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Thursday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2660,10 +2660,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Friday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2701,10 +2701,10 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Saturday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 
 main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
@@ -2742,9 +2742,9 @@ return
 "test_1ji7sea6bstba_findByAddress_return_output"
 1
 return.dayOfWeek
-"Sunday"
+"return.dayOfWeek"
 1
 return.capacity
-"high"
+"return.capacity"
 1
 

@@ -111,16 +111,11 @@ public class GenerateDeclsFile {
                         List<DeclsExit> declsExits = declsClass.getDeclsExits().stream()
                                 .filter(x-> x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode()))
                                 .collect(Collectors.toList());
-//                        DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
-//                                .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
+
                         for(DeclsExit declsExit: declsExits) {
                             System.out.println(declsExit.generateDtrace(testCase));
                             dtraceContent = dtraceContent + declsExit.generateDtrace(testCase);
                         }
-
-//                        System.out.println(declsExit.generateDtrace(testCase));
-//                        dtraceContent = dtraceContent + declsExit.generateDtrace(testCase)  + "\n";
-
 
                     }
 
