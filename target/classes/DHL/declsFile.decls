@@ -457,7 +457,7 @@ variable return.locations[..]
 	dec-type main.locations[]
 	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
@@ -528,7 +528,7 @@ variable return.dayOfWeek
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations_closurePeriods(main.findByAddress_Input):::EXIT3
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
@@ -599,7 +599,7 @@ variable return.toDate
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations(main.findByAddress_Input):::EXIT4
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
@@ -795,7 +795,7 @@ variable return.closurePeriods[..]
 	dec-type main.closurePeriods[]
 	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_Input):::EXIT5
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT5
 ppt-type subexit
 variable input
 	var-kind variable
@@ -861,7 +861,7 @@ variable return.provider
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
+ppt main.find-by-address.findByAddress(main.findByAddress_Input):::EXIT6
 ppt-type subexit
 variable input
 	var-kind variable

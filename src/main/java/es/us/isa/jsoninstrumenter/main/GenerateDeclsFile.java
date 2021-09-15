@@ -32,6 +32,9 @@ public class GenerateDeclsFile {
     private static String testCasesFilePath = "src/main/resources/DHL/testCase.csv";
     private static boolean generateDtrace = true;
 
+//    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
+//    java -cp $DAIKONDIR/daikon.jar daikon.Daikon declsFile.decls dtraceFile.dtrace
+
     public static int numberOfExits = 1;
 
     private static List<DeclsClass> declsClasses = new ArrayList<>();
@@ -102,8 +105,8 @@ public class GenerateDeclsFile {
                         // TODO: Convert the list of declsEnter to a single declsEnter
                         // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
                         DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
-                        System.out.println(declsEnter.generateDtrace(testCase));
-                        dtraceContent = dtraceContent + declsEnter.generateDtrace(testCase) + "\n";
+//                        System.out.println(declsEnter.generateDtrace(testCase));
+//                        dtraceContent = dtraceContent + declsEnter.generateDtrace(testCase) + "\n";
 
 
                         // Get the correct declsExit by the responseCode
@@ -113,8 +116,9 @@ public class GenerateDeclsFile {
                                 .collect(Collectors.toList());
 
                         for(DeclsExit declsExit: declsExits) {
-                            System.out.println(declsExit.generateDtrace(testCase));
-                            dtraceContent = dtraceContent + declsExit.generateDtrace(testCase);
+                            // DeclsExit
+                            System.out.println(declsExit.generateDtrace(testCase, declsEnter));
+                            dtraceContent = dtraceContent + declsExit.generateDtrace(testCase, declsEnter);
                         }
 
                     }

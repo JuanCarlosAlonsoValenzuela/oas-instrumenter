@@ -49,7 +49,7 @@ public class DeclsExit {
     }
 
     public String getExitName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + nameSuffix + "(" +
+        return this.packageName + "." + this.endpoint + "." + this.operationName + "(" +
                 this.packageName + "." + this.operationName + "_" + this.variableNameInput + ")";
     }
 
@@ -145,7 +145,7 @@ public class DeclsExit {
 //        return res;
 //    }
 
-    public String generateDtrace(TestCase testCase) {
+    public String generateDtrace(TestCase testCase, DeclsEnter declsEnter) {
         String res = "";
 
         JSONObject json = stringToJson(testCase.getResponseBody());
@@ -164,7 +164,9 @@ public class DeclsExit {
         }
 
         for(JSONObject jsonElement: jsonObjectList){
-            res = res + this.generateSingleDtrace(testCase, jsonElement);
+            // There must be one Decls Enter per DeclsExit
+            res = res + declsEnter.generateDtrace(testCase) + "\n";         // DeclsEnter
+            res = res + this.generateSingleDtrace(testCase, jsonElement);   // DeclsExit
         }
 
         return res;

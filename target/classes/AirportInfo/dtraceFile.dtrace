@@ -1,16 +1,13 @@
-
-
-
-    main.airport.findAirports(main.findAirports_Input):::ENTER
-    input
-    "test_qxtavx9cbcxc_findAirports_input_input"
-    1
-    input.iata
-    "BBC"
-    1
-    input.icao
-    null
-    1
+main.airport.findAirports(main.findAirports_Input):::ENTER
+input
+"test_qxtavx9cbcxc_findAirports_input_input"
+1
+input.iata
+"BBC"
+1
+input.icao
+null
+1
 
 main.airport.findAirports(main.findAirports_Input):::EXIT1
 input
