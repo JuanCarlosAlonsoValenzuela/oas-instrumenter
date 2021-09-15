@@ -105,7 +105,7 @@ public class DeclsClass {
     // TODO: Move to another class
     // TODO: Convert to map? <Nesting name (String), List<DeclExit>>
     public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
-                                                         List<DeclsVariable> enterVariables, String variableNameOutput, Schema mapOfProperties) {
+                                                         DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties) {
 
         List<DeclsExit> res = new ArrayList<>();
 
@@ -113,9 +113,11 @@ public class DeclsClass {
         allSchemas.put("", mapOfProperties);
         allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
 
-        for(String nestedSchema: allSchemas.keySet()) {
-            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName + nestedSchema,
-                    variableNameInput, enterVariables, variableNameOutput + nestedSchema, allSchemas.get(nestedSchema));
+        for(String nameSuffix: allSchemas.keySet()) {
+//            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName + nameSuffix,
+//                    variableNameInput, enterVariables, variableNameOutput + nameSuffix, allSchemas.get(nameSuffix));
+            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
+                    variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix);
             res.add(declsExit);
         }
 

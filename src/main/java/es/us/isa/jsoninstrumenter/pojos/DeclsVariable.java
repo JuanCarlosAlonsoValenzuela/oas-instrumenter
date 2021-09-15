@@ -44,7 +44,7 @@ public class DeclsVariable {
 
     // Used for both output and exit
     // Creates the father variable
-    public static List<DeclsVariable> generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
+    public static DeclsVariable generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
                                                                      String variableNameOutput, Schema mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
@@ -54,7 +54,7 @@ public class DeclsVariable {
         List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, variableNameOutput, false, 1);
         father.setEnclosedVariables(enclosedVars);
 
-        return Collections.singletonList(father);
+        return father;
     }
 
     // TODO: Use res as a parameter? (or res.addAll)
@@ -76,7 +76,7 @@ public class DeclsVariable {
                 // TODO: Use the entry as input
                 // Generate the father variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
-                        "java.lang.String", "java.lang.String", variablePath, isArray);
+                        packageName + "." + variableNameOutput + "_" + parameterName, "java.lang.String", variablePath, isArray);
 
                 // TODO: Create a second object
                 // Recursive call for son variables
@@ -477,8 +477,11 @@ public class DeclsVariable {
         } else if (varKind.equals("array")) {       // If array TODO: Consider recursivity (Primitive, object and another array)
             // TODO: factor común
             List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
-            String key = hierarchy.get(hierarchy.size()-1);
-            JSONArray elements = (JSONArray) json.get(key);
+            hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy TODO: Refactor to make it more intutive
+//            String key = hierarchy.get(hierarchy.size()-1);
+//            JSONArray elements = (JSONArray) json.get(key);
+            // TODO: Convert to list of arrays (flattening)
+            JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
             String hashcode = "";   // TODO: Refactor
             for(int i = 1; i <= elements.size(); i++) {
@@ -519,5 +522,29 @@ public class DeclsVariable {
 
         return res;
     }
+
+    public static JSONArray getArrayFromHierarchy(JSONObject json, List<String> hierarchy){
+        String key = hierarchy.get(0);
+
+        if(hierarchy.size() ==1){
+            return (JSONArray) json.get(key);
+        } else {
+            Object jsonSon = json.get(key);
+
+            if(jsonSon instanceof JSONObject) {     // If JSONObject
+                JSONObject jsonSonObject = (JSONObject) jsonSon;
+                return getArrayFromHierarchy(jsonSonObject, hierarchy.subList(1, hierarchy.size()));
+
+            } else{     // If JSONArray
+                JSONArray jsonSonArray = (JSONArray) jsonSon;
+                // TODO: Complete this type of nesting
+                return null;
+            }
+        }
+
+    }
+
+    //            String key = hierarchy.get(hierarchy.size()-1);
+//            JSONArray elements = (JSONArray) json.get(key);
 
 }

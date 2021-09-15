@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
@@ -28,8 +29,8 @@ public class GenerateDeclsFile {
 //    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
 
     private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
-    private static String testCasesFilePath = "src/main/resources/Spotify/dtrace.csv";
-    private static boolean generateDtrace = false;
+    private static String testCasesFilePath = "src/main/resources/DHL/testCase.csv";
+    private static boolean generateDtrace = true;
 
     public static int numberOfExits = 1;
 
@@ -106,12 +107,19 @@ public class GenerateDeclsFile {
 
 
                         // Get the correct declsExit by the responseCode
-                        DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
-                                .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
+                        // TODO: Change to list and iterate by using a for loop
+                        List<DeclsExit> declsExits = declsClass.getDeclsExits().stream()
+                                .filter(x-> x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode()))
+                                .collect(Collectors.toList());
+//                        DeclsExit declsExit = declsClass.getDeclsExits().stream().filter(x->x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode())).findFirst()
+//                                .orElseThrow(() -> new NullPointerException("Type of response not found in the specification"));
+                        for(DeclsExit declsExit: declsExits) {
+                            System.out.println(declsExit.generateDtrace(testCase));
+                            dtraceContent = dtraceContent + declsExit.generateDtrace(testCase);
+                        }
 
-
-                        System.out.println(declsExit.generateDtrace(testCase));
-                        dtraceContent = dtraceContent + declsExit.generateDtrace(testCase)  + "\n";
+//                        System.out.println(declsExit.generateDtrace(testCase));
+//                        dtraceContent = dtraceContent + declsExit.generateDtrace(testCase)  + "\n";
 
 
                     }

@@ -15,7 +15,7 @@ public class DeclsEnter {
     private String operationName;
     private String variableNameInput;
 
-    private List<DeclsVariable> declsVariables;
+    private DeclsVariable declsVariables;
 
     // TODO: Add flag is_param? (See example in demo001)
     public DeclsEnter(String packageName, String endpoint,
@@ -25,7 +25,7 @@ public class DeclsEnter {
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
-        this.declsVariables = Collections.singletonList(getListOfDeclsVariables(packageName, operationName + "_" + variableNameInput, rootVariableName, parameters));
+        this.declsVariables = getListOfDeclsVariables(packageName, operationName + "_" + variableNameInput, rootVariableName, parameters);
     }
 
     public String getEnterName() {
@@ -65,11 +65,11 @@ public class DeclsEnter {
         this.variableNameInput = variableNameInput;
     }
 
-    public List<DeclsVariable> getDeclsVariables() {
+    public DeclsVariable getDeclsVariables() {
         return declsVariables;
     }
 
-    public void setDeclsVariables(List<DeclsVariable> declsVariables) {
+    public void setDeclsVariables(DeclsVariable declsVariables) {
         this.declsVariables = declsVariables;
     }
 
@@ -77,9 +77,9 @@ public class DeclsEnter {
         String res = "ppt " + this.getEnterName() + ":::ENTER" + "\n" +
                 "ppt-type enter";
 
-        for(DeclsVariable declsVariable: declsVariables) {
-            res = res + "\n" + declsVariable;
-        }
+
+        res = res + "\n" + declsVariables;
+
 
         return res;
     }
@@ -88,9 +88,9 @@ public class DeclsEnter {
 
         String res = this.getEnterName() + ":::ENTER";
 
-        for(DeclsVariable declsVariable: declsVariables) {
-            res = res + "\n" + declsVariable.generateDtraceEnter(testCase);
-        }
+
+        res = res + "\n" + declsVariables.generateDtraceEnter(testCase);
+
 
         res = res + "\n";
 

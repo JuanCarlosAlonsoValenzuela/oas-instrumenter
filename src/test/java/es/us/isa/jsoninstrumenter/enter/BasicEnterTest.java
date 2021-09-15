@@ -69,12 +69,12 @@ public class BasicEnterTest {
                 String enterName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
 
                 assertEquals("Incorrect enter name", enterName, declsEnter.getEnterName());
-                assertEquals("The size of the list of variables is not 1", 1, declsEnter.getDeclsVariables().size());
+
 
                 // VARIABLES
 
                 // Father
-                DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables().get(0);
+                DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findAirports_Input", declsFatherVariable.getDecType());

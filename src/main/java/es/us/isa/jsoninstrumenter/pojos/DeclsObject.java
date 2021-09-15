@@ -12,13 +12,13 @@ public class DeclsObject {
 
     private String packageName;
     private String objectName;
-    private List<DeclsVariable> declsVariables;
+    private DeclsVariable declsVariables;
 
     // DeclsObject With input Variables
     public DeclsObject(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = Collections.singletonList(getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters));
+        this.declsVariables = getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters);
 
     }
 
@@ -46,11 +46,11 @@ public class DeclsObject {
         this.objectName = objectName;
     }
 
-    public List<DeclsVariable> getDeclsVariables() {
+    public DeclsVariable getDeclsVariables() {
         return declsVariables;
     }
 
-    public void setDeclsVariables(List<DeclsVariable> declsVariables) {
+    public void setDeclsVariables(DeclsVariable declsVariables) {
         this.declsVariables = declsVariables;
     }
 
@@ -58,9 +58,8 @@ public class DeclsObject {
         String res = "ppt " + packageName + "." +objectName + ":::OBJECT" + "\n" +
                 "ppt-type object";
 
-        for(DeclsVariable declsVariable: declsVariables) {
-            res = res + "\n" + declsVariable;
-        }
+        res = res + "\n" + declsVariables;
+
 
         return res;
     }

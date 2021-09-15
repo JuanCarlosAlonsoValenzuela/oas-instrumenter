@@ -70,15 +70,13 @@ public class BasicExitTest {
                 String exitName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
-                assertEquals("The size of the list of enter variables is not 1", 1, declsExit.getEnterDeclsVariables().size());
-                assertEquals("The size of the list of exit variables is not 1", 1, declsExit.getExitDeclsVariables().size());
                 assertEquals("The exit number is not correct", numberOfExits, declsExit.getExitNumber() + 1);
 
 
                 // VARIABLES
                 // ENTER
                 // Father
-                DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables().get(0);
+                DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findAirports_Input", enterDeclsFatherVariable.getDecType());
@@ -109,7 +107,7 @@ public class BasicExitTest {
 
                 // EXIT
                 // Father
-                DeclsVariable exitDeclsFatherVariable = declsExit.getExitDeclsVariables().get(0);
+                DeclsVariable exitDeclsFatherVariable = declsExit.getExitDeclsVariables();
 
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());

@@ -136,7 +136,7 @@ variable this.url
 variable this.location
 	var-kind variable
 	enclosing-var this
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_location
 	rep-type java.lang.String
 variable this.location.ids
 	var-kind field ids
@@ -177,12 +177,12 @@ variable this.distance
 variable this.place
 	var-kind variable
 	enclosing-var this
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_place
 	rep-type java.lang.String
 variable this.place.address
 	var-kind variable
 	enclosing-var this.place
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_address
 	rep-type java.lang.String
 variable this.place.address.countryCode
 	var-kind field countryCode
@@ -207,7 +207,7 @@ variable this.place.address.streetAddress
 variable this.place.geo
 	var-kind variable
 	enclosing-var this.place
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_geo
 	rep-type java.lang.String
 variable this.place.geo.latitude
 	var-kind field latitude
@@ -316,7 +316,7 @@ variable this
 variable this.supermodelIoLogisticsPUDOApiProblemDetail
 	var-kind variable
 	enclosing-var this
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_400_supermodelIoLogisticsPUDOApiProblemDetail
 	rep-type java.lang.String
 variable this.supermodelIoLogisticsPUDOApiProblemDetail.status
 	var-kind field status
@@ -457,7 +457,7 @@ variable return.locations[..]
 	dec-type main.locations[]
 	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_locations_openingHours_Input):::EXIT2
+ppt main.find-by-address.findByAddress_locations_openingHours(main.findByAddress_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
@@ -528,7 +528,7 @@ variable return.dayOfWeek
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations_closurePeriods(main.findByAddress_locations_closurePeriods_Input):::EXIT3
+ppt main.find-by-address.findByAddress_locations_closurePeriods(main.findByAddress_Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
@@ -599,7 +599,7 @@ variable return.toDate
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations(main.findByAddress_locations_Input):::EXIT4
+ppt main.find-by-address.findByAddress_locations(main.findByAddress_Input):::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
@@ -662,7 +662,7 @@ variable return.url
 variable return.location
 	var-kind return
 	enclosing-var return
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_location
 	rep-type java.lang.String
 variable return.location.ids
 	var-kind field ids
@@ -703,12 +703,12 @@ variable return.distance
 variable return.place
 	var-kind return
 	enclosing-var return
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_place
 	rep-type java.lang.String
 variable return.place.address
 	var-kind return
 	enclosing-var return.place
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_address
 	rep-type java.lang.String
 variable return.place.address.countryCode
 	var-kind field countryCode
@@ -733,7 +733,7 @@ variable return.place.address.streetAddress
 variable return.place.geo
 	var-kind return
 	enclosing-var return.place
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_200_locations_geo
 	rep-type java.lang.String
 variable return.place.geo.latitude
 	var-kind field latitude
@@ -795,7 +795,7 @@ variable return.closurePeriods[..]
 	dec-type main.closurePeriods[]
 	rep-type java.lang.String[]
 
-ppt main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_locations_location_ids_Input):::EXIT5
+ppt main.find-by-address.findByAddress_locations_location_ids(main.findByAddress_Input):::EXIT5
 ppt-type subexit
 variable input
 	var-kind variable
@@ -861,7 +861,7 @@ variable return.provider
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_locations_averageCapacityDayOfWeek_Input):::EXIT6
+ppt main.find-by-address.findByAddress_locations_averageCapacityDayOfWeek(main.findByAddress_Input):::EXIT6
 ppt-type subexit
 variable input
 	var-kind variable
@@ -985,7 +985,7 @@ variable return
 variable return.supermodelIoLogisticsPUDOApiProblemDetail
 	var-kind return
 	enclosing-var return
-	dec-type java.lang.String
+	dec-type main.findByAddress_Output_400_supermodelIoLogisticsPUDOApiProblemDetail
 	rep-type java.lang.String
 variable return.supermodelIoLogisticsPUDOApiProblemDetail.status
 	var-kind field status

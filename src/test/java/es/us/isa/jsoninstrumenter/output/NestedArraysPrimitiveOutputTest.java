@@ -69,11 +69,11 @@ public class NestedArraysPrimitiveOutputTest {
                 DeclsObject declsObject = declsClassOutput.getDeclsObjects().get(0);
                 assertEquals("Incorrect package name", packageName, declsObject.getPackageName());
                 assertEquals("Incorrect object name", operationName + "_Output_200", declsObject.getObjectName());
-                assertEquals("The size of the list of variables is not 1", 1, declsObject.getDeclsVariables().size());
+                assertEquals("The size of the list of variables is not 1", 1, declsObject.getDeclsVariables());
 
                 // VARIABLES
                 // Father
-                DeclsVariable declsFatherVariable = declsObject.getDeclsVariables().get(0);
+                DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200", declsFatherVariable.getDecType());
