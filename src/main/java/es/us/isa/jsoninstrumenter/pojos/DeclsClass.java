@@ -12,6 +12,7 @@ import java.util.Map.Entry;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
 
 public class DeclsClass {
 
@@ -60,11 +61,11 @@ public class DeclsClass {
                                                  ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-        DeclsEnter declsEnter = new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input");
-
-//        DeclsEnter declsEnter = new DeclsEnter(packageName, enterExitPptDeclaration,
-//                operationName + "_" + variableNameInput, "input", parameters);
-        declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
+        // TODO: Delete these two lines
+        // Variables of the enter
+        DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input",parameters);
+//        DeclsEnter declsEnter = new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input");
+//        declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
@@ -76,11 +77,18 @@ public class DeclsClass {
                 Schema mapOfProperties = mediaType.getSchema();
 
                 List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
-                        variableNameInput, declsEnter.getDeclsVariables(), objectName, mapOfProperties);
+                        variableNameInput, enterVariables, objectName, mapOfProperties, apiResponse.getKey());
                 declsExits.addAll(nestedDeclsExits);
             }
         }
 
+        List<DeclsEnter> declsEnters = new ArrayList<>();
+        for(DeclsExit declsExit: declsExits) {
+            declsEnters.add(new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input",
+                    declsExit.getNameSuffix(), declsExit.getStatusCode()));
+        }
+
+        declsClass.setDeclsEnters(declsEnters);
         declsClass.setDeclsExits(declsExits);
         addNewDeclsClass(declsClass);
 
@@ -105,7 +113,7 @@ public class DeclsClass {
     // TODO: Move to another class
     // TODO: Convert to map? <Nesting name (String), List<DeclExit>>
     public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
-                                                         DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties) {
+                                                         DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String statusCode) {
 
         List<DeclsExit> res = new ArrayList<>();
 
@@ -117,7 +125,7 @@ public class DeclsClass {
 //            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName + nameSuffix,
 //                    variableNameInput, enterVariables, variableNameOutput + nameSuffix, allSchemas.get(nameSuffix));
             DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
-                    variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix);
+                    variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
             res.add(declsExit);
         }
 

@@ -64,18 +64,16 @@ public class GenerateDeclsFile {
 
                 // Extracting the input parameters
                 // TODO: Nesting
-                // TODO: Uncomment
-                DeclsClass declsClassInput = new DeclsClass(packageName, operationName + "_Input", operationName + "_Input", operation.getParameters());
+                String objectName = operationName + "_Input";
+                DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation.getParameters());
                 addNewDeclsClass(declsClassInput);
 
-                // TODO: Uncomment
                 // Extracting the output parameters
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
-                // TODO: Uncomment
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation.getParameters(), operation.getResponses());
+                        objectName, operation.getParameters(), operation.getResponses());
 
             }
 
@@ -104,7 +102,7 @@ public class GenerateDeclsFile {
                             declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
                         // TODO: Convert the list of declsEnter to a single declsEnter
                         // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
-                        DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
+//                        DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
 //                        System.out.println(declsEnter.generateDtrace(testCase));
 //                        dtraceContent = dtraceContent + declsEnter.generateDtrace(testCase) + "\n";
 
@@ -116,6 +114,11 @@ public class GenerateDeclsFile {
                                 .collect(Collectors.toList());
 
                         for(DeclsExit declsExit: declsExits) {
+                            // Find the corresponding DeclsEnter according to the statusCode and nameSuffix
+                            DeclsEnter declsEnter = declsClass.getDeclsEnters().stream()
+                                    .filter(x-> x.getStatusCode().equals(declsExit.getStatusCode()) && x.getNameSuffix().equals(declsExit.getNameSuffix()))
+                                    .findFirst().orElseThrow(() -> new NullPointerException("Could not find the corresponding DeclsEnter"));
+
                             // DeclsExit
                             System.out.println(declsExit.generateDtrace(testCase, declsEnter));
                             dtraceContent = dtraceContent + declsExit.generateDtrace(testCase, declsEnter);

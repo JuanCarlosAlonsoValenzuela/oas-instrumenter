@@ -14,23 +14,29 @@ public class DeclsEnter {
     private String endpoint;
     private String operationName;
     private String variableNameInput;
+    private String nameSuffix;
+    private String statusCode;
 
     private DeclsVariable declsVariables;
 
     // TODO: Add flag is_param? (See example in demo001)
     public DeclsEnter(String packageName, String endpoint,
                       String operationName, String variableNameInput,
-                      List<Parameter> parameters, String rootVariableName) {
+                      List<Parameter> parameters, String rootVariableName,
+                      String nameSuffix, String statusCode) {
         this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
-        this.declsVariables = getListOfDeclsVariables(packageName, operationName + "_" + variableNameInput, rootVariableName, parameters);
+        this.declsVariables = getListOfDeclsVariables(packageName, variableNameInput, rootVariableName, parameters);
+
+        this.nameSuffix = nameSuffix;
+        this.statusCode = statusCode;
     }
 
     public String getEnterName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + "(" +
-                this.packageName + "." + this.operationName + "_" + this.variableNameInput + ")";
+        return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode + this.nameSuffix + "(" +
+                this.packageName + "." + this.variableNameInput + ")";
     }
 
     public String getPackageName() {
@@ -64,6 +70,14 @@ public class DeclsEnter {
     public void setVariableNameInput(String variableNameInput) {
         this.variableNameInput = variableNameInput;
     }
+
+    public String getNameSuffix() { return nameSuffix; }
+
+    public void setNameSuffix(String nameSuffix) { this.nameSuffix = nameSuffix; }
+
+    public String getStatusCode() { return statusCode; }
+
+    public void setStatusCode(String statusCode) { this.statusCode = statusCode; }
 
     public DeclsVariable getDeclsVariables() {
         return declsVariables;

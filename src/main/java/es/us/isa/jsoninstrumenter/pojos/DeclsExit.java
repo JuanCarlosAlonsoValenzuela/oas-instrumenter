@@ -26,19 +26,19 @@ public class DeclsExit {
     private String nameSuffix;
 
     public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
-                     DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String nameSuffix) {
+                     DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String nameSuffix, String statusCode) {
         this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
         this.nameSuffix = nameSuffix;
+        this.statusCode = statusCode;
 
         this.exitNumber = numberOfExits;
         numberOfExits = numberOfExits + 1;
 
         // TODO: Refactor the method used for obtaining the responseCode
         List<String> variableNameOutputList = Arrays.asList(variableNameOutput.split("_"));
-        this.statusCode = variableNameOutputList.get(variableNameOutputList.size()-1);
         this.enterDeclsVariables = enterVariables;
 
 
@@ -49,8 +49,8 @@ public class DeclsExit {
     }
 
     public String getExitName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + "(" +
-                this.packageName + "." + this.operationName + "_" + this.variableNameInput + ")";
+        return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode +  this.nameSuffix + "(" +
+                this.packageName + "." + this.variableNameInput + ")";
     }
 
     public String getStatusCode() {
@@ -115,6 +115,14 @@ public class DeclsExit {
 
     public void setExitDeclsVariables(DeclsVariable exitDeclsVariables) {
         this.exitDeclsVariables = exitDeclsVariables;
+    }
+
+    public String getNameSuffix() {
+        return nameSuffix;
+    }
+
+    public void setNameSuffix(String nameSuffix) {
+        this.nameSuffix = nameSuffix;
     }
 
     public String toString() {

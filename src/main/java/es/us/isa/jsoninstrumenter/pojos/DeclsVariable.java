@@ -48,7 +48,8 @@ public class DeclsVariable {
                                                                      String variableNameOutput, Schema mapOfProperties) {
         // TODO: Set decType and repType
         // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
-        DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + variableNameOutput, "java.lang.String", null);
+        DeclsVariable father = new DeclsVariable(variableName, varKind,
+                packageName + "." + variableNameOutput, "java.lang.String", null);
 
         // Creates the son variables
         List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, variableNameOutput, false, 1);
