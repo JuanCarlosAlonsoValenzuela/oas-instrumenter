@@ -455,19 +455,14 @@ public class DeclsVariable {
 
         String value = null;
 
-        if(     // See Spotify example
-                (primitiveTypes.contains(this.decType) || primitiveTypes.contains(this.decType.replace("[]", ""))) && !varKind.equals("array")
-        ) { // If primitive type
+        if(     // If primitive type
+                (primitiveTypes.contains(this.decType) ||
+                        primitiveTypes.contains(this.decType.replace("[]", ""))) && !varKind.equals("array")
+        ) {
             // Get the variable name (Withut wrapping)
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size());
-//            String key = hierarchy.get(hierarchy.size()-1);
-//            if(hierarchy.size() > 1) {
             value = getPrimitiveValueFromHierarchy(json, hierarchy);
-
-//            } else {
-//                value = variableName;
-//            }
 
             if(repType.replace("[]", "").equals("java.lang.String") && value != null) {
                 value = "\"" + value + "\"";
@@ -478,7 +473,6 @@ public class DeclsVariable {
             }
 
         } else if (varKind.equals("array")) {       // If array TODO: Consider recursivity (Primitive, object and another array)
-            // TODO: factor común
             List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy TODO: Refactor to make it more intutive
 //            String key = hierarchy.get(hierarchy.size()-1);
@@ -486,13 +480,33 @@ public class DeclsVariable {
             // TODO: Convert to list of arrays (flattening)
             JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
-            String hashcode = "";   // TODO: Refactor
-            for(int i = 1; i <= elements.size(); i++) {
-                hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + this.variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+            // TODO: Convert to a separate function
+            if(primitiveTypes.contains(this.decType.replace("[]", ""))) { // If array of primitives
+                boolean isString = false;
+                if(this.decType.replace("[]", "").equals("java.lang.String")) {
+                    isString = true;
+                }
+                value = "";
+                for(int i = 0; i < elements.size(); i++) {
+
+                    if(isString && elements.get(i)!=null) {
+                        value = value + " \"" + elements.get(i) + "\"";
+                    } else {
+                        value = value + " " + elements.get(i);
+                    }
+                }
+
+                value = "[" + value.trim() + "]";
+
+            } else {    // If array of objects  TODO: Array of arrays
+                String hashcode = "";
+                for(int i = 1; i <= elements.size(); i++) {
+                    hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + this.variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                }
+
+                value = "[" + hashcode.trim() + "]";
             }
 
-            // TODO: Nesting
-            value = "[" + hashcode.trim() + "]";
 
         } else {    // If type = object
             value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
@@ -504,7 +518,7 @@ public class DeclsVariable {
         String res = this.variableName + "\n" +
                 value + "\n" + "1";
 
-        // Son variables
+        // Son variables        // TODO: Is this necessary (isElementOfArray should never be true)
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
             if(varKind.equals("array")) {
                 // TODO: Factor común

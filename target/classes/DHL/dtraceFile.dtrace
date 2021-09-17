@@ -2247,7 +2247,7 @@ return.serviceTypes
 "["parcel:pick-up","postident","cash-on-delivery","letter-service","parcel:drop-off","parking","age-verification"]"
 1
 return.serviceTypes[..]
-["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_3" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_4" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_5" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_6" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_7"]
+[ "parcel:pick-up" "postident" "cash-on-delivery" "letter-service" "parcel:drop-off" "parking" "age-verification"]
 1
 return.averageCapacityDayOfWeek
 "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output"
@@ -2256,7 +2256,7 @@ return.averageCapacityDayOfWeek[..]
 []
 1
 return.availableCapacity
-"null"
+null
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -2395,7 +2395,7 @@ return.serviceTypes
 "["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
 1
 return.serviceTypes[..]
-["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
+[ "parcel:drop-off-unregistered" "parcel:pick-up-registered"]
 1
 return.averageCapacityDayOfWeek
 "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output"
@@ -2404,7 +2404,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+null
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -2543,7 +2543,7 @@ return.serviceTypes
 "["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
 1
 return.serviceTypes[..]
-["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
+[ "parcel:drop-off-unregistered" "parcel:pick-up-registered"]
 1
 return.averageCapacityDayOfWeek
 "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output"
@@ -2552,7 +2552,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+null
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
@@ -2691,7 +2691,7 @@ return.serviceTypes
 "["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
 1
 return.serviceTypes[..]
-["test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_1" "test_1ji7sea6bstba_findByAddress_return.serviceTypes_output_2"]
+[ "parcel:drop-off-unregistered" "parcel:pick-up-registered"]
 1
 return.averageCapacityDayOfWeek
 "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output"
@@ -2700,7 +2700,7 @@ return.averageCapacityDayOfWeek[..]
 ["test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_1" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_2" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_3" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_4" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_5" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_6" "test_1ji7sea6bstba_findByAddress_return.averageCapacityDayOfWeek_output_7"]
 1
 return.availableCapacity
-"null"
+null
 1
 return.openingHours
 "test_1ji7sea6bstba_findByAddress_return.openingHours_output"
