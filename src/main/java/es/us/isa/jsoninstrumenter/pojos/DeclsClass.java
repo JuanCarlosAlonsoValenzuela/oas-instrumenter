@@ -61,11 +61,8 @@ public class DeclsClass {
                                                  ApiResponses apiResponses) {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
-        // TODO: Delete these two lines
         // Variables of the enter
         DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input",parameters);
-//        DeclsEnter declsEnter = new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input");
-//        declsClass.setDeclsEnters(Collections.singletonList(declsEnter));
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
@@ -111,7 +108,6 @@ public class DeclsClass {
     }
 
     // TODO: Move to another class
-    // TODO: Convert to map? <Nesting name (String), List<DeclExit>>
     public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
                                                          DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String statusCode) {
 
@@ -178,25 +174,17 @@ public class DeclsClass {
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 Schema mapOfProperties = mediaType.getSchema();
 
-
-
                 // Create the objects and automatically add them to the class
-//                DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
                 List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mapOfProperties);
 
                 // Create the class that will contain the objects
                 DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);
-//                reverseDeclsObjectsOrder(declsClass);
 
                 res.add(declsClass);
             }
         }
 
         addNewDeclsClasses(res);
-    }
-
-    public static void reverseDeclsObjectsOrder(DeclsClass declsClass){
-        Collections.reverse(declsClass.getDeclsObjects());
     }
 
     public String getPackageName() { return packageName; }

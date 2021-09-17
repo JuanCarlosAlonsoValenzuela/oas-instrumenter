@@ -8,11 +8,8 @@ import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
-import java.io.FileWriter;
-import java.io.IOException;
+
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,12 +23,11 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-//    private static final Logger log = LogManager.getLogger(GenerateDeclsFile.class);
-
     private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
     private static String testCasesFilePath = "src/main/resources/DHL/testCase.csv";
     private static boolean generateDtrace = true;
 
+//    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
 //    java -cp $DAIKONDIR/daikon.jar daikon.Daikon declsFile.decls dtraceFile.dtrace
 
@@ -100,15 +96,10 @@ public class GenerateDeclsFile {
                     // The enter and exits belong to the same class
                     if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
                             declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
-                        // TODO: Convert the list of declsEnter to a single declsEnter
-                        // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
-//                        DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
-//                        System.out.println(declsEnter.generateDtrace(testCase));
-//                        dtraceContent = dtraceContent + declsEnter.generateDtrace(testCase) + "\n";
 
+                        // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
 
                         // Get the correct declsExit by the responseCode
-                        // TODO: Change to list and iterate by using a for loop
                         List<DeclsExit> declsExits = declsClass.getDeclsExits().stream()
                                 .filter(x-> x.getStatusCode().equalsIgnoreCase(testCase.getStatusCode()))
                                 .collect(Collectors.toList());

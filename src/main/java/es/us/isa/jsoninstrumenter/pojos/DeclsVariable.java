@@ -21,11 +21,9 @@ public class DeclsVariable {
     private boolean isArray;
     private List<DeclsVariable> enclosedVariables;
 
-    // TODO: Change to simple constructor
     // TODO: Array, boolean and object
     public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
         // Father parameter
-        // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." +
                 objectName, "java.lang.String", null);
 
@@ -46,8 +44,6 @@ public class DeclsVariable {
     // Creates the father variable
     public static DeclsVariable generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
                                                                      String variableNameOutput, Schema mapOfProperties) {
-        // TODO: Set decType and repType
-        // TODO: Reconsider the dec-type (main.Input) (Change to String or hashcode?)
         DeclsVariable father = new DeclsVariable(variableName, varKind,
                 packageName + "." + variableNameOutput, "java.lang.String", null);
 
@@ -58,8 +54,6 @@ public class DeclsVariable {
         return father;
     }
 
-    // TODO: Use res as a parameter? (or res.addAll)
-    // TODO: Split into several functions to ease maintenance
     // Recursive method
     public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath,
                                                                      String varKind, String variableNameOutput,
@@ -72,14 +66,10 @@ public class DeclsVariable {
             String parameterType = schema.getType();
 
             if(parameterType.equalsIgnoreCase("object")) {
-                // TODO: change dec-type and rec-type
-                // TODO: "Increment" the parameter name
-                // TODO: Use the entry as input
                 // Generate the father variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
                         packageName + "." + variableNameOutput + "_" + parameterName, "java.lang.String", variablePath, isArray);
 
-                // TODO: Create a second object
                 // Recursive call for son variables
                 List<DeclsVariable> enclosedVariables =
                         generateDeclsVariablesOfOutput(schema, variablePath + "." + parameterName, varKind,
@@ -115,7 +105,6 @@ public class DeclsVariable {
 
         List<DeclsVariable> res = new ArrayList<>();
 
-        // TODO: Array of type enum
         ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
         String itemsDatatype = arraySchema.getItems().getType();
 
@@ -123,25 +112,14 @@ public class DeclsVariable {
         if(itemsDatatype.equalsIgnoreCase("object")) { // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
 
             // Generate the father variable
-            // TODO: Create a new class with the created object
-            // TODO: Create a jUnit test for creating new classes
-
             List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
                     packageName + "." + parameterName, "java.lang.String", arrayNestingLevel);
 
             res.addAll(declsVariables);
 
             return res;
-            // TODO: Create a new object
-            // Consider changing the repType
-//            List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedObject(variablePath, variableNameOutput, parameterName, varKind,
-//                    packageName + "." + parameterName, "java.lang.String", arrayNestingLevel, arraySchema.getItems(), declsClass, isExit);
-
-            // Add to list
-//            res.addAll(declsVariables);
 
         } else if(itemsDatatype.equalsIgnoreCase("array")) { // 2. The content is another ARRAY (recursive call) [][]
-            // TODO: Adapt to change observed in Spotify (i.e., there are no primitive variables inside an array)
             // TODO: UNCOMMENT
 //            List<DeclsVariable> declsVariableList = getDeclsVariablesOfRecursiveArray(variablePath, varKind, parameterName, arraySchema, arrayNestingLevel);
             // Add to list
@@ -154,7 +132,9 @@ public class DeclsVariable {
 
             res.addAll(declsVariablesArrays);
         }
+
         return res;
+
     }
 
     // TODO: Uncomment and refactor
@@ -214,9 +194,6 @@ public class DeclsVariable {
 
         // Recursive call for son variables
         // Iterate over items
-        // TODO: Correct the bug in var-kind (new objects)
-        // TODO: Create new Object with the elements of the array
-
 
         // TODO: Remove isExit
         DeclsObject nestedDeclsObject = new DeclsObject("this",
@@ -240,7 +217,6 @@ public class DeclsVariable {
 
     // Converts the datatype name from OAS to daikon
     // Returns String by default
-    // TODO: boolean, array, object
     public static String translateDatatype(String input) {
 
         switch (input.toLowerCase()) {
@@ -264,12 +240,9 @@ public class DeclsVariable {
 
         String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
-        // TODO: The rep type used to contain the array indicator too (changed when testing Spotify), Chicory uses hashcode for repType
         res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, repType, variablePath));
 
-        // TODO: Check whether I should include []s in dectype and reptype (Inconsistency in docs)
         // The enclosing var name contains the name of the variable (this.array)
-        // TODO: The rep type DID NOT used to contain the array indicator too (changed when testing Spotify), Chicory uses hashcode for repType
         res.add(new DeclsVariable(variableName + "[..]", "array", decType + arrayIndicator, repType  + arrayIndicator, variableName));
 
         return res;
@@ -472,8 +445,6 @@ public class DeclsVariable {
         } else if (varKind.equals("array")) {       // If array TODO: Consider recursivity (Primitive, object and another array)
             List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy TODO: Refactor to make it more intutive
-//            String key = hierarchy.get(hierarchy.size()-1);
-//            JSONArray elements = (JSONArray) json.get(key);
             // TODO: Convert to list of arrays (flattening)
             JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
@@ -515,7 +486,7 @@ public class DeclsVariable {
         String res = this.variableName + "\n" +
                 value + "\n" + "1";
 
-        // Son variables        // TODO: Is this necessary (isElementOfArray should never be true)
+        // Son variables        // TODO: Is this necessary? (isElementOfArray should never be true)
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
             if(varKind.equals("array")) {
                 // TODO: Factor común
@@ -582,8 +553,5 @@ public class DeclsVariable {
         }
 
     }
-
-    //            String key = hierarchy.get(hierarchy.size()-1);
-//            JSONArray elements = (JSONArray) json.get(key);
 
 }

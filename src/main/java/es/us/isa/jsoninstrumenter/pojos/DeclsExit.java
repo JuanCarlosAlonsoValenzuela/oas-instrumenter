@@ -37,13 +37,8 @@ public class DeclsExit {
         this.exitNumber = numberOfExits;
         numberOfExits = numberOfExits + 1;
 
-        // TODO: Refactor the method used for obtaining the responseCode
-        List<String> variableNameOutputList = Arrays.asList(variableNameOutput.split("_"));
         this.enterDeclsVariables = enterVariables;
 
-
-        // TODO: UNCOMMENT
-        // TODO: Convert to a single exit? (The rest are part of the son variables)
         this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,
                 variableNameOutput + nameSuffix, mapOfProperties);
     }
@@ -136,23 +131,6 @@ public class DeclsExit {
         return res;
     }
 
-//    public String generateDtrace(TestCase testCase) {
-//        String res = this.getExitName() + ":::EXIT" + exitNumber;
-//
-//        for(DeclsVariable enterDeclsVariable: this.enterDeclsVariables) {
-//            res = res + "\n" + enterDeclsVariable.generateDtraceEnter(testCase);
-//        }
-//
-//        for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
-//            JSONObject json = stringToJson(testCase.getResponseBody());
-//            res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase, json, false);
-//        }
-//
-//        res = res + "\n";
-//
-//        return res;
-//    }
-
     public String generateDtrace(TestCase testCase, DeclsEnter declsEnter) {
         String res = "";
 
@@ -184,10 +162,6 @@ public class DeclsExit {
     public String generateSingleDtrace(TestCase testCase, JSONObject jsonElement) {
         String res = this.getExitName() + ":::EXIT" + exitNumber;
 
-        if(exitNumber==4){      // TODO: Delete
-            System.out.println("Breakpoint");
-        }
-
         res = res + "\n" + enterDeclsVariables.generateDtraceEnter(testCase);
 
         res = res + "\n" + this.exitDeclsVariables.generateDtraceExit(testCase, jsonElement, false) + "\n\n";
@@ -195,42 +169,6 @@ public class DeclsExit {
         return res;
 
     }
-
-//    public String generateDtraceDeprecated(TestCase testCase) {
-//        String res = this.getExitName() + ":::EXIT" + exitNumber;
-//
-//        for(DeclsVariable enterDeclsVariable: this.enterDeclsVariables) {
-//            res = res + "\n" + enterDeclsVariable.generateDtraceEnter(testCase);
-//        }
-//
-//        for(DeclsVariable exitDeclsVariable: this.exitDeclsVariables) {
-//            JSONObject json = stringToJson(testCase.getResponseBody());
-//            // Name suffix
-//            List<String> elementRoute = Arrays.stream(this.nameSuffix.split("_"))
-//                    .filter(e -> e.trim().length() > 0)
-//                    .collect(Collectors.toList());
-//
-//
-//
-//            List<JSONObject> jsonObjectList = new ArrayList<>();
-//            if(elementRoute.isEmpty()){
-//                jsonObjectList.add(json);
-//            } else {
-//                jsonObjectList = getListOfJsonElementsForDeclsExit(json, elementRoute);
-//            }
-//            for(JSONObject jsonElement: jsonObjectList){
-//                res = res + "\n" + exitDeclsVariable.generateDtraceExit(testCase, jsonElement, false);
-//            }
-//
-//
-//
-//
-//        }
-//
-//        res = res + "\n";
-//
-//        return res;
-//    }
 
 
     public static List<JSONObject> getListOfJsonElementsForDeclsExit(JSONObject json, List<String> elementRoute){
@@ -261,8 +199,6 @@ public class DeclsExit {
                 if(jsonSonElement instanceof JSONObject) {
                     if(elementRoute.size()==1){
                         res.add((JSONObject) jsonSonElement);
-//                        JSONObject jsonSonObject = (JSONObject) jsonSonElement;
-//                        res.add( (JSONObject) jsonSonObject.get(elementRoute.get(0)));
                     } else {
                         res.addAll(getListOfJsonElementsForDeclsExit((JSONObject) jsonSonElement, elementRoute.subList(1, elementRoute.size())));
                     }
