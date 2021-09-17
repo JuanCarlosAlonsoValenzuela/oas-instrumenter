@@ -451,13 +451,10 @@ public class DeclsVariable {
         // TODO: Consider path, header and form variables
         // TODO: Check all datatypes (boolean, string, int, double, object)
 
-//        JSONObject json = stringToJson(testCase.getResponseBody());
-
         String value = null;
 
         if(     // If primitive type
-                (primitiveTypes.contains(this.decType) ||
-                        primitiveTypes.contains(this.decType.replace("[]", ""))) && !varKind.equals("array")
+                primitiveTypes.contains(this.decType) && !varKind.equals("array")
         ) {
             // Get the variable name (Withut wrapping)
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
@@ -508,7 +505,7 @@ public class DeclsVariable {
             }
 
 
-        } else {    // If type = object
+        } else {    // If type = object or identifier of array (both array of objects and array of primitives)
             value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
             if(isElementOfArray) {
                 value = "[" + value + "]";
