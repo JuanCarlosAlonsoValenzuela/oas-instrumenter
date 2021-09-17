@@ -530,7 +530,13 @@ public class DeclsVariable {
         String key = hierarchy.get(0);
 
         if(hierarchy.size() == 1) {
-            return String.valueOf(json.get(key));
+
+            if(json.get(key) == null){
+                return null;
+            } else {
+                return String.valueOf(json.get(key));
+            }
+
         } else {
             Object jsonSon = json.get(key);
 
