@@ -23,8 +23,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
-    private static String testCasesFilePath = "src/main/resources/DHL/testCase.csv";
+    private static String openApiSpecPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
+    private static String testCasesFilePath = "src/main/resources/AirportInfo/test_cases_1000.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources

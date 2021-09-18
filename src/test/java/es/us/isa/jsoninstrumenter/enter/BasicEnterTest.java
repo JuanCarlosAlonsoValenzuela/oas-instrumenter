@@ -68,6 +68,8 @@ public class BasicEnterTest {
                 DeclsEnter declsEnter = declsClassEnterAndExit.getDeclsEnters().get(0);
                 String enterName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
 
+//                return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode + this.nameSuffix + "(" +
+//                        this.packageName + "." + this.variableNameInput + ")";
                 assertEquals("Incorrect enter name", enterName, declsEnter.getEnterName());
 
 

@@ -2244,7 +2244,7 @@ return.place.geo.longitude
 7.1298043
 1
 return.serviceTypes
-"["parcel:pick-up","postident","cash-on-delivery","letter-service","parcel:drop-off","parking","age-verification"]"
+"test_1ji7sea6bstba_findByAddress_return.serviceTypes_output"
 1
 return.serviceTypes[..]
 ["parcel:pick-up" "postident" "cash-on-delivery" "letter-service" "parcel:drop-off" "parking" "age-verification"]
@@ -2392,7 +2392,7 @@ return.place.geo.longitude
 7.129564
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"test_1ji7sea6bstba_findByAddress_return.serviceTypes_output"
 1
 return.serviceTypes[..]
 ["parcel:drop-off-unregistered" "parcel:pick-up-registered"]
@@ -2540,7 +2540,7 @@ return.place.geo.longitude
 7.131924
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"test_1ji7sea6bstba_findByAddress_return.serviceTypes_output"
 1
 return.serviceTypes[..]
 ["parcel:drop-off-unregistered" "parcel:pick-up-registered"]
@@ -2688,7 +2688,7 @@ return.place.geo.longitude
 7.12575
 1
 return.serviceTypes
-"["parcel:drop-off-unregistered","parcel:pick-up-registered"]"
+"test_1ji7sea6bstba_findByAddress_return.serviceTypes_output"
 1
 return.serviceTypes[..]
 ["parcel:drop-off-unregistered" "parcel:pick-up-registered"]

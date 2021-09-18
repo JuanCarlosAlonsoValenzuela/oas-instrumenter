@@ -126,7 +126,7 @@ variable this.website
 ppt main.airport:::CLASS
 ppt-type class
 
-ppt main.airport.findAirports(main.findAirports_Input):::ENTER
+ppt main.airport.findAirports_200(main.findAirports_Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -143,7 +143,7 @@ variable input.icao
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.airport.findAirports(main.findAirports_Input):::EXIT1
+ppt main.airport.findAirports_200(main.findAirports_Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
