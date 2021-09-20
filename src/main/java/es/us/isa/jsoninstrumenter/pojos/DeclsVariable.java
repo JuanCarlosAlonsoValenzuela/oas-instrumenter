@@ -370,7 +370,7 @@ public class DeclsVariable {
 
         String value = null;
         // TODO: Consider arrays
-        // TODO: Consider path, header and form variables
+        // TODO: Consider path, header and form variables (First level)
         if(primitiveTypes.contains(decType)) { // If primitive value
 
             // Get the variable name (Without Wrapping)
@@ -394,6 +394,8 @@ public class DeclsVariable {
             if(repType.equals("java.lang.String") && value != null) {
                 value = "\"" + value + "\"";
             }
+        } else if(decType.equals("array")){
+          // TODO: Parameter of type array
         } else {    // If type = object
             value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
         }
