@@ -92,17 +92,52 @@ public class DeclsClass {
     }
 
     // TODO: Move to other class
-    public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, Schema mapOfProperties) {
+    public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, MediaType mediaType) {
         List<DeclsObject> res = new ArrayList<>();
 
-        Map<String, Schema> allSchemas = new HashMap<>();
-        allSchemas.put("", mapOfProperties);
-        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+        String parameterType = mediaType.getSchema().getType();
 
-        for(String nestedSchema: allSchemas.keySet()) {
-            DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
-            res.add(declsObject);
+        if(parameterType.equalsIgnoreCase("object")) {
+            Schema mapOfProperties = mediaType.getSchema();
+
+            Map<String, Schema> allSchemas = new HashMap<>();
+            allSchemas.put("", mapOfProperties);
+            allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+
+            for(String nestedSchema: allSchemas.keySet()) {
+                DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
+                res.add(declsObject);
+            }
+
+        } else if(parameterType.equalsIgnoreCase("array")) {
+            // TODO:Complete
+            // Get the schema as ArraySchema
+            ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
+
+            String itemsType = arraySchema.getItems().getType();
+
+
+            // TODO: Iteratively add new _array
+
+            // TODO: Add to res
+            // TODO: If parameterType  of subelement != array -> stop and res.addAll(MediaType of subelement)
+
+
+        } else {        // Primitive type
+            // TODO: Return simple decls object
         }
+
+
+        // OLD:
+//        Map<String, Schema> allSchemas = new HashMap<>();
+//        allSchemas.put("", mapOfProperties);
+//        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+//
+//        for(String nestedSchema: allSchemas.keySet()) {
+//            DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
+//            res.add(declsObject);
+//        }
+        // END OLD
 
         return res;
     }
@@ -138,6 +173,8 @@ public class DeclsClass {
             String parameterType = schema.getType();
 
             if(parameterType.equalsIgnoreCase("object")) {
+                // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
+                // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
                 // Recursive call with object.getParameter
                 res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
 
@@ -168,14 +205,15 @@ public class DeclsClass {
 
         // Create a new class for each of the possible response formats
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-            String objectName = operationName + "_Output_" + apiResponse.getKey();
+            String objectName = operationName + "_Output_" + apiResponse.getKey();      // operationName_Output_statusCode
 
             // TODO: Take into account that there is one class per mediaType
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-                Schema mapOfProperties = mediaType.getSchema();
+//                Schema mapOfProperties = mediaType.getSchema();   // OLD
 
                 // Create the objects and automatically add them to the class
-                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mapOfProperties);
+//                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mapOfProperties);    // OLD
+                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mediaType);
 
                 // Create the class that will contain the objects
                 DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);

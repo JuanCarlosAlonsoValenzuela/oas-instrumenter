@@ -236,7 +236,8 @@ public class DeclsVariable {
                                                              String decType, String repType, int arrayNestingLevel) {
         List<DeclsVariable> res = new ArrayList<>();
 
-        String arrayIndicator = new String(new char[arrayNestingLevel]).replace("\0", "[]");
+//        String arrayIndicator = new String(new char[arrayNestingLevel]).replace("\0", "[]");
+        String arrayIndicator = "[]";
 
         String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)

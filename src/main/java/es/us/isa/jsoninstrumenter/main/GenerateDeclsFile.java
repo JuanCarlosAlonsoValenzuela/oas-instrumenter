@@ -70,9 +70,10 @@ public class GenerateDeclsFile {
                 // Extracting the output parameters
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
+                // TODO: UNCOMMENT
                 // Extracting enter and exits
-                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        objectName, operation.getParameters(), operation.getResponses());
+//                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+//                        objectName, operation.getParameters(), operation.getResponses());
 
             }
 
@@ -80,7 +81,7 @@ public class GenerateDeclsFile {
 
         // PRINT DECLS file
         DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
-        System.out.println(declsFile);
+//        System.out.println(declsFile);
 
         String declsFilePath = getOutputPath("declsFile.decls");
         writeFile(declsFilePath, declsFile.toString());
