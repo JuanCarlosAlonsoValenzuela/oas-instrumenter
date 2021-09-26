@@ -114,7 +114,16 @@ public class DeclsClass {
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
 
-            String itemsType = arraySchema.getItems().getType();
+            String nameSuffix = "_array";
+//            String itemsType = arraySchema.getItems().getType();
+            while(parameterType.equalsIgnoreCase("array")) {
+                DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
+                res.add(declsObject);
+
+                arraySchema = (ArraySchema) arraySchema.getItems();
+                parameterType = arraySchema.getType();
+                nameSuffix = nameSuffix + "_array";
+            }
 
 
             // TODO: Iteratively add new _array
