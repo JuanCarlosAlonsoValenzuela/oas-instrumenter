@@ -62,7 +62,7 @@ public class DeclsClass {
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
         // Variables of the enter
-        DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input",parameters);
+        DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input", parameters);
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
@@ -92,7 +92,62 @@ public class DeclsClass {
     }
 
     // TODO: Move to other class
+    // TODO: Test with recursive arrays
+    // Used when the return is of type array (Example: RESTcountries)
+//    public static List<DeclsObject>
     public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, MediaType mediaType) {
+        List<DeclsObject> res = new ArrayList<>();
+        String parameterType = mediaType.getSchema().getType();
+        Schema mapOfProperties = mediaType.getSchema();
+
+        // TODO: Convert into a function
+        if(parameterType.equalsIgnoreCase("array")) {
+            // TODO: Complete
+            // TODO: Create a jUnit test of nested arrays of primitive objects
+            // Get the schema as ArraySchema
+            ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
+            String nameSuffix = ".array";
+
+            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated
+                DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
+                res.add(declsObject);
+
+                parameterType = arraySchema.getItems().getType();
+
+                if(parameterType.equalsIgnoreCase("array")) {
+                    arraySchema = (ArraySchema) arraySchema.getItems();
+                } else {
+                    mapOfProperties = arraySchema.getItems();
+                }
+                nameSuffix = nameSuffix + "_array";
+            }
+
+        }   // TODO: Add else_if with primitive types HERE (Delete the other one)
+
+        // Create DeclsObjects for the elements of the array
+        if(primitiveTypes.contains(parameterType)) {    // If the schema is of primitive type
+            // TODO: Check whether this triggers a bug
+            DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
+            res.add(declsObject);
+        } else {        // If the schema is of type object
+            Map<String, Schema> allSchemas = new HashMap<>();
+            allSchemas.put("", mapOfProperties);
+            allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+
+            for(String nestedSchema: allSchemas.keySet()) {
+                DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
+                res.add(declsObject);
+            }
+        }
+
+        return res;
+
+    }
+
+    // TODO: Move to other class
+    // TODO: Delete
+    // Deprecated
+    public static List<DeclsObject> getAllNestedDeclsObjectsRemove(String packageName, String objectName, MediaType mediaType) {
         List<DeclsObject> res = new ArrayList<>();
 
         String parameterType = mediaType.getSchema().getType();
@@ -123,6 +178,12 @@ public class DeclsClass {
                 arraySchema = (ArraySchema) arraySchema.getItems();
                 parameterType = arraySchema.getType();
                 nameSuffix = nameSuffix + "_array";
+            }
+
+            if(parameterType.equalsIgnoreCase("object")) {
+                // TODO: Call the other method
+            } else if (primitiveTypes.contains(parameterType)) {
+                // TODO: Primitive type
             }
 
 

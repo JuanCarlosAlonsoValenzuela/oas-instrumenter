@@ -1,11 +1,13 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
 import java.util.Collections;
 import java.util.List;
 
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.primitiveTypes;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 
 public class DeclsObject {
@@ -29,6 +31,14 @@ public class DeclsObject {
         this.declsVariables = generateDeclsVariablesOfOutput("this", "variable", packageName,
                 objectName, mapOfProperties);
     }
+
+    public DeclsObject(String packageName, String objectName, ArraySchema arraySchema) {
+        this.packageName = packageName;
+        this.objectName = objectName;
+        this.declsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, objectName);
+    }
+
+
 
     public String getPackageName() {
         return packageName;

@@ -25,6 +25,24 @@ variable this.fullText
 ppt main.v1Name_Output_200:::CLASS
 ppt-type class
 
+ppt main.v1Name_Output_200.array:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type mainv1Name_Output_200.array
+	rep-type java.lang.String
+variable this.array
+	var-kind field array
+	enclosing-var this
+	dec-type main.array[]
+	rep-type java.lang.String
+variable this.array[..]
+	var-kind array
+	enclosing-var this.array
+	array 1
+	dec-type main.array[]
+	rep-type java.lang.String[]
+
 ppt main.v1Name_Output_200:::OBJECT
 ppt-type object
 variable this
@@ -212,231 +230,6 @@ variable this.translations.it
 variable this.relevance
 	var-kind field relevance
 	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-
-ppt main.v1name{name}:::CLASS
-ppt-type class
-
-ppt main.v1name{name}.v1Name_200(main.v1Name_Input):::ENTER
-ppt-type enter
-variable input
-	var-kind variable
-	dec-type main.v1Name_Input
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.fullText
-	var-kind field fullText
-	enclosing-var input
-	dec-type boolean
-	rep-type boolean
-
-ppt main.v1name{name}.v1Name_200(main.v1Name_Input):::EXIT1
-ppt-type subexit
-variable input
-	var-kind variable
-	dec-type main.v1Name_Input
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.fullText
-	var-kind field fullText
-	enclosing-var input
-	dec-type boolean
-	rep-type boolean
-variable return
-	var-kind return
-	dec-type main.v1Name_Output_200
-	rep-type java.lang.String
-variable return.name
-	var-kind field name
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.topLevelDomain
-	var-kind field topLevelDomain
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.alpha2Code
-	var-kind field alpha2Code
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.alpha3Code
-	var-kind field alpha3Code
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.callingCodes
-	var-kind field callingCodes
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.callingCodes[..]
-	var-kind array
-	enclosing-var return.callingCodes
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.capital
-	var-kind field capital
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.capital[..]
-	var-kind array
-	enclosing-var return.capital
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.altSpellings
-	var-kind field altSpellings
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.altSpellings[..]
-	var-kind array
-	enclosing-var return.altSpellings
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.region
-	var-kind field region
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.subregion
-	var-kind field subregion
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.population
-	var-kind field population
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.latlng
-	var-kind field latlng
-	enclosing-var return
-	dec-type double[]
-	rep-type double
-variable return.latlng[..]
-	var-kind array
-	enclosing-var return.latlng
-	array 1
-	dec-type double[]
-	rep-type double[]
-variable return.demonym
-	var-kind field demonym
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.area
-	var-kind field area
-	enclosing-var return
-	dec-type double
-	rep-type double
-variable return.gini
-	var-kind field gini
-	enclosing-var return
-	dec-type double
-	rep-type double
-variable return.timezones
-	var-kind field timezones
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.timezones[..]
-	var-kind array
-	enclosing-var return.timezones
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.borders
-	var-kind field borders
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.borders[..]
-	var-kind array
-	enclosing-var return.borders
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.nativeName
-	var-kind field nativeName
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.numericCode
-	var-kind field numericCode
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.currencies
-	var-kind field currencies
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.currencies[..]
-	var-kind array
-	enclosing-var return.currencies
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.languages
-	var-kind field languages
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable return.languages[..]
-	var-kind array
-	enclosing-var return.languages
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.translations
-	var-kind return
-	enclosing-var return
-	dec-type main.v1Name_Output_200_translations
-	rep-type java.lang.String
-variable return.translations.de
-	var-kind field de
-	enclosing-var return.translations
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.translations.es
-	var-kind field es
-	enclosing-var return.translations
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.translations.fr
-	var-kind field fr
-	enclosing-var return.translations
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.translations.ja
-	var-kind field ja
-	enclosing-var return.translations
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.translations.it
-	var-kind field it
-	enclosing-var return.translations
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.relevance
-	var-kind field relevance
-	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String
 

@@ -34,6 +34,9 @@ public class GenerateDeclsFile {
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
 //    java -cp $DAIKONDIR/daikon.jar daikon.Daikon declsFile.decls dtraceFile.dtrace
 
+    // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
+    // TODO: The name suffix of nested arrays of the exits must be print with "." instead of "_"
+
     public static int numberOfExits = 1;
 
     private static List<DeclsClass> declsClasses = new ArrayList<>();
@@ -72,8 +75,8 @@ public class GenerateDeclsFile {
 
                 // TODO: UNCOMMENT
                 // Extracting enter and exits
-//                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-//                        objectName, operation.getParameters(), operation.getResponses());
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                        objectName, operation.getParameters(), operation.getResponses());
 
             }
 

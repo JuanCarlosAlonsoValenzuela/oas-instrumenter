@@ -40,6 +40,31 @@ public class DeclsVariable {
 
     }
 
+    // Used when the return type is an array of objects (Bad practice)
+    // Used for both output and exit
+    // TODO: Create tests for nested objects and nested primitives with corresponding dtraces
+    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName) {
+
+        DeclsVariable father = new DeclsVariable("this", "variable",
+                packageName + "." + objectName, "java.lang.String", null);
+
+        List<DeclsVariable> enclosedVars;
+        String itemsDatatype = arraySchema.getItems().getType();
+
+        if(primitiveTypes.contains(itemsDatatype)) {
+            String translatedDatatype = translateDatatype(itemsDatatype);
+            enclosedVars = getDeclsVariablesArray("this", "array", translatedDatatype,
+                    translatedDatatype, 1);
+        } else{
+            enclosedVars = getDeclsVariablesArray("this", "array", packageName + "." + "array",
+                    "java.lang.String", 1);
+        }
+
+        father.setEnclosedVariables(enclosedVars);
+
+        return father;
+    }
+
     // Used for both output and exit
     // Creates the father variable
     public static DeclsVariable generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
@@ -53,6 +78,8 @@ public class DeclsVariable {
 
         return father;
     }
+
+
 
     // Recursive method
     public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath,
@@ -116,8 +143,6 @@ public class DeclsVariable {
                     packageName + "." + parameterName, "java.lang.String", arrayNestingLevel);
 
             res.addAll(declsVariables);
-
-            return res;
 
         } else if(itemsDatatype.equalsIgnoreCase("array")) { // 2. The content is another ARRAY (recursive call) [][]
             // TODO: UNCOMMENT
