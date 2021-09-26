@@ -73,7 +73,6 @@ public class GenerateDeclsFile {
                 // Extracting the output parameters
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
-                // TODO: UNCOMMENT
                 // Extracting enter and exits
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation.getParameters(), operation.getResponses());

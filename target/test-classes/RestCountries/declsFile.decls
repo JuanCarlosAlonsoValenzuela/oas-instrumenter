@@ -29,7 +29,7 @@ ppt main.v1Name_Output_200.array:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type mainv1Name_Output_200.array
+	dec-type main.v1Name_Output_200.array
 	rep-type java.lang.String
 variable this.array
 	var-kind field array

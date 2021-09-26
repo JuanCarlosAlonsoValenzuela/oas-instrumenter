@@ -1,5 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -25,6 +26,7 @@ public class DeclsExit {
     private DeclsVariable exitDeclsVariables;
     private String nameSuffix;
 
+    // Used when the exit is of type object
     public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
                      DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String nameSuffix, String statusCode) {
         this.packageName = packageName;
@@ -41,6 +43,31 @@ public class DeclsExit {
 
         this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,
                 variableNameOutput + nameSuffix, mapOfProperties);
+    }
+
+    // Used when the exit is of type array (bad practice)
+    public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
+                     DeclsVariable enterVariables, String variableNameOutput, ArraySchema arraySchema, String nameSuffix, String statusCode) {
+
+        this.packageName = packageName;
+        this.endpoint = endpoint;
+        this.operationName = operationName;
+        this.variableNameInput = variableNameInput;
+        this.nameSuffix = nameSuffix;
+        this.statusCode = statusCode;
+
+        this.exitNumber = numberOfExits;
+        numberOfExits = numberOfExits + 1;
+
+        this.enterDeclsVariables = enterVariables;
+
+        // TODO: CHANGE FUNCTION
+//        variableName: return
+        this.exitDeclsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, variableNameOutput + nameSuffix, "return");
+//        this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,
+//                variableNameOutput + nameSuffix, arraySchema);
+
+
     }
 
     public String getExitName() {

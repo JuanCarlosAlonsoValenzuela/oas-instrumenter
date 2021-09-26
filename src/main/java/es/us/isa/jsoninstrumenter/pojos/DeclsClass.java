@@ -71,10 +71,12 @@ public class DeclsClass {
             String objectName = operationName + "_Output_" + apiResponse.getKey();
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-                Schema mapOfProperties = mediaType.getSchema();
+//                Schema mapOfProperties = mediaType.getSchema();
 
                 List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
-                        variableNameInput, enterVariables, objectName, mapOfProperties, apiResponse.getKey());
+                        variableNameInput, enterVariables, objectName, mediaType, apiResponse.getKey());
+//                List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
+//                        variableNameInput, enterVariables, objectName, mapOfProperties, apiResponse.getKey());
                 declsExits.addAll(nestedDeclsExits);
             }
         }
@@ -94,21 +96,20 @@ public class DeclsClass {
     // TODO: Move to other class
     // TODO: Test with recursive arrays
     // Used when the return is of type array (Example: RESTcountries)
-//    public static List<DeclsObject>
     public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, MediaType mediaType) {
         List<DeclsObject> res = new ArrayList<>();
         String parameterType = mediaType.getSchema().getType();
         Schema mapOfProperties = mediaType.getSchema();
 
         // TODO: Convert into a function
+        // TODO: Duplicated code with DeclsExit
         if(parameterType.equalsIgnoreCase("array")) {
-            // TODO: Complete
-            // TODO: Create a jUnit test of nested arrays of primitive objects
+            // TODO: Create a jUnit test of nested arrays of primitive AND objects
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";
 
-            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated
+            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
                 DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
                 res.add(declsObject);
 
@@ -119,17 +120,16 @@ public class DeclsClass {
                 } else {
                     mapOfProperties = arraySchema.getItems();
                 }
-                nameSuffix = nameSuffix + "_array";
+                nameSuffix = nameSuffix + ".array";
             }
 
-        }   // TODO: Add else_if with primitive types HERE (Delete the other one)
+        }  else if(primitiveTypes.contains(parameterType)) {
+            // TODO: Complete and test
+        }
 
         // Create DeclsObjects for the elements of the array
-        if(primitiveTypes.contains(parameterType)) {    // If the schema is of primitive type
-            // TODO: Check whether this triggers a bug
-            DeclsObject declsObject = new DeclsObject(packageName, objectName, mapOfProperties);
-            res.add(declsObject);
-        } else {        // If the schema is of type object
+        if(parameterType.equalsIgnoreCase("object")) {    // If the schema is of primitive type
+        // If the schema is of type object
             Map<String, Schema> allSchemas = new HashMap<>();
             allSchemas.put("", mapOfProperties);
             allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
@@ -214,23 +214,56 @@ public class DeclsClass {
 
     // TODO: Move to another class
     public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
-                                                         DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String statusCode) {
+                                                         DeclsVariable enterVariables, String variableNameOutput, MediaType mediaType, String statusCode) {
 
         List<DeclsExit> res = new ArrayList<>();
+        String parameterType = mediaType.getSchema().getType();
+        Schema mapOfProperties = mediaType.getSchema();
 
-        Map<String, Schema> allSchemas = new HashMap<>();
-        allSchemas.put("", mapOfProperties);
-        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+        // TODO: Convert into a function
+        // TODO: Duplicated code with DeclsObject
+        if(parameterType.equalsIgnoreCase("array")) {
+            // TODO: Create a jUnit test of nested arrays of primitive elements AND objects
+            // Get the schema as ArraySchema
+            ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
+            String nameSuffix = ".array";
 
-        for(String nameSuffix: allSchemas.keySet()) {
-//            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName + nameSuffix,
-//                    variableNameInput, enterVariables, variableNameOutput + nameSuffix, allSchemas.get(nameSuffix));
-            DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
-                    variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
-            res.add(declsExit);
+            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
+                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
+                        arraySchema, nameSuffix, statusCode);
+                res.add(declsExit);
+
+                parameterType = arraySchema.getItems().getType();
+
+                if(parameterType.equalsIgnoreCase("array")) {
+                    arraySchema = (ArraySchema) arraySchema.getItems();
+                } else {
+                    mapOfProperties = arraySchema.getItems();
+                }
+                nameSuffix = nameSuffix + ".array";
+            }
+
+        } else if(primitiveTypes.contains(parameterType)) {
+            // TODO: Complete and create jUnits
+        }
+
+        // Create DeclsObjects with the elements of the array
+        if(parameterType.equalsIgnoreCase("object")) {
+            Map<String, Schema> allSchemas = new HashMap<>();
+
+            allSchemas.put("", mapOfProperties);
+            allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
+
+            for(String nameSuffix: allSchemas.keySet()) {
+                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
+                        variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
+                res.add(declsExit);
+            }
+
         }
 
         return res;
+
     }
 
     // TODO: Move to another class?

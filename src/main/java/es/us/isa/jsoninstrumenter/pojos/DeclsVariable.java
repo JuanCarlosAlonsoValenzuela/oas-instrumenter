@@ -43,9 +43,9 @@ public class DeclsVariable {
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit
     // TODO: Create tests for nested objects and nested primitives with corresponding dtraces
-    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName) {
+    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName) {
 
-        DeclsVariable father = new DeclsVariable("this", "variable",
+        DeclsVariable father = new DeclsVariable(variableName, "variable",
                 packageName + "." + objectName, "java.lang.String", null);
 
         List<DeclsVariable> enclosedVars;
@@ -53,10 +53,10 @@ public class DeclsVariable {
 
         if(primitiveTypes.contains(itemsDatatype)) {
             String translatedDatatype = translateDatatype(itemsDatatype);
-            enclosedVars = getDeclsVariablesArray("this", "array", translatedDatatype,
+            enclosedVars = getDeclsVariablesArray(variableName, "array", translatedDatatype,
                     translatedDatatype, 1);
         } else{
-            enclosedVars = getDeclsVariablesArray("this", "array", packageName + "." + "array",
+            enclosedVars = getDeclsVariablesArray(variableName, "array", packageName + "." + "array",
                     "java.lang.String", 1);
         }
 
