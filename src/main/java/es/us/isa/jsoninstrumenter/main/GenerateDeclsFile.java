@@ -27,8 +27,8 @@ public class GenerateDeclsFile {
 //    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
-    private static String testCasesFilePath = "src/main/resources/DHL/testCase.csv";
-    private static boolean generateDtrace = false;
+    private static String testCasesFilePath = "src/test/resources/RestCountries/testCases_100.csv";
+    private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
@@ -44,6 +44,7 @@ public class GenerateDeclsFile {
     public static final String packageName = "main";
 
     public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "double", "int", "boolean");
+//public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "java.lang.Double", "int", "boolean");
 
     public static void main(String[] args) {
         OpenAPI specification = getOpenAPISpecification();
@@ -116,8 +117,8 @@ public class GenerateDeclsFile {
                                     .filter(x-> x.getStatusCode().equals(declsExit.getStatusCode()) && x.getNameSuffix().equals(declsExit.getNameSuffix()))
                                     .findFirst().orElseThrow(() -> new NullPointerException("Could not find the corresponding DeclsEnter"));
 
-                            // DeclsExit
-                            System.out.println(declsExit.generateDtrace(testCase, declsEnter));
+                            // Generates the dtrace of both DeclsEnter and DeclsExit
+//                            System.out.println(declsExit.generateDtrace(testCase, declsEnter));
                             dtraceContent = dtraceContent + declsExit.generateDtrace(testCase, declsEnter);
                         }
 

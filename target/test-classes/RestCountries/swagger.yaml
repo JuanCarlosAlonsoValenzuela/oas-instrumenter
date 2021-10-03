@@ -45,9 +45,7 @@ paths:
                       items:
                         type: string
                     capital:
-                      type: array
-                      items:
-                        type: string
+                      type: string
                     altSpellings:
                       type: array
                       items:

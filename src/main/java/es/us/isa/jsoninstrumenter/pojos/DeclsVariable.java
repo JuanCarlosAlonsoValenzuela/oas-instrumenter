@@ -247,6 +247,7 @@ public class DeclsVariable {
         switch (input.toLowerCase()) {
             case "number":
                 return "double";
+//                return "java.lang.Double";
             case "integer":
                 return "int";
             case "boolean":
@@ -261,7 +262,6 @@ public class DeclsVariable {
                                                              String decType, String repType, int arrayNestingLevel) {
         List<DeclsVariable> res = new ArrayList<>();
 
-//        String arrayIndicator = new String(new char[arrayNestingLevel]).replace("\0", "[]");
         String arrayIndicator = "[]";
 
         String variableName = variablePath + "." + parameterName;

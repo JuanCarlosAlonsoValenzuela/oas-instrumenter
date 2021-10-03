@@ -1,13 +1,27 @@
 package es.us.isa.jsoninstrumenter.util;
 
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class JSONManager {
 
-    public static JSONObject stringToJson(String input) {
+    public static JSONArray stringToJsonArray(String input) {
+
+        JSONParser parser = new JSONParser();
+        try {
+            JSONArray jsonArray = (JSONArray) parser.parse(input);
+            return jsonArray;
+        } catch (ParseException e) {
+            System.err.println("Error converting the response body to string");
+        }
+
+        return null;
+    }
+
+    public static JSONObject stringToJsonObject(String input) {
 
         JSONParser parser = new JSONParser();
         try {
@@ -18,6 +32,23 @@ public class JSONManager {
         }
 
         return null;
+    }
+
+    public static boolean isStringJsonArray(String input) {
+        JSONParser parser = new JSONParser();
+
+        try{
+            if(parser.parse(input) instanceof JSONArray) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (ParseException e) {
+            System.err.println("Error converting the response body to string");
+        }
+
+        return false;
+
     }
 
 }

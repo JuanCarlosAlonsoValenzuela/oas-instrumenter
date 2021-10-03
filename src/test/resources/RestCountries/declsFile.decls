@@ -83,14 +83,8 @@ variable this.callingCodes[..]
 variable this.capital
 	var-kind field capital
 	enclosing-var this
-	dec-type java.lang.String[]
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable this.capital[..]
-	var-kind array
-	enclosing-var this.capital
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
 variable this.altSpellings
 	var-kind field altSpellings
 	enclosing-var this
@@ -121,7 +115,7 @@ variable this.latlng
 	var-kind field latlng
 	enclosing-var this
 	dec-type double[]
-	rep-type double
+	rep-type java.lang.String
 variable this.latlng[..]
 	var-kind array
 	enclosing-var this.latlng
@@ -357,14 +351,8 @@ variable return.callingCodes[..]
 variable return.capital
 	var-kind field capital
 	enclosing-var return
-	dec-type java.lang.String[]
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable return.capital[..]
-	var-kind array
-	enclosing-var return.capital
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
 variable return.altSpellings
 	var-kind field altSpellings
 	enclosing-var return
@@ -395,7 +383,7 @@ variable return.latlng
 	var-kind field latlng
 	enclosing-var return
 	dec-type double[]
-	rep-type double
+	rep-type java.lang.String
 variable return.latlng[..]
 	var-kind array
 	enclosing-var return.latlng
