@@ -264,7 +264,7 @@ public class DeclsVariable {
 
         String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
-        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, repType, variablePath));
+        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, STRING_TYPE_NAME, variablePath));
 
         // The enclosing var name contains the name of the variable (this.array)
         res.add(new DeclsVariable(variableName + "[..]", ARRAY_TYPE_NAME, decType + arrayIndicator, repType  + arrayIndicator, variableName));
