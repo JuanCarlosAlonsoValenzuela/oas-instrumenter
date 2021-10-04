@@ -27,7 +27,7 @@ public class GenerateDeclsFile {
 //    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
-    private static String testCasesFilePath = "src/test/resources/RestCountries/testCases_100.csv";
+    private static String testCasesFilePath = "src/test/resources/RestCountries/testCases_1.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -43,8 +43,18 @@ public class GenerateDeclsFile {
 
     public static final String packageName = "main";
 
-    public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "double", "int", "boolean");
-//public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "java.lang.Double", "int", "boolean");
+    public static final String STRING_TYPE_NAME = "java.lang.String";
+    public static final String DOUBLE_TYPE_NAME = "double";
+    public static final String INTEGER_TYPE_NAME = "int";
+    public static final String BOOLEAN_TYPE_NAME = "boolean";
+    public static final String OBJECT_TYPE_NAME = "object";
+    public static final String ARRAY_TYPE_NAME = "array";
+
+    public static final List<String> primitiveTypes = Arrays.asList(STRING_TYPE_NAME, DOUBLE_TYPE_NAME, INTEGER_TYPE_NAME, BOOLEAN_TYPE_NAME);
+
+
+
+//    public static final List<String> primitiveTypes = Arrays.asList("java.lang.String", "java.lang.Double", "int", "boolean");
 
     public static void main(String[] args) {
         OpenAPI specification = getOpenAPISpecification();

@@ -103,19 +103,19 @@ public class DeclsClass {
 
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsExit
-        if(parameterType.equalsIgnoreCase("array")) {   // The return is of type array (Bad practice)
+        if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The return is of type array (Bad practice)
             // TODO: Create a jUnit test of nested arrays of primitive AND objects
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";
 
-            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
+            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
                 DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
                 res.add(declsObject);
 
                 parameterType = arraySchema.getItems().getType();
 
-                if(parameterType.equalsIgnoreCase("array")) {
+                if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                     arraySchema = (ArraySchema) arraySchema.getItems();
                 } else {
                     mapOfProperties = arraySchema.getItems();
@@ -128,7 +128,7 @@ public class DeclsClass {
         }
 
         // Create DeclsObjects for the elements of the array
-        if(parameterType.equalsIgnoreCase("object")) {    // If the schema is of primitive type
+        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {    // If the schema is of primitive type
         // If the schema is of type object
             Map<String, Schema> allSchemas = new HashMap<>();
             allSchemas.put("", mapOfProperties);
@@ -152,7 +152,7 @@ public class DeclsClass {
 
         String parameterType = mediaType.getSchema().getType();
 
-        if(parameterType.equalsIgnoreCase("object")) {
+        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
             Schema mapOfProperties = mediaType.getSchema();
 
             Map<String, Schema> allSchemas = new HashMap<>();
@@ -164,14 +164,14 @@ public class DeclsClass {
                 res.add(declsObject);
             }
 
-        } else if(parameterType.equalsIgnoreCase("array")) {
+        } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // TODO:Complete
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
 
             String nameSuffix = "_array";
 //            String itemsType = arraySchema.getItems().getType();
-            while(parameterType.equalsIgnoreCase("array")) {
+            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                 DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
                 res.add(declsObject);
 
@@ -180,7 +180,7 @@ public class DeclsClass {
                 nameSuffix = nameSuffix + "_array";
             }
 
-            if(parameterType.equalsIgnoreCase("object")) {
+            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                 // TODO: Call the other method
             } else if (primitiveTypes.contains(parameterType)) {
                 // TODO: Primitive type
@@ -222,20 +222,20 @@ public class DeclsClass {
 
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsObject
-        if(parameterType.equalsIgnoreCase("array")) {
+        if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // TODO: Create a jUnit test of nested arrays of primitive elements AND objects
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";
 
-            while(parameterType.equalsIgnoreCase("array")) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
+            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
                 DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
                         arraySchema, nameSuffix, statusCode);
                 res.add(declsExit);
 
                 parameterType = arraySchema.getItems().getType();
 
-                if(parameterType.equalsIgnoreCase("array")) {
+                if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                     arraySchema = (ArraySchema) arraySchema.getItems();
                 } else {
                     mapOfProperties = arraySchema.getItems();
@@ -248,7 +248,7 @@ public class DeclsClass {
         }
 
         // Create DeclsObjects with the elements of the array
-        if(parameterType.equalsIgnoreCase("object")) {
+        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
             Map<String, Schema> allSchemas = new HashMap<>();
 
             allSchemas.put("", mapOfProperties);
@@ -275,21 +275,21 @@ public class DeclsClass {
             Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
             String parameterType = schema.getType();
 
-            if(parameterType.equalsIgnoreCase("object")) {
+            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                 // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
                 // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
                 // Recursive call with object.getParameter
                 res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
 
-            } else if(parameterType.equalsIgnoreCase("array")) {
+            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                 ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
                 String itemsDatatype = arraySchema.getItems().getType();
 
-                if(itemsDatatype.equalsIgnoreCase("object")) {
+                if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                     Schema subSchema = arraySchema.getItems();
                     res.put(nameSuffix + "_" + parameterName, subSchema);
                     res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, subSchema));
-                } else if(itemsDatatype.equalsIgnoreCase("array")){
+                } else if(itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)){
                     // TODO: Nested arrays (Consider simply flattening the array)
                 }
 
