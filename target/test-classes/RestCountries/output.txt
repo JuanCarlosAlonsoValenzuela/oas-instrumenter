@@ -1,3 +1,81 @@
 Daikon version 5.8.8, released March 2, 2021; http://plse.cs.washington.edu/daikon.
 Reading declaration files .(read 1 decls file)
 Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.v1name{name}.v1Name_200(main.v1Name_Input):::ENTER
+input == "test_qxl09now9ulv_v1Name_input_input"
+input.fullText == false
+===========================================================================
+main.v1name{name}.v1Name_200(main.v1Name_Input):::EXIT
+input == orig(input)
+input.fullText == orig(input.fullText)
+size(return.callingCodes[]) == size(return.latlng[])-1
+size(return.callingCodes[]) == size(return.timezones[])
+size(return.callingCodes[]) == size(return.borders[])-1
+size(return.callingCodes[]) == size(return.currencies[])
+size(return.callingCodes[]) == size(return.languages[])
+size(return.altSpellings[])-1 == size(return.latlng[])
+size(return.latlng[]) == size(return.borders[])
+input == "test_qxl09now9ulv_v1Name_input_input"
+input.fullText == false
+return == "test_qxl09now9ulv_v1Name_return_output"
+return.name == "Sweden"
+return.topLevelDomain == "[\".se\"]"
+return.alpha2Code == "SE"
+return.alpha3Code == "SWE"
+return.callingCodes == "test_qxl09now9ulv_v1Name_return.callingCodes_output"
+return.callingCodes[] == [46]
+return.callingCodes[] elements == "46"
+return.capital == "Stockholm"
+return.altSpellings == "test_qxl09now9ulv_v1Name_return.altSpellings_output"
+return.altSpellings[] == [SE, Kingdom of Sweden, Konungariket Sverige]
+return.altSpellings[] elements one of { "Kingdom of Sweden", "Konungariket Sverige", "SE" }
+return.region == "Europe"
+return.subregion == "Northern Europe"
+return.population == "9793172"
+return.latlng == "test_qxl09now9ulv_v1Name_return.latlng_output"
+return.latlng[] == [62.0, 15.0]
+return.latlng[] elements one of { 15.0, 62.0 }
+return.demonym == "Swedish"
+return.area == 450295.0
+return.gini == 25.0
+return.timezones == "test_qxl09now9ulv_v1Name_return.timezones_output"
+return.timezones[] == [UTC+01:00]
+return.timezones[] elements == "UTC+01:00"
+return.borders == "test_qxl09now9ulv_v1Name_return.borders_output"
+return.borders[] == [FIN, NOR]
+return.borders[] elements one of { "FIN", "NOR" }
+return.nativeName == "Sverige"
+return.numericCode == "752"
+return.currencies == "test_qxl09now9ulv_v1Name_return.currencies_output"
+return.currencies[] == [SEK]
+return.currencies[] elements == "SEK"
+return.languages == "test_qxl09now9ulv_v1Name_return.languages_output"
+return.languages[] == [sv]
+return.languages[] elements == "sv"
+return.translations == "test_qxl09now9ulv_v1Name_return.translations_output"
+return.translations.de == "Schweden"
+return.translations.es == "Suecia"
+return.translations.fr == "Su\303\250de"
+return.translations.ja == "\343\202\271\343\202\246\343\202\247\343\203\274\343\203\207\343\203\263"
+return.translations.it == "Svezia"
+return.relevance == "1.5"
+size(return.altSpellings[]) == 3
+return.alpha2Code in return.altSpellings[]
+===========================================================================
+main.v1name{name}.v1Name_200.array(main.v1Name_Input):::ENTER
+input == "test_qxl09now9ulv_v1Name_input_input"
+input.fullText == false
+===========================================================================
+main.v1name{name}.v1Name_200.array(main.v1Name_Input):::EXIT
+input == orig(input)
+input.fullText == orig(input.fullText)
+input == "test_qxl09now9ulv_v1Name_input_input"
+input.fullText == false
+return == "test_qxl09now9ulv_v1Name_v1Name_return_output"
+return.array == "test_qxl09now9ulv_v1Name_v1Name_return.array_output"
+return.array[] == [test_qxl09now9ulv_v1Name_array_output_1]
+return.array[] elements == "test_qxl09now9ulv_v1Name_array_output_1"
+size(return.array[]) == 1
+Exiting Daikon.

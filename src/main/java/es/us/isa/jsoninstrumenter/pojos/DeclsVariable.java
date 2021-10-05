@@ -433,8 +433,16 @@ public class DeclsVariable {
         // Father variable
         String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
 
+        String modified = "1";
+        // If a value is nonsensical, the value of modified must be 2 instead of 1
+        // A parameter of type double with a null value is nonsensical
+        if(this.repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) && (value == null || value.equals("null"))) {
+            value = "nonsensical";
+            modified = "2";
+        }
+
         String res = this.variableName + "\n" +
-                value + "\n" + "1";
+                value + "\n" + modified;
 
         // Son variables
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
@@ -452,6 +460,9 @@ public class DeclsVariable {
 
         String value = null;
 
+        // If a value is nonsensical, the value of modified must be 2 instead of 1
+        boolean isNonsensical = false;
+
         if(     // If primitive type
                 primitiveTypes.contains(this.decType) && !varKind.equals(ARRAY_TYPE_NAME)
         ) {
@@ -459,6 +470,13 @@ public class DeclsVariable {
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size());
             value = getPrimitiveValueFromHierarchy(json, hierarchy);
+
+            // Daikon does not support null values for parameters of type double
+            // For this reason, if a null value is of type double, it is considered nonsensical and the value of modified will be 2 instead of 1
+            if(repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) && value == null) {
+                value = "nonsensical";
+                isNonsensical = true;
+            }
 
             if(repType.replace("[]", "").equals(STRING_TYPE_NAME) && value != null) {
                 value = "\"" + value + "\"";
@@ -509,8 +527,15 @@ public class DeclsVariable {
             }
         }
 
-        String res = this.variableName + "\n" +
-                value + "\n" + "1";
+        String res;
+        if(isNonsensical) {
+            res = this.variableName + "\n" +
+                    value + "\n" + "2";
+        } else {
+            res = this.variableName + "\n" +
+                    value + "\n" + "1";
+        }
+
 
         // Son variables        // TODO: Is this necessary? (isElementOfArray should never be true)
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
