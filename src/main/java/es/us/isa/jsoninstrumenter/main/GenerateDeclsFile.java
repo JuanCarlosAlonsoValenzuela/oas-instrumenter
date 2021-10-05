@@ -23,11 +23,12 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger.yaml";
+//    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger.yaml";
+    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
 //    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
-    private static String testCasesFilePath = "src/test/resources/RestCountries/testCases_1.csv";
+    private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_1.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -78,6 +79,7 @@ public class GenerateDeclsFile {
                 // Extracting the input parameters
                 // TODO: Nesting
                 String objectName = operationName + "_Input";
+                // TODO: Add body parameters
                 DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation.getParameters());
                 addNewDeclsClass(declsClassInput);
 
@@ -85,6 +87,7 @@ public class GenerateDeclsFile {
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
+                // TODO: Add body parameters
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation.getParameters(), operation.getResponses());
 

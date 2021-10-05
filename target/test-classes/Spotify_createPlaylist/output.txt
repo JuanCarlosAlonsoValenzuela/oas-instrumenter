@@ -1,0 +1,49 @@
+Daikon version 5.8.8, released March 2, 2021; http://plse.cs.washington.edu/daikon.
+Reading declaration files .(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::ENTER
+input == "test_1hruuxxu0artx_createPlaylist_input_input"
+input.user_id == "qenf2hlyicucelyckx7gu2n7v"
+===========================================================================
+main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::EXIT
+input == orig(input)
+input.user_id == return.owner.display_name
+input.user_id == return.owner.id
+input.user_id == orig(input.user_id)
+return.collaborative == return.public
+return.followers.total == return.owner.followers.total
+return.followers.total == return.tracks.offset
+return.followers.total == return.tracks.total
+return.followers.total == size(return.images[])
+return.followers.total == size(return.tracks.items[])
+input == "test_1hruuxxu0artx_createPlaylist_input_input"
+input.user_id == "qenf2hlyicucelyckx7gu2n7v"
+return == "test_1hruuxxu0artx_createPlaylist_return_output"
+return.collaborative == false
+return.description == "Playlist description 6"
+return.external_urls == "test_1hruuxxu0artx_createPlaylist_return.external_urls_output"
+return.external_urls.spotify == "https://open.spotify.com/playlist/2uXdDRKhBFwnCKuClCkcl2"
+return.followers == "test_1hruuxxu0artx_createPlaylist_return.followers_output"
+return.href == "https://api.spotify.com/v1/playlists/2uXdDRKhBFwnCKuClCkcl2"
+return.id == "2uXdDRKhBFwnCKuClCkcl2"
+return.images == "test_1hruuxxu0artx_createPlaylist_return.images_output"
+return.images[] == []
+return.name == "Playlist6"
+return.owner == "test_1hruuxxu0artx_createPlaylist_return.owner_output"
+return.owner.external_urls == "test_1hruuxxu0artx_createPlaylist_return.owner.external_urls_output"
+return.owner.external_urls.spotify == "https://open.spotify.com/user/qenf2hlyicucelyckx7gu2n7v"
+return.owner.followers == "test_1hruuxxu0artx_createPlaylist_return.owner.followers_output"
+return.owner.href == "https://api.spotify.com/v1/users/qenf2hlyicucelyckx7gu2n7v"
+return.owner.type == "user"
+return.owner.uri == "spotify:user:qenf2hlyicucelyckx7gu2n7v"
+return.snapshot_id == "MSw5M2UwYTRmNjUxNzAwODIzYjk2YjdhOGJmNDMxM2Y5YTg5MDdmMDg0"
+return.tracks == "test_1hruuxxu0artx_createPlaylist_return.tracks_output"
+return.tracks.href == "https://api.spotify.com/v1/playlists/2uXdDRKhBFwnCKuClCkcl2/tracks"
+return.tracks.items == "test_1hruuxxu0artx_createPlaylist_return.tracks.items_output"
+return.tracks.items[] == []
+return.tracks.limit == 100
+return.type == "playlist"
+return.uri == "spotify:playlist:2uXdDRKhBFwnCKuClCkcl2"
+Exiting Daikon.
