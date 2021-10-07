@@ -10,6 +10,7 @@ import org.json.simple.JSONObject;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
+import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJsonObject;
 
 public class DeclsVariable {
 
@@ -432,10 +433,11 @@ public class DeclsVariable {
         Map<String, String> pathParametersValues = testCase.getPathParameters();
         Map<String, String> headerParametersValues = testCase.getHeaderParameters();
         Map<String, String> formParametersValues = testCase.getFormParameters();
+        String bodyParameter = testCase.getBodyParameter();
 
         String value = null;
         // TODO: Consider arrays
-        // TODO: Consider path, header and form variables (First level)
+        // TODO: Consider path, header and body parameter(First level)
         if(primitiveTypes.contains(decType)) { // If primitive value
 
             // Get the variable name (Without Wrapping)
@@ -452,6 +454,16 @@ public class DeclsVariable {
                 if(value == null) {
                     value = formParametersValues.get(key);
                 }
+
+                // Search in body parameter
+                if(value == null) {
+                    JSONObject jsonBodyParameter = stringToJsonObject(bodyParameter);
+                    if(jsonBodyParameter != null) {
+                        List<String> hierarchyBody = hierarchy.subList(1, hierarchy.size());
+                        value = getPrimitiveValueFromHierarchy(jsonBodyParameter, hierarchyBody);
+                    }
+                }
+
             } else {
                 value = variableName;
             }
@@ -471,6 +483,7 @@ public class DeclsVariable {
     public String generateDtraceEnter(TestCase testCase) {
         // TODO: Consider arrays
 
+        // TODO: The body parameter may contain an object
         // Father variable
         String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
 

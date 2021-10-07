@@ -9,13 +9,13 @@ input.Accept
 null
 1
 input.name
-null
+"Playlist6"
 1
 input.description
-null
+"Playlist description 6"
 1
 input.public
-null
+false
 1
 
 main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::EXIT1
@@ -29,13 +29,13 @@ input.Accept
 null
 1
 input.name
-null
+"Playlist6"
 1
 input.description
-null
+"Playlist description 6"
 1
 input.public
-null
+false
 1
 return
 "test_1hruuxxu0artx_createPlaylist_return_output"

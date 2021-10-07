@@ -28,7 +28,7 @@ public class GenerateDeclsFile {
 //    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
-    private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_1.csv";
+    private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -76,9 +76,8 @@ public class GenerateDeclsFile {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                // TODO: Nesting
                 String objectName = operationName + "_Input";
-                // TODO: Add body parameters
+
                 DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
                 addNewDeclsClass(declsClassInput);
 
@@ -86,13 +85,9 @@ public class GenerateDeclsFile {
                 generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
-                // TODO: Add body parameters
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
-                // OLD
-//                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-//                        objectName, operation.getParameters(), operation.getResponses());
-                // END OLD
+
             }
 
         }
