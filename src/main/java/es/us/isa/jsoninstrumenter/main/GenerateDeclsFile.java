@@ -36,7 +36,7 @@ public class GenerateDeclsFile {
 //    java -cp $DAIKONDIR/daikon.jar daikon.Daikon declsFile.decls dtraceFile.dtrace
 
     // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
-    // TODO: The name suffix of nested arrays of the exits must be print with "." instead of "_"
+    // TODO: The name suffix of nested arrays of the exits must be print with "." or "&" instead of "_"
 
     public static int numberOfExits = 1;
 
@@ -65,9 +65,8 @@ public class GenerateDeclsFile {
         for(Entry<String, PathItem> path: paths.entrySet()) {
 
             PathItem pathItem = path.getValue();
-            // TODO: Common parameters for all the operations
+            // TODO: Create a jUnit test case in which the parameters of the operation are null (i.e., there are no parameters or all the parameters are in the body)
             // TODO: Extract the request body
-            // TODO: Consider the "in" property (query, header, path, etc.) when extracting parameters
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
@@ -80,7 +79,7 @@ public class GenerateDeclsFile {
                 // TODO: Nesting
                 String objectName = operationName + "_Input";
                 // TODO: Add body parameters
-                DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation.getParameters());
+                DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
                 addNewDeclsClass(declsClassInput);
 
                 // Extracting the output parameters
@@ -89,8 +88,11 @@ public class GenerateDeclsFile {
                 // Extracting enter and exits
                 // TODO: Add body parameters
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        objectName, operation.getParameters(), operation.getResponses());
-
+                        objectName, operation);
+                // OLD
+//                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+//                        objectName, operation.getParameters(), operation.getResponses());
+                // END OLD
             }
 
         }

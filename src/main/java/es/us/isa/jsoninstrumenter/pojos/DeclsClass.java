@@ -1,5 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
+import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
@@ -23,12 +24,12 @@ public class DeclsClass {
     private List<DeclsExit> declsExits;
 
     // DeclsClass with List of parameters (Input)
-    public DeclsClass(String packageName, String className, String objectName, List<Parameter> parameters){
+    public DeclsClass(String packageName, String className, String objectName, Operation operation){
         this.packageName = packageName;
         this.className = className;
         this.declsEnters = new ArrayList<>();
         this.declsExits = new ArrayList<>();
-        this.declsObjects = Collections.singletonList(new DeclsObject(packageName, objectName, "this", parameters));
+        this.declsObjects = Collections.singletonList(new DeclsObject(packageName, objectName, "this", operation));
 
     }
 
@@ -57,16 +58,18 @@ public class DeclsClass {
 
     // DeclsClass for ENTER
     public static void setDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
-                                                 String variableNameInput, List<Parameter> parameters,
-                                                 ApiResponses apiResponses) {
+                                                 String variableNameInput, Operation operation) {
+
+        // ApiResponses = operation.getResponses
         DeclsClass declsClass = new DeclsClass(packageName, endpoint);
 
         // Variables of the enter
-        DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input", parameters);
+        DeclsVariable enterVariables = getListOfDeclsVariables(packageName, variableNameInput, "input", operation);
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
 
+        ApiResponses apiResponses = operation.getResponses();
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
             String objectName = operationName + "_Output_" + apiResponse.getKey();
 
@@ -83,7 +86,7 @@ public class DeclsClass {
 
         List<DeclsEnter> declsEnters = new ArrayList<>();
         for(DeclsExit declsExit: declsExits) {
-            declsEnters.add(new DeclsEnter(packageName, endpoint, operationName, variableNameInput, parameters, "input",
+            declsEnters.add(new DeclsEnter(packageName, endpoint, operationName, variableNameInput, operation, "input",
                     declsExit.getNameSuffix(), declsExit.getStatusCode()));
         }
 
@@ -310,17 +313,14 @@ public class DeclsClass {
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
             String objectName = operationName + "_Output_" + apiResponse.getKey();      // operationName_Output_statusCode
 
-            // TODO: Take into account that there is one class per mediaType
-            for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-//                Schema mapOfProperties = mediaType.getSchema();   // OLD
+            // This instrumenter can only process responses in application/json format
+            MediaType mediaType = apiResponse.getValue().getContent().get("application/json");
 
+            if(mediaType != null) {
                 // Create the objects and automatically add them to the class
-//                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mapOfProperties);    // OLD
                 List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mediaType);
-
                 // Create the class that will contain the objects
                 DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);
-
                 res.add(declsClass);
             }
         }

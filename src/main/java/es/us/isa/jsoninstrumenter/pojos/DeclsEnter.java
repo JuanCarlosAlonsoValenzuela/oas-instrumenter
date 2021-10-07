@@ -1,10 +1,6 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
-import io.swagger.v3.oas.models.parameters.Parameter;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import io.swagger.v3.oas.models.Operation;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
 
@@ -22,13 +18,13 @@ public class DeclsEnter {
     // TODO: Add flag is_param? (See example in demo001)
     public DeclsEnter(String packageName, String endpoint,
                       String operationName, String variableNameInput,
-                      List<Parameter> parameters, String rootVariableName,
+                      Operation operation, String rootVariableName,
                       String nameSuffix, String statusCode) {
         this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
-        this.declsVariables = getListOfDeclsVariables(packageName, variableNameInput, rootVariableName, parameters);
+        this.declsVariables = getListOfDeclsVariables(packageName, variableNameInput, rootVariableName, operation);
 
         this.nameSuffix = nameSuffix;
         this.statusCode = statusCode;

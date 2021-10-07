@@ -48,7 +48,7 @@ public class BasicExitTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation.getParameters(), operation.getResponses());
+                        "Input", operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
                 assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);

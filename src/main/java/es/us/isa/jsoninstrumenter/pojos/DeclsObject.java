@@ -2,7 +2,7 @@ package es.us.isa.jsoninstrumenter.pojos;
 
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
-import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.Operation;
 
 import java.util.List;
 
@@ -15,10 +15,10 @@ public class DeclsObject {
     private DeclsVariable declsVariables;
 
     // DeclsObject With input Variables
-    public DeclsObject(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
+    public DeclsObject(String packageName, String objectName, String rootVariableName, Operation operation) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = getListOfDeclsVariables(packageName, objectName, rootVariableName, parameters);
+        this.declsVariables = getListOfDeclsVariables(packageName, objectName, rootVariableName, operation);
 
     }
 

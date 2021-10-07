@@ -1,8 +1,9 @@
 package es.us.isa.jsoninstrumenter.pojos;
 
-import io.swagger.v3.oas.models.media.ArraySchema;
-import io.swagger.v3.oas.models.media.Schema;
+import io.swagger.v3.oas.models.media.*;
+import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.parameters.Parameter;
+import io.swagger.v3.oas.models.parameters.RequestBody;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -21,22 +22,62 @@ public class DeclsVariable {
     private List<DeclsVariable> enclosedVariables;
 
     // TODO: Array, boolean and object
-    public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, List<Parameter> parameters) {
+    public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, Operation operation) {
         // Father parameter
         DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." +
                 objectName, STRING_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
-        for(Parameter parameter: parameters) {
-            DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
-                    "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()),
-                    translateDatatype(parameter.getSchema().getType()), father.getVariableName());
-            enclosedVariables.add(declsVariable);
+
+        // Extract parameters from path, query and header
+        // TODO: Form data can now contain objects, and you can specify serialization strategy for objects and arrays
+        List<Parameter> parameters = operation.getParameters();
+        if(parameters != null) {
+            for(Parameter parameter: parameters) {
+                DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
+                        "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()),
+                        translateDatatype(parameter.getSchema().getType()), father.getVariableName());
+                enclosedVariables.add(declsVariable);
+            }
+        }
+
+        // Extract parameters from body
+        // TODO: JSONArray and JSONObject (Otherwise throw NullPointerException)
+        // TODO: anyOf and oneOf can be used to specify different Schemas
+        ObjectSchema bodySchema = getSchemaOfEnterBody(operation);
+        if(bodySchema != null) {
+            // Only one nesting level
+            List<DeclsVariable> declsVariablesOfBody = generateDeclsVariablesOfOutput(bodySchema, rootVariableName,
+                    "variable", objectName, false, 1);
+
+            // Add to enclosed variables
+            enclosedVariables.addAll(declsVariablesOfBody);
         }
 
         father.setEnclosedVariables(enclosedVariables);
         return father;
 
+    }
+
+    public static ObjectSchema getSchemaOfEnterBody(Operation operation) {
+        ObjectSchema res = null;
+
+        RequestBody requestBody = operation.getRequestBody();
+        if(requestBody != null) {
+            Content content = requestBody.getContent();
+            if(content != null) {
+                // This instrumenter can only process responses in application/json format
+                MediaType mediaType = content.get("application/json");
+                if(mediaType != null) {
+                    res = (ObjectSchema) mediaType.getSchema();
+                    if(res.getProperties() == null) {
+                        res = null;
+                    }
+                }
+            }
+        }
+
+        return res;
     }
 
     // Used when the return type is an array of objects (Bad practice)
@@ -91,7 +132,7 @@ public class DeclsVariable {
             Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
             String parameterType = schema.getType();
 
-            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
+            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                 // Generate the father variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
                         packageName + "." + variableNameOutput + "_" + parameterName, STRING_TYPE_NAME, variablePath, isArray);
@@ -105,7 +146,7 @@ public class DeclsVariable {
                 // Add to list
                 res.add(declsVariable);
 
-            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
+            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
 
                 // Obtain variables of nested arrays
                 List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, variablePath,
@@ -113,7 +154,7 @@ public class DeclsVariable {
                 // Add to list
                 res.addAll(declsVariables);
 
-            } else {
+            } else {    // Primitive type
 
                 // Create new variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName,"field " + parameterName,

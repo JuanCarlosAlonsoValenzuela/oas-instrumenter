@@ -78,6 +78,8 @@ paths:
           properties:
             name:
               type: string
+            description:
+              type: string
             public:
               type: boolean
           required:
