@@ -46,8 +46,11 @@ public class BasicEnterTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation);
+                        objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
                 assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);
@@ -66,7 +69,7 @@ public class BasicEnterTest {
 
                 // OBJECT (ONLY ENTER)
                 DeclsEnter declsEnter = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String enterName = packageName + "." + operationEndpoint + "." + operationName +  "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
 
 //                return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode + this.nameSuffix + "(" +
 //                        this.packageName + "." + this.variableNameInput + ")";

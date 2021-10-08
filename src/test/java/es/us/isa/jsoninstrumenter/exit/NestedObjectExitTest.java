@@ -47,8 +47,11 @@ public class NestedObjectExitTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation);
+                        objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
                 assertEquals("Incorrect number of classes", 1, allDeclsClasses.size());
@@ -61,48 +64,48 @@ public class NestedObjectExitTest {
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
                 assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
-                assertEquals("The size of the list of enters is not 1", 1, declsClassEnterAndExit.getDeclsEnters().size());
-                assertEquals("The size of the list of exits is not 1", 1, declsClassEnterAndExit.getDeclsExits().size());
+                assertEquals("The size of the list of enters is not 2", 2, declsClassEnterAndExit.getDeclsEnters().size());
+                assertEquals("The size of the list of exits is not 2", 2, declsClassEnterAndExit.getDeclsExits().size());
 
                 // OBJECT (ONLY EXIT)
-                DeclsExit declsExit = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                // EXIT 1
+                DeclsExit declsExit1 = declsClassEnterAndExit.getDeclsExits().get(0);
+                String exitName1 = packageName + "." + operationEndpoint + "." + operationName + "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
 
-                assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
+                assertEquals("Incorrect exit name", exitName1, declsExit1.getExitName());
 //                assertEquals("The size of the list of enter variables is not 1", 1, declsExit.getEnterDeclsVariables().size());
 //                assertEquals("The size of the list of exit variables is not 1", 1, declsExit.getExitDeclsVariables().size());
-                assertEquals("The exit number is not correct", numberOfExits, declsExit.getExitNumber() + 1);
 
                 // VARIABLES
                 // ENTER
                 // Only the Father
-                DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
-                assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
-                assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Input", enterDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
-                assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
-                assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
-                assertEquals("Unexpected number of son variables", 9, enterDeclsFatherVariable.getEnclosedVariables().size());
+                DeclsVariable enterDeclsFatherVariable1 = declsExit1.getEnterDeclsVariables();
+                assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".findByAddress_Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable1.getRepType());
+                assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
+                assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
+                assertEquals("Unexpected number of son variables", 9, enterDeclsFatherVariable1.getEnclosedVariables().size());
 
 
                 // EXIT
                 // Father
-                DeclsVariable exitDeclsFatherVariable = declsExit.getExitDeclsVariables();
+                DeclsVariable exitDeclsFatherVariable1 = declsExit1.getExitDeclsVariables();
 
-                assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
-                assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200", exitDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
-                assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
-                assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
+                assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
+                assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable1.getRepType());
+                assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
+                assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
 
                 // The array is counted twice (normal and [..])
-                assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable1.getEnclosedVariables().size());
 
-                List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
+                List<DeclsVariable> declsSonVariables1 = exitDeclsFatherVariable1.getEnclosedVariables();
                 // url and location (of type object)
-                DeclsVariable url = declsSonVariables.get(0);
+                DeclsVariable url = declsSonVariables1.get(0);
                 assertEquals("Incorrect variable name", "return.url", url.getVariableName());
                 assertEquals("Incorrect var-kind", "field url", url.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String", url.getDecType());
@@ -113,10 +116,10 @@ public class NestedObjectExitTest {
 
 
                 // Variable of type object
-                DeclsVariable locationObject = declsSonVariables.get(1);
+                DeclsVariable locationObject = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.location", locationObject.getVariableName());
                 assertEquals("Incorrect var-kind", "return", locationObject.getVarKind());
-                assertEquals("Incorrect decType", "java.lang.String", locationObject.getDecType());
+                assertEquals("Incorrect decType", "main.findByAddress_Output_200_location", locationObject.getDecType());
                 assertEquals("Incorrect repType", "java.lang.String", locationObject.getRepType());
                 assertEquals("Incorrect enclosing var", "return", locationObject.getEnclosingVar());
                 assertFalse("This variable should not be an array", locationObject.isArray());
@@ -171,29 +174,58 @@ public class NestedObjectExitTest {
                 assertEquals("Incorrect repType", "java.lang.String[]", ids2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.location.ids", ids2.getEnclosingVar());
                 assertTrue("This variable should not be an array", ids2.isArray());
-                assertEquals("Unexpected number of son variables", 2, ids2.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 0, ids2.getEnclosedVariables().size());
 
-                // Sons of the Array of objects id, namely locationId and provider
-                List<DeclsVariable> sonsOfTheIds = ids2.getEnclosedVariables();
+                // EXIT 2
+                DeclsExit declsExit2 = declsClassEnterAndExit.getDeclsExits().get(1);
+                String exitName2 = packageName + "." + operationEndpoint + "." + operationName + "_200_location_ids(" + packageName + "." + operationName + "_" + "Input" + ")";
 
-                DeclsVariable locationId = sonsOfTheIds.get(0);
-                assertEquals("Incorrect variable name", "return.location.ids[..].locationId",  locationId.getVariableName());
+                assertEquals("Incorrect exit name", exitName2, declsExit2.getExitName());
+
+                // VARIABLES
+                // ENTER
+                // Only the Father
+                DeclsVariable enterDeclsFatherVariable2 = declsExit2.getEnterDeclsVariables();
+                assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable2.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable2.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".findByAddress_Input", enterDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable2.getRepType());
+                assertNull("The enclosing var should be null", enterDeclsFatherVariable2.getEnclosingVar());
+                assertFalse("This variable should not be an array", enterDeclsFatherVariable2.isArray());
+                assertEquals("Unexpected number of son variables", 9, enterDeclsFatherVariable2.getEnclosedVariables().size());
+
+
+                // EXIT
+                // Father
+                DeclsVariable exitDeclsFatherVariable2 = declsExit2.getExitDeclsVariables();
+
+                assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
+                assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200_location_ids", exitDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable2.getRepType());
+                assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
+                assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());
+
+
+                List<DeclsVariable> declsSonVariables2 = exitDeclsFatherVariable2.getEnclosedVariables();
+
+                DeclsVariable locationId = declsSonVariables2.get(0);
+                assertEquals("Incorrect variable name", "return.locationId", locationId.getVariableName());
                 assertEquals("Incorrect var-kind", "field locationId", locationId.getVarKind());
-                assertEquals("Incorrect decType",  "java.lang.String[]", locationId.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", locationId.getRepType());
-                assertEquals("Incorrect enclosing var", "return.location.ids[..]", locationId.getEnclosingVar());
-                assertTrue("This variable should not be an array", locationId.isArray());
+                assertEquals("Incorrect decType", "java.lang.String", locationId.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", locationId.getRepType());
+                assertEquals("Incorrect enclosing var", "return", locationId.getEnclosingVar());
+                assertFalse("This variable should not be an array", locationId.isArray());
                 assertEquals("Unexpected number of son variables", 0, locationId.getEnclosedVariables().size());
 
-                DeclsVariable provider = sonsOfTheIds.get(1);
-                assertEquals("Incorrect variable name", "return.location.ids[..].provider",  provider.getVariableName());
+                DeclsVariable provider = declsSonVariables2.get(1);
+                assertEquals("Incorrect variable name", "return.provider", provider.getVariableName());
                 assertEquals("Incorrect var-kind", "field provider", provider.getVarKind());
-                assertEquals("Incorrect decType",  "java.lang.String[]", provider.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", provider.getRepType());
-                assertEquals("Incorrect enclosing var", "return.location.ids[..]", provider.getEnclosingVar());
-                assertTrue("This variable should not be an array", provider.isArray());
+                assertEquals("Incorrect decType", "java.lang.String", provider.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", provider.getRepType());
+                assertEquals("Incorrect enclosing var", "return", provider.getEnclosingVar());
+                assertFalse("This variable should not be an array", provider.isArray());
                 assertEquals("Unexpected number of son variables", 0, provider.getEnclosedVariables().size());
-
 
             }
 

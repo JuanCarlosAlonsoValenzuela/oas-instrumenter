@@ -54,7 +54,7 @@ public class BasicOutputTest {
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
 
-                assertEquals("The expected number of output classes is one", allDeclsClasses.size(), 1);
+                assertEquals("The expected number of output classes is one", 1, allDeclsClasses.size());
 
                 DeclsClass declsClassOutput = allDeclsClasses.get(0);
                 System.out.println(declsClassOutput);

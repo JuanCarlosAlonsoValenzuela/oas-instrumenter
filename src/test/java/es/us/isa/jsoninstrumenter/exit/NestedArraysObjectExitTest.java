@@ -50,8 +50,11 @@ public class NestedArraysObjectExitTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation);
+                        objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
                 assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);

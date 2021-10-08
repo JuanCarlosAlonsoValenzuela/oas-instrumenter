@@ -47,8 +47,11 @@ public class PrimitiveArrayExitTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
-                        "Input", operation);
+                        objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
                 assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);
@@ -66,7 +69,7 @@ public class PrimitiveArrayExitTest {
 
                 // OBJECT (ONLY EXIT)
                 DeclsExit declsExit = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName = packageName + "." + operationEndpoint + "." + operationName + "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String exitName = packageName + "." + operationEndpoint + "." + operationName + "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
 //                assertEquals("The size of the list of enter variables is not 1", 1, declsExit.getEnterDeclsVariables().size());

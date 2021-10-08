@@ -24,12 +24,12 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 public class GenerateDeclsFile {
 
 //    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger.yaml";
-    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
-//    private static String openApiSpecPath = "src/test/resources/airportInfo/OpenAPISpec.yaml";
+//    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
+    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
     private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
-    private static boolean generateDtrace = true;
+    private static boolean generateDtrace = false;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
@@ -143,8 +143,6 @@ public class GenerateDeclsFile {
             writeFile(dtraceFilePath, dtraceContent);
 
         }
-
-        // TODO: Discard authentication parameters (by discarding them from the objects)
 
     }
 

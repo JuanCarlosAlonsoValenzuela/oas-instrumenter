@@ -313,16 +313,18 @@ public class DeclsClass {
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
             String objectName = operationName + "_Output_" + apiResponse.getKey();      // operationName_Output_statusCode
 
-            // This instrumenter can only process responses in application/json format
-            MediaType mediaType = apiResponse.getValue().getContent().get("application/json");
+            for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
+                if(mediaType != null) {
+                    // Create the objects and automatically add them to the class
+                    List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mediaType);
 
-            if(mediaType != null) {
-                // Create the objects and automatically add them to the class
-                List<DeclsObject> nestedDeclsObjects = getAllNestedDeclsObjects(packageName, objectName, mediaType);
-                // Create the class that will contain the objects
-                DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);
-                res.add(declsClass);
+                    // Create the class that will contain the objects
+                    DeclsClass declsClass = new DeclsClass(packageName, objectName, nestedDeclsObjects);
+
+                    res.add(declsClass);
+                }
             }
+
         }
 
         addNewDeclsClasses(res);
