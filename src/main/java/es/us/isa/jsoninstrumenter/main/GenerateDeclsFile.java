@@ -23,9 +23,9 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-//    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger.yaml";
+    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger.yaml";
 //    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
-    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
+//    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
     private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
@@ -66,7 +66,6 @@ public class GenerateDeclsFile {
 
             PathItem pathItem = path.getValue();
             // TODO: Create a jUnit test case in which the parameters of the operation are null (i.e., there are no parameters or all the parameters are in the body)
-            // TODO: Extract the request body
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
@@ -193,11 +192,5 @@ public class GenerateDeclsFile {
 
         return target.toString();
     }
-
-
-    // Input file
-    // Distinguish program point declaration from variable declarations
-
-
 
 }

@@ -33,7 +33,7 @@ public class DeclsObject {
     public DeclsObject(String packageName, String objectName, ArraySchema arraySchema) {
         this.packageName = packageName;
         this.objectName = objectName;
-        this.declsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, objectName, "this");
+        this.declsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, objectName, "this", "variable");
     }
 
 

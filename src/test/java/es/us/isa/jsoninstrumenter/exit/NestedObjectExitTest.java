@@ -173,7 +173,7 @@ public class NestedObjectExitTest {
                 assertEquals("Incorrect decType",  "main.ids[]", ids2.getDecType());
                 assertEquals("Incorrect repType", "java.lang.String[]", ids2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.location.ids", ids2.getEnclosingVar());
-                assertTrue("This variable should not be an array", ids2.isArray());
+                assertTrue("This variable should be an array", ids2.isArray());
                 assertEquals("Unexpected number of son variables", 0, ids2.getEnclosedVariables().size());
 
                 // EXIT 2

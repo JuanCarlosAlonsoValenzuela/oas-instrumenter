@@ -4,7 +4,6 @@ import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
-import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
 
@@ -74,12 +73,10 @@ public class DeclsClass {
             String objectName = operationName + "_Output_" + apiResponse.getKey();
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
-//                Schema mapOfProperties = mediaType.getSchema();
 
                 List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
                         variableNameInput, enterVariables, objectName, mediaType, apiResponse.getKey());
-//                List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
-//                        variableNameInput, enterVariables, objectName, mapOfProperties, apiResponse.getKey());
+
                 declsExits.addAll(nestedDeclsExits);
             }
         }

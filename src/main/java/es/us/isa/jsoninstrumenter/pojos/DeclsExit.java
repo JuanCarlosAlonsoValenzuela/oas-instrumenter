@@ -67,12 +67,7 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = true;
 
-        // TODO: CHANGE FUNCTION
-//        variableName: return
-        this.exitDeclsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, variableNameOutput + nameSuffix, "return");
-//        this.exitDeclsVariables = generateDeclsVariablesOfOutput("return", "return", packageName,
-//                variableNameOutput + nameSuffix, arraySchema);
-
+        this.exitDeclsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, variableNameOutput + nameSuffix, "return", "return");
 
     }
 
@@ -195,7 +190,6 @@ public class DeclsExit {
                     List<JSONArray> jsonArraysToGenerateDtrace = getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
 
                     // TODO: for all the elements of the list of jsonArrays, generate a dtrace
-                    // TODO: Write in res
                     for(JSONArray element: jsonArraysToGenerateDtrace) {
                         res = res + this.generateSingleDtraceEnterAndExitArray(element, testCase, declsEnter);
                     }

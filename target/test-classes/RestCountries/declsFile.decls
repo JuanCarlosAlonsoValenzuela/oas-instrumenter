@@ -282,7 +282,7 @@ variable input.fullText
 	dec-type boolean
 	rep-type boolean
 variable return
-	var-kind variable
+	var-kind return
 	dec-type main.v1Name_Output_200.array
 	rep-type java.lang.String
 variable return.array

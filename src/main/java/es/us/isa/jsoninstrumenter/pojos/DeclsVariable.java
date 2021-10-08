@@ -84,9 +84,9 @@ public class DeclsVariable {
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit
     // TODO: Create tests for nested objects and nested primitives with corresponding dtraces
-    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName) {
+    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName, String varKind) {
 
-        DeclsVariable father = new DeclsVariable(variableName, "variable",
+        DeclsVariable father = new DeclsVariable(variableName, varKind,
                 packageName + "." + objectName, STRING_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVars;
@@ -437,7 +437,7 @@ public class DeclsVariable {
 
         String value = null;
         // TODO: Consider arrays
-        // TODO: Consider path, header and body parameter(First level)
+        // Consider path, header and body parameter (First level)
         if(primitiveTypes.contains(decType)) { // If primitive value
 
             // Get the variable name (Without Wrapping)

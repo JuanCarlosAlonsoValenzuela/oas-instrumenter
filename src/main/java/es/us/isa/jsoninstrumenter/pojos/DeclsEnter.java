@@ -15,7 +15,6 @@ public class DeclsEnter {
 
     private DeclsVariable declsVariables;
 
-    // TODO: Add flag is_param? (See example in demo001)
     public DeclsEnter(String packageName, String endpoint,
                       String operationName, String variableNameInput,
                       Operation operation, String rootVariableName,
@@ -87,9 +86,7 @@ public class DeclsEnter {
         String res = "ppt " + this.getEnterName() + ":::ENTER" + "\n" +
                 "ppt-type enter";
 
-
         res = res + "\n" + declsVariables;
-
 
         return res;
     }
@@ -98,12 +95,9 @@ public class DeclsEnter {
 
         String res = this.getEnterName() + ":::ENTER";
 
-
         res = res + "\n" + declsVariables.generateDtraceEnter(testCase);
 
-
         res = res + "\n";
-
 
         return res;
     }
