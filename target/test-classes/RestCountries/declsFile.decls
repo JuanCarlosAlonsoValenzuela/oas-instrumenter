@@ -41,3 +41,46 @@ variable this.primitive
 ppt main.v1name{name}:::CLASS
 ppt-type class
 
+ppt main.v1name{name}.v1Name_200(main.v1Name_Input):::ENTER
+ppt-type enter
+variable input
+	var-kind variable
+	dec-type main.v1Name_Input
+	rep-type java.lang.String
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.fullText
+	var-kind field fullText
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
+
+ppt main.v1name{name}.v1Name_200(main.v1Name_Input):::EXIT1
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.v1Name_Input
+	rep-type java.lang.String
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.fullText
+	var-kind field fullText
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
+variable return
+	var-kind return
+	dec-type main.v1Name_Output_200
+	rep-type java.lang.String
+variable return.primitive
+	var-kind field primitive
+	enclosing-var return
+	dec-type double
+	rep-type double
+

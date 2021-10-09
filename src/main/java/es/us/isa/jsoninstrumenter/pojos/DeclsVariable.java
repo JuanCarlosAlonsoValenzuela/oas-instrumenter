@@ -319,6 +319,8 @@ public class DeclsVariable {
                 return INTEGER_TYPE_NAME;
             case "boolean":
                 return BOOLEAN_TYPE_NAME;
+            case "object":
+                return OBJECT_TYPE_NAME;
             case "array":
                 return ARRAY_TYPE_NAME;
             default:    // Including case "string"
