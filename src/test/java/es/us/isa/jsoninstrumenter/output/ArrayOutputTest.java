@@ -1,7 +1,6 @@
 package es.us.isa.jsoninstrumenter.output;
 
 import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
-import es.us.isa.jsoninstrumenter.pojos.DeclsExit;
 import es.us.isa.jsoninstrumenter.pojos.DeclsObject;
 import es.us.isa.jsoninstrumenter.pojos.DeclsVariable;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -120,7 +119,7 @@ public class ArrayOutputTest {
             }
 
         }
-        
+
     }
 
 }

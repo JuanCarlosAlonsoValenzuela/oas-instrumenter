@@ -45,37 +45,43 @@ public class DeclsVariable {
         // Extract parameters from body
         // TODO: JSONArray and JSONObject (Otherwise throw NullPointerException)
         // TODO: anyOf and oneOf can be used to specify different Schemas
-        ObjectSchema bodySchema = getSchemaOfEnterBody(operation);
-        if(bodySchema != null) {
-            // Only one nesting level
-            List<DeclsVariable> declsVariablesOfBody = generateDeclsVariablesOfOutput(bodySchema, rootVariableName,
-                    "variable", objectName, false, 1);
+        List<DeclsVariable> declsVariablesOfBody = getDeclsVariablesOfBodyAndFormParameters(operation, "application/json",
+                rootVariableName, objectName);
+        enclosedVariables.addAll(declsVariablesOfBody);
 
-            // Add to enclosed variables
-            enclosedVariables.addAll(declsVariablesOfBody);
-        }
+        // Extract parameters from the form
+        List<DeclsVariable> declsVariablesOfForm = getDeclsVariablesOfBodyAndFormParameters(operation, "application/x-www-form-urlencoded",
+                rootVariableName, objectName);
+        enclosedVariables.addAll(declsVariablesOfForm);
 
         father.setEnclosedVariables(enclosedVariables);
         return father;
 
     }
 
-    public static ObjectSchema getSchemaOfEnterBody(Operation operation) {
-        ObjectSchema res = null;
+    // TODO: Move to a different class
+    public static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation, String key,
+                                                                               String rootVariableName, String objectName) {
+        Schema schema = null;
 
         RequestBody requestBody = operation.getRequestBody();
         if(requestBody != null) {
             Content content = requestBody.getContent();
             if(content != null) {
-                // This instrumenter can only process responses in application/json format
-                MediaType mediaType = content.get("application/json");
+                MediaType mediaType = content.get(key);
                 if(mediaType != null) {
-                    res = (ObjectSchema) mediaType.getSchema();
-                    if(res.getProperties() == null) {
-                        res = null;
+                    schema = mediaType.getSchema();
+                    if(schema.getProperties() == null) {
+                        schema = null;
                     }
                 }
             }
+        }
+
+        List<DeclsVariable> res = new ArrayList<>();
+        if(schema != null) {
+            res = generateDeclsVariablesOfOutput(schema, rootVariableName,
+                    "variable", objectName, false, 1);
         }
 
         return res;

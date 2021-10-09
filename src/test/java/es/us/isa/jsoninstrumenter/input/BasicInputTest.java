@@ -104,7 +104,7 @@ public class BasicInputTest {
 
         }
 
-        assertEquals("The expected number of classes is one", declsClassList.size(), 1);
+        assertEquals("The expected number of classes is one", 1, declsClassList.size());
 
     }
 
