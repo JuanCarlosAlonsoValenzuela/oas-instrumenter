@@ -71,6 +71,26 @@ public class DeclsExit {
 
     }
 
+    // Used when the exit is primitive (Bad pracice)
+    // TODO: Schema becomes parameterType
+    public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
+                     DeclsVariable enterVariables, String variableNameOutput, String parameterType, String statusCode) {
+        this.packageName = packageName;
+        this.endpoint = endpoint;
+        this.operationName = operationName;
+        this.variableNameInput = variableNameInput;
+        this.nameSuffix = "";
+        this.statusCode = statusCode;
+
+        this.exitNumber = numberOfExits;
+        numberOfExits = numberOfExits + 1;
+
+        this.enterDeclsVariables = enterVariables;
+        this.isNestedArray = false;
+
+        this.exitDeclsVariables = generateDeclsVariablesOfPrimitiveResponse(parameterType, variableNameOutput, "return", "return");
+    }
+
     public String getExitName() {
         return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode +  this.nameSuffix + "(" +
                 this.packageName + "." + this.variableNameInput + ")";

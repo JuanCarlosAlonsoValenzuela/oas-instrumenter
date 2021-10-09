@@ -30,10 +30,18 @@ public class DeclsObject {
                 objectName, mapOfProperties);
     }
 
+    // DeclsObject for responses of type array (Bad practice)
     public DeclsObject(String packageName, String objectName, ArraySchema arraySchema) {
         this.packageName = packageName;
         this.objectName = objectName;
         this.declsVariables = generateDeclsVariablesOfArrayOutput(arraySchema, objectName, "this", "variable");
+    }
+
+    // DeclsObject for primitive responses (Bad practice)
+    public DeclsObject(String packageName, String objectName, String parameterType) {
+        this.packageName = packageName;
+        this.objectName = objectName;
+        this.declsVariables = generateDeclsVariablesOfPrimitiveResponse(parameterType, objectName, "this", "variable");
     }
 
 

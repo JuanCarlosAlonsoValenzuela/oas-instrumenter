@@ -13,6 +13,7 @@ import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.translateDatatype;
 
 public class DeclsClass {
 
@@ -123,8 +124,11 @@ public class DeclsClass {
                 nameSuffix = nameSuffix + ".array";
             }
 
-        }  else if(primitiveTypes.contains(parameterType)) {
-            // TODO: Complete and test (Base case)
+        }  else if(primitiveTypes.contains(translateDatatype(parameterType))) {     // The return is of type primitive (Bad practice)
+            // Generate DeclsObjectOfPrimitiveParameter
+            DeclsObject primitiveObject = new DeclsObject(packageName, objectName, parameterType);
+
+            return Collections.singletonList(primitiveObject);
         }
 
         // Create DeclsObjects for the elements of the array
@@ -243,8 +247,10 @@ public class DeclsClass {
                 nameSuffix = nameSuffix + ".array";
             }
 
-        } else if(primitiveTypes.contains(parameterType)) {
-            // TODO: Complete and create jUnits
+        } else if(primitiveTypes.contains(translateDatatype(parameterType))) {
+            DeclsExit primitiveExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables,
+                    variableNameOutput, parameterType, statusCode);
+            return Collections.singletonList(primitiveExit);
         }
 
         // Create DeclsObjects with the elements of the array

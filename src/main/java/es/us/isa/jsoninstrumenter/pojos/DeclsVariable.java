@@ -90,6 +90,7 @@ public class DeclsVariable {
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit
     // TODO: Create tests for nested objects and nested primitives with corresponding dtraces
+    // TODO: Move to other class
     public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName, String varKind) {
 
         DeclsVariable father = new DeclsVariable(variableName, varKind,
@@ -110,6 +111,26 @@ public class DeclsVariable {
         father.setEnclosedVariables(enclosedVars);
 
         return father;
+    }
+
+    // Used when the response is primitive (Bad practice)
+    // Used for both output and exit
+    // TODO: Move to other class
+    // generateDeclsVariablesOfPrimitiveResponse(parameterType, objectName, "this", "variable")
+    public static DeclsVariable generateDeclsVariablesOfPrimitiveResponse(String parameterType, String objectName,
+                                                                          String variableName, String varKind) {
+        DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + objectName, STRING_TYPE_NAME, null);
+
+        String translatedDatatype = translateDatatype(parameterType);
+
+        DeclsVariable enclosedVar = new DeclsVariable(variableName + ".primitive", "field primitive",
+                translatedDatatype, translatedDatatype,
+                variableName, false);
+
+        father.setEnclosedVariables(Collections.singletonList(enclosedVar));
+
+        return father;
+
     }
 
     // Used for both output and exit
