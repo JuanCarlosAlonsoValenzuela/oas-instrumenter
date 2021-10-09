@@ -98,8 +98,8 @@ public class DeclsVariable {
         List<DeclsVariable> enclosedVars;
         String itemsDatatype = arraySchema.getItems().getType();
 
-        if(primitiveTypes.contains(itemsDatatype)) {
-            String translatedDatatype = translateDatatype(itemsDatatype);
+        String translatedDatatype = translateDatatype(itemsDatatype);
+        if(primitiveTypes.contains(translatedDatatype)) {
             enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, translatedDatatype,
                     translatedDatatype, 1);
         } else{
@@ -315,7 +315,8 @@ public class DeclsVariable {
         res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, STRING_TYPE_NAME, variablePath));
 
         // The enclosing var name contains the name of the variable (this.array)
-        res.add(new DeclsVariable(variableName + "[..]", ARRAY_TYPE_NAME, decType + arrayIndicator, repType  + arrayIndicator, variableName));
+        res.add(new DeclsVariable(variableName + "[..]", ARRAY_TYPE_NAME, decType + arrayIndicator,
+                repType  + arrayIndicator, variableName));
 
         return res;
     }

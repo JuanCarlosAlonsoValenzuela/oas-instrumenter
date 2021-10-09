@@ -124,7 +124,7 @@ public class DeclsClass {
             }
 
         }  else if(primitiveTypes.contains(parameterType)) {
-            // TODO: Complete and test
+            // TODO: Complete and test (Base case)
         }
 
         // Create DeclsObjects for the elements of the array

@@ -23,7 +23,7 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger_nestedArraysResponse.yaml";
+    private static String openApiSpecPath = "src/test/resources/RestCountries/swagger_nestedArraysResponse_primitive.yaml";
 //    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
 //    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
