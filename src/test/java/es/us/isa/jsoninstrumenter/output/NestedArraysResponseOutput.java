@@ -59,7 +59,7 @@ public class NestedArraysResponseOutput {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassOutput.getPackageName());
                 assertEquals("Incorrect class name", operationName + "_Output_200", declsClassOutput.getClassName());
-                assertEquals("The size of the list of objects is not 1", 4, declsClassOutput.getDeclsObjects().size());
+                assertEquals("The size of the list of objects is not 4", 4, declsClassOutput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassOutput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassOutput.getDeclsExits().size());
 
@@ -261,6 +261,81 @@ public class NestedArraysResponseOutput {
             }
 
         }
+
+    }
+
+    @Test
+    public void testPrimitiveResponseOutput() {
+        deleteAllDeclsClasses();
+        String oasPath = "src/test/resources/RestCountries/swagger_primitiveResponse.yaml";
+
+        // Equivalent to the getOpenAPISpecification private function
+        ParseOptions parseOptions = new ParseOptions();
+        parseOptions.setResolveFully(true);
+        parseOptions.setFlatten(true);
+        OpenAPI specification = new OpenAPIV3Parser().read(oasPath, null, parseOptions);
+
+        Paths paths = specification.getPaths();
+
+        for(Map.Entry<String, PathItem> path: paths.entrySet()) {
+            PathItem pathItem = path.getValue();
+
+            for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
+
+                Operation operation = operationEntry.getValue();
+                String operationEndpoint = path.getKey().replace("/", "");
+
+                // Set the operation name for the .decls file
+                String operationName = getOperationName(operation, operationEntry, operationEndpoint);
+
+                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
+
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+
+                assertEquals("The expected number of output classes is 1", 1, allDeclsClasses.size());
+
+                DeclsClass declsClassOutput = allDeclsClasses.get(0);
+                System.out.println(declsClassOutput);
+
+                // CLASS
+                assertEquals("Incorrect package name", packageName, declsClassOutput.getPackageName());
+                assertEquals("Incorrect class name", operationName + "_Output_200", declsClassOutput.getClassName());
+                assertEquals("The size of the list of objects is not 1", 1, declsClassOutput.getDeclsObjects().size());
+                assertEquals("The size of the list of enters is not 0", 0, declsClassOutput.getDeclsEnters().size());
+                assertEquals("The size of the list of exits is not 0", 0, declsClassOutput.getDeclsExits().size());
+
+
+                DeclsObject declsObject = declsClassOutput.getDeclsObjects().get(0);
+                assertEquals("Incorrect package name", packageName, declsObject.getPackageName());
+                assertEquals("Incorrect object name", operationName + "_Output_200", declsObject.getObjectName());
+
+                // VARIABLES
+                // Father
+                DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
+                assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", declsFatherVariable.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", declsFatherVariable.isArray());
+                assertEquals("Unexpected number of son variables", 1, declsFatherVariable.getEnclosedVariables().size());
+
+                // Son (Primitive variable)
+                List<DeclsVariable> declsSonVariables = declsFatherVariable.getEnclosedVariables();
+
+                DeclsVariable primitive = declsSonVariables.get(0);
+                assertEquals("Incorrect variable name", "this.primitive", primitive.getVariableName());
+                assertEquals("Incorrect var-kind", "field primitive", primitive.getVarKind());
+                assertEquals("Incorrect decType", "double", primitive.getDecType());
+                assertEquals("Incorrect repType", "double", primitive.getRepType());
+                assertEquals("Incorrect enclosing var", "this", primitive.getEnclosingVar());
+                assertFalse("This variable should not be an array", primitive.isArray());
+                assertEquals("Unexpected number of son variables", 0, primitive.getEnclosedVariables().size());
+
+            }
+
+        }
+
 
     }
 
