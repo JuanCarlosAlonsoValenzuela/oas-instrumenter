@@ -99,7 +99,7 @@ public class DeclsVariable {
         String itemsDatatype = arraySchema.getItems().getType();
 
         String translatedDatatype = translateDatatype(itemsDatatype);
-        if(primitiveTypes.contains(translatedDatatype)) {
+        if(primitiveTypes.contains(translatedDatatype) && !itemsDatatype.equals(OBJECT_TYPE_NAME)) {
             enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, translatedDatatype,
                     translatedDatatype, 1);
         } else{
@@ -298,6 +298,8 @@ public class DeclsVariable {
                 return INTEGER_TYPE_NAME;
             case "boolean":
                 return BOOLEAN_TYPE_NAME;
+            case "array":
+                return ARRAY_TYPE_NAME;
             default:    // Including case "string"
                 return STRING_TYPE_NAME;
         }
