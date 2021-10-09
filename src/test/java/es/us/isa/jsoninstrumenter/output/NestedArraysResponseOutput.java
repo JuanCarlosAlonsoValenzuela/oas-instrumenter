@@ -139,6 +139,7 @@ public class NestedArraysResponseOutput {
     }
 
 
+    // Nested array of primitives
     @Test
     public void testNestedArraysOfPrimitivesResponseOutput() {
         deleteAllDeclsClasses();
