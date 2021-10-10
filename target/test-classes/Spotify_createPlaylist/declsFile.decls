@@ -43,13 +43,13 @@ variable this.location.locationId
 variable this.location.keywords
 	var-kind field keywords
 	enclosing-var this.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable this.location.keywords[..]
 	var-kind array
 	enclosing-var this.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 
 
@@ -392,13 +392,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201_images(main.createPlaylist_Input):::ENTER
@@ -440,13 +440,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201_tracks_items(main.createPlaylist_Input):::ENTER
@@ -488,13 +488,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::EXIT1
@@ -536,13 +536,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
@@ -775,13 +775,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
@@ -842,13 +842,13 @@ variable input.location.locationId
 variable input.location.keywords
 	var-kind field keywords
 	enclosing-var input.location
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String
 variable input.location.keywords[..]
 	var-kind array
 	enclosing-var input.location.keywords
 	array 1
-	dec-type java.lang.String[]
+	dec-type main.keywords[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
