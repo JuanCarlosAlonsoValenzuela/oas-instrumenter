@@ -31,7 +31,6 @@ public class DeclsVariable {
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
 
         // Extract parameters from path, query and header
-        // TODO: Form data can now contain objects, and you can specify serialization strategy for objects and arrays
         List<Parameter> parameters = operation.getParameters();
         if(parameters != null) {
             for(Parameter parameter: parameters) {
@@ -46,12 +45,12 @@ public class DeclsVariable {
         // TODO: JSONArray and JSONObject (Otherwise throw NullPointerException)
         // TODO: anyOf and oneOf can be used to specify different Schemas
         List<DeclsVariable> declsVariablesOfBody = getDeclsVariablesOfBodyAndFormParameters(operation, "application/json",
-                rootVariableName, objectName);
+                rootVariableName, objectName, "body");
         enclosedVariables.addAll(declsVariablesOfBody);
 
         // Extract parameters from the form
         List<DeclsVariable> declsVariablesOfForm = getDeclsVariablesOfBodyAndFormParameters(operation, "application/x-www-form-urlencoded",
-                rootVariableName, objectName);
+                rootVariableName, objectName, "form");
         enclosedVariables.addAll(declsVariablesOfForm);
 
         father.setEnclosedVariables(enclosedVariables);
@@ -60,8 +59,10 @@ public class DeclsVariable {
     }
 
     // TODO: Move to a different class
+    // TODO: Refactor this method and add a try/catch instead of several ifs
+    // TODO: Primitive type
     public static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation, String key,
-                                                                               String rootVariableName, String objectName) {
+                                                                               String rootVariableName, String objectName, String sourceOfParameter) {
         Schema schema = null;
 
         RequestBody requestBody = operation.getRequestBody();
@@ -70,10 +71,18 @@ public class DeclsVariable {
             if(content != null) {
                 MediaType mediaType = content.get(key);
                 if(mediaType != null) {
-                    schema = mediaType.getSchema();
-                    if(schema.getProperties() == null) {
-                        schema = null;
+                    String schemaType = mediaType.getSchema().getType();
+                    if(schemaType != null && schemaType.equals("array")) {       // The parameter is of type array
+                        ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();      // objectName = createPlaylist_Input    rootVariableName = this
+                        return Collections.singletonList(generateDeclsVariablesOfArrayOutput(arraySchema, objectName + "." + sourceOfParameter + "Array",
+                                rootVariableName + "." + sourceOfParameter, "variable", rootVariableName));
+                    } else {                                                    // The body is of type object
+                        schema = mediaType.getSchema();
+                        if(schema.getProperties() == null) {
+                            schema = null;
+                        }
                     }
+
                 }
             }
         }
@@ -86,6 +95,13 @@ public class DeclsVariable {
 
         return res;
     }
+
+    public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName, String varKind, String enclosingVar){
+        DeclsVariable res = generateDeclsVariablesOfArrayOutput(arraySchema, objectName, variableName, varKind);
+        res.setEnclosingVar(enclosingVar);
+        return res;
+    }
+
 
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit

@@ -466,4 +466,220 @@ public class EnterReadBodyParameters {
 
     }
 
+    // The Schema of the body parameter is of type ArraySchema and the elements are primitive
+    @Test
+    public void testEnterReadPrimitiveArrayParameterFromBody() {
+        deleteAllDeclsClasses();
+        String oasPath = "src/test/resources/Spotify_createPlaylist/spec_bodyParameter_primitiveArray.yaml";
+
+        // Equivalent to the getOpenAPISpecification private function
+        ParseOptions parseOptions = new ParseOptions();
+        parseOptions.setResolveFully(true);
+        parseOptions.setFlatten(true);
+        OpenAPI specification = new OpenAPIV3Parser().read(oasPath, null, parseOptions);
+
+        Paths paths = specification.getPaths();
+
+        for(Map.Entry<String, PathItem> path: paths.entrySet()) {
+            PathItem pathItem = path.getValue();
+
+            for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
+
+                Operation operation = operationEntry.getValue();
+                String operationEndpoint = path.getKey().replace("/", "");
+
+                // Set the operation name for the .decls file
+                String operationName = getOperationName(operation, operationEntry, operationEndpoint);
+
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                        objectName, operation);
+
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+                assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);
+
+                DeclsClass declsClassEnterAndExit = allDeclsClasses.get(0);
+
+                System.out.println(declsClassEnterAndExit);
+
+                // CLASS
+                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
+                assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
+                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
+                assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
+                assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
+
+
+                // ONLY ENTERS
+                DeclsEnter declsEnter1 = declsClassEnterAndExit.getDeclsEnters().get(0);
+                String enterName1 = packageName + "." + operationEndpoint + "." + operationName +  "_201(" + packageName + "." + operationName + "_" + "Input" + ")";
+                assertEquals("Incorrect enter name", enterName1, declsEnter1.getEnterName());
+
+                DeclsEnter declsEnter2 = declsClassEnterAndExit.getDeclsEnters().get(1);
+                String enterName2 = packageName + "." + operationEndpoint + "." + operationName +  "_201_images(" + packageName + "." + operationName + "_" + "Input" + ")";
+                assertEquals("Incorrect enter name", enterName2, declsEnter2.getEnterName());
+
+                DeclsEnter declsEnter3 = declsClassEnterAndExit.getDeclsEnters().get(2);
+                String enterName3 = packageName + "." + operationEndpoint + "." + operationName +  "_201_tracks_items(" + packageName + "." + operationName + "_" + "Input" + ")";
+                assertEquals("Incorrect enter name", enterName3, declsEnter3.getEnterName());
+
+                for(DeclsEnter declsEnter: declsClassEnterAndExit.getDeclsEnters()) {
+                    // Father
+                    DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables();
+                    assertEquals("Incorrect variable name", "input", declsFatherVariable.getVariableName());
+                    assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".createPlaylist_Input", declsFatherVariable.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                    assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
+                    assertFalse("This variable should not be an array", declsFatherVariable.isArray());
+                    assertEquals("Unexpected number of son variables", 2, declsFatherVariable.getEnclosedVariables().size());
+
+                    // Sons
+                    List<DeclsVariable> declsSonVariables = declsFatherVariable.getEnclosedVariables();
+                    DeclsVariable user_id = declsSonVariables.get(0);
+                    assertEquals("Incorrect variable name", "input.user_id", user_id.getVariableName());
+                    assertEquals("Incorrect var-kind", "field user_id", user_id.getVarKind());
+                    assertEquals("Incorrect decType", "java.lang.String", user_id.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", user_id.getRepType());
+                    assertEquals("Incorrect enclosing var", "input", user_id.getEnclosingVar());
+                    assertFalse("This variable should not be an array", user_id.isArray());
+                    assertEquals("Unexpected number of son variables", 0, user_id.getEnclosedVariables().size());
+
+                    // Array of primitives
+                    DeclsVariable body = declsSonVariables.get(1);
+                    assertEquals("Incorrect variable name", "input.body", body.getVariableName());
+                    assertEquals("Incorrect var-kind", "variable", body.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".createPlaylist_Input.bodyArray", body.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", body.getRepType());
+                    assertEquals("Incorrect enclosing var", "input", body.getEnclosingVar());
+                    assertFalse("This variable should not be an array", body.isArray());
+                    assertEquals("Unexpected number of son variables", 2, body.getEnclosedVariables().size());
+
+                    List<DeclsVariable> bodySons = body.getEnclosedVariables();
+
+                    DeclsVariable array1 = bodySons.get(0);
+                    assertEquals("Incorrect variable name", "input.body.array", array1.getVariableName());
+                    assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
+                    assertEquals("Incorrect decType", "java.lang.String[]", array1.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                    assertEquals("Incorrect enclosing var", "input.body", array1.getEnclosingVar());
+                    assertFalse("This variable should not be an array", array1.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
+
+
+                    DeclsVariable array2 = bodySons.get(1);
+                    assertEquals("Incorrect variable name", "input.body.array[..]", array2.getVariableName());
+                    assertEquals("Incorrect var-kind", "array", array2.getVarKind());
+                    assertEquals("Incorrect decType", "java.lang.String[]", array2.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                    assertEquals("Incorrect enclosing var", "input.body.array", array2.getEnclosingVar());
+                    assertTrue("This variable should be an array", array2.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
+
+                }
+
+            }
+
+            assertEquals("The expected total number of classes is one", getAllDeclsClasses().size(), 1);
+
+        }
+
+    }
+
+    // The Schema of the body parameter is of type ArraySchema and the elements are of type object
+    // Only the first nesting level is taken into account
+    @Test
+    public void testEnterReadObjectArrayParameterFromBody() {
+        deleteAllDeclsClasses();
+        String oasPath = "src/test/resources/Spotify_createPlaylist/spec_bodyParameter_objectArray.yaml";
+
+        // Equivalent to the getOpenAPISpecification private function
+        ParseOptions parseOptions = new ParseOptions();
+        parseOptions.setResolveFully(true);
+        parseOptions.setFlatten(true);
+        OpenAPI specification = new OpenAPIV3Parser().read(oasPath, null, parseOptions);
+
+        Paths paths = specification.getPaths();
+
+        for(Map.Entry<String, PathItem> path: paths.entrySet()) {
+            PathItem pathItem = path.getValue();
+
+            for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
+
+                Operation operation = operationEntry.getValue();
+                String operationEndpoint = path.getKey().replace("/", "");
+
+                // Set the operation name for the .decls file
+                String operationName = getOperationName(operation, operationEntry, operationEndpoint);
+
+                // Extracting the input parameters
+                String objectName = operationName + "_Input";
+
+                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                        objectName, operation);
+
+                List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
+                assertEquals("Incorrect number of classes", allDeclsClasses.size(), 1);
+
+                DeclsClass declsClassEnterAndExit = allDeclsClasses.get(0);
+
+                System.out.println(declsClassEnterAndExit);
+
+                // CLASS
+                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
+                assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
+                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
+                assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
+                assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
+
+                for(DeclsEnter declsEnter: declsClassEnterAndExit.getDeclsEnters()) {
+                    // Father
+                    DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables();
+
+                    // Sons
+                    List<DeclsVariable> declsSonVariables = declsFatherVariable.getEnclosedVariables();
+
+                    // Array of objects
+                    DeclsVariable body = declsSonVariables.get(1);
+                    assertEquals("Incorrect variable name", "input.body", body.getVariableName());
+                    assertEquals("Incorrect var-kind", "variable", body.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".createPlaylist_Input.bodyArray", body.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", body.getRepType());
+                    assertEquals("Incorrect enclosing var", "input", body.getEnclosingVar());
+                    assertFalse("This variable should not be an array", body.isArray());
+                    assertEquals("Unexpected number of son variables", 2, body.getEnclosedVariables().size());
+
+                    List<DeclsVariable> bodySons = body.getEnclosedVariables();
+
+                    DeclsVariable array1 = bodySons.get(0);
+                    assertEquals("Incorrect variable name", "input.body.array", array1.getVariableName());
+                    assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                    assertEquals("Incorrect enclosing var", "input.body", array1.getEnclosingVar());
+                    assertFalse("This variable should not be an array", array1.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
+
+
+                    DeclsVariable array2 = bodySons.get(1);
+                    assertEquals("Incorrect variable name", "input.body.array[..]", array2.getVariableName());
+                    assertEquals("Incorrect var-kind", "array", array2.getVarKind());
+                    assertEquals("Incorrect decType", "main.array[]", array2.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                    assertEquals("Incorrect enclosing var", "input.body.array", array2.getEnclosingVar());
+                    assertTrue("This variable should be an array", array2.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
+
+                }
+
+            }
+
+            assertEquals("The expected total number of classes is one", getAllDeclsClasses().size(), 1);
+
+        }
+
+    }
+
 }

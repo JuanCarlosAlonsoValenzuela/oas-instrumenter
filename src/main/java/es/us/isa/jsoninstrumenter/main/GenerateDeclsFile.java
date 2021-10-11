@@ -23,7 +23,7 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static final String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec_nestedArrayOfObjects_body.yaml";
+    private static final String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec_bodyParameter_objectArray.yaml";
 //    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
 //    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
@@ -61,7 +61,6 @@ public class GenerateDeclsFile {
         for(Entry<String, PathItem> path: paths.entrySet()) {
 
             PathItem pathItem = path.getValue();
-            // TODO: Create a jUnit test case in which the parameters of the operation are null (i.e., there are no parameters or all the parameters are in the body)
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();

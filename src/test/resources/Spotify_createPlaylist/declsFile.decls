@@ -15,41 +15,21 @@ variable this.user_id
 	enclosing-var this
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable this.Accept
-	var-kind field Accept
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.name
-	var-kind field name
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.description
-	var-kind field description
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.location
+variable this.body
 	var-kind variable
 	enclosing-var this
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable this.location.locationId
-	var-kind field locationId
-	enclosing-var this.location
-	dec-type java.lang.String
+variable this.body.array
+	var-kind field array
+	enclosing-var this.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable this.location.keywords
-	var-kind field keywords
-	enclosing-var this.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable this.location.keywords[..]
+variable this.body.array[..]
 	var-kind array
-	enclosing-var this.location.keywords
+	enclosing-var this.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 
 
@@ -364,41 +344,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201_images(main.createPlaylist_Input):::ENTER
@@ -412,41 +372,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201_tracks_items(main.createPlaylist_Input):::ENTER
@@ -460,41 +400,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 
 ppt main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::EXIT1
@@ -508,41 +428,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
@@ -747,41 +647,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
@@ -814,41 +694,21 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.Accept
-	var-kind field Accept
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.name
-	var-kind field name
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.description
-	var-kind field description
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
+variable input.body
 	var-kind variable
 	enclosing-var input
-	dec-type main.createPlaylist_Input_location
+	dec-type main.createPlaylist_Input.bodyArray
 	rep-type java.lang.String
-variable input.location.locationId
-	var-kind field locationId
-	enclosing-var input.location
-	dec-type java.lang.String
+variable input.body.array
+	var-kind field array
+	enclosing-var input.body
+	dec-type main.array[]
 	rep-type java.lang.String
-variable input.location.keywords
-	var-kind field keywords
-	enclosing-var input.location
-	dec-type main.keywords[]
-	rep-type java.lang.String
-variable input.location.keywords[..]
+variable input.body.array[..]
 	var-kind array
-	enclosing-var input.location.keywords
+	enclosing-var input.body.array
 	array 1
-	dec-type main.keywords[]
+	dec-type main.array[]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
