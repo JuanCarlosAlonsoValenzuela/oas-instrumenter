@@ -6,16 +6,13 @@ input.doubleInQuery
 1.0
 1
 input.stringInPath
-""stringInPathValue""
+"stringInPathValue"
 1
 input.integerInHeader
+5
 1
-1
-input.arrayOfString
-null
-1
-input.arrayOfDouble
-null
+input.booleanInForm
+true
 1
 
 main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::EXIT1
@@ -26,16 +23,13 @@ input.doubleInQuery
 1.0
 1
 input.stringInPath
-""stringInPathValue""
+"stringInPathValue"
 1
 input.integerInHeader
+5
 1
-1
-input.arrayOfString
-null
-1
-input.arrayOfDouble
-null
+input.booleanInForm
+true
 1
 return
 "test_1_return_output"
@@ -44,6 +38,6 @@ return.property1
 "sampleResponse"
 1
 return.property2
-"sapmleValue"
+"sampleValue"
 1
 

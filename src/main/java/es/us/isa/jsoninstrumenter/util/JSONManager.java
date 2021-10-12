@@ -16,6 +16,7 @@ public class JSONManager {
             return jsonArray;
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
+            System.exit(1);
         }
 
         return null;
@@ -29,6 +30,7 @@ public class JSONManager {
             return  json;
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
+            System.exit(1);
         }
 
         return null;
@@ -45,6 +47,7 @@ public class JSONManager {
             }
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
+            System.exit(1);
         }
 
         return false;

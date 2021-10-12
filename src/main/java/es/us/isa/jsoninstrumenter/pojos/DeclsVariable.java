@@ -34,6 +34,7 @@ public class DeclsVariable {
         List<Parameter> parameters = operation.getParameters();
         if(parameters != null) {
             for(Parameter parameter: parameters) {
+                // TODO: Add try catch for null pointer exception explaining that a property of the parameter was not found
                 DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
                         "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()),
                         translateDatatype(parameter.getSchema().getType()), father.getVariableName());
@@ -44,18 +45,42 @@ public class DeclsVariable {
         // Extract parameters from body
         // TODO: JSONArray and JSONObject (Otherwise throw NullPointerException)
         // TODO: anyOf and oneOf can be used to specify different Schemas
-        List<DeclsVariable> declsVariablesOfBody = getDeclsVariablesOfBodyAndFormParameters(operation, "application/json",
-                rootVariableName, objectName, "body");
-        enclosedVariables.addAll(declsVariablesOfBody);
+//        List<DeclsVariable> declsVariablesOfBody = getDeclsVariablesOfBodyAndFormParameters(operation, "application/json",
+//                rootVariableName, objectName, "body");
+//        enclosedVariables.addAll(declsVariablesOfBody);
+//
+//        // Extract parameters from the form
+//        List<DeclsVariable> declsVariablesOfForm = getDeclsVariablesOfBodyAndFormParameters(operation, "application/x-www-form-urlencoded",
+//                rootVariableName, objectName, "form");
+//        enclosedVariables.addAll(declsVariablesOfForm);
 
-        // Extract parameters from the form
-        List<DeclsVariable> declsVariablesOfForm = getDeclsVariablesOfBodyAndFormParameters(operation, "application/x-www-form-urlencoded",
-                rootVariableName, objectName, "form");
-        enclosedVariables.addAll(declsVariablesOfForm);
+        List<DeclsVariable> declsVariablesFromBodyAndForm = getDeclsVariablesOfBodyAndFormParameters(operation, rootVariableName, objectName, "body");
+        enclosedVariables.addAll(declsVariablesFromBodyAndForm);
 
         father.setEnclosedVariables(enclosedVariables);
         return father;
 
+    }
+
+    // TODO: Refactor this method to delete the null checks
+    // TODO: Take duplicates into account (e.g., application/json and application/xml) (Idea: extract common schemas?)
+    // TODO: If this method is finally used, remove (or change) the parameter "sourceOfParameter"
+    public static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation,
+                                                                               String rootVariableName, String objectName, String sourceOfParameter) {
+        List<DeclsVariable> res = new ArrayList<>();
+
+        RequestBody requestBody = operation.getRequestBody();
+        if(requestBody != null) {
+            Content content = requestBody.getContent();
+            if (content != null) {
+                for (String key : content.keySet()) {
+                    res.addAll(getDeclsVariablesOfBodyAndFormParameters(operation, key, rootVariableName, objectName, sourceOfParameter));
+                }
+
+            }
+        }
+
+        return res;
     }
 
     // TODO: Move to a different class
@@ -175,6 +200,11 @@ public class DeclsVariable {
         for(String parameterName: parameterNames) {
             Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
             String parameterType = schema.getType();
+
+            if(parameterType == null) {
+                throw new NullPointerException("Please specify the parameter type for the parameter " + parameterName +
+                        "\n If the error persists, specify it explicitly in the 'parameters' field of the API specification rather than using a '$ref'");
+            }
 
             if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                 // Generate the father variable
@@ -504,7 +534,7 @@ public class DeclsVariable {
                 }
 
                 // Search in body parameter
-                if(value == null) {
+                if(value == null &&  bodyParameter != null && !bodyParameter.equals("")) {
                     JSONObject jsonBodyParameter = stringToJsonObject(bodyParameter);
                     if(jsonBodyParameter != null) {
                         List<String> hierarchyBody = hierarchy.subList(1, hierarchy.size());

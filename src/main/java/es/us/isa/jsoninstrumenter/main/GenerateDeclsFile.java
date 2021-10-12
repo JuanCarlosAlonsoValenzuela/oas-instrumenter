@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
+import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 
 import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
 import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
@@ -23,12 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static final String openApiSpecPath = "src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml";
-//    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
-//    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
-//    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
-
-    private static final String testCasesFilePath = "src/test/resources/dtraceOracles/enter/primitiveInputs/testCase_primitiveInputs.csv";
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/enter/primitiveInputs/testCase_primitiveInputsNullValues_notPresent.csv";
     private static final boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -54,6 +51,15 @@ public class GenerateDeclsFile {
     public static final List<String> primitiveTypes = Arrays.asList(STRING_TYPE_NAME, DOUBLE_TYPE_NAME, INTEGER_TYPE_NAME, BOOLEAN_TYPE_NAME);
 
     public static void main(String[] args) {
+
+        if(args.length == 2) {
+            openApiSpecPath = args[0];
+            testCasesFilePath = args[1];
+        }
+
+
+
+
         OpenAPI specification = getOpenAPISpecification();
         Paths paths = specification.getPaths();
 
@@ -91,6 +97,8 @@ public class GenerateDeclsFile {
 //        System.out.println(declsFile);
 
         String declsFilePath = getOutputPath("declsFile.decls");
+        // Delete file if exists
+        deleteFile(declsFilePath);
         writeFile(declsFilePath, declsFile.toString());
 
 
@@ -134,6 +142,7 @@ public class GenerateDeclsFile {
 
 
             String dtraceFilePath = getOutputPath("dtraceFile.dtrace");
+            deleteFile(dtraceFilePath);
             writeFile(dtraceFilePath, dtraceContent);
 
         }
