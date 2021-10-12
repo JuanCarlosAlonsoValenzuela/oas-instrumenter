@@ -23,13 +23,13 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static final String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec_bodyParameter_objectArray.yaml";
+    private static final String openApiSpecPath = "src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml";
 //    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
 //    private static String openApiSpecPath = "src/test/resources/DHL/swagger_nestedObjectOutput.yaml";
 //    private static String openApiSpecPath = "src/main/resources/DHL/swagger.yaml";
 
-    private static final String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
-    private static final boolean generateDtrace = false;
+    private static final String testCasesFilePath = "src/test/resources/dtraceOracles/enter/primitiveInputs/testCase_primitiveInputs.csv";
+    private static final boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources

@@ -11,15 +11,6 @@ import static org.junit.Assert.assertEquals;
 
 public class DeclsVariableToStringTest {
 
-    // TODO: Add e2e test
-    // TODO: Check that the exit number is correctly increased
-    // TODO: jUnit for swagger with multiple operations
-    // TODO: Create a test for classes (Check toString)
-    // TODO: Create the test for blank lines
-    // TODO: Test cases for datatypes (int, string, double, etc.)
-    // TODO: Test cases for datatype translation
-    // TODO: Test print nested arrays
-
     // Basic constructor
     @Test
     public void testPrintDeclsVariableWithoutEnclosingVar() {

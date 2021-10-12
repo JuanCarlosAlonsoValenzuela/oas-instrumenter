@@ -72,7 +72,6 @@ public class DeclsExit {
     }
 
     // Used when the exit is primitive (Bad pracice)
-    // TODO: Schema becomes parameterType
     public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
                      DeclsVariable enterVariables, String variableNameOutput, String parameterType, String statusCode) {
         this.packageName = packageName;
@@ -205,7 +204,6 @@ public class DeclsExit {
                 int targetNestingLevel = (int) Arrays.stream(this.getNameSuffix().split("\\.")).filter(x-> x.equalsIgnoreCase("array")).count();
                 // TODO: Create a jUnit test
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
-                // TODO: Add explanatory comment
                 try {
                     List<JSONArray> jsonArraysToGenerateDtrace = getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
 

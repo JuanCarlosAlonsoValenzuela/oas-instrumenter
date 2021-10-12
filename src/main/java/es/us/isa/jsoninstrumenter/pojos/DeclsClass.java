@@ -105,7 +105,6 @@ public class DeclsClass {
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsExit
         if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The return is of type array (Bad practice)
-            // TODO: Create a jUnit test of nested arrays of primitive AND objects
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";

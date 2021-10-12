@@ -18,6 +18,25 @@ public class CSVManager {
         return rows;
     }
 
+    public static List<String> readValues(String path) {
+        List<String> values = new ArrayList<String>();
+
+        Reader in;
+        try {
+            in = new FileReader(path);
+
+            Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(in);
+            for (CSVRecord record : records)
+                values.add(record.get(0));
+
+        }catch (IOException ex) {
+            System.err.println("Error parsing CSV file: {}" + path);
+            System.err.println("Exception " + ex);
+        }
+
+        return values;
+    }
+
     public static List<List<String>> readCSV(String path, char delimiter) {
         List<List<String>> rows = new ArrayList<>();
 
