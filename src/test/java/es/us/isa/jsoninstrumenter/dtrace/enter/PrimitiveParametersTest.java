@@ -97,6 +97,10 @@ public class PrimitiveParametersTest {
                 Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/nullArray/testCase_arrayOfObjects_nullArray.csv",
                         "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/nullArray/dtraceFile_arrayOfObjects_nullArray.dtrace"
                 )//,
+                /* e2e_dtrace_exit009 (Exit of type array, bad practice)
+                This test analyses a response of type array (Without being a property of an object). This type of response is a bad practice, but
+                it is used by APIs such as RestCountries
+                 */
 
 
 
