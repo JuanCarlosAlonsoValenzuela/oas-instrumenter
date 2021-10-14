@@ -76,19 +76,35 @@ public class PrimitiveParametersTest {
                 ),
                 /* e2e_dtrace_exit_006 (Array with elements of type object)
                     The response of this test contains a property of type array of objects.
+                    This test also checks the behaviour of the instrumenter when there are more than one exit per API operation (due to arrays of objects)
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/setValues/testCase_arrayOfObjects.csv",
                         "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/setValues/dtraceFile_arrayOfObjects.dtrace"
+                ),
+                /* e2e_dtrace_exit_007 (Array of objects with one of the elements being null)
+                This test uses the same OAS spec as e2e_dtrace_exit_006, but one of the elements of the array (i.e., one of the objects) is null
+                 */
+                /*
+                TODO: Currently this test case does not print the null element (The second EXIT2), which makes sense.
+                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/testCase_arrayOfObjects_elementOfArrayNull.csv",
+                        "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/dtraceFile_arrayOfObjects_elementOfArrayNull.dtrace"
+                ),
+                /* e2e_dtrace_exit008 (Null array of objects)
+                This test uses the same OAS spec as e2e_dtrace_exit_006, but the array of objects is null
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/nullArray/testCase_arrayOfObjects_nullArray.csv",
+                        "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/nullArray/dtraceFile_arrayOfObjects_nullArray.dtrace"
                 )//,
 
 
+
+
+
                 /*
-                Array of objects
-                Array of objects with null elements
-                Array of objects null
-                Null array of objects (The subobjects and their properties must be set to null)
-                Null array response
                 Array response
+                Null array response
                 Array response with nesting
                 Array response with nesting and null values
                  */

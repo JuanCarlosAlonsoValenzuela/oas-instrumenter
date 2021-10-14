@@ -25,7 +25,7 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 public class GenerateDeclsFile {
 
     private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/setValues/testCase_arrayOfObjects.csv";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/nullArray/testCase_arrayOfObjects_nullArray.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
