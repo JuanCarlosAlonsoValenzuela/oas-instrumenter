@@ -53,7 +53,20 @@ public class PrimitiveParametersTest {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/primitiveExit/primitiveExit.yaml", "src/test/resources/dtraceOracles/exit/primitiveExit/nullValues/testCase_primitiveExit_nullValues.csv",
                         "src/test/resources/dtraceOracles/exit/primitiveExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/primitiveExit/nullValues/dtraceFile_primitiveExit_nullValues.dtrace"
-                )
+                ),
+                /* e2e_dtrace_exit_003
+                The response of this test case contains a property of type object (Nested object), with one of its properties being an array of strings (Primitive)
+                This object also contains another property of type object (Nested object inside a nested object) with one of its properties being an array of type double
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/objectExit/objectExit.yaml", "src/test/resources/dtraceOracles/exit/objectExit/setValues/testCase_objectExit.csv",
+                        "src/test/resources/dtraceOracles/exit/objectExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/objectExit/setValues/dtraceFile_objectExit.dtrace"
+                )//,
+
+                /* e2e_dtrace_exit_004
+                Array of values with null elements
+                Null array
+                null object (The properties must be null too)
+                 */
         );
     }
 
