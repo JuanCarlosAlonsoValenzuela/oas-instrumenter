@@ -1,6 +1,6 @@
 main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::ENTER
 input
-"test_005_input_input"
+"test_006_input_input"
 1
 input.inputParameter
 "parameterValue"
@@ -8,36 +8,36 @@ input.inputParameter
 
 main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::EXIT1
 input
-"test_005_input_input"
+"test_006_input_input"
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_005_return_output"
+"test_006_return_output"
 1
 return.stringProperty
 "stringPropertyValue1"
 1
 return.objectProperty
-"test_005_return.objectProperty_output"
+"test_006_return.objectProperty_output"
 1
 return.objectProperty.arrayStringProperty
-"test_005_return.objectProperty.arrayStringProperty_output"
+"test_006_return.objectProperty.arrayStringProperty_output"
 1
 return.objectProperty.arrayStringProperty[..]
-null
+["element1" null]
 1
 return.objectProperty.subObjectProperty
-"test_005_return.objectProperty.subObjectProperty_output"
+"test_006_return.objectProperty.subObjectProperty_output"
 1
 return.objectProperty.subObjectProperty.stringProperty
-null
+"stringPropertyValue2"
 1
 return.objectProperty.subObjectProperty.arrayDoubleProperty
-"test_005_return.objectProperty.subObjectProperty.arrayDoubleProperty_output"
+"test_006_return.objectProperty.subObjectProperty.arrayDoubleProperty_output"
 1
 return.objectProperty.subObjectProperty.arrayDoubleProperty[..]
-null
+[2.0 null]
 1
 

@@ -67,17 +67,30 @@ public class PrimitiveParametersTest {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/objectExit/objectExit.yaml", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/nullObject/testCase_objectExit_nullObject.csv",
                         "src/test/resources/dtraceOracles/exit/objectExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/nullObject/dtraceFile_objectExit_nullObject.dtrace"
-                )//,
-                /* e2e_dtrace_exit_005
+                ),
+                /* e2e_dtrace_exit_005 (Arrays of primitive elements containing null values)
                 This test uses the same OAS spec as e2e_dtrace_exit_003, but the arrays of primitive elements contain a null element
                  */
-                // TODO: write
+                Arguments.of("src/test/resources/dtraceOracles/exit/objectExit/objectExit.yaml", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/arraysWithNullElements/testCase_objectExit_arraysWitNullElements.csv",
+                        "src/test/resources/dtraceOracles/exit/objectExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/arraysWithNullElements/dtraceFile_objectExit_arraysWithNullElements.dtrace"
+                ),
+                /* e2e_dtrace_exit_006 (Array with elements of type object)
+                    The response of this test contains a property of type array of objects.
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/setValues/testCase_arrayOfObjects.csv",
+                        "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/setValues/dtraceFile_arrayOfObjects.dtrace"
+                )//,
+
 
                 /*
-                Array of values with null elements
-                Null array of objects (The subobjects must be set to null)
-                null object (The properties must be null too)
-                Null array of objects
+                Array of objects
+                Array of objects with null elements
+                Array of objects null
+                Null array of objects (The subobjects and their properties must be set to null)
+                Null array response
+                Array response
+                Array response with nesting
+                Array response with nesting and null values
                  */
         );
     }
