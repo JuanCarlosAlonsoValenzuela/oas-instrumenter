@@ -48,6 +48,10 @@ definitions:
       objectProperty:
         type: object
         properties:
+#          stringDeleteProperty: # TODO: DELETE THIS
+#            type: string
+#          doubleDeleteProperty:  # TODO: DELETE THIS
+#            type: number
           arrayStringProperty:
             type: array
             items:

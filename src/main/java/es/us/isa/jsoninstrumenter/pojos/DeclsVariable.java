@@ -624,32 +624,37 @@ public class DeclsVariable {
             // TODO: Convert to list of arrays (flattening)
             JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
-            // TODO: Convert to a separate function
-            if(primitiveTypes.contains(this.decType.replace("[]", ""))) { // If array of primitives
-                boolean isString = false;
-                if(this.decType.replace("[]", "").equals(STRING_TYPE_NAME)) {
-                    isString = true;
-                }
-                value = "";
-                for(int i = 0; i < elements.size(); i++) {
-
-                    if(isString && elements.get(i)!=null) {
-                        value = value + " \"" + elements.get(i) + "\"";
-                    } else {
-                        value = value + " " + elements.get(i);
+            // If elements == null, the elements are set to null
+            if(elements != null) {
+                // TODO: Convert to a separate function
+                if(primitiveTypes.contains(this.decType.replace("[]", ""))) { // If array of primitives
+                    boolean isString = false;
+                    if(this.decType.replace("[]", "").equals(STRING_TYPE_NAME)) {
+                        isString = true;
                     }
+                    value = "";
+                    for(int i = 0; i < elements.size(); i++) {
+
+                        if(isString && elements.get(i)!=null) {
+                            value = value + " \"" + elements.get(i) + "\"";
+                        } else {
+                            value = value + " " + elements.get(i);
+                        }
+                    }
+
+                    value = "[" + value.trim() + "]";
+
+                } else {    // If array of objects  TODO: Array of arrays
+                    String hashcode = "";
+                    for(int i = 1; i <= elements.size(); i++) {
+                        hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + this.variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                    }
+
+                    value = "[" + hashcode.trim() + "]";
                 }
-
-                value = "[" + value.trim() + "]";
-
-            } else {    // If array of objects  TODO: Array of arrays
-                String hashcode = "";
-                for(int i = 1; i <= elements.size(); i++) {
-                    hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + this.variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
-                }
-
-                value = "[" + hashcode.trim() + "]";
             }
+
+
 
 
         } else {    // If type = object or identifier of array (both array of objects and array of primitives)

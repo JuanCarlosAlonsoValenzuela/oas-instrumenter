@@ -54,18 +54,30 @@ public class PrimitiveParametersTest {
                 Arguments.of("src/test/resources/dtraceOracles/exit/primitiveExit/primitiveExit.yaml", "src/test/resources/dtraceOracles/exit/primitiveExit/nullValues/testCase_primitiveExit_nullValues.csv",
                         "src/test/resources/dtraceOracles/exit/primitiveExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/primitiveExit/nullValues/dtraceFile_primitiveExit_nullValues.dtrace"
                 ),
-                /* e2e_dtrace_exit_003
+                /* e2e_dtrace_exit_003  (Nested objects in the exit)
                 The response of this test case contains a property of type object (Nested object), with one of its properties being an array of strings (Primitive)
                 This object also contains another property of type object (Nested object inside a nested object) with one of its properties being an array of type double
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/objectExit/objectExit.yaml", "src/test/resources/dtraceOracles/exit/objectExit/setValues/testCase_objectExit.csv",
                         "src/test/resources/dtraceOracles/exit/objectExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/objectExit/setValues/dtraceFile_objectExit.dtrace"
+                ),
+                /* e2e_dtrace_exit_004  (Nested object with null value)
+                This test uses the same OAS spec as e2e_dtrace_exit_003, but the value of the nested object is null, and therefore all its properties must be null too.
+                The array of doubles must be null (Not nonsensical)
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/objectExit/objectExit.yaml", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/nullObject/testCase_objectExit_nullObject.csv",
+                        "src/test/resources/dtraceOracles/exit/objectExit/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/objectExit/nullValues/nullObject/dtraceFile_objectExit_nullObject.dtrace"
                 )//,
+                /* e2e_dtrace_exit_005
+                This test uses the same OAS spec as e2e_dtrace_exit_003, but the arrays of primitive elements contain a null element
+                 */
+                // TODO: write
 
-                /* e2e_dtrace_exit_004
+                /*
                 Array of values with null elements
-                Null array
+                Null array of objects (The subobjects must be set to null)
                 null object (The properties must be null too)
+                Null array of objects
                  */
         );
     }
