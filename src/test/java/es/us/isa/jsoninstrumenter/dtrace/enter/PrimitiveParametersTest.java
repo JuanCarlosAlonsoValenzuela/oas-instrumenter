@@ -1,20 +1,19 @@
 package es.us.isa.jsoninstrumenter.dtrace.enter;
 
 import es.us.isa.jsoninstrumenter.main.GenerateDeclsFile;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Stream;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.deleteAllDeclsClasses;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
 import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 import static es.us.isa.jsoninstrumenter.util.FileManager.readFileAsString;
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class PrimitiveParametersTest {
@@ -22,6 +21,8 @@ public class PrimitiveParametersTest {
     @ParameterizedTest
     @MethodSource("dtraceGeneration")
     public void testDtraceGeneration(String oasSpecPath, String testCasesCSVPath, String generatedPath, String oraclePath) throws IOException {
+        numberOfExits = 1;
+        deleteAllDeclsClasses();
 
         // OAS spec and testCases.csv
         String[] args = {oasSpecPath,
@@ -36,13 +37,13 @@ public class PrimitiveParametersTest {
 
 
         // Assert both dtrace files have the same number of lines
-        assertEquals("The generated dtrace files does not have the expected number of lines", oracleDtrace.length, generatedDtrace.length);
+        Assertions.assertEquals(oracleDtrace.length, generatedDtrace.length, "The generated dtrace file does not have the expected number of lines");
         assertNotEquals("Path and oracle path must be different", generatedPath, oraclePath);
 
         for(int i = 0; i < oracleDtrace.length ; i++) {
             System.out.println(oracleDtrace[i]);
             int lineNumber = i + 1;
-            assertEquals("The content of line " + lineNumber + " content is different from the expected", oracleDtrace[i], generatedDtrace[i]);
+            Assertions.assertEquals(oracleDtrace[i].trim(), generatedDtrace[i], "The content of line " + lineNumber + " content is different from the expected");
         }
 
         // Remove the generated file
@@ -51,9 +52,20 @@ public class PrimitiveParametersTest {
 
     private static Stream<Arguments> dtraceGeneration() {
         return Stream.of(
+                /*      e2e_dtrace_001
+                This test receives as an input parameters of type primitive in query, path, header and form
+                    (doubleInQuery, stringInPath, integerInHeader, booleanInForm)
+                 */
                 Arguments.of("src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml", "src/test/resources/dtraceOracles/enter/primitiveInputs/setValues/testCase_primitiveInputs.csv",
                         "src/test/resources/dtraceOracles/enter/primitiveInputs/dtraceFile.dtrace", "src/test/resources/dtraceOracles/enter/primitiveInputs/setValues/dtraceFile_primitiveInputs.dtrace"
-                )
+                ),
+                /*      e2e_dtrace_002
+                This test uses the same OAS spec as e2e_dtrace_001, but the values of the parameters are null
+                in the csv containing the test cases. Note that null doubles must be printed as "nonsensical"
+                in the dtrace file
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml", "src/test/resources/dtraceOracles/enter/primitiveInputs/nullValues/testCase_primitiveInputsNullValues.csv",
+                        "src/test/resources/dtraceOracles/enter/primitiveInputs/dtraceFile.dtrace", "src/test/resources/dtraceOracles/enter/primitiveInputs/nullValues/dtraceFile_primitiveInputsNullValues.dtrace")
         );
     }
 

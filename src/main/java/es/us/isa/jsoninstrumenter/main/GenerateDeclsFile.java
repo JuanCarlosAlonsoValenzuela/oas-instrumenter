@@ -96,7 +96,7 @@ public class GenerateDeclsFile {
         DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
 //        System.out.println(declsFile);
 
-        String declsFilePath = getOutputPath("declsFile.decls");
+        String declsFilePath = getOutputPath("declsFile.decls", openApiSpecPath);
         // Delete file if exists
         deleteFile(declsFilePath);
         writeFile(declsFilePath, declsFile.toString());
@@ -141,7 +141,7 @@ public class GenerateDeclsFile {
             }
 
 
-            String dtraceFilePath = getOutputPath("dtraceFile.dtrace");
+            String dtraceFilePath = getOutputPath("dtraceFile.dtrace", openApiSpecPath);      // openApiSpecPath testCasesFilePath
             deleteFile(dtraceFilePath);
             writeFile(dtraceFilePath, dtraceContent);
 
@@ -188,8 +188,8 @@ public class GenerateDeclsFile {
         declsClasses.clear();
     }
 
-    private static String getOutputPath(String filename) {
-        Path path = java.nio.file.Paths.get(openApiSpecPath);
+    private static String getOutputPath(String filename, String folder) {
+        Path path = java.nio.file.Paths.get(folder);      // openApiSpecPath
         Path dir = path.getParent();
         Path fn = path.getFileSystem().getPath(filename);
         Path target = (dir == null) ? fn : dir.resolve(fn);
