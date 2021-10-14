@@ -24,9 +24,9 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/dtraceOracles/enter/primitiveInputs/primitiveInputs.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/enter/primitiveInputs/testCase_primitiveInputsNullValues_notPresent.csv";
-    private static final boolean generateDtrace = true;
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/primitiveExit/primitiveExit.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/primitiveExit/nullValues/testCase_primitiveExit_nullValues.csv";
+    private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
@@ -55,10 +55,11 @@ public class GenerateDeclsFile {
         if(args.length == 2) {
             openApiSpecPath = args[0];
             testCasesFilePath = args[1];
+            generateDtrace = true;
+        } else if(args.length == 1) {
+            openApiSpecPath = args[0];
+            generateDtrace = false;
         }
-
-
-
 
         OpenAPI specification = getOpenAPISpecification();
         Paths paths = specification.getPaths();
