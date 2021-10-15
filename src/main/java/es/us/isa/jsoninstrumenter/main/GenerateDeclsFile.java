@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/exitOfTypeArray_primitiveElements.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_primitiveElements_elementOfArrayNull.csv";
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/multipleResponses/multipleResponses.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/multipleResponses/testCase_multipleResponses.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources

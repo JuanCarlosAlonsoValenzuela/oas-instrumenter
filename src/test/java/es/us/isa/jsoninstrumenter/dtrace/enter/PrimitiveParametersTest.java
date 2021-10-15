@@ -108,7 +108,7 @@ public class PrimitiveParametersTest {
                 This test uses the same OAS spec as e2e_dtrace_exit_009, but one of the elements of the array (i.e., one of the objects) is null
                  */
                 /*
-                TODO: (See e2e_dtrace_exit_007)Currently this test case does not print the null element (The second EXIT2), which makes sense.
+                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
                  Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/exitOfTypeArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_elementOfArrayNull.csv",
@@ -125,7 +125,15 @@ public class PrimitiveParametersTest {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/exitOfTypeArray_primitiveElements.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_primitiveElements_elementOfArrayNull.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/dtraceFile_exitOfArray_primitiveElements_elementOfArrayNull.dtrace"
+                ),
+                /* e2e_dtrace_exit_013
+                This test receives a test suite in csv format that contains test cases that belong to different operations (200 and 400 status code),
+                with one of them (the one returning a 200 code), containing two exists (EXIT 1 and EXIT 2)
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/multipleResponses/multipleResponses.yaml", "src/test/resources/dtraceOracles/exit/multipleResponses/testCase_multipleResponses.csv",
+                        "src/test/resources/dtraceOracles/exit/multipleResponses/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/multipleResponses/dtraceFile_multipleResponses.dtrace"
                 )//,
+
 
 
                 /*
