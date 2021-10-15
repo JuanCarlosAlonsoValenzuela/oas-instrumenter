@@ -113,11 +113,13 @@ public class PrimitiveParametersTest {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/exitOfTypeArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_elementOfArrayNull.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/nullValues/elementOfArrayNull/dtraceFile_exitOfTypeArray_elementOfArrayNull.dtrace"
-                )//,
+                ),
                 /* e2e_dtrace_exit_011
-                TODO: New test case
+                This test analyses a response of type array (Without being a property of an object), with the elements of array being of type primitive.
                  */
-                /*
+                Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/exitOfTypeArray_primitiveElements.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/setValues/testCase_exitOfTypeArray_primitiveElements.csv",
+                        "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/setValues/dtraceFile_exitOfTypeArray_primitiveElements.dtrace"
+                )//,
 
 
 
