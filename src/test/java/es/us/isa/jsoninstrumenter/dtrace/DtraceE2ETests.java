@@ -1,4 +1,4 @@
-package es.us.isa.jsoninstrumenter.dtrace.enter;
+package es.us.isa.jsoninstrumenter.dtrace;
 
 import es.us.isa.jsoninstrumenter.main.GenerateDeclsFile;
 import org.junit.jupiter.api.Assertions;
@@ -16,7 +16,7 @@ import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 import static es.us.isa.jsoninstrumenter.util.FileManager.readFileAsString;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class PrimitiveParametersTest {
+public class DtraceE2ETests {
 
     private static Stream<Arguments> dtraceGeneration() {
         return Stream.of(
@@ -127,14 +127,19 @@ public class PrimitiveParametersTest {
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/dtraceFile_exitOfArray_primitiveElements_elementOfArrayNull.dtrace"
                 ),
                 /* e2e_dtrace_exit_013
-                This test receives a test suite in csv format that contains test cases that belong to different operations (200 and 400 status code),
+                This test receives a test suite in csv format that contains test cases that contains different responses (200 and 400 status code),
                 with one of them (the one returning a 200 code), containing two exists (EXIT 1 and EXIT 2)
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/multipleResponses/multipleResponses.yaml", "src/test/resources/dtraceOracles/exit/multipleResponses/testCase_multipleResponses.csv",
                         "src/test/resources/dtraceOracles/exit/multipleResponses/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/multipleResponses/dtraceFile_multipleResponses.dtrace"
+                ),
+                /* e2e_dtrace_exit_014
+                This test receives a test suite in csv format that contains test cases that belong to different operations (/operation1 and /operation2),
+                both of them returning a 200 code and one of them (/operation1), containing two exits (EXIT 1 and EXIT 2)
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/multipleOperations/multipleOperations.yaml", "src/test/resources/dtraceOracles/exit/multipleOperations/testCase_multipleOperations.csv",
+                        "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile_multipleOperations.dtrace"
                 )//,
-
-
 
                 /*
                 Array response
