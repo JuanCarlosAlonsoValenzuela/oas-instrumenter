@@ -11,7 +11,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
+import static es.us.isa.jsoninstrumenter.pojos.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.doBubbleSort;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel;
@@ -280,6 +281,7 @@ public class DeclsExit {
     }
 
     public String generateSingleDtraceExitArray(TestCase testCase, JSONArray jsonArray) {
+
         String res = this.getExitName() + ":::EXIT" + exitNumber;
 
         res = res + "\n" + enterDeclsVariables.generateDtraceEnter(testCase) + "\n";
@@ -297,14 +299,8 @@ public class DeclsExit {
 
         // Group 3
         res = res + "return.array[..]" + "\n";
-
-        String hashcode = "";
-        for(int i = 1; i <= jsonArray.size(); i++) {
-            hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + "array" + "_output_" + i + "\"" + " ";
-        }
-        hashcode =  "[" + hashcode.trim() + "]";
-        res = res + hashcode + "\n";
-
+        // The declaration type of the first enclosed variable will always reveal the type of the elements of the array
+        res = res + generateDtraceExitValueOfJSONArray(testCase, jsonArray, this.exitDeclsVariables.getEnclosedVariables().get(0).getDecType(), "array") + "\n";
         res = res + "1" + "\n\n";
 
         return res;
@@ -320,6 +316,40 @@ public class DeclsExit {
 
         return res;
 
+    }
+
+    public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype, String variableName) {
+        String value = null;
+
+        // If elements == null, the elements are set to null
+        if(elements != null){
+            if(primitiveTypes.contains(dectype.replace("[]", ""))) { // If array of primitives
+                boolean isString = false;
+                if(dectype.replace("[]", "").equals(STRING_TYPE_NAME)) {
+                    isString = true;
+                }
+                value = "";
+                for(int i = 0; i < elements.size(); i++) {
+
+                    if(isString && elements.get(i)!=null) {
+                        value = value + " \"" + elements.get(i) + "\"";
+                    } else {
+                        value = value + " " + elements.get(i);
+                    }
+                }
+
+                value = "[" + value.trim() + "]";
+
+            } else {    // If array of objects  TODO: Array of arrays
+                String hashcode = "";
+                for(int i = 1; i <= elements.size(); i++) {
+                    hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                }
+
+                value = "[" + hashcode.trim() + "]";
+            }
+        }
+        return value;
     }
 
 
