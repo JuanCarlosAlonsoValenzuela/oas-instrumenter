@@ -140,6 +140,9 @@ public class DtraceE2ETests {
                 Arguments.of("src/test/resources/dtraceOracles/exit/multipleOperations/multipleOperations.yaml", "src/test/resources/dtraceOracles/exit/multipleOperations/testCase_multipleOperations.csv",
                         "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile_multipleOperations.dtrace"
                 )//,
+                /* e2e_dtrace_exit_015 (Response of type nested array
+                    // TODO: Write description and test
+                 */
 
                 /*
                 Array response
