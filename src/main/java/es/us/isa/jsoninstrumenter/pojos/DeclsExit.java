@@ -329,6 +329,10 @@ public class DeclsExit {
 
         String element = elementRoute.get(0);
 
+        if(json == null) {
+            throw new NullPointerException("The response of the test case cannot be null");
+        }
+
         Object jsonSon = json.get(element);
 
         if(jsonSon instanceof  JSONObject) {        // If jsonSon is of type JSONObject

@@ -22,7 +22,9 @@ public class ArrayNestingManager {
         List<JSONObject> flatList = list.stream().map(x-> {
             List<JSONObject> r = new ArrayList<>();
             try {
-                r = getOrFlatten(x);
+                if(x != null) {
+                    r = getOrFlatten(x);
+                }
             } catch (Exception e){
                 e.printStackTrace();
             }
