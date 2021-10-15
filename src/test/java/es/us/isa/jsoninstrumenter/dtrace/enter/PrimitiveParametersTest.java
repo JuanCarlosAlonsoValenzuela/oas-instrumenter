@@ -119,14 +119,13 @@ public class PrimitiveParametersTest {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/exitOfTypeArray_primitiveElements.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/setValues/testCase_exitOfTypeArray_primitiveElements.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/setValues/dtraceFile_exitOfTypeArray_primitiveElements.dtrace"
+                ),
+                /* e2e_dtrace_exit_012
+                This test uses the same OAS spec as e2e_dtrace_exit_011, but one of the elements of the array (i.e., one of the objects) is null
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/exitOfTypeArray_primitiveElements.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_primitiveElements_elementOfArrayNull.csv",
+                        "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/primitiveElementsOfArray/nullValues/elementOfArrayNull/dtraceFile_exitOfArray_primitiveElements_elementOfArrayNull.dtrace"
                 )//,
-
-
-
-
-
-
-
 
 
                 /*
