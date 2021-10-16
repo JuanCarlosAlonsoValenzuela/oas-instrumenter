@@ -24,9 +24,9 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/propertyOfTypeNestedArray.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/delete.csv";
-    private static boolean generateDtrace = false;
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/setValues/testCase_propertyOfTypeNestedArray.csv";
+    private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
@@ -83,7 +83,7 @@ public class GenerateDeclsFile {
                 addNewDeclsClass(declsClassInput);
 
                 // Extracting the output parameters
-//                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
+                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,

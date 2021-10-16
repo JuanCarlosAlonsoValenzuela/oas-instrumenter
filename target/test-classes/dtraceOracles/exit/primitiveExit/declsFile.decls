@@ -17,37 +17,6 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.primitiveExitEndpoint_Output_200:::CLASS
-ppt-type class
-
-ppt main.primitiveExitEndpoint_Output_200:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.primitiveExitEndpoint_Output_200
-	rep-type java.lang.String
-variable this.stringProperty
-	var-kind field stringProperty
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.doubleProperty
-	var-kind field doubleProperty
-	enclosing-var this
-	dec-type double
-	rep-type double
-variable this.integerProperty
-	var-kind field integerProperty
-	enclosing-var this
-	dec-type int
-	rep-type int
-variable this.booleanProperty
-	var-kind field booleanProperty
-	enclosing-var this
-	dec-type boolean
-	rep-type boolean
-
-
 ppt main.primitiveExitEndpoint:::CLASS
 ppt-type class
 

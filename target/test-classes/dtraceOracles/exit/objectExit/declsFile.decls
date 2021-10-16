@@ -17,59 +17,6 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.objectExitEndpoint_Output_200:::CLASS
-ppt-type class
-
-ppt main.objectExitEndpoint_Output_200:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.objectExitEndpoint_Output_200
-	rep-type java.lang.String
-variable this.stringProperty
-	var-kind field stringProperty
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.objectProperty
-	var-kind variable
-	enclosing-var this
-	dec-type main.objectExitEndpoint_Output_200_objectProperty
-	rep-type java.lang.String
-variable this.objectProperty.arrayStringProperty
-	var-kind field arrayStringProperty
-	enclosing-var this.objectProperty
-	dec-type java.lang.String[]
-	rep-type java.lang.String
-variable this.objectProperty.arrayStringProperty[..]
-	var-kind array
-	enclosing-var this.objectProperty.arrayStringProperty
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable this.objectProperty.subObjectProperty
-	var-kind variable
-	enclosing-var this.objectProperty
-	dec-type main.objectExitEndpoint_Output_200_subObjectProperty
-	rep-type java.lang.String
-variable this.objectProperty.subObjectProperty.stringProperty
-	var-kind field stringProperty
-	enclosing-var this.objectProperty.subObjectProperty
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.objectProperty.subObjectProperty.arrayDoubleProperty
-	var-kind field arrayDoubleProperty
-	enclosing-var this.objectProperty.subObjectProperty
-	dec-type double[]
-	rep-type java.lang.String
-variable this.objectProperty.subObjectProperty.arrayDoubleProperty[..]
-	var-kind array
-	enclosing-var this.objectProperty.subObjectProperty.arrayDoubleProperty
-	array 1
-	dec-type double[]
-	rep-type double[]
-
-
 ppt main.objectExitEndpoint:::CLASS
 ppt-type class
 

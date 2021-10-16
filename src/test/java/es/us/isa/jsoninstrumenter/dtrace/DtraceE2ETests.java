@@ -195,6 +195,28 @@ public class DtraceE2ETests {
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/exitOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/testCase_exitOfTypeNestedArray_nullAndEmptyElements.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/dtraceFile_exitOfTypeNestedArray_nullAndEmptyElements.dtrace"
                 )//,
+                /* e2e_dtrace_exit_017
+                // TODO: Write
+                    {
+                      "stringProperty": "stringPropertyValue",
+                      "nestedArrayProperty": [
+                              [
+                                [
+                                  {"propertyOfArray": 1.0},
+                                  {"propertyOfArray": 2.0}
+                                ],
+                                [
+                                  {"propertyOfArray": 3.0}
+                                ]
+                              ],
+                              [
+                                [
+                                  {"propertyOfArray": 4.0}
+                                ]
+                              ]
+                        ]
+                    }
+                 */
 
         );
     }

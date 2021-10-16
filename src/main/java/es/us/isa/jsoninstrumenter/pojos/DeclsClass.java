@@ -138,8 +138,15 @@ public class DeclsClass {
             allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
 
             for(String nestedSchema: allSchemas.keySet()) {
-                DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
-                res.add(declsObject);
+                if(allSchemas.get(nestedSchema).getProperties()==null){ // If the element is of type array, call the constructor that receives an ArraySchema
+                    ArraySchema arraySchema = (ArraySchema) allSchemas.get(nestedSchema);
+                    DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, arraySchema);
+                    res.add(declsObject);
+                } else {        // If the element is of type object, call the constructor that receives an Schema
+                    DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
+                    res.add(declsObject);
+                }
+
             }
         }
 
