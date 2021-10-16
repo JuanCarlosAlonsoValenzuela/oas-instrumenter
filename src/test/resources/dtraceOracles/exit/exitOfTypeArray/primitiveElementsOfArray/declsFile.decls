@@ -17,28 +17,6 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200:::CLASS
-ppt-type class
-
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array
-	rep-type java.lang.String
-variable this.array
-	var-kind field array
-	enclosing-var this
-	dec-type double[]
-	rep-type java.lang.String
-variable this.array[..]
-	var-kind array
-	enclosing-var this.array
-	array 1
-	dec-type double[]
-	rep-type double[]
-
-
 ppt main.exitOfTypeArrayPrimitiveElementsEndpoint:::CLASS
 ppt-type class
 

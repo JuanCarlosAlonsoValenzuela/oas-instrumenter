@@ -251,7 +251,9 @@ public class DeclsVariable {
         String itemsDatatype = arraySchema.getItems().getType();
 
         // Three possible situations:
-        if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) { // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
+        if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
+            // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
+            // 2. The content is another ARRAY
 
             // Generate the father variable
             List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
@@ -259,7 +261,7 @@ public class DeclsVariable {
 
             res.addAll(declsVariables);
 
-        } else if(itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) { // 2. The content is another ARRAY (recursive call) [][]
+//        } else if(itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // TODO: UNCOMMENT
 //            List<DeclsVariable> declsVariableList = getDeclsVariablesOfRecursiveArray(variablePath, varKind, parameterName, arraySchema, arrayNestingLevel);
             // Add to list

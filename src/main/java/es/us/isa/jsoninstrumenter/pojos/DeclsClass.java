@@ -226,10 +226,9 @@ public class DeclsClass {
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsObject
         if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-            // TODO: Create a jUnit test of nested arrays of primitive elements AND objects
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
-            String nameSuffix = ".array";
+            String nameSuffix = ".array";       // TODO: Change "." for a different char
 
             while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
                 DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
@@ -243,7 +242,7 @@ public class DeclsClass {
                 } else {
                     mapOfProperties = arraySchema.getItems();
                 }
-                nameSuffix = nameSuffix + ".array";
+                nameSuffix = nameSuffix + ".array";     // TODO: Change "." for a different char
             }
 
         } else if(primitiveTypes.contains(translateDatatype(parameterType))) {
@@ -260,9 +259,18 @@ public class DeclsClass {
             allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
 
             for(String nameSuffix: allSchemas.keySet()) {
-                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
-                        variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
-                res.add(declsExit);
+                if(allSchemas.get(nameSuffix).getProperties()==null){       // If the element is of type array, call the constructor that receives an ArraySchema
+                    ArraySchema arraySchema = (ArraySchema) allSchemas.get(nameSuffix);
+                    DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
+                            arraySchema, nameSuffix, statusCode);
+                    res.add(declsExit);
+                } else {    // If the element is of type object, call the constructor that receives an Schema
+                    DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
+                            variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
+                    res.add(declsExit);
+                }
+
+
             }
 
         }
@@ -284,18 +292,30 @@ public class DeclsClass {
                 // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
                 // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
                 // Recursive call with object.getParameter
+                // TODO: Change char "_" for another char (conflicts with snake_case)
                 res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
 
             } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                 ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
                 String itemsDatatype = arraySchema.getItems().getType();
+                String nestingSuffix = ".array";    // TODO: Change "." for a different char
+
+                // TODO: Refactor this loop (if clause is not necessary)
+                while(itemsDatatype.equals(ARRAY_TYPE_NAME)) {
+                    res.put(nameSuffix + "_" + parameterName + nestingSuffix, arraySchema);
+                    itemsDatatype = arraySchema.getItems().getType();
+                    if(itemsDatatype.equals(ARRAY_TYPE_NAME)){
+                        arraySchema = (ArraySchema) arraySchema.getItems();
+                    }
+                    nestingSuffix = nestingSuffix + ".array";
+                }
 
                 if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                     Schema subSchema = arraySchema.getItems();
+                    // TODO: Change char "_" for another char (conflicts with snake_case)
                     res.put(nameSuffix + "_" + parameterName, subSchema);
+                    // TODO: Change char "_" for another char (conflicts with snake_case)
                     res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, subSchema));
-                } else if(itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)){
-                    // TODO: Nested arrays (Consider simply flattening the array)
                 }
 
             }

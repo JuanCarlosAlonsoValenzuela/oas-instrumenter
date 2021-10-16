@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.doBubbleSort;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel;
@@ -192,23 +191,18 @@ public class DeclsExit {
 
         String responseBody = testCase.getResponseBody();
 
-        // TODO: If simply a primitive object (Think about how to detect that)
-        // TODO: Get the route of the Nested array
-
         // If the exit is of type array (Bad practice)
-        // TODO: Create a jUnit test for this flattening function
         if(isStringJsonArray(responseBody)) {
             JSONArray jsonArray = stringToJsonArray(responseBody);
 
             if(this.isNestedArray) {    // (Bad practice) If the response is parseable to array and the exit is of type nestedArray
                 // Count the number of arrays (Nesting level)
                 int targetNestingLevel = (int) Arrays.stream(this.getNameSuffix().split("\\.")).filter(x-> x.equalsIgnoreCase("array")).count();
-                // TODO: Create a jUnit test
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
                 try {
                     List<JSONArray> jsonArraysToGenerateDtrace = getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
 
-                    // TODO: for all the elements of the list of jsonArrays, generate a dtrace
+                    // For all the elements of the list of jsonArrays, generate a dtrace
                     for(JSONArray element: jsonArraysToGenerateDtrace) {
                         res = res + this.generateSingleDtraceEnterAndExitArray(element, testCase, declsEnter);
                     }
@@ -220,12 +214,9 @@ public class DeclsExit {
 
             } else {                    // (Bad practice) If the response is parseable to array but the exit is not of type nestedArray (i.e., we are generating a dtrace for one of its elements)
                 // Remove all the arrays until reaching an object and continue with normal behaviour
-                // TODO: The elements may be of type primitive
-
                 // Flatten the elements of the nested arrays
                 List<JSONObject> flatList = doBubbleSort(jsonArray);
                 // Write in res, generate dtraces from the list
-                // TODO: Create a test for this situation
                 res = res + this.generateSingleDtraceEnterAndExit(flatList, testCase, declsEnter);
 
             }

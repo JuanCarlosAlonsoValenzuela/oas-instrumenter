@@ -196,12 +196,6 @@ public class DtraceE2ETests {
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/dtraceFile_exitOfTypeNestedArray_nullAndEmptyElements.dtrace"
                 )//,
 
-                /*
-                Array response
-                Null array response
-                Array response with nesting
-                Array response with nesting and null values
-                 */
         );
     }
 
