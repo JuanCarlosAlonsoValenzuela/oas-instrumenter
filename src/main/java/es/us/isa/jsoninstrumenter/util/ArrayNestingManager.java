@@ -45,7 +45,9 @@ public class ArrayNestingManager {
             res = list.stream().map(x-> {
                 List<JSONObject> r = new ArrayList<>();
                 try {
-                    r = getOrFlatten(x);
+                    if(x != null) {
+                        r = getOrFlatten(x);
+                    }
                 } catch (Exception e){
                     e.printStackTrace();
                 }
@@ -72,9 +74,11 @@ public class ArrayNestingManager {
 
         if(currentNestingLevel != targetNestingLevel) {     // Case 1: The nesting level IS NOT the target one
             // Recursive call increasing the nesting level
-            for (Object element : jsonArray) {
-                currentNestingLevel = currentNestingLevel + 1;
-                res.addAll(getJSONArraysOfSpecifiedNestingLevel((JSONArray) element, targetNestingLevel, currentNestingLevel));
+            currentNestingLevel = currentNestingLevel + 1;
+            if(jsonArray != null){
+                for (Object element : jsonArray) {
+                    res.addAll(getJSONArraysOfSpecifiedNestingLevel((JSONArray) element, targetNestingLevel, currentNestingLevel));
+                }
             }
         } else {    // Case 2: The nesting level IS the target one
             // Base case: return the jsonArray

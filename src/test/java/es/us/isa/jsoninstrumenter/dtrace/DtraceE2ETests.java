@@ -139,10 +139,62 @@ public class DtraceE2ETests {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/multipleOperations/multipleOperations.yaml", "src/test/resources/dtraceOracles/exit/multipleOperations/testCase_multipleOperations.csv",
                         "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/multipleOperations/dtraceFile_multipleOperations.dtrace"
-                )//,
-                /* e2e_dtrace_exit_015 (Response of type nested array
-                    // TODO: Write description and test
+                ),
+                /* e2e_dtrace_exit_015 (Response of type nested array)
+                    The response of this test is a nested array following the following structure:
+                            [
+                              [
+                                [
+                                  {"location": "location1"},
+                                  {"location": "location2"}
+                                ],
+                                [
+                                  {"location": "location3"}
+                                ]
+                              ],
+                              [
+                                [
+                                  {"location": "location4"},
+                                  {"location": "location5"}
+                                ],
+                                [
+                                  {"location": "location6"}
+                                ]
+                              ]
+                            ]
                  */
+                Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/exitOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/setValues/testCase_exitOfTypeNestedArray.csv",
+                        "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/setValues/dtraceFile_exitOfTypeNestedArray.dtrace"
+                ),
+                /*
+                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
+                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
+                 */
+                /* e2e_dtrace_exit_016 (Response of type nested array with null and empty elements)
+                    This test uses the same OAS spec as e2e_dtrace_exit_015, but some arrays (Nesting levels 2 and 3) are empty or null
+
+                        [
+                          [
+                            [
+                              {"location": "location1"},
+                              {"location": "location2"}
+                            ],
+                            [
+                              {"location": "location3"}
+                            ]
+                          ],
+                          [
+                            null,           # Null array nesting 3 (lower level)
+                            []              # Empty array nesting 3 (lower level)
+                          ],
+                          null,             # Null array nesting 2
+                          []                # Empty array nesting 2
+                        ]
+
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/exitOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/testCase_exitOfTypeNestedArray_nullAndEmptyElements.csv",
+                        "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/dtraceFile_exitOfTypeNestedArray_nullAndEmptyElements.dtrace"
+                )//,
 
                 /*
                 Array response
