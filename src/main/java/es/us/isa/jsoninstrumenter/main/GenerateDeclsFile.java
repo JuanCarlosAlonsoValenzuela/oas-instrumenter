@@ -24,7 +24,7 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysPrimitive.yaml";
+    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysObject.yaml";
     private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/setValues/testCase_propertyOfTypeNestedArrayOfPrimitives.csv";
     private static boolean generateDtrace = false;
 

@@ -52,14 +52,14 @@ variable this
 variable this.array
 	var-kind field array
 	enclosing-var this
-	dec-type double[]
+	dec-type main.array[]
 	rep-type java.lang.String
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
 	array 1
-	dec-type double[]
-	rep-type double[]
+	dec-type main.array[]
+	rep-type java.lang.String[]
 
 ppt main.sampleEndpointId_Output_200_locations.array:::OBJECT
 ppt-type object
@@ -78,6 +78,23 @@ variable this.array[..]
 	array 1
 	dec-type main.array[]
 	rep-type java.lang.String[]
+
+ppt main.sampleEndpointId_Output_200_locations:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.sampleEndpointId_Output_200_locations
+	rep-type java.lang.String
+variable this.locationId
+	var-kind field locationId
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.provider
+	var-kind field provider
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
 
 
 ppt main.sampleEndpoint:::CLASS
@@ -118,6 +135,23 @@ variable input.parameter2
 	rep-type java.lang.String
 
 ppt main.sampleEndpoint.sampleEndpointId_200_locations.array(main.sampleEndpointId_Input):::ENTER
+ppt-type enter
+variable input
+	var-kind variable
+	dec-type main.sampleEndpointId_Input
+	rep-type java.lang.String
+variable input.parameter1
+	var-kind field parameter1
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.parameter2
+	var-kind field parameter2
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.sampleEndpoint.sampleEndpointId_200_locations(main.sampleEndpointId_Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -189,14 +223,14 @@ variable return
 variable return.array
 	var-kind field array
 	enclosing-var return
-	dec-type double[]
+	dec-type main.array[]
 	rep-type java.lang.String
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
-	dec-type double[]
-	rep-type double[]
+	dec-type main.array[]
+	rep-type java.lang.String[]
 
 ppt main.sampleEndpoint.sampleEndpointId_200_locations.array(main.sampleEndpointId_Input):::EXIT3
 ppt-type subexit
@@ -229,4 +263,35 @@ variable return.array[..]
 	array 1
 	dec-type main.array[]
 	rep-type java.lang.String[]
+
+ppt main.sampleEndpoint.sampleEndpointId_200_locations(main.sampleEndpointId_Input):::EXIT4
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.sampleEndpointId_Input
+	rep-type java.lang.String
+variable input.parameter1
+	var-kind field parameter1
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.parameter2
+	var-kind field parameter2
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return
+	var-kind return
+	dec-type main.sampleEndpointId_Output_200_locations
+	rep-type java.lang.String
+variable return.locationId
+	var-kind field locationId
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.provider
+	var-kind field provider
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
 

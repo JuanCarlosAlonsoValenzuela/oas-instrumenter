@@ -9,7 +9,6 @@ import io.swagger.v3.oas.models.PathItem;
 import io.swagger.v3.oas.models.Paths;
 import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -24,7 +23,6 @@ import static org.junit.Assert.assertEquals;
 public class NestedArraysObjectOutputTest {
 
     @Test
-    @Ignore
     public void testGenerationOfNestedArraysObjectOutput(){
 
         deleteAllDeclsClasses();
@@ -62,70 +60,120 @@ public class NestedArraysObjectOutputTest {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassOutput.getPackageName());
                 assertEquals("Incorrect class name", operationName + "_Output_200", declsClassOutput.getClassName());
-                assertEquals("The size of the list of objects is not 1", 1, declsClassOutput.getDeclsObjects().size());
+                assertEquals("The size of the list of objects is not 4", 4, declsClassOutput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassOutput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassOutput.getDeclsExits().size());
 
-                // OBJECT
-                DeclsObject declsObject = declsClassOutput.getDeclsObjects().get(0);
-                assertEquals("Incorrect package name", packageName, declsObject.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200", declsObject.getObjectName());
-                assertEquals("The size of the list of variables is not 1", 1, declsObject.getDeclsVariables());
+                List<DeclsObject> declsObjectList = declsClassOutput.getDeclsObjects();
+
+                // OBJECT 1
+                DeclsObject declsObject1 = declsObjectList.get(0);
+                assertEquals("Incorrect package name", packageName, declsObject1.getPackageName());
+                assertEquals("Incorrect object name", operationName + "_Output_200", declsObject1.getObjectName());
 
                 // VARIABLES
                 // Father
-                DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
-                assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
-                assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
-                assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
-                assertFalse("This variable should not be an array", declsFatherVariable.isArray());
+                DeclsVariable declsFatherVariable1 = declsObject1.getDeclsVariables();
+                assertEquals("Incorrect variable name", "this", declsFatherVariable1.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200", declsFatherVariable1.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable1.getRepType());
+                assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
+                assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
                 // Arrays are counted twice (normal and [..])
-                assertEquals("Unexpected number of son variables", 2, declsFatherVariable.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 2, declsFatherVariable1.getEnclosedVariables().size());
 
                 // Sons (locations)
-                List<DeclsVariable> declsSonVariables = declsFatherVariable.getEnclosedVariables();
+                List<DeclsVariable> declsSonVariables1 = declsFatherVariable1.getEnclosedVariables();
 
-                DeclsVariable locations1 = declsSonVariables.get(0);
+                DeclsVariable locations1 = declsSonVariables1.get(0);
                 assertEquals("Incorrect variable name", "this.locations", locations1.getVariableName());
                 assertEquals("Incorrect var-kind", "field locations", locations1.getVarKind());
-                assertEquals("Incorrect decType", "main.locations[][][]", locations1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[][][]", locations1.getRepType());
+                assertEquals("Incorrect decType", "main.locations[]", locations1.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", locations1.getRepType());
                 assertEquals("Incorrect enclosing var", "this", locations1.getEnclosingVar());
                 assertFalse("This variable should not be an array", locations1.isArray());
                 assertEquals("Unexpected number of son variables", 0, locations1.getEnclosedVariables().size());
 
-                DeclsVariable locations2 = declsSonVariables.get(1);
+                DeclsVariable locations2 = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "this.locations[..]", locations2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", locations2.getVarKind());
-                assertEquals("Incorrect decType", "main.locations", locations2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", locations2.getRepType());
+                assertEquals("Incorrect decType", packageName + ".locations[]", locations2.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String[]", locations2.getRepType());
                 assertEquals("Incorrect enclosing var", "this.locations", locations2.getEnclosingVar());
                 assertTrue("This variable should be an array", locations2.isArray());
-                assertEquals("Unexpected number of son variables", 2, locations2.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 0, locations2.getEnclosedVariables().size());
 
-                // Sons of the object locations (locationId and provider)
-                List<DeclsVariable> sonsOfLocation = locations2.getEnclosedVariables();
 
-                DeclsVariable locationId = sonsOfLocation.get(0);
-                assertEquals("Incorrect variable name", "this.locations[..].locationId", locationId.getVariableName());
+                String repeatedArray = ".array.array";
+                for(int i = 1; i < 3; i++) {
+                    DeclsObject declsObject = declsObjectList.get(i);
+
+                    // VARIABLES
+                    // Father
+                    DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
+                    assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
+                    assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations" + repeatedArray, declsFatherVariable.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                    assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
+                    assertFalse("This variable should not be an array", declsFatherVariable.isArray());
+                    // Arrays are counted twice (normal and [..])
+                    assertEquals("Unexpected number of son variables", 2, declsFatherVariable.getEnclosedVariables().size());
+
+                    // Sons (locations)
+                    List<DeclsVariable> declsSonVariables = declsFatherVariable.getEnclosedVariables();
+
+                    DeclsVariable array1 = declsSonVariables.get(0);
+                    assertEquals("Incorrect variable name", "this.array", array1.getVariableName());
+                    assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
+                    assertEquals("Incorrect decType", "main.array[]", array1.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                    assertEquals("Incorrect enclosing var", "this", array1.getEnclosingVar());
+                    assertFalse("This variable should not be an array", array1.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
+
+                    DeclsVariable array2 = declsSonVariables.get(1);
+                    assertEquals("Incorrect variable name", "this.array[..]", array2.getVariableName());
+                    assertEquals("Incorrect var-kind", "array", array2.getVarKind());
+                    assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
+                    assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                    assertEquals("Incorrect enclosing var", "this.array", array2.getEnclosingVar());
+                    assertTrue("This variable should be an array", array2.isArray());
+                    assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
+
+                    repeatedArray = ".array";
+                }
+
+                // FINAL OBJECT
+                DeclsObject declsObject4 = declsObjectList.get(3);
+                assertEquals("Incorrect package name", packageName, declsObject4.getPackageName());
+                assertEquals("Incorrect object name", operationName + "_Output_200_locations", declsObject4.getObjectName());
+
+                // VARIABLES
+                // Father
+                DeclsVariable declsFatherVariable4 = declsObject4.getDeclsVariables();
+                assertEquals("Incorrect variable name", "this", declsFatherVariable4.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", declsFatherVariable4.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations", declsFatherVariable4.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable4.getRepType());
+                assertNull("The enclosing var should be null", declsFatherVariable4.getEnclosingVar());
+                assertFalse("This variable should not be an array", declsFatherVariable4.isArray());
+                // Arrays are counted twice (normal and [..])
+                assertEquals("Unexpected number of son variables", 2, declsFatherVariable4.getEnclosedVariables().size());
+
+                // Sons (locations)
+                List<DeclsVariable> declsSonVariables4 = declsFatherVariable4.getEnclosedVariables();
+
+                // Only the first one
+                DeclsVariable locationId = declsSonVariables4.get(0);
+                assertEquals("Incorrect variable name", "this.locationId", locationId.getVariableName());
                 assertEquals("Incorrect var-kind", "field locationId", locationId.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String", locationId.getDecType());
                 assertEquals("Incorrect repType", "java.lang.String", locationId.getRepType());
-                assertEquals("Incorrect enclosing var", "this.locations[..]", locationId.getEnclosingVar());
-                assertTrue("This variable should be an array", locationId.isArray());
+                assertEquals("Incorrect enclosing var", "this", locationId.getEnclosingVar());
+                assertFalse("This variable should not be an array", locationId.isArray());
                 assertEquals("Unexpected number of son variables", 0, locationId.getEnclosedVariables().size());
-
-                DeclsVariable provider = sonsOfLocation.get(1);
-                assertEquals("Incorrect variable name", "this.locations[..].provider", provider.getVariableName());
-                assertEquals("Incorrect var-kind", "field provider", provider.getVarKind());
-                assertEquals("Incorrect decType", "java.lang.String", provider.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", provider.getRepType());
-                assertEquals("Incorrect enclosing var", "this.locations[..]", provider.getEnclosingVar());
-                assertTrue("This variable should be an array", provider.isArray());
-                assertEquals("Unexpected number of son variables", 0, provider.getEnclosedVariables().size());
-
 
             }
 
