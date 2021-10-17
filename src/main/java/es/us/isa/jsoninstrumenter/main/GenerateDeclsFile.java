@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/testCase_propertyOfTypeNestedArray_nullAndEmptyValues.csv";
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/propertyOfTypeNestedArrayOfPrimitives.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/setValues/testCase_propertyOfTypeNestedArrayOfPrimitives.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources

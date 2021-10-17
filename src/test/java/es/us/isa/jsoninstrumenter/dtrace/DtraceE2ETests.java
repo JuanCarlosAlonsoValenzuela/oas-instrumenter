@@ -251,6 +251,32 @@ public class DtraceE2ETests {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/testCase_propertyOfTypeNestedArray_nullAndEmptyValues.csv",
                         "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/dtraceFile_propertyOfTypeNestedArray_nullAndEmptyValues.dtrace"
+                ),
+                /* e2e_dtrace_exit_019 (Property of type nested array of primitives)
+                The response of this test contains a property of type nested array of primitives. Structure:
+
+                    {
+                      "stringProperty": "stringPropertyValue",
+                      "nestedArrayProperty": [
+                        [
+                          [
+                            1.0,
+                            2.0
+                          ],
+                          [
+                            3.0
+                          ]
+                        ],
+                        [
+                          [
+                            4.0
+                          ]
+                        ]
+                    ]
+                    }
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/propertyOfTypeNestedArrayOfPrimitives.yaml", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/setValues/testCase_propertyOfTypeNestedArrayOfPrimitives.csv",
+                        "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/setValues/dtraceFile_propertyOfTypeNestedArrayOfPrimitives.dtrace"
                 )//,
 
         );
