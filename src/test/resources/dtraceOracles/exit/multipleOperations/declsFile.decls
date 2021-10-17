@@ -17,6 +17,45 @@ variable this.parameterOperation1
 	rep-type java.lang.String
 
 
+ppt main.operation1_Output_200:::CLASS
+ppt-type class
+
+ppt main.operation1_Output_200:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.operation1_Output_200
+	rep-type java.lang.String
+variable this.stringPropertyOperation1
+	var-kind field stringPropertyOperation1
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.arrayOfObjectsPropertyOperation1
+	var-kind field arrayOfObjectsPropertyOperation1
+	enclosing-var this
+	dec-type main.arrayOfObjectsPropertyOperation1[]
+	rep-type java.lang.String
+variable this.arrayOfObjectsPropertyOperation1[..]
+	var-kind array
+	enclosing-var this.arrayOfObjectsPropertyOperation1
+	array 1
+	dec-type main.arrayOfObjectsPropertyOperation1[]
+	rep-type java.lang.String[]
+
+ppt main.operation1_Output_200_arrayOfObjectsPropertyOperation1:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.operation1_Output_200_arrayOfObjectsPropertyOperation1
+	rep-type java.lang.String
+variable this.property1Operation1
+	var-kind field property1Operation1
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
 ppt main.operation1:::CLASS
 ppt-type class
 
@@ -109,6 +148,22 @@ variable this
 	rep-type java.lang.String
 variable this.parameterOperation2
 	var-kind field parameterOperation2
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
+ppt main.operation2_Output_200:::CLASS
+ppt-type class
+
+ppt main.operation2_Output_200:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.operation2_Output_200
+	rep-type java.lang.String
+variable this.stringPropertyOperation2
+	var-kind field stringPropertyOperation2
 	enclosing-var this
 	dec-type java.lang.String
 	rep-type java.lang.String

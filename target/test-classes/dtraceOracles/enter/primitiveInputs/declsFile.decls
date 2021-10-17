@@ -32,6 +32,27 @@ variable this.booleanInForm
 	rep-type boolean
 
 
+ppt main.primitiveInputsEndpoint_Output_200:::CLASS
+ppt-type class
+
+ppt main.primitiveInputsEndpoint_Output_200:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.primitiveInputsEndpoint_Output_200
+	rep-type java.lang.String
+variable this.property1
+	var-kind field property1
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.property2
+	var-kind field property2
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
 ppt main.primitiveInputsEndpoint{stringInPath}:::CLASS
 ppt-type class
 

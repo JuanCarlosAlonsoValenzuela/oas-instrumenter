@@ -17,6 +17,50 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
+ppt main.arrayOfObjectsEndpoint_Output_200:::CLASS
+ppt-type class
+
+ppt main.arrayOfObjectsEndpoint_Output_200:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.arrayOfObjectsEndpoint_Output_200
+	rep-type java.lang.String
+variable this.stringProperty
+	var-kind field stringProperty
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.arrayOfObjectsProperty
+	var-kind field arrayOfObjectsProperty
+	enclosing-var this
+	dec-type main.arrayOfObjectsProperty[]
+	rep-type java.lang.String
+variable this.arrayOfObjectsProperty[..]
+	var-kind array
+	enclosing-var this.arrayOfObjectsProperty
+	array 1
+	dec-type main.arrayOfObjectsProperty[]
+	rep-type java.lang.String[]
+
+ppt main.arrayOfObjectsEndpoint_Output_200_arrayOfObjectsProperty:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.arrayOfObjectsEndpoint_Output_200_arrayOfObjectsProperty
+	rep-type java.lang.String
+variable this.property1
+	var-kind field property1
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.property2
+	var-kind field property2
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
 ppt main.arrayOfObjectsEndpoint:::CLASS
 ppt-type class
 

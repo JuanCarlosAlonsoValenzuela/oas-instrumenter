@@ -17,6 +17,76 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
+ppt main.exitOfTypeNestedArrayEndpoint_Output_200:::CLASS
+ppt-type class
+
+ppt main.exitOfTypeNestedArrayEndpoint_Output_200.array:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array
+	rep-type java.lang.String
+variable this.array
+	var-kind field array
+	enclosing-var this
+	dec-type main.array[]
+	rep-type java.lang.String
+variable this.array[..]
+	var-kind array
+	enclosing-var this.array
+	array 1
+	dec-type main.array[]
+	rep-type java.lang.String[]
+
+ppt main.exitOfTypeNestedArrayEndpoint_Output_200.array.array:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array
+	rep-type java.lang.String
+variable this.array
+	var-kind field array
+	enclosing-var this
+	dec-type main.array[]
+	rep-type java.lang.String
+variable this.array[..]
+	var-kind array
+	enclosing-var this.array
+	array 1
+	dec-type main.array[]
+	rep-type java.lang.String[]
+
+ppt main.exitOfTypeNestedArrayEndpoint_Output_200.array.array.array:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array.array
+	rep-type java.lang.String
+variable this.array
+	var-kind field array
+	enclosing-var this
+	dec-type main.array[]
+	rep-type java.lang.String
+variable this.array[..]
+	var-kind array
+	enclosing-var this.array
+	array 1
+	dec-type main.array[]
+	rep-type java.lang.String[]
+
+ppt main.exitOfTypeNestedArrayEndpoint_Output_200:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200
+	rep-type java.lang.String
+variable this.location
+	var-kind field location
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
 ppt main.exitOfTypeNestedArrayEndpoint:::CLASS
 ppt-type class
 

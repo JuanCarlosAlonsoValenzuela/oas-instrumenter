@@ -194,29 +194,64 @@ public class DtraceE2ETests {
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/exitOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/testCase_exitOfTypeNestedArray_nullAndEmptyElements.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/nullAndEmptyElements/dtraceFile_exitOfTypeNestedArray_nullAndEmptyElements.dtrace"
-                )//,
-                /* e2e_dtrace_exit_017
-                // TODO: Write
-                    {
-                      "stringProperty": "stringPropertyValue",
-                      "nestedArrayProperty": [
+                ),
+                /* e2e_dtrace_exit_017 (Property of type nested array)
+                    The response of this test contains a property of type nested array. Structure:
+                        {
+                          "stringProperty": "stringPropertyValue",
+                          "nestedArrayProperty": [
+                                  [
+                                    [
+                                      {"propertyOfArray": 1.0},
+                                      {"propertyOfArray": 2.0}
+                                    ],
+                                    [
+                                      {"propertyOfArray": 3.0}
+                                    ]
+                                  ],
+                                  [
+                                    [
+                                      {"propertyOfArray": 4.0}
+                                    ]
+                                  ]
+                            ]
+                        }
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/setValues/testCase_propertyOfTypeNestedArray.csv",
+                        "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/setValues/dtraceFile_propertyOfTypeNestedArray.dtrace"
+                ),
+
+                /* e2e_dtrace_exit_018 (Property of type nested array with null elements)
+                This test uses the same OAS spec as e2e_dtrace_exit_017, but some arrays (Nesting levels 2 and 3) are empty or null
+
+                        {
+                          "stringProperty": "stringPropertyValue",
+                          "nestedArrayProperty": [
+                            [
                               [
-                                [
-                                  {"propertyOfArray": 1.0},
-                                  {"propertyOfArray": 2.0}
-                                ],
-                                [
-                                  {"propertyOfArray": 3.0}
-                                ]
+                                {"propertyOfArray": 1.0},
+                                {"propertyOfArray": 2.0}
                               ],
                               [
-                                [
-                                  {"propertyOfArray": 4.0}
-                                ]
+                                {"propertyOfArray": 3.0}
                               ]
-                        ]
-                    }
+                            ],
+                            [
+                              null,             # Null array nesting 3 (lower level)
+                              []                # Empty array nesting 3 (lower level)
+                            ],
+                            null,               # Null array nesting 2
+                            []                  # Empty array nesting 2
+                         ]
+                        }
                  */
+                /*
+                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
+                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
+                 */
+                Arguments.of("src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/testCase_propertyOfTypeNestedArray_nullAndEmptyValues.csv",
+                        "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/dtraceFile_propertyOfTypeNestedArray_nullAndEmptyValues.dtrace"
+                )//,
 
         );
     }

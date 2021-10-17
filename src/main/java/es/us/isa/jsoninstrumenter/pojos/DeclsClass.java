@@ -309,11 +309,12 @@ public class DeclsClass {
 
                 // TODO: Refactor this loop (if clause is not necessary)
                 while(itemsDatatype.equals(ARRAY_TYPE_NAME)) {
+                    arraySchema = (ArraySchema) arraySchema.getItems();
                     res.put(nameSuffix + "_" + parameterName + nestingSuffix, arraySchema);
                     itemsDatatype = arraySchema.getItems().getType();
-                    if(itemsDatatype.equals(ARRAY_TYPE_NAME)){
-                        arraySchema = (ArraySchema) arraySchema.getItems();
-                    }
+//                    if(itemsDatatype.equals(ARRAY_TYPE_NAME)){
+//                        arraySchema = (ArraySchema) arraySchema.getItems();
+//                    }
                     nestingSuffix = nestingSuffix + ".array";
                 }
 

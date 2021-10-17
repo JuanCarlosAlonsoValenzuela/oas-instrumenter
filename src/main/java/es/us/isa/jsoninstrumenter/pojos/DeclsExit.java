@@ -195,8 +195,10 @@ public class DeclsExit {
         if(isStringJsonArray(responseBody)) {
             JSONArray jsonArray = stringToJsonArray(responseBody);
 
+            //TODO: Convert this block into a function
             if(this.isNestedArray) {    // (Bad practice) If the response is parseable to array and the exit is of type nestedArray
                 // Count the number of arrays (Nesting level)
+                // TODO: Replace "." with another character
                 int targetNestingLevel = (int) Arrays.stream(this.getNameSuffix().split("\\.")).filter(x-> x.equalsIgnoreCase("array")).count();
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
                 try {
@@ -220,6 +222,7 @@ public class DeclsExit {
                 res = res + this.generateSingleDtraceEnterAndExit(flatList, testCase, declsEnter);
 
             }
+            // TODO: End convert this block into a function
 
         } else {        // If the response is parseable to JSONObject (Expected practice)
             // Expected behaviour
@@ -237,12 +240,13 @@ public class DeclsExit {
         for(JSONObject json: jsonObjectList) {
 
             // Name suffix
-            List<String> elementRoute = Arrays.stream(this.nameSuffix.split("_"))
+            List<String> elementRoute = Arrays.stream(this.nameSuffix.split("_"))       // TODO: Replace "_" with a different character
                     .filter(e -> e.trim().length() > 0)
                     .collect(Collectors.toList());
 
 
-            List<JSONObject> nestedJsonObjects = new ArrayList<>();
+            // The elements of this list can be either JSONArray (If there are elements with nested arrays) or JSONObject
+            List<Object> nestedJsonObjects = new ArrayList<>();
 
             if(elementRoute.isEmpty()){
                 nestedJsonObjects.add(json);
@@ -250,10 +254,16 @@ public class DeclsExit {
                 nestedJsonObjects = getListOfJsonElementsForDeclsExit(json, elementRoute);
             }
 
-            for(JSONObject jsonElement: nestedJsonObjects){
+            for(Object jsonElement: nestedJsonObjects){
                 // There must be one Decls Enter per DeclsExit
-                res = res + declsEnter.generateDtrace(testCase) + "\n";             // DeclsEnter
-                res = res + this.generateSingleDtraceExit(testCase, jsonElement);   // DeclsExit
+                if(jsonElement instanceof JSONObject) {     // If the element is of type JSONObject
+                    res = res + declsEnter.generateDtrace(testCase) + "\n";                         // DeclsEnter
+                    res = res + this.generateSingleDtraceExit(testCase, (JSONObject) jsonElement);   // DeclsExit
+                } else {    // If the element is of type JSONArray
+                    // This function prints both the DeclsEnter and the DeclsExit
+                    res = res + this.generateSingleDtraceEnterAndExitArray((JSONArray) jsonElement, testCase, declsEnter);
+                }
+
             }
 
         }
@@ -344,9 +354,9 @@ public class DeclsExit {
     }
 
 
-    public static List<JSONObject> getListOfJsonElementsForDeclsExit(JSONObject json, List<String> elementRoute){
+    public static List<Object> getListOfJsonElementsForDeclsExit(JSONObject json, List<String> elementRoute){
 
-        List<JSONObject> res = new ArrayList<>();
+        List<Object> res = new ArrayList<>();
 
         String element = elementRoute.get(0);
 
@@ -354,13 +364,30 @@ public class DeclsExit {
             throw new NullPointerException("The response of the test case cannot be null");
         }
 
+        // TODO: CHECKPOINT
+        // TODO: If the target element is a nested array
+        List<String> elementArrayRoute = Arrays.stream(element.split("\\."))
+                .filter(e -> e.trim().length() > 0)
+                .collect(Collectors.toList());
+        // If the target element is a nested array
+        if(elementArrayRoute.size() > 1) {
+            // Get the nested arrays (i.e., value of the element)
+            JSONArray jsonArray = (JSONArray) json.get(elementArrayRoute.get(0));
+            // We increase the targetNestingLevel by one because the first level of nesting is already present in the father exit
+            int targetNestingLevel = (int) Arrays.stream(element.split("\\.")).filter(x->x.equalsIgnoreCase("array")).count() + 1;
+            List<JSONArray> jsonArraysToGenerateDtrace = getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
+            res.addAll(jsonArraysToGenerateDtrace);
+
+            return res;
+        }       // TODO: Add else for the last element
+
         Object jsonSon = json.get(element);
 
         if(jsonSon instanceof  JSONObject) {        // If jsonSon is of type JSONObject
             // TODO: Complete
             JSONObject jsonSonObject = (JSONObject) jsonSon;
             if(elementRoute.size() == 1) {      // If element is the last element of elementRoute (i.e. is the object we are looking for)
-                res.add((JSONObject) jsonSonObject.get(element));
+                res.add(jsonSonObject.get(element));    // Add JSONObject
             } else {
                 // Recursive call if element is not the last element of elementRoute
                 res.addAll(getListOfJsonElementsForDeclsExit(jsonSonObject, elementRoute.subList(1, elementRoute.size())));
@@ -375,12 +402,14 @@ public class DeclsExit {
 
                 if(jsonSonElement instanceof JSONObject) {
                     if(elementRoute.size()==1){
-                        res.add((JSONObject) jsonSonElement);
+                        res.add(jsonSonElement);       // Add JSONObject
                     } else {
                         res.addAll(getListOfJsonElementsForDeclsExit((JSONObject) jsonSonElement, elementRoute.subList(1, elementRoute.size())));
                     }
-                } else {
-                    // TODO: Complete
+                } else if(jsonSonElement instanceof JSONArray) {        // This condition is reached when we are dealing with a nested array
+                    // Get all the properties of the nested array
+                    List<JSONObject> flatList = doBubbleSort((JSONArray) jsonSonElement);
+                    res.addAll(flatList);
                 }
             }
 
