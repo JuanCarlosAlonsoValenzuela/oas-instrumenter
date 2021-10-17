@@ -23,7 +23,6 @@ public class DeclsVariable {
     private boolean isArray;
     private List<DeclsVariable> enclosedVariables;
 
-    // TODO: Array, boolean and object
     public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, Operation operation) {
         // Father parameter
         DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." +
@@ -116,7 +115,7 @@ public class DeclsVariable {
         List<DeclsVariable> res = new ArrayList<>();
         if(schema != null) {
             res = generateDeclsVariablesOfOutput(schema, rootVariableName,
-                    "variable", objectName, false, 1);
+                    "variable", objectName, false);
         }
 
         return res;
@@ -144,10 +143,10 @@ public class DeclsVariable {
         String translatedDatatype = translateDatatype(itemsDatatype);
         if(primitiveTypes.contains(translatedDatatype) && !itemsDatatype.equals(OBJECT_TYPE_NAME)) {
             enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, translatedDatatype,
-                    translatedDatatype, 1);
+                    translatedDatatype);
         } else{
             enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, packageName + "." + ARRAY_TYPE_NAME,
-                    STRING_TYPE_NAME, 1);
+                    STRING_TYPE_NAME);
         }
 
         father.setEnclosedVariables(enclosedVars);
@@ -183,7 +182,7 @@ public class DeclsVariable {
                 packageName + "." + variableNameOutput, STRING_TYPE_NAME, null);
 
         // Creates the son variables
-        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, variableNameOutput, false, 1);
+        List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, variableNameOutput, false);
         father.setEnclosedVariables(enclosedVars);
 
         return father;
@@ -194,7 +193,7 @@ public class DeclsVariable {
     // Recursive method
     public static List<DeclsVariable> generateDeclsVariablesOfOutput(Schema mapOfProperties, String variablePath,
                                                                      String varKind, String variableNameOutput,
-                                                                     boolean isArray, int arrayNestingLevel) {
+                                                                     boolean isArray) {
         List<DeclsVariable> res = new ArrayList<>();
         Set<String> parameterNames = mapOfProperties.getProperties().keySet();
 
@@ -215,7 +214,7 @@ public class DeclsVariable {
                 // Recursive call for son variables
                 List<DeclsVariable> enclosedVariables =
                         generateDeclsVariablesOfOutput(schema, variablePath + "." + parameterName, varKind,
-                                variableNameOutput, false, arrayNestingLevel);
+                                variableNameOutput, false);
                 // Set enclosed variables
                 declsVariable.setEnclosedVariables(enclosedVariables);
                 // Add to list
@@ -225,7 +224,7 @@ public class DeclsVariable {
 
                 // Obtain variables of nested arrays
                 List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, variablePath,
-                        varKind,  parameterName, arrayNestingLevel, variableNameOutput);
+                        varKind,  parameterName, variableNameOutput);
                 // Add to list
                 res.addAll(declsVariables);
 
@@ -243,7 +242,7 @@ public class DeclsVariable {
     }
 
     public static List<DeclsVariable> getDeclsVariablesOfNestedArray(Schema mapOfProperties , String variablePath,
-                                                                     String varKind, String parameterName, int arrayNestingLevel, String variableNameOutput) {
+                                                                     String varKind, String parameterName, String variableNameOutput) {
 
         List<DeclsVariable> res = new ArrayList<>();
 
@@ -253,24 +252,19 @@ public class DeclsVariable {
         // Three possible situations:
         if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
+            // OR
             // 2. The content is another ARRAY
 
             // Generate the father variable
             List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
-                    packageName + "." + parameterName, STRING_TYPE_NAME, arrayNestingLevel);
+                    packageName + "." + parameterName, STRING_TYPE_NAME);
 
             res.addAll(declsVariables);
-
-//        } else if(itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-            // TODO: UNCOMMENT
-//            List<DeclsVariable> declsVariableList = getDeclsVariablesOfRecursiveArray(variablePath, varKind, parameterName, arraySchema, arrayNestingLevel);
-            // Add to list
-//            res.addAll(declsVariableList);
 
         } else {    // 3. The content is a primitive type (base case)
             String translatedDatatype = translateDatatype(itemsDatatype);
             List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
-                    translatedDatatype, translatedDatatype, arrayNestingLevel);
+                    translatedDatatype, translatedDatatype);
 
             res.addAll(declsVariablesArrays);
         }
@@ -278,84 +272,6 @@ public class DeclsVariable {
         return res;
 
     }
-
-    // TODO: Uncomment and refactor
-//    public static List<DeclsVariable> getDeclsVariablesOfRecursiveArray(String variablePath, String varKind, String parameterName,
-//                                                                        ArraySchema arraySchema, int arrayNestingLevel) {
-//        List<DeclsVariable> res = new ArrayList<>();
-//        // TODO: Recursive call
-//        // TODO: Check the number of []s
-//
-//        Schema subArraySchema = ((ArraySchema) arraySchema.getItems()).getItems();
-//        if(subArraySchema.getType().equals("object")) { // 1. Type object (Recursive call with increased [])
-//
-//            List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedObject(variablePath, parameterName, varKind,
-//                    packageName + "." + parameterName, "java.lang.String", arrayNestingLevel + 1, subArraySchema);        // This method was modified in the last update
-//
-//            // Add to list
-//            res.addAll(declsVariables);
-//
-//        } else if(subArraySchema.getType().equals("array")) { // 2. Array (Repeat iteratively)
-//            int newNestingLevel = arrayNestingLevel + 1;
-//            Schema recursiveArraySchema = subArraySchema;
-//            while(recursiveArraySchema.getType().equals("array")) {
-//                newNestingLevel++;
-//                recursiveArraySchema = ((ArraySchema) recursiveArraySchema).getItems();
-//            }
-//            if(recursiveArraySchema.getType().equals("object")) {
-//
-//                List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedObject(variablePath, parameterName, varKind,
-//                        packageName + "." + parameterName, "java.lang.String", newNestingLevel, recursiveArraySchema);    // This method was modified in the last update
-//
-//                // Add to list
-//                res.addAll(declsVariables);
-//            } else {
-//                String translatedDatatype = translateDatatype(recursiveArraySchema.getType());
-//                List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
-//                        translatedDatatype, translatedDatatype, newNestingLevel);
-//                res.addAll(declsVariablesArrays);
-//            }
-//
-//        } else {    // 3. Primitive type (Base case)
-//            String translatedDatatype = translateDatatype(subArraySchema.getType());
-//            List<DeclsVariable> declsVariablesArrays = getDeclsVariablesArray(variablePath, parameterName,
-//                    translatedDatatype, translatedDatatype, arrayNestingLevel + 1);
-//            res.addAll(declsVariablesArrays);
-//
-//        }
-//
-//        return res;
-//
-//    }
-
-    public static List<DeclsVariable> getDeclsVariablesOfNestedObject(String variablePath, String variableNameOutput, String parameterName, String varKind, String decType, String repType, int arrayNestingLevel,
-                                                                      Schema schema) {
-
-        List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
-                decType, repType, arrayNestingLevel);
-
-        // Recursive call for son variables
-        // Iterate over items
-
-        // TODO: Remove isExit
-        DeclsObject nestedDeclsObject = new DeclsObject("this",
-                    variableNameOutput + "_" + parameterName,
-                    schema);
-
-//        declsClass.addDeclsObject(nestedDeclsObject);
-
-//        System.out.println(nestedDeclsObject);
-
-//        List<DeclsVariable> enclosedVariables = generateDeclsVariablesOfOutput(schema,
-//                variablePath + "." + parameterName + "[..]", varKind, true, arrayNestingLevel);
-
-        // Set the son variables and add to res
-//        declsVariables.get(1).setEnclosedVariables(enclosedVariables);
-
-        return declsVariables;
-
-    }
-
 
     // Converts the datatype name from OAS to daikon
     // Returns String by default
@@ -379,7 +295,7 @@ public class DeclsVariable {
     }
 
     public static List<DeclsVariable> getDeclsVariablesArray(String variablePath, String parameterName,
-                                                             String decType, String repType, int arrayNestingLevel) {
+                                                             String decType, String repType) {
         List<DeclsVariable> res = new ArrayList<>();
 
         String arrayIndicator = "[]";

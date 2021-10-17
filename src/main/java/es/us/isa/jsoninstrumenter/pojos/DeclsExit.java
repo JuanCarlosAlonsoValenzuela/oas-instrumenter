@@ -341,7 +341,7 @@ public class DeclsExit {
 
                 value = "[" + value.trim() + "]";
 
-            } else {    // If array of objects  TODO: Array of arrays
+            } else {    // If array of objects
                 String hashcode = "";
                 for(int i = 1; i <= elements.size(); i++) {
                     hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
@@ -364,8 +364,7 @@ public class DeclsExit {
             throw new NullPointerException("The response of the test case cannot be null");
         }
 
-        // TODO: CHECKPOINT
-        // TODO: If the target element is a nested array
+        // If the target element is a nested array
         List<String> elementArrayRoute = Arrays.stream(element.split("\\."))
                 .filter(e -> e.trim().length() > 0)
                 .collect(Collectors.toList());
@@ -379,12 +378,11 @@ public class DeclsExit {
             res.addAll(jsonArraysToGenerateDtrace);
 
             return res;
-        }       // TODO: Add else for the last element
+        }
 
         Object jsonSon = json.get(element);
 
         if(jsonSon instanceof  JSONObject) {        // If jsonSon is of type JSONObject
-            // TODO: Complete
             JSONObject jsonSonObject = (JSONObject) jsonSon;
             if(elementRoute.size() == 1) {      // If element is the last element of elementRoute (i.e. is the object we are looking for)
                 res.add(jsonSonObject.get(element));    // Add JSONObject
@@ -393,7 +391,6 @@ public class DeclsExit {
                 res.addAll(getListOfJsonElementsForDeclsExit(jsonSonObject, elementRoute.subList(1, elementRoute.size())));
             }
         } else if(jsonSon instanceof JSONArray) {   // If jsonSon is of type JSONArray
-            // TODO: Consider that there may be nested arrays
             JSONArray jsonSonArray = (JSONArray) jsonSon;
 
             // Iterate over all elements of the JSONArray

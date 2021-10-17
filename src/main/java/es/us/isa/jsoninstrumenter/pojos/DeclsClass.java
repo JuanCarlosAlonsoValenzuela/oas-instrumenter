@@ -95,7 +95,6 @@ public class DeclsClass {
     }
 
     // TODO: Move to other class
-    // TODO: Test with recursive arrays
     // Used when the return is of type array (Example: RESTcountries)
     public static List<DeclsObject> getAllNestedDeclsObjects(String packageName, String objectName, MediaType mediaType) {
         List<DeclsObject> res = new ArrayList<>();
@@ -109,7 +108,7 @@ public class DeclsClass {
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";
 
-            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {        // TODO: Check that the schema is properly iterated when there are multiple nested arrays
+            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                 DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
                 res.add(declsObject);
 
@@ -152,74 +151,6 @@ public class DeclsClass {
 
         return res;
 
-    }
-
-    // TODO: Move to other class
-    // TODO: Delete
-    // Deprecated
-    public static List<DeclsObject> getAllNestedDeclsObjectsRemove(String packageName, String objectName, MediaType mediaType) {
-        List<DeclsObject> res = new ArrayList<>();
-
-        String parameterType = mediaType.getSchema().getType();
-
-        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
-            Schema mapOfProperties = mediaType.getSchema();
-
-            Map<String, Schema> allSchemas = new HashMap<>();
-            allSchemas.put("", mapOfProperties);
-            allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
-
-            for(String nestedSchema: allSchemas.keySet()) {
-                DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
-                res.add(declsObject);
-            }
-
-        } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-            // TODO:Complete
-            // Get the schema as ArraySchema
-            ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
-
-            String nameSuffix = "_array";
-//            String itemsType = arraySchema.getItems().getType();
-            while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-                DeclsObject declsObject = new DeclsObject(packageName, objectName + nameSuffix, arraySchema);
-                res.add(declsObject);
-
-                arraySchema = (ArraySchema) arraySchema.getItems();
-                parameterType = arraySchema.getType();
-                nameSuffix = nameSuffix + "_array";
-            }
-
-            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
-                // TODO: Call the other method
-            } else if (primitiveTypes.contains(parameterType)) {
-                // TODO: Primitive type
-            }
-
-
-            // TODO: Iteratively add new _array
-
-            // TODO: Add to res
-            // TODO: If parameterType  of subelement != array -> stop and res.addAll(MediaType of subelement)
-
-
-        } else {        // Primitive type
-            // TODO: Return simple decls object
-        }
-
-
-        // OLD:
-//        Map<String, Schema> allSchemas = new HashMap<>();
-//        allSchemas.put("", mapOfProperties);
-//        allSchemas.putAll(getAllNestedSchemas("", mapOfProperties));
-//
-//        for(String nestedSchema: allSchemas.keySet()) {
-//            DeclsObject declsObject = new DeclsObject(packageName, objectName + nestedSchema, allSchemas.get(nestedSchema));
-//            res.add(declsObject);
-//        }
-        // END OLD
-
-        return res;
     }
 
     // TODO: Move to another class
@@ -307,14 +238,10 @@ public class DeclsClass {
                 String itemsDatatype = arraySchema.getItems().getType();
                 String nestingSuffix = ".array";    // TODO: Change "." for a different char
 
-                // TODO: Refactor this loop (if clause is not necessary)
                 while(itemsDatatype.equals(ARRAY_TYPE_NAME)) {
                     arraySchema = (ArraySchema) arraySchema.getItems();
                     res.put(nameSuffix + "_" + parameterName + nestingSuffix, arraySchema);
                     itemsDatatype = arraySchema.getItems().getType();
-//                    if(itemsDatatype.equals(ARRAY_TYPE_NAME)){
-//                        arraySchema = (ArraySchema) arraySchema.getItems();
-//                    }
                     nestingSuffix = nestingSuffix + ".array";
                 }
 
