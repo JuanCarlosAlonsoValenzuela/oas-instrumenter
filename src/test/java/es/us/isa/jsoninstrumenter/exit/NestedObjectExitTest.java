@@ -73,8 +73,6 @@ public class NestedObjectExitTest {
                 String exitName1 = packageName + "." + operationEndpoint + "." + operationName + "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName1, declsExit1.getExitName());
-//                assertEquals("The size of the list of enter variables is not 1", 1, declsExit.getEnterDeclsVariables().size());
-//                assertEquals("The size of the list of exit variables is not 1", 1, declsExit.getExitDeclsVariables().size());
 
                 // VARIABLES
                 // ENTER

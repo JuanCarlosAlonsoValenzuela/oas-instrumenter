@@ -66,4 +66,4 @@ definitions:
           items:
             type: array
             items:
-              type: string
+              type: number # double
