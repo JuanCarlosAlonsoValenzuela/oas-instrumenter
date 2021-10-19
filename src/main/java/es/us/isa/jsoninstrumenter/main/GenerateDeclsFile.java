@@ -24,9 +24,9 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysObject.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfPrimitives/setValues/testCase_propertyOfTypeNestedArrayOfPrimitives.csv";
-    private static boolean generateDtrace = false;
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/testCase_arrayOfObjects_elementOfArrayNull.csv";
+    private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
 //    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
@@ -184,7 +184,6 @@ public class GenerateDeclsFile {
         return declsClasses;
     }
 
-    // TODO: Convert test cases to e2e
     public static void deleteAllDeclsClasses(){
         declsClasses.clear();
     }

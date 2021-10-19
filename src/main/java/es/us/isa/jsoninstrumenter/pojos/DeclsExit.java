@@ -344,7 +344,12 @@ public class DeclsExit {
             } else {    // If array of objects
                 String hashcode = "";
                 for(int i = 1; i <= elements.size(); i++) {
-                    hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                    if(elements.get(i-1) != null) {
+                        hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                    } else {
+                        hashcode = hashcode + "null ";
+                    }
+
                 }
 
                 value = "[" + hashcode.trim() + "]";

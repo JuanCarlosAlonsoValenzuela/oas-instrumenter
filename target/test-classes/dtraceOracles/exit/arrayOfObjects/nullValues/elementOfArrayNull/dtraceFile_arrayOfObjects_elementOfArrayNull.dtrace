@@ -23,7 +23,7 @@ return.arrayOfObjectsProperty
 "test_008_return.arrayOfObjectsProperty_output"
 1
 return.arrayOfObjectsProperty[..]
-["test_008_return.arrayOfObjectsProperty_output_1" "test_008_return.arrayOfObjectsProperty_output_2"]
+["test_008_return.arrayOfObjectsProperty_output_1" null]
 1
 
 main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::ENTER

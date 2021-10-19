@@ -20,7 +20,7 @@ return.array
 "test_011_exitOfTypeArrayEndpoint_return.array_output"
 1
 return.array[..]
-["test_011_array_output_1" "test_011_array_output_2"]
+["test_011_array_output_1" null]
 1
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER

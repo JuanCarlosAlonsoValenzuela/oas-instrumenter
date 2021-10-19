@@ -84,10 +84,6 @@ public class DtraceE2ETests {
                 /* e2e_dtrace_exit_007 (Array of objects with one of the elements being null)
                 This test uses the same OAS spec as e2e_dtrace_exit_006, but one of the elements of the array (i.e., one of the objects) is null
                  */
-                /*
-                TODO: Currently this test case does not print the null element (The second EXIT2), which makes sense.
-                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
-                 */
                 Arguments.of("src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/testCase_arrayOfObjects_elementOfArrayNull.csv",
                         "src/test/resources/dtraceOracles/exit/arrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/dtraceFile_arrayOfObjects_elementOfArrayNull.dtrace"
                 ),
@@ -106,10 +102,6 @@ public class DtraceE2ETests {
                 ),
                 /* e2e_dtrace_exit010 (Exit of type array, with a null element)
                 This test uses the same OAS spec as e2e_dtrace_exit_009, but one of the elements of the array (i.e., one of the objects) is null
-                 */
-                /*
-                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
-                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/exitOfTypeArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/nullValues/elementOfArrayNull/testCase_exitOfTypeArray_elementOfArrayNull.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withoutNesting/nullValues/elementOfArrayNull/dtraceFile_exitOfTypeArray_elementOfArrayNull.dtrace"
@@ -166,10 +158,6 @@ public class DtraceE2ETests {
                 Arguments.of("src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/exitOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/setValues/testCase_exitOfTypeNestedArray.csv",
                         "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/exitOfTypeArray/withNesting/setValues/dtraceFile_exitOfTypeNestedArray.dtrace"
                 ),
-                /*
-                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
-                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
-                 */
                 /* e2e_dtrace_exit_016 (Response of type nested array with null and empty elements)
                     This test uses the same OAS spec as e2e_dtrace_exit_015, but some arrays (Nesting levels 2 and 3) are empty or null
 
@@ -244,10 +232,6 @@ public class DtraceE2ETests {
                             []                  # Empty array nesting 2
                          ]
                         }
-                 */
-                /*
-                TODO: (See TODO in e2e_dtrace_exit_007) Currently this test case does not print the null element (The second EXIT2), which makes sense.
-                 Nevertheless, we should consider changing the hashcode of the null element for "null" (Check whether DAIKON accepts this)
                  */
                 Arguments.of("src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/propertyOfTypeNestedArray.yaml", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/testCase_propertyOfTypeNestedArray_nullAndEmptyValues.csv",
                         "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/dtraceFile.dtrace", "src/test/resources/dtraceOracles/exit/propertyOfTypeNestedArray/nestedArrayOfObjects/nullAndEmptyValues/dtraceFile_propertyOfTypeNestedArray_nullAndEmptyValues.dtrace"
