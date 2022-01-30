@@ -1,8 +1,8 @@
-package es.us.isa.jsoninstrumenter.pojos;
+package es.us.isa.jsoninstrumenter.model;
 
 import io.swagger.v3.oas.models.Operation;
 
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.getListOfDeclsVariables;
+import static es.us.isa.jsoninstrumenter.model.DeclsVariable.getListOfDeclsVariables;
 
 public class DeclsEnter {
 

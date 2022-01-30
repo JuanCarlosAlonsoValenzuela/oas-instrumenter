@@ -1,4 +1,4 @@
-package es.us.isa.jsoninstrumenter.pojos;
+package es.us.isa.jsoninstrumenter.model;
 
 import io.swagger.v3.oas.models.media.*;
 import io.swagger.v3.oas.models.Operation;
@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsExit.generateDtraceExitValueOfJSONArray;
+import static es.us.isa.jsoninstrumenter.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJsonObject;
 
 public class DeclsVariable {

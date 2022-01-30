@@ -1,23 +1,5 @@
 package es.us.isa.jsoninstrumenter.print;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import es.us.isa.jsoninstrumenter.pojos.*;
-import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.Operation;
-import io.swagger.v3.oas.models.PathItem;
-import io.swagger.v3.oas.models.Paths;
-import io.swagger.v3.parser.OpenAPIV3Parser;
-import io.swagger.v3.parser.core.models.ParseOptions;
-import org.junit.Test;
-
-import java.util.List;
-import java.util.Map;
-
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.setDeclsClassEnterAndExit;
-import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
 import static org.junit.Assert.assertEquals;
 
 public class NestedArrayOfObjectDtraceFileTest {

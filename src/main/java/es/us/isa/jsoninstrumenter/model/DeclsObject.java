@@ -1,12 +1,10 @@
-package es.us.isa.jsoninstrumenter.pojos;
+package es.us.isa.jsoninstrumenter.model;
 
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.Operation;
 
-import java.util.List;
-
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
+import static es.us.isa.jsoninstrumenter.model.DeclsVariable.*;
 
 public class DeclsObject {
 

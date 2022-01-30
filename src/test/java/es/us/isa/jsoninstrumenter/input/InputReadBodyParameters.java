@@ -1,8 +1,8 @@
 package es.us.isa.jsoninstrumenter.input;
 
-import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
-import es.us.isa.jsoninstrumenter.pojos.DeclsObject;
-import es.us.isa.jsoninstrumenter.pojos.DeclsVariable;
+import es.us.isa.jsoninstrumenter.model.DeclsClass;
+import es.us.isa.jsoninstrumenter.model.DeclsObject;
+import es.us.isa.jsoninstrumenter.model.DeclsVariable;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem;

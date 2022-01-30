@@ -1,4 +1,4 @@
-package es.us.isa.jsoninstrumenter.pojos;
+package es.us.isa.jsoninstrumenter.model;
 
 public enum Comparability {
     implicit,

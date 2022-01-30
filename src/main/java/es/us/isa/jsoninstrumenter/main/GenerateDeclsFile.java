@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.main;
 
-import es.us.isa.jsoninstrumenter.pojos.*;
+import es.us.isa.jsoninstrumenter.model.*;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem.HttpMethod;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -18,7 +18,7 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.*;
+import static es.us.isa.jsoninstrumenter.model.DeclsClass.*;
 import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
 import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
 

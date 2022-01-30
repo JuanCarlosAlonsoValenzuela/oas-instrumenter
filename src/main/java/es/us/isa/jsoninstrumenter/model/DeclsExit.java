@@ -1,4 +1,4 @@
-package es.us.isa.jsoninstrumenter.pojos;
+package es.us.isa.jsoninstrumenter.model;
 
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsVariable.*;
+import static es.us.isa.jsoninstrumenter.model.DeclsVariable.*;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.doBubbleSort;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.*;

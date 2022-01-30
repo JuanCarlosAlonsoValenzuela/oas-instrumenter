@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.print;
 
-import es.us.isa.jsoninstrumenter.pojos.*;
+import es.us.isa.jsoninstrumenter.model.*;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem;
@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.setDeclsClassEnterAndExit;
+import static es.us.isa.jsoninstrumenter.model.DeclsClass.generateOutputDeclsClasses;
+import static es.us.isa.jsoninstrumenter.model.DeclsClass.setDeclsClassEnterAndExit;
 import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
 import static org.junit.Assert.assertEquals;
 

@@ -1,8 +1,8 @@
 package es.us.isa.jsoninstrumenter.output;
 
-import es.us.isa.jsoninstrumenter.pojos.DeclsClass;
-import es.us.isa.jsoninstrumenter.pojos.DeclsObject;
-import es.us.isa.jsoninstrumenter.pojos.DeclsVariable;
+import es.us.isa.jsoninstrumenter.model.DeclsClass;
+import es.us.isa.jsoninstrumenter.model.DeclsObject;
+import es.us.isa.jsoninstrumenter.model.DeclsVariable;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem;
@@ -16,7 +16,7 @@ import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.packageName;
-import static es.us.isa.jsoninstrumenter.pojos.DeclsClass.generateOutputDeclsClasses;
+import static es.us.isa.jsoninstrumenter.model.DeclsClass.generateOutputDeclsClasses;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 

@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.util;
 
-import es.us.isa.jsoninstrumenter.pojos.TestCase;
+import es.us.isa.jsoninstrumenter.model.TestCase;
 
 import java.util.*;
 import java.util.stream.Collectors;

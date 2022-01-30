@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.print;
 
-import es.us.isa.jsoninstrumenter.pojos.DeclsVariable;
+import es.us.isa.jsoninstrumenter.model.DeclsVariable;
 import org.junit.Test;
 
 import java.util.Collections;
