@@ -1,2 +1,0 @@
-,testCaseId,queryParameters,operationId,path,httpMethod,headerParameters,pathParameters,formParameters,bodyParameter,statusCode,passed,failReason,responseBody
-0,test_004,inputParameter=parameterValue,objectExitEndpoint;,/objectExitEndpoint,GET,,,,,200,True,none,"{""stringProperty"": ""stringPropertyValue1"",""objectProperty"": {""arrayStringProperty"": [""element1"", ""element2""],""subObjectProperty"":{""stringProperty"": ""stringPropertyValue2"",""arrayDoubleProperty"": [2.0, 3.0]}}}"
