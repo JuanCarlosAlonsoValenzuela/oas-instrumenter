@@ -15,22 +15,26 @@ variable this.user_id
 	enclosing-var this
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable this.body
-	var-kind variable
+variable this.Accept
+	var-kind field Accept
 	enclosing-var this
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable this.body.array
-	var-kind field array
-	enclosing-var this.body
-	dec-type main.array[]
+variable this.name
+	var-kind field name
+	enclosing-var this
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable this.body.array[..]
-	var-kind array
-	enclosing-var this.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable this.description
+	var-kind field description
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.public
+	var-kind field public
+	enclosing-var this
+	dec-type boolean
+	rep-type boolean
 
 
 ppt main.createPlaylist_Output_201:::CLASS
@@ -344,22 +348,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 
 ppt main.users{user_id}playlists.createPlaylist_201_images(main.createPlaylist_Input):::ENTER
 ppt-type enter
@@ -372,22 +380,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 
 ppt main.users{user_id}playlists.createPlaylist_201_tracks_items(main.createPlaylist_Input):::ENTER
 ppt-type enter
@@ -400,22 +412,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 
 ppt main.users{user_id}playlists.createPlaylist_201(main.createPlaylist_Input):::EXIT1
 ppt-type subexit
@@ -428,22 +444,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201
@@ -647,22 +667,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201_images
@@ -694,22 +718,26 @@ variable input.user_id
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body
-	var-kind variable
+variable input.Accept
+	var-kind field Accept
 	enclosing-var input
-	dec-type main.createPlaylist_Input.bodyArray
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array
-	var-kind field array
-	enclosing-var input.body
-	dec-type main.array[]
+variable input.name
+	var-kind field name
+	enclosing-var input
+	dec-type java.lang.String
 	rep-type java.lang.String
-variable input.body.array[..]
-	var-kind array
-	enclosing-var input.body.array
-	array 1
-	dec-type main.array[]
-	rep-type java.lang.String[]
+variable input.description
+	var-kind field description
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.public
+	var-kind field public
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201_tracks_items

@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjects.yaml";
-    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/nullValues/elementOfArrayNull/testCase_arrayOfObjects_elementOfArrayNull.csv";
+    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
+    private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -153,6 +153,7 @@ public class GenerateDeclsFile {
     public static String getOperationName(Operation operation, Entry<HttpMethod, Operation> operationEntry, String operationEndpoint){
 
         String operationName;
+        // TODO: Consider throwing an error message
         if (operation.getOperationId() == null) {
             String httpMethod = operationEntry.getKey().toString();
             operationName = operationEndpoint + "_" + httpMethod.toLowerCase();
