@@ -21,7 +21,7 @@ testConfiguration:
         genParameters:
         - name: values
           values:
-          - qenf2hlyicucelyckx7gu2n7v
+          - qwerty
           objectValues: null
         valid: true
     - name: Accept

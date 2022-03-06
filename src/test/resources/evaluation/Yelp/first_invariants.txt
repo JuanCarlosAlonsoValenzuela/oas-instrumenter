@@ -1,0 +1,98 @@
+===========================================================================
+main.businessessearch.getBusinesses_200(main.getBusinesses_Input):::ENTER
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0
+===========================================================================
+main.businessessearch.getBusinesses_200(main.getBusinesses_Input):::EXIT
+input == orig(input)
+input.term == orig(input.term)
+input.location == orig(input.location)
+input.latitude == orig(input.latitude)
+input.longitude == orig(input.longitude)
+input.radius == orig(input.radius)
+input.categories == orig(input.categories)
+input.locale == orig(input.locale)
+input.limit == orig(input.limit)
+input.offset == orig(input.offset)
+input.sort_by == orig(input.sort_by)
+input.price == orig(input.price)
+input.open_now == orig(input.open_now)
+input.open_at == orig(input.open_at)
+input.attributes == orig(input.attributes)
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0
+return.total >= 0
+return.region.center.longitude != 0
+return.total >= size(return.businesses[])
+return.region.center.latitude > return.region.center.longitude
+===========================================================================
+main.businessessearch.getBusinesses_200_businesses(main.getBusinesses_Input):::ENTER
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0
+===========================================================================
+main.businessessearch.getBusinesses_200_businesses(main.getBusinesses_Input):::EXIT
+input == orig(input)
+input.term == orig(input.term)
+input.location == orig(input.location)
+input.latitude == orig(input.latitude)
+input.longitude == orig(input.longitude)
+input.radius == orig(input.radius)
+input.categories == orig(input.categories)
+input.locale == orig(input.locale)
+input.limit == orig(input.limit)
+input.offset == orig(input.offset)
+input.sort_by == orig(input.sort_by)
+input.price == orig(input.price)
+input.open_now == orig(input.open_now)
+input.open_at == orig(input.open_at)
+input.attributes == orig(input.attributes)
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0
+return.coordinates.longitude != 0
+LENGTH(return.id)==22
+return.is_closed == false
+return.url is Url
+return.transactions[] elements one of { "delivery", "pickup", "restaurant_reservation" }
+LENGTH(return.location.country)==2
+size(return.categories[]) >= 1
+return.coordinates.latitude > return.coordinates.longitude
+return.coordinates.latitude > return.rating
+return.coordinates.longitude < return.distance
+return.distance > return.rating
+return.review_count >= size(return.transactions[])-1
+size(return.transactions[])-1 <= size(return.location.display_address[])
+===========================================================================
+main.businessessearch.getBusinesses_200_businesses_categories(main.getBusinesses_Input):::ENTER
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0
+===========================================================================
+main.businessessearch.getBusinesses_200_businesses_categories(main.getBusinesses_Input):::EXIT
+input == orig(input)
+input.term == orig(input.term)
+input.location == orig(input.location)
+input.latitude == orig(input.latitude)
+input.longitude == orig(input.longitude)
+input.radius == orig(input.radius)
+input.categories == orig(input.categories)
+input.locale == orig(input.locale)
+input.limit == orig(input.limit)
+input.offset == orig(input.offset)
+input.sort_by == orig(input.sort_by)
+input.price == orig(input.price)
+input.open_now == orig(input.open_now)
+input.open_at == orig(input.open_at)
+input.attributes == orig(input.attributes)
+input.radius >= 0
+input.limit >= 0
+input.offset >= 0
+input.open_at >= 0

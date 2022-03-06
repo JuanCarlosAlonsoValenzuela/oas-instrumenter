@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/Spotify_createPlaylist/spec.yaml";
-    private static String testCasesFilePath = "src/test/resources/Spotify_createPlaylist/testCases_20.csv";
+    private static String openApiSpecPath = "src/test/resources/evaluation/YouTube/openapi_getVideos.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluation/YouTube/test_cases.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -109,9 +109,18 @@ public class GenerateDeclsFile {
             String dtraceContent = "";
             // Generate dTrace file
             List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
+
+            System.out.println("Total number of test cases: " + testCases.size());
+            int i = 0;
             for(TestCase testCase: testCases) {
                 // TODO: operationEndpoint + "_" + httpMethod vs operationId
                 // TODO: Extract ENTER
+
+//                if(i%10==0){
+                    System.out.println("Generated dtrace for " + i + " out of " + testCases.size() + " test cases");
+//                }
+                i++;
+
                 for(DeclsClass declsClass: declsFile.getClasses()) {
                     // The enter and exits belong to the same class
                     if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
