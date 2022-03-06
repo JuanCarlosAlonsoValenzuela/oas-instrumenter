@@ -285,7 +285,7 @@ return.contentDetails.contentRating.djctqRating
 null
 1
 return.contentDetails.contentRating.djctqRatingReasons
-null
+"test_sohw193rssx2_getVideos_return.contentDetails.contentRating.djctqRatingReasons_output"
 1
 return.contentDetails.contentRating.djctqRatingReasons[..]
 nonsensical
@@ -49952,7 +49952,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Generic description"
+"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!► Thanks for subscribing! - http://bit.ly/SubDudePerfectNEXT LEVEL STUFF -------------------------------------------🎒 NEW Merch - http://bit.ly/DPStore📱 Text us - (469) 205-7005🔔 Hit the bell next to Subscribe so you don't miss a video!👨🏻‍💻 Watch our newest vids! - http://bit.ly/NewDPVids📕 Read our Book - "101 Tips, Tricks and Cool Stuff" - https://bit.ly/NewDPBookFollow our Instagrams so we can be best friends -------------------------------------------🏆 http://Instagram.com/DudePerfect🧔🏻 http://Instagram.com/TylerNToney👱🏻‍♂️ http://Instagram.com/Cody_Jones_🙋🏻‍♂️ http://Instagram.com/CobyCotton👨‍🦰 http://Instagram.com/GarrettHilbert⛹🏻‍♂️ http://Instagram.com/CoryCotton-------------------------------------------Bonus points if you're still reading this! Comment: Comment which stereotype we should do next!?!Click here to learn more about Dude Perfect:http://bit.ly/AboutDudePerfectAs always...Go Big and God Bless!- Your friends at Dude PerfectBusiness or Media, please contact us at: Dude@DudePerfect.com------------5 Best Friends and a Panda.If you like Sports + Comedy, come join the Dude Perfect team!Best known for trick shots, stereotypes, battles, bottle flips, ping pong shots and all-around competitive fun, Dude Perfect prides ourselves in making the absolute best family-friendly entertainment possible! Welcome to the crew! Pound it 👊🏻 Noggin 🙇🏻‍♂️ - Dude Perfect"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -49961,7 +49961,7 @@ return.snippet.localized
 "test_qxzeb9tnmjav_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Airplane"
+"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!► Thanks for subscribing! - http://bit.ly/SubDudePerfectNEXT LEVEL STUFF -------------------------------------------🎒 NEW Merch - http://bit.ly/DPStore📱 Text us - (469) 205-7005🔔 Hit the bell next to Subscribe so you don't miss a video!👨🏻‍💻 Watch our newest vids! - http://bit.ly/NewDPVids📕 Read our Book - "101 Tips, Tricks and Cool Stuff" - https://bit.ly/NewDPBookFollow our Instagrams so we can be best friends -------------------------------------------🏆 http://Instagram.com/DudePerfect🧔🏻 http://Instagram.com/TylerNToney👱🏻‍♂️ http://Instagram.com/Cody_Jones_🙋🏻‍♂️ http://Instagram.com/CobyCotton👨‍🦰 http://Instagram.com/GarrettHilbert⛹🏻‍♂️ http://Instagram.com/CoryCotton-------------------------------------------Bonus points if you're still reading this! Comment: Comment which stereotype we should do next!?!Click here to learn more about Dude Perfect:http://bit.ly/AboutDudePerfectAs always...Go Big and God Bless!- Your friends at Dude PerfectBusiness or Media, please contact us at: Dude@DudePerfect.com------------5 Best Friends and a Panda.If you like Sports + Comedy, come join the Dude Perfect team!Best known for trick shots, stereotypes, battles, bottle flips, ping pong shots and all-around competitive fun, Dude Perfect prides ourselves in making the absolute best family-friendly entertainment possible! Welcome to the crew! Pound it 👊🏻 Noggin 🙇🏻‍♂️ - Dude Perfect"
 1
 return.snippet.localized.title
 "Airplane Stereotypes"
@@ -50688,7 +50688,7 @@ return.snippet.defaultLanguage
 "en"
 1
 return.snippet.description
-"MAKE SURE YOU WATCH UNTIL WE SURPRISE MRBEAST"
+"MAKE SURE YOU WATCH UNTIL WE SURPRISE MRBEAST!Donate to TeamSeas here! https://teamseas.orgMerch - https://zhcstore.comShoutout to @MrBeast  for making this possible!Special thanks to @Preston for the motivational video!follow these for good luckInstagram - https://www.instagram.com/zhcTwitter - https://twitter.com/zhc_ytFacebook - https://www.facebook.com/ZHC"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -50697,7 +50697,7 @@ return.snippet.localized
 "test_qxzeb9tnmjav_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"MAKE SURE YOU WATCH UNTIL WE SURPRISE MRBEAST"
+"MAKE SURE YOU WATCH UNTIL WE SURPRISE MRBEAST!Donate to TeamSeas here! https://teamseas.orgMerch - https://zhcstore.comShoutout to @MrBeast  for making this possible!Special thanks to @Preston for the motivational video!follow these for good luckInstagram - https://www.instagram.com/zhcTwitter - https://twitter.com/zhc_ytFacebook - https://www.facebook.com/ZHC"
 1
 return.snippet.localized.title
 "I Surprised MrBeast With A Custom Boat!"
@@ -51424,7 +51424,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Very long description"
+"Rude driver gets INSTANT karma! 🤬 #Shorts.........________Please be advised that this page’s videos are intended for entertainment purposes only. The videos on this page include scripted dramas, satires, parodies, magic tricks, pre-recorded videos, and other forms of entertainment. Names, characters and incidents are often the product of the director’s imagination, so any resemblance to actual persons or actual events is purely coincidental."
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -51433,7 +51433,7 @@ return.snippet.localized
 "test_qxzeb9tnmjav_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Very long description"
+"Rude driver gets INSTANT karma! 🤬 #Shorts.........________Please be advised that this page’s videos are intended for entertainment purposes only. The videos on this page include scripted dramas, satires, parodies, magic tricks, pre-recorded videos, and other forms of entertainment. Names, characters and incidents are often the product of the director’s imagination, so any resemblance to actual persons or actual events is purely coincidental."
 1
 return.snippet.localized.title
 "Rude driver gets INSTANT karma! 🤬 #Shorts"
@@ -52160,7 +52160,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Thanks for watching"
+"Thanks for watching! Love you guys!Merchandise ▶ http://dannyduncan69.comTwitter ▶ http://www.twitter.com/DannyDuncan69Instagram ▶ http://www.instagram.com/DannyDuncan69Facebook▶ http://www.facebook.com/DannyDuncan69"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -52169,7 +52169,7 @@ return.snippet.localized
 "test_qxzeb9tnmjav_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Thanks for watching"
+"Thanks for watching! Love you guys!Merchandise ▶ http://dannyduncan69.comTwitter ▶ http://www.twitter.com/DannyDuncan69Instagram ▶ http://www.instagram.com/DannyDuncan69Facebook▶ http://www.facebook.com/DannyDuncan69"
 1
 return.snippet.localized.title
 "I Bought the World’s Strongest Car!"
@@ -52896,7 +52896,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Merchandising"
+"Get Current and use my code MCFARLAND for a chance to win $500:https://www.current.com/cleetusCheck out all of our hats, shirts and more here: http://cleetusmcfarland.com/store/Freedom Factory Tickets Tickets! http://thefoat.com/freedomfactoryOur 2022 Sponsors: https://www.holley.comhttps://texas-speed.comhttps://www.motionraceworks.comhttps://www.nittotire.comhttps://www.summitracing.comhttps://heatwavevisual.comCleetus2 Channel - https://goo.gl/Ph2wyoHolley's channel - https://www.youtube.com/channel/UCeQfJXzg0gnfuM4tgmagCCw**Social Media:Instagram - https://goo.gl/LZvy5eFacebook - https://goo.gl/gdwhh1"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -52905,7 +52905,7 @@ return.snippet.localized
 "test_qxzeb9tnmjav_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Merchandising"
+"Get Current and use my code MCFARLAND for a chance to win $500:https://www.current.com/cleetusCheck out all of our hats, shirts and more here: http://cleetusmcfarland.com/store/Freedom Factory Tickets Tickets! http://thefoat.com/freedomfactoryOur 2022 Sponsors: https://www.holley.comhttps://texas-speed.comhttps://www.motionraceworks.comhttps://www.nittotire.comhttps://www.summitracing.comhttps://heatwavevisual.comCleetus2 Channel - https://goo.gl/Ph2wyoHolley's channel - https://www.youtube.com/channel/UCeQfJXzg0gnfuM4tgmagCCw**Social Media:Instagram - https://goo.gl/LZvy5eFacebook - https://goo.gl/gdwhh1"
 1
 return.snippet.localized.title
 "We Had a Bad Crash... (Just Bought This Car)"
@@ -53753,7 +53753,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!
+"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!► Thanks for subscribing! - http://bit.ly/SubDudePerfectNEXT LEVEL STUFF -------------------------------------------🎒 NEW Merch - http://bit.ly/DPStore📱 Text us - (469) 205-7005🔔 Hit the bell next to Subscribe so you don't miss a video!👨🏻‍💻 Watch our newest vids! - http://bit.ly/NewDPVids📕 Read our Book - "101 Tips, Tricks and Cool Stuff" - https://bit.ly/NewDPBookFollow our Instagrams so we can be best friends -------------------------------------------🏆 http://Instagram.com/DudePerfect🧔🏻 http://Instagram.com/TylerNToney👱🏻‍♂️ http://Instagram.com/Cody_Jones_🙋🏻‍♂️ http://Instagram.com/CobyCotton👨‍🦰 http://Instagram.com/GarrettHilbert⛹🏻‍♂️ http://Instagram.com/CoryCotton-------------------------------------------Bonus points if you're still reading this! Comment: Comment which stereotype we should do next!?!Click here to learn more about Dude Perfect:http://bit.ly/AboutDudePerfectAs always...Go Big and God Bless!- Your friends at Dude PerfectBusiness or Media, please contact us at: Dude@DudePerfect.com------------5 Best Friends and a Panda.If you like Sports + Comedy, come join the Dude Perfect team!Best known for trick shots, stereotypes, battles, bottle flips, ping pong shots and all-around competitive fun, Dude Perfect prides ourselves in making the absolute best family-friendly entertainment possible! Welcome to the crew! Pound it 👊🏻 Noggin 🙇🏻‍♂️ - Dude Perfect"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -53762,7 +53762,7 @@ return.snippet.localized
 "test_s18ei56oq6go_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!
+"Airplane Stereotypes…Love 'em or Hate 'em, we all know 'em! Huge thanks to Nomatic for sponsoring this video! NOMATIC VACATION GIVEAWAY: http://www.nomatic.com/dudeperfect Enter to win an all-expenses paid trip to wherever you want to go + tons of other prizes!► Thanks for subscribing! - http://bit.ly/SubDudePerfectNEXT LEVEL STUFF -------------------------------------------🎒 NEW Merch - http://bit.ly/DPStore📱 Text us - (469) 205-7005🔔 Hit the bell next to Subscribe so you don't miss a video!👨🏻‍💻 Watch our newest vids! - http://bit.ly/NewDPVids📕 Read our Book - "101 Tips, Tricks and Cool Stuff" - https://bit.ly/NewDPBookFollow our Instagrams so we can be best friends -------------------------------------------🏆 http://Instagram.com/DudePerfect🧔🏻 http://Instagram.com/TylerNToney👱🏻‍♂️ http://Instagram.com/Cody_Jones_🙋🏻‍♂️ http://Instagram.com/CobyCotton👨‍🦰 http://Instagram.com/GarrettHilbert⛹🏻‍♂️ http://Instagram.com/CoryCotton-------------------------------------------Bonus points if you're still reading this! Comment: Comment which stereotype we should do next!?!Click here to learn more about Dude Perfect:http://bit.ly/AboutDudePerfectAs always...Go Big and God Bless!- Your friends at Dude PerfectBusiness or Media, please contact us at: Dude@DudePerfect.com------------5 Best Friends and a Panda.If you like Sports + Comedy, come join the Dude Perfect team!Best known for trick shots, stereotypes, battles, bottle flips, ping pong shots and all-around competitive fun, Dude Perfect prides ourselves in making the absolute best family-friendly entertainment possible! Welcome to the crew! Pound it 👊🏻 Noggin 🙇🏻‍♂️ - Dude Perfect"
 1
 return.snippet.localized.title
 "Airplane Stereotypes"
@@ -54489,7 +54489,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"2D vs 1D"
+"2D is cool but 1D is coolerenter to win a free trip when you download the Wander app!! - https://wander.com/ryan"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -54498,7 +54498,7 @@ return.snippet.localized
 "test_s18ei56oq6go_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"2D vs 1D"
+"2D is cool but 1D is coolerenter to win a free trip when you download the Wander app!! - https://wander.com/ryan"
 1
 return.snippet.localized.title
 "I Survived 50 Hours in 2D"
@@ -55225,7 +55225,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"nore"
+"N.O.R.E. & DJ EFN are the #DrinkChamps. In this episode, we chop it up with the one and only #TheGame!The rapper kicks it and shares stories about his legendary career, working with Dr. Dre, his history with 50 Cent & G-Unit, Super Bowl rumors and much more!Los Angeles Confidential also talks about his latest & most controversial song to date “EAZY” w/ Ye aka Kanye West. Game pulled up determined to make this a TOP 5 episode in “Drink Champs” history with lots of great stories that you don’t want to miss!!!! Wack 100 also joins us the conversation! Make some noise!!! 💐💐💐🏆🏆🏆 #interviewFind REVOLT on TV here: https://revolt.tv/providersStay connected with REVOLT here: Download our app for more exclusive content!iOS: https://apps.apple.com/us/app/revolt-tv/id863492077Android: https://play.google.com/store/apps/details?id=com.zype.revolt+ Subscribe now: http://bit.ly/REVOLT_Subscribe_NowWebsite: http://REVOLT.tv (Surf) Instagram: http://Instagram.com/REVOLTTV (Follow) Twitter: http://twitter.com/REVOLTTV (Follow) Facebook: http://www.facebook.com/REVOLT (Like) Text Us! (404) 737-1393Snapchat: Revolt.TV (Add)TikTok: REVOLTAbout REVOLT :Launched by Sean "Diddy" Combs, REVOLT.TV is #1 destination in hip hop. Focused on expertly curating the best of the best in music and engaging youth in social conversation, the multi-genre, multi-platform network offers breaking music news, videos, artist interviews, exclusive performances, and original programming. Artists REVOLT.TV covers include: Joe Budden, Drake, Chance the Rapper, Jay-Z, French Montana, Lil Wayne, Puff Daddy, Diddy, Future, Rick Ross, Remy Ma, Nicki Minaj, Beyonce, Rihanna, Lil Yachty, Kendrick Lamar, Kanye West, Solange, and many more."
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -55234,7 +55234,7 @@ return.snippet.localized
 "test_s18ei56oq6go_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"nore"
+"N.O.R.E. & DJ EFN are the #DrinkChamps. In this episode, we chop it up with the one and only #TheGame!The rapper kicks it and shares stories about his legendary career, working with Dr. Dre, his history with 50 Cent & G-Unit, Super Bowl rumors and much more!Los Angeles Confidential also talks about his latest & most controversial song to date “EAZY” w/ Ye aka Kanye West. Game pulled up determined to make this a TOP 5 episode in “Drink Champs” history with lots of great stories that you don’t want to miss!!!! Wack 100 also joins us the conversation! Make some noise!!! 💐💐💐🏆🏆🏆 #interviewFind REVOLT on TV here: https://revolt.tv/providersStay connected with REVOLT here: Download our app for more exclusive content!iOS: https://apps.apple.com/us/app/revolt-tv/id863492077Android: https://play.google.com/store/apps/details?id=com.zype.revolt+ Subscribe now: http://bit.ly/REVOLT_Subscribe_NowWebsite: http://REVOLT.tv (Surf) Instagram: http://Instagram.com/REVOLTTV (Follow) Twitter: http://twitter.com/REVOLTTV (Follow) Facebook: http://www.facebook.com/REVOLT (Like) Text Us! (404) 737-1393Snapchat: Revolt.TV (Add)TikTok: REVOLTAbout REVOLT :Launched by Sean "Diddy" Combs, REVOLT.TV is #1 destination in hip hop. Focused on expertly curating the best of the best in music and engaging youth in social conversation, the multi-genre, multi-platform network offers breaking music news, videos, artist interviews, exclusive performances, and original programming. Artists REVOLT.TV covers include: Joe Budden, Drake, Chance the Rapper, Jay-Z, French Montana, Lil Wayne, Puff Daddy, Diddy, Future, Rick Ross, Remy Ma, Nicki Minaj, Beyonce, Rihanna, Lil Yachty, Kendrick Lamar, Kanye West, Solange, and many more."
 1
 return.snippet.localized.title
 "The Game On Kanye West, Super Bowl Rumors, 50 Cent & G-Unit, Dr. Dre & More | Drink Champs"
@@ -55961,21 +55961,7 @@ return.snippet.defaultLanguage
 "en"
 1
 return.snippet.description
-"Get Dragon City using my link for free stuff! https://dragoncity.onelink.me/DDHl/FundyMar
-So I Tried Gamebreaking Mods For Minecraft, and things went crazy...
-
-Twitch (I STREAM A LOT): https://www.twitch.tv/fundy
-Twitter (FUNNY STUFF): https://twitter.com/fundylive
-Discord: https://discord.gg/fundy
-
-★  Did you know subscribing on YouTube is free? Pretty neat, you should check that out.  ★
-
-Music:
-A bunch lol im lazy
-
-In this video I tried out a bunch of different cursed / game breaking / corrupted mods that were coded by other people, and reviewed them to see what they are like. Things got crazy. Honestly this was a ton of fun, and this video was a great time to make, every mod was incredibly funny. I really hope you enjoy this one! 
-
-#Fundy #Minecraft"
+"Get Dragon City using my link for free stuff! https://dragoncity.onelink.me/DDHl/FundyMarSo I Tried Gamebreaking Mods For Minecraft, and things went crazy...Twitch (I STREAM A LOT): https://www.twitch.tv/fundyTwitter (FUNNY STUFF): https://twitter.com/fundyliveDiscord: https://discord.gg/fundy★  Did you know subscribing on YouTube is free? Pretty neat, you should check that out.  ★Music:A bunch lol im lazyIn this video I tried out a bunch of different cursed / game breaking / corrupted mods that were coded by other people, and reviewed them to see what they are like. Things got crazy. Honestly this was a ton of fun, and this video was a great time to make, every mod was incredibly funny. I really hope you enjoy this one! #Fundy #Minecraft"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -55984,21 +55970,7 @@ return.snippet.localized
 "test_s18ei56oq6go_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Get Dragon City using my link for free stuff! https://dragoncity.onelink.me/DDHl/FundyMar
-So I Tried Gamebreaking Mods For Minecraft, and things went crazy...
-
-Twitch (I STREAM A LOT): https://www.twitch.tv/fundy
-Twitter (FUNNY STUFF): https://twitter.com/fundylive
-Discord: https://discord.gg/fundy
-
-★  Did you know subscribing on YouTube is free? Pretty neat, you should check that out.  ★
-
-Music:
-A bunch lol im lazy
-
-In this video I tried out a bunch of different cursed / game breaking / corrupted mods that were coded by other people, and reviewed them to see what they are like. Things got crazy. Honestly this was a ton of fun, and this video was a great time to make, every mod was incredibly funny. I really hope you enjoy this one! 
-
-#Fundy #Minecraft"
+"Get Dragon City using my link for free stuff! https://dragoncity.onelink.me/DDHl/FundyMarSo I Tried Gamebreaking Mods For Minecraft, and things went crazy...Twitch (I STREAM A LOT): https://www.twitch.tv/fundyTwitter (FUNNY STUFF): https://twitter.com/fundyliveDiscord: https://discord.gg/fundy★  Did you know subscribing on YouTube is free? Pretty neat, you should check that out.  ★Music:A bunch lol im lazyIn this video I tried out a bunch of different cursed / game breaking / corrupted mods that were coded by other people, and reviewed them to see what they are like. Things got crazy. Honestly this was a ton of fun, and this video was a great time to make, every mod was incredibly funny. I really hope you enjoy this one! #Fundy #Minecraft"
 1
 return.snippet.localized.title
 "So I Tried Gamebreaking Mods For Minecraft..."
@@ -56725,17 +56697,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Mario goes into Roblox and commits OOF
-Check out my FULLY ANIMATED SHOWS!! 👉https://www.youtube.com/c/glitchprod
-
-Grab some MERCH to help support the channel 😃 ► http://smg4.store
-SUBSCRIBE or Mario will steal your spaghetti 😡► http://bit.ly/2mcYfnh
-
-----------------------------------------------------------------
-FOLLOW ME ON SOCIAL MEDIA -- best way to get in contact with us!
-• Twitter ➤ https://twitter.com/smg4official
-•  Instagram ➤ https://www.instagram.com/smg4official
-•  TikTok ➤ https://www.tiktok.com/@smg4official"
+"Mario goes into Roblox and commits OOFCheck out my FULLY ANIMATED SHOWS!! 👉https://www.youtube.com/c/glitchprodGrab some MERCH to help support the channel 😃 ► http://smg4.storeSUBSCRIBE or Mario will steal your spaghetti 😡► http://bit.ly/2mcYfnh----------------------------------------------------------------FOLLOW ME ON SOCIAL MEDIA -- best way to get in contact with us!• Twitter ➤ https://twitter.com/smg4official•  Instagram ➤ https://www.instagram.com/smg4official•  TikTok ➤ https://www.tiktok.com/@smg4official"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -56744,17 +56706,7 @@ return.snippet.localized
 "test_s18ei56oq6go_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Mario goes into Roblox and commits OOF
-Check out my FULLY ANIMATED SHOWS!! 👉https://www.youtube.com/c/glitchprod
-
-Grab some MERCH to help support the channel 😃 ► http://smg4.store
-SUBSCRIBE or Mario will steal your spaghetti 😡► http://bit.ly/2mcYfnh
-
-----------------------------------------------------------------
-FOLLOW ME ON SOCIAL MEDIA -- best way to get in contact with us!
-• Twitter ➤ https://twitter.com/smg4official
-•  Instagram ➤ https://www.instagram.com/smg4official
-•  TikTok ➤ https://www.tiktok.com/@smg4official"
+"Mario goes into Roblox and commits OOFCheck out my FULLY ANIMATED SHOWS!! 👉https://www.youtube.com/c/glitchprodGrab some MERCH to help support the channel 😃 ► http://smg4.storeSUBSCRIBE or Mario will steal your spaghetti 😡► http://bit.ly/2mcYfnh----------------------------------------------------------------FOLLOW ME ON SOCIAL MEDIA -- best way to get in contact with us!• Twitter ➤ https://twitter.com/smg4official•  Instagram ➤ https://www.instagram.com/smg4official•  TikTok ➤ https://www.tiktok.com/@smg4official"
 1
 return.snippet.localized.title
 "SMG4: If Mario Was In... ROBLOX"
@@ -139772,22 +139724,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Tämä on SEURAAJAT vs. JAAKKO PARKKALI
-
-Jos haluat tukea kanavaa, tilaa KOUKUS VIP ↓ Reagointisisältöä jo kahden sarjan verran.
-https://www.youtube.com/channel/UCcf0PmbSYx7k66h64AC3nxw/join
-
-🧢 HOOKED™ -vaatemallisto
-https://bit.ly/2YdhlxL 
-
-
-📈 Business:
-rooperannisto@inmobile.fi
-joonapuhakka98@gmail.com
-
-⇲ Instagram:
-@joonapuhakka
-@rooperannisto"
+"Tämä on SEURAAJAT vs. JAAKKO PARKKALIJos haluat tukea kanavaa, tilaa KOUKUS VIP ↓ Reagointisisältöä jo kahden sarjan verran.https://www.youtube.com/channel/UCcf0PmbSYx7k66h64AC3nxw/join🧢 HOOKED™ -vaatemallistohttps://bit.ly/2YdhlxL 📈 Business:rooperannisto@inmobile.fijoonapuhakka98@gmail.com⇲ Instagram:@joonapuhakka@rooperannisto"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -139796,22 +139733,7 @@ return.snippet.localized
 "test_urgtcipq89pv_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Tämä on SEURAAJAT vs. JAAKKO PARKKALI
-
-Jos haluat tukea kanavaa, tilaa KOUKUS VIP ↓ Reagointisisältöä jo kahden sarjan verran.
-https://www.youtube.com/channel/UCcf0PmbSYx7k66h64AC3nxw/join
-
-🧢 HOOKED™ -vaatemallisto
-https://bit.ly/2YdhlxL 
-
-
-📈 Business:
-rooperannisto@inmobile.fi
-joonapuhakka98@gmail.com
-
-⇲ Instagram:
-@joonapuhakka
-@rooperannisto"
+"Tämä on SEURAAJAT vs. JAAKKO PARKKALIJos haluat tukea kanavaa, tilaa KOUKUS VIP ↓ Reagointisisältöä jo kahden sarjan verran.https://www.youtube.com/channel/UCcf0PmbSYx7k66h64AC3nxw/join🧢 HOOKED™ -vaatemallistohttps://bit.ly/2YdhlxL 📈 Business:rooperannisto@inmobile.fijoonapuhakka98@gmail.com⇲ Instagram:@joonapuhakka@rooperannisto"
 1
 return.snippet.localized.title
 "SEURAAJAT vs. JAAKKO PARKKALI"
@@ -141274,78 +141196,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"Viikon kurkistuksessa näet tulevan viikon jaksoista herkkupaloja! Viikon kurkistus joka perjantai kello 20.00.
-
-Tilaa Salkkareiden virallinen YouTube-kanava: https://goo.gl/KQ4Npx
-
-Tuotanto: Fremantle Finland
-
-Katso kokonaiset jaksot: 
-https://www.mtv.fi/sarja/salatut-elamat-33005005
-
-Katso jaksot ennakkoon C Moressa: 
-https://www.cmore.fi/ohjelma/44002095/salatut-elamat
-
-Lue uusimmat uutiset ja juonipaljastukset: 
-https://www.mtvuutiset.fi/salatutelamat
-
-Seuraa Salattuja elämiä: 
-Facebook: https://www.facebook.com/MTVSalatutElamat
-Instagram: https://www.instagram.com/mtvsalatutelamat
-
-
-Salatut elämät eli Salkkarit on Suomen pitkäikäisin päivittäisdraama. Katsojat ovat saaneet seurata Pihlajakatu 23 -osoitteen monenmoisten asukkaiden värikkäitä elämänvaiheita jo 25.1.1999 alkaen MTV3-kanavalla. Sarjaa tuottaa Fremantle Finland. Salkkareita kuvataan Konalan-studiossa sekä ympäri Helsinkiä. 
- 
-
-Sarjan hahmot (Kausi 2022) 
- 
-Ismo Laitela (Esko Kovero)
-Kalle Laitela (Pete Lattu)
- 
-Ulla Taalasmaa (Maija-Liisa Peuhu)
-Kari Taalasmaa (Tommi Taurula)
-Elina Taalasmaa (Inna Tähkänen)
-
-Noel Taalasmaa (Jarkko Miettinen)
-Toivo Taalasmaa (Oliver Hatava)
- 
-Aki Nikkinen (Sami Uotila)
-Henrik Ekholm (Tuure Taskinen)
-
-Nella Tamminen (Emma Nopanen)
-Lasse Sievinen (Timo Jurkka)
-Jere Sievinen (Aku Sipola)
-Joonatan Sievinen (Markku Pulli)
-Leo Sievinen (Aron Syrjä)
-
-Jutta Korhonen (Maarit Poussa)
-Aaro Vaalanne (Teemu Lehtilä)
-
-Salla Mattila (Hanna Kinnunen)
-Mirkku Mattila (Tuija Piepponen)
-Cindy Rintala (Mia Ehrnrooth)
-
-Aino Kaukovaara (Jasmin Voutilainen)
-Sampo Kaukovaara (Sampsa Tuomala)
-
-Dahlia Mustavaara (Inkeri Mertanen)
-Gunnar Mustavaara (Raimo Grönberg)
-
-Mira Angervuo (Olga Heikkala)
-Viola Angervuo (Vivi Wahlström)
-
-Miki Kajander (Konsta Hietanen)
-Laila Kajander (Sofia Lehtinen)
-Matias Kajander (Elmeri Ylä-Rautio)
-
-Susu Honkanen (Tuuli Mattila)
-Marika Honkanen (Susanna Laine)
-Daniela Honkanen (Lenita Susi)
-
-Kristian Harju (Axel Milliam)
-Joanna Lumijoki (Johanna Anttila)
-
-#salkkarit #salatutelämät"
+"Viikon kurkistuksessa näet tulevan viikon jaksoista herkkupaloja! Viikon kurkistus joka perjantai kello 20.00.Tilaa Salkkareiden virallinen YouTube-kanava: https://goo.gl/KQ4NpxTuotanto: Fremantle FinlandKatso kokonaiset jaksot: https://www.mtv.fi/sarja/salatut-elamat-33005005Katso jaksot ennakkoon C Moressa: https://www.cmore.fi/ohjelma/44002095/salatut-elamatLue uusimmat uutiset ja juonipaljastukset: https://www.mtvuutiset.fi/salatutelamatSeuraa Salattuja elämiä: Facebook: https://www.facebook.com/MTVSalatutElamatInstagram: https://www.instagram.com/mtvsalatutelamatSalatut elämät eli Salkkarit on Suomen pitkäikäisin päivittäisdraama. Katsojat ovat saaneet seurata Pihlajakatu 23 -osoitteen monenmoisten asukkaiden värikkäitä elämänvaiheita jo 25.1.1999 alkaen MTV3-kanavalla. Sarjaa tuottaa Fremantle Finland. Salkkareita kuvataan Konalan-studiossa sekä ympäri Helsinkiä.  Sarjan hahmot (Kausi 2022)  Ismo Laitela (Esko Kovero)Kalle Laitela (Pete Lattu) Ulla Taalasmaa (Maija-Liisa Peuhu)Kari Taalasmaa (Tommi Taurula)Elina Taalasmaa (Inna Tähkänen)Noel Taalasmaa (Jarkko Miettinen)Toivo Taalasmaa (Oliver Hatava) Aki Nikkinen (Sami Uotila)Henrik Ekholm (Tuure Taskinen)Nella Tamminen (Emma Nopanen)Lasse Sievinen (Timo Jurkka)Jere Sievinen (Aku Sipola)Joonatan Sievinen (Markku Pulli)Leo Sievinen (Aron Syrjä)Jutta Korhonen (Maarit Poussa)Aaro Vaalanne (Teemu Lehtilä)Salla Mattila (Hanna Kinnunen)Mirkku Mattila (Tuija Piepponen)Cindy Rintala (Mia Ehrnrooth)Aino Kaukovaara (Jasmin Voutilainen)Sampo Kaukovaara (Sampsa Tuomala)Dahlia Mustavaara (Inkeri Mertanen)Gunnar Mustavaara (Raimo Grönberg)Mira Angervuo (Olga Heikkala)Viola Angervuo (Vivi Wahlström)Miki Kajander (Konsta Hietanen)Laila Kajander (Sofia Lehtinen)Matias Kajander (Elmeri Ylä-Rautio)Susu Honkanen (Tuuli Mattila)Marika Honkanen (Susanna Laine)Daniela Honkanen (Lenita Susi)Kristian Harju (Axel Milliam)Joanna Lumijoki (Johanna Anttila)#salkkarit #salatutelämät"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -141354,78 +141205,7 @@ return.snippet.localized
 "test_urgtcipq89pv_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"Viikon kurkistuksessa näet tulevan viikon jaksoista herkkupaloja! Viikon kurkistus joka perjantai kello 20.00.
-
-Tilaa Salkkareiden virallinen YouTube-kanava: https://goo.gl/KQ4Npx
-
-Tuotanto: Fremantle Finland
-
-Katso kokonaiset jaksot: 
-https://www.mtv.fi/sarja/salatut-elamat-33005005
-
-Katso jaksot ennakkoon C Moressa: 
-https://www.cmore.fi/ohjelma/44002095/salatut-elamat
-
-Lue uusimmat uutiset ja juonipaljastukset: 
-https://www.mtvuutiset.fi/salatutelamat
-
-Seuraa Salattuja elämiä: 
-Facebook: https://www.facebook.com/MTVSalatutElamat
-Instagram: https://www.instagram.com/mtvsalatutelamat
-
-
-Salatut elämät eli Salkkarit on Suomen pitkäikäisin päivittäisdraama. Katsojat ovat saaneet seurata Pihlajakatu 23 -osoitteen monenmoisten asukkaiden värikkäitä elämänvaiheita jo 25.1.1999 alkaen MTV3-kanavalla. Sarjaa tuottaa Fremantle Finland. Salkkareita kuvataan Konalan-studiossa sekä ympäri Helsinkiä. 
- 
-
-Sarjan hahmot (Kausi 2022) 
- 
-Ismo Laitela (Esko Kovero)
-Kalle Laitela (Pete Lattu)
- 
-Ulla Taalasmaa (Maija-Liisa Peuhu)
-Kari Taalasmaa (Tommi Taurula)
-Elina Taalasmaa (Inna Tähkänen)
-
-Noel Taalasmaa (Jarkko Miettinen)
-Toivo Taalasmaa (Oliver Hatava)
- 
-Aki Nikkinen (Sami Uotila)
-Henrik Ekholm (Tuure Taskinen)
-
-Nella Tamminen (Emma Nopanen)
-Lasse Sievinen (Timo Jurkka)
-Jere Sievinen (Aku Sipola)
-Joonatan Sievinen (Markku Pulli)
-Leo Sievinen (Aron Syrjä)
-
-Jutta Korhonen (Maarit Poussa)
-Aaro Vaalanne (Teemu Lehtilä)
-
-Salla Mattila (Hanna Kinnunen)
-Mirkku Mattila (Tuija Piepponen)
-Cindy Rintala (Mia Ehrnrooth)
-
-Aino Kaukovaara (Jasmin Voutilainen)
-Sampo Kaukovaara (Sampsa Tuomala)
-
-Dahlia Mustavaara (Inkeri Mertanen)
-Gunnar Mustavaara (Raimo Grönberg)
-
-Mira Angervuo (Olga Heikkala)
-Viola Angervuo (Vivi Wahlström)
-
-Miki Kajander (Konsta Hietanen)
-Laila Kajander (Sofia Lehtinen)
-Matias Kajander (Elmeri Ylä-Rautio)
-
-Susu Honkanen (Tuuli Mattila)
-Marika Honkanen (Susanna Laine)
-Daniela Honkanen (Lenita Susi)
-
-Kristian Harju (Axel Milliam)
-Joanna Lumijoki (Johanna Anttila)
-
-#salkkarit #salatutelämät"
+"Viikon kurkistuksessa näet tulevan viikon jaksoista herkkupaloja! Viikon kurkistus joka perjantai kello 20.00.Tilaa Salkkareiden virallinen YouTube-kanava: https://goo.gl/KQ4NpxTuotanto: Fremantle FinlandKatso kokonaiset jaksot: https://www.mtv.fi/sarja/salatut-elamat-33005005Katso jaksot ennakkoon C Moressa: https://www.cmore.fi/ohjelma/44002095/salatut-elamatLue uusimmat uutiset ja juonipaljastukset: https://www.mtvuutiset.fi/salatutelamatSeuraa Salattuja elämiä: Facebook: https://www.facebook.com/MTVSalatutElamatInstagram: https://www.instagram.com/mtvsalatutelamatSalatut elämät eli Salkkarit on Suomen pitkäikäisin päivittäisdraama. Katsojat ovat saaneet seurata Pihlajakatu 23 -osoitteen monenmoisten asukkaiden värikkäitä elämänvaiheita jo 25.1.1999 alkaen MTV3-kanavalla. Sarjaa tuottaa Fremantle Finland. Salkkareita kuvataan Konalan-studiossa sekä ympäri Helsinkiä.  Sarjan hahmot (Kausi 2022)  Ismo Laitela (Esko Kovero)Kalle Laitela (Pete Lattu) Ulla Taalasmaa (Maija-Liisa Peuhu)Kari Taalasmaa (Tommi Taurula)Elina Taalasmaa (Inna Tähkänen)Noel Taalasmaa (Jarkko Miettinen)Toivo Taalasmaa (Oliver Hatava) Aki Nikkinen (Sami Uotila)Henrik Ekholm (Tuure Taskinen)Nella Tamminen (Emma Nopanen)Lasse Sievinen (Timo Jurkka)Jere Sievinen (Aku Sipola)Joonatan Sievinen (Markku Pulli)Leo Sievinen (Aron Syrjä)Jutta Korhonen (Maarit Poussa)Aaro Vaalanne (Teemu Lehtilä)Salla Mattila (Hanna Kinnunen)Mirkku Mattila (Tuija Piepponen)Cindy Rintala (Mia Ehrnrooth)Aino Kaukovaara (Jasmin Voutilainen)Sampo Kaukovaara (Sampsa Tuomala)Dahlia Mustavaara (Inkeri Mertanen)Gunnar Mustavaara (Raimo Grönberg)Mira Angervuo (Olga Heikkala)Viola Angervuo (Vivi Wahlström)Miki Kajander (Konsta Hietanen)Laila Kajander (Sofia Lehtinen)Matias Kajander (Elmeri Ylä-Rautio)Susu Honkanen (Tuuli Mattila)Marika Honkanen (Susanna Laine)Daniela Honkanen (Lenita Susi)Kristian Harju (Axel Milliam)Joanna Lumijoki (Johanna Anttila)#salkkarit #salatutelämät"
 1
 return.snippet.localized.title
 "7.3. - 11.3.2022 | Viikon kurkistus | Salatut elämät"
@@ -142888,149 +142668,7 @@ return.snippet.defaultLanguage
 null
 1
 return.snippet.description
-"WATCH Cole LaBrant's video here: https://youtu.be/sYYBFrSY57A
-
-🎬 WATCH Behind The Scenes for this video here: https://youtu.be/FC4NhILCVzM
-
-
-✅ Download my FREE mobile app 👇🏾
-App Store = https://apple.co/3nhvjap
-Google Play = https://bit.ly/3DRzS1I
-
-
-💥 Don't forget to SUBSCRIBE to my channel by clicking here ➞ ➞ http://bit.ly/DharMannYouTube **Make sure you CLICK THE BELL ICON so you can get notifications when my next video goes up so you don’t miss anything!
-
-REMEMBER - We're not just telling stories, we're changing lives! So please help my videos change more lives by SHARING!
-
-
-
-⚑  SHOP EXCLUSIVE MERCH! ⚑  
-Shop Merch ➜ https://shop.dharmann.com/
-
-
-
-⚑ CONNECT WITH ME ⚑ 
-Instagram ➜ https://www.instagram.com/dhar.mann/
-Facebook ➜ https://www.facebook.com/dharmannofficial
-Twitter ➜ https://twitter.com/dharmann
-Pinterest ➜ https://pinterest.com/dharmannofficial
-TikTok ➜ https://bit.ly/34P7DQR
-Newsletter Sign-Up ➜ http://bit.ly/2uNssig
-
-
-
-★ OTHER CHANNELS ★ 
-🔴 Behind-The-Scenes Channel ➜ https://bit.ly/3dJRfGb
-🟡 Top Videos Channel ➜ https://bit.ly/2PPqSH9
-🟠 Reactions Channel ➜ https://bit.ly/3ftiiYk
-🟢 Extended Cuts ➜ https://bit.ly/3iBiNBS
-Compilations Channel ➜ https://bit.ly/2S89zly
-Dhar and Laura Vlog ➜ http://bit.ly/DharAndLauraYouTube
-
-
-INTERNATIONAL CHANNELS:
-Spanish: https://bit.ly/2EuagyY
-Portuguese: https://bit.ly/3nx2Blc
-Arabic: https://bit.ly/3jYE0TQ
-Hindi: https://bit.ly/2Iy6beu
-French: https://bit.ly/3COf2Qc
-German: https://bit.ly/3AQI3dE
-
-
-★ RECOMMENDED VIDEO FOR YOU ★
-- Gamer Gets Cyberbullied At School: https://youtu.be/kmG9maCcut4
-
-★ RECOMMENDED PLAYLIST FOR YOU ★
-- My Best Videos: https://bit.ly/3z7QEIC
-
-
-
-⚑ LEAVE A REVIEW ON IMDB ⚑ 
-Share Your Review ➜ https://imdb.to/3zDwUgv
-
-
-
-CHAPTERS:
-00:00   Kid SNEAKS CANDY Into The MOVIES ft. Cole LaBrant  
-14:16   Special Outro With Dhar and Cole
-15:09   Recommended Video To Watch Next
-
-
-
-💥 NEW VIDEOS MONDAY - FRIDAY at 5pm (PST) 💥
-
-
-
-Idea: Dhar Mann and Elisandro Gonzalez
-Writer: Dhar Mann and Elisandro Gonzalez
-Director / Cinematographer: Rushi Bhadane
-Senior Manager: Ruben Ortiz, Tony Corsini
-Assistant Director: 
-Script Supervisor:
-Editor: Jorge Javier
-Assistant Editor: Antonio Cedillo
-Composer: Nicholas Jones
-Colorist: Remsen Allard
-Trailer Editor: Brian Burkhardt
-Casting Associate: Alisha Watson, Daniel Carrera, Lauren Parsons, Kevin Svec
-Pre Production Manager: Hope Mueller, Luz Ortiz
-Post Production Manager: Brian Nelson, Allan Dave Castro
-Booking Manager: Nix Villarubin
-Project Manager Associates: Jacq Balmeo, Sherri Salazar, Miranda Romero
-Lead Production Assistant: Polina Grishko
-Production Assistant: Eddy Gonzalez, Domenic Toliver,Arek Aksoy
-Gaffer: Vaibhav Arora
-Best Boy Grip/PA: 
-Best Boy/PA:
-Makeup/Hair:
-Sound Mixer / Boom Operator: Everett Hibner
-Set Decorator:
-Props Associate: 
-Studio Teacher: Dr. Terri Ganey
-Security: Alfredo Ceja, Gabriel Herrera
-BTS Director: Tyler Stanley
-BTS Editor: Tyler Stanley
-BTS Assistant Editor: Antonio Cedillo
-BTS Colorist: Mario Pantin
-2nd Assistant Camera:
-
-
-
-Actors:
-
-Cashier 1 - Azeem Vecchio
-Manager - Colin Borden 
-Owen - Cole LaBrant 
-Mikey - Kaido Lee Roberts
-Customer 1 - Liza Vega
-Customer 2 -Ken Dickason
-Customer 3 - Keyla Wood 
-Customer 4 - Mike Duffau
-Customer 5 - ​​Georgia James
-Customer 6 - Fernando Collazo
-Customer 7 - Lindsey Lewis
-Customer 8 - Andrew Tinajero
-Customer 9 - Carlotta Carrington
-Customer 10 - Ricky Lacorte
-Customer 11 - Valeria Trejo
-Customer 12 - Jim Allen Jackson
-Customer 13 - Yui Shibata
--Customer 15 - Liza Vega
-Customer 16 -Ashleigh Shapiro
-Customer 17 - Delia Rose Bush
-Customer 18 - Anthony Topsfield
-Cashier 2 - Brigitte Reinke
-Mom - Katherine Norland
-
-
-
-
-
-
-
-
-
-#ColeLaBrant  #DharMannFam #Motivational"
+"WATCH Cole LaBrant's video here: https://youtu.be/sYYBFrSY57A🎬 WATCH Behind The Scenes for this video here: https://youtu.be/FC4NhILCVzM✅ Download my FREE mobile app 👇🏾App Store = https://apple.co/3nhvjapGoogle Play = https://bit.ly/3DRzS1I💥 Don't forget to SUBSCRIBE to my channel by clicking here ➞ ➞ http://bit.ly/DharMannYouTube **Make sure you CLICK THE BELL ICON so you can get notifications when my next video goes up so you don’t miss anything!REMEMBER - We're not just telling stories, we're changing lives! So please help my videos change more lives by SHARING!⚑  SHOP EXCLUSIVE MERCH! ⚑  Shop Merch ➜ https://shop.dharmann.com/⚑ CONNECT WITH ME ⚑ Instagram ➜ https://www.instagram.com/dhar.mann/Facebook ➜ https://www.facebook.com/dharmannofficialTwitter ➜ https://twitter.com/dharmannPinterest ➜ https://pinterest.com/dharmannofficialTikTok ➜ https://bit.ly/34P7DQRNewsletter Sign-Up ➜ http://bit.ly/2uNssig★ OTHER CHANNELS ★ 🔴 Behind-The-Scenes Channel ➜ https://bit.ly/3dJRfGb🟡 Top Videos Channel ➜ https://bit.ly/2PPqSH9🟠 Reactions Channel ➜ https://bit.ly/3ftiiYk🟢 Extended Cuts ➜ https://bit.ly/3iBiNBSCompilations Channel ➜ https://bit.ly/2S89zlyDhar and Laura Vlog ➜ http://bit.ly/DharAndLauraYouTubeINTERNATIONAL CHANNELS:Spanish: https://bit.ly/2EuagyYPortuguese: https://bit.ly/3nx2BlcArabic: https://bit.ly/3jYE0TQHindi: https://bit.ly/2Iy6beuFrench: https://bit.ly/3COf2QcGerman: https://bit.ly/3AQI3dE★ RECOMMENDED VIDEO FOR YOU ★- Gamer Gets Cyberbullied At School: https://youtu.be/kmG9maCcut4★ RECOMMENDED PLAYLIST FOR YOU ★- My Best Videos: https://bit.ly/3z7QEIC⚑ LEAVE A REVIEW ON IMDB ⚑ Share Your Review ➜ https://imdb.to/3zDwUgvCHAPTERS:00:00   Kid SNEAKS CANDY Into The MOVIES ft. Cole LaBrant  14:16   Special Outro With Dhar and Cole15:09   Recommended Video To Watch Next💥 NEW VIDEOS MONDAY - FRIDAY at 5pm (PST) 💥Idea: Dhar Mann and Elisandro GonzalezWriter: Dhar Mann and Elisandro GonzalezDirector / Cinematographer: Rushi BhadaneSenior Manager: Ruben Ortiz, Tony CorsiniAssistant Director: Script Supervisor:Editor: Jorge JavierAssistant Editor: Antonio CedilloComposer: Nicholas JonesColorist: Remsen AllardTrailer Editor: Brian BurkhardtCasting Associate: Alisha Watson, Daniel Carrera, Lauren Parsons, Kevin SvecPre Production Manager: Hope Mueller, Luz OrtizPost Production Manager: Brian Nelson, Allan Dave CastroBooking Manager: Nix VillarubinProject Manager Associates: Jacq Balmeo, Sherri Salazar, Miranda RomeroLead Production Assistant: Polina GrishkoProduction Assistant: Eddy Gonzalez, Domenic Toliver,Arek AksoyGaffer: Vaibhav AroraBest Boy Grip/PA: Best Boy/PA:Makeup/Hair:Sound Mixer / Boom Operator: Everett HibnerSet Decorator:Props Associate: Studio Teacher: Dr. Terri GaneySecurity: Alfredo Ceja, Gabriel HerreraBTS Director: Tyler StanleyBTS Editor: Tyler StanleyBTS Assistant Editor: Antonio CedilloBTS Colorist: Mario Pantin2nd Assistant Camera:Actors:Cashier 1 - Azeem VecchioManager - Colin Borden Owen - Cole LaBrant Mikey - Kaido Lee RobertsCustomer 1 - Liza VegaCustomer 2 -Ken DickasonCustomer 3 - Keyla Wood Customer 4 - Mike DuffauCustomer 5 - ​​Georgia JamesCustomer 6 - Fernando CollazoCustomer 7 - Lindsey LewisCustomer 8 - Andrew TinajeroCustomer 9 - Carlotta CarringtonCustomer 10 - Ricky LacorteCustomer 11 - Valeria TrejoCustomer 12 - Jim Allen JacksonCustomer 13 - Yui Shibata-Customer 15 - Liza VegaCustomer 16 -Ashleigh ShapiroCustomer 17 - Delia Rose BushCustomer 18 - Anthony TopsfieldCashier 2 - Brigitte ReinkeMom - Katherine Norland#ColeLaBrant  #DharMannFam #Motivational"
 1
 return.snippet.liveBroadcastContent
 "none"
@@ -143039,149 +142677,7 @@ return.snippet.localized
 "test_urgtcipq89pv_getVideos_return.snippet.localized_output"
 1
 return.snippet.localized.description
-"WATCH Cole LaBrant's video here: https://youtu.be/sYYBFrSY57A
-
-🎬 WATCH Behind The Scenes for this video here: https://youtu.be/FC4NhILCVzM
-
-
-✅ Download my FREE mobile app 👇🏾
-App Store = https://apple.co/3nhvjap
-Google Play = https://bit.ly/3DRzS1I
-
-
-💥 Don't forget to SUBSCRIBE to my channel by clicking here ➞ ➞ http://bit.ly/DharMannYouTube **Make sure you CLICK THE BELL ICON so you can get notifications when my next video goes up so you don’t miss anything!
-
-REMEMBER - We're not just telling stories, we're changing lives! So please help my videos change more lives by SHARING!
-
-
-
-⚑  SHOP EXCLUSIVE MERCH! ⚑  
-Shop Merch ➜ https://shop.dharmann.com/
-
-
-
-⚑ CONNECT WITH ME ⚑ 
-Instagram ➜ https://www.instagram.com/dhar.mann/
-Facebook ➜ https://www.facebook.com/dharmannofficial
-Twitter ➜ https://twitter.com/dharmann
-Pinterest ➜ https://pinterest.com/dharmannofficial
-TikTok ➜ https://bit.ly/34P7DQR
-Newsletter Sign-Up ➜ http://bit.ly/2uNssig
-
-
-
-★ OTHER CHANNELS ★ 
-🔴 Behind-The-Scenes Channel ➜ https://bit.ly/3dJRfGb
-🟡 Top Videos Channel ➜ https://bit.ly/2PPqSH9
-🟠 Reactions Channel ➜ https://bit.ly/3ftiiYk
-🟢 Extended Cuts ➜ https://bit.ly/3iBiNBS
-Compilations Channel ➜ https://bit.ly/2S89zly
-Dhar and Laura Vlog ➜ http://bit.ly/DharAndLauraYouTube
-
-
-INTERNATIONAL CHANNELS:
-Spanish: https://bit.ly/2EuagyY
-Portuguese: https://bit.ly/3nx2Blc
-Arabic: https://bit.ly/3jYE0TQ
-Hindi: https://bit.ly/2Iy6beu
-French: https://bit.ly/3COf2Qc
-German: https://bit.ly/3AQI3dE
-
-
-★ RECOMMENDED VIDEO FOR YOU ★
-- Gamer Gets Cyberbullied At School: https://youtu.be/kmG9maCcut4
-
-★ RECOMMENDED PLAYLIST FOR YOU ★
-- My Best Videos: https://bit.ly/3z7QEIC
-
-
-
-⚑ LEAVE A REVIEW ON IMDB ⚑ 
-Share Your Review ➜ https://imdb.to/3zDwUgv
-
-
-
-CHAPTERS:
-00:00   Kid SNEAKS CANDY Into The MOVIES ft. Cole LaBrant  
-14:16   Special Outro With Dhar and Cole
-15:09   Recommended Video To Watch Next
-
-
-
-💥 NEW VIDEOS MONDAY - FRIDAY at 5pm (PST) 💥
-
-
-
-Idea: Dhar Mann and Elisandro Gonzalez
-Writer: Dhar Mann and Elisandro Gonzalez
-Director / Cinematographer: Rushi Bhadane
-Senior Manager: Ruben Ortiz, Tony Corsini
-Assistant Director: 
-Script Supervisor:
-Editor: Jorge Javier
-Assistant Editor: Antonio Cedillo
-Composer: Nicholas Jones
-Colorist: Remsen Allard
-Trailer Editor: Brian Burkhardt
-Casting Associate: Alisha Watson, Daniel Carrera, Lauren Parsons, Kevin Svec
-Pre Production Manager: Hope Mueller, Luz Ortiz
-Post Production Manager: Brian Nelson, Allan Dave Castro
-Booking Manager: Nix Villarubin
-Project Manager Associates: Jacq Balmeo, Sherri Salazar, Miranda Romero
-Lead Production Assistant: Polina Grishko
-Production Assistant: Eddy Gonzalez, Domenic Toliver,Arek Aksoy
-Gaffer: Vaibhav Arora
-Best Boy Grip/PA: 
-Best Boy/PA:
-Makeup/Hair:
-Sound Mixer / Boom Operator: Everett Hibner
-Set Decorator:
-Props Associate: 
-Studio Teacher: Dr. Terri Ganey
-Security: Alfredo Ceja, Gabriel Herrera
-BTS Director: Tyler Stanley
-BTS Editor: Tyler Stanley
-BTS Assistant Editor: Antonio Cedillo
-BTS Colorist: Mario Pantin
-2nd Assistant Camera:
-
-
-
-Actors:
-
-Cashier 1 - Azeem Vecchio
-Manager - Colin Borden 
-Owen - Cole LaBrant 
-Mikey - Kaido Lee Roberts
-Customer 1 - Liza Vega
-Customer 2 -Ken Dickason
-Customer 3 - Keyla Wood 
-Customer 4 - Mike Duffau
-Customer 5 - ​​Georgia James
-Customer 6 - Fernando Collazo
-Customer 7 - Lindsey Lewis
-Customer 8 - Andrew Tinajero
-Customer 9 - Carlotta Carrington
-Customer 10 - Ricky Lacorte
-Customer 11 - Valeria Trejo
-Customer 12 - Jim Allen Jackson
-Customer 13 - Yui Shibata
--Customer 15 - Liza Vega
-Customer 16 -Ashleigh Shapiro
-Customer 17 - Delia Rose Bush
-Customer 18 - Anthony Topsfield
-Cashier 2 - Brigitte Reinke
-Mom - Katherine Norland
-
-
-
-
-
-
-
-
-
-#ColeLaBrant  #DharMannFam #Motivational"
+"WATCH Cole LaBrant's video here: https://youtu.be/sYYBFrSY57A🎬 WATCH Behind The Scenes for this video here: https://youtu.be/FC4NhILCVzM✅ Download my FREE mobile app 👇🏾App Store = https://apple.co/3nhvjapGoogle Play = https://bit.ly/3DRzS1I💥 Don't forget to SUBSCRIBE to my channel by clicking here ➞ ➞ http://bit.ly/DharMannYouTube **Make sure you CLICK THE BELL ICON so you can get notifications when my next video goes up so you don’t miss anything!REMEMBER - We're not just telling stories, we're changing lives! So please help my videos change more lives by SHARING!⚑  SHOP EXCLUSIVE MERCH! ⚑  Shop Merch ➜ https://shop.dharmann.com/⚑ CONNECT WITH ME ⚑ Instagram ➜ https://www.instagram.com/dhar.mann/Facebook ➜ https://www.facebook.com/dharmannofficialTwitter ➜ https://twitter.com/dharmannPinterest ➜ https://pinterest.com/dharmannofficialTikTok ➜ https://bit.ly/34P7DQRNewsletter Sign-Up ➜ http://bit.ly/2uNssig★ OTHER CHANNELS ★ 🔴 Behind-The-Scenes Channel ➜ https://bit.ly/3dJRfGb🟡 Top Videos Channel ➜ https://bit.ly/2PPqSH9🟠 Reactions Channel ➜ https://bit.ly/3ftiiYk🟢 Extended Cuts ➜ https://bit.ly/3iBiNBSCompilations Channel ➜ https://bit.ly/2S89zlyDhar and Laura Vlog ➜ http://bit.ly/DharAndLauraYouTubeINTERNATIONAL CHANNELS:Spanish: https://bit.ly/2EuagyYPortuguese: https://bit.ly/3nx2BlcArabic: https://bit.ly/3jYE0TQHindi: https://bit.ly/2Iy6beuFrench: https://bit.ly/3COf2QcGerman: https://bit.ly/3AQI3dE★ RECOMMENDED VIDEO FOR YOU ★- Gamer Gets Cyberbullied At School: https://youtu.be/kmG9maCcut4★ RECOMMENDED PLAYLIST FOR YOU ★- My Best Videos: https://bit.ly/3z7QEIC⚑ LEAVE A REVIEW ON IMDB ⚑ Share Your Review ➜ https://imdb.to/3zDwUgvCHAPTERS:00:00   Kid SNEAKS CANDY Into The MOVIES ft. Cole LaBrant  14:16   Special Outro With Dhar and Cole15:09   Recommended Video To Watch Next💥 NEW VIDEOS MONDAY - FRIDAY at 5pm (PST) 💥Idea: Dhar Mann and Elisandro GonzalezWriter: Dhar Mann and Elisandro GonzalezDirector / Cinematographer: Rushi BhadaneSenior Manager: Ruben Ortiz, Tony CorsiniAssistant Director: Script Supervisor:Editor: Jorge JavierAssistant Editor: Antonio CedilloComposer: Nicholas JonesColorist: Remsen AllardTrailer Editor: Brian BurkhardtCasting Associate: Alisha Watson, Daniel Carrera, Lauren Parsons, Kevin SvecPre Production Manager: Hope Mueller, Luz OrtizPost Production Manager: Brian Nelson, Allan Dave CastroBooking Manager: Nix VillarubinProject Manager Associates: Jacq Balmeo, Sherri Salazar, Miranda RomeroLead Production Assistant: Polina GrishkoProduction Assistant: Eddy Gonzalez, Domenic Toliver,Arek AksoyGaffer: Vaibhav AroraBest Boy Grip/PA: Best Boy/PA:Makeup/Hair:Sound Mixer / Boom Operator: Everett HibnerSet Decorator:Props Associate: Studio Teacher: Dr. Terri GaneySecurity: Alfredo Ceja, Gabriel HerreraBTS Director: Tyler StanleyBTS Editor: Tyler StanleyBTS Assistant Editor: Antonio CedilloBTS Colorist: Mario Pantin2nd Assistant Camera:Actors:Cashier 1 - Azeem VecchioManager - Colin Borden Owen - Cole LaBrant Mikey - Kaido Lee RobertsCustomer 1 - Liza VegaCustomer 2 -Ken DickasonCustomer 3 - Keyla Wood Customer 4 - Mike DuffauCustomer 5 - ​​Georgia JamesCustomer 6 - Fernando CollazoCustomer 7 - Lindsey LewisCustomer 8 - Andrew TinajeroCustomer 9 - Carlotta CarringtonCustomer 10 - Ricky LacorteCustomer 11 - Valeria TrejoCustomer 12 - Jim Allen JacksonCustomer 13 - Yui Shibata-Customer 15 - Liza VegaCustomer 16 -Ashleigh ShapiroCustomer 17 - Delia Rose BushCustomer 18 - Anthony TopsfieldCashier 2 - Brigitte ReinkeMom - Katherine Norland#ColeLaBrant  #DharMannFam #Motivational"
 1
 return.snippet.localized.title
 "Kid SNEAKS CANDY Into The MOVIES ft. @Cole LaBrant | Dhar Mann"
