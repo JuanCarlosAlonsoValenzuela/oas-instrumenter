@@ -10,6 +10,8 @@ import io.swagger.v3.oas.models.parameters.RequestBody;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
@@ -469,6 +471,12 @@ public class DeclsVariable {
             }
 
             if(repType.equals(STRING_TYPE_NAME) && value != null) {
+                // Decode the parameter value. For example, "street+address" is decoded as "street address" and "1%2C2" is decoded as "1,2"
+                try {
+                    value = URLDecoder.decode(value, "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
                 value = "\"" + value + "\"";
             }
         } else if(decType.equals(ARRAY_TYPE_NAME)){
