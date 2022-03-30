@@ -1,0 +1,116 @@
+
+Daikon version 5.8.10, released November 1, 2021; http://plse.cs.washington.edu/daikon.
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200(main.getAlbumTracks_Input):::ENTER
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200(main.getAlbumTracks_Input):::EXIT
+input == orig(input)
+input.id == orig(input.id)
+input.limit == orig(input.limit)
+input.offset == return.offset
+input.offset == orig(input.offset)
+input.market == orig(input.market)
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+return.href is Url
+return.previous is Url
+return.total >= 1
+input.limit % return.limit == 0
+input.limit <= return.limit
+input.offset < return.limit
+return.limit > return.total
+return.limit > size(return.items[])
+return.total >= size(return.items[])
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200_items(main.getAlbumTracks_Input):::ENTER
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+input.limit >= input.offset
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200_items(main.getAlbumTracks_Input):::EXIT
+input == orig(input)
+input.id == orig(input.id)
+input.limit == orig(input.limit)
+input.offset == orig(input.offset)
+input.market == orig(input.market)
+return.linked_from.type == return.type
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+return.disc_number one of { 1, 2 }
+LENGTH(return.external_urls.spotify)==53
+return.external_urls.spotify is Url
+LENGTH(return.href)==56
+return.href is Url
+LENGTH(return.id)==22
+return.is_local == false
+LENGTH(return.linked_from.external_urls.spotify)==53
+return.linked_from.external_urls.spotify is Url
+LENGTH(return.linked_from.href)==56
+return.linked_from.href is Url
+LENGTH(return.linked_from.id)==22
+return.linked_from.type == "track"
+LENGTH(return.linked_from.type)==5
+LENGTH(return.linked_from.uri)==36
+LENGTH(return.preview_url)==107
+return.preview_url is Url
+return.track_number >= 1
+return.type == "track"
+LENGTH(return.type)==5
+LENGTH(return.uri)==36
+input.limit >= input.offset
+input.limit < return.duration_ms
+input.offset % return.disc_number == 0
+input.offset < return.duration_ms
+input.market in return.available_markets[]
+return.linked_from.external_urls.spotify in return.available_markets[]
+return.linked_from.href in return.available_markets[]
+return.linked_from.id in return.available_markets[]
+return.linked_from.type in return.available_markets[]
+return.linked_from.uri in return.available_markets[]
+return.disc_number < return.duration_ms
+size(return.artists[])-1 % return.disc_number == 0
+size(return.available_markets[]) % return.disc_number == 0
+return.duration_ms > return.track_number
+return.duration_ms > size(return.artists[])
+return.duration_ms > size(return.available_markets[])
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200_items_artists(main.getAlbumTracks_Input):::ENTER
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+input.limit >= input.offset
+===========================================================================
+main.albums{id}tracks.getAlbumTracks_200_items_artists(main.getAlbumTracks_Input):::EXIT
+input == orig(input)
+input.id == orig(input.id)
+input.limit == orig(input.limit)
+input.offset == orig(input.offset)
+input.market == orig(input.market)
+LENGTH(input.id)==22
+input.limit >= 0
+input.offset >= 0
+LENGTH(input.market)==2
+LENGTH(return.external_urls.spotify)==54
+return.external_urls.spotify is Url
+LENGTH(return.href)==57
+return.href is Url
+LENGTH(return.id)==22
+return.type == "artist"
+LENGTH(return.type)==6
+LENGTH(return.uri)==37
+input.limit >= input.offset
+Exiting Daikon.

@@ -1,0 +1,271 @@
+"C:\Program Files\Java\jdk1.8.0_202\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=53631:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\out\production\daikon_modified;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\javac.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\checker.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\reflection-util-1.0.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\options-1.0.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\require-javadoc-1.0.2-all.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\java-getopt-1.0.14.0.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-6.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\plume-util-1.5.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\commons-exec-1.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\hamcrest-core-1.3-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-qual.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-util-1.1.13.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\junit-4.13.2-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\daikon-plumelib.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\jFormatString-3.0.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\javacutil-3.1.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\diffutils-1.3.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\threeten-extra-1.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\caffeine-2.8.4.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\error_prone_core-2.7.1-with-dependencies.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\dataflow-shaded-3.11.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\dcomp_premain.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\ChicoryPremain.jar;C:\Program Files\Java\jdk1.8.0_202\lib\tools.jar" daikon.Daikon
+Daikon version 5.8.10, released November 1, 2021; http://plse.cs.washington.edu/daikon.
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.youtubev3videos.getVideos_200(main.getVideos_Input):::ENTER
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+LENGTH(input.hl)==2
+LENGTH(input.id)==11
+input.maxHeight >= 0
+input.maxResults >= 0
+input.maxWidth >= 0
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "1", "17" }
+===========================================================================
+main.youtubev3videos.getVideos_200(main.getVideos_Input):::EXIT
+input == orig(input)
+input.part == orig(input.part)
+input.chart == orig(input.chart)
+input.hl == orig(input.hl)
+input.id == orig(input.id)
+input.maxHeight == orig(input.maxHeight)
+input.maxResults == orig(input.maxResults)
+input.maxWidth == orig(input.maxWidth)
+input.myRating == orig(input.myRating)
+input.regionCode == orig(input.regionCode)
+input.videoCategoryId == orig(input.videoCategoryId)
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+LENGTH(input.hl)==2
+LENGTH(input.id)==11
+input.maxHeight >= 0
+input.maxResults >= 0
+input.maxWidth >= 0
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "1", "17" }
+LENGTH(return.etag)==27
+return.kind == "youtube#videoListResponse"
+LENGTH(return.kind)==25
+LENGTH(return.nextPageToken)==6
+return.pageInfo.resultsPerPage >= 1
+return.pageInfo.totalResults >= 1
+size(return.items[]) >= 1
+input.maxResults % return.pageInfo.resultsPerPage == 0
+input.maxResults <= return.pageInfo.resultsPerPage
+input.maxResults % size(return.items[]) == 0
+return.pageInfo.resultsPerPage >= size(return.items[])
+return.pageInfo.totalResults >= size(return.items[])
+===========================================================================
+main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::ENTER
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+LENGTH(input.hl)==2
+LENGTH(input.id)==11
+input.maxHeight >= 0
+input.maxResults >= 0
+input.maxWidth >= 0
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "1", "17" }
+===========================================================================
+main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::EXIT
+input == orig(input)
+input.part == orig(input.part)
+input.chart == orig(input.chart)
+input.hl == orig(input.hl)
+input.id == return.id
+input.id == orig(input.id)
+input.maxHeight == orig(input.maxHeight)
+input.maxResults == orig(input.maxResults)
+input.maxWidth == orig(input.maxWidth)
+input.maxWidth == size(return.contentDetails.regionRestriction.allowed[])-1
+input.myRating == orig(input.myRating)
+input.regionCode == orig(input.regionCode)
+input.videoCategoryId == orig(input.videoCategoryId)
+return.ageGating.alcoholContent == return.ageGating.restricted
+return.ageGating.alcoholContent == return.contentDetails.countryRestriction.allowed
+return.ageGating.alcoholContent == return.contentDetails.hasCustomThumbnail
+return.ageGating.alcoholContent == return.monetizationDetails.access.allowed
+return.ageGating.alcoholContent == return.status.madeForKids
+return.ageGating.alcoholContent == return.status.selfDeclaredMadeForKids
+return.liveStreamingDetails.actualStartTime == return.snippet.publishedAt
+return.snippet.localized.title == return.snippet.title
+return.snippet.thumbnails.default.height == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.default.width == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.high.height == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.high.width == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.maxres.height == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.maxres.width == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.medium.height == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.medium.width == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.standard.height == size(return.contentDetails.regionRestriction.allowed[])-1
+return.snippet.thumbnails.standard.width == size(return.contentDetails.regionRestriction.allowed[])-1
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+LENGTH(input.hl)==2
+LENGTH(input.id)==11
+input.maxHeight >= 0
+input.maxResults >= 0
+input.maxWidth >= 0
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "1", "17" }
+return.ageGating.alcoholContent == false
+return.contentDetails.caption one of { "false", "true" }
+return.contentDetails.definition == "hd"
+LENGTH(return.contentDetails.definition)==2
+return.contentDetails.dimension == "2d"
+LENGTH(return.contentDetails.dimension)==2
+return.contentDetails.projection == "rectangular"
+LENGTH(return.contentDetails.projection)==11
+return.contentDetails.regionRestriction.allowed[] == [JP]
+return.contentDetails.regionRestriction.allowed[] elements == "JP"
+LENGTH(return.etag)==27
+LENGTH(return.id)==11
+return.kind == "youtube#video"
+LENGTH(return.kind)==13
+LENGTH(return.liveStreamingDetails.actualEndTime)==20
+LENGTH(return.liveStreamingDetails.actualStartTime)==20
+LENGTH(return.liveStreamingDetails.scheduledStartTime)==20
+return.player.embedHeight one of { "1864", "4046", "906" }
+LENGTH(return.player.embedWidth)==4
+return.recordingDetails.recordingDate == "2018-04-13T00:00:00Z"
+LENGTH(return.snippet.channelId)==24
+return.snippet.defaultLanguage one of { "en", "en-GB", "fi" }
+return.snippet.liveBroadcastContent == "none"
+LENGTH(return.snippet.liveBroadcastContent)==4
+LENGTH(return.snippet.publishedAt)==20
+return.snippet.thumbnails.default.height one of { 0, 90 }
+LENGTH(return.snippet.thumbnails.default.url)==46
+return.snippet.thumbnails.default.url is Url
+return.snippet.thumbnails.default.width one of { 0, 120 }
+return.snippet.thumbnails.high.height one of { 0, 360 }
+LENGTH(return.snippet.thumbnails.high.url)==48
+return.snippet.thumbnails.high.url is Url
+return.snippet.thumbnails.high.width one of { 0, 480 }
+return.snippet.thumbnails.maxres.height one of { 0, 720 }
+LENGTH(return.snippet.thumbnails.maxres.url)==52
+return.snippet.thumbnails.maxres.url is Url
+return.snippet.thumbnails.maxres.width one of { 0, 1280 }
+return.snippet.thumbnails.medium.height one of { 0, 180 }
+LENGTH(return.snippet.thumbnails.medium.url)==48
+return.snippet.thumbnails.medium.url is Url
+return.snippet.thumbnails.medium.width one of { 0, 320 }
+return.snippet.thumbnails.standard.height one of { 0, 480 }
+LENGTH(return.snippet.thumbnails.standard.url)==48
+return.snippet.thumbnails.standard.url is Url
+return.snippet.thumbnails.standard.width one of { 0, 640 }
+return.statistics.favoriteCount == "0"
+LENGTH(return.statistics.favoriteCount)==1
+return.status.license == "youtube"
+LENGTH(return.status.license)==7
+return.status.privacyStatus == "public"
+LENGTH(return.status.privacyStatus)==6
+return.status.uploadStatus == "processed"
+LENGTH(return.status.uploadStatus)==9
+size(return.contentDetails.regionRestriction.allowed[]) == 1
+size(return.snippet.tags[]) >= 2
+input.hl in return.contentDetails.regionRestriction.allowed[]
+input.hl in return.snippet.tags[]
+input.id in return.contentDetails.regionRestriction.allowed[]
+input.id in return.snippet.tags[]
+input.id in return.topicDetails.topicCategories[]
+input.maxHeight >= return.snippet.thumbnails.default.height
+input.maxHeight >= return.snippet.thumbnails.default.width
+input.maxHeight >= return.snippet.thumbnails.high.height
+input.maxHeight >= return.snippet.thumbnails.high.width
+input.maxHeight >= return.snippet.thumbnails.maxres.height
+input.maxHeight >= return.snippet.thumbnails.maxres.width
+input.maxHeight >= return.snippet.thumbnails.medium.height
+input.maxHeight >= return.snippet.thumbnails.medium.width
+input.maxHeight >= return.snippet.thumbnails.standard.height
+input.maxHeight >= return.snippet.thumbnails.standard.width
+input.maxHeight > size(return.snippet.tags[])
+input.maxResults > size(return.snippet.tags[])
+input.maxWidth >= return.snippet.thumbnails.default.height
+input.maxWidth >= return.snippet.thumbnails.default.width
+input.maxWidth >= return.snippet.thumbnails.high.height
+input.maxWidth >= return.snippet.thumbnails.high.width
+input.maxWidth >= return.snippet.thumbnails.maxres.height
+input.maxWidth >= return.snippet.thumbnails.maxres.width
+input.maxWidth >= return.snippet.thumbnails.medium.height
+input.maxWidth >= return.snippet.thumbnails.medium.width
+input.maxWidth >= return.snippet.thumbnails.standard.height
+input.maxWidth >= return.snippet.thumbnails.standard.width
+input.maxWidth > size(return.snippet.tags[])
+input.myRating in return.contentDetails.regionRestriction.allowed[]
+input.myRating in return.snippet.tags[]
+input.myRating in return.topicDetails.topicCategories[]
+input.regionCode in return.contentDetails.regionRestriction.allowed[]
+input.videoCategoryId in return.snippet.tags[]
+input.videoCategoryId in return.topicDetails.topicCategories[]
+return.contentDetails.caption in return.snippet.tags[]
+return.contentDetails.caption in return.topicDetails.topicCategories[]
+return.contentDetails.definition in return.snippet.tags[]
+return.contentDetails.definition in return.topicDetails.topicCategories[]
+return.contentDetails.dimension in return.snippet.tags[]
+return.contentDetails.dimension in return.topicDetails.topicCategories[]
+return.contentDetails.duration in return.snippet.tags[]
+return.contentDetails.duration in return.topicDetails.topicCategories[]
+return.contentDetails.projection in return.snippet.tags[]
+return.contentDetails.projection in return.topicDetails.topicCategories[]
+return.liveStreamingDetails.actualEndTime in return.contentDetails.regionRestriction.allowed[]
+return.liveStreamingDetails.actualStartTime in return.contentDetails.regionRestriction.allowed[]
+return.liveStreamingDetails.scheduledStartTime in return.contentDetails.regionRestriction.allowed[]
+return.player.embedHeight in return.contentDetails.regionRestriction.allowed[]
+return.player.embedHtml in return.contentDetails.regionRestriction.allowed[]
+return.player.embedWidth in return.contentDetails.regionRestriction.allowed[]
+return.recordingDetails.recordingDate in return.contentDetails.regionRestriction.allowed[]
+return.snippet.categoryId in return.contentDetails.regionRestriction.allowed[]
+return.snippet.channelId in return.contentDetails.regionRestriction.allowed[]
+return.snippet.channelTitle in return.contentDetails.regionRestriction.allowed[]
+return.snippet.defaultAudioLanguage in return.contentDetails.regionRestriction.allowed[]
+return.snippet.defaultLanguage in return.contentDetails.regionRestriction.allowed[]
+return.snippet.description in return.contentDetails.regionRestriction.allowed[]
+return.snippet.liveBroadcastContent in return.contentDetails.regionRestriction.allowed[]
+return.snippet.localized.description in return.contentDetails.regionRestriction.allowed[]
+return.snippet.publishedAt in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.default.url in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.high.url in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.maxres.url in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.medium.url in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.standard.url in return.contentDetails.regionRestriction.allowed[]
+return.snippet.title in return.contentDetails.regionRestriction.allowed[]
+return.statistics.commentCount in return.contentDetails.regionRestriction.allowed[]
+return.statistics.favoriteCount in return.contentDetails.regionRestriction.allowed[]
+return.statistics.likeCount in return.contentDetails.regionRestriction.allowed[]
+return.statistics.viewCount in return.contentDetails.regionRestriction.allowed[]
+return.status.license in return.contentDetails.regionRestriction.allowed[]
+return.status.privacyStatus in return.contentDetails.regionRestriction.allowed[]
+return.status.uploadStatus in return.contentDetails.regionRestriction.allowed[]
+return.recordingDetails.recordingDate in return.snippet.tags[]
+return.recordingDetails.recordingDate in return.topicDetails.topicCategories[]
+return.snippet.thumbnails.default.height <= return.snippet.thumbnails.default.width
+return.snippet.thumbnails.default.height <= return.snippet.thumbnails.high.height
+return.snippet.thumbnails.default.height <= return.snippet.thumbnails.high.width
+return.snippet.thumbnails.default.height <= return.snippet.thumbnails.medium.height
+return.snippet.thumbnails.default.height <= return.snippet.thumbnails.medium.width
+return.snippet.thumbnails.default.height > size(return.snippet.tags[])
+return.snippet.thumbnails.default.width <= return.snippet.thumbnails.high.height
+return.snippet.thumbnails.default.width <= return.snippet.thumbnails.high.width
+return.snippet.thumbnails.default.width <= return.snippet.thumbnails.medium.height
+return.snippet.thumbnails.default.width <= return.snippet.thumbnails.medium.width
+return.snippet.thumbnails.default.width > size(return.snippet.tags[])
+return.snippet.thumbnails.default.width % size(return.topicDetails.topicCategories[]) == 0
+return.snippet.thumbnails.high.height <= return.snippet.thumbnails.high.width
+return.snippet.thumbnails.high.height >= return.snippet.thumbnails.medium.height
+return.snippet.thumbnails.high.height >= return.snippet.thumbnails.medium.width
+return.snippet.thumbnails.high.height > size(return.snippet.tags[])
+return.snippet.thumbnails.high.height % size(return.topicDetails.topicCategories[]) == 0
+return.snippet.thumbnails.high.width >= return.snippet.thumbnails.medium.height
+return.snippet.thumbnails.high.width >= return.snippet.thumbnails.medium.width
+return.snippet.thumbnails.high.width >= return.snippet.thumbnails.standard.height
+return.snippet.thumbnails.high.width > size(return.snippet.tags[])
+return.snippet.thumbnails.high.width % size(return.topicDetails.topicCategories[]) == 0
+return.snippet.thumbnails.maxres.height <= return.snippet.thumbnails.maxres.width
+return.snippet.thumbnails.maxres.height % size(return.topicDetails.topicCategories[]) == 0
+return.snippet.thumbnails.medium.height <= return.snippet.thumbnails.medium.width
+return.snippet.thumbnails.medium.height > size(return.snippet.tags[])
+return.snippet.thumbnails.medium.height % size(return.topicDetails.topicCategories[]) == 0
+return.snippet.thumbnails.medium.width > size(return.snippet.tags[])
+return.snippet.thumbnails.standard.height <= return.snippet.thumbnails.standard.width
+return.snippet.thumbnails.standard.height % size(return.topicDetails.topicCategories[]) == 0
+size(return.snippet.tags[]) >= size(return.topicDetails.topicCategories[])-1
+Exiting Daikon.
+
+Process finished with exit code 0
