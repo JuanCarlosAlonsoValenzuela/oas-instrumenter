@@ -61,9 +61,18 @@ public class TestCaseFileManager {
         if(str.trim().isEmpty()){
             return new HashMap<>();
         }else {
-            return Arrays.asList(str.split("\\s*;\\s*")).stream().map(s -> s.split("="))
+            Map<String, String> res = Arrays.asList(str.split("\\s*;\\s*")).stream().map(s -> s.split("="))
                     .collect(Collectors.toMap(a -> a[0], a -> a[1]));
+            // Remove all new line chars (\n and \r). The parameter value line of the dTrace must be specified in a single line
+            res.replaceAll((k,v) -> removeNewLineChars(v));
+            return res;
         }
+    }
+
+    public static String removeNewLineChars(String str) {
+        String res = str.replace("\n","\\n");
+        res = res.replace("\r","\\r");
+        return res;
     }
 
 }

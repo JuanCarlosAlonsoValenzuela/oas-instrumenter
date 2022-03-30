@@ -17,6 +17,7 @@ import java.util.*;
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJsonObject;
+import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.removeNewLineChars;
 
 public class DeclsVariable {
 
@@ -541,6 +542,8 @@ public class DeclsVariable {
             }
 
             if(repType.replace("[]", "").equals(STRING_TYPE_NAME) && value != null) {
+                // Replace new line characters fron the string
+                value = removeNewLineChars(value);
                 value = "\"" + value + "\"";
             }
 
