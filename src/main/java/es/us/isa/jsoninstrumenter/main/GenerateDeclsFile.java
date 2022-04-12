@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "---";
-    private static String testCasesFilePath = "---";
+    private static String openApiSpecPath = "src/test/resources/evaluation/Spotify/getAlbumTracks/swagger_albumTracks.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluation/Spotify/getAlbumTracks/test_cases_20.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
@@ -125,8 +125,6 @@ public class GenerateDeclsFile {
                     // The enter and exits belong to the same class
                     if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
                             declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
-
-                        // TODO: Take other parameters apart from the specified in the query (and discard those that are not present in the original declsFile)
 
                         // Get the correct declsExit by the responseCode
                         List<DeclsExit> declsExits = declsClass.getDeclsExits().stream()

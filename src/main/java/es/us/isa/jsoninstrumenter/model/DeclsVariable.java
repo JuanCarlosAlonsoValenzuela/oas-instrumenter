@@ -481,7 +481,7 @@ public class DeclsVariable {
                 value = "\"" + value + "\"";
             }
         } else if(decType.equals(ARRAY_TYPE_NAME)){
-          // TODO: Parameter of type array
+          // TODO: Parameter of type array (Remember the use of null values)
         } else {    // If type = object
             value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
         }
@@ -551,17 +551,32 @@ public class DeclsVariable {
                 value = "[" + value + "]";
             }
 
-        } else if (varKind.equals("array")) {       // If array TODO: Consider recursivity (Primitive, object and another array)
+        } else if (varKind.equals(ARRAY_TYPE_NAME)) {       // If array TODO: Consider recursivity (Primitive, object and another array)
             List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy TODO: Refactor to make it more intutive
             // TODO: Convert to list of arrays (flattening)
             JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
-            // If elements == null, the elements are set to null
+            // If elements == null, the elements are set to nonsensical
             value = generateDtraceExitValueOfJSONArray(testCase, elements, this.decType, this.variableName);
+            if(value.equals("nonsensical")) {
+                isNonsensical = true;
+            }
 
         } else {    // If type = object or identifier of array (both array of objects and array of primitives)
+            // Use a hashcode as value
             value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
+
+            // If the element (either array or object) is not present in the response JSON, we set its value to null
+            List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
+            hierarchy = hierarchy.subList(1, hierarchy.size());
+            if(hierarchy.size()>0) {        // hierarchy.size()==0 is the "return" object
+                String key = getPrimitiveValueFromHierarchy(json, hierarchy);
+                if(key==null){
+                    value = "null";
+                }
+            }
+
             if(isElementOfArray) {
                 value = "[" + value + "]";
             }

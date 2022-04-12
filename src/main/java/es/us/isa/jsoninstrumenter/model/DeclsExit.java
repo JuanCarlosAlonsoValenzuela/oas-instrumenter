@@ -281,6 +281,19 @@ public class DeclsExit {
         return res;
     }
 
+    /**
+     *
+     * @param testCase
+     * @param jsonArray
+     * @return A string representing the dtrace of an array of JSON Objects. If the value of the array is null, its hashcode is null and its value is set to nonsensical. Example:
+     * return.markets
+     * null
+     * 1
+     * return.markets[..]
+     * nonsensical
+     * 2
+     *
+     */
     public String generateSingleDtraceExitArray(TestCase testCase, JSONArray jsonArray) {
 
         String res = this.getExitName() + ":::EXIT" + exitNumber;
@@ -293,16 +306,27 @@ public class DeclsExit {
         res = res + "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return_output" + "\"" + "\n";
         res = res + "1" + "\n";
 
+        // Returns the value of the array or nonsensical if the array is null
+        String value = generateDtraceExitValueOfJSONArray(testCase, jsonArray, this.exitDeclsVariables.getEnclosedVariables().get(0).getDecType(), "array");
+
         // Group 2
         res = res + "return.array" + "\n";
-        res = res + "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return" + this.nameSuffix + "_output" + "\"" + "\n";
+        if(value.equals("nonsensical")) {
+            res = res + "null" + "\n";
+        } else {
+            res = res + "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return" + this.nameSuffix + "_output" + "\"" + "\n";
+        }
         res = res + "1" + "\n";
 
         // Group 3
         res = res + "return.array[..]" + "\n";
         // The declaration type of the first enclosed variable will always reveal the type of the elements of the array
-        res = res + generateDtraceExitValueOfJSONArray(testCase, jsonArray, this.exitDeclsVariables.getEnclosedVariables().get(0).getDecType(), "array") + "\n";
-        res = res + "1" + "\n\n";
+        res = res + value + "\n";
+        String modified = "1";
+        if(value.equals("nonsensical")) {
+            modified = "2";
+        }
+        res = res + modified + "\n\n";
 
         return res;
 
@@ -320,9 +344,9 @@ public class DeclsExit {
     }
 
     public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype, String variableName) {
-        String value = null;
+        String value = "nonsensical";
 
-        // If elements == null, the elements are set to null
+        // If elements == null, the elements are set to nonsensical
         if(elements != null){
             if(primitiveTypes.contains(dectype.replace("[]", ""))) { // If array of primitives
                 boolean isString = false;
