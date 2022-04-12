@@ -13,8 +13,14 @@ variable this
 variable this.part
 	var-kind field part
 	enclosing-var this
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable this.part[..]
+	var-kind array
+	enclosing-var this.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable this.chart
 	var-kind field chart
 	enclosing-var this
@@ -28,8 +34,14 @@ variable this.hl
 variable this.id
 	var-kind field id
 	enclosing-var this
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable this.id[..]
+	var-kind array
+	enclosing-var this.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable this.maxHeight
 	var-kind field maxHeight
 	enclosing-var this
@@ -1362,8 +1374,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1377,8 +1395,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1429,8 +1453,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1444,8 +1474,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1496,8 +1532,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1511,8 +1553,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1563,8 +1611,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1578,8 +1632,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1630,8 +1690,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1645,8 +1711,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1697,8 +1769,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1712,8 +1790,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1829,8 +1913,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1844,8 +1934,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -1920,8 +2016,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -1935,8 +2037,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -2031,8 +2139,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -2046,8 +2160,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input
@@ -2118,8 +2238,14 @@ variable input
 variable input.part
 	var-kind field part
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.chart
 	var-kind field chart
 	enclosing-var input
@@ -2133,8 +2259,14 @@ variable input.hl
 variable input.id
 	var-kind field id
 	enclosing-var input
-	dec-type java.lang.String
+	dec-type java.lang.String[]
 	rep-type java.lang.String
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
 variable input.maxHeight
 	var-kind field maxHeight
 	enclosing-var input

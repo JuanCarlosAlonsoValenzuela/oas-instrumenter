@@ -36,15 +36,52 @@ public class DeclsVariable {
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
 
+
+
         // Extract parameters from path, query and header
         List<Parameter> parameters = operation.getParameters();
         if(parameters != null) {
             for(Parameter parameter: parameters) {
-                // TODO: Add try catch for null pointer exception explaining that a property of the parameter was not found
-                DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
-                        "field " + parameter.getName(), translateDatatype(parameter.getSchema().getType()),
-                        translateDatatype(parameter.getSchema().getType()), father.getVariableName());
-                enclosedVariables.add(declsVariable);
+
+                String parameterType = parameter.getSchema().getType();
+                if(parameterType == null) {
+                    throw new NullPointerException("Please specify the parameter type for the parameter " + parameter.getName() +
+                            "\n If the error persists, specify it explicitly in the 'parameters' field of the API specification rather than using a '$ref'");
+                }
+
+                if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
+                    // TODO: Input parameters can be of type object, adapt the function generateDeclsVariablesOfOutput (But only the first level of nesting)
+                    // TODO: Create jUnit
+                    System.out.println("BREAKPOINT OBJECT");
+                } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
+                    // Only the first nesting level for the ENTER program point
+                    ArraySchema arraySchema = (ArraySchema) parameter.getSchema();
+                    String itemsDataType = arraySchema.getItems().getType();
+
+                    if(itemsDataType.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDataType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The content is an array or an object
+                        // TODO: Create jUnits for both objects and arrays
+                        List<DeclsVariable> declsVariables = getDeclsVariablesArray(rootVariableName, parameter.getName(),
+                                packageName + "." + parameter.getName(), STRING_TYPE_NAME);
+
+                        enclosedVariables.addAll(declsVariables);
+
+                    } else {    // The content is a primitive type
+                        String translatedDatatype = translateDatatype(itemsDataType);
+
+                        List<DeclsVariable> declsVariables = getDeclsVariablesArray(rootVariableName,
+                                parameter.getName(), translatedDatatype, translatedDatatype);
+                        enclosedVariables.addAll(declsVariables);
+
+                    }
+                } else {    // Primitive type
+                    // TODO: Add try catch for null pointer exception explaining that a property of the parameter was not found
+                    DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
+                            "field " + parameter.getName(), translateDatatype(parameterType),
+                            translateDatatype(parameterType), father.getVariableName());
+                    enclosedVariables.add(declsVariable);
+                }
+
+
             }
         }
 
@@ -481,7 +518,11 @@ public class DeclsVariable {
                 value = "\"" + value + "\"";
             }
         } else if(decType.equals(ARRAY_TYPE_NAME)){
-          // TODO: Parameter of type array (Remember the use of null values)
+            // TODO: Parameter of type array (Remember the use of null values)
+//            List<String> hierarchy = Arrays.asList(variableName.replace("[..]", "").split("\\."));
+//            hierarchy = hierarchy.subList(1, hierarchy.size());
+//            JSONArray elements = getArrayFromHierarchy(json, hierarchy);
+
         } else {    // If type = object
             value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
         }
