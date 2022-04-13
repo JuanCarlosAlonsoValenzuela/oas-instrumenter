@@ -15,6 +15,7 @@ import java.net.URLDecoder;
 import java.util.*;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
+import static es.us.isa.jsoninstrumenter.model.DeclsEnter.generateDtraceEnterValueOfArray;
 import static es.us.isa.jsoninstrumenter.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJsonObject;
 import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.removeNewLineChars;
@@ -467,14 +468,42 @@ public class DeclsVariable {
         return res;
     }
 
-
-    private static String getValueOfParameterForDtraceFile(TestCase testCase, String variableName, String decType, String repType) {
+    private static String getEnterParameterValue(TestCase testCase, List<String> hierarchy) {
         Map<String, String> queryParametersValues = testCase.getQueryParameters();
         Map<String, String> pathParametersValues = testCase.getPathParameters();
         Map<String, String> headerParametersValues = testCase.getHeaderParameters();
         Map<String, String> formParametersValues = testCase.getFormParameters();
         String bodyParameter = testCase.getBodyParameter();
 
+        String value = null;
+
+        String key = hierarchy.get(hierarchy.size()-1);
+        value = queryParametersValues.get(key);
+        if(value == null) {
+            value = pathParametersValues.get(key);
+        }
+        if(value == null) {
+            value = headerParametersValues.get(key);
+        }
+        if(value == null) {
+            value = formParametersValues.get(key);
+        }
+
+        // Search in body parameter
+        if(value == null &&  bodyParameter != null && !bodyParameter.equals("")) {
+            JSONObject jsonBodyParameter = stringToJsonObject(bodyParameter);
+            if(jsonBodyParameter != null) {
+                List<String> hierarchyBody = hierarchy.subList(1, hierarchy.size());
+                value = getPrimitiveValueFromHierarchy(jsonBodyParameter, hierarchyBody);
+            }
+        }
+
+        return value;
+
+    }
+
+    // Used for ENTER parameters
+    private static String getValueOfParameterForDtraceFile(TestCase testCase, String variableName, String decType, String repType) {
         String value = null;
         // TODO: Consider arrays
         // Consider path, header and body parameter (First level)
@@ -483,56 +512,64 @@ public class DeclsVariable {
             // Get the variable name (Without Wrapping)
             List<String> hierarchy = Arrays.asList(variableName.split("\\."));
             if(hierarchy.size() > 1) {
-                String key = hierarchy.get(hierarchy.size()-1);
-                value = queryParametersValues.get(key);
-                if(value == null) {
-                    value = pathParametersValues.get(key);
-                }
-                if(value == null) {
-                    value = headerParametersValues.get(key);
-                }
-                if(value == null) {
-                    value = formParametersValues.get(key);
-                }
-
-                // Search in body parameter
-                if(value == null &&  bodyParameter != null && !bodyParameter.equals("")) {
-                    JSONObject jsonBodyParameter = stringToJsonObject(bodyParameter);
-                    if(jsonBodyParameter != null) {
-                        List<String> hierarchyBody = hierarchy.subList(1, hierarchy.size());
-                        value = getPrimitiveValueFromHierarchy(jsonBodyParameter, hierarchyBody);
-                    }
-                }
-
+                value = getEnterParameterValue(testCase, hierarchy);
             } else {
                 value = variableName;
             }
 
             if(repType.equals(STRING_TYPE_NAME) && value != null) {
                 // Decode the parameter value. For example, "street+address" is decoded as "street address" and "1%2C2" is decoded as "1,2"
-                try {
-                    value = URLDecoder.decode(value, "UTF-8");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
+                value = decodeString(value);
                 value = "\"" + value + "\"";
             }
-        } else if(decType.equals(ARRAY_TYPE_NAME)){
-            // TODO: Parameter of type array (Remember the use of null values)
-//            List<String> hierarchy = Arrays.asList(variableName.replace("[..]", "").split("\\."));
-//            hierarchy = hierarchy.subList(1, hierarchy.size());
-//            JSONArray elements = getArrayFromHierarchy(json, hierarchy);
+        } else if(variableName.contains("[..]")){   // If array values
+            List<String> hierarchy = Arrays.asList(variableName.replace("[..]", "").split("\\."));
+            if(hierarchy.size() > 1) {
+                // Get the array value. Example: element1%2element2%2Celement3
+                value = getEnterParameterValue(testCase, hierarchy);
+                if(value!=null){
+                    // Decode the value. Example element1,element2,element3
+                    value = decodeString(value);
+                    // Convert the value to array (replace "," with spaces and add [])
+                    value = generateDtraceEnterValueOfArray(testCase, value, decType, variableName);
+                } else {
+                    // If the array is null, return nonsensical
+                    value = "nonsensical";
+                }
+            } else {
+                value = variableName;
+            }
 
-        } else {    // If type = object
+        } else {    // If type = object or identifier of array
             value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
+
+            List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+            hierarchy = hierarchy.subList(1, hierarchy.size());
+            if(hierarchy.size()>0) {
+                String key = getEnterParameterValue(testCase, hierarchy);
+                if(key==null){
+                    value = null;
+                }
+            }
+
         }
 
         return value;
     }
 
+    // TODO: Move to utils
+    public static String decodeString(String parameterValue) {
+        try {
+            return URLDecoder.decode(parameterValue, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        return null;
+    }
+
     public String generateDtraceEnter(TestCase testCase) {
         // TODO: Consider arrays
-
         // TODO: The body parameter may contain an object
         // Father variable
         String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
@@ -542,6 +579,10 @@ public class DeclsVariable {
         // A parameter of type double with a null value is nonsensical
         if(this.repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) && (value == null || value.equals("null"))) {
             value = "nonsensical";
+            modified = "2";
+        }
+        // This happens with arrays
+        if(value != null && value.equals("nonsensical")) {
             modified = "2";
         }
 

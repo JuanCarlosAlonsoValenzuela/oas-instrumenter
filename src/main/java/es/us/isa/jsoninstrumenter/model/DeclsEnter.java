@@ -1,8 +1,12 @@
 package es.us.isa.jsoninstrumenter.model;
 
 import io.swagger.v3.oas.models.Operation;
+import org.json.simple.JSONArray;
 
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.STRING_TYPE_NAME;
+import static es.us.isa.jsoninstrumenter.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.model.DeclsVariable.getListOfDeclsVariables;
+import static es.us.isa.jsoninstrumenter.util.JSONManager.stringToJsonArray;
 
 public class DeclsEnter {
 
@@ -100,6 +104,19 @@ public class DeclsEnter {
         res = res + "\n";
 
         return res;
+    }
+
+    public static String generateDtraceEnterValueOfArray(TestCase testCase, String elements, String dectype, String variableName) {
+        // Convert the input into a JSONArray in order to call the generateDtraceExitValueOfJSONArray
+        JSONArray valueArray = null;
+        if(dectype.replace("[]","").equals(STRING_TYPE_NAME)) {
+            // Add double quotes to all array elementsApply if the elements are of type string
+            valueArray = stringToJsonArray( "[\"" + elements.replace(",","\",\"") + "\"]");
+        } else {
+            valueArray = stringToJsonArray("[" + elements + "]");
+        }
+
+        return generateDtraceExitValueOfJSONArray(testCase, valueArray, dectype, variableName);
     }
 
 }

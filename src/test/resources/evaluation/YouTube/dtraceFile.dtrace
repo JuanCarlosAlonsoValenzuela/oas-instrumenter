@@ -6,7 +6,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -15,11 +15,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1
@@ -53,7 +53,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -62,11 +62,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1
@@ -139,7 +139,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -148,11 +148,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1
@@ -186,7 +186,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -195,11 +195,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1
@@ -887,7 +887,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -896,11 +896,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1
@@ -934,7 +934,7 @@ input.part
 "test_t4cryo9cxjdv_getVideos_input.part_input"
 1
 input.part[..]
-"test_t4cryo9cxjdv_getVideos_input.part[..]_input"
+["contentDetails" "player" "liveStreamingDetails"]
 1
 input.chart
 null
@@ -943,11 +943,11 @@ input.hl
 null
 1
 input.id
-"test_t4cryo9cxjdv_getVideos_input.id_input"
+null
 1
 input.id[..]
-"test_t4cryo9cxjdv_getVideos_input.id[..]_input"
-1
+nonsensical
+2
 input.maxHeight
 6332
 1

@@ -20,9 +20,9 @@ return.stringProperty
 "stringProperty1"
 1
 return.arrayOfObjectsProperty
-"test_009_return.arrayOfObjectsProperty_output"
+null
 1
 return.arrayOfObjectsProperty[..]
 nonsensical
-1
+2
 

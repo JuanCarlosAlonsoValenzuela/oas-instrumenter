@@ -343,6 +343,8 @@ public class DeclsExit {
 
     }
 
+    // TODO: Rename, it is also used in the ENTER
+    // TODO: Move to another class
     public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype, String variableName) {
         String value = "nonsensical";
 
