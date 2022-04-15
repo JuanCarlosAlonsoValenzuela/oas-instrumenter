@@ -245,12 +245,8 @@ public class DeclsVariable {
             Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
             String parameterType = schema.getType();
 
-            if(parameterType == null) {
-                throw new NullPointerException("Please specify the parameter type for the parameter " + parameterName +
-                        "\n If the error persists, specify it explicitly in the 'parameters' field of the API specification rather than using a '$ref'");
-            }
-
-            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
+            // If there is an allOf, parameterType is null, but the schema contains all the properties
+            if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                 // Generate the father variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
                         packageName + "." + variableNameOutput + "_" + parameterName, STRING_TYPE_NAME, variablePath, isArray);
