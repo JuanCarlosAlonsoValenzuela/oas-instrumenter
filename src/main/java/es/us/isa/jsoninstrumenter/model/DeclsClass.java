@@ -1,5 +1,6 @@
 package es.us.isa.jsoninstrumenter.model;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.MediaType;
@@ -103,7 +104,7 @@ public class DeclsClass {
 
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsExit
-        if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The return is of type array (Bad practice)
+        if(parameterType != null && parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The return is of type array (Bad practice)
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";
@@ -122,7 +123,7 @@ public class DeclsClass {
                 nameSuffix = nameSuffix + ".array";
             }
 
-        }  else if(primitiveTypes.contains(translateDatatype(parameterType))) {     // The return is of type primitive (Bad practice)
+        }  else if(parameterType != null && primitiveTypes.contains(translateDatatype(parameterType))) {     // The return is of type primitive (Bad practice)
             // Generate DeclsObjectOfPrimitiveParameter
             DeclsObject primitiveObject = new DeclsObject(packageName, objectName, parameterType);
 
@@ -130,7 +131,7 @@ public class DeclsClass {
         }
 
         // Create DeclsObjects for the elements of the array
-        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {    // If the schema is of primitive type
+        if(parameterType ==null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {    // If the schema is of primitive type
         // If the schema is of type object
             Map<String, Schema> allSchemas = new HashMap<>();
             allSchemas.put("", mapOfProperties);
@@ -163,7 +164,7 @@ public class DeclsClass {
 
         // TODO: Convert into a function
         // TODO: Duplicated code with DeclsObject
-        if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
+        if(parameterType !=null && parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             String nameSuffix = ".array";       // TODO: Change "." for a different char
@@ -183,14 +184,15 @@ public class DeclsClass {
                 nameSuffix = nameSuffix + ".array";     // TODO: Change "." for a different char
             }
 
-        } else if(primitiveTypes.contains(translateDatatype(parameterType))) {
+        } else if(parameterType !=null && primitiveTypes.contains(translateDatatype(parameterType))) {
             DeclsExit primitiveExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables,
                     variableNameOutput, parameterType, statusCode);
             return Collections.singletonList(primitiveExit);
         }
 
         // Create DeclsObjects with the elements of the array
-        if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
+        // If there is an allOf, parameterType is null, but the schema contains all the properties
+        if(parameterType ==null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
             Map<String, Schema> allSchemas = new HashMap<>();
 
             allSchemas.put("", mapOfProperties);
@@ -226,26 +228,29 @@ public class DeclsClass {
             Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
             String parameterType = schema.getType();
 
-            if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
+            // If there is an allOf, parameterType is null, but the schema contains all the properties
+            if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {     // If object
                 // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
                 // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
                 // Recursive call with object.getParameter
                 // TODO: Change char "_" for another char (conflicts with snake_case)
                 res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
 
-            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
+            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // If array
                 ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
                 String itemsDatatype = arraySchema.getItems().getType();
                 String nestingSuffix = ".array";    // TODO: Change "." for a different char
 
-                while(itemsDatatype.equals(ARRAY_TYPE_NAME)) {
+                // If there is an allOf, parameterType is null, but the schema contains all the properties
+                while(itemsDatatype != null && itemsDatatype.equals(ARRAY_TYPE_NAME)) {
                     arraySchema = (ArraySchema) arraySchema.getItems();
                     res.put(nameSuffix + "_" + parameterName + nestingSuffix, arraySchema);
                     itemsDatatype = arraySchema.getItems().getType();
                     nestingSuffix = nestingSuffix + ".array";
                 }
 
-                if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
+                // If there is an allOf, parameterType is null, but the schema contains all the properties
+                if(itemsDatatype == null || itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                     Schema subSchema = arraySchema.getItems();
                     // TODO: Change char "_" for another char (conflicts with snake_case)
                     res.put(nameSuffix + "_" + parameterName, subSchema);

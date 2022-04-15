@@ -294,7 +294,8 @@ public class DeclsVariable {
         String itemsDatatype = arraySchema.getItems().getType();
 
         // Three possible situations:
-        if(itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
+        // If there is an allOf, parameterType is null, but the schema contains all the properties
+        if(itemsDatatype == null || itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDatatype.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // 1. The content is of type OBJECT (recursive call) (It will be necessary to create a new class)
             // OR
             // 2. The content is another ARRAY
