@@ -3545,8 +3545,8 @@ components:
         owner:
           type: object
           nullable: true
-          allOf:
-          - "$ref": "#/components/schemas/simple-user"
+#          allOf:
+          "$ref": "#/components/schemas/simple-user"
         private:
           type: boolean
         html_url:
@@ -3562,6 +3562,7 @@ components:
         url:
           type: string
           format: uri
+          nullable: true
           example: https://api.github.com/repos/octocat/Hello-World
         archive_url:
           type: string
@@ -3713,6 +3714,8 @@ components:
           type: string
         open_issues_count:
           type: integer
+        allow_forking:  # Added
+          type: boolean
         is_template:
           type: boolean
         topics:
@@ -3759,6 +3762,10 @@ components:
               type: boolean
             pull:
               type: boolean
+            maintain:
+              type: boolean
+            triage:
+              type: boolean
         template_repository:
           nullable: true
           type: object
@@ -3783,6 +3790,7 @@ components:
               type: string
             url:
               type: string
+              nullable: true
             node_id:
               type: string
           nullable: true

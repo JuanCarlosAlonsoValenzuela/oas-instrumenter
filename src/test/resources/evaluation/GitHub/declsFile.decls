@@ -459,6 +459,11 @@ variable this.open_issues_count
 	enclosing-var this
 	dec-type int
 	rep-type int
+variable this.allow_forking
+	var-kind field allow_forking
+	enclosing-var this
+	dec-type boolean
+	rep-type boolean
 variable this.is_template
 	var-kind field is_template
 	enclosing-var this
@@ -547,6 +552,16 @@ variable this.permissions.push
 	rep-type boolean
 variable this.permissions.pull
 	var-kind field pull
+	enclosing-var this.permissions
+	dec-type boolean
+	rep-type boolean
+variable this.permissions.maintain
+	var-kind field maintain
+	enclosing-var this.permissions
+	dec-type boolean
+	rep-type boolean
+variable this.permissions.triage
+	var-kind field triage
 	enclosing-var this.permissions
 	dec-type boolean
 	rep-type boolean
@@ -2283,6 +2298,11 @@ variable return.open_issues_count
 	enclosing-var return
 	dec-type int
 	rep-type int
+variable return.allow_forking
+	var-kind field allow_forking
+	enclosing-var return
+	dec-type boolean
+	rep-type boolean
 variable return.is_template
 	var-kind field is_template
 	enclosing-var return
@@ -2371,6 +2391,16 @@ variable return.permissions.push
 	rep-type boolean
 variable return.permissions.pull
 	var-kind field pull
+	enclosing-var return.permissions
+	dec-type boolean
+	rep-type boolean
+variable return.permissions.maintain
+	var-kind field maintain
+	enclosing-var return.permissions
+	dec-type boolean
+	rep-type boolean
+variable return.permissions.triage
+	var-kind field triage
 	enclosing-var return.permissions
 	dec-type boolean
 	rep-type boolean
