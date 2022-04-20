@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/evaluation/OMDb/bySearch/swagger_bySearch.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluation/OMDb/bySearch/OMDb_bySearch_1000.csv";
+    private static String openApiSpecPath = "src/test/resources/evaluation/AmadeusHotel/swagger.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluation/AmadeusHotel/AmadeusHotel_1000.csv";
     private static boolean generateDtrace = true;
 
 //    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
