@@ -74,10 +74,10 @@ paths:
           description: Successful operation
           schema:
             $ref: "#/definitions/Response"
-#        '401':
-#          description: Not authenticated
-#          schema:
-#            $ref: "#/definitions/Error"
+        '401':
+          description: Not authenticated
+          schema:
+            $ref: "#/definitions/Error"
 #      security:
 #        - APIKeyQueryParam: []
 definitions:

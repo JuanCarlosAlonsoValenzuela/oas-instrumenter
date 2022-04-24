@@ -221,6 +221,27 @@ variable this.Value
 	rep-type java.lang.String
 
 
+ppt main.searchByIdOrTitle_Output_401:::CLASS
+ppt-type class
+
+ppt main.searchByIdOrTitle_Output_401:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.searchByIdOrTitle_Output_401
+	rep-type java.lang.String
+variable this.Response
+	var-kind field Response
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.Error
+	var-kind field Error
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+
 ppt main.:::CLASS
 ppt-type class
 
@@ -262,6 +283,43 @@ variable input.r
 	rep-type java.lang.String
 
 ppt main..searchByIdOrTitle_200_Ratings(main.searchByIdOrTitle_Input):::ENTER
+ppt-type enter
+variable input
+	var-kind variable
+	dec-type main.searchByIdOrTitle_Input
+	rep-type java.lang.String
+variable input.t
+	var-kind field t
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.i
+	var-kind field i
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.type
+	var-kind field type
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.y
+	var-kind field y
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.plot
+	var-kind field plot
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.r
+	var-kind field r
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main..searchByIdOrTitle_401(main.searchByIdOrTitle_Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -537,6 +595,57 @@ variable return.Source
 	rep-type java.lang.String
 variable return.Value
 	var-kind field Value
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main..searchByIdOrTitle_401(main.searchByIdOrTitle_Input):::EXIT3
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.searchByIdOrTitle_Input
+	rep-type java.lang.String
+variable input.t
+	var-kind field t
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.i
+	var-kind field i
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.type
+	var-kind field type
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.y
+	var-kind field y
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.plot
+	var-kind field plot
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.r
+	var-kind field r
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return
+	var-kind return
+	dec-type main.searchByIdOrTitle_Output_401
+	rep-type java.lang.String
+variable return.Response
+	var-kind field Response
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.Error
+	var-kind field Error
 	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String
