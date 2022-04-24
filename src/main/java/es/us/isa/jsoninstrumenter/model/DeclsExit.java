@@ -358,8 +358,12 @@ public class DeclsExit {
                 value = "";
                 for(int i = 0; i < elements.size(); i++) {
 
-                    if(isString && elements.get(i)!=null) {
-                        value = value + " \"" + elements.get(i) + "\"";
+                    if(isString) {
+                        if(elements.get(i) == null || Arrays.asList(stringsToConsiderAsNull).contains(elements.get(i))) {
+                            value = value + " " + null;
+                        } else {
+                            value = value + " \"" + elements.get(i) + "\"";
+                        }
                     } else {
                         value = value + " " + elements.get(i);
                     }

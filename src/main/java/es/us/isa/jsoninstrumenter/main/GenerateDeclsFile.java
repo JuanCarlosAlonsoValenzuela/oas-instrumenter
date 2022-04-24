@@ -24,13 +24,12 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/evaluation/AmadeusHotel/swagger.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluation/AmadeusHotel/AmadeusHotel_1000.csv";
+    private static String openApiSpecPath = "src/test/resources/evaluation/GitHub/swagger.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluation/GitHub/GitHub2_extended.csv";
     private static boolean generateDtrace = true;
 
-//    cd /mnt/d/users/jcav/Documents/GitHub/json-instrumenter/src/main/resources
-//    cd /mnt/d/users/Juan\ Carlos/Documents/GitHub/json-instrumenter/src/main/resources
-//    java -cp $DAIKONDIR/daikon.jar daikon.Daikon declsFile.decls dtraceFile.dtrace
+    public static String[] stringsToConsiderAsNull = {"N/A"};
+
 
     // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
     // TODO: The name suffix of nested arrays of the exits must be print with "." or "&" instead of "_"

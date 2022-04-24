@@ -495,6 +495,12 @@ public class DeclsVariable {
             }
         }
 
+        // Set value to null if its value should be considered as null
+        if(Arrays.asList(stringsToConsiderAsNull).contains(value)) {
+            value = null;
+        }
+
+
         return value;
 
     }
@@ -612,6 +618,10 @@ public class DeclsVariable {
             List<String> hierarchy = Arrays.asList(this.variableName.split("\\."));
             hierarchy = hierarchy.subList(1, hierarchy.size());
             value = getPrimitiveValueFromHierarchy(json, hierarchy);
+
+            if(Arrays.asList(stringsToConsiderAsNull).contains(value)) {
+                value = null;
+            }
 
             // Daikon does not support null values for parameters of type double
             // For this reason, if a null value is of type double, it is considered nonsensical and the value of modified will be 2 instead of 1
