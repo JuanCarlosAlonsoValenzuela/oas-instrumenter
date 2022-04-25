@@ -61,51 +61,51 @@ securityDefinitions:
       user-read-private: ''
     type: oauth2
 paths:
-#  /albums:
-#    get:
-#      description: |
-#        [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
-#      parameters:
-#        - description: A comma-separated list of IDs
-#          in: query
-#          name: ids
-#          required: true
-#          type: string
-#        - description: The market (an ISO 3166-1 alpha-2 country code)
-#          in: query
-#          name: market
-#          required: false
-#          type: string
-#      responses:
-#        '200':
-#          description: OK
-#          schema:
-#            properties:
-#              albums:
-#                items:
-#                  $ref: '#/definitions/album'
-#                type: array
-#            type: object
-#  '/albums/{id}':
-#    get:
-#      description: |
-#        [Get an Album](https://developer.spotify.com/web-api/get-album/)
-#      parameters:
-#        - description: The Spotify ID for the album
-#          in: path
-#          name: id
-#          required: true
-#          type: string
-#        - description: The market (an ISO 3166-1 alpha-2 country code)
-#          in: query
-#          name: market
-#          required: false
-#          type: string
-#      responses:
-#        '200':
-#          description: OK
-#          schema:
-#            $ref: '#/definitions/album'
+  #  /albums:
+  #    get:
+  #      description: |
+  #        [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
+  #      parameters:
+  #        - description: A comma-separated list of IDs
+  #          in: query
+  #          name: ids
+  #          required: true
+  #          type: string
+  #        - description: The market (an ISO 3166-1 alpha-2 country code)
+  #          in: query
+  #          name: market
+  #          required: false
+  #          type: string
+  #      responses:
+  #        '200':
+  #          description: OK
+  #          schema:
+  #            properties:
+  #              albums:
+  #                items:
+  #                  $ref: '#/definitions/album'
+  #                type: array
+  #            type: object
+  #  '/albums/{id}':
+  #    get:
+  #      description: |
+  #        [Get an Album](https://developer.spotify.com/web-api/get-album/)
+  #      parameters:
+  #        - description: The Spotify ID for the album
+  #          in: path
+  #          name: id
+  #          required: true
+  #          type: string
+  #        - description: The market (an ISO 3166-1 alpha-2 country code)
+  #          in: query
+  #          name: market
+  #          required: false
+  #          type: string
+  #      responses:
+  #        '200':
+  #          description: OK
+  #          schema:
+  #            $ref: '#/definitions/album'
   '/albums/{id}/tracks':
     get:
       operationId: getAlbumTracks
@@ -1171,10 +1171,13 @@ definitions:
           type: string
         description: Known external IDs for this album.
         type: object
-      external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
+      external_urls:  # Modified
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:    Original (external_urls)
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
         description: Known external URLs for this album.
         type: object
       genres:
@@ -1224,10 +1227,13 @@ definitions:
         items:
           type: string
         type: array
-      external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
+      external_urls: # Modified
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
         description: Known external URLs for this album.
         type: object
       href:
@@ -1305,10 +1311,13 @@ definitions:
     type: object
   artist:
     properties:
-      external_urls:
-        additionalProperties:
-          type: string
-        description: Known external URLs for this artist.
+      external_urls:    # Modified
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          type: string
+        #        description: Known external URLs for this artist.
         type: object
       followers:
         $ref: '#/definitions/followers'
@@ -1343,10 +1352,13 @@ definitions:
     type: object
   artist-simple:
     properties:
-      external_urls:
-        additionalProperties:
-          type: string
-        description: Known external URLs for this artist.
+      external_urls:  # Modified
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          type: string
+        #        description: Known external URLs for this artist.
         type: object
       href:
         description: A link to the Web API endpoint providing full details of the artist.
@@ -1421,9 +1433,12 @@ definitions:
         description: 'The user''s email address, as entered by the user when creating their account. This email address is unverified; there is no proof that it actually belongs to the user. This field is only available when the current user has granted access to the user-read-email scope.'
         type: string
       external_urls:
-        additionalProperties:
-          type: string
-        description: Known external URLs for this user.
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          type: string
+        #        description: Known external URLs for this user.
         type: object
       followers:
         $ref: '#/definitions/followers'
@@ -1482,10 +1497,13 @@ definitions:
         description: 'The playlist description. Only returned for modified, verified playlists, otherwise null.'
         type: string
       external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
-        description: Known external URLs for this album.
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
+        #        description: Known external URLs for this album.
         type: object
       followers:
         description: Information about the followers of the playlist.
@@ -1534,9 +1552,12 @@ definitions:
         description: True if the owner allows other users to modify the playlist.
         type: boolean
       external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
         description: Known external URLs for this album.
         type: object
       href:
@@ -1796,9 +1817,12 @@ definitions:
         description: Known external IDs for the track.
         type: object
       external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
         description: Known external URLs for this track.
         type: object
       href:
@@ -1814,9 +1838,12 @@ definitions:
         description: 'Part of the response when Track Relinking is applied, and the requested track has been replaced with different track. The track in the linked_from object contains information about the originally requested track.'
         properties:
           external_urls:
-            additionalProperties:
-              description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-              type: string
+            properties:
+              spotify:
+                type: string
+            #            additionalProperties:
+            #              description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+            #              type: string
             description: Known external URLs for this track.
             type: object
           href:
@@ -1870,10 +1897,13 @@ definitions:
         description: Whether or not the track has explicit lyrics (true = yes it does; false = no it does not OR unknown).
         type: boolean
       external_urls:
-        additionalProperties:
-          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-          type: string
-        description: Known external URLs for this track.
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+        #          type: string
+        #        description: Known external URLs for this track.
         type: object
       href:
         description: A link to the Web API endpoint providing full details of the track.
@@ -1891,10 +1921,13 @@ definitions:
         description: 'Part of the response when Track Relinking is applied, and the requested track has been replaced with different track. The track in the linked_from object contains information about the originally requested track.'
         properties:
           external_urls:
-            additionalProperties:
-              description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
-              type: string
-            description: Known external URLs for this track.
+            properties:
+              spotify:
+                type: string
+            #            additionalProperties:
+            #              description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
+            #              type: string
+            #            description: Known external URLs for this track.
             type: object
           href:
             description: A link to the Web API endpoint providing full details of the track.
@@ -1996,9 +2029,12 @@ definitions:
         description: The name displayed on the user's profile.
         type: string
       external_urls:
-        additionalProperties:
-          type: string
-        description: Known external URLs for this user.
+        properties:
+          spotify:
+            type: string
+        #        additionalProperties:
+        #          type: string
+        #        description: Known external URLs for this user.
         type: object
       followers:
         $ref: '#/definitions/followers'

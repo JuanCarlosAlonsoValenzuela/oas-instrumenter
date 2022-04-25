@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/---/resources/evaluation/OMDb/bySearch/swagger_bySearch.yaml";
-    private static String testCasesFilePath = "src/---/resources/evaluation/OMDb/bySearch/OMDb_bySearch_1000.csv";
+    private static String openApiSpecPath = "src/test/resources/evaluation/Spotify/getAlbumTracks/swagger_albumTracks.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluation/Spotify/getAlbumTracks/1000/SpotifyAlbumTrack_1000.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
