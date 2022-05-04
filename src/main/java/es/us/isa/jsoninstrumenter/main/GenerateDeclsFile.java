@@ -40,6 +40,7 @@ public class GenerateDeclsFile {
 
     public static final String packageName = "main";
 
+    public static final String HASHCODE_TYPE_NAME = "hashcode";
     public static final String STRING_TYPE_NAME = "java.lang.String";
     public static final String DOUBLE_TYPE_NAME = "double";
     public static final String INTEGER_TYPE_NAME = "int";
@@ -115,9 +116,9 @@ public class GenerateDeclsFile {
                 // TODO: operationEndpoint + "_" + httpMethod vs operationId
                 // TODO: Extract ENTER
 
-//                if(i%50==0){
+                if(i%50==0){
                     System.out.println("Generated dtrace for " + i + " out of " + testCases.size() + " test cases");
-//                }
+                }
                 i++;
 
                 for(DeclsClass declsClass: declsFile.getClasses()) {

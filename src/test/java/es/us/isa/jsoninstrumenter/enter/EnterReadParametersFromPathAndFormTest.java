@@ -79,7 +79,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 assertEquals("Incorrect variable name", "input", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", declsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
                 assertEquals("Unexpected number of son variables", 2, declsFatherVariable1.getEnclosedVariables().size());
@@ -118,7 +118,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 assertEquals("Incorrect variable name", "input", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", declsFatherVariable2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable2.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());
                 assertEquals("Unexpected number of son variables", 2, declsFatherVariable2.getEnclosedVariables().size());
@@ -209,7 +209,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 assertEquals("Incorrect variable name", "input", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".check_Input", declsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
                 assertEquals("Unexpected number of son variables", 15, declsFatherVariable1.getEnclosedVariables().size());

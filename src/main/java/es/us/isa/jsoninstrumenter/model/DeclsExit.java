@@ -303,7 +303,8 @@ public class DeclsExit {
         // Generate the dtrace exit for the array
         // Group 1
         res = res + "return" + "\n";
-        res = res + "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return_output" + "\"" + "\n";
+        String v = "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return_output" + "\"";
+        res = res + Math.abs(v.hashCode()) + "\n";
         res = res + "1" + "\n";
 
         // Returns the value of the array or nonsensical if the array is null
@@ -314,7 +315,8 @@ public class DeclsExit {
         if(value.equals("nonsensical")) {
             res = res + "null" + "\n";
         } else {
-            res = res + "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return" + this.nameSuffix + "_output" + "\"" + "\n";
+            String v1 = "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return" + this.nameSuffix + "_output" + "\"";
+            res = res + Math.abs(v1.hashCode()) + "\n";
         }
         res = res + "1" + "\n";
 
@@ -375,7 +377,8 @@ public class DeclsExit {
                 String hashcode = "";
                 for(int i = 1; i <= elements.size(); i++) {
                     if(elements.get(i-1) != null) {
-                        hashcode = hashcode + "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"" + " ";
+                        String v = "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"";
+                        hashcode = hashcode + Math.abs(v.hashCode()) + " ";
                     } else {
                         hashcode = hashcode + "null ";
                     }

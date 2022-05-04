@@ -76,7 +76,7 @@ public class BasicOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findAirports_Output_200", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 5, declsFatherVariable.getEnclosedVariables().size());

@@ -73,7 +73,7 @@ public class ArrayOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200.array", declsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
                 // The sons are url and location
@@ -84,7 +84,7 @@ public class ArrayOutputTest {
                 assertEquals("Incorrect variable name", "this.array",  array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                 assertEquals("Incorrect decType",  "main.array[]", array1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "this", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
                 assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -93,7 +93,7 @@ public class ArrayOutputTest {
                 assertEquals("Incorrect variable name", "this.array[..]",  array2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", array2.getVarKind());
                 assertEquals("Incorrect decType",  "main.array[]", array2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                 assertEquals("Incorrect enclosing var", "this.array", array2.getEnclosingVar());
                 assertTrue("This variable should be an array", array2.isArray());
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
@@ -109,7 +109,7 @@ public class ArrayOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", declsFatherVariable2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable2.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());
                 // The sons are url and location

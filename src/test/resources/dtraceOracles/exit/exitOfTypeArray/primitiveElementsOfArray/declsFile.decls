@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
 	enclosing-var this
@@ -25,12 +25,12 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array
 	var-kind field array
 	enclosing-var this
 	dec-type double[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
@@ -47,7 +47,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -59,7 +59,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -68,12 +68,12 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
 	dec-type double[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array

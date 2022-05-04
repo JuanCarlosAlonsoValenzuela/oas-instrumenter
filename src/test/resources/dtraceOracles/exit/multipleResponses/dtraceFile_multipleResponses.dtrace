@@ -1,6 +1,6 @@
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::ENTER
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
@@ -8,27 +8,27 @@ input.inputParameter
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::EXIT1
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_014_return_output"
+1881547511
 1
 return.stringProperty
 "stringPropertyValue"
 1
 return.arrayOfObjectsProperty
-"test_014_return.arrayOfObjectsProperty_output"
+14768290
 1
 return.arrayOfObjectsProperty[..]
-["test_014_return.arrayOfObjectsProperty_output_1" "test_014_return.arrayOfObjectsProperty_output_2"]
+[1307484976 1307485007]
 1
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::ENTER
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
@@ -36,13 +36,13 @@ input.inputParameter
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_014_return_output"
+1881547511
 1
 return.property1
 "property1Value1"
@@ -50,7 +50,7 @@ return.property1
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::ENTER
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
@@ -58,13 +58,13 @@ input.inputParameter
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
 input
-"test_014_input_input"
+1863351108
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_014_return_output"
+1881547511
 1
 return.property1
 "property1Value2"
@@ -72,7 +72,7 @@ return.property1
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::ENTER
 input
-"test_015_input_input"
+1357792483
 1
 input.inputParameter
 "WRONGVALUE"
@@ -80,13 +80,13 @@ input.inputParameter
 
 main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::EXIT3
 input
-"test_015_input_input"
+1357792483
 1
 input.inputParameter
 "WRONGVALUE"
 1
 return
-"test_015_return_output"
+1902885608
 1
 return.errorDescription
 "Unexpected error"

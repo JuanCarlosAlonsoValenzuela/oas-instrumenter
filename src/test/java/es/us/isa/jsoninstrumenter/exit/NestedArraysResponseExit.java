@@ -84,7 +84,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                     assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                     assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                     assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
                     assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
@@ -96,7 +96,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                     assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".v1Name_Output_200" + repeatedArray, exitDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                     assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                     assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
                     assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
@@ -108,7 +108,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
                     assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                     assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                     assertFalse("This variable should not be an array", array1.isArray());
                     assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -117,7 +117,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
                     assertEquals("Incorrect var-kind", "array", array2.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                    assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                     assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
                     assertTrue("This variable should be an array", array2.isArray());
                     assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
@@ -137,7 +137,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
@@ -149,7 +149,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", exitDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 29, exitDeclsFatherVariable.getEnclosedVariables().size());
@@ -233,7 +233,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                     assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                     assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                     assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
                     assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
@@ -245,7 +245,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                     assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".v1Name_Output_200" + repeatedArray, exitDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                     assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                     assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
                     assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
@@ -257,7 +257,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
                     assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                    assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                     assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                     assertFalse("This variable should not be an array", array1.isArray());
                     assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -266,7 +266,7 @@ public class NestedArraysResponseExit {
                     assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
                     assertEquals("Incorrect var-kind", "array", array2.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
-                    assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                    assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                     assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
                     assertTrue("This variable should be an array", array2.isArray());
                     assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
@@ -286,7 +286,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
@@ -298,7 +298,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200.array.array.array", exitDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
@@ -309,7 +309,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                 assertEquals("Incorrect decType", "double[]", array1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
                 assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -388,7 +388,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
@@ -400,7 +400,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", exitDeclsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 1, exitDeclsFatherVariable.getEnclosedVariables().size());

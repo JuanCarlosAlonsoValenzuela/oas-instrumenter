@@ -1,6 +1,6 @@
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::ENTER
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
@@ -8,24 +8,24 @@ input.inputParameter
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::EXIT1
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_010_exitOfTypeArrayEndpoint_return_output"
+7490067
 1
 return.array
-"test_010_exitOfTypeArrayEndpoint_return.array_output"
+836493928
 1
 return.array[..]
-["test_010_array_output_1" "test_010_array_output_2"]
+[1821497518 1821497549]
 1
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
@@ -33,13 +33,13 @@ input.inputParameter
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::EXIT2
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_010_return_output"
+160589197
 1
 return.property1
 "firstValueOfProperty1"
@@ -50,7 +50,7 @@ return.property2
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
@@ -58,13 +58,13 @@ input.inputParameter
 
 main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::EXIT2
 input
-"test_010_input_input"
+409381688
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_010_return_output"
+160589197
 1
 return.property1
 "secondValueOfProperty1"

@@ -1,6 +1,6 @@
 main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::ENTER
 input
-"test_003_input_input"
+861357924
 1
 input.inputParameter
 "parameterValue"
@@ -8,13 +8,13 @@ input.inputParameter
 
 main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::EXIT1
 input
-"test_003_input_input"
+861357924
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_003_return_output"
+1570644265
 1
 return.stringProperty
 "stringValue"

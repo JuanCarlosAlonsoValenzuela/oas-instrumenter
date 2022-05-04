@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.primitiveExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
 	enclosing-var this
@@ -25,7 +25,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.primitiveExitEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
 	enclosing-var this
@@ -56,7 +56,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.primitiveExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -68,7 +68,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.primitiveExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -77,7 +77,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.primitiveExitEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
 	enclosing-var return

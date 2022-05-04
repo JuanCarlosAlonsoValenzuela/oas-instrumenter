@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.objectExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
 	enclosing-var this
@@ -25,7 +25,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.objectExitEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
 	enclosing-var this
@@ -35,12 +35,12 @@ variable this.objectProperty
 	var-kind variable
 	enclosing-var this
 	dec-type main.objectExitEndpoint_Output_200_objectProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.objectProperty.arrayStringProperty
 	var-kind field arrayStringProperty
 	enclosing-var this.objectProperty
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.objectProperty.arrayStringProperty[..]
 	var-kind array
 	enclosing-var this.objectProperty.arrayStringProperty
@@ -51,7 +51,7 @@ variable this.objectProperty.subObjectProperty
 	var-kind variable
 	enclosing-var this.objectProperty
 	dec-type main.objectExitEndpoint_Output_200_subObjectProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.objectProperty.subObjectProperty.stringProperty
 	var-kind field stringProperty
 	enclosing-var this.objectProperty.subObjectProperty
@@ -61,7 +61,7 @@ variable this.objectProperty.subObjectProperty.arrayDoubleProperty
 	var-kind field arrayDoubleProperty
 	enclosing-var this.objectProperty.subObjectProperty
 	dec-type double[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.objectProperty.subObjectProperty.arrayDoubleProperty[..]
 	var-kind array
 	enclosing-var this.objectProperty.subObjectProperty.arrayDoubleProperty
@@ -78,7 +78,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.objectExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -90,7 +90,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.objectExitEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -99,7 +99,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.objectExitEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
 	enclosing-var return
@@ -109,12 +109,12 @@ variable return.objectProperty
 	var-kind return
 	enclosing-var return
 	dec-type main.objectExitEndpoint_Output_200_objectProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.objectProperty.arrayStringProperty
 	var-kind field arrayStringProperty
 	enclosing-var return.objectProperty
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.objectProperty.arrayStringProperty[..]
 	var-kind array
 	enclosing-var return.objectProperty.arrayStringProperty
@@ -125,7 +125,7 @@ variable return.objectProperty.subObjectProperty
 	var-kind return
 	enclosing-var return.objectProperty
 	dec-type main.objectExitEndpoint_Output_200_subObjectProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.objectProperty.subObjectProperty.stringProperty
 	var-kind field stringProperty
 	enclosing-var return.objectProperty.subObjectProperty
@@ -135,7 +135,7 @@ variable return.objectProperty.subObjectProperty.arrayDoubleProperty
 	var-kind field arrayDoubleProperty
 	enclosing-var return.objectProperty.subObjectProperty
 	dec-type double[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.objectProperty.subObjectProperty.arrayDoubleProperty[..]
 	var-kind array
 	enclosing-var return.objectProperty.subObjectProperty.arrayDoubleProperty

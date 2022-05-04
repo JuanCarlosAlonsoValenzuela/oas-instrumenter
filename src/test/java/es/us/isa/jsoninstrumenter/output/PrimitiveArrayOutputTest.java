@@ -74,7 +74,7 @@ public class PrimitiveArrayOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 // The array is counted twice (normal and [..])
@@ -115,7 +115,7 @@ public class PrimitiveArrayOutputTest {
                 assertEquals("Incorrect variable name", "this.serviceTypes", serviceTypes1.getVariableName());
                 assertEquals("Incorrect var-kind", "field serviceTypes", serviceTypes1.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String[]", serviceTypes1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", serviceTypes1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", serviceTypes1.getRepType());
                 assertEquals("Incorrect enclosing var", "this", serviceTypes1.getEnclosingVar());
                 // The first ocurrence should not be an array (flaga array 1)
                 assertFalse("This variable should not be an array", serviceTypes1.isArray());

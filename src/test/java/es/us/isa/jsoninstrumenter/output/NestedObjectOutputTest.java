@@ -74,7 +74,7 @@ public class NestedObjectOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200", declsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
                 // The sons are url and location
@@ -97,7 +97,7 @@ public class NestedObjectOutputTest {
                 assertEquals("Incorrect variable name", "this.location", locationObject.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", locationObject.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200_location", locationObject.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", locationObject.getRepType());
+                assertEquals("Incorrect repType", "hashcode", locationObject.getRepType());
                 assertEquals("Incorrect enclosing var", "this", locationObject.getEnclosingVar());
                 assertFalse("This variable should not be an array", locationObject.isArray());
                 // 5 sons: ids, keyword, keywordId, type (ids is counted twice because it is of type array)
@@ -139,7 +139,7 @@ public class NestedObjectOutputTest {
                 assertEquals("Incorrect variable name", "this.location.ids",  ids1.getVariableName());
                 assertEquals("Incorrect var-kind", "field ids", ids1.getVarKind());
                 assertEquals("Incorrect decType",  "main.ids[]", ids1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", ids1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", ids1.getRepType());
                 assertEquals("Incorrect enclosing var", "this.location", ids1.getEnclosingVar());
                 assertFalse("This variable should not be an array", ids1.isArray());
                 assertEquals("Unexpected number of son variables", 0, ids1.getEnclosedVariables().size());
@@ -148,7 +148,7 @@ public class NestedObjectOutputTest {
                 assertEquals("Incorrect variable name", "this.location.ids[..]",  ids2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", ids2.getVarKind());
                 assertEquals("Incorrect decType",  "main.ids[]", ids2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", ids2.getRepType());
+                assertEquals("Incorrect repType", "hashcode[]", ids2.getRepType());
                 assertEquals("Incorrect enclosing var", "this.location.ids", ids2.getEnclosingVar());
                 assertTrue("This variable should be an array", ids2.isArray());
                 assertEquals("Unexpected number of son variables", 0, ids2.getEnclosedVariables().size());
@@ -165,7 +165,7 @@ public class NestedObjectOutputTest {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200_location_ids", declsFatherVariable2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable2.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());
                 // The sons are url and location

@@ -80,7 +80,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
                 assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable1.getEnclosedVariables().size());
@@ -91,7 +91,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200.array", exitDeclsFatherVariable1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
 
@@ -105,7 +105,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "return.array",  array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                 assertEquals("Incorrect decType",  "main.array[]", array1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
                 assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -114,7 +114,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "return.array[..]",  array2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", array2.getVarKind());
                 assertEquals("Incorrect decType",  "main.array[]", array2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
                 assertTrue("This variable should be an array", array2.isArray());
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
@@ -131,7 +131,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Input", enterDeclsFatherVariable2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", enterDeclsFatherVariable2.getRepType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable2.isArray());
                 assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable2.getEnclosedVariables().size());
@@ -143,7 +143,7 @@ public class ArrayExitTest {
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", exitDeclsFatherVariable2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", exitDeclsFatherVariable2.getRepType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());
                 assertEquals("Unexpected number of son variables", 29, exitDeclsFatherVariable2.getEnclosedVariables().size());

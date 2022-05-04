@@ -1,6 +1,7 @@
 package es.us.isa.jsoninstrumenter.dtrace;
 
 import es.us.isa.jsoninstrumenter.main.GenerateDeclsFile;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

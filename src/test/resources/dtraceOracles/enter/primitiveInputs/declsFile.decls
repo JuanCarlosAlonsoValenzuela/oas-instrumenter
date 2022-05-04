@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.primitiveInputsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.doubleInQuery
 	var-kind field doubleInQuery
 	enclosing-var this
@@ -40,7 +40,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.primitiveInputsEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.property1
 	var-kind field property1
 	enclosing-var this
@@ -61,7 +61,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.primitiveInputsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.doubleInQuery
 	var-kind field doubleInQuery
 	enclosing-var input
@@ -88,7 +88,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.primitiveInputsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.doubleInQuery
 	var-kind field doubleInQuery
 	enclosing-var input
@@ -112,7 +112,7 @@ variable input.booleanInForm
 variable return
 	var-kind return
 	dec-type main.primitiveInputsEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.property1
 	var-kind field property1
 	enclosing-var return

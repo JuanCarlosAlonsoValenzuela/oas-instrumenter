@@ -16,7 +16,8 @@ import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.model.DeclsClass.generateOutputDeclsClasses;
 import static es.us.isa.jsoninstrumenter.model.DeclsClass.setDeclsClassEnterAndExit;
 import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
-import static org.junit.Assert.assertEquals;
+import static org.apache.commons.lang3.Validate.matchesPattern;
+import static org.junit.Assert.*;
 
 public class SimpleDtraceFileTest {
 
@@ -84,7 +85,7 @@ public class SimpleDtraceFileTest {
                     String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
                     assertEquals("Incorrect enter name", "main.airport.findAirports_200(main.findAirports_Input):::ENTER", enterDtraceLines[0]);
                     assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
-                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_input_input\"", enterDtraceLines[2]);
+                    assertTrue(enterDtraceLines[2].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
 
                     // iata
@@ -111,7 +112,7 @@ public class SimpleDtraceFileTest {
                     // Checks in ENTER
                     assertEquals("Incorrect enter name", "main.airport.findAirports_200(main.findAirports_Input):::ENTER", exitDtraceLines[0]);
                     assertEquals("Incorrect wrapper name", "input", exitDtraceLines[1]);
-                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_input_input\"", exitDtraceLines[2]);
+                    assertTrue(exitDtraceLines[2].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[3]);
 
                     // iata
@@ -127,7 +128,7 @@ public class SimpleDtraceFileTest {
 
                     assertEquals("Incorrect exit name", "main.airport.findAirports_200(main.findAirports_Input):::EXIT1", exitDtraceLines[11]);
                     assertEquals("Incorrect wrapper name", "input", exitDtraceLines[12]);
-                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_input_input\"", exitDtraceLines[13]);
+                    assertTrue(exitDtraceLines[13].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[14]);
 
                     // iata
@@ -142,7 +143,7 @@ public class SimpleDtraceFileTest {
 
                     // RETURN
                     assertEquals("Incorrect wrapper name", "return", exitDtraceLines[21]);
-                    assertEquals("Incorrect hashcode", "\"test_1ibbive9wrnty_findAirports_return_output\"", exitDtraceLines[22]);
+                    assertTrue(exitDtraceLines[22].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[23]);
 
                     // id

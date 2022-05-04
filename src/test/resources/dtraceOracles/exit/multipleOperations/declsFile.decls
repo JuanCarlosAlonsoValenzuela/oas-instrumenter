@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.operation1_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.parameterOperation1
 	var-kind field parameterOperation1
 	enclosing-var this
@@ -25,7 +25,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.operation1_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.stringPropertyOperation1
 	var-kind field stringPropertyOperation1
 	enclosing-var this
@@ -35,20 +35,20 @@ variable this.arrayOfObjectsPropertyOperation1
 	var-kind field arrayOfObjectsPropertyOperation1
 	enclosing-var this
 	dec-type main.arrayOfObjectsPropertyOperation1[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.arrayOfObjectsPropertyOperation1[..]
 	var-kind array
 	enclosing-var this.arrayOfObjectsPropertyOperation1
 	array 1
 	dec-type main.arrayOfObjectsPropertyOperation1[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.operation1_Output_200_arrayOfObjectsPropertyOperation1:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.operation1_Output_200_arrayOfObjectsPropertyOperation1
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.property1Operation1
 	var-kind field property1Operation1
 	enclosing-var this
@@ -64,7 +64,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.operation1_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
 	enclosing-var input
@@ -76,7 +76,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.operation1_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
 	enclosing-var input
@@ -88,7 +88,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.operation1_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
 	enclosing-var input
@@ -97,7 +97,7 @@ variable input.parameterOperation1
 variable return
 	var-kind return
 	dec-type main.operation1_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.stringPropertyOperation1
 	var-kind field stringPropertyOperation1
 	enclosing-var return
@@ -107,20 +107,20 @@ variable return.arrayOfObjectsPropertyOperation1
 	var-kind field arrayOfObjectsPropertyOperation1
 	enclosing-var return
 	dec-type main.arrayOfObjectsPropertyOperation1[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.arrayOfObjectsPropertyOperation1[..]
 	var-kind array
 	enclosing-var return.arrayOfObjectsPropertyOperation1
 	array 1
 	dec-type main.arrayOfObjectsPropertyOperation1[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.operation1.operation1_200_arrayOfObjectsPropertyOperation1(main.operation1_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.operation1_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
 	enclosing-var input
@@ -129,7 +129,7 @@ variable input.parameterOperation1
 variable return
 	var-kind return
 	dec-type main.operation1_Output_200_arrayOfObjectsPropertyOperation1
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.property1Operation1
 	var-kind field property1Operation1
 	enclosing-var return
@@ -145,7 +145,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.operation2_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.parameterOperation2
 	var-kind field parameterOperation2
 	enclosing-var this
@@ -161,7 +161,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.operation2_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.stringPropertyOperation2
 	var-kind field stringPropertyOperation2
 	enclosing-var this
@@ -177,7 +177,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.operation2_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation2
 	var-kind field parameterOperation2
 	enclosing-var input
@@ -189,7 +189,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.operation2_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.parameterOperation2
 	var-kind field parameterOperation2
 	enclosing-var input
@@ -198,7 +198,7 @@ variable input.parameterOperation2
 variable return
 	var-kind return
 	dec-type main.operation2_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.stringPropertyOperation2
 	var-kind field stringPropertyOperation2
 	enclosing-var return

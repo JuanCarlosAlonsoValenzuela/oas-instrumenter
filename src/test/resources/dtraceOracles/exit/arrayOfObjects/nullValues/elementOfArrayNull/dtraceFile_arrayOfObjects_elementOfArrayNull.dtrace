@@ -1,6 +1,6 @@
 main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::ENTER
 input
-"test_008_input_input"
+1666435201
 1
 input.inputParameter
 "parameterValue"
@@ -8,27 +8,27 @@ input.inputParameter
 
 main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::EXIT1
 input
-"test_008_input_input"
+1666435201
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_008_return_output"
+982026620
 1
 return.stringProperty
 "stringProperty1"
 1
 return.arrayOfObjectsProperty
-"test_008_return.arrayOfObjectsProperty_output"
+842578745
 1
 return.arrayOfObjectsProperty[..]
-["test_008_return.arrayOfObjectsProperty_output_1" null]
+[2030705173 null]
 1
 
 main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::ENTER
 input
-"test_008_input_input"
+1666435201
 1
 input.inputParameter
 "parameterValue"
@@ -36,13 +36,13 @@ input.inputParameter
 
 main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::EXIT2
 input
-"test_008_input_input"
+1666435201
 1
 input.inputParameter
 "parameterValue"
 1
 return
-"test_008_return_output"
+982026620
 1
 return.property1
 "property1Array1"

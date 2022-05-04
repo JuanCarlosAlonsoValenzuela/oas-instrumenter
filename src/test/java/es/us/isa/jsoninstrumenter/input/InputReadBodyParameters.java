@@ -67,7 +67,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 5, declsFatherVariable.getEnclosedVariables().size());
@@ -174,7 +174,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 5, declsFatherVariable.getEnclosedVariables().size());
@@ -222,7 +222,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.location", location.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", location.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input_location", location.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", location.getRepType());
+                assertEquals("Incorrect repType", "hashcode", location.getRepType());
                 assertEquals("Incorrect enclosing var", "this", location.getEnclosingVar());
                 assertFalse("This variable should not be an array", location.isArray());
                 assertEquals("Unexpected number of son variables", 3, location.getEnclosedVariables().size());
@@ -242,7 +242,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.location.keywords", keywords1.getVariableName());
                 assertEquals("Incorrect var-kind", "field keywords", keywords1.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String[]", keywords1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", keywords1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", keywords1.getRepType());
                 assertEquals("Incorrect enclosing var", "this.location", keywords1.getEnclosingVar());
                 assertFalse("This variable should not be an array", keywords1.isArray());
                 assertEquals("Unexpected number of son variables", 0, keywords1.getEnclosedVariables().size());
@@ -310,7 +310,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 5, declsFatherVariable.getEnclosedVariables().size());
@@ -358,7 +358,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.location", location.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", location.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input_location", location.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", location.getRepType());
+                assertEquals("Incorrect repType", "hashcode", location.getRepType());
                 assertEquals("Incorrect enclosing var", "this", location.getEnclosingVar());
                 assertFalse("This variable should not be an array", location.isArray());
                 assertEquals("Unexpected number of son variables", 3, location.getEnclosedVariables().size());
@@ -378,7 +378,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.location.keywords", keywords1.getVariableName());
                 assertEquals("Incorrect var-kind", "field keywords", keywords1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".keywords[]", keywords1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", keywords1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", keywords1.getRepType());
                 assertEquals("Incorrect enclosing var", "this.location", keywords1.getEnclosingVar());
                 assertFalse("This variable should not be an array", keywords1.isArray());
                 assertEquals("Unexpected number of son variables", 0, keywords1.getEnclosedVariables().size());
@@ -387,7 +387,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.location.keywords[..]", keywords2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", keywords2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".keywords[]", keywords2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", keywords2.getRepType());
+                assertEquals("Incorrect repType", "hashcode[]", keywords2.getRepType());
                 assertEquals("Incorrect enclosing var", "this.location.keywords", keywords2.getEnclosingVar());
                 assertTrue("This variable should be an array", keywords2.isArray());
                 assertEquals("Unexpected number of son variables", 0, keywords2.getEnclosedVariables().size());
@@ -445,7 +445,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input", declsFatherVariable.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", declsFatherVariable.getRepType());
+                assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
                 assertEquals("Unexpected number of son variables", 2, declsFatherVariable.getEnclosedVariables().size());
@@ -465,7 +465,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.body", body.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", body.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input.bodyArray", body.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", body.getRepType());
+                assertEquals("Incorrect repType", "hashcode", body.getRepType());
                 assertEquals("Incorrect enclosing var", "this", body.getEnclosingVar());
                 assertFalse("This variable should not be an array", body.isArray());
                 assertEquals("Unexpected number of son variables", 2, body.getEnclosedVariables().size());
@@ -477,7 +477,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.body.array", array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                 assertEquals("Incorrect decType", "java.lang.String[]", array1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "this.body", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
                 assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -549,7 +549,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.body", body.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", body.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".createPlaylist_Input.bodyArray", body.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", body.getRepType());
+                assertEquals("Incorrect repType", "hashcode", body.getRepType());
                 assertEquals("Incorrect enclosing var", "this", body.getEnclosingVar());
                 assertFalse("This variable should not be an array", body.isArray());
                 assertEquals("Unexpected number of son variables", 2, body.getEnclosedVariables().size());
@@ -561,7 +561,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.body.array", array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String", array1.getRepType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "this.body", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
                 assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
@@ -570,7 +570,7 @@ public class InputReadBodyParameters {
                 assertEquals("Incorrect variable name", "this.body.array[..]", array2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", array2.getVarKind());
                 assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
-                assertEquals("Incorrect repType", "java.lang.String[]", array2.getRepType());
+                assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                 assertEquals("Incorrect enclosing var", "this.body.array", array2.getEnclosingVar());
                 assertTrue("This variable should be an array", array2.isArray());
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());

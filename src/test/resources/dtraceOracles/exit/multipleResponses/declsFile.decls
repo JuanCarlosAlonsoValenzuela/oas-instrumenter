@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
 	enclosing-var this
@@ -25,7 +25,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
 	enclosing-var this
@@ -35,20 +35,20 @@ variable this.arrayOfObjectsProperty
 	var-kind field arrayOfObjectsProperty
 	enclosing-var this
 	dec-type main.arrayOfObjectsProperty[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.arrayOfObjectsProperty[..]
 	var-kind array
 	enclosing-var this.arrayOfObjectsProperty
 	array 1
 	dec-type main.arrayOfObjectsProperty[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.property1
 	var-kind field property1
 	enclosing-var this
@@ -64,7 +64,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Output_400
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.errorDescription
 	var-kind field errorDescription
 	enclosing-var this
@@ -80,7 +80,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -92,7 +92,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -104,7 +104,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -116,7 +116,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -125,7 +125,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.multipleOperationsEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
 	enclosing-var return
@@ -135,20 +135,20 @@ variable return.arrayOfObjectsProperty
 	var-kind field arrayOfObjectsProperty
 	enclosing-var return
 	dec-type main.arrayOfObjectsProperty[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.arrayOfObjectsProperty[..]
 	var-kind array
 	enclosing-var return.arrayOfObjectsProperty
 	array 1
 	dec-type main.arrayOfObjectsProperty[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -157,7 +157,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.property1
 	var-kind field property1
 	enclosing-var return
@@ -169,7 +169,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.multipleOperationsEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -178,7 +178,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.multipleOperationsEndpoint_Output_400
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.errorDescription
 	var-kind field errorDescription
 	enclosing-var return

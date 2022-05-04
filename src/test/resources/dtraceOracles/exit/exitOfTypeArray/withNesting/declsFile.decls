@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
 	enclosing-var this
@@ -25,61 +25,61 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array
 	var-kind field array
 	enclosing-var this
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint_Output_200.array.array:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array
 	var-kind field array
 	enclosing-var this
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint_Output_200.array.array.array:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array
 	var-kind field array
 	enclosing-var this
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint_Output_200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.location
 	var-kind field location
 	enclosing-var this
@@ -95,7 +95,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -107,7 +107,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -119,7 +119,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -131,7 +131,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -143,7 +143,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -152,25 +152,25 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint_200.array.array(main.exitOfTypeNestedArrayEndpoint_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -179,25 +179,25 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint_200.array.array.array(main.exitOfTypeNestedArrayEndpoint_Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -206,25 +206,25 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200.array.array.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint_200(main.exitOfTypeNestedArrayEndpoint_Input):::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.exitOfTypeNestedArrayEndpoint_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
 	enclosing-var input
@@ -233,7 +233,7 @@ variable input.inputParameter
 variable return
 	var-kind return
 	dec-type main.exitOfTypeNestedArrayEndpoint_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.location
 	var-kind field location
 	enclosing-var return
