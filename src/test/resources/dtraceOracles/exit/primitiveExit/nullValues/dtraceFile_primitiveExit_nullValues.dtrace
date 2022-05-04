@@ -23,8 +23,8 @@ return.doubleProperty
 nonsensical
 2
 return.integerProperty
-null
-1
+nonsensical
+2
 return.booleanProperty
-null
-1
+nonsensical
+2

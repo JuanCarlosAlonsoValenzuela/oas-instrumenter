@@ -581,7 +581,10 @@ public class DeclsVariable {
         String modified = "1";
         // If a value is nonsensical, the value of modified must be 2 instead of 1
         // A parameter of type double with a null value is nonsensical
-        if(this.repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) && (value == null || value.equals("null"))) {
+        if(
+                (this.repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) || this.repType.equalsIgnoreCase(BOOLEAN_TYPE_NAME) || this.repType.equalsIgnoreCase(INTEGER_TYPE_NAME))
+                        && (value == null || value.equals("null"))
+        ) {
             value = "nonsensical";
             modified = "2";
         }
@@ -626,7 +629,10 @@ public class DeclsVariable {
 
             // Daikon does not support null values for parameters of type double
             // For this reason, if a null value is of type double, it is considered nonsensical and the value of modified will be 2 instead of 1
-            if(repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) && value == null) {
+            if(
+                    (repType.equalsIgnoreCase(DOUBLE_TYPE_NAME) || repType.equalsIgnoreCase(INTEGER_TYPE_NAME) || repType.equalsIgnoreCase(BOOLEAN_TYPE_NAME))
+                            && value == null
+            ) {
                 value = "nonsensical";
                 isNonsensical = true;
             }

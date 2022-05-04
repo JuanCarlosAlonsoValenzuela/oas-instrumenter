@@ -9,11 +9,11 @@ input.stringInPath
 null
 1
 input.integerInHeader
-null
-1
+nonsensical
+2
 input.booleanInForm
-null
-1
+nonsensical
+2
 
 main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::EXIT1
 input
@@ -26,11 +26,11 @@ input.stringInPath
 null
 1
 input.integerInHeader
-null
-1
+nonsensical
+2
 input.booleanInForm
-null
-1
+nonsensical
+2
 return
 534184405
 1

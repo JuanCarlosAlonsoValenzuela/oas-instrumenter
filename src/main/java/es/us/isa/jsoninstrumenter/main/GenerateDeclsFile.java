@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/---/resources/evaluation/Deutschebahn/swagger_arrays.yaml";
-    private static String testCasesFilePath = "src/---/resources/evaluation/Deutschebahn/1000/Deutschebahn_1000.csv";
+    private static String openApiSpecPath = "src/---/resources/evaluation/GitHub/swagger.yaml";
+    private static String testCasesFilePath = "src/---/resources/evaluation/GitHub/1000/GitHub_1000.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};

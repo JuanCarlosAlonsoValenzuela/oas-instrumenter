@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.org
 	var-kind field org
 	enclosing-var this
@@ -50,25 +50,25 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array
 	var-kind field array
 	enclosing-var this
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.array[..]
 	var-kind array
 	enclosing-var this.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.getOrganizationRepositories_Output_200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.id
 	var-kind field id
 	enclosing-var this
@@ -93,7 +93,7 @@ variable this.owner
 	var-kind variable
 	enclosing-var this
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.owner.login
 	var-kind field login
 	enclosing-var this.owner
@@ -473,7 +473,7 @@ variable this.topics
 	var-kind field topics
 	enclosing-var this
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.topics[..]
 	var-kind array
 	enclosing-var this.topics
@@ -539,7 +539,7 @@ variable this.permissions
 	var-kind variable
 	enclosing-var this
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.permissions.admin
 	var-kind field admin
 	enclosing-var this.permissions
@@ -569,7 +569,7 @@ variable this.template_repository
 	var-kind variable
 	enclosing-var this
 	dec-type main.getOrganizationRepositories_Output_200_template_repository
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.id
 	var-kind field id
 	enclosing-var this.template_repository
@@ -594,7 +594,7 @@ variable this.template_repository.license
 	var-kind variable
 	enclosing-var this.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_license
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.license.key
 	var-kind field key
 	enclosing-var this.template_repository.license
@@ -634,7 +634,7 @@ variable this.template_repository.permissions
 	var-kind variable
 	enclosing-var this.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.permissions.admin
 	var-kind field admin
 	enclosing-var this.template_repository.permissions
@@ -664,7 +664,7 @@ variable this.template_repository.owner
 	var-kind variable
 	enclosing-var this.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.owner.login
 	var-kind field login
 	enclosing-var this.template_repository.owner
@@ -1039,7 +1039,7 @@ variable this.template_repository.topics
 	var-kind field topics
 	enclosing-var this.template_repository
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.topics[..]
 	var-kind array
 	enclosing-var this.template_repository.topics
@@ -1110,7 +1110,7 @@ variable this.template_repository.template_repository
 	var-kind variable
 	enclosing-var this.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_template_repository
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.template_repository.id
 	var-kind field id
 	enclosing-var this.template_repository.template_repository
@@ -1135,7 +1135,7 @@ variable this.template_repository.template_repository.owner
 	var-kind variable
 	enclosing-var this.template_repository.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.template_repository.owner.login
 	var-kind field login
 	enclosing-var this.template_repository.template_repository.owner
@@ -1505,7 +1505,7 @@ variable this.template_repository.template_repository.topics
 	var-kind field topics
 	enclosing-var this.template_repository.template_repository
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.template_repository.topics[..]
 	var-kind array
 	enclosing-var this.template_repository.template_repository.topics
@@ -1571,7 +1571,7 @@ variable this.template_repository.template_repository.permissions
 	var-kind variable
 	enclosing-var this.template_repository.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.template_repository.template_repository.permissions.admin
 	var-kind field admin
 	enclosing-var this.template_repository.template_repository.permissions
@@ -1696,7 +1696,7 @@ variable this.license
 	var-kind variable
 	enclosing-var this
 	dec-type main.getOrganizationRepositories_Output_200_license
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.license.key
 	var-kind field key
 	enclosing-var this.license
@@ -1747,7 +1747,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.org
 	var-kind field org
 	enclosing-var input
@@ -1784,7 +1784,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.org
 	var-kind field org
 	enclosing-var input
@@ -1821,7 +1821,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.org
 	var-kind field org
 	enclosing-var input
@@ -1855,25 +1855,25 @@ variable input.page
 variable return
 	var-kind return
 	dec-type main.getOrganizationRepositories_Output_200.array
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
 	dec-type main.array[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
 	dec-type main.array[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.orgs{org}repos.getOrganizationRepositories_200(main.getOrganizationRepositories_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getOrganizationRepositories_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.org
 	var-kind field org
 	enclosing-var input
@@ -1907,7 +1907,7 @@ variable input.page
 variable return
 	var-kind return
 	dec-type main.getOrganizationRepositories_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.id
 	var-kind field id
 	enclosing-var return
@@ -1932,7 +1932,7 @@ variable return.owner
 	var-kind return
 	enclosing-var return
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.owner.login
 	var-kind field login
 	enclosing-var return.owner
@@ -2312,7 +2312,7 @@ variable return.topics
 	var-kind field topics
 	enclosing-var return
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.topics[..]
 	var-kind array
 	enclosing-var return.topics
@@ -2378,7 +2378,7 @@ variable return.permissions
 	var-kind return
 	enclosing-var return
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.permissions.admin
 	var-kind field admin
 	enclosing-var return.permissions
@@ -2408,7 +2408,7 @@ variable return.template_repository
 	var-kind return
 	enclosing-var return
 	dec-type main.getOrganizationRepositories_Output_200_template_repository
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.id
 	var-kind field id
 	enclosing-var return.template_repository
@@ -2433,7 +2433,7 @@ variable return.template_repository.license
 	var-kind return
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_license
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.license.key
 	var-kind field key
 	enclosing-var return.template_repository.license
@@ -2473,7 +2473,7 @@ variable return.template_repository.permissions
 	var-kind return
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.permissions.admin
 	var-kind field admin
 	enclosing-var return.template_repository.permissions
@@ -2503,7 +2503,7 @@ variable return.template_repository.owner
 	var-kind return
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.owner.login
 	var-kind field login
 	enclosing-var return.template_repository.owner
@@ -2878,7 +2878,7 @@ variable return.template_repository.topics
 	var-kind field topics
 	enclosing-var return.template_repository
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.topics[..]
 	var-kind array
 	enclosing-var return.template_repository.topics
@@ -2949,7 +2949,7 @@ variable return.template_repository.template_repository
 	var-kind return
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_template_repository
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.template_repository.id
 	var-kind field id
 	enclosing-var return.template_repository.template_repository
@@ -2974,7 +2974,7 @@ variable return.template_repository.template_repository.owner
 	var-kind return
 	enclosing-var return.template_repository.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.template_repository.owner.login
 	var-kind field login
 	enclosing-var return.template_repository.template_repository.owner
@@ -3344,7 +3344,7 @@ variable return.template_repository.template_repository.topics
 	var-kind field topics
 	enclosing-var return.template_repository.template_repository
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.template_repository.topics[..]
 	var-kind array
 	enclosing-var return.template_repository.template_repository.topics
@@ -3410,7 +3410,7 @@ variable return.template_repository.template_repository.permissions
 	var-kind return
 	enclosing-var return.template_repository.template_repository
 	dec-type main.getOrganizationRepositories_Output_200_permissions
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.template_repository.template_repository.permissions.admin
 	var-kind field admin
 	enclosing-var return.template_repository.template_repository.permissions
@@ -3535,7 +3535,7 @@ variable return.license
 	var-kind return
 	enclosing-var return
 	dec-type main.getOrganizationRepositories_Output_200_license
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.license.key
 	var-kind field key
 	enclosing-var return.license
