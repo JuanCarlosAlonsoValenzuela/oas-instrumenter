@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.user_id
 	var-kind field user_id
 	enclosing-var this
@@ -50,7 +50,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.createPlaylist_Output_201
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.primary_color
 	var-kind field primary_color
 	enclosing-var this
@@ -70,7 +70,7 @@ variable this.external_urls
 	var-kind variable
 	enclosing-var this
 	dec-type main.createPlaylist_Output_201_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.external_urls.spotify
 	var-kind field spotify
 	enclosing-var this.external_urls
@@ -80,7 +80,7 @@ variable this.followers
 	var-kind variable
 	enclosing-var this
 	dec-type main.createPlaylist_Output_201_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.followers.href
 	var-kind field href
 	enclosing-var this.followers
@@ -105,13 +105,13 @@ variable this.images
 	var-kind field images
 	enclosing-var this
 	dec-type main.images[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.images[..]
 	var-kind array
 	enclosing-var this.images
 	array 1
 	dec-type main.images[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.name
 	var-kind field name
 	enclosing-var this
@@ -121,7 +121,7 @@ variable this.owner
 	var-kind variable
 	enclosing-var this
 	dec-type main.createPlaylist_Output_201_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.owner.display_name
 	var-kind field display_name
 	enclosing-var this.owner
@@ -131,7 +131,7 @@ variable this.owner.external_urls
 	var-kind variable
 	enclosing-var this.owner
 	dec-type main.createPlaylist_Output_201_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.owner.external_urls.spotify
 	var-kind field spotify
 	enclosing-var this.owner.external_urls
@@ -141,7 +141,7 @@ variable this.owner.followers
 	var-kind variable
 	enclosing-var this.owner
 	dec-type main.createPlaylist_Output_201_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.owner.followers.href
 	var-kind field href
 	enclosing-var this.owner.followers
@@ -186,7 +186,7 @@ variable this.tracks
 	var-kind variable
 	enclosing-var this
 	dec-type main.createPlaylist_Output_201_tracks
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.tracks.href
 	var-kind field href
 	enclosing-var this.tracks
@@ -196,13 +196,13 @@ variable this.tracks.items
 	var-kind field items
 	enclosing-var this.tracks
 	dec-type main.items[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.tracks.items[..]
 	var-kind array
 	enclosing-var this.tracks.items
 	array 1
 	dec-type main.items[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.tracks.limit
 	var-kind field limit
 	enclosing-var this.tracks
@@ -244,7 +244,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.createPlaylist_Output_201_images
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.height
 	var-kind field height
 	enclosing-var this
@@ -266,7 +266,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.createPlaylist_Output_201_tracks_items
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.added_at
 	var-kind field added_at
 	enclosing-var this
@@ -276,7 +276,7 @@ variable this.added_by
 	var-kind variable
 	enclosing-var this
 	dec-type main.createPlaylist_Output_201_tracks_items_added_by
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.added_by.display_name
 	var-kind field display_name
 	enclosing-var this.added_by
@@ -286,7 +286,7 @@ variable this.added_by.external_urls
 	var-kind variable
 	enclosing-var this.added_by
 	dec-type main.createPlaylist_Output_201_tracks_items_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.added_by.external_urls.spotify
 	var-kind field spotify
 	enclosing-var this.added_by.external_urls
@@ -296,7 +296,7 @@ variable this.added_by.followers
 	var-kind variable
 	enclosing-var this.added_by
 	dec-type main.createPlaylist_Output_201_tracks_items_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.added_by.followers.href
 	var-kind field href
 	enclosing-var this.added_by.followers
@@ -347,7 +347,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -384,7 +384,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -421,7 +421,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -458,7 +458,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -492,7 +492,7 @@ variable input.collaborative
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.primary_color
 	var-kind field primary_color
 	enclosing-var return
@@ -512,7 +512,7 @@ variable return.external_urls
 	var-kind return
 	enclosing-var return
 	dec-type main.createPlaylist_Output_201_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.external_urls.spotify
 	var-kind field spotify
 	enclosing-var return.external_urls
@@ -522,7 +522,7 @@ variable return.followers
 	var-kind return
 	enclosing-var return
 	dec-type main.createPlaylist_Output_201_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.followers.href
 	var-kind field href
 	enclosing-var return.followers
@@ -547,13 +547,13 @@ variable return.images
 	var-kind field images
 	enclosing-var return
 	dec-type main.images[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.images[..]
 	var-kind array
 	enclosing-var return.images
 	array 1
 	dec-type main.images[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.name
 	var-kind field name
 	enclosing-var return
@@ -563,7 +563,7 @@ variable return.owner
 	var-kind return
 	enclosing-var return
 	dec-type main.createPlaylist_Output_201_owner
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.owner.display_name
 	var-kind field display_name
 	enclosing-var return.owner
@@ -573,7 +573,7 @@ variable return.owner.external_urls
 	var-kind return
 	enclosing-var return.owner
 	dec-type main.createPlaylist_Output_201_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.owner.external_urls.spotify
 	var-kind field spotify
 	enclosing-var return.owner.external_urls
@@ -583,7 +583,7 @@ variable return.owner.followers
 	var-kind return
 	enclosing-var return.owner
 	dec-type main.createPlaylist_Output_201_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.owner.followers.href
 	var-kind field href
 	enclosing-var return.owner.followers
@@ -628,7 +628,7 @@ variable return.tracks
 	var-kind return
 	enclosing-var return
 	dec-type main.createPlaylist_Output_201_tracks
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.tracks.href
 	var-kind field href
 	enclosing-var return.tracks
@@ -638,13 +638,13 @@ variable return.tracks.items
 	var-kind field items
 	enclosing-var return.tracks
 	dec-type main.items[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.tracks.items[..]
 	var-kind array
 	enclosing-var return.tracks.items
 	array 1
 	dec-type main.items[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.tracks.limit
 	var-kind field limit
 	enclosing-var return.tracks
@@ -686,7 +686,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -720,7 +720,7 @@ variable input.collaborative
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201_images
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.height
 	var-kind field height
 	enclosing-var return
@@ -742,7 +742,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.createPlaylist_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
 	enclosing-var input
@@ -776,7 +776,7 @@ variable input.collaborative
 variable return
 	var-kind return
 	dec-type main.createPlaylist_Output_201_tracks_items
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.added_at
 	var-kind field added_at
 	enclosing-var return
@@ -786,7 +786,7 @@ variable return.added_by
 	var-kind return
 	enclosing-var return
 	dec-type main.createPlaylist_Output_201_tracks_items_added_by
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.added_by.display_name
 	var-kind field display_name
 	enclosing-var return.added_by
@@ -796,7 +796,7 @@ variable return.added_by.external_urls
 	var-kind return
 	enclosing-var return.added_by
 	dec-type main.createPlaylist_Output_201_tracks_items_external_urls
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.added_by.external_urls.spotify
 	var-kind field spotify
 	enclosing-var return.added_by.external_urls
@@ -806,7 +806,7 @@ variable return.added_by.followers
 	var-kind return
 	enclosing-var return.added_by
 	dec-type main.createPlaylist_Output_201_tracks_items_followers
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.added_by.followers.href
 	var-kind field href
 	enclosing-var return.added_by.followers

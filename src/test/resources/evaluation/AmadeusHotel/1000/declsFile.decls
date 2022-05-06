@@ -9,12 +9,12 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.hotelIds
 	var-kind field hotelIds
 	enclosing-var this
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.hotelIds[..]
 	var-kind array
 	enclosing-var this.hotelIds
@@ -91,35 +91,35 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.dictionaries
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_dictionaries
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.dictionaries.currencyConversionLookupRates
 	var-kind variable
 	enclosing-var this.dictionaries
 	dec-type main.getMultiHotelOffers_Output_200_currencyConversionLookupRates
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.data
 	var-kind field data
 	enclosing-var this
 	dec-type main.data[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.data[..]
 	var-kind array
 	enclosing-var this.data
 	array 1
 	dec-type main.data[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.getMultiHotelOffers_Output_200_data:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.type
 	var-kind field type
 	enclosing-var this
@@ -139,18 +139,18 @@ variable this.offers
 	var-kind field offers
 	enclosing-var this
 	dec-type main.offers[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.offers[..]
 	var-kind array
 	enclosing-var this.offers
 	array 1
 	dec-type main.offers[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.hotel
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_hotel
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.hotel.hotelId
 	var-kind field hotelId
 	enclosing-var this.hotel
@@ -202,7 +202,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_taxes
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.amount
 	var-kind field amount
 	enclosing-var this
@@ -249,7 +249,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.amount
 	var-kind field amount
 	enclosing-var this
@@ -261,7 +261,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_average_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.amount
 	var-kind field amount
 	enclosing-var this
@@ -273,7 +273,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_changes_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.amount
 	var-kind field amount
 	enclosing-var this
@@ -285,7 +285,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.type
 	var-kind field type
 	enclosing-var this
@@ -320,7 +320,7 @@ variable this.rateFamilyEstimated
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_rateFamilyEstimated
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.rateFamilyEstimated.code
 	var-kind field code
 	enclosing-var this.rateFamilyEstimated
@@ -340,7 +340,7 @@ variable this.description
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.description.text
 	var-kind field text
 	enclosing-var this.description
@@ -355,7 +355,7 @@ variable this.commission
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_commission
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.commission.percentage
 	var-kind field percentage
 	enclosing-var this.commission
@@ -370,7 +370,7 @@ variable this.commission.description
 	var-kind variable
 	enclosing-var this.commission
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.commission.description.text
 	var-kind field text
 	enclosing-var this.commission.description
@@ -390,7 +390,7 @@ variable this.room
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_room
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.room.type
 	var-kind field type
 	enclosing-var this.room
@@ -400,7 +400,7 @@ variable this.room.typeEstimated
 	var-kind variable
 	enclosing-var this.room
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_typeEstimated
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.room.typeEstimated.category
 	var-kind field category
 	enclosing-var this.room.typeEstimated
@@ -420,7 +420,7 @@ variable this.room.description
 	var-kind variable
 	enclosing-var this.room
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.room.description.text
 	var-kind field text
 	enclosing-var this.room.description
@@ -435,7 +435,7 @@ variable this.guests
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_guests
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.guests.adults
 	var-kind field adults
 	enclosing-var this.guests
@@ -445,7 +445,7 @@ variable this.guests.childAges
 	var-kind field childAges
 	enclosing-var this.guests
 	dec-type int[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.guests.childAges[..]
 	var-kind array
 	enclosing-var this.guests.childAges
@@ -456,7 +456,7 @@ variable this.price
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.currency
 	var-kind field currency
 	enclosing-var this.price
@@ -481,34 +481,34 @@ variable this.price.taxes
 	var-kind field taxes
 	enclosing-var this.price
 	dec-type main.taxes[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.taxes[..]
 	var-kind array
 	enclosing-var this.price.taxes
 	array 1
 	dec-type main.taxes[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.price.markups
 	var-kind field markups
 	enclosing-var this.price
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.markups[..]
 	var-kind array
 	enclosing-var this.price.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.price.variations
 	var-kind variable
 	enclosing-var this.price
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_variations
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.variations.average
 	var-kind variable
 	enclosing-var this.price.variations
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_average
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.variations.average.currency
 	var-kind field currency
 	enclosing-var this.price.variations.average
@@ -533,29 +533,29 @@ variable this.price.variations.average.markups
 	var-kind field markups
 	enclosing-var this.price.variations.average
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.variations.average.markups[..]
 	var-kind array
 	enclosing-var this.price.variations.average.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.price.variations.changes
 	var-kind field changes
 	enclosing-var this.price.variations
 	dec-type main.changes[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.price.variations.changes[..]
 	var-kind array
 	enclosing-var this.price.variations.changes
 	array 1
 	dec-type main.changes[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.policies
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_policies
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.paymentType
 	var-kind field paymentType
 	enclosing-var this.policies
@@ -565,12 +565,12 @@ variable this.policies.guarantee
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_guarantee
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.guarantee.description
 	var-kind variable
 	enclosing-var this.policies.guarantee
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.guarantee.description.text
 	var-kind field text
 	enclosing-var this.policies.guarantee.description
@@ -585,12 +585,12 @@ variable this.policies.guarantee.acceptedPayments
 	var-kind variable
 	enclosing-var this.policies.guarantee
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.guarantee.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var this.policies.guarantee.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.guarantee.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var this.policies.guarantee.acceptedPayments.creditCards
@@ -601,7 +601,7 @@ variable this.policies.guarantee.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var this.policies.guarantee.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.guarantee.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var this.policies.guarantee.acceptedPayments.methods
@@ -612,7 +612,7 @@ variable this.policies.deposit
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_deposit
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.deposit.amount
 	var-kind field amount
 	enclosing-var this.policies.deposit
@@ -627,7 +627,7 @@ variable this.policies.deposit.description
 	var-kind variable
 	enclosing-var this.policies.deposit
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.deposit.description.text
 	var-kind field text
 	enclosing-var this.policies.deposit.description
@@ -642,12 +642,12 @@ variable this.policies.deposit.acceptedPayments
 	var-kind variable
 	enclosing-var this.policies.deposit
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.deposit.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var this.policies.deposit.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.deposit.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var this.policies.deposit.acceptedPayments.creditCards
@@ -658,7 +658,7 @@ variable this.policies.deposit.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var this.policies.deposit.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.deposit.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var this.policies.deposit.acceptedPayments.methods
@@ -669,7 +669,7 @@ variable this.policies.prepay
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_prepay
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.prepay.amount
 	var-kind field amount
 	enclosing-var this.policies.prepay
@@ -684,7 +684,7 @@ variable this.policies.prepay.description
 	var-kind variable
 	enclosing-var this.policies.prepay
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.prepay.description.text
 	var-kind field text
 	enclosing-var this.policies.prepay.description
@@ -699,12 +699,12 @@ variable this.policies.prepay.acceptedPayments
 	var-kind variable
 	enclosing-var this.policies.prepay
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.prepay.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var this.policies.prepay.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.prepay.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var this.policies.prepay.acceptedPayments.creditCards
@@ -715,7 +715,7 @@ variable this.policies.prepay.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var this.policies.prepay.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.prepay.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var this.policies.prepay.acceptedPayments.methods
@@ -726,7 +726,7 @@ variable this.policies.holdTime
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_holdTime
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.holdTime.deadline
 	var-kind field deadline
 	enclosing-var this.policies.holdTime
@@ -736,7 +736,7 @@ variable this.policies.cancellation
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_cancellation
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.cancellation.type
 	var-kind field type
 	enclosing-var this.policies.cancellation
@@ -766,7 +766,7 @@ variable this.policies.cancellation.description
 	var-kind variable
 	enclosing-var this.policies.cancellation
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.cancellation.description.text
 	var-kind field text
 	enclosing-var this.policies.cancellation.description
@@ -781,7 +781,7 @@ variable this.policies.checkInOut
 	var-kind variable
 	enclosing-var this.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkInOut
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.checkInOut.checkIn
 	var-kind field checkIn
 	enclosing-var this.policies.checkInOut
@@ -791,7 +791,7 @@ variable this.policies.checkInOut.checkInDescription
 	var-kind variable
 	enclosing-var this.policies.checkInOut
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkInDescription
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.checkInOut.checkInDescription.text
 	var-kind field text
 	enclosing-var this.policies.checkInOut.checkInDescription
@@ -811,7 +811,7 @@ variable this.policies.checkInOut.checkOutDescription
 	var-kind variable
 	enclosing-var this.policies.checkInOut
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkOutDescription
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.policies.checkInOut.checkOutDescription.text
 	var-kind field text
 	enclosing-var this.policies.checkInOut.checkOutDescription
@@ -838,7 +838,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_changes
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.startDate
 	var-kind field startDate
 	enclosing-var this
@@ -873,13 +873,13 @@ variable this.markups
 	var-kind field markups
 	enclosing-var this
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.markups[..]
 	var-kind array
 	enclosing-var this.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 
 ppt main.getMultiHotelOffers_Output_400:::CLASS
@@ -890,25 +890,25 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_400
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.errors
 	var-kind field errors
 	enclosing-var this
 	dec-type main.errors[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.errors[..]
 	var-kind array
 	enclosing-var this.errors
 	array 1
 	dec-type main.errors[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.getMultiHotelOffers_Output_400_errors:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_400_errors
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.status
 	var-kind field status
 	enclosing-var this
@@ -933,7 +933,7 @@ variable this.source
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_400_errors_source
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.source.parameter
 	var-kind field parameter
 	enclosing-var this.source
@@ -964,25 +964,25 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_500
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.errors
 	var-kind field errors
 	enclosing-var this
 	dec-type main.errors[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.errors[..]
 	var-kind array
 	enclosing-var this.errors
 	array 1
 	dec-type main.errors[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.getMultiHotelOffers_Output_500_errors:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Output_500_errors
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.status
 	var-kind field status
 	enclosing-var this
@@ -1007,7 +1007,7 @@ variable this.source
 	var-kind variable
 	enclosing-var this
 	dec-type main.getMultiHotelOffers_Output_500_errors_source
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.source.parameter
 	var-kind field parameter
 	enclosing-var this.source
@@ -1038,12 +1038,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1116,12 +1116,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1194,12 +1194,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1272,12 +1272,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1350,12 +1350,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1428,12 +1428,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1506,12 +1506,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1584,12 +1584,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1662,12 +1662,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1740,12 +1740,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1818,12 +1818,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1896,12 +1896,12 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -1974,12 +1974,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2049,40 +2049,40 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.dictionaries
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_dictionaries
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.dictionaries.currencyConversionLookupRates
 	var-kind return
 	enclosing-var return.dictionaries
 	dec-type main.getMultiHotelOffers_Output_200_currencyConversionLookupRates
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.data
 	var-kind field data
 	enclosing-var return
 	dec-type main.data[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.data[..]
 	var-kind array
 	enclosing-var return.data
 	array 1
 	dec-type main.data[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.shoppinghotel-offers.getMultiHotelOffers_200_data(main.getMultiHotelOffers_Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2152,7 +2152,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.type
 	var-kind field type
 	enclosing-var return
@@ -2172,18 +2172,18 @@ variable return.offers
 	var-kind field offers
 	enclosing-var return
 	dec-type main.offers[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.offers[..]
 	var-kind array
 	enclosing-var return.offers
 	array 1
 	dec-type main.offers[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.hotel
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_hotel
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.hotel.hotelId
 	var-kind field hotelId
 	enclosing-var return.hotel
@@ -2235,12 +2235,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2310,7 +2310,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_taxes
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.amount
 	var-kind field amount
 	enclosing-var return
@@ -2357,12 +2357,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2432,7 +2432,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.amount
 	var-kind field amount
 	enclosing-var return
@@ -2444,12 +2444,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2519,7 +2519,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_average_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.amount
 	var-kind field amount
 	enclosing-var return
@@ -2531,12 +2531,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2606,7 +2606,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_changes_markups
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.amount
 	var-kind field amount
 	enclosing-var return
@@ -2618,12 +2618,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -2693,7 +2693,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.type
 	var-kind field type
 	enclosing-var return
@@ -2728,7 +2728,7 @@ variable return.rateFamilyEstimated
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_rateFamilyEstimated
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.rateFamilyEstimated.code
 	var-kind field code
 	enclosing-var return.rateFamilyEstimated
@@ -2748,7 +2748,7 @@ variable return.description
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.description.text
 	var-kind field text
 	enclosing-var return.description
@@ -2763,7 +2763,7 @@ variable return.commission
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_commission
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.commission.percentage
 	var-kind field percentage
 	enclosing-var return.commission
@@ -2778,7 +2778,7 @@ variable return.commission.description
 	var-kind return
 	enclosing-var return.commission
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.commission.description.text
 	var-kind field text
 	enclosing-var return.commission.description
@@ -2798,7 +2798,7 @@ variable return.room
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_room
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.room.type
 	var-kind field type
 	enclosing-var return.room
@@ -2808,7 +2808,7 @@ variable return.room.typeEstimated
 	var-kind return
 	enclosing-var return.room
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_typeEstimated
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.room.typeEstimated.category
 	var-kind field category
 	enclosing-var return.room.typeEstimated
@@ -2828,7 +2828,7 @@ variable return.room.description
 	var-kind return
 	enclosing-var return.room
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.room.description.text
 	var-kind field text
 	enclosing-var return.room.description
@@ -2843,7 +2843,7 @@ variable return.guests
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_guests
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.guests.adults
 	var-kind field adults
 	enclosing-var return.guests
@@ -2853,7 +2853,7 @@ variable return.guests.childAges
 	var-kind field childAges
 	enclosing-var return.guests
 	dec-type int[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.guests.childAges[..]
 	var-kind array
 	enclosing-var return.guests.childAges
@@ -2864,7 +2864,7 @@ variable return.price
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.currency
 	var-kind field currency
 	enclosing-var return.price
@@ -2889,34 +2889,34 @@ variable return.price.taxes
 	var-kind field taxes
 	enclosing-var return.price
 	dec-type main.taxes[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.taxes[..]
 	var-kind array
 	enclosing-var return.price.taxes
 	array 1
 	dec-type main.taxes[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.price.markups
 	var-kind field markups
 	enclosing-var return.price
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.markups[..]
 	var-kind array
 	enclosing-var return.price.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.price.variations
 	var-kind return
 	enclosing-var return.price
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_variations
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.variations.average
 	var-kind return
 	enclosing-var return.price.variations
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_average
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.variations.average.currency
 	var-kind field currency
 	enclosing-var return.price.variations.average
@@ -2941,29 +2941,29 @@ variable return.price.variations.average.markups
 	var-kind field markups
 	enclosing-var return.price.variations.average
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.variations.average.markups[..]
 	var-kind array
 	enclosing-var return.price.variations.average.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.price.variations.changes
 	var-kind field changes
 	enclosing-var return.price.variations
 	dec-type main.changes[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.price.variations.changes[..]
 	var-kind array
 	enclosing-var return.price.variations.changes
 	array 1
 	dec-type main.changes[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.policies
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_policies
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.paymentType
 	var-kind field paymentType
 	enclosing-var return.policies
@@ -2973,12 +2973,12 @@ variable return.policies.guarantee
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_guarantee
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.guarantee.description
 	var-kind return
 	enclosing-var return.policies.guarantee
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.guarantee.description.text
 	var-kind field text
 	enclosing-var return.policies.guarantee.description
@@ -2993,12 +2993,12 @@ variable return.policies.guarantee.acceptedPayments
 	var-kind return
 	enclosing-var return.policies.guarantee
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.guarantee.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var return.policies.guarantee.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.guarantee.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var return.policies.guarantee.acceptedPayments.creditCards
@@ -3009,7 +3009,7 @@ variable return.policies.guarantee.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var return.policies.guarantee.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.guarantee.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var return.policies.guarantee.acceptedPayments.methods
@@ -3020,7 +3020,7 @@ variable return.policies.deposit
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_deposit
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.deposit.amount
 	var-kind field amount
 	enclosing-var return.policies.deposit
@@ -3035,7 +3035,7 @@ variable return.policies.deposit.description
 	var-kind return
 	enclosing-var return.policies.deposit
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.deposit.description.text
 	var-kind field text
 	enclosing-var return.policies.deposit.description
@@ -3050,12 +3050,12 @@ variable return.policies.deposit.acceptedPayments
 	var-kind return
 	enclosing-var return.policies.deposit
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.deposit.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var return.policies.deposit.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.deposit.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var return.policies.deposit.acceptedPayments.creditCards
@@ -3066,7 +3066,7 @@ variable return.policies.deposit.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var return.policies.deposit.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.deposit.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var return.policies.deposit.acceptedPayments.methods
@@ -3077,7 +3077,7 @@ variable return.policies.prepay
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_prepay
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.prepay.amount
 	var-kind field amount
 	enclosing-var return.policies.prepay
@@ -3092,7 +3092,7 @@ variable return.policies.prepay.description
 	var-kind return
 	enclosing-var return.policies.prepay
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.prepay.description.text
 	var-kind field text
 	enclosing-var return.policies.prepay.description
@@ -3107,12 +3107,12 @@ variable return.policies.prepay.acceptedPayments
 	var-kind return
 	enclosing-var return.policies.prepay
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_acceptedPayments
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.prepay.acceptedPayments.creditCards
 	var-kind field creditCards
 	enclosing-var return.policies.prepay.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.prepay.acceptedPayments.creditCards[..]
 	var-kind array
 	enclosing-var return.policies.prepay.acceptedPayments.creditCards
@@ -3123,7 +3123,7 @@ variable return.policies.prepay.acceptedPayments.methods
 	var-kind field methods
 	enclosing-var return.policies.prepay.acceptedPayments
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.prepay.acceptedPayments.methods[..]
 	var-kind array
 	enclosing-var return.policies.prepay.acceptedPayments.methods
@@ -3134,7 +3134,7 @@ variable return.policies.holdTime
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_holdTime
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.holdTime.deadline
 	var-kind field deadline
 	enclosing-var return.policies.holdTime
@@ -3144,7 +3144,7 @@ variable return.policies.cancellation
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_cancellation
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.cancellation.type
 	var-kind field type
 	enclosing-var return.policies.cancellation
@@ -3174,7 +3174,7 @@ variable return.policies.cancellation.description
 	var-kind return
 	enclosing-var return.policies.cancellation
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_description
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.cancellation.description.text
 	var-kind field text
 	enclosing-var return.policies.cancellation.description
@@ -3189,7 +3189,7 @@ variable return.policies.checkInOut
 	var-kind return
 	enclosing-var return.policies
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkInOut
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.checkInOut.checkIn
 	var-kind field checkIn
 	enclosing-var return.policies.checkInOut
@@ -3199,7 +3199,7 @@ variable return.policies.checkInOut.checkInDescription
 	var-kind return
 	enclosing-var return.policies.checkInOut
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkInDescription
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.checkInOut.checkInDescription.text
 	var-kind field text
 	enclosing-var return.policies.checkInOut.checkInDescription
@@ -3219,7 +3219,7 @@ variable return.policies.checkInOut.checkOutDescription
 	var-kind return
 	enclosing-var return.policies.checkInOut
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_checkOutDescription
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.policies.checkInOut.checkOutDescription.text
 	var-kind field text
 	enclosing-var return.policies.checkInOut.checkOutDescription
@@ -3246,12 +3246,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -3321,7 +3321,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_200_data_offers_price_variations_changes
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.startDate
 	var-kind field startDate
 	enclosing-var return
@@ -3356,25 +3356,25 @@ variable return.markups
 	var-kind field markups
 	enclosing-var return
 	dec-type main.markups[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.markups[..]
 	var-kind array
 	enclosing-var return.markups
 	array 1
 	dec-type main.markups[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.shoppinghotel-offers.getMultiHotelOffers_400(main.getMultiHotelOffers_Input):::EXIT9
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -3444,30 +3444,30 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_400
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.errors
 	var-kind field errors
 	enclosing-var return
 	dec-type main.errors[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.errors[..]
 	var-kind array
 	enclosing-var return.errors
 	array 1
 	dec-type main.errors[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.shoppinghotel-offers.getMultiHotelOffers_400_errors(main.getMultiHotelOffers_Input):::EXIT10
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -3537,7 +3537,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_400_errors
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.status
 	var-kind field status
 	enclosing-var return
@@ -3562,7 +3562,7 @@ variable return.source
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_400_errors_source
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.source.parameter
 	var-kind field parameter
 	enclosing-var return.source
@@ -3589,12 +3589,12 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -3664,30 +3664,30 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_500
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.errors
 	var-kind field errors
 	enclosing-var return
 	dec-type main.errors[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.errors[..]
 	var-kind array
 	enclosing-var return.errors
 	array 1
 	dec-type main.errors[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 
 ppt main.shoppinghotel-offers.getMultiHotelOffers_500_errors(main.getMultiHotelOffers_Input):::EXIT12
 ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.getMultiHotelOffers_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds
 	var-kind field hotelIds
 	enclosing-var input
 	dec-type java.lang.String[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.hotelIds[..]
 	var-kind array
 	enclosing-var input.hotelIds
@@ -3757,7 +3757,7 @@ variable input.lang
 variable return
 	var-kind return
 	dec-type main.getMultiHotelOffers_Output_500_errors
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.status
 	var-kind field status
 	enclosing-var return
@@ -3782,7 +3782,7 @@ variable return.source
 	var-kind return
 	enclosing-var return
 	dec-type main.getMultiHotelOffers_Output_500_errors_source
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.source.parameter
 	var-kind field parameter
 	enclosing-var return.source

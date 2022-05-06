@@ -1,0 +1,520 @@
+"C:\Program Files\Java\jdk1.8.0_202\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=52009:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\out\production\daikon_modified;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\javac.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\checker.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\reflection-util-1.0.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\options-1.0.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\require-javadoc-1.0.2-all.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\java-getopt-1.0.14.0.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-6.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\plume-util-1.5.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\commons-exec-1.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\hamcrest-core-1.3-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-qual.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-util-1.1.13.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\junit-4.13.2-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\daikon-plumelib.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\jFormatString-3.0.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\javacutil-3.1.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\diffutils-1.3.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\threeten-extra-1.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\caffeine-2.8.4.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\error_prone_core-2.7.1-with-dependencies.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\dataflow-shaded-3.11.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\dcomp_premain.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\ChicoryPremain.jar;C:\Program Files\Java\jdk1.8.0_202\lib\tools.jar" daikon.Daikon
+Daikon version 5.8.10, released November 1, 2021; http://plse.cs.washington.edu/daikon.
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.youtubev3videos.getVideos_200(main.getVideos_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.part != null
+daikon.inv.unary.string.OneOfString
+input.chart == "mostPopular"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.chart)==11
+daikon.inv.unary.string.OneOfString
+input.myRating one of { "dislike", "like" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.regionCode)==2
+daikon.inv.unary.string.IsNumeric
+input.videoCategoryId is Numeric
+daikon.inv.unary.scalar.LowerBound
+size(input.part[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(input.id[]) >= 1
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > input.maxResults
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.id[])
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < input.maxWidth
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.id[])
+===========================================================================
+main.youtubev3videos.getVideos_200(main.getVideos_Input):::EXIT
+daikon.inv.binary.twoScalar.IntEqual
+input.maxResults == return.pageInfo.resultsPerPage
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.part != null
+daikon.inv.unary.string.OneOfString
+input.chart == "mostPopular"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.chart)==11
+daikon.inv.unary.string.OneOfString
+input.myRating one of { "dislike", "like" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.regionCode)==2
+daikon.inv.unary.string.IsNumeric
+input.videoCategoryId is Numeric
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.etag)==27
+daikon.inv.unary.scalar.NonZero
+return.items != null
+daikon.inv.unary.sequence.EltNonZero
+return.items[] elements != null
+daikon.inv.unary.string.OneOfString
+return.kind == "youtube#videoListResponse"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.kind)==25
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.nextPageToken)==6
+daikon.inv.unary.scalar.NonZero
+return.pageInfo != null
+daikon.inv.unary.scalar.OneOfScalar
+return.tokenPagination == null
+daikon.inv.unary.scalar.LowerBound
+size(input.part[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(input.id[]) >= 1
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > input.maxResults
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > return.pageInfo.resultsPerPage
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(return.items[])
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < input.maxWidth
+daikon.inv.binary.twoScalar.IntGreaterEqual
+input.maxResults >= size(return.items[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > return.pageInfo.resultsPerPage
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(return.items[])
+daikon.inv.binary.twoScalar.IntLessEqual
+return.pageInfo.resultsPerPage <= size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterEqual
+return.pageInfo.resultsPerPage >= size(return.items[])
+daikon.inv.binary.twoScalar.IntLessEqual
+return.pageInfo.totalResults <= size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterEqual
+return.pageInfo.totalResults >= size(return.items[])
+daikon.inv.binary.twoScalar.IntGreaterEqual
+size(input.id[]) >= size(return.items[])
+===========================================================================
+main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.part != null
+daikon.inv.unary.string.OneOfString
+input.chart == "mostPopular"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.chart)==11
+daikon.inv.unary.string.OneOfString
+input.myRating one of { "dislike", "like" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.regionCode)==2
+daikon.inv.unary.string.IsNumeric
+input.videoCategoryId is Numeric
+daikon.inv.unary.scalar.LowerBound
+size(input.part[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(input.id[]) >= 1
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > input.maxResults
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.id[])
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < input.maxWidth
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.id[])
+===========================================================================
+main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::EXIT
+daikon.inv.binary.twoScalar.IntEqual
+return.contentDetails.contentRating.djctqRatingReasons == return.suggestions.editorSuggestions
+daikon.inv.binary.twoScalar.IntEqual
+return.contentDetails.contentRating.fpbRatingReasons == return.suggestions.editorSuggestions
+daikon.inv.binary.twoScalar.IntEqual
+return.contentDetails.countryRestriction.exception == return.suggestions.editorSuggestions
+daikon.inv.binary.twoScalar.IntEqual
+return.monetizationDetails.access.exception == return.suggestions.editorSuggestions
+daikon.inv.binary.twoScalar.IntEqual
+return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height
+daikon.inv.binary.twoScalar.IntEqual
+return.suggestions.editorSuggestions == return.suggestions.processingErrors
+daikon.inv.binary.twoScalar.IntEqual
+return.suggestions.editorSuggestions == return.suggestions.processingHints
+daikon.inv.binary.twoScalar.IntEqual
+return.suggestions.editorSuggestions == return.suggestions.processingWarnings
+daikon.inv.binary.twoScalar.IntEqual
+return.suggestions.editorSuggestions == return.topicDetails.relevantTopicIds
+daikon.inv.binary.twoScalar.IntEqual
+return.suggestions.editorSuggestions == return.topicDetails.topicIds
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.part != null
+daikon.inv.unary.string.OneOfString
+input.chart == "mostPopular"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.chart)==11
+daikon.inv.unary.string.OneOfString
+input.myRating one of { "dislike", "like" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.regionCode)==2
+daikon.inv.unary.string.IsNumeric
+input.videoCategoryId is Numeric
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.scalar.OneOfScalar
+return.ageGating == null
+daikon.inv.unary.string.OneOfString
+return.contentDetails.caption one of { "false", "true" }
+daikon.inv.unary.string.OneOfString
+return.contentDetails.contentRating.ytRating == "ytAgeRestricted"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.contentDetails.contentRating.ytRating)==15
+daikon.inv.unary.scalar.OneOfScalar
+return.contentDetails.countryRestriction == null
+daikon.inv.unary.string.OneOfString
+return.contentDetails.definition one of { "hd", "sd" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.contentDetails.definition)==2
+daikon.inv.unary.string.OneOfString
+return.contentDetails.dimension one of { "2d", "3d" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.contentDetails.dimension)==2
+daikon.inv.unary.string.OneOfString
+return.contentDetails.projection one of { "360", "rectangular" }
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of return.contentDetails.regionRestriction.allowed[] have LENGTH=2
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of return.contentDetails.regionRestriction.blocked[] have LENGTH=2
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.etag)==27
+daikon.inv.unary.scalar.OneOfScalar
+return.fileDetails == null
+daikon.inv.unary.scalar.OneOfScalar
+return.fileDetails.audioStreams == null
+daikon.inv.unary.scalar.OneOfScalar
+return.fileDetails.videoStreams == null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.id)==11
+daikon.inv.unary.string.OneOfString
+return.kind == "youtube#video"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.kind)==13
+daikon.inv.unary.string.OneOfString
+return.liveStreamingDetails.activeLiveChatId one of { "Cg0KC0NtRlFjYmt4bW5FKicKGFVDTmxmR3V6T0FLTTFzeWNQdU1fUVRIZxILQ21GUWNia3htbkU", "Cg0KC2ViMjJyY3E1eWJJKicKGFVDS1Z6UGVVdmx1S1I5RURUbjhRLWJrdxILZWIyMnJjcTV5Ykk", "Cg0KC3I4Wi12Y0hyNjVnKicKGFVDVTREaXV1X0ozS1JYMlJrajQwWlpuQRILcjhaLXZjSHI2NWc" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.liveStreamingDetails.activeLiveChatId)==75
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.liveStreamingDetails.actualEndTime)==20
+daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+return.liveStreamingDetails.actualEndTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.liveStreamingDetails.actualStartTime)==20
+daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+return.liveStreamingDetails.actualStartTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+daikon.inv.unary.string.IsNumeric
+return.liveStreamingDetails.concurrentViewers is Numeric
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.liveStreamingDetails.scheduledStartTime)==20
+daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+return.liveStreamingDetails.scheduledStartTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+daikon.inv.unary.scalar.OneOfScalar
+return.monetizationDetails == null
+daikon.inv.unary.scalar.OneOfScalar
+return.monetizationDetails.access == null
+daikon.inv.unary.string.IsNumeric
+return.player.embedHeight is Numeric
+daikon.inv.unary.string.IsNumeric
+return.player.embedWidth is Numeric
+daikon.inv.unary.scalar.OneOfScalar
+return.processingDetails == null
+daikon.inv.unary.scalar.OneOfScalar
+return.processingDetails.processingProgress == null
+daikon.inv.unary.scalar.OneOfScalar
+return.projectDetails == null
+daikon.inv.unary.scalar.OneOfFloat
+return.recordingDetails.location.altitude == 0.0
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.recordingDetails.recordingDate)==20
+daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+return.recordingDetails.recordingDate is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+daikon.inv.unary.string.IsNumeric
+return.snippet.categoryId is Numeric
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.snippet.channelId)==24
+daikon.inv.unary.string.OneOfString
+return.snippet.liveBroadcastContent one of { "live", "none" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.snippet.liveBroadcastContent)==4
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.snippet.publishedAt)==20
+daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+return.snippet.publishedAt is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.default.height == 90
+daikon.inv.unary.string.IsUrl
+return.snippet.thumbnails.default.url is Url
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.default.width == 120
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.high.height == 360
+daikon.inv.unary.string.IsUrl
+return.snippet.thumbnails.high.url is Url
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.high.width == 480
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.maxres.height == 720
+daikon.inv.unary.string.IsUrl
+return.snippet.thumbnails.maxres.url is Url
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.maxres.width == 1280
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.medium.height == 180
+daikon.inv.unary.string.IsUrl
+return.snippet.thumbnails.medium.url is Url
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.medium.width == 320
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.standard.height == 480
+daikon.inv.unary.string.IsUrl
+return.snippet.thumbnails.standard.url is Url
+daikon.inv.unary.scalar.OneOfScalar
+return.snippet.thumbnails.standard.width == 640
+daikon.inv.unary.string.IsNumeric
+return.statistics.commentCount is Numeric
+daikon.inv.unary.string.OneOfString
+return.statistics.favoriteCount == "0"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.statistics.favoriteCount)==1
+daikon.inv.unary.string.IsNumeric
+return.statistics.favoriteCount is Numeric
+daikon.inv.unary.string.IsNumeric
+return.statistics.likeCount is Numeric
+daikon.inv.unary.string.IsNumeric
+return.statistics.viewCount is Numeric
+daikon.inv.unary.string.OneOfString
+return.status.license one of { "creativeCommon", "youtube" }
+daikon.inv.unary.string.OneOfString
+return.status.privacyStatus one of { "public", "unlisted" }
+daikon.inv.unary.string.OneOfString
+return.status.uploadStatus one of { "processed", "uploaded" }
+daikon.inv.unary.scalar.OneOfScalar
+return.suggestions == null
+daikon.inv.unary.scalar.OneOfScalar
+return.suggestions.editorSuggestions == null
+daikon.inv.unary.scalar.OneOfScalar
+return.suggestions.tagSuggestions == null
+daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+All the elements of return.topicDetails.topicCategories[] are URLs
+daikon.inv.unary.scalar.LowerBound
+size(input.part[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(input.id[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.contentDetails.regionRestriction.allowed[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.contentDetails.regionRestriction.blocked[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.snippet.tags[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.topicDetails.topicCategories[]) >= 1
+daikon.inv.binary.sequenceString.MemberString
+return.id in input.id[]
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > input.maxResults
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > return.snippet.thumbnails.default.height
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > return.snippet.thumbnails.default.width
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > return.snippet.thumbnails.medium.height
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxHeight > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < input.maxWidth
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.default.height
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.default.width
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.high.height
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.high.width
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.maxres.height
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.maxres.width
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.medium.height
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.medium.width
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.standard.height
+daikon.inv.binary.twoScalar.IntLessThan
+input.maxResults < return.snippet.thumbnails.standard.width
+daikon.inv.binary.twoScalar.IntGreaterEqual
+input.maxResults >= size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > return.snippet.thumbnails.default.height
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > return.snippet.thumbnails.default.width
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+input.maxWidth > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.height > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.default.width > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.height > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.high.width > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.height > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.maxres.width > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.height > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.medium.width > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.height > size(return.topicDetails.topicCategories[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(input.part[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(input.id[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(return.contentDetails.regionRestriction.allowed[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(return.contentDetails.regionRestriction.blocked[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(return.snippet.tags[])
+daikon.inv.binary.twoScalar.IntGreaterThan
+return.snippet.thumbnails.standard.width > size(return.topicDetails.topicCategories[])
+Exiting Daikon.
+
+Process finished with exit code 0

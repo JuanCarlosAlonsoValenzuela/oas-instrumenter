@@ -24,8 +24,8 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/---/resources/evaluation/Yelp/swagger.yaml";
-    private static String testCasesFilePath = "src/---/resources/evaluation/Yelp/YelpBusinessSearch_1000.csv";
+    private static String openApiSpecPath = "src/---/resources/evaluation/AmadeusHotel/swagger.yaml";
+    private static String testCasesFilePath = "src/---/resources/evaluation/AmadeusHotel/1000/AmadeusHotel_1000.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};

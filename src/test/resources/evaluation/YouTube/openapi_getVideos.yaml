@@ -70,10 +70,9 @@ paths:
           name: part
           required: true
           schema:
-            type: string
-#            items:
-#              type: string
-#            type: array
+            items:
+              type: string
+            type: array
           style: form
         - description: Return the videos that are in the specified chart.
           in: query
@@ -93,10 +92,9 @@ paths:
           in: query
           name: id
           schema:
-            type: string
-#            items:
-#              type: string
-#            type: array
+            items:
+              type: string
+            type: array
           style: form
         - in: query
           name: maxHeight
@@ -733,10 +731,10 @@ components:
           description: 'Identifies what kind of resource this is. Value: the fixed string "youtube#channel".'
           type: string
 #        localizations:
+#          type: object
 #          additionalProperties:
 #            $ref: "#/components/schemas/ChannelLocalization"
 #          description: Localizations for different languages
-#          type: object
         snippet:
           $ref: "#/components/schemas/ChannelSnippet"
           description: The snippet object contains basic details about the channel, such as its title, description, and thumbnail images.

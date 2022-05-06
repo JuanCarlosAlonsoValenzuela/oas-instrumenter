@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.t
 	var-kind field t
 	enclosing-var this
@@ -50,7 +50,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Response
 	var-kind field Response
 	enclosing-var this
@@ -130,13 +130,13 @@ variable this.Ratings
 	var-kind field Ratings
 	enclosing-var this
 	dec-type main.Ratings[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Ratings[..]
 	var-kind array
 	enclosing-var this.Ratings
 	array 1
 	dec-type main.Ratings[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.Metascore
 	var-kind field Metascore
 	enclosing-var this
@@ -208,7 +208,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Output_200_Ratings
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Source
 	var-kind field Source
 	enclosing-var this
@@ -229,7 +229,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Output_401
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Response
 	var-kind field Response
 	enclosing-var this
@@ -250,7 +250,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -287,7 +287,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -324,7 +324,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -361,7 +361,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -395,7 +395,7 @@ variable input.r
 variable return
 	var-kind return
 	dec-type main.searchByIdOrTitle_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Response
 	var-kind field Response
 	enclosing-var return
@@ -475,13 +475,13 @@ variable return.Ratings
 	var-kind field Ratings
 	enclosing-var return
 	dec-type main.Ratings[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Ratings[..]
 	var-kind array
 	enclosing-var return.Ratings
 	array 1
 	dec-type main.Ratings[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.Metascore
 	var-kind field Metascore
 	enclosing-var return
@@ -553,7 +553,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -587,7 +587,7 @@ variable input.r
 variable return
 	var-kind return
 	dec-type main.searchByIdOrTitle_Output_200_Ratings
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Source
 	var-kind field Source
 	enclosing-var return
@@ -604,7 +604,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.searchByIdOrTitle_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.t
 	var-kind field t
 	enclosing-var input
@@ -638,7 +638,7 @@ variable input.r
 variable return
 	var-kind return
 	dec-type main.searchByIdOrTitle_Output_401
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Response
 	var-kind field Response
 	enclosing-var return

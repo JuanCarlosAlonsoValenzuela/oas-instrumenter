@@ -1,0 +1,522 @@
+"C:\Program Files\Java\jdk1.8.0_202\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=52252:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\out\production\daikon_modified;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\javac.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\checker.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\reflection-util-1.0.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\options-1.0.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\require-javadoc-1.0.2-all.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\java-getopt-1.0.14.0.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-6.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\plume-util-1.5.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\commons-exec-1.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\hamcrest-core-1.3-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-qual.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-util-1.1.13.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\junit-4.13.2-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\daikon-plumelib.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\jFormatString-3.0.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\javacutil-3.1.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\diffutils-1.3.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\threeten-extra-1.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\caffeine-2.8.4.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\error_prone_core-2.7.1-with-dependencies.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\dataflow-shaded-3.11.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\dcomp_premain.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\ChicoryPremain.jar;C:\Program Files\Java\jdk1.8.0_202\lib\tools.jar" daikon.Daikon
+Daikon version 5.8.10, released November 1, 2021; http://plse.cs.washington.edu/daikon.
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200(main.getMultiHotelOffers_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200(main.getMultiHotelOffers_Input):::EXIT
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.scalar.NonZero
+return.data != null
+daikon.inv.unary.sequence.EltNonZero
+return.data[] elements != null
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+daikon.inv.binary.twoScalar.IntGreaterEqual
+size(input.hotelIds[]) >= size(return.data[])
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data(main.getMultiHotelOffers_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data(main.getMultiHotelOffers_Input):::EXIT
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.string.OneOfString
+return.type == "hotel-offers"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.type)==12
+daikon.inv.unary.string.IsUrl
+return.self is Url
+daikon.inv.unary.sequence.EltNonZero
+return.offers[] elements != null
+daikon.inv.unary.scalar.NonZero
+return.hotel != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.hotel.hotelId)==8
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.hotel.chainCode)==2
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.hotel.dupeId)==9
+daikon.inv.unary.string.IsNumeric
+return.hotel.dupeId is Numeric
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.hotel.cityCode)==3
+daikon.inv.unary.string.OneOfString
+return.hotel.type == "hotel"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.hotel.type)==5
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.offers[]) >= 1
+daikon.inv.binary.sequenceString.MemberString
+return.hotel.hotelId in input.hotelIds[]
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers(main.getMultiHotelOffers_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers(main.getMultiHotelOffers_Input):::EXIT
+daikon.inv.binary.twoScalar.IntEqual
+input.adults == return.guests.adults
+daikon.inv.binary.twoString.StringEqual
+input.checkInDate == return.checkInDate
+daikon.inv.binary.twoString.StringEqual
+input.checkOutDate == return.checkOutDate
+daikon.inv.binary.twoString.StringEqual
+input.boardType == return.boardType
+daikon.inv.binary.twoString.StringEqual
+return.description.lang == return.room.description.lang
+daikon.inv.binary.twoScalar.IntEqual
+return.commission.description == return.policies.guarantee.description
+daikon.inv.binary.twoScalar.IntEqual
+return.commission.description == return.policies.deposit.description
+daikon.inv.binary.twoScalar.IntEqual
+return.commission.description == return.policies.prepay.description
+daikon.inv.binary.twoScalar.IntEqual
+return.price.markups == return.price.variations.average.markups
+daikon.inv.binary.twoScalar.IntEqual
+return.policies.prepay.acceptedPayments.creditCards == return.policies.prepay.acceptedPayments.methods
+daikon.inv.binary.twoScalar.IntEqual
+return.policies.cancellation.numberOfNights == size(return.policies.deposit.acceptedPayments.methods[])
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.id)==10
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+return.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+return.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.roomQuantity)==1
+daikon.inv.unary.string.IsNumeric
+return.roomQuantity is Numeric
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.rateCode)==3
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.rateFamilyEstimated.code)==3
+daikon.inv.unary.string.OneOfString
+return.rateFamilyEstimated.type one of { "C", "P" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.rateFamilyEstimated.type)==1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.category)==3
+daikon.inv.unary.string.OneOfString
+return.description.text == "Regular rate plan - free parking, breakfast"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.description.text)==43
+daikon.inv.unary.string.OneOfString
+return.description.lang one of { "DE", "EN", "IT" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.description.lang)==2
+daikon.inv.unary.string.IsNumeric
+return.commission.percentage is Numeric
+daikon.inv.unary.string.OneOfString
+return.commission.amount == "2.74"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.commission.amount)==4
+daikon.inv.unary.string.IsNumeric
+return.commission.amount is Numeric
+daikon.inv.unary.scalar.OneOfScalar
+return.commission.description == null
+daikon.inv.unary.string.OneOfString
+return.boardType one of { "BREAKFAST", "HALF_BOARD", "ROOM_ONLY" }
+daikon.inv.unary.scalar.NonZero
+return.room != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.room.type)==3
+daikon.inv.unary.scalar.LowerBound
+return.room.typeEstimated.beds >= 0
+daikon.inv.unary.scalar.NonZero
+return.room.description != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.room.description.lang)==2
+daikon.inv.unary.scalar.NonZero
+return.guests != null
+daikon.inv.unary.scalar.OneOfScalar
+return.guests.childAges == null
+daikon.inv.unary.scalar.NonZero
+return.price != null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.price.currency)==3
+daikon.inv.unary.string.IsNumeric
+return.price.total is Numeric
+daikon.inv.unary.string.IsNumeric
+return.price.base is Numeric
+daikon.inv.unary.sequence.EltNonZero
+return.price.taxes[] elements != null
+daikon.inv.unary.scalar.OneOfScalar
+return.price.markups == null
+daikon.inv.unary.string.IsNumeric
+return.price.variations.average.total is Numeric
+daikon.inv.unary.string.IsNumeric
+return.price.variations.average.base is Numeric
+daikon.inv.unary.sequence.EltNonZero
+return.price.variations.changes[] elements != null
+daikon.inv.unary.string.OneOfString
+return.policies.paymentType one of { "deposit", "guarantee" }
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2
+daikon.inv.unary.stringsequence.EltOneOfString
+return.policies.guarantee.acceptedPayments.methods[] elements one of { "CORPORATE_ID", "CREDIT_CARD", "TRAVEL_AGENT_ID" }
+daikon.inv.unary.string.OneOfString
+return.policies.deposit.amount == "0.00"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.policies.deposit.amount)==4
+daikon.inv.unary.string.IsNumeric
+return.policies.deposit.amount is Numeric
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of return.policies.deposit.acceptedPayments.creditCards[] have LENGTH=2
+daikon.inv.unary.stringsequence.EltOneOfString
+return.policies.deposit.acceptedPayments.methods[] elements one of { "ADVANCE_DEPOSIT", "CREDIT_CARD" }
+daikon.inv.unary.stringsequence.OneOfStringSequence
+return.policies.deposit.acceptedPayments.methods[] one of { [CREDIT_CARD], [CREDIT_CARD, ADVANCE_DEPOSIT] }
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.prepay == null
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.prepay.acceptedPayments == null
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.prepay.acceptedPayments.creditCards == null
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.policies.holdTime.deadline)==19
+daikon.inv.unary.string.OneOfString
+return.policies.cancellation.type == "FULL_STAY"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.policies.cancellation.type)==9
+daikon.inv.unary.string.IsNumeric
+return.policies.cancellation.amount is Numeric
+daikon.inv.unary.scalar.LowerBound
+return.policies.cancellation.numberOfNights >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.policies.cancellation.deadline)==25
+daikon.inv.unary.string.OneOfString
+return.policies.cancellation.description.text one of { "NON-REFUNDABLE RATE", "Non refundable rate", "Plus Taxes and fees where appropriate." }
+daikon.inv.unary.string.OneOfString
+return.policies.cancellation.description.lang == "EN"
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.policies.cancellation.description.lang)==2
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.checkInOut == null
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.checkInOut.checkInDescription == null
+daikon.inv.unary.scalar.OneOfScalar
+return.policies.checkInOut.checkOutDescription == null
+daikon.inv.unary.string.IsUrl
+return.self is Url
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.cancelPolicyHash)==64
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.price.taxes[]) >= 1
+daikon.inv.unary.scalar.LowerBound
+size(return.price.variations.changes[]) >= 1
+daikon.inv.unary.scalar.OneOfScalar
+size(return.policies.guarantee.acceptedPayments.methods[]) one of { 1, 2, 3 }
+daikon.inv.unary.scalar.OneOfScalar
+size(return.policies.deposit.acceptedPayments.methods[]) one of { 1, 2 }
+daikon.inv.binary.twoScalar.IntLessEqual
+input.adults <= size(return.policies.deposit.acceptedPayments.creditCards[])
+daikon.inv.binary.twoScalar.IntGreaterEqual
+input.roomQuantity >= size(return.policies.deposit.acceptedPayments.methods[])
+daikon.inv.binary.twoScalar.IntLessEqual
+return.room.typeEstimated.beds <= size(return.policies.guarantee.acceptedPayments.creditCards[])
+daikon.inv.binary.twoScalar.IntLessEqual
+return.policies.cancellation.numberOfNights <= size(return.price.taxes[])
+daikon.inv.binary.twoScalar.IntGreaterEqual
+return.policies.cancellation.numberOfNights >= size(return.policies.guarantee.acceptedPayments.methods[])
+daikon.inv.binary.twoScalar.NumericInt$Square
+return.policies.cancellation.numberOfNights == size(return.policies.deposit.acceptedPayments.methods[])**2
+daikon.inv.binary.twoScalar.NumericInt$Square
+size(return.policies.deposit.acceptedPayments.methods[]) == return.policies.cancellation.numberOfNights**2
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers_price_taxes(main.getMultiHotelOffers_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers_price_taxes(main.getMultiHotelOffers_Input):::EXIT
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.string.IsNumeric
+return.amount is Numeric
+daikon.inv.unary.string.FixedLengthString
+LENGTH(return.currency)==3
+daikon.inv.unary.string.IsNumeric
+return.percentage is Numeric
+daikon.inv.unary.string.OneOfString
+return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" }
+daikon.inv.unary.string.OneOfString
+return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" }
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers_price_variations_changes(main.getMultiHotelOffers_Input):::ENTER
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+===========================================================================
+main.shoppinghotel-offers.getMultiHotelOffers_200_data_offers_price_variations_changes(main.getMultiHotelOffers_Input):::EXIT
+daikon.inv.binary.twoString.StringEqual
+return.total == return.base
+daikon.inv.unary.scalar.NonZero
+input != null
+daikon.inv.unary.scalar.NonZero
+input.hotelIds != null
+daikon.inv.unary.stringsequence.SequenceFixedLengthString
+All the elements of input.hotelIds[] have LENGTH=8
+daikon.inv.unary.scalar.LowerBound
+input.adults >= 1
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkInDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+input.checkOutDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.countryOfResidence)==2
+daikon.inv.unary.scalar.LowerBound
+input.roomQuantity >= 1
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.currency)==3
+daikon.inv.unary.string.OneOfString
+input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" }
+daikon.inv.unary.string.OneOfString
+input.boardType one of { "BREAKFAST", "ROOM_ONLY" }
+daikon.inv.unary.string.FixedLengthString
+LENGTH(input.boardType)==9
+daikon.inv.unary.scalar.NonZero
+return != null
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+return.startDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.dates.IsDateYYYYMMDD
+return.endDate is a Date. Format: YYYY/MM/DD
+daikon.inv.unary.string.IsNumeric
+return.total is Numeric
+daikon.inv.unary.string.IsNumeric
+return.base is Numeric
+daikon.inv.unary.scalar.OneOfScalar
+return.markups == null
+daikon.inv.unary.scalar.LowerBound
+size(input.hotelIds[]) >= 1
+Exiting Daikon.
+
+Process finished with exit code 0

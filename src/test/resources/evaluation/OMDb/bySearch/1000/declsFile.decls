@@ -9,7 +9,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.s
 	var-kind field s
 	enclosing-var this
@@ -45,7 +45,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.bySearch_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Response
 	var-kind field Response
 	enclosing-var this
@@ -55,13 +55,13 @@ variable this.Search
 	var-kind field Search
 	enclosing-var this
 	dec-type main.Search[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Search[..]
 	var-kind array
 	enclosing-var this.Search
 	array 1
 	dec-type main.Search[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable this.totalResults
 	var-kind field totalResults
 	enclosing-var this
@@ -73,7 +73,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.bySearch_Output_200_Search
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Title
 	var-kind field Title
 	enclosing-var this
@@ -109,7 +109,7 @@ ppt-type object
 variable this
 	var-kind variable
 	dec-type main.bySearch_Output_401
-	rep-type java.lang.String
+	rep-type hashcode
 variable this.Response
 	var-kind field Response
 	enclosing-var this
@@ -130,7 +130,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -162,7 +162,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -194,7 +194,7 @@ ppt-type enter
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -226,7 +226,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -255,7 +255,7 @@ variable input.page
 variable return
 	var-kind return
 	dec-type main.bySearch_Output_200
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Response
 	var-kind field Response
 	enclosing-var return
@@ -265,13 +265,13 @@ variable return.Search
 	var-kind field Search
 	enclosing-var return
 	dec-type main.Search[]
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Search[..]
 	var-kind array
 	enclosing-var return.Search
 	array 1
 	dec-type main.Search[]
-	rep-type java.lang.String[]
+	rep-type hashcode[]
 variable return.totalResults
 	var-kind field totalResults
 	enclosing-var return
@@ -283,7 +283,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -312,7 +312,7 @@ variable input.page
 variable return
 	var-kind return
 	dec-type main.bySearch_Output_200_Search
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Title
 	var-kind field Title
 	enclosing-var return
@@ -344,7 +344,7 @@ ppt-type subexit
 variable input
 	var-kind variable
 	dec-type main.bySearch_Input
-	rep-type java.lang.String
+	rep-type hashcode
 variable input.s
 	var-kind field s
 	enclosing-var input
@@ -373,7 +373,7 @@ variable input.page
 variable return
 	var-kind return
 	dec-type main.bySearch_Output_401
-	rep-type java.lang.String
+	rep-type hashcode
 variable return.Response
 	var-kind field Response
 	enclosing-var return
