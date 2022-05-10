@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.bySearch_Input:::CLASS
+ppt main.bySearch&Input:::CLASS
 ppt-type class
 
-ppt main.bySearch_Input:::OBJECT
+ppt main.bySearch&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable this.s
 	var-kind field s
@@ -37,14 +37,14 @@ variable this.page
 	rep-type int
 
 
-ppt main.bySearch_Output_200:::CLASS
+ppt main.bySearch&Output&200:::CLASS
 ppt-type class
 
-ppt main.bySearch_Output_200:::OBJECT
+ppt main.bySearch&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.bySearch_Output_200
+	dec-type main.bySearch&Output&200
 	rep-type hashcode
 variable this.Response
 	var-kind field Response
@@ -68,11 +68,11 @@ variable this.totalResults
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.bySearch_Output_200_Search:::OBJECT
+ppt main.bySearch&Output&200&Search:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.bySearch_Output_200_Search
+	dec-type main.bySearch&Output&200&Search
 	rep-type hashcode
 variable this.Title
 	var-kind field Title
@@ -101,14 +101,14 @@ variable this.Poster
 	rep-type java.lang.String
 
 
-ppt main.bySearch_Output_401:::CLASS
+ppt main.bySearch&Output&401:::CLASS
 ppt-type class
 
-ppt main.bySearch_Output_401:::OBJECT
+ppt main.bySearch&Output&401:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.bySearch_Output_401
+	dec-type main.bySearch&Output&401
 	rep-type hashcode
 variable this.Response
 	var-kind field Response
@@ -125,11 +125,11 @@ variable this.Error
 ppt main.:::CLASS
 ppt-type class
 
-ppt main..bySearch_200(main.bySearch_Input):::ENTER
+ppt main..bySearch&200(main.bySearch&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -157,11 +157,11 @@ variable input.page
 	dec-type int
 	rep-type int
 
-ppt main..bySearch_200_Search(main.bySearch_Input):::ENTER
+ppt main..bySearch&200&Search(main.bySearch&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -189,11 +189,11 @@ variable input.page
 	dec-type int
 	rep-type int
 
-ppt main..bySearch_401(main.bySearch_Input):::ENTER
+ppt main..bySearch&401(main.bySearch&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -221,11 +221,11 @@ variable input.page
 	dec-type int
 	rep-type int
 
-ppt main..bySearch_200(main.bySearch_Input):::EXIT1
+ppt main..bySearch&200(main.bySearch&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -254,7 +254,7 @@ variable input.page
 	rep-type int
 variable return
 	var-kind return
-	dec-type main.bySearch_Output_200
+	dec-type main.bySearch&Output&200
 	rep-type hashcode
 variable return.Response
 	var-kind field Response
@@ -278,11 +278,11 @@ variable return.totalResults
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..bySearch_200_Search(main.bySearch_Input):::EXIT2
+ppt main..bySearch&200&Search(main.bySearch&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -311,7 +311,7 @@ variable input.page
 	rep-type int
 variable return
 	var-kind return
-	dec-type main.bySearch_Output_200_Search
+	dec-type main.bySearch&Output&200&Search
 	rep-type hashcode
 variable return.Title
 	var-kind field Title
@@ -339,11 +339,11 @@ variable return.Poster
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..bySearch_401(main.bySearch_Input):::EXIT3
+ppt main..bySearch&401(main.bySearch&Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.bySearch_Input
+	dec-type main.bySearch&Input
 	rep-type hashcode
 variable input.s
 	var-kind field s
@@ -372,7 +372,7 @@ variable input.page
 	rep-type int
 variable return
 	var-kind return
-	dec-type main.bySearch_Output_401
+	dec-type main.bySearch&Output&401
 	rep-type hashcode
 variable return.Response
 	var-kind field Response

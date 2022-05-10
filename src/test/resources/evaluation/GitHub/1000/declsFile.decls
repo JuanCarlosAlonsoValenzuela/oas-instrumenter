@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.getOrganizationRepositories_Input:::CLASS
+ppt main.getOrganizationRepositories&Input:::CLASS
 ppt-type class
 
-ppt main.getOrganizationRepositories_Input:::OBJECT
+ppt main.getOrganizationRepositories&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Input
+	dec-type main.getOrganizationRepositories&Input
 	rep-type hashcode
 variable this.org
 	var-kind field org
@@ -42,14 +42,14 @@ variable this.page
 	rep-type int
 
 
-ppt main.getOrganizationRepositories_Output_200:::CLASS
+ppt main.getOrganizationRepositories&Output&200:::CLASS
 ppt-type class
 
-ppt main.getOrganizationRepositories_Output_200.array:::OBJECT
+ppt main.getOrganizationRepositories&Output&200.array:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Output_200.array
+	dec-type main.getOrganizationRepositories&Output&200.array
 	rep-type hashcode
 variable this.array
 	var-kind field array
@@ -63,11 +63,11 @@ variable this.array[..]
 	dec-type main.array[]
 	rep-type hashcode[]
 
-ppt main.getOrganizationRepositories_Output_200:::OBJECT
+ppt main.getOrganizationRepositories&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Output_200
+	dec-type main.getOrganizationRepositories&Output&200
 	rep-type hashcode
 variable this.id
 	var-kind field id
@@ -92,7 +92,7 @@ variable this.full_name
 variable this.owner
 	var-kind variable
 	enclosing-var this
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable this.owner.login
 	var-kind field login
@@ -538,7 +538,7 @@ variable this.updated_at
 variable this.permissions
 	var-kind variable
 	enclosing-var this
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable this.permissions.admin
 	var-kind field admin
@@ -568,7 +568,7 @@ variable this.permissions.triage
 variable this.template_repository
 	var-kind variable
 	enclosing-var this
-	dec-type main.getOrganizationRepositories_Output_200_template_repository
+	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
 variable this.template_repository.id
 	var-kind field id
@@ -593,7 +593,7 @@ variable this.template_repository.full_name
 variable this.template_repository.license
 	var-kind variable
 	enclosing-var this.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_license
+	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode
 variable this.template_repository.license.key
 	var-kind field key
@@ -633,7 +633,7 @@ variable this.template_repository.forks
 variable this.template_repository.permissions
 	var-kind variable
 	enclosing-var this.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable this.template_repository.permissions.admin
 	var-kind field admin
@@ -663,7 +663,7 @@ variable this.template_repository.permissions.maintain
 variable this.template_repository.owner
 	var-kind variable
 	enclosing-var this.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable this.template_repository.owner.login
 	var-kind field login
@@ -1109,7 +1109,7 @@ variable this.template_repository.allow_rebase_merge
 variable this.template_repository.template_repository
 	var-kind variable
 	enclosing-var this.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_template_repository
+	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
 variable this.template_repository.template_repository.id
 	var-kind field id
@@ -1134,7 +1134,7 @@ variable this.template_repository.template_repository.full_name
 variable this.template_repository.template_repository.owner
 	var-kind variable
 	enclosing-var this.template_repository.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable this.template_repository.template_repository.owner.login
 	var-kind field login
@@ -1570,7 +1570,7 @@ variable this.template_repository.template_repository.updated_at
 variable this.template_repository.template_repository.permissions
 	var-kind variable
 	enclosing-var this.template_repository.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable this.template_repository.template_repository.permissions.admin
 	var-kind field admin
@@ -1695,7 +1695,7 @@ variable this.network_count
 variable this.license
 	var-kind variable
 	enclosing-var this
-	dec-type main.getOrganizationRepositories_Output_200_license
+	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode
 variable this.license.key
 	var-kind field key
@@ -1742,11 +1742,11 @@ variable this.watchers
 ppt main.orgs{org}repos:::CLASS
 ppt-type class
 
-ppt main.orgs{org}repos.getOrganizationRepositories_200.array(main.getOrganizationRepositories_Input):::ENTER
+ppt main.orgs{org}repos.getOrganizationRepositories&200.array(main.getOrganizationRepositories&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Input
+	dec-type main.getOrganizationRepositories&Input
 	rep-type hashcode
 variable input.org
 	var-kind field org
@@ -1779,11 +1779,11 @@ variable input.page
 	dec-type int
 	rep-type int
 
-ppt main.orgs{org}repos.getOrganizationRepositories_200(main.getOrganizationRepositories_Input):::ENTER
+ppt main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Input
+	dec-type main.getOrganizationRepositories&Input
 	rep-type hashcode
 variable input.org
 	var-kind field org
@@ -1816,11 +1816,11 @@ variable input.page
 	dec-type int
 	rep-type int
 
-ppt main.orgs{org}repos.getOrganizationRepositories_200.array(main.getOrganizationRepositories_Input):::EXIT1
+ppt main.orgs{org}repos.getOrganizationRepositories&200.array(main.getOrganizationRepositories&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Input
+	dec-type main.getOrganizationRepositories&Input
 	rep-type hashcode
 variable input.org
 	var-kind field org
@@ -1854,7 +1854,7 @@ variable input.page
 	rep-type int
 variable return
 	var-kind return
-	dec-type main.getOrganizationRepositories_Output_200.array
+	dec-type main.getOrganizationRepositories&Output&200.array
 	rep-type hashcode
 variable return.array
 	var-kind field array
@@ -1868,11 +1868,11 @@ variable return.array[..]
 	dec-type main.array[]
 	rep-type hashcode[]
 
-ppt main.orgs{org}repos.getOrganizationRepositories_200(main.getOrganizationRepositories_Input):::EXIT2
+ppt main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getOrganizationRepositories_Input
+	dec-type main.getOrganizationRepositories&Input
 	rep-type hashcode
 variable input.org
 	var-kind field org
@@ -1906,7 +1906,7 @@ variable input.page
 	rep-type int
 variable return
 	var-kind return
-	dec-type main.getOrganizationRepositories_Output_200
+	dec-type main.getOrganizationRepositories&Output&200
 	rep-type hashcode
 variable return.id
 	var-kind field id
@@ -1931,7 +1931,7 @@ variable return.full_name
 variable return.owner
 	var-kind return
 	enclosing-var return
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable return.owner.login
 	var-kind field login
@@ -2377,7 +2377,7 @@ variable return.updated_at
 variable return.permissions
 	var-kind return
 	enclosing-var return
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable return.permissions.admin
 	var-kind field admin
@@ -2407,7 +2407,7 @@ variable return.permissions.triage
 variable return.template_repository
 	var-kind return
 	enclosing-var return
-	dec-type main.getOrganizationRepositories_Output_200_template_repository
+	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
 variable return.template_repository.id
 	var-kind field id
@@ -2432,7 +2432,7 @@ variable return.template_repository.full_name
 variable return.template_repository.license
 	var-kind return
 	enclosing-var return.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_license
+	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode
 variable return.template_repository.license.key
 	var-kind field key
@@ -2472,7 +2472,7 @@ variable return.template_repository.forks
 variable return.template_repository.permissions
 	var-kind return
 	enclosing-var return.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable return.template_repository.permissions.admin
 	var-kind field admin
@@ -2502,7 +2502,7 @@ variable return.template_repository.permissions.maintain
 variable return.template_repository.owner
 	var-kind return
 	enclosing-var return.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable return.template_repository.owner.login
 	var-kind field login
@@ -2948,7 +2948,7 @@ variable return.template_repository.allow_rebase_merge
 variable return.template_repository.template_repository
 	var-kind return
 	enclosing-var return.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_template_repository
+	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
 variable return.template_repository.template_repository.id
 	var-kind field id
@@ -2973,7 +2973,7 @@ variable return.template_repository.template_repository.full_name
 variable return.template_repository.template_repository.owner
 	var-kind return
 	enclosing-var return.template_repository.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_owner
+	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
 variable return.template_repository.template_repository.owner.login
 	var-kind field login
@@ -3409,7 +3409,7 @@ variable return.template_repository.template_repository.updated_at
 variable return.template_repository.template_repository.permissions
 	var-kind return
 	enclosing-var return.template_repository.template_repository
-	dec-type main.getOrganizationRepositories_Output_200_permissions
+	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
 variable return.template_repository.template_repository.permissions.admin
 	var-kind field admin
@@ -3534,7 +3534,7 @@ variable return.network_count
 variable return.license
 	var-kind return
 	enclosing-var return
-	dec-type main.getOrganizationRepositories_Output_200_license
+	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode
 variable return.license.key
 	var-kind field key

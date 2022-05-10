@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.getVideos_Input:::CLASS
+ppt main.getVideos&Input:::CLASS
 ppt-type class
 
-ppt main.getVideos_Input:::OBJECT
+ppt main.getVideos&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable this.part
 	var-kind field part
@@ -84,14 +84,14 @@ variable this.videoCategoryId
 	rep-type java.lang.String
 
 
-ppt main.getVideos_Output_200:::CLASS
+ppt main.getVideos&Output&200:::CLASS
 ppt-type class
 
-ppt main.getVideos_Output_200:::OBJECT
+ppt main.getVideos&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getVideos_Output_200
+	dec-type main.getVideos&Output&200
 	rep-type hashcode
 variable this.etag
 	var-kind field etag
@@ -127,7 +127,7 @@ variable this.nextPageToken
 variable this.pageInfo
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_pageInfo
+	dec-type main.getVideos&Output&200&pageInfo
 	rep-type hashcode
 variable this.pageInfo.resultsPerPage
 	var-kind field resultsPerPage
@@ -147,7 +147,7 @@ variable this.prevPageToken
 variable this.tokenPagination
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_tokenPagination
+	dec-type main.getVideos&Output&200&tokenPagination
 	rep-type hashcode
 variable this.visitorId
 	var-kind field visitorId
@@ -155,11 +155,34 @@ variable this.visitorId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.getVideos_Output_200_items_fileDetails_audioStreams:::OBJECT
+ppt main.getVideos&Output&200&items&suggestions&tagSuggestions:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getVideos_Output_200_items_fileDetails_audioStreams
+	dec-type main.getVideos&Output&200&items&suggestions&tagSuggestions
+	rep-type hashcode
+variable this.categoryRestricts
+	var-kind field categoryRestricts
+	enclosing-var this
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable this.categoryRestricts[..]
+	var-kind array
+	enclosing-var this.categoryRestricts
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable this.tag
+	var-kind field tag
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.getVideos&Output&200&items&fileDetails&audioStreams:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.getVideos&Output&200&items&fileDetails&audioStreams
 	rep-type hashcode
 variable this.bitrateBps
 	var-kind field bitrateBps
@@ -182,86 +205,16 @@ variable this.vendor
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.getVideos_Output_200_items_fileDetails_videoStreams:::OBJECT
+ppt main.getVideos&Output&200&items:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getVideos_Output_200_items_fileDetails_videoStreams
-	rep-type hashcode
-variable this.aspectRatio
-	var-kind field aspectRatio
-	enclosing-var this
-	dec-type double
-	rep-type double
-variable this.bitrateBps
-	var-kind field bitrateBps
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.codec
-	var-kind field codec
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.frameRateFps
-	var-kind field frameRateFps
-	enclosing-var this
-	dec-type double
-	rep-type double
-variable this.heightPixels
-	var-kind field heightPixels
-	enclosing-var this
-	dec-type int
-	rep-type int
-variable this.rotation
-	var-kind field rotation
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.vendor
-	var-kind field vendor
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.widthPixels
-	var-kind field widthPixels
-	enclosing-var this
-	dec-type int
-	rep-type int
-
-ppt main.getVideos_Output_200_items_suggestions_tagSuggestions:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.getVideos_Output_200_items_suggestions_tagSuggestions
-	rep-type hashcode
-variable this.categoryRestricts
-	var-kind field categoryRestricts
-	enclosing-var this
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable this.categoryRestricts[..]
-	var-kind array
-	enclosing-var this.categoryRestricts
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable this.tag
-	var-kind field tag
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-ppt main.getVideos_Output_200_items:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.getVideos_Output_200_items
+	dec-type main.getVideos&Output&200&items
 	rep-type hashcode
 variable this.ageGating
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_ageGating
+	dec-type main.getVideos&Output&200&items&ageGating
 	rep-type hashcode
 variable this.ageGating.alcoholContent
 	var-kind field alcoholContent
@@ -281,7 +234,7 @@ variable this.ageGating.videoGameRating
 variable this.contentDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_contentDetails
+	dec-type main.getVideos&Output&200&items&contentDetails
 	rep-type hashcode
 variable this.contentDetails.caption
 	var-kind field caption
@@ -291,7 +244,7 @@ variable this.contentDetails.caption
 variable this.contentDetails.contentRating
 	var-kind variable
 	enclosing-var this.contentDetails
-	dec-type main.getVideos_Output_200_items_contentRating
+	dec-type main.getVideos&Output&200&items&contentRating
 	rep-type hashcode
 variable this.contentDetails.contentRating.acbRating
 	var-kind field acbRating
@@ -663,7 +616,7 @@ variable this.contentDetails.contentRating.ytRating
 variable this.contentDetails.countryRestriction
 	var-kind variable
 	enclosing-var this.contentDetails
-	dec-type main.getVideos_Output_200_items_countryRestriction
+	dec-type main.getVideos&Output&200&items&countryRestriction
 	rep-type hashcode
 variable this.contentDetails.countryRestriction.allowed
 	var-kind field allowed
@@ -714,7 +667,7 @@ variable this.contentDetails.projection
 variable this.contentDetails.regionRestriction
 	var-kind variable
 	enclosing-var this.contentDetails
-	dec-type main.getVideos_Output_200_items_regionRestriction
+	dec-type main.getVideos&Output&200&items&regionRestriction
 	rep-type hashcode
 variable this.contentDetails.regionRestriction.allowed
 	var-kind field allowed
@@ -746,7 +699,7 @@ variable this.etag
 variable this.fileDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_fileDetails
+	dec-type main.getVideos&Output&200&items&fileDetails
 	rep-type hashcode
 variable this.fileDetails.audioStreams
 	var-kind field audioStreams
@@ -818,7 +771,7 @@ variable this.kind
 variable this.liveStreamingDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_liveStreamingDetails
+	dec-type main.getVideos&Output&200&items&liveStreamingDetails
 	rep-type hashcode
 variable this.liveStreamingDetails.activeLiveChatId
 	var-kind field activeLiveChatId
@@ -853,12 +806,12 @@ variable this.liveStreamingDetails.scheduledStartTime
 variable this.monetizationDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_monetizationDetails
+	dec-type main.getVideos&Output&200&items&monetizationDetails
 	rep-type hashcode
 variable this.monetizationDetails.access
 	var-kind variable
 	enclosing-var this.monetizationDetails
-	dec-type main.getVideos_Output_200_items_access
+	dec-type main.getVideos&Output&200&items&access
 	rep-type hashcode
 variable this.monetizationDetails.access.allowed
 	var-kind field allowed
@@ -879,7 +832,7 @@ variable this.monetizationDetails.access.exception[..]
 variable this.player
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_player
+	dec-type main.getVideos&Output&200&items&player
 	rep-type hashcode
 variable this.player.embedHeight
 	var-kind field embedHeight
@@ -899,7 +852,7 @@ variable this.player.embedWidth
 variable this.processingDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_processingDetails
+	dec-type main.getVideos&Output&200&items&processingDetails
 	rep-type hashcode
 variable this.processingDetails.editorSuggestionsAvailability
 	var-kind field editorSuggestionsAvailability
@@ -924,7 +877,7 @@ variable this.processingDetails.processingIssuesAvailability
 variable this.processingDetails.processingProgress
 	var-kind variable
 	enclosing-var this.processingDetails
-	dec-type main.getVideos_Output_200_items_processingProgress
+	dec-type main.getVideos&Output&200&items&processingProgress
 	rep-type hashcode
 variable this.processingDetails.processingProgress.partsProcessed
 	var-kind field partsProcessed
@@ -959,17 +912,17 @@ variable this.processingDetails.thumbnailsAvailability
 variable this.projectDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_projectDetails
+	dec-type main.getVideos&Output&200&items&projectDetails
 	rep-type hashcode
 variable this.recordingDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_recordingDetails
+	dec-type main.getVideos&Output&200&items&recordingDetails
 	rep-type hashcode
 variable this.recordingDetails.location
 	var-kind variable
 	enclosing-var this.recordingDetails
-	dec-type main.getVideos_Output_200_items_location
+	dec-type main.getVideos&Output&200&items&location
 	rep-type hashcode
 variable this.recordingDetails.location.altitude
 	var-kind field altitude
@@ -999,7 +952,7 @@ variable this.recordingDetails.recordingDate
 variable this.snippet
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_snippet
+	dec-type main.getVideos&Output&200&items&snippet
 	rep-type hashcode
 variable this.snippet.categoryId
 	var-kind field categoryId
@@ -1039,7 +992,7 @@ variable this.snippet.liveBroadcastContent
 variable this.snippet.localized
 	var-kind variable
 	enclosing-var this.snippet
-	dec-type main.getVideos_Output_200_items_localized
+	dec-type main.getVideos&Output&200&items&localized
 	rep-type hashcode
 variable this.snippet.localized.description
 	var-kind field description
@@ -1070,12 +1023,12 @@ variable this.snippet.tags[..]
 variable this.snippet.thumbnails
 	var-kind variable
 	enclosing-var this.snippet
-	dec-type main.getVideos_Output_200_items_thumbnails
+	dec-type main.getVideos&Output&200&items&thumbnails
 	rep-type hashcode
 variable this.snippet.thumbnails.default
 	var-kind variable
 	enclosing-var this.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_default
+	dec-type main.getVideos&Output&200&items&default
 	rep-type hashcode
 variable this.snippet.thumbnails.default.height
 	var-kind field height
@@ -1095,7 +1048,7 @@ variable this.snippet.thumbnails.default.width
 variable this.snippet.thumbnails.high
 	var-kind variable
 	enclosing-var this.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_high
+	dec-type main.getVideos&Output&200&items&high
 	rep-type hashcode
 variable this.snippet.thumbnails.high.height
 	var-kind field height
@@ -1115,7 +1068,7 @@ variable this.snippet.thumbnails.high.width
 variable this.snippet.thumbnails.maxres
 	var-kind variable
 	enclosing-var this.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_maxres
+	dec-type main.getVideos&Output&200&items&maxres
 	rep-type hashcode
 variable this.snippet.thumbnails.maxres.height
 	var-kind field height
@@ -1135,7 +1088,7 @@ variable this.snippet.thumbnails.maxres.width
 variable this.snippet.thumbnails.medium
 	var-kind variable
 	enclosing-var this.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_medium
+	dec-type main.getVideos&Output&200&items&medium
 	rep-type hashcode
 variable this.snippet.thumbnails.medium.height
 	var-kind field height
@@ -1155,7 +1108,7 @@ variable this.snippet.thumbnails.medium.width
 variable this.snippet.thumbnails.standard
 	var-kind variable
 	enclosing-var this.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_standard
+	dec-type main.getVideos&Output&200&items&standard
 	rep-type hashcode
 variable this.snippet.thumbnails.standard.height
 	var-kind field height
@@ -1180,7 +1133,7 @@ variable this.snippet.title
 variable this.statistics
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_statistics
+	dec-type main.getVideos&Output&200&items&statistics
 	rep-type hashcode
 variable this.statistics.commentCount
 	var-kind field commentCount
@@ -1210,7 +1163,7 @@ variable this.statistics.viewCount
 variable this.status
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_status
+	dec-type main.getVideos&Output&200&items&status
 	rep-type hashcode
 variable this.status.embeddable
 	var-kind field embeddable
@@ -1265,7 +1218,7 @@ variable this.status.uploadStatus
 variable this.suggestions
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_suggestions
+	dec-type main.getVideos&Output&200&items&suggestions
 	rep-type hashcode
 variable this.suggestions.editorSuggestions
 	var-kind field editorSuggestions
@@ -1325,7 +1278,7 @@ variable this.suggestions.tagSuggestions[..]
 variable this.topicDetails
 	var-kind variable
 	enclosing-var this
-	dec-type main.getVideos_Output_200_items_topicDetails
+	dec-type main.getVideos&Output&200&items&topicDetails
 	rep-type hashcode
 variable this.topicDetails.relevantTopicIds
 	var-kind field relevantTopicIds
@@ -1361,15 +1314,62 @@ variable this.topicDetails.topicIds[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 
+ppt main.getVideos&Output&200&items&fileDetails&videoStreams:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.getVideos&Output&200&items&fileDetails&videoStreams
+	rep-type hashcode
+variable this.aspectRatio
+	var-kind field aspectRatio
+	enclosing-var this
+	dec-type double
+	rep-type double
+variable this.bitrateBps
+	var-kind field bitrateBps
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.codec
+	var-kind field codec
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.frameRateFps
+	var-kind field frameRateFps
+	enclosing-var this
+	dec-type double
+	rep-type double
+variable this.heightPixels
+	var-kind field heightPixels
+	enclosing-var this
+	dec-type int
+	rep-type int
+variable this.rotation
+	var-kind field rotation
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.vendor
+	var-kind field vendor
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.widthPixels
+	var-kind field widthPixels
+	enclosing-var this
+	dec-type int
+	rep-type int
+
 
 ppt main.youtubev3videos:::CLASS
 ppt-type class
 
-ppt main.youtubev3videos.getVideos_200(main.getVideos_Input):::ENTER
+ppt main.youtubev3videos.getVideos&200(main.getVideos&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1444,11 +1444,11 @@ variable input.videoCategoryId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items_fileDetails_audioStreams(main.getVideos_Input):::ENTER
+ppt main.youtubev3videos.getVideos&200&items&suggestions&tagSuggestions(main.getVideos&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1523,11 +1523,11 @@ variable input.videoCategoryId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items_fileDetails_videoStreams(main.getVideos_Input):::ENTER
+ppt main.youtubev3videos.getVideos&200&items&fileDetails&audioStreams(main.getVideos&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1602,11 +1602,11 @@ variable input.videoCategoryId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items_suggestions_tagSuggestions(main.getVideos_Input):::ENTER
+ppt main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1681,11 +1681,11 @@ variable input.videoCategoryId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::ENTER
+ppt main.youtubev3videos.getVideos&200&items&fileDetails&videoStreams(main.getVideos&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1760,11 +1760,11 @@ variable input.videoCategoryId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200(main.getVideos_Input):::EXIT1
+ppt main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1840,7 +1840,7 @@ variable input.videoCategoryId
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.getVideos_Output_200
+	dec-type main.getVideos&Output&200
 	rep-type hashcode
 variable return.etag
 	var-kind field etag
@@ -1876,7 +1876,7 @@ variable return.nextPageToken
 variable return.pageInfo
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_pageInfo
+	dec-type main.getVideos&Output&200&pageInfo
 	rep-type hashcode
 variable return.pageInfo.resultsPerPage
 	var-kind field resultsPerPage
@@ -1896,7 +1896,7 @@ variable return.prevPageToken
 variable return.tokenPagination
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_tokenPagination
+	dec-type main.getVideos&Output&200&tokenPagination
 	rep-type hashcode
 variable return.visitorId
 	var-kind field visitorId
@@ -1904,11 +1904,11 @@ variable return.visitorId
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items_fileDetails_audioStreams(main.getVideos_Input):::EXIT2
+ppt main.youtubev3videos.getVideos&200&items&suggestions&tagSuggestions(main.getVideos&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -1984,7 +1984,106 @@ variable input.videoCategoryId
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.getVideos_Output_200_items_fileDetails_audioStreams
+	dec-type main.getVideos&Output&200&items&suggestions&tagSuggestions
+	rep-type hashcode
+variable return.categoryRestricts
+	var-kind field categoryRestricts
+	enclosing-var return
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable return.categoryRestricts[..]
+	var-kind array
+	enclosing-var return.categoryRestricts
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable return.tag
+	var-kind field tag
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.youtubev3videos.getVideos&200&items&fileDetails&audioStreams(main.getVideos&Input):::EXIT3
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.getVideos&Input
+	rep-type hashcode
+variable input.part
+	var-kind field part
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.chart
+	var-kind field chart
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.hl
+	var-kind field hl
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.id
+	var-kind field id
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.maxHeight
+	var-kind field maxHeight
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.maxResults
+	var-kind field maxResults
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.maxWidth
+	var-kind field maxWidth
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.myRating
+	var-kind field myRating
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.onBehalfOfContentOwner
+	var-kind field onBehalfOfContentOwner
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.pageToken
+	var-kind field pageToken
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.regionCode
+	var-kind field regionCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.videoCategoryId
+	var-kind field videoCategoryId
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return
+	var-kind return
+	dec-type main.getVideos&Output&200&items&fileDetails&audioStreams
 	rep-type hashcode
 variable return.bitrateBps
 	var-kind field bitrateBps
@@ -2007,11 +2106,11 @@ variable return.vendor
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.youtubev3videos.getVideos_200_items_fileDetails_videoStreams(main.getVideos_Input):::EXIT3
+ppt main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getVideos_Input
+	dec-type main.getVideos&Input
 	rep-type hashcode
 variable input.part
 	var-kind field part
@@ -2087,234 +2186,12 @@ variable input.videoCategoryId
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.getVideos_Output_200_items_fileDetails_videoStreams
-	rep-type hashcode
-variable return.aspectRatio
-	var-kind field aspectRatio
-	enclosing-var return
-	dec-type double
-	rep-type double
-variable return.bitrateBps
-	var-kind field bitrateBps
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.codec
-	var-kind field codec
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.frameRateFps
-	var-kind field frameRateFps
-	enclosing-var return
-	dec-type double
-	rep-type double
-variable return.heightPixels
-	var-kind field heightPixels
-	enclosing-var return
-	dec-type int
-	rep-type int
-variable return.rotation
-	var-kind field rotation
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.vendor
-	var-kind field vendor
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.widthPixels
-	var-kind field widthPixels
-	enclosing-var return
-	dec-type int
-	rep-type int
-
-ppt main.youtubev3videos.getVideos_200_items_suggestions_tagSuggestions(main.getVideos_Input):::EXIT4
-ppt-type subexit
-variable input
-	var-kind variable
-	dec-type main.getVideos_Input
-	rep-type hashcode
-variable input.part
-	var-kind field part
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.part[..]
-	var-kind array
-	enclosing-var input.part
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.chart
-	var-kind field chart
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.hl
-	var-kind field hl
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.id
-	var-kind field id
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.id[..]
-	var-kind array
-	enclosing-var input.id
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.maxHeight
-	var-kind field maxHeight
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.maxResults
-	var-kind field maxResults
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.maxWidth
-	var-kind field maxWidth
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.myRating
-	var-kind field myRating
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.onBehalfOfContentOwner
-	var-kind field onBehalfOfContentOwner
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.pageToken
-	var-kind field pageToken
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.regionCode
-	var-kind field regionCode
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.videoCategoryId
-	var-kind field videoCategoryId
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return
-	var-kind return
-	dec-type main.getVideos_Output_200_items_suggestions_tagSuggestions
-	rep-type hashcode
-variable return.categoryRestricts
-	var-kind field categoryRestricts
-	enclosing-var return
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable return.categoryRestricts[..]
-	var-kind array
-	enclosing-var return.categoryRestricts
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return.tag
-	var-kind field tag
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-ppt main.youtubev3videos.getVideos_200_items(main.getVideos_Input):::EXIT5
-ppt-type subexit
-variable input
-	var-kind variable
-	dec-type main.getVideos_Input
-	rep-type hashcode
-variable input.part
-	var-kind field part
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.part[..]
-	var-kind array
-	enclosing-var input.part
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.chart
-	var-kind field chart
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.hl
-	var-kind field hl
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.id
-	var-kind field id
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.id[..]
-	var-kind array
-	enclosing-var input.id
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.maxHeight
-	var-kind field maxHeight
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.maxResults
-	var-kind field maxResults
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.maxWidth
-	var-kind field maxWidth
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.myRating
-	var-kind field myRating
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.onBehalfOfContentOwner
-	var-kind field onBehalfOfContentOwner
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.pageToken
-	var-kind field pageToken
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.regionCode
-	var-kind field regionCode
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.videoCategoryId
-	var-kind field videoCategoryId
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return
-	var-kind return
-	dec-type main.getVideos_Output_200_items
+	dec-type main.getVideos&Output&200&items
 	rep-type hashcode
 variable return.ageGating
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_ageGating
+	dec-type main.getVideos&Output&200&items&ageGating
 	rep-type hashcode
 variable return.ageGating.alcoholContent
 	var-kind field alcoholContent
@@ -2334,7 +2211,7 @@ variable return.ageGating.videoGameRating
 variable return.contentDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_contentDetails
+	dec-type main.getVideos&Output&200&items&contentDetails
 	rep-type hashcode
 variable return.contentDetails.caption
 	var-kind field caption
@@ -2344,7 +2221,7 @@ variable return.contentDetails.caption
 variable return.contentDetails.contentRating
 	var-kind return
 	enclosing-var return.contentDetails
-	dec-type main.getVideos_Output_200_items_contentRating
+	dec-type main.getVideos&Output&200&items&contentRating
 	rep-type hashcode
 variable return.contentDetails.contentRating.acbRating
 	var-kind field acbRating
@@ -2716,7 +2593,7 @@ variable return.contentDetails.contentRating.ytRating
 variable return.contentDetails.countryRestriction
 	var-kind return
 	enclosing-var return.contentDetails
-	dec-type main.getVideos_Output_200_items_countryRestriction
+	dec-type main.getVideos&Output&200&items&countryRestriction
 	rep-type hashcode
 variable return.contentDetails.countryRestriction.allowed
 	var-kind field allowed
@@ -2767,7 +2644,7 @@ variable return.contentDetails.projection
 variable return.contentDetails.regionRestriction
 	var-kind return
 	enclosing-var return.contentDetails
-	dec-type main.getVideos_Output_200_items_regionRestriction
+	dec-type main.getVideos&Output&200&items&regionRestriction
 	rep-type hashcode
 variable return.contentDetails.regionRestriction.allowed
 	var-kind field allowed
@@ -2799,7 +2676,7 @@ variable return.etag
 variable return.fileDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_fileDetails
+	dec-type main.getVideos&Output&200&items&fileDetails
 	rep-type hashcode
 variable return.fileDetails.audioStreams
 	var-kind field audioStreams
@@ -2871,7 +2748,7 @@ variable return.kind
 variable return.liveStreamingDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_liveStreamingDetails
+	dec-type main.getVideos&Output&200&items&liveStreamingDetails
 	rep-type hashcode
 variable return.liveStreamingDetails.activeLiveChatId
 	var-kind field activeLiveChatId
@@ -2906,12 +2783,12 @@ variable return.liveStreamingDetails.scheduledStartTime
 variable return.monetizationDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_monetizationDetails
+	dec-type main.getVideos&Output&200&items&monetizationDetails
 	rep-type hashcode
 variable return.monetizationDetails.access
 	var-kind return
 	enclosing-var return.monetizationDetails
-	dec-type main.getVideos_Output_200_items_access
+	dec-type main.getVideos&Output&200&items&access
 	rep-type hashcode
 variable return.monetizationDetails.access.allowed
 	var-kind field allowed
@@ -2932,7 +2809,7 @@ variable return.monetizationDetails.access.exception[..]
 variable return.player
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_player
+	dec-type main.getVideos&Output&200&items&player
 	rep-type hashcode
 variable return.player.embedHeight
 	var-kind field embedHeight
@@ -2952,7 +2829,7 @@ variable return.player.embedWidth
 variable return.processingDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_processingDetails
+	dec-type main.getVideos&Output&200&items&processingDetails
 	rep-type hashcode
 variable return.processingDetails.editorSuggestionsAvailability
 	var-kind field editorSuggestionsAvailability
@@ -2977,7 +2854,7 @@ variable return.processingDetails.processingIssuesAvailability
 variable return.processingDetails.processingProgress
 	var-kind return
 	enclosing-var return.processingDetails
-	dec-type main.getVideos_Output_200_items_processingProgress
+	dec-type main.getVideos&Output&200&items&processingProgress
 	rep-type hashcode
 variable return.processingDetails.processingProgress.partsProcessed
 	var-kind field partsProcessed
@@ -3012,17 +2889,17 @@ variable return.processingDetails.thumbnailsAvailability
 variable return.projectDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_projectDetails
+	dec-type main.getVideos&Output&200&items&projectDetails
 	rep-type hashcode
 variable return.recordingDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_recordingDetails
+	dec-type main.getVideos&Output&200&items&recordingDetails
 	rep-type hashcode
 variable return.recordingDetails.location
 	var-kind return
 	enclosing-var return.recordingDetails
-	dec-type main.getVideos_Output_200_items_location
+	dec-type main.getVideos&Output&200&items&location
 	rep-type hashcode
 variable return.recordingDetails.location.altitude
 	var-kind field altitude
@@ -3052,7 +2929,7 @@ variable return.recordingDetails.recordingDate
 variable return.snippet
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_snippet
+	dec-type main.getVideos&Output&200&items&snippet
 	rep-type hashcode
 variable return.snippet.categoryId
 	var-kind field categoryId
@@ -3092,7 +2969,7 @@ variable return.snippet.liveBroadcastContent
 variable return.snippet.localized
 	var-kind return
 	enclosing-var return.snippet
-	dec-type main.getVideos_Output_200_items_localized
+	dec-type main.getVideos&Output&200&items&localized
 	rep-type hashcode
 variable return.snippet.localized.description
 	var-kind field description
@@ -3123,12 +3000,12 @@ variable return.snippet.tags[..]
 variable return.snippet.thumbnails
 	var-kind return
 	enclosing-var return.snippet
-	dec-type main.getVideos_Output_200_items_thumbnails
+	dec-type main.getVideos&Output&200&items&thumbnails
 	rep-type hashcode
 variable return.snippet.thumbnails.default
 	var-kind return
 	enclosing-var return.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_default
+	dec-type main.getVideos&Output&200&items&default
 	rep-type hashcode
 variable return.snippet.thumbnails.default.height
 	var-kind field height
@@ -3148,7 +3025,7 @@ variable return.snippet.thumbnails.default.width
 variable return.snippet.thumbnails.high
 	var-kind return
 	enclosing-var return.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_high
+	dec-type main.getVideos&Output&200&items&high
 	rep-type hashcode
 variable return.snippet.thumbnails.high.height
 	var-kind field height
@@ -3168,7 +3045,7 @@ variable return.snippet.thumbnails.high.width
 variable return.snippet.thumbnails.maxres
 	var-kind return
 	enclosing-var return.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_maxres
+	dec-type main.getVideos&Output&200&items&maxres
 	rep-type hashcode
 variable return.snippet.thumbnails.maxres.height
 	var-kind field height
@@ -3188,7 +3065,7 @@ variable return.snippet.thumbnails.maxres.width
 variable return.snippet.thumbnails.medium
 	var-kind return
 	enclosing-var return.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_medium
+	dec-type main.getVideos&Output&200&items&medium
 	rep-type hashcode
 variable return.snippet.thumbnails.medium.height
 	var-kind field height
@@ -3208,7 +3085,7 @@ variable return.snippet.thumbnails.medium.width
 variable return.snippet.thumbnails.standard
 	var-kind return
 	enclosing-var return.snippet.thumbnails
-	dec-type main.getVideos_Output_200_items_standard
+	dec-type main.getVideos&Output&200&items&standard
 	rep-type hashcode
 variable return.snippet.thumbnails.standard.height
 	var-kind field height
@@ -3233,7 +3110,7 @@ variable return.snippet.title
 variable return.statistics
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_statistics
+	dec-type main.getVideos&Output&200&items&statistics
 	rep-type hashcode
 variable return.statistics.commentCount
 	var-kind field commentCount
@@ -3263,7 +3140,7 @@ variable return.statistics.viewCount
 variable return.status
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_status
+	dec-type main.getVideos&Output&200&items&status
 	rep-type hashcode
 variable return.status.embeddable
 	var-kind field embeddable
@@ -3318,7 +3195,7 @@ variable return.status.uploadStatus
 variable return.suggestions
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_suggestions
+	dec-type main.getVideos&Output&200&items&suggestions
 	rep-type hashcode
 variable return.suggestions.editorSuggestions
 	var-kind field editorSuggestions
@@ -3378,7 +3255,7 @@ variable return.suggestions.tagSuggestions[..]
 variable return.topicDetails
 	var-kind return
 	enclosing-var return
-	dec-type main.getVideos_Output_200_items_topicDetails
+	dec-type main.getVideos&Output&200&items&topicDetails
 	rep-type hashcode
 variable return.topicDetails.relevantTopicIds
 	var-kind field relevantTopicIds
@@ -3413,4 +3290,127 @@ variable return.topicDetails.topicIds[..]
 	array 1
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
+
+ppt main.youtubev3videos.getVideos&200&items&fileDetails&videoStreams(main.getVideos&Input):::EXIT5
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.getVideos&Input
+	rep-type hashcode
+variable input.part
+	var-kind field part
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.part[..]
+	var-kind array
+	enclosing-var input.part
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.chart
+	var-kind field chart
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.hl
+	var-kind field hl
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.id
+	var-kind field id
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.id[..]
+	var-kind array
+	enclosing-var input.id
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.maxHeight
+	var-kind field maxHeight
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.maxResults
+	var-kind field maxResults
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.maxWidth
+	var-kind field maxWidth
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.myRating
+	var-kind field myRating
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.onBehalfOfContentOwner
+	var-kind field onBehalfOfContentOwner
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.pageToken
+	var-kind field pageToken
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.regionCode
+	var-kind field regionCode
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.videoCategoryId
+	var-kind field videoCategoryId
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return
+	var-kind return
+	dec-type main.getVideos&Output&200&items&fileDetails&videoStreams
+	rep-type hashcode
+variable return.aspectRatio
+	var-kind field aspectRatio
+	enclosing-var return
+	dec-type double
+	rep-type double
+variable return.bitrateBps
+	var-kind field bitrateBps
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.codec
+	var-kind field codec
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.frameRateFps
+	var-kind field frameRateFps
+	enclosing-var return
+	dec-type double
+	rep-type double
+variable return.heightPixels
+	var-kind field heightPixels
+	enclosing-var return
+	dec-type int
+	rep-type int
+variable return.rotation
+	var-kind field rotation
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.vendor
+	var-kind field vendor
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.widthPixels
+	var-kind field widthPixels
+	enclosing-var return
+	dec-type int
+	rep-type int
 

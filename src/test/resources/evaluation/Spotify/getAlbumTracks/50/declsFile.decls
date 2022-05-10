@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.getAlbumTracks_Input:::CLASS
+ppt main.getAlbumTracks&Input:::CLASS
 ppt-type class
 
-ppt main.getAlbumTracks_Input:::OBJECT
+ppt main.getAlbumTracks&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable this.id
 	var-kind field id
@@ -32,14 +32,14 @@ variable this.market
 	rep-type java.lang.String
 
 
-ppt main.getAlbumTracks_Output_200:::CLASS
+ppt main.getAlbumTracks&Output&200:::CLASS
 ppt-type class
 
-ppt main.getAlbumTracks_Output_200:::OBJECT
+ppt main.getAlbumTracks&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getAlbumTracks_Output_200
+	dec-type main.getAlbumTracks&Output&200
 	rep-type hashcode
 variable this.href
 	var-kind field href
@@ -83,11 +83,53 @@ variable this.total
 	dec-type int
 	rep-type int
 
-ppt main.getAlbumTracks_Output_200_items:::OBJECT
+ppt main.getAlbumTracks&Output&200&items&artists:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getAlbumTracks_Output_200_items
+	dec-type main.getAlbumTracks&Output&200&items&artists
+	rep-type hashcode
+variable this.external_urls
+	var-kind variable
+	enclosing-var this
+	dec-type main.getAlbumTracks&Output&200&items&artists&external_urls
+	rep-type hashcode
+variable this.external_urls.spotify
+	var-kind field spotify
+	enclosing-var this.external_urls
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.href
+	var-kind field href
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.id
+	var-kind field id
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.name
+	var-kind field name
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.type
+	var-kind field type
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.uri
+	var-kind field uri
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.getAlbumTracks&Output&200&items:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.getAlbumTracks&Output&200&items
 	rep-type hashcode
 variable this.artists
 	var-kind field artists
@@ -129,7 +171,7 @@ variable this.explicit
 variable this.external_urls
 	var-kind variable
 	enclosing-var this
-	dec-type main.getAlbumTracks_Output_200_items_external_urls
+	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
 variable this.external_urls.spotify
 	var-kind field spotify
@@ -159,12 +201,12 @@ variable this.is_playable
 variable this.linked_from
 	var-kind variable
 	enclosing-var this
-	dec-type main.getAlbumTracks_Output_200_items_linked_from
+	dec-type main.getAlbumTracks&Output&200&items&linked_from
 	rep-type hashcode
 variable this.linked_from.external_urls
 	var-kind variable
 	enclosing-var this.linked_from
-	dec-type main.getAlbumTracks_Output_200_items_external_urls
+	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
 variable this.linked_from.external_urls.spotify
 	var-kind field spotify
@@ -204,7 +246,7 @@ variable this.preview_url
 variable this.restrictions
 	var-kind variable
 	enclosing-var this
-	dec-type main.getAlbumTracks_Output_200_items_restrictions
+	dec-type main.getAlbumTracks&Output&200&items&restrictions
 	rep-type hashcode
 variable this.restrictions.reason
 	var-kind field reason
@@ -227,57 +269,15 @@ variable this.uri
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.getAlbumTracks_Output_200_items_artists:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.getAlbumTracks_Output_200_items_artists
-	rep-type hashcode
-variable this.external_urls
-	var-kind variable
-	enclosing-var this
-	dec-type main.getAlbumTracks_Output_200_items_artists_external_urls
-	rep-type hashcode
-variable this.external_urls.spotify
-	var-kind field spotify
-	enclosing-var this.external_urls
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.href
-	var-kind field href
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.id
-	var-kind field id
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.name
-	var-kind field name
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.type
-	var-kind field type
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.uri
-	var-kind field uri
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
 
 ppt main.albums{id}tracks:::CLASS
 ppt-type class
 
-ppt main.albums{id}tracks.getAlbumTracks_200(main.getAlbumTracks_Input):::ENTER
+ppt main.albums{id}tracks.getAlbumTracks&200(main.getAlbumTracks&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable input.id
 	var-kind field id
@@ -300,11 +300,11 @@ variable input.market
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.albums{id}tracks.getAlbumTracks_200_items(main.getAlbumTracks_Input):::ENTER
+ppt main.albums{id}tracks.getAlbumTracks&200&items&artists(main.getAlbumTracks&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable input.id
 	var-kind field id
@@ -327,11 +327,11 @@ variable input.market
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.albums{id}tracks.getAlbumTracks_200_items_artists(main.getAlbumTracks_Input):::ENTER
+ppt main.albums{id}tracks.getAlbumTracks&200&items(main.getAlbumTracks&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable input.id
 	var-kind field id
@@ -354,11 +354,11 @@ variable input.market
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.albums{id}tracks.getAlbumTracks_200(main.getAlbumTracks_Input):::EXIT1
+ppt main.albums{id}tracks.getAlbumTracks&200(main.getAlbumTracks&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable input.id
 	var-kind field id
@@ -382,7 +382,7 @@ variable input.market
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.getAlbumTracks_Output_200
+	dec-type main.getAlbumTracks&Output&200
 	rep-type hashcode
 variable return.href
 	var-kind field href
@@ -426,11 +426,11 @@ variable return.total
 	dec-type int
 	rep-type int
 
-ppt main.albums{id}tracks.getAlbumTracks_200_items(main.getAlbumTracks_Input):::EXIT2
+ppt main.albums{id}tracks.getAlbumTracks&200&items&artists(main.getAlbumTracks&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getAlbumTracks_Input
+	dec-type main.getAlbumTracks&Input
 	rep-type hashcode
 variable input.id
 	var-kind field id
@@ -454,7 +454,73 @@ variable input.market
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.getAlbumTracks_Output_200_items
+	dec-type main.getAlbumTracks&Output&200&items&artists
+	rep-type hashcode
+variable return.external_urls
+	var-kind return
+	enclosing-var return
+	dec-type main.getAlbumTracks&Output&200&items&artists&external_urls
+	rep-type hashcode
+variable return.external_urls.spotify
+	var-kind field spotify
+	enclosing-var return.external_urls
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.href
+	var-kind field href
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.id
+	var-kind field id
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.name
+	var-kind field name
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.type
+	var-kind field type
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.uri
+	var-kind field uri
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.albums{id}tracks.getAlbumTracks&200&items(main.getAlbumTracks&Input):::EXIT3
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.getAlbumTracks&Input
+	rep-type hashcode
+variable input.id
+	var-kind field id
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.limit
+	var-kind field limit
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.offset
+	var-kind field offset
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.market
+	var-kind field market
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return
+	var-kind return
+	dec-type main.getAlbumTracks&Output&200&items
 	rep-type hashcode
 variable return.artists
 	var-kind field artists
@@ -496,7 +562,7 @@ variable return.explicit
 variable return.external_urls
 	var-kind return
 	enclosing-var return
-	dec-type main.getAlbumTracks_Output_200_items_external_urls
+	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
 variable return.external_urls.spotify
 	var-kind field spotify
@@ -526,12 +592,12 @@ variable return.is_playable
 variable return.linked_from
 	var-kind return
 	enclosing-var return
-	dec-type main.getAlbumTracks_Output_200_items_linked_from
+	dec-type main.getAlbumTracks&Output&200&items&linked_from
 	rep-type hashcode
 variable return.linked_from.external_urls
 	var-kind return
 	enclosing-var return.linked_from
-	dec-type main.getAlbumTracks_Output_200_items_external_urls
+	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
 variable return.linked_from.external_urls.spotify
 	var-kind field spotify
@@ -571,7 +637,7 @@ variable return.preview_url
 variable return.restrictions
 	var-kind return
 	enclosing-var return
-	dec-type main.getAlbumTracks_Output_200_items_restrictions
+	dec-type main.getAlbumTracks&Output&200&items&restrictions
 	rep-type hashcode
 variable return.restrictions.reason
 	var-kind field reason
@@ -583,72 +649,6 @@ variable return.track_number
 	enclosing-var return
 	dec-type int
 	rep-type int
-variable return.type
-	var-kind field type
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.uri
-	var-kind field uri
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-ppt main.albums{id}tracks.getAlbumTracks_200_items_artists(main.getAlbumTracks_Input):::EXIT3
-ppt-type subexit
-variable input
-	var-kind variable
-	dec-type main.getAlbumTracks_Input
-	rep-type hashcode
-variable input.id
-	var-kind field id
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.limit
-	var-kind field limit
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.offset
-	var-kind field offset
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.market
-	var-kind field market
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return
-	var-kind return
-	dec-type main.getAlbumTracks_Output_200_items_artists
-	rep-type hashcode
-variable return.external_urls
-	var-kind return
-	enclosing-var return
-	dec-type main.getAlbumTracks_Output_200_items_artists_external_urls
-	rep-type hashcode
-variable return.external_urls.spotify
-	var-kind field spotify
-	enclosing-var return.external_urls
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.href
-	var-kind field href
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.id
-	var-kind field id
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.name
-	var-kind field name
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
 variable return.type
 	var-kind field type
 	enclosing-var return

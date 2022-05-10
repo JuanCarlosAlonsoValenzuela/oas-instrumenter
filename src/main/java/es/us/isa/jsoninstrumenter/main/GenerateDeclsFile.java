@@ -24,9 +24,9 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysObject.yaml";
-    private static String testCasesFilePath = "src/---/resources/evaluation/YouTube/50/YouTubeGetVideos_50.csv";
-    private static boolean generateDtrace = false;
+    private static String openApiSpecPath = "---";
+    private static String testCasesFilePath = "---";
+    private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
     public static String HIERARCHY_SEPARATOR = "&";

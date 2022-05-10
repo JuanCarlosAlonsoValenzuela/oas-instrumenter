@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.searchByIdOrTitle_Input:::CLASS
+ppt main.searchByIdOrTitle&Input:::CLASS
 ppt-type class
 
-ppt main.searchByIdOrTitle_Input:::OBJECT
+ppt main.searchByIdOrTitle&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable this.t
 	var-kind field t
@@ -42,14 +42,14 @@ variable this.r
 	rep-type java.lang.String
 
 
-ppt main.searchByIdOrTitle_Output_200:::CLASS
+ppt main.searchByIdOrTitle&Output&200:::CLASS
 ppt-type class
 
-ppt main.searchByIdOrTitle_Output_200:::OBJECT
+ppt main.searchByIdOrTitle&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Output_200
+	dec-type main.searchByIdOrTitle&Output&200
 	rep-type hashcode
 variable this.Response
 	var-kind field Response
@@ -203,11 +203,11 @@ variable this.totalSeasons
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.searchByIdOrTitle_Output_200_Ratings:::OBJECT
+ppt main.searchByIdOrTitle&Output&200&Ratings:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Output_200_Ratings
+	dec-type main.searchByIdOrTitle&Output&200&Ratings
 	rep-type hashcode
 variable this.Source
 	var-kind field Source
@@ -221,14 +221,14 @@ variable this.Value
 	rep-type java.lang.String
 
 
-ppt main.searchByIdOrTitle_Output_401:::CLASS
+ppt main.searchByIdOrTitle&Output&401:::CLASS
 ppt-type class
 
-ppt main.searchByIdOrTitle_Output_401:::OBJECT
+ppt main.searchByIdOrTitle&Output&401:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Output_401
+	dec-type main.searchByIdOrTitle&Output&401
 	rep-type hashcode
 variable this.Response
 	var-kind field Response
@@ -245,11 +245,11 @@ variable this.Error
 ppt main.:::CLASS
 ppt-type class
 
-ppt main..searchByIdOrTitle_200(main.searchByIdOrTitle_Input):::ENTER
+ppt main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -282,11 +282,11 @@ variable input.r
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..searchByIdOrTitle_200_Ratings(main.searchByIdOrTitle_Input):::ENTER
+ppt main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -319,11 +319,11 @@ variable input.r
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..searchByIdOrTitle_401(main.searchByIdOrTitle_Input):::ENTER
+ppt main..searchByIdOrTitle&401(main.searchByIdOrTitle&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -356,11 +356,11 @@ variable input.r
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..searchByIdOrTitle_200(main.searchByIdOrTitle_Input):::EXIT1
+ppt main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -394,7 +394,7 @@ variable input.r
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.searchByIdOrTitle_Output_200
+	dec-type main.searchByIdOrTitle&Output&200
 	rep-type hashcode
 variable return.Response
 	var-kind field Response
@@ -548,11 +548,11 @@ variable return.totalSeasons
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..searchByIdOrTitle_200_Ratings(main.searchByIdOrTitle_Input):::EXIT2
+ppt main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -586,7 +586,7 @@ variable input.r
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.searchByIdOrTitle_Output_200_Ratings
+	dec-type main.searchByIdOrTitle&Output&200&Ratings
 	rep-type hashcode
 variable return.Source
 	var-kind field Source
@@ -599,11 +599,11 @@ variable return.Value
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main..searchByIdOrTitle_401(main.searchByIdOrTitle_Input):::EXIT3
+ppt main..searchByIdOrTitle&401(main.searchByIdOrTitle&Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.searchByIdOrTitle_Input
+	dec-type main.searchByIdOrTitle&Input
 	rep-type hashcode
 variable input.t
 	var-kind field t
@@ -637,7 +637,7 @@ variable input.r
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.searchByIdOrTitle_Output_401
+	dec-type main.searchByIdOrTitle&Output&401
 	rep-type hashcode
 variable return.Response
 	var-kind field Response

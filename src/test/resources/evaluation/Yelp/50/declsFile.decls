@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.getBusinesses_Input:::CLASS
+ppt main.getBusinesses&Input:::CLASS
 ppt-type class
 
-ppt main.getBusinesses_Input:::OBJECT
+ppt main.getBusinesses&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable this.term
 	var-kind field term
@@ -100,14 +100,14 @@ variable this.attributes[..]
 	rep-type java.lang.String[]
 
 
-ppt main.getBusinesses_Output_200:::CLASS
+ppt main.getBusinesses&Output&200:::CLASS
 ppt-type class
 
-ppt main.getBusinesses_Output_200:::OBJECT
+ppt main.getBusinesses&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getBusinesses_Output_200
+	dec-type main.getBusinesses&Output&200
 	rep-type hashcode
 variable this.total
 	var-kind field total
@@ -117,12 +117,12 @@ variable this.total
 variable this.region
 	var-kind variable
 	enclosing-var this
-	dec-type main.getBusinesses_Output_200_region
+	dec-type main.getBusinesses&Output&200&region
 	rep-type hashcode
 variable this.region.center
 	var-kind variable
 	enclosing-var this.region
-	dec-type main.getBusinesses_Output_200_center
+	dec-type main.getBusinesses&Output&200&center
 	rep-type hashcode
 variable this.region.center.latitude
 	var-kind field latitude
@@ -146,28 +146,11 @@ variable this.businesses[..]
 	dec-type main.businesses[]
 	rep-type hashcode[]
 
-ppt main.getBusinesses_Output_200_businesses_categories:::OBJECT
+ppt main.getBusinesses&Output&200&businesses:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.getBusinesses_Output_200_businesses_categories
-	rep-type hashcode
-variable this.alias
-	var-kind field alias
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.title
-	var-kind field title
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-ppt main.getBusinesses_Output_200_businesses:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.getBusinesses_Output_200_businesses
+	dec-type main.getBusinesses&Output&200&businesses
 	rep-type hashcode
 variable this.categories
 	var-kind field categories
@@ -183,7 +166,7 @@ variable this.categories[..]
 variable this.coordinates
 	var-kind variable
 	enclosing-var this
-	dec-type main.getBusinesses_Output_200_businesses_coordinates
+	dec-type main.getBusinesses&Output&200&businesses&coordinates
 	rep-type hashcode
 variable this.coordinates.latitude
 	var-kind field latitude
@@ -269,7 +252,7 @@ variable this.transactions[..]
 variable this.location
 	var-kind variable
 	enclosing-var this
-	dec-type main.getBusinesses_Output_200_businesses_location
+	dec-type main.getBusinesses&Output&200&businesses&location
 	rep-type hashcode
 variable this.location.address1
 	var-kind field address1
@@ -318,15 +301,32 @@ variable this.location.zip_code
 	dec-type java.lang.String
 	rep-type java.lang.String
 
+ppt main.getBusinesses&Output&200&businesses&categories:::OBJECT
+ppt-type object
+variable this
+	var-kind variable
+	dec-type main.getBusinesses&Output&200&businesses&categories
+	rep-type hashcode
+variable this.alias
+	var-kind field alias
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable this.title
+	var-kind field title
+	enclosing-var this
+	dec-type java.lang.String
+	rep-type java.lang.String
+
 
 ppt main.businessessearch:::CLASS
 ppt-type class
 
-ppt main.businessessearch.getBusinesses_200(main.getBusinesses_Input):::ENTER
+ppt main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable input.term
 	var-kind field term
@@ -417,11 +417,11 @@ variable input.attributes[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 
-ppt main.businessessearch.getBusinesses_200_businesses_categories(main.getBusinesses_Input):::ENTER
+ppt main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable input.term
 	var-kind field term
@@ -512,11 +512,11 @@ variable input.attributes[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 
-ppt main.businessessearch.getBusinesses_200_businesses(main.getBusinesses_Input):::ENTER
+ppt main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable input.term
 	var-kind field term
@@ -607,11 +607,11 @@ variable input.attributes[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 
-ppt main.businessessearch.getBusinesses_200(main.getBusinesses_Input):::EXIT1
+ppt main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable input.term
 	var-kind field term
@@ -703,7 +703,7 @@ variable input.attributes[..]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
-	dec-type main.getBusinesses_Output_200
+	dec-type main.getBusinesses&Output&200
 	rep-type hashcode
 variable return.total
 	var-kind field total
@@ -713,12 +713,12 @@ variable return.total
 variable return.region
 	var-kind return
 	enclosing-var return
-	dec-type main.getBusinesses_Output_200_region
+	dec-type main.getBusinesses&Output&200&region
 	rep-type hashcode
 variable return.region.center
 	var-kind return
 	enclosing-var return.region
-	dec-type main.getBusinesses_Output_200_center
+	dec-type main.getBusinesses&Output&200&center
 	rep-type hashcode
 variable return.region.center.latitude
 	var-kind field latitude
@@ -742,11 +742,11 @@ variable return.businesses[..]
 	dec-type main.businesses[]
 	rep-type hashcode[]
 
-ppt main.businessessearch.getBusinesses_200_businesses_categories(main.getBusinesses_Input):::EXIT2
+ppt main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.getBusinesses_Input
+	dec-type main.getBusinesses&Input
 	rep-type hashcode
 variable input.term
 	var-kind field term
@@ -838,116 +838,7 @@ variable input.attributes[..]
 	rep-type java.lang.String[]
 variable return
 	var-kind return
-	dec-type main.getBusinesses_Output_200_businesses_categories
-	rep-type hashcode
-variable return.alias
-	var-kind field alias
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable return.title
-	var-kind field title
-	enclosing-var return
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-ppt main.businessessearch.getBusinesses_200_businesses(main.getBusinesses_Input):::EXIT3
-ppt-type subexit
-variable input
-	var-kind variable
-	dec-type main.getBusinesses_Input
-	rep-type hashcode
-variable input.term
-	var-kind field term
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.location
-	var-kind field location
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.latitude
-	var-kind field latitude
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.longitude
-	var-kind field longitude
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.radius
-	var-kind field radius
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.categories
-	var-kind field categories
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.categories[..]
-	var-kind array
-	enclosing-var input.categories
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.locale
-	var-kind field locale
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.limit
-	var-kind field limit
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.offset
-	var-kind field offset
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.sort_by
-	var-kind field sort_by
-	enclosing-var input
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable input.price
-	var-kind field price
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.price[..]
-	var-kind array
-	enclosing-var input.price
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable input.open_now
-	var-kind field open_now
-	enclosing-var input
-	dec-type boolean
-	rep-type boolean
-variable input.open_at
-	var-kind field open_at
-	enclosing-var input
-	dec-type int
-	rep-type int
-variable input.attributes
-	var-kind field attributes
-	enclosing-var input
-	dec-type java.lang.String[]
-	rep-type hashcode
-variable input.attributes[..]
-	var-kind array
-	enclosing-var input.attributes
-	array 1
-	dec-type java.lang.String[]
-	rep-type java.lang.String[]
-variable return
-	var-kind return
-	dec-type main.getBusinesses_Output_200_businesses
+	dec-type main.getBusinesses&Output&200&businesses
 	rep-type hashcode
 variable return.categories
 	var-kind field categories
@@ -963,7 +854,7 @@ variable return.categories[..]
 variable return.coordinates
 	var-kind return
 	enclosing-var return
-	dec-type main.getBusinesses_Output_200_businesses_coordinates
+	dec-type main.getBusinesses&Output&200&businesses&coordinates
 	rep-type hashcode
 variable return.coordinates.latitude
 	var-kind field latitude
@@ -1049,7 +940,7 @@ variable return.transactions[..]
 variable return.location
 	var-kind return
 	enclosing-var return
-	dec-type main.getBusinesses_Output_200_businesses_location
+	dec-type main.getBusinesses&Output&200&businesses&location
 	rep-type hashcode
 variable return.location.address1
 	var-kind field address1
@@ -1095,6 +986,115 @@ variable return.location.state
 variable return.location.zip_code
 	var-kind field zip_code
 	enclosing-var return.location
+	dec-type java.lang.String
+	rep-type java.lang.String
+
+ppt main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT3
+ppt-type subexit
+variable input
+	var-kind variable
+	dec-type main.getBusinesses&Input
+	rep-type hashcode
+variable input.term
+	var-kind field term
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.location
+	var-kind field location
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.latitude
+	var-kind field latitude
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.longitude
+	var-kind field longitude
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.radius
+	var-kind field radius
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.categories
+	var-kind field categories
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.categories[..]
+	var-kind array
+	enclosing-var input.categories
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.locale
+	var-kind field locale
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.limit
+	var-kind field limit
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.offset
+	var-kind field offset
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.sort_by
+	var-kind field sort_by
+	enclosing-var input
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable input.price
+	var-kind field price
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.price[..]
+	var-kind array
+	enclosing-var input.price
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable input.open_now
+	var-kind field open_now
+	enclosing-var input
+	dec-type boolean
+	rep-type boolean
+variable input.open_at
+	var-kind field open_at
+	enclosing-var input
+	dec-type int
+	rep-type int
+variable input.attributes
+	var-kind field attributes
+	enclosing-var input
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable input.attributes[..]
+	var-kind array
+	enclosing-var input.attributes
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable return
+	var-kind return
+	dec-type main.getBusinesses&Output&200&businesses&categories
+	rep-type hashcode
+variable return.alias
+	var-kind field alias
+	enclosing-var return
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.title
+	var-kind field title
+	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String
 
