@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.multipleOperationsEndpoint_Input:::CLASS
+ppt main.multipleOperationsEndpoint&Input:::CLASS
 ppt-type class
 
-ppt main.multipleOperationsEndpoint_Input:::OBJECT
+ppt main.multipleOperationsEndpoint&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
@@ -17,14 +17,14 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.multipleOperationsEndpoint_Output_200:::CLASS
+ppt main.multipleOperationsEndpoint&Output&200:::CLASS
 ppt-type class
 
-ppt main.multipleOperationsEndpoint_Output_200:::OBJECT
+ppt main.multipleOperationsEndpoint&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Output_200
+	dec-type main.multipleOperationsEndpoint&Output&200
 	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
@@ -43,11 +43,11 @@ variable this.arrayOfObjectsProperty[..]
 	dec-type main.arrayOfObjectsProperty[]
 	rep-type hashcode[]
 
-ppt main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty:::OBJECT
+ppt main.multipleOperationsEndpoint&Output&200&arrayOfObjectsProperty:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty
+	dec-type main.multipleOperationsEndpoint&Output&200&arrayOfObjectsProperty
 	rep-type hashcode
 variable this.property1
 	var-kind field property1
@@ -56,14 +56,14 @@ variable this.property1
 	rep-type java.lang.String
 
 
-ppt main.multipleOperationsEndpoint_Output_400:::CLASS
+ppt main.multipleOperationsEndpoint&Output&400:::CLASS
 ppt-type class
 
-ppt main.multipleOperationsEndpoint_Output_400:::OBJECT
+ppt main.multipleOperationsEndpoint&Output&400:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Output_400
+	dec-type main.multipleOperationsEndpoint&Output&400
 	rep-type hashcode
 variable this.errorDescription
 	var-kind field errorDescription
@@ -75,11 +75,11 @@ variable this.errorDescription
 ppt main.multipleOperationsEndpoint:::CLASS
 ppt-type class
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::ENTER
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -87,11 +87,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::ENTER
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -99,11 +99,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::ENTER
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -111,11 +111,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::EXIT1
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -124,7 +124,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.multipleOperationsEndpoint_Output_200
+	dec-type main.multipleOperationsEndpoint&Output&200
 	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
@@ -143,11 +143,11 @@ variable return.arrayOfObjectsProperty[..]
 	dec-type main.arrayOfObjectsProperty[]
 	rep-type hashcode[]
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -156,7 +156,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.multipleOperationsEndpoint_Output_200_arrayOfObjectsProperty
+	dec-type main.multipleOperationsEndpoint&Output&200&arrayOfObjectsProperty
 	rep-type hashcode
 variable return.property1
 	var-kind field property1
@@ -164,11 +164,11 @@ variable return.property1
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::EXIT3
+ppt main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.multipleOperationsEndpoint_Input
+	dec-type main.multipleOperationsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -177,7 +177,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.multipleOperationsEndpoint_Output_400
+	dec-type main.multipleOperationsEndpoint&Output&400
 	rep-type hashcode
 variable return.errorDescription
 	var-kind field errorDescription

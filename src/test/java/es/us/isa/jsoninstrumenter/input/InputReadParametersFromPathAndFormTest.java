@@ -44,13 +44,13 @@ public class InputReadParametersFromPathAndFormTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                DeclsClass declsClassInput = new DeclsClass(packageName, operationName + "_Input", operationName + "_Input", operation);
+                DeclsClass declsClassInput = new DeclsClass(packageName, operationName + HIERARCHY_SEPARATOR + "Input", operationName + HIERARCHY_SEPARATOR + "Input", operation);
 
                 System.out.println(declsClassInput);
 
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassInput.getPackageName());
-                assertEquals("Incorrect class name", operationName + "_Input", declsClassInput.getClassName());
+                assertEquals("Incorrect class name", operationName + HIERARCHY_SEPARATOR + "Input", declsClassInput.getClassName());
                 assertEquals("The size of the list of objects is not 1", 1, declsClassInput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassInput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassInput.getDeclsExits().size());
@@ -58,14 +58,14 @@ public class InputReadParametersFromPathAndFormTest {
                 // OBJECT
                 DeclsObject declsObject = declsClassInput.getDeclsObjects().get(0);
                 assertEquals("Incorrect package name", packageName, declsObject.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Input", declsObject.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Input", declsObject.getObjectName());
 
                 // VARIABLES
                 // Father
                 DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name_Input", declsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());
@@ -122,13 +122,13 @@ public class InputReadParametersFromPathAndFormTest {
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
-                DeclsClass declsClassInput = new DeclsClass(packageName, operationName + "_Input", operationName + "_Input", operation);
+                DeclsClass declsClassInput = new DeclsClass(packageName, operationName + HIERARCHY_SEPARATOR + "Input", operationName + HIERARCHY_SEPARATOR + "Input", operation);
 
                 System.out.println(declsClassInput);
 
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassInput.getPackageName());
-                assertEquals("Incorrect class name", operationName + "_Input", declsClassInput.getClassName());
+                assertEquals("Incorrect class name", operationName + HIERARCHY_SEPARATOR + "Input", declsClassInput.getClassName());
                 assertEquals("The size of the list of objects is not 1", 1, declsClassInput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassInput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassInput.getDeclsExits().size());
@@ -136,14 +136,14 @@ public class InputReadParametersFromPathAndFormTest {
                 // OBJECT
                 DeclsObject declsObject = declsClassInput.getDeclsObjects().get(0);
                 assertEquals("Incorrect package name", packageName, declsObject.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Input", declsObject.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Input", declsObject.getObjectName());
 
                 // VARIABLES
                 // Father
                 DeclsVariable declsFatherVariable = declsObject.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".check_Input", declsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", packageName + ".check" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());

@@ -52,7 +52,7 @@ public class SimpleDtraceFileTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 // Extracting the input parameters
                 DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
@@ -83,7 +83,7 @@ public class SimpleDtraceFileTest {
 
                     // Checks in ENTER
                     String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
-                    assertEquals("Incorrect enter name", "main.airport.findAirports_200(main.findAirports_Input):::ENTER", enterDtraceLines[0]);
+                    assertEquals("Incorrect enter name", "main.airport.findAirports" + HIERARCHY_SEPARATOR + "200(main.findAirports" + HIERARCHY_SEPARATOR + "Input):::ENTER", enterDtraceLines[0]);
                     assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
                     assertTrue(enterDtraceLines[2].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
@@ -110,7 +110,7 @@ public class SimpleDtraceFileTest {
                     String[] exitDtraceLines = declsExit.generateDtrace(testCase, declsEnter).split("\n");
 
                     // Checks in ENTER
-                    assertEquals("Incorrect enter name", "main.airport.findAirports_200(main.findAirports_Input):::ENTER", exitDtraceLines[0]);
+                    assertEquals("Incorrect enter name", "main.airport.findAirports" + HIERARCHY_SEPARATOR + "200(main.findAirports" + HIERARCHY_SEPARATOR + "Input):::ENTER", exitDtraceLines[0]);
                     assertEquals("Incorrect wrapper name", "input", exitDtraceLines[1]);
                     assertTrue(exitDtraceLines[2].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[3]);
@@ -126,7 +126,7 @@ public class SimpleDtraceFileTest {
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[9]);
 
 
-                    assertEquals("Incorrect exit name", "main.airport.findAirports_200(main.findAirports_Input):::EXIT1", exitDtraceLines[11]);
+                    assertEquals("Incorrect exit name", "main.airport.findAirports" + HIERARCHY_SEPARATOR + "200(main.findAirports" + HIERARCHY_SEPARATOR + "Input):::EXIT1", exitDtraceLines[11]);
                     assertEquals("Incorrect wrapper name", "input", exitDtraceLines[12]);
                     assertTrue(exitDtraceLines[13].matches("^\\d+$"));
                     assertEquals("Incorrect end of trace", "1", exitDtraceLines[14]);

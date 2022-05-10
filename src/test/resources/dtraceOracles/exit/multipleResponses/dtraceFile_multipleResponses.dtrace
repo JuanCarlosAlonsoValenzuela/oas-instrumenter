@@ -1,92 +1,92 @@
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::ENTER
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::ENTER
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200(main.multipleOperationsEndpoint_Input):::EXIT1
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::EXIT1
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1881547511
+1011682222
 1
 return.stringProperty
 "stringPropertyValue"
 1
 return.arrayOfObjectsProperty
-14768290
+669735081
 1
 return.arrayOfObjectsProperty[..]
-[1307484976 1307485007]
+[713048470 713048439]
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::ENTER
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::ENTER
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::EXIT2
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1881547511
+1011682222
 1
 return.property1
 "property1Value1"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::ENTER
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::ENTER
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_200_arrayOfObjectsProperty(main.multipleOperationsEndpoint_Input):::EXIT2
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::EXIT2
 input
-1863351108
+445974941
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1881547511
+1011682222
 1
 return.property1
 "property1Value2"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::ENTER
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::ENTER
 input
-1357792483
+316892222
 1
 input.inputParameter
 "WRONGVALUE"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint_400(main.multipleOperationsEndpoint_Input):::EXIT3
+main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::EXIT3
 input
-1357792483
+316892222
 1
 input.inputParameter
 "WRONGVALUE"
 1
 return
-1902885608
+1517240847
 1
 return.errorDescription
 "Unexpected error"

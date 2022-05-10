@@ -36,6 +36,9 @@ public class NestedArraysPrimitiveOutputTest {
 
         Paths paths = specification.getPaths();
 
+        boolean firstObject = false;
+        boolean secondObject = true;
+
         for(Map.Entry<String, PathItem> path: paths.entrySet()) {
             PathItem pathItem = path.getValue();
 
@@ -58,7 +61,7 @@ public class NestedArraysPrimitiveOutputTest {
 
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassOutput.getPackageName());
-                assertEquals("Incorrect class name", operationName + "_Output_200", declsClassOutput.getClassName());
+                assertEquals("Incorrect class name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsClassOutput.getClassName());
                 assertEquals("The size of the list of objects is not 3", 3, declsClassOutput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassOutput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassOutput.getDeclsExits().size());
@@ -67,14 +70,14 @@ public class NestedArraysPrimitiveOutputTest {
                 // OBJECT 1
                 DeclsObject declsObject1 = declsObjectList.get(0);
                 assertEquals("Incorrect package name", packageName, declsObject1.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200", declsObject1.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsObject1.getObjectName());
 
                 // VARIABLES
                 // Father
                 DeclsVariable declsFatherVariable1 = declsObject1.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200", declsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
@@ -103,16 +106,16 @@ public class NestedArraysPrimitiveOutputTest {
                 assertEquals("Unexpected number of son variables", 0, locations2.getEnclosedVariables().size());
 
                 // SECOND OBJECT
-                DeclsObject declsObject2 = declsObjectList.get(1);
+                DeclsObject declsObject2 = declsObjectList.get(2);
                 assertEquals("Incorrect package name", packageName, declsObject2.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200_locations.array.array", declsObject2.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations.array.array", declsObject2.getObjectName());
 
                 // VARIABLES
                 // Father
                 DeclsVariable declsFatherVariable2 = declsObject2.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations.array.array", declsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations.array.array", declsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());
@@ -142,14 +145,14 @@ public class NestedArraysPrimitiveOutputTest {
 
 
                 // THIRD OBJECT
-                DeclsObject declsObject3 = declsObjectList.get(2);
+                DeclsObject declsObject3 = declsObjectList.get(1);
                 assertEquals("Incorrect package name", packageName, declsObject3.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200_locations.array", declsObject3.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array", declsObject3.getObjectName());
 
                 DeclsVariable declsFatherVariable3 = declsObject3.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable3.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable3.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations.array", declsFatherVariable3.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array", declsFatherVariable3.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable3.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable3.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable3.isArray());

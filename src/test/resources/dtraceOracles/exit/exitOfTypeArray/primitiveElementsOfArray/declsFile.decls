@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Input:::CLASS
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Input:::CLASS
 ppt-type class
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Input:::OBJECT
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
+	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Input
 	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
@@ -17,14 +17,14 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200:::CLASS
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200:::CLASS
 ppt-type class
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array:::OBJECT
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200.array:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array
+	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200.array
 	rep-type hashcode
 variable this.array
 	var-kind field array
@@ -42,11 +42,11 @@ variable this.array[..]
 ppt main.exitOfTypeArrayPrimitiveElementsEndpoint:::CLASS
 ppt-type class
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint_200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint_Input):::ENTER
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint&200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
+	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -54,11 +54,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint_200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint_Input):::EXIT1
+ppt main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint&200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Input
+	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -67,7 +67,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint_Output_200.array
+	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200.array
 	rep-type hashcode
 variable return.array
 	var-kind field array

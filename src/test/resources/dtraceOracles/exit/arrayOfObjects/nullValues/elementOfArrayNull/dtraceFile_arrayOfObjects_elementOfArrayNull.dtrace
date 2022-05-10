@@ -1,48 +1,48 @@
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-1666435201
+363758942
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::EXIT1
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::EXIT1
 input
-1666435201
+363758942
 1
 input.inputParameter
 "parameterValue"
 1
 return
-982026620
+246501235
 1
 return.stringProperty
 "stringProperty1"
 1
 return.arrayOfObjectsProperty
-842578745
+355994126
 1
 return.arrayOfObjectsProperty[..]
-[2030705173 null]
+[1849083483 null]
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-1666435201
+363758942
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::EXIT2
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::EXIT2
 input
-1666435201
+363758942
 1
 input.inputParameter
 "parameterValue"
 1
 return
-982026620
+246501235
 1
 return.property1
 "property1Array1"

@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.objectExitEndpoint_Input:::CLASS
+ppt main.objectExitEndpoint&Input:::CLASS
 ppt-type class
 
-ppt main.objectExitEndpoint_Input:::OBJECT
+ppt main.objectExitEndpoint&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.objectExitEndpoint_Input
+	dec-type main.objectExitEndpoint&Input
 	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
@@ -17,14 +17,14 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.objectExitEndpoint_Output_200:::CLASS
+ppt main.objectExitEndpoint&Output&200:::CLASS
 ppt-type class
 
-ppt main.objectExitEndpoint_Output_200:::OBJECT
+ppt main.objectExitEndpoint&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.objectExitEndpoint_Output_200
+	dec-type main.objectExitEndpoint&Output&200
 	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
@@ -34,7 +34,7 @@ variable this.stringProperty
 variable this.objectProperty
 	var-kind variable
 	enclosing-var this
-	dec-type main.objectExitEndpoint_Output_200_objectProperty
+	dec-type main.objectExitEndpoint&Output&200&objectProperty
 	rep-type hashcode
 variable this.objectProperty.arrayStringProperty
 	var-kind field arrayStringProperty
@@ -50,7 +50,7 @@ variable this.objectProperty.arrayStringProperty[..]
 variable this.objectProperty.subObjectProperty
 	var-kind variable
 	enclosing-var this.objectProperty
-	dec-type main.objectExitEndpoint_Output_200_subObjectProperty
+	dec-type main.objectExitEndpoint&Output&200&subObjectProperty
 	rep-type hashcode
 variable this.objectProperty.subObjectProperty.stringProperty
 	var-kind field stringProperty
@@ -73,11 +73,11 @@ variable this.objectProperty.subObjectProperty.arrayDoubleProperty[..]
 ppt main.objectExitEndpoint:::CLASS
 ppt-type class
 
-ppt main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::ENTER
+ppt main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.objectExitEndpoint_Input
+	dec-type main.objectExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -85,11 +85,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::EXIT1
+ppt main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.objectExitEndpoint_Input
+	dec-type main.objectExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -98,7 +98,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.objectExitEndpoint_Output_200
+	dec-type main.objectExitEndpoint&Output&200
 	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
@@ -108,7 +108,7 @@ variable return.stringProperty
 variable return.objectProperty
 	var-kind return
 	enclosing-var return
-	dec-type main.objectExitEndpoint_Output_200_objectProperty
+	dec-type main.objectExitEndpoint&Output&200&objectProperty
 	rep-type hashcode
 variable return.objectProperty.arrayStringProperty
 	var-kind field arrayStringProperty
@@ -124,7 +124,7 @@ variable return.objectProperty.arrayStringProperty[..]
 variable return.objectProperty.subObjectProperty
 	var-kind return
 	enclosing-var return.objectProperty
-	dec-type main.objectExitEndpoint_Output_200_subObjectProperty
+	dec-type main.objectExitEndpoint&Output&200&subObjectProperty
 	rep-type hashcode
 variable return.objectProperty.subObjectProperty.stringProperty
 	var-kind field stringProperty

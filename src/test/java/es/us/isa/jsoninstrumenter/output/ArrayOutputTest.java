@@ -57,7 +57,7 @@ public class ArrayOutputTest {
 
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassOutput.getPackageName());
-                assertEquals("Incorrect class name", operationName + "_Output_200", declsClassOutput.getClassName());
+                assertEquals("Incorrect class name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsClassOutput.getClassName());
                 assertEquals("The size of the list of objects is not 1", 2, declsClassOutput.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 0", 0, declsClassOutput.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 0", 0, declsClassOutput.getDeclsExits().size());
@@ -65,14 +65,14 @@ public class ArrayOutputTest {
                 // OBJECT 1
                 DeclsObject declsObject1 = declsClassOutput.getDeclsObjects().get(0);
                 assertEquals("Incorrect package name", packageName, declsObject1.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200.array", declsObject1.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array", declsObject1.getObjectName());
 
                 // VARIABLES
                 // Father
                 DeclsVariable declsFatherVariable1 = declsObject1.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name_Output_200.array", declsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array", declsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
@@ -101,14 +101,14 @@ public class ArrayOutputTest {
                 // OBJECT 2
                 DeclsObject declsObject2 = declsClassOutput.getDeclsObjects().get(1);
                 assertEquals("Incorrect package name", packageName, declsObject2.getPackageName());
-                assertEquals("Incorrect object name", operationName + "_Output_200", declsObject2.getObjectName());
+                assertEquals("Incorrect object name", operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsObject2.getObjectName());
 
                 // VARIABLES
                 // Only the father
                 DeclsVariable declsFatherVariable2 = declsObject2.getDeclsVariables();
                 assertEquals("Incorrect variable name", "this", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name_Output_200", declsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", declsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());

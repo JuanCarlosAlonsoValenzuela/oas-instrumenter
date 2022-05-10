@@ -91,7 +91,7 @@ public class DeclsExit {
     }
 
     public String getExitName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode +  this.nameSuffix + "(" +
+        return this.packageName + "." + this.endpoint + "." + this.operationName + HIERARCHY_SEPARATOR + this.statusCode +  this.nameSuffix + "(" +
                 this.packageName + "." + this.variableNameInput + ")";
     }
 
@@ -240,7 +240,7 @@ public class DeclsExit {
         for(JSONObject json: jsonObjectList) {
 
             // Name suffix
-            List<String> elementRoute = Arrays.stream(this.nameSuffix.split("_"))       // TODO: Replace "_" with a different character
+            List<String> elementRoute = Arrays.stream(this.nameSuffix.split(HIERARCHY_SEPARATOR))
                     .filter(e -> e.trim().length() > 0)
                     .collect(Collectors.toList());
 
@@ -303,7 +303,8 @@ public class DeclsExit {
         // Generate the dtrace exit for the array
         // Group 1
         res = res + "return" + "\n";
-        String v = "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return_output" + "\"";
+        String v = "\"" + testCase.getTestCaseId() + this.operationName + "returnoutput" + "\"";
+        v = v.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
         res = res + Math.abs(v.hashCode()) + "\n";
         res = res + "1" + "\n";
 
@@ -315,7 +316,8 @@ public class DeclsExit {
         if(value.equals("nonsensical")) {
             res = res + "null" + "\n";
         } else {
-            String v1 = "\"" + testCase.getTestCaseId() + "_" + this.operationName + "_return" + this.nameSuffix + "_output" + "\"";
+            String v1 = "\"" + testCase.getTestCaseId() + this.operationName + "return" + this.nameSuffix + "output" + "\"";
+            v1 = v1.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
             res = res + Math.abs(v1.hashCode()) + "\n";
         }
         res = res + "1" + "\n";
@@ -377,7 +379,8 @@ public class DeclsExit {
                 String hashcode = "";
                 for(int i = 1; i <= elements.size(); i++) {
                     if(elements.get(i-1) != null) {
-                        String v = "\"" + testCase.getTestCaseId() + "_" + variableName.replace("[..]", "") + "_output_" + i + "\"";
+                        String v = "\"" + testCase.getTestCaseId() + HIERARCHY_SEPARATOR + variableName.replace("[..]", "") + HIERARCHY_SEPARATOR + "output" + HIERARCHY_SEPARATOR + i + "\"";
+                        v = v.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
                         hashcode = hashcode + Math.abs(v.hashCode()) + " ";
                     } else {
                         hashcode = hashcode + "null ";

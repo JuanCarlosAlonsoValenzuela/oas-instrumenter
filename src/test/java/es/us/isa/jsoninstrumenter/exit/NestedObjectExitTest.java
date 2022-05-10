@@ -48,7 +48,7 @@ public class NestedObjectExitTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
@@ -70,7 +70,7 @@ public class NestedObjectExitTest {
                 // OBJECT (ONLY EXIT)
                 // EXIT 1
                 DeclsExit declsExit1 = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName1 = packageName + "." + operationEndpoint + "." + operationName + "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String exitName1 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName1, declsExit1.getExitName());
 
@@ -80,7 +80,7 @@ public class NestedObjectExitTest {
                 DeclsVariable enterDeclsFatherVariable1 = declsExit1.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".findByAddress"+HIERARCHY_SEPARATOR+"Input", enterDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
@@ -93,7 +93,7 @@ public class NestedObjectExitTest {
 
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".findByAddress" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", exitDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
@@ -117,7 +117,7 @@ public class NestedObjectExitTest {
                 DeclsVariable locationObject = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.location", locationObject.getVariableName());
                 assertEquals("Incorrect var-kind", "return", locationObject.getVarKind());
-                assertEquals("Incorrect decType", "main.findByAddress_Output_200_location", locationObject.getDecType());
+                assertEquals("Incorrect decType", "main.findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"location", locationObject.getDecType());
                 assertEquals("Incorrect repType", "hashcode", locationObject.getRepType());
                 assertEquals("Incorrect enclosing var", "return", locationObject.getEnclosingVar());
                 assertFalse("This variable should not be an array", locationObject.isArray());
@@ -176,7 +176,7 @@ public class NestedObjectExitTest {
 
                 // EXIT 2
                 DeclsExit declsExit2 = declsClassEnterAndExit.getDeclsExits().get(1);
-                String exitName2 = packageName + "." + operationEndpoint + "." + operationName + "_200_location_ids(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String exitName2 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200"+HIERARCHY_SEPARATOR+"location"+HIERARCHY_SEPARATOR+"ids(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName2, declsExit2.getExitName());
 
@@ -186,7 +186,7 @@ public class NestedObjectExitTest {
                 DeclsVariable enterDeclsFatherVariable2 = declsExit2.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Input", enterDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".findByAddress"+HIERARCHY_SEPARATOR+"Input", enterDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable2.isArray());
@@ -199,7 +199,7 @@ public class NestedObjectExitTest {
 
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress_Output_200_location_ids", exitDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"location"+HIERARCHY_SEPARATOR+"ids", exitDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());

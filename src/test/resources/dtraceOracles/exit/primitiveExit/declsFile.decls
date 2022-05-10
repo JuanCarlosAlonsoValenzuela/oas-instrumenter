@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.primitiveExitEndpoint_Input:::CLASS
+ppt main.primitiveExitEndpoint&Input:::CLASS
 ppt-type class
 
-ppt main.primitiveExitEndpoint_Input:::OBJECT
+ppt main.primitiveExitEndpoint&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.primitiveExitEndpoint_Input
+	dec-type main.primitiveExitEndpoint&Input
 	rep-type hashcode
 variable this.inputParameter
 	var-kind field inputParameter
@@ -17,14 +17,14 @@ variable this.inputParameter
 	rep-type java.lang.String
 
 
-ppt main.primitiveExitEndpoint_Output_200:::CLASS
+ppt main.primitiveExitEndpoint&Output&200:::CLASS
 ppt-type class
 
-ppt main.primitiveExitEndpoint_Output_200:::OBJECT
+ppt main.primitiveExitEndpoint&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.primitiveExitEndpoint_Output_200
+	dec-type main.primitiveExitEndpoint&Output&200
 	rep-type hashcode
 variable this.stringProperty
 	var-kind field stringProperty
@@ -51,11 +51,11 @@ variable this.booleanProperty
 ppt main.primitiveExitEndpoint:::CLASS
 ppt-type class
 
-ppt main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::ENTER
+ppt main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.primitiveExitEndpoint_Input
+	dec-type main.primitiveExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -63,11 +63,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::EXIT1
+ppt main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.primitiveExitEndpoint_Input
+	dec-type main.primitiveExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -76,7 +76,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.primitiveExitEndpoint_Output_200
+	dec-type main.primitiveExitEndpoint&Output&200
 	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty

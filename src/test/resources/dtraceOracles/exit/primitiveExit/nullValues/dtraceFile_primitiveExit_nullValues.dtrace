@@ -1,20 +1,20 @@
-main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::ENTER
+main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::ENTER
 input
-861357924
+281654653
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.primitiveExitEndpoint.primitiveExitEndpoint_200(main.primitiveExitEndpoint_Input):::EXIT1
+main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::EXIT1
 input
-861357924
+281654653
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1570644265
+2013675406
 1
 return.stringProperty
 null

@@ -1,48 +1,48 @@
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::EXIT1
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::EXIT1
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 return
-471492443
+259057390
 1
 return.stringProperty
 "stringProperty1"
 1
 return.arrayOfObjectsProperty
-80104838
+26228365
 1
 return.arrayOfObjectsProperty[..]
-[328601836 328601805]
+[813079814 813079845]
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::EXIT2
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::EXIT2
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 return
-471492443
+259057390
 1
 return.property1
 "property1Array1"
@@ -51,23 +51,23 @@ return.property2
 "property2Array1"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200_arrayOfObjectsProperty(main.arrayOfObjectsEndpoint_Input):::EXIT2
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::EXIT2
 input
-1160876576
+234676223
 1
 input.inputParameter
 "parameterValue"
 1
 return
-471492443
+259057390
 1
 return.property1
 "property1Array2"

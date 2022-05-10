@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.operation1_Input:::CLASS
+ppt main.operation1&Input:::CLASS
 ppt-type class
 
-ppt main.operation1_Input:::OBJECT
+ppt main.operation1&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.operation1_Input
+	dec-type main.operation1&Input
 	rep-type hashcode
 variable this.parameterOperation1
 	var-kind field parameterOperation1
@@ -17,14 +17,14 @@ variable this.parameterOperation1
 	rep-type java.lang.String
 
 
-ppt main.operation1_Output_200:::CLASS
+ppt main.operation1&Output&200:::CLASS
 ppt-type class
 
-ppt main.operation1_Output_200:::OBJECT
+ppt main.operation1&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.operation1_Output_200
+	dec-type main.operation1&Output&200
 	rep-type hashcode
 variable this.stringPropertyOperation1
 	var-kind field stringPropertyOperation1
@@ -43,11 +43,11 @@ variable this.arrayOfObjectsPropertyOperation1[..]
 	dec-type main.arrayOfObjectsPropertyOperation1[]
 	rep-type hashcode[]
 
-ppt main.operation1_Output_200_arrayOfObjectsPropertyOperation1:::OBJECT
+ppt main.operation1&Output&200&arrayOfObjectsPropertyOperation1:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.operation1_Output_200_arrayOfObjectsPropertyOperation1
+	dec-type main.operation1&Output&200&arrayOfObjectsPropertyOperation1
 	rep-type hashcode
 variable this.property1Operation1
 	var-kind field property1Operation1
@@ -59,11 +59,11 @@ variable this.property1Operation1
 ppt main.operation1:::CLASS
 ppt-type class
 
-ppt main.operation1.operation1_200(main.operation1_Input):::ENTER
+ppt main.operation1.operation1&200(main.operation1&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.operation1_Input
+	dec-type main.operation1&Input
 	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
@@ -71,11 +71,11 @@ variable input.parameterOperation1
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.operation1.operation1_200_arrayOfObjectsPropertyOperation1(main.operation1_Input):::ENTER
+ppt main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.operation1_Input
+	dec-type main.operation1&Input
 	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
@@ -83,11 +83,11 @@ variable input.parameterOperation1
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.operation1.operation1_200(main.operation1_Input):::EXIT1
+ppt main.operation1.operation1&200(main.operation1&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.operation1_Input
+	dec-type main.operation1&Input
 	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
@@ -96,7 +96,7 @@ variable input.parameterOperation1
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.operation1_Output_200
+	dec-type main.operation1&Output&200
 	rep-type hashcode
 variable return.stringPropertyOperation1
 	var-kind field stringPropertyOperation1
@@ -115,11 +115,11 @@ variable return.arrayOfObjectsPropertyOperation1[..]
 	dec-type main.arrayOfObjectsPropertyOperation1[]
 	rep-type hashcode[]
 
-ppt main.operation1.operation1_200_arrayOfObjectsPropertyOperation1(main.operation1_Input):::EXIT2
+ppt main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.operation1_Input
+	dec-type main.operation1&Input
 	rep-type hashcode
 variable input.parameterOperation1
 	var-kind field parameterOperation1
@@ -128,7 +128,7 @@ variable input.parameterOperation1
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.operation1_Output_200_arrayOfObjectsPropertyOperation1
+	dec-type main.operation1&Output&200&arrayOfObjectsPropertyOperation1
 	rep-type hashcode
 variable return.property1Operation1
 	var-kind field property1Operation1
@@ -137,14 +137,14 @@ variable return.property1Operation1
 	rep-type java.lang.String
 
 
-ppt main.operation2_Input:::CLASS
+ppt main.operation2&Input:::CLASS
 ppt-type class
 
-ppt main.operation2_Input:::OBJECT
+ppt main.operation2&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.operation2_Input
+	dec-type main.operation2&Input
 	rep-type hashcode
 variable this.parameterOperation2
 	var-kind field parameterOperation2
@@ -153,14 +153,14 @@ variable this.parameterOperation2
 	rep-type java.lang.String
 
 
-ppt main.operation2_Output_200:::CLASS
+ppt main.operation2&Output&200:::CLASS
 ppt-type class
 
-ppt main.operation2_Output_200:::OBJECT
+ppt main.operation2&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.operation2_Output_200
+	dec-type main.operation2&Output&200
 	rep-type hashcode
 variable this.stringPropertyOperation2
 	var-kind field stringPropertyOperation2
@@ -172,11 +172,11 @@ variable this.stringPropertyOperation2
 ppt main.operation2:::CLASS
 ppt-type class
 
-ppt main.operation2.operation2_200(main.operation2_Input):::ENTER
+ppt main.operation2.operation2&200(main.operation2&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.operation2_Input
+	dec-type main.operation2&Input
 	rep-type hashcode
 variable input.parameterOperation2
 	var-kind field parameterOperation2
@@ -184,11 +184,11 @@ variable input.parameterOperation2
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.operation2.operation2_200(main.operation2_Input):::EXIT3
+ppt main.operation2.operation2&200(main.operation2&Input):::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.operation2_Input
+	dec-type main.operation2&Input
 	rep-type hashcode
 variable input.parameterOperation2
 	var-kind field parameterOperation2
@@ -197,7 +197,7 @@ variable input.parameterOperation2
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.operation2_Output_200
+	dec-type main.operation2&Output&200
 	rep-type hashcode
 variable return.stringPropertyOperation2
 	var-kind field stringPropertyOperation2

@@ -24,11 +24,12 @@ import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFr
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/---/resources/evaluation/AmadeusHotel/swagger.yaml";
-    private static String testCasesFilePath = "src/---/resources/evaluation/AmadeusHotel/1000/AmadeusHotel_1000.csv";
-    private static boolean generateDtrace = true;
+    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_nestedArraysObject.yaml";
+    private static String testCasesFilePath = "src/---/resources/evaluation/YouTube/50/YouTubeGetVideos_50.csv";
+    private static boolean generateDtrace = false;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
+    public static String HIERARCHY_SEPARATOR = "&";
 
 
     // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
@@ -77,7 +78,7 @@ public class GenerateDeclsFile {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
                 addNewDeclsClass(declsClassInput);
@@ -163,7 +164,7 @@ public class GenerateDeclsFile {
         // TODO: Consider throwing an error message
         if (operation.getOperationId() == null) {
             String httpMethod = operationEntry.getKey().toString();
-            operationName = operationEndpoint + "_" + httpMethod.toLowerCase();
+            operationName = operationEndpoint + HIERARCHY_SEPARATOR + httpMethod.toLowerCase();
         } else {
             operationName = operation.getOperationId();
         }

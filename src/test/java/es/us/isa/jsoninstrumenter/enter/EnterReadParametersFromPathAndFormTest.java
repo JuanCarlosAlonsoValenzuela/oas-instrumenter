@@ -46,7 +46,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
@@ -68,7 +68,7 @@ public class EnterReadParametersFromPathAndFormTest {
 
                 // OBJECT 1 (ONLY ENTER)
                 DeclsEnter declsEnter1 = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName1 = packageName + "." + operationEndpoint + "." + operationName +  "_200.array(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String enterName1 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200.array(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect enter name", enterName1, declsEnter1.getEnterName());
 
@@ -78,7 +78,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 DeclsVariable declsFatherVariable1 = declsEnter1.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name_Input", declsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());
@@ -107,7 +107,7 @@ public class EnterReadParametersFromPathAndFormTest {
 
                 // OBJECT 2 (ONLY ENTER)
                 DeclsEnter declsEnter2 = declsClassEnterAndExit.getDeclsEnters().get(1);
-                String enterName2 = packageName + "." + operationEndpoint + "." + operationName +  "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String enterName2 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect enter name", enterName2, declsEnter2.getEnterName());
 
@@ -117,7 +117,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 DeclsVariable declsFatherVariable2 = declsEnter2.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name_Input", declsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable2.isArray());
@@ -177,7 +177,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
@@ -198,7 +198,7 @@ public class EnterReadParametersFromPathAndFormTest {
 
                 // ENTER 1
                 DeclsEnter declsEnter1 = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName1 = packageName + "." + operationEndpoint + "." + operationName +  "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String enterName1 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect enter name", enterName1, declsEnter1.getEnterName());
 
@@ -208,7 +208,7 @@ public class EnterReadParametersFromPathAndFormTest {
                 DeclsVariable declsFatherVariable1 = declsEnter1.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".check_Input", declsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".check" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable1.isArray());

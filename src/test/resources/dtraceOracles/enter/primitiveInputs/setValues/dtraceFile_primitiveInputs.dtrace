@@ -1,6 +1,6 @@
-main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::ENTER
+main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::ENTER
 input
-1033469158
+1983026885
 1
 input.doubleInQuery
 1.0
@@ -15,9 +15,9 @@ input.booleanInForm
 true
 1
 
-main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::EXIT1
+main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::EXIT1
 input
-1033469158
+1983026885
 1
 input.doubleInQuery
 1.0
@@ -32,7 +32,7 @@ input.booleanInForm
 true
 1
 return
-534184405
+1091830836
 1
 return.property1
 "sampleResponse"

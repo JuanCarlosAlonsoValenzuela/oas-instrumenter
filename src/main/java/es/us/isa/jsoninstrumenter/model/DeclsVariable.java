@@ -248,7 +248,7 @@ public class DeclsVariable {
             if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                 // Generate the father variable
                 DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
-                        packageName + "." + variableNameOutput + "_" + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
+                        packageName + "." + variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
 
                 // Recursive call for son variables
                 List<DeclsVariable> enclosedVariables =
@@ -543,7 +543,8 @@ public class DeclsVariable {
             }
 
         } else {    // If type = object or identifier of array
-            value = "\"" + testCase.getTestCaseId() + "_" + variableName +  "_input" + "\"";
+            value = "\"" + testCase.getTestCaseId() + variableName +  "input" + "\"";
+            value = value.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
             value = String.valueOf(Math.abs(value.hashCode()));
 
             List<String> hierarchy = Arrays.asList(variableName.split("\\."));
@@ -661,7 +662,8 @@ public class DeclsVariable {
 
         } else {    // If type = object or identifier of array (both array of objects and array of primitives)
             // Use a hashcode as value
-            value = "\"" + testCase.getTestCaseId() + "_" + this.variableName + "_output" + "\"";
+            value = "\"" + testCase.getTestCaseId() + this.variableName + "output" + "\"";
+            value = value.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
             value = String.valueOf(Math.abs(value.hashCode()));
 
             // If the element (either array or object) is not present in the response JSON, we set its value to null

@@ -11,8 +11,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Stream;
 
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.deleteAllDeclsClasses;
-import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.numberOfExits;
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
 import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 import static es.us.isa.jsoninstrumenter.util.FileManager.readFileAsString;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -292,7 +291,7 @@ public class DtraceE2ETests {
         for(int i = 0; i < oracleDtrace.length ; i++) {
             System.out.println(oracleDtrace[i]);
             int lineNumber = i + 1;
-            Assertions.assertEquals(oracleDtrace[i].trim(), generatedDtrace[i], "The content of line " + lineNumber + " content is different from the expected");
+            Assertions.assertEquals(oracleDtrace[i].trim().replace("&", HIERARCHY_SEPARATOR), generatedDtrace[i], "The content of line " + lineNumber + " content is different from the expected");
         }
 
         // Remove the generated file

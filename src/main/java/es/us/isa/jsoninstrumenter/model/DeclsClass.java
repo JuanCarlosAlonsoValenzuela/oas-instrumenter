@@ -72,7 +72,7 @@ public class DeclsClass {
 
         ApiResponses apiResponses = operation.getResponses();
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-            String objectName = operationName + "_Output_" + apiResponse.getKey();
+            String objectName = operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + apiResponse.getKey();
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
 
@@ -233,8 +233,7 @@ public class DeclsClass {
                 // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
                 // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
                 // Recursive call with object.getParameter
-                // TODO: Change char "_" for another char (conflicts with snake_case)
-                res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, schema));
+                res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, schema));
 
             } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // If array
                 ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
@@ -244,7 +243,7 @@ public class DeclsClass {
                 // If there is an allOf, parameterType is null, but the schema contains all the properties
                 while(itemsDatatype != null && itemsDatatype.equals(ARRAY_TYPE_NAME)) {
                     arraySchema = (ArraySchema) arraySchema.getItems();
-                    res.put(nameSuffix + "_" + parameterName + nestingSuffix, arraySchema);
+                    res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName + nestingSuffix, arraySchema);
                     itemsDatatype = arraySchema.getItems().getType();
                     nestingSuffix = nestingSuffix + ".array";
                 }
@@ -252,10 +251,10 @@ public class DeclsClass {
                 // If there is an allOf, parameterType is null, but the schema contains all the properties
                 if(itemsDatatype == null || itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
                     Schema subSchema = arraySchema.getItems();
-                    // TODO: Change char "_" for another char (conflicts with snake_case)
-                    res.put(nameSuffix + "_" + parameterName, subSchema);
-                    // TODO: Change char "_" for another char (conflicts with snake_case)
-                    res.putAll(getAllNestedSchemas(nameSuffix + "_" + parameterName, subSchema));
+
+                    res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema);
+
+                    res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema));
                 }
 
             }
@@ -273,7 +272,7 @@ public class DeclsClass {
 
         // Create a new class for each of the possible response formats
         for(Entry<String, ApiResponse> apiResponse: apiResponses.entrySet()) {
-            String objectName = operationName + "_Output_" + apiResponse.getKey();      // operationName_Output_statusCode
+            String objectName = operationName + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + apiResponse.getKey();      // operationName_Output_statusCode
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
                 if(mediaType != null) {

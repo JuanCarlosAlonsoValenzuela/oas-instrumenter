@@ -1,20 +1,20 @@
-main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::ENTER
+main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::ENTER
 input
-149759326
+23489215
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.objectExitEndpoint.objectExitEndpoint_200(main.objectExitEndpoint_Input):::EXIT1
+main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::EXIT1
 input
-149759326
+23489215
 1
 input.inputParameter
 "parameterValue"
 1
 return
-549575911
+1270174640
 1
 return.stringProperty
 "stringPropertyValue1"

@@ -1,45 +1,45 @@
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::ENTER
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::ENTER
 input
-914940313
+833223098
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::EXIT1
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::EXIT1
 input
-914940313
+833223098
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1454089932
+1646616494
 1
 return.array
-2019841225
+1777488733
 1
 return.array[..]
-[1120160081 null]
+[488632207 null]
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
 input
-914940313
+833223098
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::EXIT2
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
 input
-914940313
+833223098
 1
 input.inputParameter
 "parameterValue"
 1
 return
-349944980
+504993653
 1
 return.property1
 "firstValueOfProperty1"

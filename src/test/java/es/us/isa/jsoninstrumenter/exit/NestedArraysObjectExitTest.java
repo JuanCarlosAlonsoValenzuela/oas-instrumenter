@@ -49,7 +49,7 @@ public class NestedArraysObjectExitTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
@@ -74,7 +74,7 @@ public class NestedArraysObjectExitTest {
                 // FATHER
                 DeclsExit fatherDeclsExit = declsExits.get(0);
 
-                String exitName = packageName + "." + operationEndpoint + "." + operationName + "_200" + "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200" + "(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
                 assertEquals("Incorrect exit name", exitName, fatherDeclsExit.getExitName());
 
 
@@ -84,7 +84,7 @@ public class NestedArraysObjectExitTest {
                 DeclsVariable enterDeclsFatherVariable1 = fatherDeclsExit.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
@@ -96,7 +96,7 @@ public class NestedArraysObjectExitTest {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", exitDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
@@ -123,65 +123,116 @@ public class NestedArraysObjectExitTest {
                 assertTrue("This variable should be an array", location2.isArray());
                 assertEquals("Unexpected number of son variables", 0, location2.getEnclosedVariables().size());
 
-                String repeatedArray = ".array.array";
-                for(int i = 1; i < 3; i++) {
-                    exitName = packageName + "." + operationEndpoint + "." + operationName + "_200_locations" +
-                            repeatedArray + "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String repeatedArray = ".array";
 
-                    DeclsExit declsExit = declsExits.get(i);
-                    assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
+                exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" +
+                        repeatedArray + "(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
-                    // VARIABLES
-                    // ENTER
-                    // Only the father
-                    DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
-                    assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
-                    assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
-                    assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Input", enterDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
-                    assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
-                    assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
-                    assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
+                DeclsExit declsExit = declsExits.get(1);
+                assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
 
-                    // EXIT
-                    DeclsVariable exitDeclsFatherVariable = declsExit.getExitDeclsVariables();
+                // VARIABLES
+                // ENTER
+                // Only the father
+                DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
+                assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
+                assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
+                assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
 
-                    // Father
-                    assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
-                    assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
-                    assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations" + repeatedArray, exitDeclsFatherVariable.getDecType());
-                    assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
-                    assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
-                    assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
-                    assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
+                // EXIT
+                DeclsVariable exitDeclsFatherVariable = declsExit.getExitDeclsVariables();
 
-                    // Sons (array)
-                    List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
+                // Father
+                assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" + repeatedArray, exitDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
+                assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
+                assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
 
-                    DeclsVariable array1 = declsSonVariables.get(0);
-                    assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
-                    assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
-                    assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
-                    assertEquals("Incorrect repType", "hashcode", array1.getRepType());
-                    assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
-                    assertFalse("This variable should not be an array", array1.isArray());
-                    assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
+                // Sons (array)
+                List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
 
-                    DeclsVariable array2 = declsSonVariables.get(1);
-                    assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
-                    assertEquals("Incorrect var-kind", "array", array2.getVarKind());
-                    assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
-                    assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
-                    assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
-                    assertTrue("This variable should be an array", array2.isArray());
-                    assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
+                DeclsVariable array1 = declsSonVariables.get(0);
+                assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
+                assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
+                assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
+                assertFalse("This variable should not be an array", array1.isArray());
+                assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
 
-                    repeatedArray = ".array";
-                }
+                DeclsVariable array2 = declsSonVariables.get(1);
+                assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
+                assertEquals("Incorrect var-kind", "array", array2.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
+                assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
+                assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
+                assertTrue("This variable should be an array", array2.isArray());
+                assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
 
-                DeclsExit finalDeclsExit = declsExits.get(3);
-                exitName = packageName + "." + operationEndpoint + "." + operationName + "_200_locations" +
-                        "(" + packageName + "." + operationName + "_" + "Input" + ")";
+                repeatedArray = ".array.array";
+
+                exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" +
+                        repeatedArray + "(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+
+                declsExit = declsExits.get(3);
+                assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
+
+                // VARIABLES
+                // ENTER
+                // Only the father
+                enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
+                assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
+                assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
+                assertEquals("Unexpected number of son variables", 2, enterDeclsFatherVariable.getEnclosedVariables().size());
+
+                // EXIT
+                exitDeclsFatherVariable = declsExit.getExitDeclsVariables();
+
+                // Father
+                assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" + repeatedArray, exitDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
+                assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
+                assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable.getEnclosedVariables().size());
+
+                // Sons (array)
+                declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
+
+                array1 = declsSonVariables.get(0);
+                assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
+                assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
+                assertEquals("Incorrect repType", "hashcode", array1.getRepType());
+                assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
+                assertFalse("This variable should not be an array", array1.isArray());
+                assertEquals("Unexpected number of son variables", 0, array1.getEnclosedVariables().size());
+
+                array2 = declsSonVariables.get(1);
+                assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
+                assertEquals("Incorrect var-kind", "array", array2.getVarKind());
+                assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
+                assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
+                assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
+                assertTrue("This variable should be an array", array2.isArray());
+                assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
+
+
+                DeclsExit finalDeclsExit = declsExits.get(2);
+                exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" +
+                        "(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
                 assertEquals("Incorrect exit name", exitName, finalDeclsExit.getExitName());
 
                 // VARIABLES
@@ -190,7 +241,7 @@ public class NestedArraysObjectExitTest {
                 DeclsVariable enterDeclsFatherVariable2 = finalDeclsExit.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Input", enterDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable2.isArray());
@@ -202,14 +253,14 @@ public class NestedArraysObjectExitTest {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId_Output_200_locations", exitDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", packageName + ".sampleEndpointId" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations", exitDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());
                 assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable2.getEnclosedVariables().size());
 
                 // Sons (Only the first one)
-                List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable2.getEnclosedVariables();
+                declsSonVariables = exitDeclsFatherVariable2.getEnclosedVariables();
                 DeclsVariable locationId = declsSonVariables.get(0);
                 assertEquals("Incorrect variable name", "return.locationId", locationId.getVariableName());
                 assertEquals("Incorrect var-kind", "field locationId", locationId.getVarKind());

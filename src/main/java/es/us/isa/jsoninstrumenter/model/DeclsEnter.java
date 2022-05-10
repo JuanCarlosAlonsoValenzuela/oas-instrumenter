@@ -3,6 +3,7 @@ package es.us.isa.jsoninstrumenter.model;
 import io.swagger.v3.oas.models.Operation;
 import org.json.simple.JSONArray;
 
+import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.STRING_TYPE_NAME;
 import static es.us.isa.jsoninstrumenter.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 import static es.us.isa.jsoninstrumenter.model.DeclsVariable.getListOfDeclsVariables;
@@ -34,7 +35,7 @@ public class DeclsEnter {
     }
 
     public String getEnterName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + "_" + this.statusCode + this.nameSuffix + "(" +
+        return this.packageName + "." + this.endpoint + "." + this.operationName + HIERARCHY_SEPARATOR + this.statusCode + this.nameSuffix + "(" +
                 this.packageName + "." + this.variableNameInput + ")";
     }
 

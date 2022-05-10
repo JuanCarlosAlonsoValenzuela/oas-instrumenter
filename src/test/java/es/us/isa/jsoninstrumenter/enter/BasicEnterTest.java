@@ -47,7 +47,7 @@ public class BasicEnterTest {
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + "_Input";
+                String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);
@@ -69,7 +69,7 @@ public class BasicEnterTest {
 
                 // OBJECT (ONLY ENTER)
                 DeclsEnter declsEnter = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName = packageName + "." + operationEndpoint + "." + operationName +  "_200(" + packageName + "." + operationName + "_" + "Input" + ")";
+                String enterName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect enter name", enterName, declsEnter.getEnterName());
 
@@ -80,7 +80,7 @@ public class BasicEnterTest {
                 DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findAirports_Input", declsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", packageName + ".findAirports" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());

@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.primitiveInputsEndpoint_Input:::CLASS
+ppt main.primitiveInputsEndpoint&Input:::CLASS
 ppt-type class
 
-ppt main.primitiveInputsEndpoint_Input:::OBJECT
+ppt main.primitiveInputsEndpoint&Input:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.primitiveInputsEndpoint_Input
+	dec-type main.primitiveInputsEndpoint&Input
 	rep-type hashcode
 variable this.doubleInQuery
 	var-kind field doubleInQuery
@@ -32,14 +32,14 @@ variable this.booleanInForm
 	rep-type boolean
 
 
-ppt main.primitiveInputsEndpoint_Output_200:::CLASS
+ppt main.primitiveInputsEndpoint&Output&200:::CLASS
 ppt-type class
 
-ppt main.primitiveInputsEndpoint_Output_200:::OBJECT
+ppt main.primitiveInputsEndpoint&Output&200:::OBJECT
 ppt-type object
 variable this
 	var-kind variable
-	dec-type main.primitiveInputsEndpoint_Output_200
+	dec-type main.primitiveInputsEndpoint&Output&200
 	rep-type hashcode
 variable this.property1
 	var-kind field property1
@@ -56,11 +56,11 @@ variable this.property2
 ppt main.primitiveInputsEndpoint{stringInPath}:::CLASS
 ppt-type class
 
-ppt main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::ENTER
+ppt main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.primitiveInputsEndpoint_Input
+	dec-type main.primitiveInputsEndpoint&Input
 	rep-type hashcode
 variable input.doubleInQuery
 	var-kind field doubleInQuery
@@ -83,11 +83,11 @@ variable input.booleanInForm
 	dec-type boolean
 	rep-type boolean
 
-ppt main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint_200(main.primitiveInputsEndpoint_Input):::EXIT1
+ppt main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.primitiveInputsEndpoint_Input
+	dec-type main.primitiveInputsEndpoint&Input
 	rep-type hashcode
 variable input.doubleInQuery
 	var-kind field doubleInQuery
@@ -111,7 +111,7 @@ variable input.booleanInForm
 	rep-type boolean
 variable return
 	var-kind return
-	dec-type main.primitiveInputsEndpoint_Output_200
+	dec-type main.primitiveInputsEndpoint&Output&200
 	rep-type hashcode
 variable return.property1
 	var-kind field property1

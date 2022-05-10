@@ -1,45 +1,45 @@
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::ENTER
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::ENTER
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200.array(main.exitOfTypeArrayEndpoint_Input):::EXIT1
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::EXIT1
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 return
-7490067
+1316850733
 1
 return.array
-836493928
+1328792094
 1
 return.array[..]
-[1821497518 1821497549]
+[994190832 994190863]
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::EXIT2
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 return
-160589197
+1010552278
 1
 return.property1
 "firstValueOfProperty1"
@@ -48,23 +48,23 @@ return.property2
 "firstValueOfProperty2"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::ENTER
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint_200(main.exitOfTypeArrayEndpoint_Input):::EXIT2
+main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
 input
-409381688
+962305817
 1
 input.inputParameter
 "parameterValue"
 1
 return
-160589197
+1010552278
 1
 return.property1
 "secondValueOfProperty1"

@@ -1,20 +1,20 @@
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::ENTER
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::ENTER
 input
-2122973470
+492841661
 1
 input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint_200(main.arrayOfObjectsEndpoint_Input):::EXIT1
+main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::EXIT1
 input
-2122973470
+492841661
 1
 input.inputParameter
 "parameterValue"
 1
 return
-1492560797
+752059860
 1
 return.stringProperty
 "stringProperty1"
