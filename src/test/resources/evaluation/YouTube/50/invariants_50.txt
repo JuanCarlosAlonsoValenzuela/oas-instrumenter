@@ -1,0 +1,244 @@
+"C:\Program Files\Java\jdk1.8.0_202\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=53513:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\out\production\daikon_modified;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\javac.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-framework\checker.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\reflection-util-1.0.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\options-1.0.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\require-javadoc-1.0.2-all.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\java-getopt-1.0.14.0.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-6.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\plume-util-1.5.5.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\commons-exec-1.3.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\hamcrest-core-1.3-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\checker-qual.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\bcel-util-1.1.13.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\junit-4.13.2-Daikon.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\daikon-plumelib.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\jFormatString-3.0.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\javacutil-3.1.1.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\diffutils-1.3.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\threeten-extra-1.5.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\caffeine-2.8.4.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\error_prone_core-2.7.1-with-dependencies.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\lib\error-prone\dataflow-shaded-3.11.0.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\dcomp_premain.jar;C:\Users\jcav\Documents\GitHub\daikon_modified\java\ChicoryPremain.jar;C:\Program Files\Java\jdk1.8.0_202\lib\tools.jar" daikon.Daikon
+Daikon version 5.8.10, released November 1, 2021; http://plse.cs.washington.edu/daikon.
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::ENTER
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "0", "17" }
+input.videoCategoryId is Numeric
+size(input.part[]) >= 1
+input.maxHeight > input.maxResults
+input.maxHeight > size(input.part[])
+input.maxHeight > size(input.id[])
+input.maxResults < input.maxWidth
+input.maxResults > size(input.part[])
+input.maxWidth > size(input.part[])
+input.maxWidth > size(input.id[])
+===========================================================================
+main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT
+return.contentDetails.contentRating.djctqRatingReasons == return.suggestions.editorSuggestions
+return.contentDetails.contentRating.fpbRatingReasons == return.suggestions.editorSuggestions
+return.contentDetails.countryRestriction.exception == return.suggestions.editorSuggestions
+return.monetizationDetails.access.exception == return.suggestions.editorSuggestions
+return.snippet.description == return.snippet.localized.description
+return.snippet.localized.title == return.snippet.title
+return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height
+return.suggestions.editorSuggestions == return.suggestions.processingErrors
+return.suggestions.editorSuggestions == return.suggestions.processingHints
+return.suggestions.editorSuggestions == return.suggestions.processingWarnings
+return.suggestions.editorSuggestions == return.topicDetails.relevantTopicIds
+return.suggestions.editorSuggestions == return.topicDetails.topicIds
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "0", "17" }
+input.videoCategoryId is Numeric
+return.ageGating == null
+return.contentDetails.caption one of { "false", "true" }
+return.contentDetails.countryRestriction == null
+return.contentDetails.definition one of { "hd", "sd" }
+LENGTH(return.contentDetails.definition)==2
+return.contentDetails.dimension one of { "2d", "3d" }
+LENGTH(return.contentDetails.dimension)==2
+return.contentDetails.projection one of { "360", "rectangular" }
+return.contentDetails.regionRestriction.allowed[] elements one of { "BR", "CA", "TR" }
+All the elements of return.contentDetails.regionRestriction.allowed[] have LENGTH=2
+All the elements of return.contentDetails.regionRestriction.blocked[] have LENGTH=2
+LENGTH(return.etag)==27
+return.fileDetails == null
+return.fileDetails.audioStreams == null
+return.fileDetails.videoStreams == null
+LENGTH(return.id)==11
+return.kind == "youtube#video"
+LENGTH(return.kind)==13
+return.liveStreamingDetails.activeLiveChatId one of { "Cg0KC0NtRlFjYmt4bW5FKicKGFVDTmxmR3V6T0FLTTFzeWNQdU1fUVRIZxILQ21GUWNia3htbkU", "Cg0KC2ViMjJyY3E1eWJJKicKGFVDS1Z6UGVVdmx1S1I5RURUbjhRLWJrdxILZWIyMnJjcTV5Ykk" }
+LENGTH(return.liveStreamingDetails.activeLiveChatId)==75
+LENGTH(return.liveStreamingDetails.actualEndTime)==20
+return.liveStreamingDetails.actualEndTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+LENGTH(return.liveStreamingDetails.actualStartTime)==20
+return.liveStreamingDetails.actualStartTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+return.liveStreamingDetails.concurrentViewers is Numeric
+LENGTH(return.liveStreamingDetails.scheduledStartTime)==20
+return.liveStreamingDetails.scheduledStartTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+return.monetizationDetails == null
+return.monetizationDetails.access == null
+return.player.embedHeight is Numeric
+return.player.embedWidth is Numeric
+return.processingDetails == null
+return.processingDetails.processingProgress == null
+return.projectDetails == null
+return.recordingDetails.location.altitude == 0.0
+return.recordingDetails.recordingDate one of { "2005-04-23T00:00:00Z", "2008-09-17T00:00:00Z", "2022-05-02T00:00:00Z" }
+LENGTH(return.recordingDetails.recordingDate)==20
+return.recordingDetails.recordingDate is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+return.snippet.categoryId is Numeric
+LENGTH(return.snippet.channelId)==24
+return.snippet.liveBroadcastContent one of { "live", "none" }
+LENGTH(return.snippet.liveBroadcastContent)==4
+LENGTH(return.snippet.publishedAt)==20
+return.snippet.publishedAt is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional)
+return.snippet.thumbnails.default.height == 90
+return.snippet.thumbnails.default.url is Url
+return.snippet.thumbnails.default.width == 120
+return.snippet.thumbnails.high.height == 360
+return.snippet.thumbnails.high.url is Url
+return.snippet.thumbnails.high.width == 480
+return.snippet.thumbnails.maxres.height == 720
+return.snippet.thumbnails.maxres.url is Url
+return.snippet.thumbnails.maxres.width == 1280
+return.snippet.thumbnails.medium.height == 180
+return.snippet.thumbnails.medium.url is Url
+return.snippet.thumbnails.medium.width == 320
+return.snippet.thumbnails.standard.height == 480
+return.snippet.thumbnails.standard.url is Url
+return.snippet.thumbnails.standard.width == 640
+return.statistics.commentCount is Numeric
+return.statistics.favoriteCount == "0"
+LENGTH(return.statistics.favoriteCount)==1
+return.statistics.favoriteCount is Numeric
+return.statistics.likeCount is Numeric
+return.statistics.viewCount is Numeric
+return.status.license one of { "creativeCommon", "youtube" }
+return.status.madeForKids == false
+return.status.privacyStatus one of { "public", "unlisted" }
+return.status.uploadStatus one of { "processed", "uploaded" }
+return.suggestions == null
+return.suggestions.editorSuggestions == null
+return.suggestions.tagSuggestions == null
+All the elements of return.topicDetails.topicCategories[] are URLs
+size(input.part[]) >= 1
+size(return.contentDetails.regionRestriction.allowed[]) == 1
+size(return.contentDetails.regionRestriction.blocked[]) >= 1
+size(return.topicDetails.topicCategories[]) >= 1
+return.id in input.id[]
+input.maxHeight > input.maxResults
+input.maxHeight > return.snippet.thumbnails.default.height
+input.maxHeight > return.snippet.thumbnails.default.width
+input.maxHeight > return.snippet.thumbnails.high.height
+input.maxHeight > return.snippet.thumbnails.high.width
+input.maxHeight > return.snippet.thumbnails.medium.height
+input.maxHeight > return.snippet.thumbnails.medium.width
+input.maxHeight > return.snippet.thumbnails.standard.height
+input.maxHeight > size(input.part[])
+input.maxHeight > size(input.id[])
+input.maxHeight > size(return.contentDetails.regionRestriction.blocked[])
+input.maxHeight > size(return.snippet.tags[])
+input.maxHeight > size(return.topicDetails.topicCategories[])
+input.maxResults < input.maxWidth
+input.maxResults < return.snippet.thumbnails.default.height
+input.maxResults < return.snippet.thumbnails.default.width
+input.maxResults < return.snippet.thumbnails.high.height
+input.maxResults < return.snippet.thumbnails.high.width
+input.maxResults < return.snippet.thumbnails.maxres.height
+input.maxResults < return.snippet.thumbnails.maxres.width
+input.maxResults < return.snippet.thumbnails.medium.height
+input.maxResults < return.snippet.thumbnails.medium.width
+input.maxResults < return.snippet.thumbnails.standard.height
+input.maxResults < return.snippet.thumbnails.standard.width
+input.maxResults > size(input.part[])
+input.maxResults > size(return.contentDetails.regionRestriction.blocked[])
+input.maxResults > size(return.topicDetails.topicCategories[])
+input.maxWidth > return.snippet.thumbnails.default.height
+input.maxWidth > return.snippet.thumbnails.default.width
+input.maxWidth > return.snippet.thumbnails.high.height
+input.maxWidth > return.snippet.thumbnails.high.width
+input.maxWidth > return.snippet.thumbnails.maxres.height
+input.maxWidth > return.snippet.thumbnails.medium.height
+input.maxWidth > return.snippet.thumbnails.medium.width
+input.maxWidth > return.snippet.thumbnails.standard.height
+input.maxWidth > return.snippet.thumbnails.standard.width
+input.maxWidth > size(input.part[])
+input.maxWidth > size(input.id[])
+input.maxWidth > size(return.snippet.tags[])
+input.maxWidth > size(return.topicDetails.topicCategories[])
+input.regionCode in return.contentDetails.regionRestriction.allowed[]
+return.snippet.thumbnails.default.height > size(input.part[])
+return.snippet.thumbnails.default.height > size(input.id[])
+return.snippet.thumbnails.default.height > size(return.snippet.tags[])
+return.snippet.thumbnails.default.width > size(input.part[])
+return.snippet.thumbnails.default.width > size(input.id[])
+return.snippet.thumbnails.default.width > size(return.snippet.tags[])
+return.snippet.thumbnails.high.height > size(input.part[])
+return.snippet.thumbnails.high.height > size(input.id[])
+return.snippet.thumbnails.high.height > size(return.snippet.tags[])
+return.snippet.thumbnails.high.width > size(input.part[])
+return.snippet.thumbnails.high.width > size(input.id[])
+return.snippet.thumbnails.high.width > size(return.snippet.tags[])
+return.snippet.thumbnails.maxres.height > size(input.part[])
+return.snippet.thumbnails.maxres.height > size(input.id[])
+return.snippet.thumbnails.maxres.height > size(return.snippet.tags[])
+return.snippet.thumbnails.maxres.width > size(input.part[])
+return.snippet.thumbnails.maxres.width > size(input.id[])
+return.snippet.thumbnails.maxres.width > size(return.snippet.tags[])
+return.snippet.thumbnails.medium.height > size(input.part[])
+return.snippet.thumbnails.medium.height > size(input.id[])
+return.snippet.thumbnails.medium.height > size(return.snippet.tags[])
+return.snippet.thumbnails.medium.width > size(input.part[])
+return.snippet.thumbnails.medium.width > size(input.id[])
+return.snippet.thumbnails.medium.width > size(return.snippet.tags[])
+return.snippet.thumbnails.standard.height > size(input.part[])
+return.snippet.thumbnails.standard.height > size(input.id[])
+return.snippet.thumbnails.standard.height > size(return.snippet.tags[])
+return.snippet.thumbnails.standard.width > size(input.part[])
+return.snippet.thumbnails.standard.width > size(input.id[])
+return.snippet.thumbnails.standard.width > size(return.snippet.tags[])
+size(input.id[]) <= size(return.snippet.tags[])
+===========================================================================
+main.youtubev3videos.getVideos&200(main.getVideos&Input):::ENTER
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "0", "17" }
+input.videoCategoryId is Numeric
+size(input.part[]) >= 1
+input.maxHeight > input.maxResults
+input.maxHeight > size(input.part[])
+input.maxHeight > size(input.id[])
+input.maxResults < input.maxWidth
+input.maxResults > size(input.part[])
+input.maxWidth > size(input.part[])
+input.maxWidth > size(input.id[])
+===========================================================================
+main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT
+input.maxResults == return.pageInfo.resultsPerPage
+return.pageInfo.resultsPerPage == size(return.items[])
+return.pageInfo.resultsPerPage == size(return.items[])
+input.chart == "mostPopular"
+LENGTH(input.chart)==11
+input.myRating one of { "dislike", "like" }
+LENGTH(input.regionCode)==2
+input.videoCategoryId one of { "0", "17" }
+input.videoCategoryId is Numeric
+LENGTH(return.etag)==27
+return.kind == "youtube#videoListResponse"
+LENGTH(return.kind)==25
+LENGTH(return.nextPageToken)==6
+return.pageInfo.resultsPerPage >= 1
+return.pageInfo.totalResults >= 1
+return.tokenPagination == null
+size(input.part[]) >= 1
+input.maxHeight > input.maxResults
+input.maxHeight > return.pageInfo.resultsPerPage
+input.maxHeight > return.pageInfo.totalResults
+input.maxHeight > size(input.part[])
+input.maxHeight > size(input.id[])
+input.maxResults < input.maxWidth
+input.maxResults < return.pageInfo.totalResults
+input.maxResults > size(input.part[])
+input.maxWidth > return.pageInfo.resultsPerPage
+input.maxWidth > return.pageInfo.totalResults
+input.maxWidth > size(input.part[])
+input.maxWidth > size(input.id[])
+return.pageInfo.resultsPerPage <= return.pageInfo.totalResults
+return.pageInfo.resultsPerPage <= size(input.id[])
+return.pageInfo.totalResults <= size(input.id[])
+Exiting Daikon.
+
+Process finished with exit code 0
