@@ -1,6 +1,7 @@
 package es.us.isa.jsoninstrumenter.main;
 
 import es.us.isa.jsoninstrumenter.model.*;
+import es.us.isa.jsoninstrumenter.util.TestCaseFileManager;
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem.HttpMethod;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -10,24 +11,24 @@ import io.swagger.v3.parser.OpenAPIV3Parser;
 import io.swagger.v3.parser.core.models.ParseOptions;
 
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.*;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
+
+import static es.us.isa.jsoninstrumenter.util.CSVManager.getCSVRecord;
 import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 
 import static es.us.isa.jsoninstrumenter.model.DeclsClass.*;
 import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
-import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.getTestCasesFromFile;
 
 public class GenerateDeclsFile {
 
     private static String openApiSpecPath = "src/test/resources/evaluation/GitHub/swagger.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluation/GitHub/GitHub_10000_delete.csv";
+    private static String testCasesFilePath = "src/test/resources/evaluation/GitHub/50/GitHub_50.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
@@ -107,25 +108,35 @@ public class GenerateDeclsFile {
 
         // Generate dTrace file
         if(generateDtrace){
-            // Read test cases
-            List<TestCase> testCases = getTestCasesFromFile(testCasesFilePath);
-            System.out.println("Total number of test cases: " + testCases.size());
-
             int i = 0;
-
             String dtraceFilePath = getOutputPath("dtraceFile.dtrace", openApiSpecPath);      // openApiSpecPath testCasesFilePath
             deleteFile(dtraceFilePath);     // Delete file if exists
 
             try {
+                // Read test cases
+                File testCasesFile = new File(testCasesFilePath);
+                FileReader testCasesFileReader = new FileReader(testCasesFile);
+                BufferedReader testCasesBR = new BufferedReader(testCasesFileReader);
+                String testCasesLine = "";
+
+                // The first line must be the header
+                String header = testCasesBR.readLine();
+                if (header == null) {
+                    throw new NullPointerException("The csv file containing the test cases is empty");
+                }
+
+                TestCaseFileManager testCaseFileManager = new TestCaseFileManager(header);
+
                 FileWriter dtraceFile = new FileWriter(dtraceFilePath);
                 BufferedWriter dtraceBuffer = new BufferedWriter(dtraceFile);
 
-                for(TestCase testCase: testCases) {
+                while((testCasesLine = testCasesBR.readLine()) != null) {
                     // TODO: operationEndpoint + "_" + httpMethod vs operationId
                     // TODO: Extract ENTER
+                    TestCase testCase = testCaseFileManager.getTestCase(getCSVRecord(testCasesLine));
 
                     if(i%50==0){
-                        System.out.println("Generated dtrace for " + i + " out of " + testCases.size() + " test cases");
+                        System.out.println("Generated dtrace for " + i + " test cases");
                     }
                     i++;
 
@@ -159,12 +170,9 @@ public class GenerateDeclsFile {
                 // Close the writer
                 dtraceBuffer.close();
 
-            } catch (Exception e){
-                System.err.println(e.getStackTrace());
+            } catch (IOException e){
+                e.printStackTrace();
             }
-
-
-
 
         }
 

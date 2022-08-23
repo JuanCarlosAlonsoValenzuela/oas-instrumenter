@@ -1,6 +1,6 @@
 package es.us.isa.jsoninstrumenter.util;
-
 import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
 import java.io.FileReader;
@@ -56,6 +56,21 @@ public class CSVManager {
         }
 
         return rows;
+    }
+
+    public static CSVRecord getCSVRecord(String line) {
+        CSVRecord res = null;
+        try {
+            List<CSVRecord> csvRecords =  CSVParser.parse(line, CSVFormat.EXCEL).getRecords();
+            if(csvRecords.size() != 1) {
+                throw new IndexOutOfBoundsException("Each line should contain only one record");
+            }
+            res = csvRecords.get(0);
+        } catch (IOException e) {
+            System.err.println("Error parsing CSV file");
+            System.err.println("Exception " + e);
+        }
+        return res;
     }
 
 }

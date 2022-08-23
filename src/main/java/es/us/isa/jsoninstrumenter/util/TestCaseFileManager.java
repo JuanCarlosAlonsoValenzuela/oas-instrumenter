@@ -1,54 +1,61 @@
 package es.us.isa.jsoninstrumenter.util;
 
 import es.us.isa.jsoninstrumenter.model.TestCase;
+import org.apache.commons.csv.CSVRecord;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static es.us.isa.jsoninstrumenter.util.CSVManager.readCSV;
+import static es.us.isa.jsoninstrumenter.util.CSVManager.getCSVRecord;
 
 public class TestCaseFileManager {
 
-    public static List<TestCase> getTestCasesFromFile(String path) {
-        List<TestCase> res = new ArrayList<>();
+    private final Integer testCaseIdIndex;
+    private final Integer operationIdIndex;
+    private final Integer pathIndex;
+    private final Integer httpMethodIndex;
+    private final Integer headerParametersIndex;
+    private final Integer pathParametersIndex;
+    private final Integer queryParametersIndex;
+    private final Integer formParametersIndex;
+    private final Integer bodyParameterIndex;
+    private final Integer statusCodeIndex;
+    private final Integer responseBodyIndex;
 
-        List<List<String>> testCaseCSV = readCSV(path, ',');
-        List<String> headers = testCaseCSV.get(0);
+    public TestCaseFileManager(String header) throws IOException {
 
-        int testCaseIdIndex = getIndexOfElementInHeaders(headers, "testCaseId");
-        int operationIdIndex = getIndexOfElementInHeaders(headers,"operationId");
-        int pathIndex = getIndexOfElementInHeaders(headers,"path");
-        int httpMethodIndex = getIndexOfElementInHeaders(headers,"httpMethod");
-        int headerParametersIndex = getIndexOfElementInHeaders(headers,"headerParameters");
-        int pathParametersIndex = getIndexOfElementInHeaders(headers, "pathParameters");
-        int queryParametersIndex = getIndexOfElementInHeaders(headers, "queryParameters");
-        int formParametersIndex = getIndexOfElementInHeaders(headers, "formParameters");
-        int bodyParameterIndex = getIndexOfElementInHeaders(headers, "bodyParameter");
-        int statusCodeIndex = getIndexOfElementInHeaders(headers, "statusCode");
-        int responseBodyIndex = getIndexOfElementInHeaders(headers,"responseBody");
+        CSVRecord headers = getCSVRecord(header);
 
-        for(int i = 1; i < testCaseCSV.size(); i++) {
-            List<String> row = testCaseCSV.get(i);
-
-            Map<String, String> headerParameters = stringToMap(row.get(headerParametersIndex));
-            Map<String, String> pathParameters = stringToMap(row.get(pathParametersIndex));
-            Map<String, String> queryParameters = stringToMap(row.get(queryParametersIndex));
-            Map<String, String> formParameters = stringToMap(row.get(formParametersIndex));
-
-            TestCase testCase = new TestCase(row.get(testCaseIdIndex), row.get(operationIdIndex), row.get(pathIndex),
-                    row.get(httpMethodIndex), headerParameters, pathParameters, queryParameters,
-                    formParameters, row.get(bodyParameterIndex),
-                    row.get(statusCodeIndex), row.get(responseBodyIndex));
-
-            res.add(testCase);
-
-        }
-
-        return res;
+        this.testCaseIdIndex = getIndexOfElementInHeaders(headers, "testCaseId");
+        this.operationIdIndex = getIndexOfElementInHeaders(headers,"operationId");
+        this.pathIndex = getIndexOfElementInHeaders(headers,"path");
+        this.httpMethodIndex = getIndexOfElementInHeaders(headers,"httpMethod");
+        this.headerParametersIndex = getIndexOfElementInHeaders(headers,"headerParameters");
+        this.pathParametersIndex = getIndexOfElementInHeaders(headers, "pathParameters");
+        this.queryParametersIndex = getIndexOfElementInHeaders(headers, "queryParameters");
+        this.formParametersIndex = getIndexOfElementInHeaders(headers, "formParameters");
+        this.bodyParameterIndex = getIndexOfElementInHeaders(headers, "bodyParameter");
+        this.statusCodeIndex = getIndexOfElementInHeaders(headers, "statusCode");
+        this.responseBodyIndex = getIndexOfElementInHeaders(headers,"responseBody");
 
     }
 
-    private static int getIndexOfElementInHeaders(List<String> headers, String header){
+    public TestCase getTestCase(CSVRecord row) {
+
+        Map<String, String> headerParameters = stringToMap(row.get(this.headerParametersIndex));
+        Map<String, String> pathParameters = stringToMap(row.get(this.pathParametersIndex));
+        Map<String, String> queryParameters = stringToMap(row.get(this.queryParametersIndex));
+        Map<String, String> formParameters = stringToMap(row.get(this.formParametersIndex));
+
+        return new TestCase(row.get(this.testCaseIdIndex), row.get(this.operationIdIndex), row.get(this.pathIndex),
+                row.get(this.httpMethodIndex), headerParameters, pathParameters, queryParameters,
+                formParameters, row.get(this.bodyParameterIndex),
+                row.get(this.statusCodeIndex), row.get(this.responseBodyIndex));
+
+    }
+
+    private static int getIndexOfElementInHeaders(CSVRecord headers, String header){
         for(int i = 0; i < headers.size(); i++) {
             if(headers.get(i).equalsIgnoreCase(header)) {
                 return i;
