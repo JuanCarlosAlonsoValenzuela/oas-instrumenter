@@ -63,7 +63,6 @@ public class ArrayExitTest {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 1", 2, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 1", 2, declsClassEnterAndExit.getDeclsExits().size());
 

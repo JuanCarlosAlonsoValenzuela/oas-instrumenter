@@ -83,12 +83,6 @@ public class GenerateDeclsFile {
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
-                DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
-                addNewDeclsClass(declsClassInput);
-
-                // Extracting the output parameters
-                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
-
                 // Extracting enter and exits
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
                         objectName, operation);

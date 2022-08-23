@@ -14,7 +14,6 @@ import java.io.*;
 import java.util.Map;
 
 import static es.us.isa.jsoninstrumenter.main.GenerateDeclsFile.*;
-import static es.us.isa.jsoninstrumenter.model.DeclsClass.generateOutputDeclsClasses;
 import static es.us.isa.jsoninstrumenter.model.DeclsClass.setDeclsClassEnterAndExit;
 import static es.us.isa.jsoninstrumenter.util.CSVManager.getCSVRecord;
 import static org.junit.Assert.*;
@@ -53,13 +52,6 @@ public class SimpleDtraceFileTest {
 
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
-
-                // Extracting the input parameters
-                DeclsClass declsClassInput = new DeclsClass(packageName, objectName, objectName, operation);
-                addNewDeclsClass(declsClassInput);
-
-                // Extracting the output parameters
-                generateOutputDeclsClasses(operationName, packageName, operation.getResponses());
 
                 // Extracting enter and exits
                 setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,

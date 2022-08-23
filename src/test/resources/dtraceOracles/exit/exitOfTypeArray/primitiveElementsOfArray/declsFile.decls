@@ -1,44 +1,6 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Input:::CLASS
-ppt-type class
-
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Input:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Input
-	rep-type hashcode
-variable this.inputParameter
-	var-kind field inputParameter
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200:::CLASS
-ppt-type class
-
-ppt main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200.array:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.exitOfTypeArrayPrimitiveElementsEndpoint&Output&200.array
-	rep-type hashcode
-variable this.array
-	var-kind field array
-	enclosing-var this
-	dec-type double[]
-	rep-type hashcode
-variable this.array[..]
-	var-kind array
-	enclosing-var this.array
-	array 1
-	dec-type double[]
-	rep-type double[]
-
-
 ppt main.exitOfTypeArrayPrimitiveElementsEndpoint:::CLASS
 ppt-type class
 

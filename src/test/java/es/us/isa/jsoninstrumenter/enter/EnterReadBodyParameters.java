@@ -61,7 +61,6 @@ public class EnterReadBodyParameters {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
 
@@ -185,7 +184,6 @@ public class EnterReadBodyParameters {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
 
@@ -346,7 +344,6 @@ public class EnterReadBodyParameters {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
 
@@ -507,7 +504,6 @@ public class EnterReadBodyParameters {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
 
@@ -630,7 +626,6 @@ public class EnterReadBodyParameters {
                 // CLASS
                 assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
-                assertEquals("The size of the list of objects is not 0", 0, declsClassEnterAndExit.getDeclsObjects().size());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
 

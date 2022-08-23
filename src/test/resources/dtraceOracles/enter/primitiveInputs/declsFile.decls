@@ -1,58 +1,6 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.primitiveInputsEndpoint&Input:::CLASS
-ppt-type class
-
-ppt main.primitiveInputsEndpoint&Input:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.primitiveInputsEndpoint&Input
-	rep-type hashcode
-variable this.doubleInQuery
-	var-kind field doubleInQuery
-	enclosing-var this
-	dec-type double
-	rep-type double
-variable this.stringInPath
-	var-kind field stringInPath
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.integerInHeader
-	var-kind field integerInHeader
-	enclosing-var this
-	dec-type int
-	rep-type int
-variable this.booleanInForm
-	var-kind field booleanInForm
-	enclosing-var this
-	dec-type boolean
-	rep-type boolean
-
-
-ppt main.primitiveInputsEndpoint&Output&200:::CLASS
-ppt-type class
-
-ppt main.primitiveInputsEndpoint&Output&200:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.primitiveInputsEndpoint&Output&200
-	rep-type hashcode
-variable this.property1
-	var-kind field property1
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.property2
-	var-kind field property2
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-
 ppt main.primitiveInputsEndpoint{stringInPath}:::CLASS
 ppt-type class
 

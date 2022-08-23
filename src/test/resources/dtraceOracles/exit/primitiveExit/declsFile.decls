@@ -1,53 +1,6 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.primitiveExitEndpoint&Input:::CLASS
-ppt-type class
-
-ppt main.primitiveExitEndpoint&Input:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.primitiveExitEndpoint&Input
-	rep-type hashcode
-variable this.inputParameter
-	var-kind field inputParameter
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-
-
-ppt main.primitiveExitEndpoint&Output&200:::CLASS
-ppt-type class
-
-ppt main.primitiveExitEndpoint&Output&200:::OBJECT
-ppt-type object
-variable this
-	var-kind variable
-	dec-type main.primitiveExitEndpoint&Output&200
-	rep-type hashcode
-variable this.stringProperty
-	var-kind field stringProperty
-	enclosing-var this
-	dec-type java.lang.String
-	rep-type java.lang.String
-variable this.doubleProperty
-	var-kind field doubleProperty
-	enclosing-var this
-	dec-type double
-	rep-type double
-variable this.integerProperty
-	var-kind field integerProperty
-	enclosing-var this
-	dec-type int
-	rep-type int
-variable this.booleanProperty
-	var-kind field booleanProperty
-	enclosing-var this
-	dec-type boolean
-	rep-type boolean
-
-
 ppt main.primitiveExitEndpoint:::CLASS
 ppt-type class
 
