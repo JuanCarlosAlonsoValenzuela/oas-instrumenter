@@ -27,8 +27,8 @@ import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/evaluation/GitHub/swagger.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluation/GitHub/50/GitHub_50.csv";
+    private static String openApiSpecPath = "src/test/---/evaluationOracles/OMDb/byIdOrTitle/swagger_byIdOrTitle.yaml";
+    private static String testCasesFilePath = "src/test/---/evaluationOracles/OMDb/byIdOrTitle/10000/OMDb_byIdOrTitle_10K.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
