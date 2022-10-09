@@ -1,0 +1,3901 @@
+,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,Unnamed: 0.1.1.1,testCaseId,queryParameters,operationId,path,httpMethod,headerParameters,pathParameters,formParameters,bodyParameter,statusCode,passed,failReason,responseBody
+249,241,3355,958,958,test_qxwm2tq4ry9e_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""ost"", ""description"": ""the hirasawa"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""the hirasawa"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3E2Iw7YoeGBm9u7d10ob3f""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3E2Iw7YoeGBm9u7d10ob3f"",
+  ""id"" : ""3E2Iw7YoeGBm9u7d10ob3f"",
+  ""images"" : [ ],
+  ""name"" : ""ost"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MixiM2FiNzk3NTgzMTcxMTEyN2NmMmM4MDU4MGUzODhlZmExNDQwY2Y4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3E2Iw7YoeGBm9u7d10ob3f/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3E2Iw7YoeGBm9u7d10ob3f""
+}"
+445,654,3422,1183,1183,test_1iunox5dct6jp_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""opera"", ""description"": ""description qwerty flute"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""description qwerty flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/08N1BrzrYTwOrzOGuBnMyD""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/08N1BrzrYTwOrzOGuBnMyD"",
+  ""id"" : ""08N1BrzrYTwOrzOGuBnMyD"",
+  ""images"" : [ ],
+  ""name"" : ""opera"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw1OWZhZmYwYjQ5ODZjYzdjZWZjMDlmZjdlNjMxODBkMjdmMjFkOWYz"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/08N1BrzrYTwOrzOGuBnMyD/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:08N1BrzrYTwOrzOGuBnMyD""
+}"
+161,646,6068,1168,1168,test_1iupydhh4dld0_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""pop hop pop latin Playlist"", ""description"": ""qwerty languages classics"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""qwerty languages classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4nofIc7bbo0b1RGcKwm5ea""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4nofIc7bbo0b1RGcKwm5ea"",
+  ""id"" : ""4nofIc7bbo0b1RGcKwm5ea"",
+  ""images"" : [ ],
+  ""name"" : ""pop hop pop latin Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxjMDdjMzc3YjVhNzg3NDk1ZjFkNjI5MzdmNTA0ZWMwM2QxM2I5Y2Rh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4nofIc7bbo0b1RGcKwm5ea/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4nofIc7bbo0b1RGcKwm5ea""
+}"
+357,826,4388,272,272,test_1hb862y3h07xy_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""anime latin videogame"", ""description"": ""classics metal"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""classics metal"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5q7alIwiqLB7ZkZNIa3Dn2""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5q7alIwiqLB7ZkZNIa3Dn2"",
+  ""id"" : ""5q7alIwiqLB7ZkZNIa3Dn2"",
+  ""images"" : [ ],
+  ""name"" : ""anime latin videogame"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw1NWRkODkzODgxNjRkNWZlMzdiMjUwYTgwYWM4YzUyYzUzMzFhNmQx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5q7alIwiqLB7ZkZNIa3Dn2/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5q7alIwiqLB7ZkZNIa3Dn2""
+}"
+239,534,2923,751,751,test_s4p2ss7z06r5_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""hop"", ""description"": ""apple hands acdc hits Playlist qwerty"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""apple hands acdc hits Playlist qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2PyshN1BcS0Ji27tdaj1eo""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2PyshN1BcS0Ji27tdaj1eo"",
+  ""id"" : ""2PyshN1BcS0Ji27tdaj1eo"",
+  ""images"" : [ ],
+  ""name"" : ""hop"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw0NWQ5ZjVlMzkxNDU2OTk3MTBkNzU0ZmQwNDllODZlNDU5YjI1MTQ1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2PyshN1BcS0Ji27tdaj1eo/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2PyshN1BcS0Ji27tdaj1eo""
+}"
+449,763,480,1591,1591,test_uvbcfs7u4zfm_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""emotional 7anime"", ""description"": ""Metallica flute"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4pA0mgYJCe5WS72s0cc46z""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4pA0mgYJCe5WS72s0cc46z"",
+  ""id"" : ""4pA0mgYJCe5WS72s0cc46z"",
+  ""images"" : [ ],
+  ""name"" : ""emotional 7anime"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkYTEyYjA0NDFlZmVmMzQwYzhjYjU1NWM2OWYxYWNhZTZlOTQ0YWNh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4pA0mgYJCe5WS72s0cc46z/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4pA0mgYJCe5WS72s0cc46z""
+}"
+396,170,3365,94,94,test_qe6m927ah6xy_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""pop"", ""description"": ""japanese description radio"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""japanese description radio"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6SnP08YN9VdCsrvtktNImj""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6SnP08YN9VdCsrvtktNImj"",
+  ""id"" : ""6SnP08YN9VdCsrvtktNImj"",
+  ""images"" : [ ],
+  ""name"" : ""pop"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxjNmVjYjllOWZjODEwMWQ5NWJkN2Q1MGM3NzU3YTk3NmU0OTZmZDNk"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6SnP08YN9VdCsrvtktNImj/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6SnP08YN9VdCsrvtktNImj""
+}"
+217,46,5255,742,742,test_1hrri4fqf4ggx_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""2videogame 15classic"", ""description"": ""classics gear decades blondie"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""classics gear decades blondie"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/01T5M6WU6UsWBPXkgsmYC6""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/01T5M6WU6UsWBPXkgsmYC6"",
+  ""id"" : ""01T5M6WU6UsWBPXkgsmYC6"",
+  ""images"" : [ ],
+  ""name"" : ""2videogame 15classic"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwwODJmMjc5OWZhODU3N2IwNDBjYzExMDZkNDc2OTdiYmM5NWQzNzQx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/01T5M6WU6UsWBPXkgsmYC6/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:01T5M6WU6UsWBPXkgsmYC6""
+}"
+198,261,9020,1407,1407,test_t844jjbzpu7o_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""anime pop"", ""description"": ""piano genres greatest"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano genres greatest"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1yo7kDqh9TJGBe23H2kggK""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1yo7kDqh9TJGBe23H2kggK"",
+  ""id"" : ""1yo7kDqh9TJGBe23H2kggK"",
+  ""images"" : [ ],
+  ""name"" : ""anime pop"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwxYzczMjRiNGQ3YjRhNDI3NmU4Njc5NTBlY2VmMDAxZmM1NTU4MThi"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1yo7kDqh9TJGBe23H2kggK/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1yo7kDqh9TJGBe23H2kggK""
+}"
+330,54,1726,97,97,test_1hbaf7punpkro_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""episode"", ""description"": ""soundtrack italian original"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""soundtrack italian original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7EW8T48mcdAwKfUTFVKB0c""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7EW8T48mcdAwKfUTFVKB0c"",
+  ""id"" : ""7EW8T48mcdAwKfUTFVKB0c"",
+  ""images"" : [ ],
+  ""name"" : ""episode"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw0NWI0ZWU0MWU1ZTAzMjJiN2RiYjg2NjY5ZDQ2ZmJhYjIwMWVjNzA2"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7EW8T48mcdAwKfUTFVKB0c/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7EW8T48mcdAwKfUTFVKB0c""
+}"
+77,205,7232,1989,1989,test_s1jhof4r110i_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""latin"", ""description"": ""soundtrack hits recommended"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""soundtrack hits recommended"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2Pvcl8PAoqVQCsGtMzR1ye""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2Pvcl8PAoqVQCsGtMzR1ye"",
+  ""id"" : ""2Pvcl8PAoqVQCsGtMzR1ye"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw5OGQwOGNjMDM1NzM2YmM4M2ZlYWE0YWJlOWJlN2RlODBjNjNhMTVm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2Pvcl8PAoqVQCsGtMzR1ye/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2Pvcl8PAoqVQCsGtMzR1ye""
+}"
+362,364,3130,404,404,test_qdw1jlpuim3q_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""videogame rock music"", ""description"": ""apple metal recommended"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""apple metal recommended"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/59rlnjKZmfc5tWcZGoq6rL""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/59rlnjKZmfc5tWcZGoq6rL"",
+  ""id"" : ""59rlnjKZmfc5tWcZGoq6rL"",
+  ""images"" : [ ],
+  ""name"" : ""videogame rock music"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw3ODJiZDgyMDIxOGQzY2FkYWQzNWYyODA1YmFmOWM3OGNhZmQ0YTkz"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/59rlnjKZmfc5tWcZGoq6rL/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:59rlnjKZmfc5tWcZGoq6rL""
+}"
+466,844,2420,831,831,test_1h7oo1xsq6fy1_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""banger"", ""description"": ""Metallica original"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Metallica original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6vIKF1H2TTd9Rs6PDbtiyY""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6vIKF1H2TTd9Rs6PDbtiyY"",
+  ""id"" : ""6vIKF1H2TTd9Rs6PDbtiyY"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw4NmYwYzNhMWY0ZDRlMzc2YzMwYWIzNzVkNzBlMTUxNGFjOTA0MjU1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6vIKF1H2TTd9Rs6PDbtiyY/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6vIKF1H2TTd9Rs6PDbtiyY""
+}"
+471,742,2647,160,160,test_qxg0lkkldlye_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""mix music opera"", ""description"": ""radio megamix"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""radio megamix"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1lbbKYDwFCShQOI7UhKrBk""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1lbbKYDwFCShQOI7UhKrBk"",
+  ""id"" : ""1lbbKYDwFCShQOI7UhKrBk"",
+  ""images"" : [ ],
+  ""name"" : ""mix music opera"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw2NjJkNjEwZWU0YTc1ZGRkZjk2NDU3ZjEwODkyODQxZWVlMzYxMWRl"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1lbbKYDwFCShQOI7UhKrBk/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1lbbKYDwFCShQOI7UhKrBk""
+}"
+229,985,2483,2005,2005,test_rhdt1idalmwl_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""latin"", ""description"": ""qwerty acdc"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""qwerty acdc"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2ktAmB3pGKGwdFsuRX2W1m""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2ktAmB3pGKGwdFsuRX2W1m"",
+  ""id"" : ""2ktAmB3pGKGwdFsuRX2W1m"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkN2ZmYTYyZjc5MDUyNmFkYThmYTUwYzM1OTA0MzI2Y2VhMDczMDlm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2ktAmB3pGKGwdFsuRX2W1m/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2ktAmB3pGKGwdFsuRX2W1m""
+}"
+404,859,7016,1736,1736,test_1iv6jxho4iiwo_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""hop Playlist"", ""description"": ""rising the rolling acdc"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""rising the rolling acdc"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/16JGjsL7G5pK0gsHizWzfS""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/16JGjsL7G5pK0gsHizWzfS"",
+  ""id"" : ""16JGjsL7G5pK0gsHizWzfS"",
+  ""images"" : [ ],
+  ""name"" : ""hop Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw3ZTI2NzdlNGMwZWU2NzVmY2Y1ODAwNzc2NDE4ZWM3MDkwYzg0M2Y5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/16JGjsL7G5pK0gsHizWzfS/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:16JGjsL7G5pK0gsHizWzfS""
+}"
+228,512,4834,514,514,test_1hb7q3mmzjvxg_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""pop hits"", ""description"": ""qwerty flute"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""qwerty flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0ob9rxsXvPNAGO0VOPPVrO""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0ob9rxsXvPNAGO0VOPPVrO"",
+  ""id"" : ""0ob9rxsXvPNAGO0VOPPVrO"",
+  ""images"" : [ ],
+  ""name"" : ""pop hits"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzZjQwNTEyZTQ5ODc1MDQ2NDNmNWQ1M2UyMGZkYjhhMGQ1OGY2Y2Fj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0ob9rxsXvPNAGO0VOPPVrO/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0ob9rxsXvPNAGO0VOPPVrO""
+}"
+177,237,6163,727,727,test_qxtuaxy13eb8_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""latin"", ""description"": ""english Metallica classics"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""english Metallica classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7JSMuv9TsuCsG4IddOpRnZ""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7JSMuv9TsuCsG4IddOpRnZ"",
+  ""id"" : ""7JSMuv9TsuCsG4IddOpRnZ"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw0NTAwMjM2ZTUzNjVhN2M2ZWEwOTI3OWI1OTQ0NDM2YzRiNTlkMzI4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7JSMuv9TsuCsG4IddOpRnZ/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7JSMuv9TsuCsG4IddOpRnZ""
+}"
+481,295,8129,1158,1158,test_urgv8b1bbfxd_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""6anime videogame"", ""description"": ""french soundtrack english languages blondie hands"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""french soundtrack english languages blondie hands"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6CBfgoLHJ97CKOjkTHyE35""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6CBfgoLHJ97CKOjkTHyE35"",
+  ""id"" : ""6CBfgoLHJ97CKOjkTHyE35"",
+  ""images"" : [ ],
+  ""name"" : ""6anime videogame"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwwNmQyNWM1NmI3NDVhNDhlODhiOTlhZDQ5NjM2NGMxZGUzMTFmY2U5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6CBfgoLHJ97CKOjkTHyE35/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6CBfgoLHJ97CKOjkTHyE35""
+}"
+270,772,9284,1812,1812,test_toa5lec0900y_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""5videogame"", ""description"": ""5flute"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""5flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5AGMvRdVADnP79OiEBjCqy""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5AGMvRdVADnP79OiEBjCqy"",
+  ""id"" : ""5AGMvRdVADnP79OiEBjCqy"",
+  ""images"" : [ ],
+  ""name"" : ""5videogame"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw3MDY4OTUwYWRhOTgyZjMwMzM4ODg4MmFkNjY0ZGJhMDBkNDllMGUx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5AGMvRdVADnP79OiEBjCqy/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5AGMvRdVADnP79OiEBjCqy""
+}"
+53,873,7318,217,217,test_qdsq7nr7u6w1_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""metal custom"", ""description"": ""italian piano"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""italian piano"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6IFTEd0jcttftgMBSzTeqc""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6IFTEd0jcttftgMBSzTeqc"",
+  ""id"" : ""6IFTEd0jcttftgMBSzTeqc"",
+  ""images"" : [ ],
+  ""name"" : ""metal custom"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwxYjZlMmI2MjQ1NzAzMjAyYjFmYmUzOWQ5MTRmZTdkNDUwNDkxMDE3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6IFTEd0jcttftgMBSzTeqc/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6IFTEd0jcttftgMBSzTeqc""
+}"
+93,786,9093,151,151,test_s1bntms2k7z9_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""banger"", ""description"": ""italian hands languages the Metallica flute"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""italian hands languages the Metallica flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5gjyLUmUu5EMmWhjOo1Uqf""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5gjyLUmUu5EMmWhjOo1Uqf"",
+  ""id"" : ""5gjyLUmUu5EMmWhjOo1Uqf"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxhODE2MjBiNTNlNGFiYWJlZjQ2NzZhNDE3NjEwYzg3ZTEwZDAxZGRm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5gjyLUmUu5EMmWhjOo1Uqf/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5gjyLUmUu5EMmWhjOo1Uqf""
+}"
+87,340,3109,184,184,test_1hb86gvlktu0l_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""9opera ost banger"", ""description"": ""piano piano soundtrack genres"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano piano soundtrack genres"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7r3TnclPPc9hKrMEAF3HfH""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7r3TnclPPc9hKrMEAF3HfH"",
+  ""id"" : ""7r3TnclPPc9hKrMEAF3HfH"",
+  ""images"" : [ ],
+  ""name"" : ""9opera ost banger"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw5MWUwZTRmOTZjMGJmZjQxZTYzYjhmNTIyZjdhNzIzNzVjZjgzNTFj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7r3TnclPPc9hKrMEAF3HfH/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7r3TnclPPc9hKrMEAF3HfH""
+}"
+448,425,3590,256,256,test_1iycqhzjj6jau_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""rock videogame Playlist"", ""description"": ""radio Playlist rising Metallica qwerty"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""radio Playlist rising Metallica qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2PvdecXPOsDzGZ2TDAiaod""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2PvdecXPOsDzGZ2TDAiaod"",
+  ""id"" : ""2PvdecXPOsDzGZ2TDAiaod"",
+  ""images"" : [ ],
+  ""name"" : ""rock videogame Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzZjA5N2M4NzFjOGEwMGEwOGE3MDU2ZDJhNGU0Y2M2MDVjMTlkOTdm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2PvdecXPOsDzGZ2TDAiaod/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2PvdecXPOsDzGZ2TDAiaod""
+}"
+3,596,8433,1011,1011,test_u7znxuzd9455_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""latin"", ""description"": ""original classics original"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""original classics original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1UhnyvGCb1V0hCmNjd65EV""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1UhnyvGCb1V0hCmNjd65EV"",
+  ""id"" : ""1UhnyvGCb1V0hCmNjd65EV"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw5YzI3Y2FlYjIzMzVjZGY0MDdhMDM2OTExNzI3MGIyMmFmOWEwYzNh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1UhnyvGCb1V0hCmNjd65EV/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1UhnyvGCb1V0hCmNjd65EV""
+}"
+204,642,4704,1169,1169,test_ts4plpzwf882_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""banger 5custom"", ""description"": ""Playlist 4classics"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Playlist 4classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/63sKMN5UZWbXgBFE6L2RIg""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/63sKMN5UZWbXgBFE6L2RIg"",
+  ""id"" : ""63sKMN5UZWbXgBFE6L2RIg"",
+  ""images"" : [ ],
+  ""name"" : ""banger 5custom"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw3ODcwMDA1NWRhNWVlMDkwZTcxNmRjMmY4YzcyY2VjYmE0OGZkOWJh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/63sKMN5UZWbXgBFE6L2RIg/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:63sKMN5UZWbXgBFE6L2RIg""
+}"
+495,809,4607,723,723,test_1jiak3wq6mhx4_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""hits"", ""description"": ""languages metal italian"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""languages metal italian"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7lXdwdWA66YPwYuyuHcCaT""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7lXdwdWA66YPwYuyuHcCaT"",
+  ""id"" : ""7lXdwdWA66YPwYuyuHcCaT"",
+  ""images"" : [ ],
+  ""name"" : ""hits"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwxZTJlMjEwYTRlYmE4MGY0YTM1Y2IxZmI3NTM0ZjAwZjJjYjdiOWY0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7lXdwdWA66YPwYuyuHcCaT/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7lXdwdWA66YPwYuyuHcCaT""
+}"
+460,69,1835,1904,1904,test_to7cnevczltd_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""Playlist hits banger mix"", ""description"": ""2english 0qwerty"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""2english 0qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/14LMbQWl8n1AJBrIG27V42""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/14LMbQWl8n1AJBrIG27V42"",
+  ""id"" : ""14LMbQWl8n1AJBrIG27V42"",
+  ""images"" : [ ],
+  ""name"" : ""Playlist hits banger mix"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwyYjQ3NTI5OGM1NmYxYWU4YmFkZmJjMGUyMTAxOTJlM2NiYjMxZjFk"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/14LMbQWl8n1AJBrIG27V42/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:14LMbQWl8n1AJBrIG27V42""
+}"
+347,525,9249,574,574,test_rhug2u0lqek2_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""ost Playlist"", ""description"": ""6the decades hands by"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""6the decades hands by"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0i73zIc09wwga2surQaZDA""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0i73zIc09wwga2surQaZDA"",
+  ""id"" : ""0i73zIc09wwga2surQaZDA"",
+  ""images"" : [ ],
+  ""name"" : ""ost Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxlN2JjMTIyNzM1MDQ3ZGE1MmJjOWMwYjEyY2IyZThiOWZmNDFjMWRj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0i73zIc09wwga2surQaZDA/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0i73zIc09wwga2surQaZDA""
+}"
+399,363,2521,1211,1211,test_1hbazhf460zed_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""anime"", ""description"": ""english languages the hands"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""english languages the hands"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/06cDdRN8LPAeaeGQ8RezUb""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/06cDdRN8LPAeaeGQ8RezUb"",
+  ""id"" : ""06cDdRN8LPAeaeGQ8RezUb"",
+  ""images"" : [ ],
+  ""name"" : ""anime"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw5ODMxYzJjOGU0NTE1OGMxMWY0NTExMzQ0ZGYzYWRjZjhmZGY5ODg3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/06cDdRN8LPAeaeGQ8RezUb/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:06cDdRN8LPAeaeGQ8RezUb""
+}"
+162,116,3448,153,153,test_vbhf4grsfvj9_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""movie 69ost opera"", ""description"": ""rolling decades"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""rolling decades"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4qZQFuSgXORmmBzsPL8qJ9""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4qZQFuSgXORmmBzsPL8qJ9"",
+  ""id"" : ""4qZQFuSgXORmmBzsPL8qJ9"",
+  ""images"" : [ ],
+  ""name"" : ""movie 69ost opera"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSxlOGIxZjUwNWJiNzZiZGU2YTMyMDM1YzIyN2YzZWRkZDI1YzgxZTAz"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4qZQFuSgXORmmBzsPL8qJ9/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4qZQFuSgXORmmBzsPL8qJ9""
+}"
+113,636,2822,484,484,test_rl7ua5v3vsdd_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""videogame podcast"", ""description"": ""qwerty megamix"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""qwerty megamix"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2vcioNRhTcukwP5VXbJGGy""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2vcioNRhTcukwP5VXbJGGy"",
+  ""id"" : ""2vcioNRhTcukwP5VXbJGGy"",
+  ""images"" : [ ],
+  ""name"" : ""videogame podcast"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkOTVlOTVkMTViZjc3Mzk2NWRhMmQ5ZDlmMTZkYzUxNjg4NDAxMWI1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2vcioNRhTcukwP5VXbJGGy/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2vcioNRhTcukwP5VXbJGGy""
+}"
+341,745,8223,886,886,test_1jy4xebu8vz1t_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""anime pop"", ""description"": ""the Playlist description megamix"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""the Playlist description megamix"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1PKFAe54hK7PMeTi3WGlr9""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1PKFAe54hK7PMeTi3WGlr9"",
+  ""id"" : ""1PKFAe54hK7PMeTi3WGlr9"",
+  ""images"" : [ ],
+  ""name"" : ""anime pop"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxiYzVkNWNmZDVmNTkxMzdmYjhmZmE2MDc3MTJmYzY5YzY0M2RmYWVi"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1PKFAe54hK7PMeTi3WGlr9/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1PKFAe54hK7PMeTi3WGlr9""
+}"
+433,857,3374,676,676,test_1h7u95zff2o1f_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""custom custom banger Playlist"", ""description"": ""hands flute"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""hands flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3GYk7NkbEwP133N0lJ54MH""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3GYk7NkbEwP133N0lJ54MH"",
+  ""id"" : ""3GYk7NkbEwP133N0lJ54MH"",
+  ""images"" : [ ],
+  ""name"" : ""custom custom banger Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwxYzRlZmE3YzAwYTJhY2ZlNjcyODNjMGUxMjFiMGU3NGE0N2FiMGEx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3GYk7NkbEwP133N0lJ54MH/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3GYk7NkbEwP133N0lJ54MH""
+}"
+291,774,9966,390,390,test_vf45zjkc75tg_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""pop banger"", ""description"": ""guitar languages 4the recommended"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""guitar languages 4the recommended"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6laye8G5p3Hkym0Hi6qAT1""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6laye8G5p3Hkym0Hi6qAT1"",
+  ""id"" : ""6laye8G5p3Hkym0Hi6qAT1"",
+  ""images"" : [ ],
+  ""name"" : ""pop banger"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwyMDNiYzMxZWE4YTYwZTBhZTAyMGQ2NzU5YWUzY2U2ZTNlZmQ3ODcx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6laye8G5p3Hkym0Hi6qAT1/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6laye8G5p3Hkym0Hi6qAT1""
+}"
+474,432,4690,651,651,test_sksboqchisz8_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""banger latin"", ""description"": ""japanese stones"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""japanese stones"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2U7NoxP35CVbcNIm0MYtTK""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2U7NoxP35CVbcNIm0MYtTK"",
+  ""id"" : ""2U7NoxP35CVbcNIm0MYtTK"",
+  ""images"" : [ ],
+  ""name"" : ""banger latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxhZTViZGU3MTNmZDdiZmQ2YWE3ZDIyNWZkZmI1MmMwYjUxODEyYjVj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2U7NoxP35CVbcNIm0MYtTK/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2U7NoxP35CVbcNIm0MYtTK""
+}"
+412,528,499,304,304,test_uvbee61o9ilf_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""banger"", ""description"": ""classics languages"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""classics languages"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6h6J413RarBResqr5aLVMe""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6h6J413RarBResqr5aLVMe"",
+  ""id"" : ""6h6J413RarBResqr5aLVMe"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwwZDFhNjc5MzMyYWY3NWZmOGQwODc1NzMyZmFjYTViZWJkMGYxYzE4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6h6J413RarBResqr5aLVMe/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6h6J413RarBResqr5aLVMe""
+}"
+101,214,2411,860,860,test_urjmaltspjxy_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""Playlist"", ""description"": ""stones french qwerty"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""stones french qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5ILS3MGvhAmJJ41xGOhag3""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5ILS3MGvhAmJJ41xGOhag3"",
+  ""id"" : ""5ILS3MGvhAmJJ41xGOhag3"",
+  ""images"" : [ ],
+  ""name"" : ""Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxjZWIwYzM0YzM4YTU4ODdjZDk2YjZkZWRjZWRmMjY5NGMxZjA5ZDg1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5ILS3MGvhAmJJ41xGOhag3/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5ILS3MGvhAmJJ41xGOhag3""
+}"
+273,833,6897,1491,1491,test_1jyoe860vhbue_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""hits"", ""description"": ""piano decades"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano decades"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4sERBsXyLP4bYkLgnnxiBR""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4sERBsXyLP4bYkLgnnxiBR"",
+  ""id"" : ""4sERBsXyLP4bYkLgnnxiBR"",
+  ""images"" : [ ],
+  ""name"" : ""hits"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwzNzBkNmNmYjc1YTA0ZTI2NmEzMzNmMGZmMGJhNmI5ZDQyZjdiYmUx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4sERBsXyLP4bYkLgnnxiBR/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4sERBsXyLP4bYkLgnnxiBR""
+}"
+340,249,8335,1253,1253,test_u85nux5tjyw2_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""rock"", ""description"": ""Metallica blondie"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica blondie"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0SwAtXgyZCFOQOIRYLyuDW""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0SwAtXgyZCFOQOIRYLyuDW"",
+  ""id"" : ""0SwAtXgyZCFOQOIRYLyuDW"",
+  ""images"" : [ ],
+  ""name"" : ""rock"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwwOTRmMTYzYzhkN2IyZWUwOTBjMTk2OTUzYTAxZjk4NDQ4YTJmNDcz"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0SwAtXgyZCFOQOIRYLyuDW/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0SwAtXgyZCFOQOIRYLyuDW""
+}"
+37,371,8519,103,103,test_socch7lcu929_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""ost banger hip"", ""description"": ""piano classics"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4m5vC6FDhReTjrZkb4m3L2""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4m5vC6FDhReTjrZkb4m3L2"",
+  ""id"" : ""4m5vC6FDhReTjrZkb4m3L2"",
+  ""images"" : [ ],
+  ""name"" : ""ost banger hip"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwwZTk3YTg1N2Q5MGJkZWRkYzNhMWJlZTA2ZTQwMmQyZDY2MjVhNTM5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4m5vC6FDhReTjrZkb4m3L2/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4m5vC6FDhReTjrZkb4m3L2""
+}"
+108,672,8576,1315,1315,test_urupbhzmlir9_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""movie emotional"", ""description"": ""english metal flute the"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""english metal flute the"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7vWPQ5lYFRkNRp3xUGq40l""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7vWPQ5lYFRkNRp3xUGq40l"",
+  ""id"" : ""7vWPQ5lYFRkNRp3xUGq40l"",
+  ""images"" : [ ],
+  ""name"" : ""movie emotional"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwyZjczMWJmYTJlNjM2YTk5MDVkMDQ4Y2E3YmRiMWNiN2MxNTZiNjky"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7vWPQ5lYFRkNRp3xUGq40l/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7vWPQ5lYFRkNRp3xUGq40l""
+}"
+258,404,9742,1172,1172,test_qhkkc4693goj_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""banger anime"", ""description"": ""from classics"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""from classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/61mJpAF9u2dLJuL5fIEnt1""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/61mJpAF9u2dLJuL5fIEnt1"",
+  ""id"" : ""61mJpAF9u2dLJuL5fIEnt1"",
+  ""images"" : [ ],
+  ""name"" : ""banger anime"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSxkZmViZWExYmI0N2UxYTU4ZGFiYTJlZDkyZjI2YmVlZGY2YzAyMzU5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/61mJpAF9u2dLJuL5fIEnt1/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:61mJpAF9u2dLJuL5fIEnt1""
+}"
+205,101,3207,2015,2015,test_ubgtrwaujy2f_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""hip"", ""description"": ""the languages original"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""the languages original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/11pWYVj1mGcElDPhPYj0l3""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/11pWYVj1mGcElDPhPYj0l3"",
+  ""id"" : ""11pWYVj1mGcElDPhPYj0l3"",
+  ""images"" : [ ],
+  ""name"" : ""hip"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxlMTAzMjdkNzNlNWU1NjRlOGEwZjcxNDljM2ZiYzU3NGMyZjE2MjM1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/11pWYVj1mGcElDPhPYj0l3/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:11pWYVj1mGcElDPhPYj0l3""
+}"
+338,146,7209,1336,1336,test_u7ojagrna0rl_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""banger"", ""description"": ""Playlist languages"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Playlist languages"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/56KTX5XTgEIS8VXt4XmUei""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/56KTX5XTgEIS8VXt4XmUei"",
+  ""id"" : ""56KTX5XTgEIS8VXt4XmUei"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw1MTAwZTFhYWZiNWRmZjExY2M2ZWRlZDZjZjc2NzA0NDExYmFkN2Ix"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/56KTX5XTgEIS8VXt4XmUei/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:56KTX5XTgEIS8VXt4XmUei""
+}"
+40,976,5179,638,638,test_s4xvqm9lwsvp_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""Playlist rock"", ""description"": ""megamix english"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""megamix english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2ZXLceV27I3ZKyqxy7H6vj""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2ZXLceV27I3ZKyqxy7H6vj"",
+  ""id"" : ""2ZXLceV27I3ZKyqxy7H6vj"",
+  ""images"" : [ ],
+  ""name"" : ""Playlist rock"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwyMzZmNjdjNDEwMDRkZGIyZWY0YzM2OWI2MzdiMWYyODYwODY5NWI0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2ZXLceV27I3ZKyqxy7H6vj/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2ZXLceV27I3ZKyqxy7H6vj""
+}"
+163,645,2686,233,233,test_r1fmk51btyea_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""videogame latin"", ""description"": ""the acdc"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""the acdc"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6RipyuycRfx8W94YFdIXKB""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6RipyuycRfx8W94YFdIXKB"",
+  ""id"" : ""6RipyuycRfx8W94YFdIXKB"",
+  ""images"" : [ ],
+  ""name"" : ""videogame latin"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw4YmFmYzMxOWJjNTQyNjJiZmQwMjA1ODJkY2VkY2VmMDNiZGIyYWI3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6RipyuycRfx8W94YFdIXKB/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6RipyuycRfx8W94YFdIXKB""
+}"
+153,723,4695,1968,1968,test_1hblknhrcuj3k_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""pop hop"", ""description"": ""Metallica classics"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3pLdGUcbrtoRGLvoCR221V""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3pLdGUcbrtoRGLvoCR221V"",
+  ""id"" : ""3pLdGUcbrtoRGLvoCR221V"",
+  ""images"" : [ ],
+  ""name"" : ""pop hop"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzYjE3Nzg1MmY2OWFhYjYyOGFjZjlmODlmMDBhNzU5MjY0YmZjMDFj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3pLdGUcbrtoRGLvoCR221V/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3pLdGUcbrtoRGLvoCR221V""
+}"
+454,83,6354,225,225,test_ublujzrzb61v_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""metal banger"", ""description"": ""italian english"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""italian english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6BM5UVnNtVdMMcrG0JMtYN""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6BM5UVnNtVdMMcrG0JMtYN"",
+  ""id"" : ""6BM5UVnNtVdMMcrG0JMtYN"",
+  ""images"" : [ ],
+  ""name"" : ""metal banger"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwwMDljMWM3MTY2MWIzOGIyMDNkZDAwY2EwYmQzMzUxZGEzZTZiNzdh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6BM5UVnNtVdMMcrG0JMtYN/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6BM5UVnNtVdMMcrG0JMtYN""
+}"
+28,980,9627,55,55,test_qhkj6948do4i_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""hop episode hip videogame anime"", ""description"": ""rising apple"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""rising apple"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5AYaib59iI49RGi3xmnuHQ""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5AYaib59iI49RGi3xmnuHQ"",
+  ""id"" : ""5AYaib59iI49RGi3xmnuHQ"",
+  ""images"" : [ ],
+  ""name"" : ""hop episode hip videogame anime"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxiZmNlOTA2MjA1YmM2MWE5MjJmNzQ3ZGMwNDRmNWQwZmIyMWUxMDlh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5AYaib59iI49RGi3xmnuHQ/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5AYaib59iI49RGi3xmnuHQ""
+}"
+169,81,1103,735,735,test_1jyd9vwpp2f5h_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""Playlist"", ""description"": ""Playlist hands"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Playlist hands"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3jwE0y6d2YRKhvXw6lXbh7""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3jwE0y6d2YRKhvXw6lXbh7"",
+  ""id"" : ""3jwE0y6d2YRKhvXw6lXbh7"",
+  ""images"" : [ ],
+  ""name"" : ""Playlist"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw1NTg4NTc5NzIyMmIwYzUyYzkzNTU5YzVmMGViMzU1MDI4Y2E1MWFh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3jwE0y6d2YRKhvXw6lXbh7/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3jwE0y6d2YRKhvXw6lXbh7""
+}"
+284,975,6855,89,89,test_qec53ibnt9gx_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""pop 1music"", ""description"": ""languages japanese english"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""languages japanese english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2vYIbCBRNBP2nw4BJmy4i3""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2vYIbCBRNBP2nw4BJmy4i3"",
+  ""id"" : ""2vYIbCBRNBP2nw4BJmy4i3"",
+  ""images"" : [ ],
+  ""name"" : ""pop 1music"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw3MWFiNDc5YmE0NWZmODYwNzMwZTk4NGRlNDRjNzM5MzhhNDVjYzY1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2vYIbCBRNBP2nw4BJmy4i3/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2vYIbCBRNBP2nw4BJmy4i3""
+}"
+251,961,5878,52,52,test_qhkirtuukpr6_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""anime"", ""description"": ""Metallica by"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica by"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4VnWCoFe3Jc8mgqNO1czaC""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4VnWCoFe3Jc8mgqNO1czaC"",
+  ""id"" : ""4VnWCoFe3Jc8mgqNO1czaC"",
+  ""images"" : [ ],
+  ""name"" : ""anime"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzOTFiMWViNTA3MjRjMDQwZGIyYTAxMWIyY2YzMzRjNmU0MTEwOTNk"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4VnWCoFe3Jc8mgqNO1czaC/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4VnWCoFe3Jc8mgqNO1czaC""
+}"
+290,832,4676,1632,1632,test_skxu2f0jia0l_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""hop"", ""description"": ""description Metallica"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""description Metallica"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4YFkNIUTZVcGO5xzXuolhR""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4YFkNIUTZVcGO5xzXuolhR"",
+  ""id"" : ""4YFkNIUTZVcGO5xzXuolhR"",
+  ""images"" : [ ],
+  ""name"" : ""hop"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw0MDRmZWVmMzU0ODAyYWE1OGUwZWY1YzdhZDA2N2UyY2Y1Y2M1ZWY3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4YFkNIUTZVcGO5xzXuolhR/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4YFkNIUTZVcGO5xzXuolhR""
+}"
+313,339,2052,468,468,test_vey4742h0awo_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""hop"", ""description"": ""french languages"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""french languages"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/47XQnKIe4wdLZ8jlqpWKfB""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/47XQnKIe4wdLZ8jlqpWKfB"",
+  ""id"" : ""47XQnKIe4wdLZ8jlqpWKfB"",
+  ""images"" : [ ],
+  ""name"" : ""hop"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwwMGFlYjM2ODA0MDY3MjY5OTM2OGY2YjdkMDgxNzk4Y2FjMGQ0OGI5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/47XQnKIe4wdLZ8jlqpWKfB/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:47XQnKIe4wdLZ8jlqpWKfB""
+}"
+336,780,5646,1481,1481,test_ursf2q8x4qpj_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""hop latin"", ""description"": ""by Playlist japanese Playlist"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""by Playlist japanese Playlist"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0oCbPCXYpmh1tzFfb3qAy2""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0oCbPCXYpmh1tzFfb3qAy2"",
+  ""id"" : ""0oCbPCXYpmh1tzFfb3qAy2"",
+  ""images"" : [ ],
+  ""name"" : ""hop latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw1ZTgzYmQzOTUxNmFhMjQwOWVjNmM4MGQ3NjdhMzU4OTllNWM3OWJh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0oCbPCXYpmh1tzFfb3qAy2/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0oCbPCXYpmh1tzFfb3qAy2""
+}"
+209,157,5119,674,674,test_t4crycfi33ug_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""hop latin"", ""description"": ""description guitar Metallica decades"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""description guitar Metallica decades"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6pwMp7wyMxB2f5wocrARCk""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6pwMp7wyMxB2f5wocrARCk"",
+  ""id"" : ""6pwMp7wyMxB2f5wocrARCk"",
+  ""images"" : [ ],
+  ""name"" : ""hop latin"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw3ZTI1YzM1NDNlM2U1NjAzNGU2YmNjMTk0ZmNlNDY0N2JmOGI0NTA3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6pwMp7wyMxB2f5wocrARCk/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6pwMp7wyMxB2f5wocrARCk""
+}"
+342,973,2381,411,411,test_1iaxmddwffrdy_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""anime 93hop"", ""description"": ""english classics"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""english classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2V2T2MDZJTFRhmtkJsSf9x""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2V2T2MDZJTFRhmtkJsSf9x"",
+  ""id"" : ""2V2T2MDZJTFRhmtkJsSf9x"",
+  ""images"" : [ ],
+  ""name"" : ""anime 93hop"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxjMTNhZjEyYmQyYTFkOWRhNjIzZDEwYzQyOGJmNTYzZTU4OWVkZGY3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2V2T2MDZJTFRhmtkJsSf9x/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2V2T2MDZJTFRhmtkJsSf9x""
+}"
+429,131,3714,1890,1890,test_u8apewmx40h2_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""mix 9podcast"", ""description"": ""Playlist english"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Playlist english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7kUMKqYiMBXXa6FPFQz0KS""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7kUMKqYiMBXXa6FPFQz0KS"",
+  ""id"" : ""7kUMKqYiMBXXa6FPFQz0KS"",
+  ""images"" : [ ],
+  ""name"" : ""mix 9podcast"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxiMTQ2ODI4NjlkYmM5Y2E2NmI3ZjMyM2U3OGYyOWI3YzMwZWJhNGM0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7kUMKqYiMBXXa6FPFQz0KS/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7kUMKqYiMBXXa6FPFQz0KS""
+}"
+180,4,3235,8,8,test_t81afor5dc8o_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""banger banger epic"", ""description"": ""piano qwerty"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""piano qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0Ow3bUSGtcXZY28531cL18""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0Ow3bUSGtcXZY28531cL18"",
+  ""id"" : ""0Ow3bUSGtcXZY28531cL18"",
+  ""images"" : [ ],
+  ""name"" : ""banger banger epic"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwyMDZiMWE0OGY5NzNhN2JhNDkzZThkN2Q4NjY4ZjNiNzhjMGRlNzUx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0Ow3bUSGtcXZY28531cL18/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0Ow3bUSGtcXZY28531cL18""
+}"
+14,399,5377,841,841,test_u8apf2vvwj1g_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""4"", ""description"": ""hands english"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""hands english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5MyKEcLuc3NP6ks2VvzHj4""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5MyKEcLuc3NP6ks2VvzHj4"",
+  ""id"" : ""5MyKEcLuc3NP6ks2VvzHj4"",
+  ""images"" : [ ],
+  ""name"" : ""4"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw5ODIyMGI5NGQwZmRlM2Y5MTg3YzRkZGE1ODc1ZDUzNWI5ZTI1MzM2"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5MyKEcLuc3NP6ks2VvzHj4/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5MyKEcLuc3NP6ks2VvzHj4""
+}"
+248,965,1104,1284,1284,test_1h7z987ztzad3_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""videogame"", ""description"": ""by qwerty"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""by qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0mMtcvLtV0ST4nxPhyeiP2""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0mMtcvLtV0ST4nxPhyeiP2"",
+  ""id"" : ""0mMtcvLtV0ST4nxPhyeiP2"",
+  ""images"" : [ ],
+  ""name"" : ""videogame"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw4NDNiM2Q1NjRlOWFhYmYxN2Y3ZjVkOGMzZTgyNWIyMDMyZjg0ZTdk"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0mMtcvLtV0ST4nxPhyeiP2/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0mMtcvLtV0ST4nxPhyeiP2""
+}"
+307,967,3578,1818,1818,test_uvjrcinoyb8m_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""anime"", ""description"": ""stones guitar"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""stones guitar"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/45o8kxYRFt3Fh2QoUujnV9""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/45o8kxYRFt3Fh2QoUujnV9"",
+  ""id"" : ""45o8kxYRFt3Fh2QoUujnV9"",
+  ""images"" : [ ],
+  ""name"" : ""anime"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxlZjEwYjM2NzY3ZTkxNTUyMmY2Yzc3MGJlYTVlMmJmOWRhNzcwNjcy"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/45o8kxYRFt3Fh2QoUujnV9/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:45o8kxYRFt3Fh2QoUujnV9""
+}"
+25,576,581,288,288,test_sl684c87mcl0_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""podcast"", ""description"": ""piano from"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""piano from"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4j0CrtddKLAA6BnuYgCDnE""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4j0CrtddKLAA6BnuYgCDnE"",
+  ""id"" : ""4j0CrtddKLAA6BnuYgCDnE"",
+  ""images"" : [ ],
+  ""name"" : ""podcast"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkNmMwOTVhZDIwNDI5OGFkNTZjZjY1YWJhZTFhNTllZjgxZTgyZTRj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4j0CrtddKLAA6BnuYgCDnE/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4j0CrtddKLAA6BnuYgCDnE""
+}"
+167,684,8462,120,120,test_qhw5tkpqn7fl_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""latin"", ""description"": ""the greatest"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""the greatest"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/73JHSgZKKtsXdFsAcNtLIZ""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/73JHSgZKKtsXdFsAcNtLIZ"",
+  ""id"" : ""73JHSgZKKtsXdFsAcNtLIZ"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw1YTg1OGQ3N2NjYmZjZjVhNGUwZjY3NTkzYTQ0M2M0M2E4ZDczODNm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/73JHSgZKKtsXdFsAcNtLIZ/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:73JHSgZKKtsXdFsAcNtLIZ""
+}"
+80,998,7315,714,714,test_qxtblct2irlf_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""classic podcast 6latin ost"", ""description"": ""susumu description"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""susumu description"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3EEvXSBDNvnzfEEyY7C1nn""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3EEvXSBDNvnzfEEyY7C1nn"",
+  ""id"" : ""3EEvXSBDNvnzfEEyY7C1nn"",
+  ""images"" : [ ],
+  ""name"" : ""classic podcast 6latin ost"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw0YTFmMjM1MzJiMWQ3ZGEwOTQwM2YxNzcwODJhY2Q5ZjNmYjdkZjk0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3EEvXSBDNvnzfEEyY7C1nn/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3EEvXSBDNvnzfEEyY7C1nn""
+}"
+72,77,3638,1070,1070,test_urhb7ey7vqd3_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""podcast"", ""description"": ""Metallica description Playlist the"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica description Playlist the"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4rDxvrBaEjKlQwV38rLM2r""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4rDxvrBaEjKlQwV38rLM2r"",
+  ""id"" : ""4rDxvrBaEjKlQwV38rLM2r"",
+  ""images"" : [ ],
+  ""name"" : ""podcast"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw5ODVjNjlkZGI2NjYwZGRmZDU5N2UwZGE4MGY4MWIwZmVmNTQyMzM4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4rDxvrBaEjKlQwV38rLM2r/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4rDxvrBaEjKlQwV38rLM2r""
+}"
+302,257,3928,686,686,test_s0uhooicdjcp_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""podcast podcast classic"", ""description"": ""japanese italian italian"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""japanese italian italian"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6hMKYMqKqeR0XsJRdMuPI4""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6hMKYMqKqeR0XsJRdMuPI4"",
+  ""id"" : ""6hMKYMqKqeR0XsJRdMuPI4"",
+  ""images"" : [ ],
+  ""name"" : ""podcast podcast classic"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxiYmEzZWFhYjc1MmYyMWMwMWIyMTk4Y2MxMDI1NzQ5OTMwY2VjNWFi"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6hMKYMqKqeR0XsJRdMuPI4/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6hMKYMqKqeR0XsJRdMuPI4""
+}"
+240,899,7112,1331,1331,test_t49ko2x0xlps_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""Playlist 1hip"", ""description"": ""hits piano"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""hits piano"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3NzWKNzmwlNZp0shNtBk7k""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3NzWKNzmwlNZp0shNtBk7k"",
+  ""id"" : ""3NzWKNzmwlNZp0shNtBk7k"",
+  ""images"" : [ ],
+  ""name"" : ""Playlist 1hip"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw3ZjEwYzFmMzZkMzUwNzVjZjk3ZDhhNmY2NWEwYWYxMDBiZGIyNzY3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3NzWKNzmwlNZp0shNtBk7k/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3NzWKNzmwlNZp0shNtBk7k""
+}"
+323,555,60,1932,1932,test_qxwmxmz3lh6a_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""latin anime latin latin"", ""description"": ""english Metallica"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""english Metallica"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/64UXLSTWe3zyeyaGefTVc6""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/64UXLSTWe3zyeyaGefTVc6"",
+  ""id"" : ""64UXLSTWe3zyeyaGefTVc6"",
+  ""images"" : [ ],
+  ""name"" : ""latin anime latin latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwxMDUwMGM5NWFkYWJiOGU1NmZlZThhZWQ2ZmIwZWZiNGQzY2ZhNTU4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/64UXLSTWe3zyeyaGefTVc6/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:64UXLSTWe3zyeyaGefTVc6""
+}"
+71,11,7435,1009,1009,test_qhntbxhpxf8j_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""banger"", ""description"": ""guitar megamix"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""guitar megamix"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/41N8LUUF7pxKGbm3SKgTLt""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/41N8LUUF7pxKGbm3SKgTLt"",
+  ""id"" : ""41N8LUUF7pxKGbm3SKgTLt"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzZTgwMTAzOWQ1ZmVjMDNmMWQwYjc3MjllMGM5Zjk3OGYyMTFiODFm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/41N8LUUF7pxKGbm3SKgTLt/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:41N8LUUF7pxKGbm3SKgTLt""
+}"
+176,516,1049,761,761,test_1hr5bzo2yinn7_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""custom classic"", ""description"": ""Metallica languages"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica languages"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1hJzeSu2Txkbzz6uOIkPGv""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1hJzeSu2Txkbzz6uOIkPGv"",
+  ""id"" : ""1hJzeSu2Txkbzz6uOIkPGv"",
+  ""images"" : [ ],
+  ""name"" : ""custom classic"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzMTBkMTNmOGRjMGU2Zjc4ODkxOGQ1MzU4ZDU5MWVjMTQxZTk4OGNm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1hJzeSu2Txkbzz6uOIkPGv/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1hJzeSu2Txkbzz6uOIkPGv""
+}"
+59,419,2464,2081,2081,test_1k2524sqtqbeg_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""music hop music"", ""description"": ""soundtrack italian"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""soundtrack italian"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2RyqlVCgRCEndxJjsN4mH0""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2RyqlVCgRCEndxJjsN4mH0"",
+  ""id"" : ""2RyqlVCgRCEndxJjsN4mH0"",
+  ""images"" : [ ],
+  ""name"" : ""music hop music"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkMTM5MjkzZWM3NWJmNDE5Njc0ZWYzZGI5MWJhNzBlM2VmM2ViMzc4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2RyqlVCgRCEndxJjsN4mH0/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2RyqlVCgRCEndxJjsN4mH0""
+}"
+365,63,9169,1917,1917,test_rl8drl0hu4vo_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""banger"", ""description"": ""by piano"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""by piano"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1tUhFAmS4833aLXbr2xaKo""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1tUhFAmS4833aLXbr2xaKo"",
+  ""id"" : ""1tUhFAmS4833aLXbr2xaKo"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw3ZDczNTdlNzMxMmEwODIyMWE2MjExZTkwNDc2ODdmMDU2YWZiZDA2"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1tUhFAmS4833aLXbr2xaKo/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1tUhFAmS4833aLXbr2xaKo""
+}"
+149,934,4018,1104,1104,test_t4q6jbln8h15_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""metal"", ""description"": ""Metallica recommended classics italian original apple"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""Metallica recommended classics italian original apple"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2qvqX3ZAbSvAmmbcJuxwQg""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2qvqX3ZAbSvAmmbcJuxwQg"",
+  ""id"" : ""2qvqX3ZAbSvAmmbcJuxwQg"",
+  ""images"" : [ ],
+  ""name"" : ""metal"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxkZWUwNTRhZWZkNjhhYWMxMDMyMTY0N2FkYzU3NGY2OTVlNjA0ODE4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2qvqX3ZAbSvAmmbcJuxwQg/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2qvqX3ZAbSvAmmbcJuxwQg""
+}"
+105,577,2542,862,862,test_r1l5sm6s652u_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""anime anime"", ""description"": ""by english apple qwerty japanese"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""by english apple qwerty japanese"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1zFuQH6vW1rf7YPeEGFIA4""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1zFuQH6vW1rf7YPeEGFIA4"",
+  ""id"" : ""1zFuQH6vW1rf7YPeEGFIA4"",
+  ""images"" : [ ],
+  ""name"" : ""anime anime"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw0YTg1MTk4MzUxN2RiNDc2ZDE5NWIwZmY2NjU0ODRmMTlhOGExMTYy"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1zFuQH6vW1rf7YPeEGFIA4/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1zFuQH6vW1rf7YPeEGFIA4""
+}"
+231,156,1413,1418,1418,test_1h7wimf3z87dw_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""emotional"", ""description"": ""italian Playlist"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""italian Playlist"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6DvR4p3sS9tkMEvx7SA2fY""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6DvR4p3sS9tkMEvx7SA2fY"",
+  ""id"" : ""6DvR4p3sS9tkMEvx7SA2fY"",
+  ""images"" : [ ],
+  ""name"" : ""emotional"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw5MzA3YmNkMDg4YzBhOTk5YTA1NGZkZGNiNDVhOWI0NjY2YzhhYTg0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6DvR4p3sS9tkMEvx7SA2fY/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6DvR4p3sS9tkMEvx7SA2fY""
+}"
+406,347,6102,510,510,test_1jifill2pexiq_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""videogame"", ""description"": ""decades guitar flute"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""decades guitar flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/592eX22uCQQ1Y0BbIaaF4Y""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/592eX22uCQQ1Y0BbIaaF4Y"",
+  ""id"" : ""592eX22uCQQ1Y0BbIaaF4Y"",
+  ""images"" : [ ],
+  ""name"" : ""videogame"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwzMzg2ZWNhNDVmYzNjOTI1NTVlMjU4YjM2ZDAyYjM5MGFmYmJmMjVi"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/592eX22uCQQ1Y0BbIaaF4Y/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:592eX22uCQQ1Y0BbIaaF4Y""
+}"
+83,431,8867,1516,1516,test_qhsw4butjrky_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""latin anime anime podcast"", ""description"": ""Metallica italian description"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Metallica italian description"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0TUuO17YJdkVtgAHEddBP7""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0TUuO17YJdkVtgAHEddBP7"",
+  ""id"" : ""0TUuO17YJdkVtgAHEddBP7"",
+  ""images"" : [ ],
+  ""name"" : ""latin anime anime podcast"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw3M2MwZDZhYjUyZjg4N2Y2YzYyNTM2MjE4NzAxYmQ1MWYwNWZmMTcy"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0TUuO17YJdkVtgAHEddBP7/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0TUuO17YJdkVtgAHEddBP7""
+}"
+106,495,840,75,75,test_1hbaf5glaog9u_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""anime anime anime ost anime"", ""description"": ""the acdc hirasawa from"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""the acdc hirasawa from"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5lH5uSejotaTy7xqX1PnfG""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5lH5uSejotaTy7xqX1PnfG"",
+  ""id"" : ""5lH5uSejotaTy7xqX1PnfG"",
+  ""images"" : [ ],
+  ""name"" : ""anime anime anime ost anime"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw3MzdmYjZlNjViMTUwMjY2M2Y3ODMwNTNkNzhiZThlYTFlMTgxZGFh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5lH5uSejotaTy7xqX1PnfG/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5lH5uSejotaTy7xqX1PnfG""
+}"
+309,335,6041,1351,1351,test_qxoatrdr9s1l_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""videogame 4anime podcast"", ""description"": ""blondie japanese"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""blondie japanese"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6FsQIGyMOvMKI1yNjrUL3f""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6FsQIGyMOvMKI1yNjrUL3f"",
+  ""id"" : ""6FsQIGyMOvMKI1yNjrUL3f"",
+  ""images"" : [ ],
+  ""name"" : ""videogame 4anime podcast"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwzMzVjZWYyZjA2YWNkNGIxZGVjZmIyMDZmMjg4NGEwNGQ4ZTllMWIw"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6FsQIGyMOvMKI1yNjrUL3f/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6FsQIGyMOvMKI1yNjrUL3f""
+}"
+69,904,6805,602,602,test_r1fnq80t2rzt_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""videogame anime 8latin hop"", ""description"": ""the french flute japanese"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""the french flute japanese"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1VlID1Hch7mrIVsasieCba""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1VlID1Hch7mrIVsasieCba"",
+  ""id"" : ""1VlID1Hch7mrIVsasieCba"",
+  ""images"" : [ ],
+  ""name"" : ""videogame anime 8latin hop"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxmY2M5NTkyOTI5MDdlMTc3OGFmNWM3NjMxOTkxN2ZjMDMxNmE4NzM2"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1VlID1Hch7mrIVsasieCba/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1VlID1Hch7mrIVsasieCba""
+}"
+141,591,6606,1110,1110,test_s10kproszign_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""music"", ""description"": ""hands from"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""hands from"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4qmE90YgUGwiU50cqkjNXy""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4qmE90YgUGwiU50cqkjNXy"",
+  ""id"" : ""4qmE90YgUGwiU50cqkjNXy"",
+  ""images"" : [ ],
+  ""name"" : ""music"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw0YzVkYzQ2NWMyNmUzMDE1YjIzNGU2ZjdiMTEwYWRhMjM0ZmIxZWM5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4qmE90YgUGwiU50cqkjNXy/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4qmE90YgUGwiU50cqkjNXy""
+}"
+446,670,3226,1471,1471,test_uvk8f0gy5ctz_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""latin"", ""description"": ""Playlist english"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Playlist english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/610Rw99kwBZtz9sLpF884d""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/610Rw99kwBZtz9sLpF884d"",
+  ""id"" : ""610Rw99kwBZtz9sLpF884d"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw0ZDI4MGZmMjYxNmQ3NmI5ZjY1NzVkNGI1NzJiNTJlMTY1NzMwZDZm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/610Rw99kwBZtz9sLpF884d/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:610Rw99kwBZtz9sLpF884d""
+}"
+361,920,7859,641,641,test_u85o97sgddgi_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""latin"", ""description"": ""Metallica original english english metal decades classics"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""Metallica original english english metal decades classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2Figu6teafmI7d3zfBBfQp""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2Figu6teafmI7d3zfBBfQp"",
+  ""id"" : ""2Figu6teafmI7d3zfBBfQp"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw4ZjVkZTIwOTRjYWJlZTBiNjRiY2Q0MjRiOTRmN2I4MWEwNTU2N2Y1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2Figu6teafmI7d3zfBBfQp/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2Figu6teafmI7d3zfBBfQp""
+}"
+61,458,5322,1667,1667,test_rl52w9688376_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""mix rock"", ""description"": ""the apple"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""the apple"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7LyNf9yf0H1LLkXsWYg70d""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7LyNf9yf0H1LLkXsWYg70d"",
+  ""id"" : ""7LyNf9yf0H1LLkXsWYg70d"",
+  ""images"" : [ ],
+  ""name"" : ""mix rock"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwzOGYyYWYyNjJmN2ZkMDM3M2M2MGM4M2JmOTNlM2I5NzA3NGU4NDFl"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7LyNf9yf0H1LLkXsWYg70d/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7LyNf9yf0H1LLkXsWYg70d""
+}"
+48,30,121,1525,1525,test_1hv88cyu9h4c8_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""classic"", ""description"": ""languages english"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""languages english"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2zJcDb7EDxPooA3w4q6EJv""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2zJcDb7EDxPooA3w4q6EJv"",
+  ""id"" : ""2zJcDb7EDxPooA3w4q6EJv"",
+  ""images"" : [ ],
+  ""name"" : ""classic"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSw4Yjg1M2U3NzIwOWFiNDI1YzNlOTIzMDhlYmQxYzYwYjVjNzc3NjYy"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2zJcDb7EDxPooA3w4q6EJv/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2zJcDb7EDxPooA3w4q6EJv""
+}"
+133,739,1788,922,922,test_s0x8olnd2rfp_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""banger"", ""description"": ""original qwerty guitar"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""original qwerty guitar"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0mx2XWCkbUWLjWcNy7JKU4""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0mx2XWCkbUWLjWcNy7JKU4"",
+  ""id"" : ""0mx2XWCkbUWLjWcNy7JKU4"",
+  ""images"" : [ ],
+  ""name"" : ""banger"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw4Mzc0MTgyZWIwOTVjYmRiYjMyOTY1MzkzODc0MzQ1Y2NkNWJhYWVj"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0mx2XWCkbUWLjWcNy7JKU4/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0mx2XWCkbUWLjWcNy7JKU4""
+}"
+405,683,9951,1648,1648,test_vey6ge4r13ck_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""ost rock"", ""description"": ""blondie original"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""blondie original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1UGmsSxYeBb16tq1aEaWYw""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1UGmsSxYeBb16tq1aEaWYw"",
+  ""id"" : ""1UGmsSxYeBb16tq1aEaWYw"",
+  ""images"" : [ ],
+  ""name"" : ""ost rock"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxlOWNkNTNlZjU0NDEyM2JmMTg3N2E5Nzc4YzEyNDkyNTgyNjExZDhm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1UGmsSxYeBb16tq1aEaWYw/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1UGmsSxYeBb16tq1aEaWYw""
+}"
+320,834,7230,787,787,test_qdsrs2f27l9i_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""music"", ""description"": ""23japanese greatest"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""23japanese greatest"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1ENN9kBfQZCLoqhtB7eJlf""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1ENN9kBfQZCLoqhtB7eJlf"",
+  ""id"" : ""1ENN9kBfQZCLoqhtB7eJlf"",
+  ""images"" : [ ],
+  ""name"" : ""music"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwwZjI4NjNlNzFmZTkzOWNhZjJiNjM1YWFhNDNlMjc0ZjI5NjJjZWU3"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1ENN9kBfQZCLoqhtB7eJlf/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1ENN9kBfQZCLoqhtB7eJlf""
+}"
+38,523,3361,871,871,test_1h7tq2f5iwny0_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""rock"", ""description"": ""qwerty classics"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""qwerty classics"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/2mWi0MGwfIv20dqZUCVjNK""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/2mWi0MGwfIv20dqZUCVjNK"",
+  ""id"" : ""2mWi0MGwfIv20dqZUCVjNK"",
+  ""images"" : [ ],
+  ""name"" : ""rock"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwxZTRiYTg0YjdiNGY5N2I3NzE2ZGM4OTliYmQ5MjJhZmFlZGE2ODIw"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/2mWi0MGwfIv20dqZUCVjNK/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:2mWi0MGwfIv20dqZUCVjNK""
+}"
+31,231,7077,42,42,test_1hr86fkqlhl4l_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""rock banger emotional metal hip"", ""description"": ""piano flute"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano flute"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4vFEodA90M7AWhlcVTa814""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4vFEodA90M7AWhlcVTa814"",
+  ""id"" : ""4vFEodA90M7AWhlcVTa814"",
+  ""images"" : [ ],
+  ""name"" : ""rock banger emotional metal hip"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwyYjAzYWJmZjA4NGJhZTYxN2UwZjA5MzI0NDkwMzNiYjVhNTZlNWVh"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4vFEodA90M7AWhlcVTa814/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4vFEodA90M7AWhlcVTa814""
+}"
+395,248,1140,157,157,test_t89m53287x9x_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQCNmFH9nuZMy65JS8ROrjmAflPbj64RPuTcGwssdcyUYFMn18c4fODkLuL8CRj37lo5L0m5eHpOfcmRyecSGaZr3FwetOPssu9_BiZWFT1XrUEbz2TXMSDr1jc3Nr8jk0v1RMFmpCZO7lih1KcyXXJ4gegepxJeXToj92DafV-uQrkazmHN4HnXvFtD2gZOfNs0J8jE62b_VSYBpAJGJBj2OEvRYDhrOQM9zC46NGt9ZGTrCVmMhoQPR2tfKD-Z;,user_id=314p6dat3wsraktwd2tawz6vzr3q;,,"{""name"":  ""latin"", ""description"": ""piano hits qwerty"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""piano hits qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/1MSQmrg4BGqykbaiobSwF2""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/1MSQmrg4BGqykbaiobSwF2"",
+  ""id"" : ""1MSQmrg4BGqykbaiobSwF2"",
+  ""images"" : [ ],
+  ""name"" : ""latin"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark1"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/314p6dat3wsraktwd2tawz6vzr3q""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/314p6dat3wsraktwd2tawz6vzr3q"",
+    ""id"" : ""314p6dat3wsraktwd2tawz6vzr3q"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:314p6dat3wsraktwd2tawz6vzr3q""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSxmN2NlNmQ4MjM5Y2U1OGVmMWNkNjQ0NDI5N2UzZTU4MDFkYzA4M2Fm"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/1MSQmrg4BGqykbaiobSwF2/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:1MSQmrg4BGqykbaiobSwF2""
+}"
+238,866,9890,1243,1243,test_1jiajphtc1c9v_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAc7AgdmSWIFWBdY0922uYkprmID9bRr0HFJElC80qryGIhjne1SeSRI325_RluOhc1YnFVnwWqU7ZtY5W9OPxgu_xLFZyYsA4B-IHNji2zEo6XxGa2Cs0pWrCrblxmCngUAU_UC6Y_-CfwlZI2h3kOJSiUNDPo6KRDOlMolxH8-Uvr4f1OOmVZIXwCmIoCVaFtJ-M7tDvSahmQPFgoVwVFNBloq9RXFTx7W3R-c2HPNebhUr6NC4HWOq3mRK9s;,user_id=31q3hnw36axarvbryjncmdxod7bu;,,"{""name"":  ""emotional"", ""description"": ""piano piano 1languages susumu Metallica"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""piano piano 1languages susumu Metallica"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/6yuXrXCXNzdN9G6YMr3C1z""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/6yuXrXCXNzdN9G6YMr3C1z"",
+  ""id"" : ""6yuXrXCXNzdN9G6YMr3C1z"",
+  ""images"" : [ ],
+  ""name"" : ""emotional"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark2"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31q3hnw36axarvbryjncmdxod7bu""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31q3hnw36axarvbryjncmdxod7bu"",
+    ""id"" : ""31q3hnw36axarvbryjncmdxod7bu"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31q3hnw36axarvbryjncmdxod7bu""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw2NjQ5ZWYzY2MxY2Q5MmJkYmM4NWQ1Nzc3Yzk2ODUwYzRkYzE0NTQy"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/6yuXrXCXNzdN9G6YMr3C1z/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:6yuXrXCXNzdN9G6YMr3C1z""
+}"
+96,144,4518,1073,1073,test_1hbd6li99y983_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""videogame"", ""description"": ""decades Metallica original"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""decades Metallica original"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/4Xzd3BRNszPsmQbU9lxGbe""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/4Xzd3BRNszPsmQbU9lxGbe"",
+  ""id"" : ""4Xzd3BRNszPsmQbU9lxGbe"",
+  ""images"" : [ ],
+  ""name"" : ""videogame"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw2ZWZjNTE1MTRlZTNlZTZlZGQwNzcwOGZiYTM1OTBiZGFkM2E2ODQ1"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/4Xzd3BRNszPsmQbU9lxGbe/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:4Xzd3BRNszPsmQbU9lxGbe""
+}"
+493,777,5001,1681,1681,test_1h7wj0eniix4m_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""hop"", ""description"": ""4hands Playlist qwerty"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""4hands Playlist qwerty"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3EJR62CAHBaN8TInT4YYjt""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3EJR62CAHBaN8TInT4YYjt"",
+  ""id"" : ""3EJR62CAHBaN8TInT4YYjt"",
+  ""images"" : [ ],
+  ""name"" : ""hop"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSwzYWI2MzExYWRiOTIxNzUzYmM2MzZlNGQ0OWM0ZmI3MDZlNTk2Mjg4"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3EJR62CAHBaN8TInT4YYjt/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3EJR62CAHBaN8TInT4YYjt""
+}"
+368,86,5616,2060,2060,test_1jeoaayc3fhib_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""classic anime opera mix"", ""description"": ""classics the blondie"", ""public"": false, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""classics the blondie"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/5n1WiW3VsMiSo2s2VAIZhd""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/5n1WiW3VsMiSo2s2VAIZhd"",
+  ""id"" : ""5n1WiW3VsMiSo2s2VAIZhd"",
+  ""images"" : [ ],
+  ""name"" : ""classic anime opera mix"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw2OTkyMDRhOGJlMDQ3ZjUzNzU5ZWFhMjUzNjRhMTRhODNjYzAyZWIx"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/5n1WiW3VsMiSo2s2VAIZhd/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:5n1WiW3VsMiSo2s2VAIZhd""
+}"
+477,397,4245,642,642,test_1k1rpi6ofvwbo_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAIS1ZO0bLdWGa-kM1IhdDy5KuLUqW2tqLOdBSRziMPbsfJFVFrnig-keJu7tQ63gV3hiAv7BHe0lY5cZ_fQGQ1SD9JE4VZEUYcfMkbtsZNsXXoSaxPKj9AyRafTgoWZ3V1lFrY-9NWHOKrGAmJnyXrA0vwDxS21Sc2pBKcW67Ck7K6iKuu5cWZ68JYPeA_pWczG8E3nzlbozT7VEoay0kZ_9Tu4yX_CoccXm0BFTzWfyPmviYLMGxpAn1h1GTb;,user_id=31hae73dc27cjg75derzdd3vvcja;,,"{""name"":  ""opera"", ""description"": ""megamix italian qwerty classics genres"", ""public"": true, ""collaborative"": false  }",201,True,none,"{
+  ""collaborative"" : false,
+  ""description"" : ""megamix italian qwerty classics genres"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/0IvOfovKMwI79r5sVfA4xd""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/0IvOfovKMwI79r5sVfA4xd"",
+  ""id"" : ""0IvOfovKMwI79r5sVfA4xd"",
+  ""images"" : [ ],
+  ""name"" : ""opera"",
+  ""owner"" : {
+    ""display_name"" : ""RESTest Benchmark3"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/31hae73dc27cjg75derzdd3vvcja""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/31hae73dc27cjg75derzdd3vvcja"",
+    ""id"" : ""31hae73dc27cjg75derzdd3vvcja"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:31hae73dc27cjg75derzdd3vvcja""
+  },
+  ""primary_color"" : null,
+  ""public"" : true,
+  ""snapshot_id"" : ""MSxkOTdiN2VmNWY5Nzk5ZmY3MjQ1YTMzOWM1NDZjZjAxOTJjNGIwYzA5"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/0IvOfovKMwI79r5sVfA4xd/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:0IvOfovKMwI79r5sVfA4xd""
+}"
+173,216,2231,1019,1019,test_ubj3md3lf4v7_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAdIyymPKftiZKtCI7jYnDh7NSXRFNLJv-VSdtOws5xfSPgmFbAEo0ZQu6hII-_k_Iw28qMEFbY7ChoCQq9TBr9WZUwIPBPprnEDo7FrwadJb3L5RPawjQgmuZDHfEzgH-Uxc0U6I6ByAaj1HnCkXA6WKH1wGxGB8jXARz8XsTZfRWusXms28wWY3lvo0WbIwTItUJLhALnI5iNzL2ZIYZzrlqh9JfYXLbl_dfpkl7ii6Q7Er78SUgprMqU;,user_id=f7r7r4wp6bk4t2dazcbsf3b6h;,,"{""name"":  ""epic"", ""description"": ""japanese classics apple rising"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""japanese classics apple rising"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/3evIc1O0j8G8p45ziuL3D3""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/3evIc1O0j8G8p45ziuL3D3"",
+  ""id"" : ""3evIc1O0j8G8p45ziuL3D3"",
+  ""images"" : [ ],
+  ""name"" : ""epic"",
+  ""owner"" : {
+    ""display_name"" : ""Restest"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/f7r7r4wp6bk4t2dazcbsf3b6h""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""id"" : ""f7r7r4wp6bk4t2dazcbsf3b6h"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:f7r7r4wp6bk4t2dazcbsf3b6h""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSw2YjcyNjBhOTAwNmRiZmViODkwZDNkZDJmNWFkOTZjNmU4YWFjZWU0"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/3evIc1O0j8G8p45ziuL3D3/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:3evIc1O0j8G8p45ziuL3D3""
+}"
+348,244,3652,84,84,test_1hrud0gi9b8s2_createPlaylist,,createPlaylist,/users/{user_id}/playlists,POST,Authorization=Bearer+BQAOyp_fU26dH_D1BANvbzwUXD9_OJiXrQIE6GThKas8Oi_NebMfj9tpyTK86V7ko-jIdpOin2qMDrRu9fqgJdUz2kXvH4rZE2UA86NAN0KsxGmx_heNvnnvxETElvSwppVqrSAMe6uczASCjIHHTcvk3fwjfOdG63xZdrZsdWBy83lzk6aXiBFN7Ee5QS7YTBLEipP0jJjBMuRxCVZ0Nd1Vr4seJn4n8Ur3AymsZIAjkjAK7pBJKgviSdR7r8xo;,user_id=312xh5dwfxwwxkkauxvxdjvqmvgy;,,"{""name"":  ""epic"", ""description"": ""qwerty 8guitar apple"",   ""public"": false, ""collaborative"": true }",201,True,none,"{
+  ""collaborative"" : true,
+  ""description"" : ""qwerty 8guitar apple"",
+  ""external_urls"" : {
+    ""spotify"" : ""https://open.spotify.com/playlist/7gVSBoq09zpNwHzDc8uVrB""
+  },
+  ""followers"" : {
+    ""href"" : null,
+    ""total"" : 0
+  },
+  ""href"" : ""https://api.spotify.com/v1/playlists/7gVSBoq09zpNwHzDc8uVrB"",
+  ""id"" : ""7gVSBoq09zpNwHzDc8uVrB"",
+  ""images"" : [ ],
+  ""name"" : ""epic"",
+  ""owner"" : {
+    ""display_name"" : ""JosAntSam"",
+    ""external_urls"" : {
+      ""spotify"" : ""https://open.spotify.com/user/312xh5dwfxwwxkkauxvxdjvqmvgy""
+    },
+    ""href"" : ""https://api.spotify.com/v1/users/312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""id"" : ""312xh5dwfxwwxkkauxvxdjvqmvgy"",
+    ""type"" : ""user"",
+    ""uri"" : ""spotify:user:312xh5dwfxwwxkkauxvxdjvqmvgy""
+  },
+  ""primary_color"" : null,
+  ""public"" : false,
+  ""snapshot_id"" : ""MSwwODEzY2NjMDk3OGNjOGQyMzg3NzVmOTI3MTJkNTAyMzVhMzZiYmQw"",
+  ""tracks"" : {
+    ""href"" : ""https://api.spotify.com/v1/playlists/7gVSBoq09zpNwHzDc8uVrB/tracks"",
+    ""items"" : [ ],
+    ""limit"" : 100,
+    ""next"" : null,
+    ""offset"" : 0,
+    ""previous"" : null,
+    ""total"" : 0
+  },
+  ""type"" : ""playlist"",
+  ""uri"" : ""spotify:playlist:7gVSBoq09zpNwHzDc8uVrB""
+}"
