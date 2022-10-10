@@ -238,45 +238,56 @@ public class DeclsVariable {
                                                                      String varKind, String variableNameOutput,
                                                                      boolean isArray) {
         List<DeclsVariable> res = new ArrayList<>();
-        Set<String> parameterNames = mapOfProperties.getProperties().keySet();
-
-        for(String parameterName: parameterNames) {
-            Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
-            String parameterType = schema.getType();
-
-            // If there is an allOf, parameterType is null, but the schema contains all the properties
-            if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
-                // Generate the father variable
-                DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
-                        packageName + "." + variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
-
-                // Recursive call for son variables
-                List<DeclsVariable> enclosedVariables =
-                        generateDeclsVariablesOfOutput(schema, variablePath + "." + parameterName, varKind,
-                                variableNameOutput, false);
-                // Set enclosed variables
-                declsVariable.setEnclosedVariables(enclosedVariables);
-                // Add to list
-                res.add(declsVariable);
-
-            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
-
-                // Obtain variables of nested arrays
-                List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, variablePath,
-                        varKind,  parameterName, variableNameOutput);
-                // Add to list
-                res.addAll(declsVariables);
-
-            } else {    // Primitive type
-
-                // Create new variable
-                DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName,"field " + parameterName,
-                        translateDatatype(parameterType), translateDatatype(parameterType), variablePath, isArray);
-                // Add to list
-                res.add(declsVariable);
+        // TODO: Add warning if properties == null
+        Map<String, Schema> properties = mapOfProperties.getProperties();
+        // Warnings if properties == null
+        if (properties == null) {
+            if(mapOfProperties.getAdditionalProperties() == null) {
+                System.err.println("WARNING: No properties found for object: " + variablePath);
+            } else{
+                System.err.println("WARNING: Object: " + variablePath + " only contains additional properties");
             }
+        } else {
+            Set<String> parameterNames = properties.keySet();
 
+            for(String parameterName: parameterNames) {
+                Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
+                String parameterType = schema.getType();
+
+                // If there is an allOf, parameterType is null, but the schema contains all the properties
+                if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
+                    // Generate the father variable
+                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
+                            packageName + "." + variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
+
+                    // Recursive call for son variables
+                    List<DeclsVariable> enclosedVariables =
+                            generateDeclsVariablesOfOutput(schema, variablePath + "." + parameterName, varKind,
+                                    variableNameOutput, false);
+                    // Set enclosed variables
+                    declsVariable.setEnclosedVariables(enclosedVariables);
+                    // Add to list
+                    res.add(declsVariable);
+
+                } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
+
+                    // Obtain variables of nested arrays
+                    List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, variablePath,
+                            varKind,  parameterName, variableNameOutput);
+                    // Add to list
+                    res.addAll(declsVariables);
+
+                } else {    // Primitive type
+
+                    // Create new variable
+                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName,"field " + parameterName,
+                            translateDatatype(parameterType), translateDatatype(parameterType), variablePath, isArray);
+                    // Add to list
+                    res.add(declsVariable);
+                }
+            }
         }
+
         return res;
     }
 

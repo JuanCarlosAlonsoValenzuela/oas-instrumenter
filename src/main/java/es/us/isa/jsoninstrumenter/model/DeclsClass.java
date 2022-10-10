@@ -137,43 +137,52 @@ public class DeclsClass {
     // TODO: Move to another class?
     public static Map<String, Schema> getAllNestedSchemas(String nameSuffix, Schema mapOfProperties) {
         Map<String, Schema> res = new HashMap<>();
-        Set<String> parameterNames = mapOfProperties.getProperties().keySet();
 
-        for(String parameterName: parameterNames) {
-            Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
-            String parameterType = schema.getType();
-
-            // If there is an allOf, parameterType is null, but the schema contains all the properties
-            if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {     // If object
-                // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
-                // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
-                // Recursive call with object.getParameter
-                res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, schema));
-
-            } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // If array
-                ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
-                String itemsDatatype = arraySchema.getItems().getType();
-                String nestingSuffix = ".array";    // TODO: Change "." for a different char
-
-                // If there is an allOf, parameterType is null, but the schema contains all the properties
-                while(itemsDatatype != null && itemsDatatype.equals(ARRAY_TYPE_NAME)) {
-                    arraySchema = (ArraySchema) arraySchema.getItems();
-                    res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName + nestingSuffix, arraySchema);
-                    itemsDatatype = arraySchema.getItems().getType();
-                    nestingSuffix = nestingSuffix + ".array";
-                }
-
-                // If there is an allOf, parameterType is null, but the schema contains all the properties
-                if(itemsDatatype == null || itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
-                    Schema subSchema = arraySchema.getItems();
-
-                    res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema);
-
-                    res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema));
-                }
-
+        Map<String, Schema> properties = mapOfProperties.getProperties();
+        // Warnings if properties == null
+        if (properties == null) {
+            if(mapOfProperties.getAdditionalProperties() == null) {
+                System.err.println("WARNING: No properties found for object: " + nameSuffix);
+            } else{
+                System.err.println("WARNING: Object: " + nameSuffix + " only contains additional properties");
             }
+        } else {
+            Set<String> parameterNames = properties.keySet();
 
+            for(String parameterName: parameterNames) {
+                Schema schema = (Schema) mapOfProperties.getProperties().get(parameterName);
+                String parameterType = schema.getType();
+
+                // If there is an allOf, parameterType is null, but the schema contains all the properties
+                if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {     // If object
+                    // TODO: 1. Esto parece indicar que un objeto se crea dos veces, revisar para evitar información redundante, posible bug, probar con otras APIs
+                    // TODO: 2. Probar con una API que contenga un objeto anidado dentro de otro, sin arrays de por medio
+                    // Recursive call with object.getParameter
+                    res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, schema));
+
+                } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // If array
+                    ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
+                    String itemsDatatype = arraySchema.getItems().getType();
+                    String nestingSuffix = ".array";    // TODO: Change "." for a different char
+
+                    // If there is an allOf, parameterType is null, but the schema contains all the properties
+                    while(itemsDatatype != null && itemsDatatype.equals(ARRAY_TYPE_NAME)) {
+                        arraySchema = (ArraySchema) arraySchema.getItems();
+                        res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName + nestingSuffix, arraySchema);
+                        itemsDatatype = arraySchema.getItems().getType();
+                        nestingSuffix = nestingSuffix + ".array";
+                    }
+
+                    // If there is an allOf, parameterType is null, but the schema contains all the properties
+                    if(itemsDatatype == null || itemsDatatype.equalsIgnoreCase(OBJECT_TYPE_NAME)) {
+                        Schema subSchema = arraySchema.getItems();
+
+                        res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema);
+
+                        res.putAll(getAllNestedSchemas(nameSuffix + HIERARCHY_SEPARATOR + parameterName, subSchema));
+                    }
+                }
+            }
         }
 
         return res;
