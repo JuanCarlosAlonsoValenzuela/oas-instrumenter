@@ -27,12 +27,13 @@ import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/evaluationOracles/Spotify/getAlbumTracks/swagger_albumTracks.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluationOracles/Spotify/getAlbumTracks/50/Spotify_GetAlbumTracks_50.csv";
+    private static String openApiSpecPath = "src/test/resources/icsoc22_tutorial/swagger_createPlaylist.yaml";
+    private static String testCasesFilePath = "src/test/resources/icsoc22_tutorial/csvSpotify.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {"N/A"};
     public static String HIERARCHY_SEPARATOR = "&";
+    public static int bufferSize = 20; // This number will be multiplied by 1024
 
 
     // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
@@ -94,6 +95,9 @@ public class GenerateDeclsFile {
         // PRINT DECLS file
         DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, declsClasses);
         String declsFilePath = getOutputPath("declsFile.decls", openApiSpecPath);
+        if (generateDtrace){
+            declsFilePath = getOutputPath("declsFile.decls", testCasesFilePath);
+        }
 
         // Delete file if exists
         deleteFile(declsFilePath);
@@ -103,14 +107,14 @@ public class GenerateDeclsFile {
         // Generate dTrace file
         if(generateDtrace){
             int i = 0;
-            String dtraceFilePath = getOutputPath("dtraceFile.dtrace", openApiSpecPath);      // openApiSpecPath testCasesFilePath
+            String dtraceFilePath = getOutputPath("dtraceFile.dtrace", testCasesFilePath);      // openApiSpecPath testCasesFilePath
             deleteFile(dtraceFilePath);     // Delete file if exists
 
             try {
                 // Read test cases
                 File testCasesFile = new File(testCasesFilePath);
                 FileReader testCasesFileReader = new FileReader(testCasesFile);
-                BufferedReader testCasesBR = new BufferedReader(testCasesFileReader);
+                BufferedReader testCasesBR = new BufferedReader(testCasesFileReader,bufferSize*1024);
                 String testCasesLine = "";
 
                 // The first line must be the header
@@ -122,7 +126,7 @@ public class GenerateDeclsFile {
                 TestCaseFileManager testCaseFileManager = new TestCaseFileManager(header);
 
                 FileWriter dtraceFile = new FileWriter(dtraceFilePath);
-                BufferedWriter dtraceBuffer = new BufferedWriter(dtraceFile);
+                BufferedWriter dtraceBuffer = new BufferedWriter(dtraceFile,bufferSize*1024);
 
                 while((testCasesLine = testCasesBR.readLine()) != null) {
                     // TODO: operationEndpoint + "_" + httpMethod vs operationId

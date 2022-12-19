@@ -116,8 +116,8 @@ paths:
                       type: string
                     name:
                       type: string
-                    track_number:
-                      type: integer
+#                    track_number:
+#                      type: integer
                     explicit:
                       type: boolean
                     linked_from:  # Objeto anidado

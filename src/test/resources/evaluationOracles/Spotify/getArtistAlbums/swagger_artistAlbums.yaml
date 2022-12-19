@@ -193,9 +193,6 @@ definitions:
           type: string
         type: array
       external_urls:
-        properties:
-          spotify:
-            type: string
         additionalProperties:
           description: 'The type of the URL, for example: ''spotify'' - The Spotify URL for the object.'
           type: string
@@ -329,9 +326,6 @@ definitions:
   artist-simple:
     properties:
       external_urls:
-        properties:
-          spotify:
-            type: string
         additionalProperties:
           type: string
         description: Known external URLs for this artist.

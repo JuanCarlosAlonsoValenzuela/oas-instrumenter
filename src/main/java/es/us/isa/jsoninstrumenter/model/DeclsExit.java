@@ -16,6 +16,7 @@ import static es.us.isa.jsoninstrumenter.model.DeclsVariable.*;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.doBubbleSort;
 import static es.us.isa.jsoninstrumenter.util.ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel;
 import static es.us.isa.jsoninstrumenter.util.JSONManager.*;
+import static es.us.isa.jsoninstrumenter.util.TestCaseFileManager.removeNewLineChars;
 
 public class DeclsExit {
 
@@ -366,7 +367,7 @@ public class DeclsExit {
                         if(elements.get(i) == null || Arrays.asList(stringsToConsiderAsNull).contains(elements.get(i))) {
                             value = value + " " + null;
                         } else {
-                            value = value + " \"" + elements.get(i) + "\"";
+                            value = value + " \"" + removeNewLineChars((String) elements.get(i)) + "\"";
                         }
                     } else {
                         value = value + " " + elements.get(i);

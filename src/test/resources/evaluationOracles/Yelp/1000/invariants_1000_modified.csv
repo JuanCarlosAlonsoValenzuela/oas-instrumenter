@@ -1,0 +1,143 @@
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.limit >= size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.limit >= size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::ENTER;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.limit >= size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.limit >= size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses&categories(main.getBusinesses&Input):::EXIT;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.limit >= size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.limit >= size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::ENTER;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;LENGTH(return.id)==22;daikon.inv.unary.string.FixedLengthString
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.review_count >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.url is Url;daikon.inv.unary.string.IsUrl
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.transactions[] elements one of { "delivery", "pickup", "restaurant_reservation" };daikon.inv.unary.stringsequence.EltOneOfString
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;LENGTH(return.location.country)==2;daikon.inv.unary.string.FixedLengthString
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;size(return.location.display_address[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(return.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(return.transactions[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.radius > size(return.location.display_address[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.limit >= size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.limit >= size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > return.review_count;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(return.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(return.transactions[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;input.open_at > size(return.location.display_address[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.limit >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::ENTER;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.latitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.longitude is Numeric;daikon.inv.unary.string.IsNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.limit >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;All the elements of input.price[] are Numeric;daikon.inv.unary.stringsequence.SequenceStringElementsAreNumeric
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;return.total >= 0;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;size(input.categories[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;size(input.price[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;size(input.attributes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > input.limit;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > input.offset;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.radius > size(return.businesses[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.limit < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.limit >= size(return.businesses[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.offset < input.open_at;daikon.inv.binary.twoScalar.IntLessThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.open_at > return.total;daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.open_at > size(input.categories[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.open_at > size(input.price[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.open_at > size(input.attributes[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;input.open_at > size(return.businesses[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.businessessearch.getBusinesses&200(main.getBusinesses&Input):::EXIT;return.total >= size(return.businesses[]);daikon.inv.binary.twoScalar.IntGreaterEqual

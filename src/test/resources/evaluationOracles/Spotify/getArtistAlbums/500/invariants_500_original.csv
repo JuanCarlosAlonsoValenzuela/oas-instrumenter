@@ -1,0 +1,71 @@
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::ENTER;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::ENTER;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::ENTER;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;return != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;return.external_urls != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;return.type == "artist";daikon.inv.unary.string.OneOfString
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&artists(main.getArtistAlbums&Input):::EXIT;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::ENTER;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::ENTER;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::ENTER;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;return.height == return.width;daikon.inv.binary.twoScalar.IntEqual
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;return != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;return.height one of { 64, 300, 640 };daikon.inv.unary.scalar.OneOfScalar
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;input.limit < return.height;daikon.inv.binary.twoScalar.IntLessThan
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;input.offset < return.height;daikon.inv.binary.twoScalar.IntLessThan
+main.artists{id}albums.getArtistAlbums&200&items&images(main.getArtistAlbums&Input):::EXIT;return.height > size(input.include_groups[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::ENTER;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::ENTER;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::ENTER;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.album_type one of { "album", "compilation", "single" };daikon.inv.unary.string.OneOfString
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.external_urls != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.images != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.images[] elements != null;daikon.inv.unary.sequence.EltNonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.type == "album";daikon.inv.unary.string.OneOfString
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.artists != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.artists[] elements != null;daikon.inv.unary.sequence.EltNonZero
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.release_date_precision one of { "day", "month", "year" };daikon.inv.unary.string.OneOfString
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.total_tracks >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(return.images[]) == 3;daikon.inv.unary.scalar.OneOfScalar
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(return.artists[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;input.limit != size(input.include_groups[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;input.offset != size(return.available_markets[])-1;daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;return.album_group in input.include_groups[];daikon.inv.binary.sequenceString.MemberString
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;input.market in return.available_markets[];daikon.inv.binary.sequenceString.MemberString
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[]) != size(return.available_markets[])-1;daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[])-1 <= size(return.images[]);daikon.inv.binary.twoScalar.IntLessEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(return.available_markets[]) != size(return.artists[])-1;daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200&items(main.getArtistAlbums&Input):::EXIT;size(return.available_markets[])-1 != size(return.images[]);daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::ENTER;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::ENTER;input.limit >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::ENTER;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::ENTER;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.limit == return.limit;daikon.inv.binary.twoScalar.IntEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.offset == return.offset;daikon.inv.binary.twoScalar.IntEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.limit >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.offset >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.items != null;daikon.inv.unary.scalar.NonZero
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.items[] elements != null;daikon.inv.unary.sequence.EltNonZero
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.offset >= 0;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.total >= 0;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;size(input.include_groups[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.limit != return.total;daikon.inv.binary.twoScalar.IntNonEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;input.limit >= size(return.items[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.limit >= size(return.items[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.artists{id}albums.getArtistAlbums&200(main.getArtistAlbums&Input):::EXIT;return.total >= size(return.items[]);daikon.inv.binary.twoScalar.IntGreaterEqual

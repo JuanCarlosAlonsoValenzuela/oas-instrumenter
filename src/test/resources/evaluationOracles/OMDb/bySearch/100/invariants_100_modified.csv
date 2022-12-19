@@ -1,0 +1,20 @@
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;input.type one of { "movie", "series" };daikon.inv.unary.string.OneOfString
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;input.r == "json";daikon.inv.unary.string.OneOfString
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;input.type == return.Type;daikon.inv.binary.twoString.StringEqual
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;input.type one of { "movie", "series" };daikon.inv.unary.string.OneOfString
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;input.r == "json";daikon.inv.unary.string.OneOfString
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;return.Type one of { "game", "movie", "series" };daikon.inv.unary.string.OneOfString
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;return.Poster is Url;daikon.inv.unary.string.IsUrl
+main..bySearch&200(main.bySearch&Input):::ENTER;input.type one of { "movie", "series" };daikon.inv.unary.string.OneOfString
+main..bySearch&200(main.bySearch&Input):::ENTER;input.r == "json";daikon.inv.unary.string.OneOfString
+main..bySearch&200(main.bySearch&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString
+main..bySearch&200(main.bySearch&Input):::EXIT;input.type one of { "movie", "series" };daikon.inv.unary.string.OneOfString
+main..bySearch&200(main.bySearch&Input):::EXIT;input.r == "json";daikon.inv.unary.string.OneOfString
+main..bySearch&200(main.bySearch&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString
+main..bySearch&200(main.bySearch&Input):::EXIT;return.Response == "True";daikon.inv.unary.string.OneOfString
+main..bySearch&200(main.bySearch&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString
+main..bySearch&200(main.bySearch&Input):::EXIT;return.totalResults is Numeric;daikon.inv.unary.string.IsNumeric
+main..bySearch&200(main.bySearch&Input):::EXIT;input.y > size(return.Search[]);daikon.inv.binary.twoScalar.IntGreaterThan
+main..bySearch&200(main.bySearch&Input):::EXIT;input.page <= size(return.Search[]);daikon.inv.binary.twoScalar.IntLessEqual

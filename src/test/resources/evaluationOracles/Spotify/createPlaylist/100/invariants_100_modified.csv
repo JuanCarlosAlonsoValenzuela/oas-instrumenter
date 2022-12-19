@@ -1,0 +1,45 @@
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.user_id == return.owner.id;daikon.inv.binary.twoString.StringEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.name == return.name;daikon.inv.binary.twoString.StringEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.description == return.description;daikon.inv.binary.twoString.StringEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.public == return.public;daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.collaborative == return.collaborative;daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == return.tracks.offset;daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == return.tracks.total;daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == size(return.images[]);daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == size(return.images[]);daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == size(return.tracks.items[]);daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.followers.total == size(return.tracks.items[]);daikon.inv.binary.twoScalar.IntEqual
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.external_urls.spotify)==56;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.external_urls.spotify is Url;daikon.inv.unary.string.IsUrl
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.href)==59;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.href is Url;daikon.inv.unary.string.IsUrl
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.id)==22;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.images[] == [];daikon.inv.unary.sequence.OneOfSequence
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.external_urls.spotify is Url;daikon.inv.unary.string.IsUrl
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.followers == null;daikon.inv.unary.scalar.OneOfScalar
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.href is Url;daikon.inv.unary.string.IsUrl
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.type == "user";daikon.inv.unary.string.OneOfString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.owner.type)==4;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.snapshot_id)==56;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.tracks.href)==66;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.tracks.href is Url;daikon.inv.unary.string.IsUrl
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.tracks.items[] == [];daikon.inv.unary.sequence.OneOfSequence
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.tracks.limit == 100;daikon.inv.unary.scalar.OneOfScalar
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.type == "playlist";daikon.inv.unary.string.OneOfString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.type)==8;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;LENGTH(return.uri)==39;daikon.inv.unary.string.FixedLengthString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.user_id is a substring of return.owner.external_urls.spotify;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.user_id is a substring of return.owner.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;input.user_id is a substring of return.owner.uri;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.id is a substring of return.external_urls.spotify;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.type is a substring of return.external_urls.spotify;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.id is a substring of return.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.href is a substring of return.tracks.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.type is a substring of return.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.id is a substring of return.tracks.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.id is a substring of return.uri;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.type is a substring of return.owner.external_urls.spotify;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.type is a substring of return.owner.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.owner.type is a substring of return.owner.uri;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.type is a substring of return.tracks.href;daikon.inv.binary.twoString.StdString$SubString
+main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT;return.type is a substring of return.uri;daikon.inv.binary.twoString.StdString$SubString

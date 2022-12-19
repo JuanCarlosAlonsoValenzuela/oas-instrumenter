@@ -1,0 +1,231 @@
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::ENTER;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;return.amount is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;return.percentage is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::ENTER;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.total == return.base;daikon.inv.binary.twoString.StringEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.startDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.endDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.total is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.base is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;return.markups == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::ENTER;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.adults == return.guests.adults;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate == return.checkInDate;daikon.inv.binary.twoString.StringEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate == return.checkOutDate;daikon.inv.binary.twoString.StringEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.rateCode == return.category;daikon.inv.binary.twoString.StringEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.description == return.commission.description;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.description == return.policies.guarantee.description;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.description == return.policies.deposit.description;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.description == return.policies.prepay.description;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.room.description.lang == return.policies.cancellation.description.lang;daikon.inv.binary.twoString.StringEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.markups == return.price.variations.average.markups;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.prepay.acceptedPayments.creditCards == return.policies.prepay.acceptedPayments.methods;daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.numberOfNights == size(return.policies.deposit.acceptedPayments.methods[]);daikon.inv.binary.twoScalar.IntEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.id)==10;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.roomQuantity)==1;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.roomQuantity is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.rateCode)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.rateFamilyEstimated.code)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.rateFamilyEstimated.type one of { "C", "P" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.rateFamilyEstimated.type)==1;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.category)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.description == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.commission.percentage is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.room.type)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.room.typeEstimated.beds >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.room.description.lang)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.guests.childAges == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.price.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.total is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.base is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.markups == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.variations.average.total is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.price.variations.average.base is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.paymentType one of { "deposit", "guarantee" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.guarantee.acceptedPayments.methods[] elements one of { "CREDIT_CARD", "TRAVEL_AGENT_ID" };daikon.inv.unary.stringsequence.EltOneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;All the elements of return.policies.deposit.acceptedPayments.creditCards[] have LENGTH=2;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.deposit.acceptedPayments.methods[] elements one of { "ADVANCE_DEPOSIT", "CREDIT_CARD" };daikon.inv.unary.stringsequence.EltOneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.deposit.acceptedPayments.methods[] one of { [CREDIT_CARD], [CREDIT_CARD, ADVANCE_DEPOSIT] };daikon.inv.unary.stringsequence.OneOfStringSequence
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.prepay == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.prepay.acceptedPayments == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.prepay.acceptedPayments.creditCards == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.policies.holdTime.deadline)==19;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.type == "FULL_STAY";daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.policies.cancellation.type)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.amount is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.numberOfNights >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.policies.cancellation.deadline)==25;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.description.text one of { "NON-REFUNDABLE RATE", "Non refundable rate", "Plus Taxes and fees where appropriate." };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.description.lang == "EN";daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.policies.cancellation.description.lang)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.checkInOut == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.checkInOut.checkInDescription == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.checkInOut.checkOutDescription == null;daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.self is Url;daikon.inv.unary.string.IsUrl
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;size(return.price.taxes[]) one of { 1, 2, 3 };daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;size(return.price.variations.changes[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;size(return.policies.guarantee.acceptedPayments.methods[]) one of { 1, 2 };daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;size(return.policies.deposit.acceptedPayments.methods[]) one of { 1, 2 };daikon.inv.unary.scalar.OneOfScalar
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.adults <= size(return.policies.guarantee.acceptedPayments.creditCards[]);daikon.inv.binary.twoScalar.IntLessEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.adults >= size(return.policies.deposit.acceptedPayments.methods[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a substring of return.policies.holdTime.deadline;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity <= size(return.policies.deposit.acceptedPayments.creditCards[]);daikon.inv.binary.twoScalar.IntLessEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= size(return.policies.deposit.acceptedPayments.methods[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;input.lang is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.id is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.checkInDate is a substring of return.policies.holdTime.deadline;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.room.typeEstimated.beds >= return.policies.cancellation.numberOfNights;daikon.inv.binary.twoScalar.IntGreaterEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.numberOfNights <= size(return.price.taxes[]);daikon.inv.binary.twoScalar.IntLessEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;return.policies.cancellation.numberOfNights >= size(return.policies.guarantee.acceptedPayments.methods[]);daikon.inv.binary.twoScalar.IntGreaterEqual
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::ENTER;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.type == "hotel-offers";daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.type)==12;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.self is Url;daikon.inv.unary.string.IsUrl
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.hotel.hotelId)==8;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.hotel.chainCode)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.hotel.dupeId)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.dupeId is Numeric;daikon.inv.unary.string.IsNumeric
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.hotel.cityCode)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.type == "hotel";daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;LENGTH(return.hotel.type)==5;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;size(return.offers[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.hotelId in input.hotelIds[];daikon.inv.binary.sequenceString.MemberString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.countryOfResidence is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.currency is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.boardType is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;input.lang is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.type is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.type is a substring of return.type;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.hotelId is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.chainCode is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.cityCode is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.type is a substring of return.self;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.chainCode is a substring of return.hotel.hotelId;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;return.hotel.cityCode is a substring of return.hotel.hotelId;daikon.inv.binary.twoString.StdString$SubString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::ENTER;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;All the elements of input.hotelIds[] have LENGTH=8;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.adults >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate one of { "2022-09-20", "2022-09-21", "2022-09-22" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.checkInDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.checkOutDate is a Date. Format: YYYY/MM/DD;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.countryOfResidence)==2;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.roomQuantity >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.currency)==3;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.paymentPolicy one of { "DEPOSIT", "GUARANTEE", "NONE" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;input.boardType one of { "BREAKFAST", "ROOM_ONLY" };daikon.inv.unary.string.OneOfString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;LENGTH(input.boardType)==9;daikon.inv.unary.string.FixedLengthString
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= 1;daikon.inv.unary.scalar.LowerBound
+main.shoppinghotel-offers.getMultiHotelOffers&200(main.getMultiHotelOffers&Input):::EXIT;size(input.hotelIds[]) >= size(return.data[]);daikon.inv.binary.twoScalar.IntGreaterEqual
