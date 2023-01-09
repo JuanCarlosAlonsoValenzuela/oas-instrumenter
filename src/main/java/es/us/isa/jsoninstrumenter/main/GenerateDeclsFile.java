@@ -27,11 +27,11 @@ import static es.us.isa.jsoninstrumenter.util.FileManager.writeFile;
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/icsoc22_tutorial/swagger_createPlaylist.yaml";
-    private static String testCasesFilePath = "src/test/resources/icsoc22_tutorial/csvSpotify.csv";
+    private static String openApiSpecPath = "---";
+    private static String testCasesFilePath = "---";
     private static boolean generateDtrace = true;
 
-    public static String[] stringsToConsiderAsNull = {"N/A"};
+    public static String[] stringsToConsiderAsNull = {""};
     public static String HIERARCHY_SEPARATOR = "&";
     public static int bufferSize = 20; // This number will be multiplied by 1024
 

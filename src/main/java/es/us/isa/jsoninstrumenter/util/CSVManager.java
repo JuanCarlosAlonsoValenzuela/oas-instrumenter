@@ -11,8 +11,8 @@ import java.util.List;
 
 public class CSVManager {
 
-    public static List<List<String>> readCSV(String path, Boolean includeFirstRow) {
-        List<List<String>> rows = readCSV(path, ',');
+    public static List<List<String>> readCSV(String path, Boolean includeFirstRow, char delimiter) {
+        List<List<String>> rows = readCSV(path, delimiter);
         if (!includeFirstRow)
             rows.remove(0);
         return rows;
