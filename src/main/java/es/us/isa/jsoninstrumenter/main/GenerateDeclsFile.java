@@ -31,7 +31,7 @@ public class GenerateDeclsFile {
     private static String testCasesFilePath = "---";
     private static boolean generateDtrace = true;
 
-    public static String[] stringsToConsiderAsNull = {""};
+    public static String[] stringsToConsiderAsNull = {};
     public static String HIERARCHY_SEPARATOR = "&";
     public static int bufferSize = 20; // This number will be multiplied by 1024
 
@@ -60,10 +60,17 @@ public class GenerateDeclsFile {
         if(args.length == 2) {
             openApiSpecPath = args[0];
             testCasesFilePath = args[1];
+            stringsToConsiderAsNull = new String[]{};
             generateDtrace = true;
         } else if(args.length == 1) {
             openApiSpecPath = args[0];
             generateDtrace = false;
+            stringsToConsiderAsNull = new String[]{};
+        } else if(args.length==3) {
+            openApiSpecPath = args[0];
+            testCasesFilePath = args[1];
+            generateDtrace = true;
+            stringsToConsiderAsNull = new String[]{args[2]};
         }
 
         OpenAPI specification = getOpenAPISpecification();

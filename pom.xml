@@ -11,20 +11,6 @@
     <name>json-instrumenter</name>
     <description>A tool designed for instrumenting inputs and outputs of REST APIs in daikon format</description>
 
-    <developers>
-        <developer>
-            <id>JuanCarlosAlonsoValenzuela</id>
-            <name>Juan Carlos Alonso Valenzuela</name>
-            <email>javalenzuela@us.es</email>
-            <url>http://personal.us.es/javalenzuela/</url>
-            <organization>University of Seville</organization>
-            <organizationUrl>http://www.us.es</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-    </developers>
-
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
