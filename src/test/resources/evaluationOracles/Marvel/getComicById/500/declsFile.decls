@@ -213,7 +213,7 @@ variable return.attributionHTML
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.data
-	var-kind return
+	var-kind field data
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data
 	rep-type hashcode
@@ -590,7 +590,7 @@ variable return.urls[..]
 	dec-type main.urls[]
 	rep-type hashcode[]
 variable return.series
-	var-kind return
+	var-kind field series
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&series
 	rep-type hashcode
@@ -660,7 +660,7 @@ variable return.prices[..]
 	dec-type main.prices[]
 	rep-type hashcode[]
 variable return.thumbnail
-	var-kind return
+	var-kind field thumbnail
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&thumbnail
 	rep-type hashcode
@@ -686,7 +686,7 @@ variable return.images[..]
 	dec-type main.images[]
 	rep-type hashcode[]
 variable return.creators
-	var-kind return
+	var-kind field creators
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&creators
 	rep-type hashcode
@@ -717,7 +717,7 @@ variable return.creators.items[..]
 	dec-type main.items[]
 	rep-type hashcode[]
 variable return.characters
-	var-kind return
+	var-kind field characters
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&characters
 	rep-type hashcode
@@ -748,7 +748,7 @@ variable return.characters.items[..]
 	dec-type main.items[]
 	rep-type hashcode[]
 variable return.stories
-	var-kind return
+	var-kind field stories
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&stories
 	rep-type hashcode
@@ -779,7 +779,7 @@ variable return.stories.items[..]
 	dec-type main.items[]
 	rep-type hashcode[]
 variable return.events
-	var-kind return
+	var-kind field events
 	enclosing-var return
 	dec-type main.getComicIndividual&Output&200&data&results&events
 	rep-type hashcode

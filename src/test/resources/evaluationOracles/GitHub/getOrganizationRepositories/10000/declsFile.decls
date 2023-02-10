@@ -191,7 +191,7 @@ variable return.full_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return
 	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
@@ -642,7 +642,7 @@ variable return.updated_at
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.permissions
-	var-kind return
+	var-kind field permissions
 	enclosing-var return
 	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
@@ -672,7 +672,7 @@ variable return.permissions.triage
 	dec-type boolean
 	rep-type boolean
 variable return.template_repository
-	var-kind return
+	var-kind field template_repository
 	enclosing-var return
 	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
@@ -697,7 +697,7 @@ variable return.template_repository.full_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.template_repository.license
-	var-kind return
+	var-kind field license
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode
@@ -737,7 +737,7 @@ variable return.template_repository.forks
 	dec-type int
 	rep-type int
 variable return.template_repository.permissions
-	var-kind return
+	var-kind field permissions
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
@@ -767,7 +767,7 @@ variable return.template_repository.permissions.maintain
 	dec-type boolean
 	rep-type boolean
 variable return.template_repository.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
@@ -1213,7 +1213,7 @@ variable return.template_repository.allow_rebase_merge
 	dec-type boolean
 	rep-type boolean
 variable return.template_repository.template_repository
-	var-kind return
+	var-kind field template_repository
 	enclosing-var return.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&template_repository
 	rep-type hashcode
@@ -1238,7 +1238,7 @@ variable return.template_repository.template_repository.full_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.template_repository.template_repository.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return.template_repository.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&owner
 	rep-type hashcode
@@ -1674,7 +1674,7 @@ variable return.template_repository.template_repository.updated_at
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.template_repository.template_repository.permissions
-	var-kind return
+	var-kind field permissions
 	enclosing-var return.template_repository.template_repository
 	dec-type main.getOrganizationRepositories&Output&200&permissions
 	rep-type hashcode
@@ -1799,7 +1799,7 @@ variable return.network_count
 	dec-type int
 	rep-type int
 variable return.license
-	var-kind return
+	var-kind field license
 	enclosing-var return
 	dec-type main.getOrganizationRepositories&Output&200&license
 	rep-type hashcode

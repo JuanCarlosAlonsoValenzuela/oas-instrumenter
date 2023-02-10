@@ -238,7 +238,7 @@ variable return.explicit
 	dec-type boolean
 	rep-type boolean
 variable return.linked_from
-	var-kind return
+	var-kind field linked_from
 	enclosing-var return
 	dec-type main.getAlbumTracks&Output&200&items&linked_from
 	rep-type hashcode

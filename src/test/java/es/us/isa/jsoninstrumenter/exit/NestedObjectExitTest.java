@@ -115,7 +115,7 @@ public class NestedObjectExitTest {
                 // Variable of type object
                 DeclsVariable locationObject = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.location", locationObject.getVariableName());
-                assertEquals("Incorrect var-kind", "return", locationObject.getVarKind());
+                assertEquals("Incorrect var-kind", "field location", locationObject.getVarKind());
                 assertEquals("Incorrect decType", "main.findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"location", locationObject.getDecType());
                 assertEquals("Incorrect repType", "hashcode", locationObject.getRepType());
                 assertEquals("Incorrect enclosing var", "return", locationObject.getEnclosingVar());

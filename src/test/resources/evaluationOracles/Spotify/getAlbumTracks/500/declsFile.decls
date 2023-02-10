@@ -188,7 +188,7 @@ variable return
 	dec-type main.getAlbumTracks&Output&200&items&artists
 	rep-type hashcode
 variable return.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return
 	dec-type main.getAlbumTracks&Output&200&items&artists&external_urls
 	rep-type hashcode
@@ -286,7 +286,7 @@ variable return.explicit
 	dec-type boolean
 	rep-type boolean
 variable return.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return
 	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
@@ -311,12 +311,12 @@ variable return.is_playable
 	dec-type boolean
 	rep-type boolean
 variable return.linked_from
-	var-kind return
+	var-kind field linked_from
 	enclosing-var return
 	dec-type main.getAlbumTracks&Output&200&items&linked_from
 	rep-type hashcode
 variable return.linked_from.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return.linked_from
 	dec-type main.getAlbumTracks&Output&200&items&external_urls
 	rep-type hashcode
@@ -351,7 +351,7 @@ variable return.preview_url
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.restrictions
-	var-kind return
+	var-kind field restrictions
 	enclosing-var return
 	dec-type main.getAlbumTracks&Output&200&items&restrictions
 	rep-type hashcode

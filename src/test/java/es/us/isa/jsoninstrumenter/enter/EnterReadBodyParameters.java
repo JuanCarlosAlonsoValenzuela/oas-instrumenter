@@ -255,7 +255,7 @@ public class EnterReadBodyParameters {
                     // Location is of type object
                     DeclsVariable location = declsSonVariables.get(4);
                     assertEquals("Incorrect variable name", "input.location", location.getVariableName());
-                    assertEquals("Incorrect var-kind", "variable", location.getVarKind());
+                    assertEquals("Incorrect var-kind", "field location", location.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".createPlaylist" + HIERARCHY_SEPARATOR + "Input" + HIERARCHY_SEPARATOR + "location", location.getDecType());
                     assertEquals("Incorrect repType", "hashcode", location.getRepType());
                     assertEquals("Incorrect enclosing var", "input", location.getEnclosingVar());
@@ -415,7 +415,7 @@ public class EnterReadBodyParameters {
                     // Location is of type object
                     DeclsVariable location = declsSonVariables.get(4);
                     assertEquals("Incorrect variable name", "input.location", location.getVariableName());
-                    assertEquals("Incorrect var-kind", "variable", location.getVarKind());
+                    assertEquals("Incorrect var-kind", "field location", location.getVarKind());
                     assertEquals("Incorrect decType", packageName + ".createPlaylist" + HIERARCHY_SEPARATOR + "Input" + HIERARCHY_SEPARATOR + "location", location.getDecType());
                     assertEquals("Incorrect repType", "hashcode", location.getRepType());
                     assertEquals("Incorrect enclosing var", "input", location.getEnclosingVar());

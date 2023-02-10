@@ -393,12 +393,12 @@ variable return.total
 	dec-type int
 	rep-type int
 variable return.region
-	var-kind return
+	var-kind field region
 	enclosing-var return
 	dec-type main.getBusinesses&Output&200&region
 	rep-type hashcode
 variable return.region.center
-	var-kind return
+	var-kind field center
 	enclosing-var return.region
 	dec-type main.getBusinesses&Output&200&center
 	rep-type hashcode
@@ -534,7 +534,7 @@ variable return.categories[..]
 	dec-type main.categories[]
 	rep-type hashcode[]
 variable return.coordinates
-	var-kind return
+	var-kind field coordinates
 	enclosing-var return
 	dec-type main.getBusinesses&Output&200&businesses&coordinates
 	rep-type hashcode
@@ -620,7 +620,7 @@ variable return.transactions[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 variable return.location
-	var-kind return
+	var-kind field location
 	enclosing-var return
 	dec-type main.getBusinesses&Output&200&businesses&location
 	rep-type hashcode

@@ -257,7 +257,7 @@ public class DeclsVariable {
                 // If there is an allOf, parameterType is null, but the schema contains all the properties
                 if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                     // Generate the father variable
-                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, varKind,
+                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "field " + parameterName,
                             packageName + "." + variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
 
                     // Recursive call for son variables

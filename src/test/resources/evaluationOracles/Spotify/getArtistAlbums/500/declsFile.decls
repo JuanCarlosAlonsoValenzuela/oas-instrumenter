@@ -338,7 +338,7 @@ variable return
 	dec-type main.getArtistAlbums&Output&200&items&artists
 	rep-type hashcode
 variable return.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return
 	dec-type main.getArtistAlbums&Output&200&items&artists&external_urls
 	rep-type hashcode
@@ -426,7 +426,7 @@ variable return.available_markets[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 variable return.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return
 	dec-type main.getArtistAlbums&Output&200&items&external_urls
 	rep-type hashcode

@@ -513,7 +513,7 @@ variable return.nextPageToken
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.pageInfo
-	var-kind return
+	var-kind field pageInfo
 	enclosing-var return
 	dec-type main.getVideos&Output&200&pageInfo
 	rep-type hashcode
@@ -533,7 +533,7 @@ variable return.prevPageToken
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.tokenPagination
-	var-kind return
+	var-kind field tokenPagination
 	enclosing-var return
 	dec-type main.getVideos&Output&200&tokenPagination
 	rep-type hashcode
@@ -828,7 +828,7 @@ variable return
 	dec-type main.getVideos&Output&200&items
 	rep-type hashcode
 variable return.ageGating
-	var-kind return
+	var-kind field ageGating
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&ageGating
 	rep-type hashcode
@@ -848,7 +848,7 @@ variable return.ageGating.videoGameRating
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.contentDetails
-	var-kind return
+	var-kind field contentDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&contentDetails
 	rep-type hashcode
@@ -858,7 +858,7 @@ variable return.contentDetails.caption
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.contentDetails.contentRating
-	var-kind return
+	var-kind field contentRating
 	enclosing-var return.contentDetails
 	dec-type main.getVideos&Output&200&items&contentRating
 	rep-type hashcode
@@ -1230,7 +1230,7 @@ variable return.contentDetails.contentRating.ytRating
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.contentDetails.countryRestriction
-	var-kind return
+	var-kind field countryRestriction
 	enclosing-var return.contentDetails
 	dec-type main.getVideos&Output&200&items&countryRestriction
 	rep-type hashcode
@@ -1281,7 +1281,7 @@ variable return.contentDetails.projection
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.contentDetails.regionRestriction
-	var-kind return
+	var-kind field regionRestriction
 	enclosing-var return.contentDetails
 	dec-type main.getVideos&Output&200&items&regionRestriction
 	rep-type hashcode
@@ -1313,7 +1313,7 @@ variable return.etag
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.fileDetails
-	var-kind return
+	var-kind field fileDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&fileDetails
 	rep-type hashcode
@@ -1385,7 +1385,7 @@ variable return.kind
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.liveStreamingDetails
-	var-kind return
+	var-kind field liveStreamingDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&liveStreamingDetails
 	rep-type hashcode
@@ -1420,17 +1420,17 @@ variable return.liveStreamingDetails.scheduledStartTime
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.localizations
-	var-kind return
+	var-kind field localizations
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&localizations
 	rep-type hashcode
 variable return.monetizationDetails
-	var-kind return
+	var-kind field monetizationDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&monetizationDetails
 	rep-type hashcode
 variable return.monetizationDetails.access
-	var-kind return
+	var-kind field access
 	enclosing-var return.monetizationDetails
 	dec-type main.getVideos&Output&200&items&access
 	rep-type hashcode
@@ -1451,7 +1451,7 @@ variable return.monetizationDetails.access.exception[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 variable return.player
-	var-kind return
+	var-kind field player
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&player
 	rep-type hashcode
@@ -1471,7 +1471,7 @@ variable return.player.embedWidth
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.processingDetails
-	var-kind return
+	var-kind field processingDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&processingDetails
 	rep-type hashcode
@@ -1496,7 +1496,7 @@ variable return.processingDetails.processingIssuesAvailability
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.processingDetails.processingProgress
-	var-kind return
+	var-kind field processingProgress
 	enclosing-var return.processingDetails
 	dec-type main.getVideos&Output&200&items&processingProgress
 	rep-type hashcode
@@ -1531,17 +1531,17 @@ variable return.processingDetails.thumbnailsAvailability
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.projectDetails
-	var-kind return
+	var-kind field projectDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&projectDetails
 	rep-type hashcode
 variable return.recordingDetails
-	var-kind return
+	var-kind field recordingDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&recordingDetails
 	rep-type hashcode
 variable return.recordingDetails.location
-	var-kind return
+	var-kind field location
 	enclosing-var return.recordingDetails
 	dec-type main.getVideos&Output&200&items&location
 	rep-type hashcode
@@ -1571,7 +1571,7 @@ variable return.recordingDetails.recordingDate
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.snippet
-	var-kind return
+	var-kind field snippet
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&snippet
 	rep-type hashcode
@@ -1611,7 +1611,7 @@ variable return.snippet.liveBroadcastContent
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.snippet.localized
-	var-kind return
+	var-kind field localized
 	enclosing-var return.snippet
 	dec-type main.getVideos&Output&200&items&localized
 	rep-type hashcode
@@ -1642,12 +1642,12 @@ variable return.snippet.tags[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 variable return.snippet.thumbnails
-	var-kind return
+	var-kind field thumbnails
 	enclosing-var return.snippet
 	dec-type main.getVideos&Output&200&items&thumbnails
 	rep-type hashcode
 variable return.snippet.thumbnails.default
-	var-kind return
+	var-kind field default
 	enclosing-var return.snippet.thumbnails
 	dec-type main.getVideos&Output&200&items&default
 	rep-type hashcode
@@ -1667,7 +1667,7 @@ variable return.snippet.thumbnails.default.width
 	dec-type int
 	rep-type int
 variable return.snippet.thumbnails.high
-	var-kind return
+	var-kind field high
 	enclosing-var return.snippet.thumbnails
 	dec-type main.getVideos&Output&200&items&high
 	rep-type hashcode
@@ -1687,7 +1687,7 @@ variable return.snippet.thumbnails.high.width
 	dec-type int
 	rep-type int
 variable return.snippet.thumbnails.maxres
-	var-kind return
+	var-kind field maxres
 	enclosing-var return.snippet.thumbnails
 	dec-type main.getVideos&Output&200&items&maxres
 	rep-type hashcode
@@ -1707,7 +1707,7 @@ variable return.snippet.thumbnails.maxres.width
 	dec-type int
 	rep-type int
 variable return.snippet.thumbnails.medium
-	var-kind return
+	var-kind field medium
 	enclosing-var return.snippet.thumbnails
 	dec-type main.getVideos&Output&200&items&medium
 	rep-type hashcode
@@ -1727,7 +1727,7 @@ variable return.snippet.thumbnails.medium.width
 	dec-type int
 	rep-type int
 variable return.snippet.thumbnails.standard
-	var-kind return
+	var-kind field standard
 	enclosing-var return.snippet.thumbnails
 	dec-type main.getVideos&Output&200&items&standard
 	rep-type hashcode
@@ -1752,7 +1752,7 @@ variable return.snippet.title
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.statistics
-	var-kind return
+	var-kind field statistics
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&statistics
 	rep-type hashcode
@@ -1782,7 +1782,7 @@ variable return.statistics.viewCount
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.status
-	var-kind return
+	var-kind field status
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&status
 	rep-type hashcode
@@ -1837,7 +1837,7 @@ variable return.status.uploadStatus
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.suggestions
-	var-kind return
+	var-kind field suggestions
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&suggestions
 	rep-type hashcode
@@ -1897,7 +1897,7 @@ variable return.suggestions.tagSuggestions[..]
 	dec-type main.tagSuggestions[]
 	rep-type hashcode[]
 variable return.topicDetails
-	var-kind return
+	var-kind field topicDetails
 	enclosing-var return
 	dec-type main.getVideos&Output&200&items&topicDetails
 	rep-type hashcode

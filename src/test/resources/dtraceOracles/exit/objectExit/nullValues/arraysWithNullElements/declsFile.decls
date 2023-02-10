@@ -37,7 +37,7 @@ variable return.stringProperty
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.objectProperty
-	var-kind return
+	var-kind field objectProperty
 	enclosing-var return
 	dec-type main.objectExitEndpoint&Output&200&objectProperty
 	rep-type hashcode
@@ -53,7 +53,7 @@ variable return.objectProperty.arrayStringProperty[..]
 	dec-type java.lang.String[]
 	rep-type java.lang.String[]
 variable return.objectProperty.subObjectProperty
-	var-kind return
+	var-kind field subObjectProperty
 	enclosing-var return.objectProperty
 	dec-type main.objectExitEndpoint&Output&200&subObjectProperty
 	rep-type hashcode

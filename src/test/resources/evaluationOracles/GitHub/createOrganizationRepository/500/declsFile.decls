@@ -282,7 +282,7 @@ variable return.full_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.license
-	var-kind return
+	var-kind field license
 	enclosing-var return
 	dec-type main.createOrganizationRepository&Output&201&license
 	rep-type hashcode
@@ -322,7 +322,7 @@ variable return.forks
 	dec-type int
 	rep-type int
 variable return.permissions
-	var-kind return
+	var-kind field permissions
 	enclosing-var return
 	dec-type main.createOrganizationRepository&Output&201&permissions
 	rep-type hashcode
@@ -352,7 +352,7 @@ variable return.permissions.maintain
 	dec-type boolean
 	rep-type boolean
 variable return.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return
 	dec-type main.createOrganizationRepository&Output&201&owner
 	rep-type hashcode
@@ -452,7 +452,7 @@ variable return.owner.starred_at
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.organization
-	var-kind return
+	var-kind field organization
 	enclosing-var return
 	dec-type main.createOrganizationRepository&Output&201&organization
 	rep-type hashcode
@@ -898,7 +898,7 @@ variable return.allow_rebase_merge
 	dec-type boolean
 	rep-type boolean
 variable return.template_repository
-	var-kind return
+	var-kind field template_repository
 	enclosing-var return
 	dec-type main.createOrganizationRepository&Output&201&template_repository
 	rep-type hashcode
@@ -923,7 +923,7 @@ variable return.template_repository.full_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.template_repository.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return.template_repository
 	dec-type main.createOrganizationRepository&Output&201&owner
 	rep-type hashcode
@@ -1359,7 +1359,7 @@ variable return.template_repository.updated_at
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.template_repository.permissions
-	var-kind return
+	var-kind field permissions
 	enclosing-var return.template_repository
 	dec-type main.createOrganizationRepository&Output&201&permissions
 	rep-type hashcode

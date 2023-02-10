@@ -171,7 +171,7 @@ variable return.description
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return
 	dec-type main.createPlaylist&Output&201&external_urls
 	rep-type hashcode
@@ -181,7 +181,7 @@ variable return.external_urls.spotify
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.followers
-	var-kind return
+	var-kind field followers
 	enclosing-var return
 	dec-type main.createPlaylist&Output&201&followers
 	rep-type hashcode
@@ -222,7 +222,7 @@ variable return.name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.owner
-	var-kind return
+	var-kind field owner
 	enclosing-var return
 	dec-type main.createPlaylist&Output&201&owner
 	rep-type hashcode
@@ -232,7 +232,7 @@ variable return.owner.display_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.owner.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return.owner
 	dec-type main.createPlaylist&Output&201&external_urls
 	rep-type hashcode
@@ -242,7 +242,7 @@ variable return.owner.external_urls.spotify
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.owner.followers
-	var-kind return
+	var-kind field followers
 	enclosing-var return.owner
 	dec-type main.createPlaylist&Output&201&followers
 	rep-type hashcode
@@ -287,7 +287,7 @@ variable return.snapshot_id
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.tracks
-	var-kind return
+	var-kind field tracks
 	enclosing-var return
 	dec-type main.createPlaylist&Output&201&tracks
 	rep-type hashcode
@@ -445,7 +445,7 @@ variable return.added_at
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.added_by
-	var-kind return
+	var-kind field added_by
 	enclosing-var return
 	dec-type main.createPlaylist&Output&201&tracks&items&added_by
 	rep-type hashcode
@@ -455,7 +455,7 @@ variable return.added_by.display_name
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.added_by.external_urls
-	var-kind return
+	var-kind field external_urls
 	enclosing-var return.added_by
 	dec-type main.createPlaylist&Output&201&tracks&items&external_urls
 	rep-type hashcode
@@ -465,7 +465,7 @@ variable return.added_by.external_urls.spotify
 	dec-type java.lang.String
 	rep-type java.lang.String
 variable return.added_by.followers
-	var-kind return
+	var-kind field followers
 	enclosing-var return.added_by
 	dec-type main.createPlaylist&Output&201&tracks&items&followers
 	rep-type hashcode
