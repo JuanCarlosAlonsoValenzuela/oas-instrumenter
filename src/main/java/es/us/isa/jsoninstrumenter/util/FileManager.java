@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 
 public class FileManager {
 
+
     public static void writeFile(String filepath, String content) {
         try {
             FileWriter myWriter = new FileWriter(filepath);
@@ -29,6 +30,21 @@ public class FileManager {
     public static boolean deleteFile(String path) {
         File file = new File(path);
         return file.delete();
+    }
+
+    public static Boolean checkIfExists(String path) {
+        File file = new File(path);
+        return file.exists();
+    }
+
+    public static Boolean createFileIfNotExists(String path) {
+        File file = new File(path);
+        try {
+            return file.createNewFile();
+        } catch (IOException e) {
+            System.err.println("Exception: "  + e);
+        }
+        return null;
     }
 
 }

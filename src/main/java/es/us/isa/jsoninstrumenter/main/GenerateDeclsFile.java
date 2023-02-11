@@ -56,6 +56,8 @@ public class GenerateDeclsFile {
     public static final List<String> primitiveTypes = Arrays.asList(STRING_TYPE_NAME, DOUBLE_TYPE_NAME, INTEGER_TYPE_NAME, BOOLEAN_TYPE_NAME);
 
     public static void main(String[] args) {
+        declsClasses = new ArrayList<>();
+        numberOfExits = 1;
 
         if(args.length == 2) {
             openApiSpecPath = args[0];

@@ -3,11 +3,12 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static es.us.isa.jsoninstrumenter.util.FileManager.createFileIfNotExists;
+import static es.us.isa.jsoninstrumenter.util.FileManager.deleteFile;
 
 public class CSVManager {
 
@@ -72,5 +73,25 @@ public class CSVManager {
         }
         return res;
     }
+
+    public static void createCSVwithHeader(String path, String header) {
+        deleteFile(path); // delete file if it exists
+        createFileIfNotExists(path);
+        writeCSVRow(path, header);
+    }
+
+    public static void writeCSVRow(String path, String row) {
+        File csvFile = new File(path);
+        try(FileOutputStream oCsvFile = new FileOutputStream(csvFile, true)) {
+            row += "\n";
+            oCsvFile.write(row.getBytes());
+        } catch (IOException e) {
+            System.err.println("The line could not be written to the CSV: " + path);
+            System.err.println("Exception: " + e);
+        }
+
+    }
+
+
 
 }
