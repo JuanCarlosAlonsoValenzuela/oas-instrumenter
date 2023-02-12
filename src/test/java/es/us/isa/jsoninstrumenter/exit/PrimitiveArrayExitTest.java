@@ -72,8 +72,6 @@ public class PrimitiveArrayExitTest {
                 String exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
 
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
-//                assertEquals("The size of the list of enter variables is not 1", 1, declsExit.getEnterDeclsVariables().size());
-//                assertEquals("The size of the list of exit variables is not 1", 1, declsExit.getExitDeclsVariables().size());
                 assertEquals("The exit number is not correct", numberOfExits, declsExit.getExitNumber() + 1);
 
 

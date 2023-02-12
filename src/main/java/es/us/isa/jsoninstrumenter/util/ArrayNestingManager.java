@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
 public class ArrayNestingManager {
 
 
-    // TODO: Create a jUnit test for this function
     // Based on: https://stackoverflow.com/questions/54008740/parse-multi-dimensional-json-array-to-flat-int-list-in-java
     // This function flattens all the objects contained within nested arrays
     public static List<JSONObject> doBubbleSort(JSONArray jsonArray) {
@@ -41,7 +40,6 @@ public class ArrayNestingManager {
             res = Collections.singletonList((JSONObject) o);
         } else if(o instanceof List) {
             List<?> list = (List) o;
-//            res = list.stream().map(ArrayNestingManager::getOrFlatten).flatMap(List::stream).collect(Collectors.toList());
             res = list.stream().map(x-> {
                 List<JSONObject> r = new ArrayList<>();
                 try {
@@ -60,7 +58,6 @@ public class ArrayNestingManager {
         return res;
     }
 
-    // TODO: Create jUnit test (Several jUnits)
     // This function returns all the arrays that belong to the provided targetNestingLevel
     public static List<JSONArray> getJSONArraysOfSpecifiedNestingLevel(JSONArray jsonArray,
                                                                    int targetNestingLevel, int currentNestingLevel) throws IllegalArgumentException {

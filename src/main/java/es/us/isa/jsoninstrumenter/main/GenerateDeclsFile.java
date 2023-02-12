@@ -35,10 +35,6 @@ public class GenerateDeclsFile {
     public static String HIERARCHY_SEPARATOR = "&";
     public static int bufferSize = 20; // This number will be multiplied by 1024
 
-
-    // TODO: Variable names can be written in snake_case, use a list to specify the hierarchy instead of splitting the "_" character (Apply the same principle to nested arrays)
-    // TODO: The name suffix of nested arrays of the exits must be print with "." or "&" instead of "_"
-
     public static int numberOfExits = 1;
 
     private static List<DeclsClass> declsClasses = new ArrayList<>();
@@ -138,8 +134,6 @@ public class GenerateDeclsFile {
                 BufferedWriter dtraceBuffer = new BufferedWriter(dtraceFile,bufferSize*1024);
 
                 while((testCasesLine = testCasesBR.readLine()) != null) {
-                    // TODO: operationEndpoint + "_" + httpMethod vs operationId
-                    // TODO: Extract ENTER
                     TestCase testCase = testCaseFileManager.getTestCase(getCSVRecord(testCasesLine));
 
                     if(i%50==0){
@@ -188,7 +182,6 @@ public class GenerateDeclsFile {
     public static String getOperationName(Operation operation, Entry<HttpMethod, Operation> operationEntry, String operationEndpoint){
 
         String operationName;
-        // TODO: Consider throwing an error message
         if (operation.getOperationId() == null) {
             String httpMethod = operationEntry.getKey().toString();
             operationName = operationEndpoint + HIERARCHY_SEPARATOR + httpMethod.toLowerCase();

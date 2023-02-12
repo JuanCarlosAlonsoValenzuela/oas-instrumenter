@@ -50,8 +50,6 @@ public class DeclsVariable {
                 }
 
                 if(parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
-                    // TODO: Input parameters can be of type object, adapt the function generateDeclsVariablesOfOutput (But only the first level of nesting)
-                    // TODO: Create jUnit
                     throw new NullPointerException("Please provide a primitive object or an array as input parameter");
                 } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
                     // Only the first nesting level for the ENTER program point
@@ -59,7 +57,6 @@ public class DeclsVariable {
                     String itemsDataType = arraySchema.getItems().getType();
 
                     if(itemsDataType.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDataType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The content is an array or an object
-                        // TODO: Create jUnits for both objects and arrays
                         List<DeclsVariable> declsVariables = getDeclsVariablesArray(rootVariableName, parameter.getName(),
                                 packageName + "." + parameter.getName(), HASHCODE_TYPE_NAME);
 
@@ -74,7 +71,6 @@ public class DeclsVariable {
 
                     }
                 } else {    // Primitive type
-                    // TODO: Add try catch for null pointer exception explaining that a property of the parameter was not found
                     DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
                             "field " + parameter.getName(), translateDatatype(parameterType),
                             translateDatatype(parameterType), father.getVariableName());
@@ -85,18 +81,6 @@ public class DeclsVariable {
             }
         }
 
-        // Extract parameters from body
-        // TODO: JSONArray and JSONObject (Otherwise throw NullPointerException)
-        // TODO: anyOf and oneOf can be used to specify different Schemas
-//        List<DeclsVariable> declsVariablesOfBody = getDeclsVariablesOfBodyAndFormParameters(operation, "application/json",
-//                rootVariableName, objectName, "body");
-//        enclosedVariables.addAll(declsVariablesOfBody);
-//
-//        // Extract parameters from the form
-//        List<DeclsVariable> declsVariablesOfForm = getDeclsVariablesOfBodyAndFormParameters(operation, "application/x-www-form-urlencoded",
-//                rootVariableName, objectName, "form");
-//        enclosedVariables.addAll(declsVariablesOfForm);
-
         List<DeclsVariable> declsVariablesFromBodyAndForm = getDeclsVariablesOfBodyAndFormParameters(operation, rootVariableName, objectName, "body");
         enclosedVariables.addAll(declsVariablesFromBodyAndForm);
 
@@ -105,9 +89,6 @@ public class DeclsVariable {
 
     }
 
-    // TODO: Refactor this method to delete the null checks
-    // TODO: Take duplicates into account (e.g., application/json and application/xml) (Idea: extract common schemas?)
-    // TODO: If this method is finally used, remove (or change) the parameter "sourceOfParameter"
     public static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation,
                                                                                String rootVariableName, String objectName, String sourceOfParameter) {
         List<DeclsVariable> res = new ArrayList<>();
@@ -126,9 +107,6 @@ public class DeclsVariable {
         return res;
     }
 
-    // TODO: Move to a different class
-    // TODO: Refactor this method and add a try/catch instead of several ifs
-    // TODO: Primitive type
     public static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation, String key,
                                                                                String rootVariableName, String objectName, String sourceOfParameter) {
         Schema schema = null;
@@ -173,8 +151,6 @@ public class DeclsVariable {
 
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit
-    // TODO: Create tests for nested objects and nested primitives with corresponding dtraces
-    // TODO: Move to other class
     public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName, String varKind) {
 
         DeclsVariable father = new DeclsVariable(variableName, varKind,
@@ -199,7 +175,6 @@ public class DeclsVariable {
 
     // Used when the response is primitive (Bad practice)
     // Used for both output and exit
-    // TODO: Move to other class
     // generateDeclsVariablesOfPrimitiveResponse(parameterType, objectName, "this", "variable")
     public static DeclsVariable generateDeclsVariablesOfPrimitiveResponse(String parameterType, String objectName,
                                                                           String variableName, String varKind) {
@@ -238,7 +213,6 @@ public class DeclsVariable {
                                                                      String varKind, String variableNameOutput,
                                                                      boolean isArray) {
         List<DeclsVariable> res = new ArrayList<>();
-        // TODO: Add warning if properties == null
         Map<String, Schema> properties = mapOfProperties.getProperties();
         // Warnings if properties == null
         if (properties == null) {
@@ -518,7 +492,6 @@ public class DeclsVariable {
     // Used for ENTER parameters
     private static String getValueOfParameterForDtraceFile(TestCase testCase, String variableName, String decType, String repType) {
         String value = null;
-        // TODO: Consider arrays
         // Consider path, header and body parameter (First level)
         if(primitiveTypes.contains(decType)) { // If primitive value
 
@@ -573,7 +546,6 @@ public class DeclsVariable {
         return value;
     }
 
-    // TODO: Move to utils
     public static String decodeString(String parameterValue) {
         try {
             return URLDecoder.decode(parameterValue, "UTF-8");
@@ -585,8 +557,6 @@ public class DeclsVariable {
     }
 
     public String generateDtraceEnter(TestCase testCase) {
-        // TODO: Consider arrays
-        // TODO: The body parameter may contain an object
         // Father variable
         String value = getValueOfParameterForDtraceFile(testCase, this.variableName, this.decType, this.repType);
 
@@ -617,10 +587,6 @@ public class DeclsVariable {
     }
 
     public String generateDtraceExit(TestCase testCase, JSONObject json, Boolean isElementOfArray) {
-        // TODO: Consider arrays
-        // TODO: Consider objects
-        // TODO: Consider path, header and form variables
-        // TODO: Check all datatypes (boolean, string, int, double, object)
 
         String value = null;
 
@@ -659,10 +625,9 @@ public class DeclsVariable {
                 value = "[" + value + "]";
             }
 
-        } else if (varKind.equals(ARRAY_TYPE_NAME)) {       // If array TODO: Consider recursivity (Primitive, object and another array)
+        } else if (varKind.equals(ARRAY_TYPE_NAME)) {       // If array
             List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
-            hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy TODO: Refactor to make it more intutive
-            // TODO: Convert to list of arrays (flattening)
+            hierarchy = hierarchy.subList(1, hierarchy.size()); // Remove the class name from the hierachy
             JSONArray elements = getArrayFromHierarchy(json, hierarchy);
 
             // If elements == null, the elements are set to nonsensical
@@ -702,10 +667,9 @@ public class DeclsVariable {
         }
 
 
-        // Son variables        // TODO: Is this necessary? (isElementOfArray should never be true)
+        // Son variables
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
             if(varKind.equals(ARRAY_TYPE_NAME)) {
-                // TODO: Factor común
                 List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
                 String key = hierarchy.get(hierarchy.size()-1);
                 JSONArray elements = (JSONArray) json.get(key);
@@ -742,7 +706,6 @@ public class DeclsVariable {
                 JSONObject jsonSonObject = (JSONObject) jsonSon;
                 return getPrimitiveValueFromHierarchy(jsonSonObject, hierarchy.subList(1, hierarchy.size()));
             } else {    // If JSONArray
-                // TODO: Complete
                 return null;
             }
         }
@@ -763,7 +726,6 @@ public class DeclsVariable {
 
             } else{     // If JSONArray
                 JSONArray jsonSonArray = (JSONArray) jsonSon;
-                // TODO: Complete this type of nesting
                 return null;
             }
         }

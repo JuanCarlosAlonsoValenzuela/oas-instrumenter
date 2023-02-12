@@ -2,9 +2,7 @@ package es.us.isa.jsoninstrumenter.util;
 
 import java.util.*;
 
-import static es.us.isa.jsoninstrumenter.util.CSVManager.createCSVwithHeader;
 import static es.us.isa.jsoninstrumenter.util.CSVManager.writeCSVRow;
-import static es.us.isa.jsoninstrumenter.util.FileManager.checkIfExists;
 
 public class Timer {
 

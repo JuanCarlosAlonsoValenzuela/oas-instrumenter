@@ -196,10 +196,8 @@ public class DeclsExit {
         if(isStringJsonArray(responseBody)) {
             JSONArray jsonArray = stringToJsonArray(responseBody);
 
-            //TODO: Convert this block into a function
             if(this.isNestedArray) {    // (Bad practice) If the response is parseable to array and the exit is of type nestedArray
                 // Count the number of arrays (Nesting level)
-                // TODO: Replace "." with another character
                 int targetNestingLevel = (int) Arrays.stream(this.getNameSuffix().split("\\.")).filter(x-> x.equalsIgnoreCase("array")).count();
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
                 try {
@@ -223,7 +221,6 @@ public class DeclsExit {
                 res = res + this.generateSingleDtraceEnterAndExit(flatList, testCase, declsEnter);
 
             }
-            // TODO: End convert this block into a function
 
         } else {        // If the response is parseable to JSONObject (Expected practice)
             // Expected behaviour
@@ -348,8 +345,6 @@ public class DeclsExit {
 
     }
 
-    // TODO: Rename, it is also used in the ENTER
-    // TODO: Move to another class
     public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype, String variableName) {
         String value = "nonsensical";
 
