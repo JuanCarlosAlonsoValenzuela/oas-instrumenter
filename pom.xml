@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>es.us.isa</groupId>
-    <artifactId>json-instrumenter</artifactId>
+    <groupId>agora</groupId>
+    <artifactId>beet</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>json-instrumenter</name>
+    <name>beet</name>
     <description>A tool designed for instrumenting inputs and outputs of REST APIs in daikon format</description>
 
     <properties>
