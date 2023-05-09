@@ -15,14 +15,12 @@ import static agora.beet.main.GenerateDeclsFile.*;
 
 public class DeclsClass {
 
-    private String packageName;
     private String className;
     private List<DeclsEnter> declsEnters;
     private List<DeclsExit> declsExits;
 
 
-    public DeclsClass(String packageName, String className) {
-        this.packageName = packageName;
+    public DeclsClass(String className) {
         this.className = className;
         this.declsEnters = new ArrayList<>();
         this.declsExits = new ArrayList<>();
@@ -30,14 +28,14 @@ public class DeclsClass {
     }
 
     // DeclsClass for ENTER
-    public static void setDeclsClassEnterAndExit(String packageName, String endpoint, String operationName,
+    public static void setDeclsClassEnterAndExit(String endpoint, String operationName,
                                                  String variableNameInput, Operation operation) {
 
         // ApiResponses = operation.getResponses
-        DeclsClass declsClass = new DeclsClass(packageName, endpoint);
+        DeclsClass declsClass = new DeclsClass(endpoint);
 
         // Variables of the enter
-        DeclsVariable enterVariables = DeclsVariable.getListOfDeclsVariables(packageName, variableNameInput, "input", operation);
+        DeclsVariable enterVariables = DeclsVariable.getListOfDeclsVariables(variableNameInput, "input", operation);
 
         // for loop that adds all the possible subexits
         List<DeclsExit> declsExits = new ArrayList<>();
@@ -48,7 +46,7 @@ public class DeclsClass {
 
             for(MediaType mediaType: apiResponse.getValue().getContent().values()) {
 
-                List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(packageName, endpoint, operationName,
+                List<DeclsExit> nestedDeclsExits = getAllNestedDeclsExits(endpoint, operationName,
                         variableNameInput, enterVariables, objectName, mediaType, apiResponse.getKey());
 
                 declsExits.addAll(nestedDeclsExits);
@@ -57,7 +55,7 @@ public class DeclsClass {
 
         List<DeclsEnter> declsEnters = new ArrayList<>();
         for(DeclsExit declsExit: declsExits) {
-            declsEnters.add(new DeclsEnter(packageName, endpoint, operationName, variableNameInput, operation, "input",
+            declsEnters.add(new DeclsEnter(endpoint, operationName, variableNameInput, operation, "input",
                     declsExit.getNameSuffix(), declsExit.getStatusCode()));
         }
 
@@ -67,7 +65,7 @@ public class DeclsClass {
 
     }
 
-    public static List<DeclsExit> getAllNestedDeclsExits(String packageName, String endpoint, String operationName, String variableNameInput,
+    public static List<DeclsExit> getAllNestedDeclsExits(String endpoint, String operationName, String variableNameInput,
                                                          DeclsVariable enterVariables, String variableNameOutput, MediaType mediaType, String statusCode) {
 
         List<DeclsExit> res = new ArrayList<>();
@@ -80,7 +78,7 @@ public class DeclsClass {
             String nameSuffix = ".array";
 
             while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-                DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
+                DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
                         arraySchema, nameSuffix, statusCode);
                 res.add(declsExit);
 
@@ -95,7 +93,7 @@ public class DeclsClass {
             }
 
         } else if(parameterType !=null && primitiveTypes.contains(DeclsVariable.translateDatatype(parameterType))) {
-            DeclsExit primitiveExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables,
+            DeclsExit primitiveExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables,
                     variableNameOutput, parameterType, statusCode);
             return Collections.singletonList(primitiveExit);
         }
@@ -111,11 +109,11 @@ public class DeclsClass {
             for(String nameSuffix: allSchemas.keySet()) {
                 if(allSchemas.get(nameSuffix).getProperties()==null){       // If the element is of type array, call the constructor that receives an ArraySchema
                     ArraySchema arraySchema = (ArraySchema) allSchemas.get(nameSuffix);
-                    DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
+                    DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
                             arraySchema, nameSuffix, statusCode);
                     res.add(declsExit);
                 } else {    // If the element is of type object, call the constructor that receives an Schema
-                    DeclsExit declsExit = new DeclsExit(packageName, endpoint, operationName,
+                    DeclsExit declsExit = new DeclsExit(endpoint, operationName,
                             variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
                     res.add(declsExit);
                 }
@@ -181,10 +179,6 @@ public class DeclsClass {
         return res;
     }
 
-    public String getPackageName() { return packageName; }
-
-    public void setPackageName(String packageName) { this.packageName = packageName; }
-
     public String getClassName() {
         return className;
     }
@@ -210,7 +204,7 @@ public class DeclsClass {
     }
 
     public String toString() {
-        String res = "ppt " + packageName + "." + className + ":::CLASS" + "\n" +
+        String res = "ppt " + className + ":::CLASS" + "\n" +
                 "ppt-type class" + "\n";
 
         for(DeclsEnter declsEnter: declsEnters) {

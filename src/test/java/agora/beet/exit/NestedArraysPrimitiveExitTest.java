@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.packageName;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -42,7 +41,7 @@ public class NestedArraysPrimitiveExitTest {
             for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
 
                 Operation operation = operationEntry.getValue();
-                String operationEndpoint = path.getKey().replace("/", "");
+                String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
@@ -50,7 +49,7 @@ public class NestedArraysPrimitiveExitTest {
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
-                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
@@ -61,7 +60,6 @@ public class NestedArraysPrimitiveExitTest {
                 System.out.println(declsClassEnterAndExit);
 
                 // CLASS
-                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
                 assertEquals("The size of the list of enters is not 3", 3, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 3", 3, declsClassEnterAndExit.getDeclsExits().size());
@@ -69,7 +67,7 @@ public class NestedArraysPrimitiveExitTest {
                 // OBJECT (ONLY EXIT)
                 List<DeclsExit> declsExitList = declsClassEnterAndExit.getDeclsExits();
                 DeclsExit declsExit1 = declsExitList.get(0);
-                String exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200()";
                 assertEquals("Incorrect exit name", exitName, declsExit1.getExitName());
 
                 // VARIABLES
@@ -78,7 +76,7 @@ public class NestedArraysPrimitiveExitTest {
                 DeclsVariable enterDeclsFatherVariable1 = declsExit1.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId"+HIERARCHY_SEPARATOR+"Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "sampleEndpointId"+HIERARCHY_SEPARATOR+"Input", enterDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
@@ -90,7 +88,7 @@ public class NestedArraysPrimitiveExitTest {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200", exitDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
@@ -102,7 +100,7 @@ public class NestedArraysPrimitiveExitTest {
                 DeclsVariable location1 = declsSonVariables1.get(0);
                 assertEquals("Incorrect variable name", "return.locations", location1.getVariableName());
                 assertEquals("Incorrect var-kind", "field locations", location1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".locations[]", location1.getDecType());
+                assertEquals("Incorrect decType", "locations[]", location1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", location1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", location1.getEnclosingVar());
                 assertFalse("This variable should not be an array", location1.isArray());
@@ -111,7 +109,7 @@ public class NestedArraysPrimitiveExitTest {
                 DeclsVariable location2 = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.locations[..]", location2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", location2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".locations[]", location2.getDecType());
+                assertEquals("Incorrect decType", "locations[]", location2.getDecType());
                 assertEquals("Incorrect repType", "hashcode[]", location2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.locations", location2.getEnclosingVar());
                 assertTrue("This variable should be an array", location2.isArray());
@@ -120,7 +118,8 @@ public class NestedArraysPrimitiveExitTest {
 
                 // SECOND EXIT
                 DeclsExit declsExit2 = declsExitList.get(2);
-                exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations.array.array(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200"
+                        + HIERARCHY_SEPARATOR + "locations.array.array()";
                 assertEquals("Incorrect exit name", exitName, declsExit2.getExitName());
 
                 // EXIT
@@ -129,7 +128,7 @@ public class NestedArraysPrimitiveExitTest {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array.array", exitDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", "sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array.array", exitDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());
@@ -159,7 +158,8 @@ public class NestedArraysPrimitiveExitTest {
 
                 // THIRD EXIT
                 DeclsExit declsExit3 = declsExitList.get(1);
-                exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR +"200"+HIERARCHY_SEPARATOR+"locations.array(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR +"200"+
+                        HIERARCHY_SEPARATOR+"locations.array()";
                 assertEquals("Incorrect exit name", exitName, declsExit3.getExitName());
 
                 // EXIT
@@ -168,7 +168,7 @@ public class NestedArraysPrimitiveExitTest {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable3.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable3.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array", exitDeclsFatherVariable3.getDecType());
+                assertEquals("Incorrect decType", "sampleEndpointId"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"locations.array", exitDeclsFatherVariable3.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable3.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable3.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable3.isArray());
@@ -180,7 +180,7 @@ public class NestedArraysPrimitiveExitTest {
                 array1 = declsSonVariables3.get(0);
                 assertEquals("Incorrect variable name", "return.array", array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".array[]", array1.getDecType());
+                assertEquals("Incorrect decType", "array[]", array1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
@@ -189,7 +189,7 @@ public class NestedArraysPrimitiveExitTest {
                 array2 = declsSonVariables3.get(1);
                 assertEquals("Incorrect variable name", "return.array[..]", array2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", array2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".array[]", array2.getDecType());
+                assertEquals("Incorrect decType", "array[]", array2.getDecType());
                 assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
                 assertTrue("This variable should be an array", array2.isArray());

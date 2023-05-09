@@ -49,7 +49,7 @@ public class BasicEnterTest {
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
-                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
@@ -60,7 +60,6 @@ public class BasicEnterTest {
                 System.out.println(declsClassEnterAndExit);
 
                 // CLASS
-                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
                 assertEquals("The size of the list of enters is not 1", 1, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 1", 1, declsClassEnterAndExit.getDeclsExits().size());
@@ -68,7 +67,7 @@ public class BasicEnterTest {
 
                 // OBJECT (ONLY ENTER)
                 DeclsEnter declsEnter = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                String enterName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200()";
 
                 assertEquals("Incorrect enter name", enterName, declsEnter.getEnterName());
 
@@ -79,7 +78,7 @@ public class BasicEnterTest {
                 DeclsVariable declsFatherVariable = declsEnter.getDeclsVariables();
                 assertEquals("Incorrect variable name", "input", declsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", declsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findAirports" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", "findAirports" + HIERARCHY_SEPARATOR + "Input", declsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", declsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", declsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", declsFatherVariable.isArray());

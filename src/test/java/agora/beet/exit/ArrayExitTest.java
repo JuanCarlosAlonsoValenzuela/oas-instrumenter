@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.packageName;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -42,7 +41,7 @@ public class ArrayExitTest {
             for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
 
                 Operation operation = operationEntry.getValue();
-                String operationEndpoint = path.getKey().replace("/", "");
+                String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
@@ -50,7 +49,7 @@ public class ArrayExitTest {
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
-                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
@@ -61,7 +60,6 @@ public class ArrayExitTest {
                 System.out.println(declsClassEnterAndExit);
 
                 // CLASS
-                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
                 assertEquals("The size of the list of enters is not 1", 2, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 1", 2, declsClassEnterAndExit.getDeclsExits().size());
@@ -69,7 +67,7 @@ public class ArrayExitTest {
                 // OBJECT (ONLY EXIT)
                 // EXIT 1
                 DeclsExit declsExit1 = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName1 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200.array(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                String exitName1 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200.array()";
                 assertEquals("Incorrect exit name", exitName1, declsExit1.getExitName());
 
                 // VARIABLES
@@ -78,7 +76,7 @@ public class ArrayExitTest {
                 DeclsVariable enterDeclsFatherVariable1 = declsExit1.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
@@ -89,7 +87,7 @@ public class ArrayExitTest {
                 DeclsVariable exitDeclsFatherVariable1 = declsExit1.getExitDeclsVariables();
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array", exitDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
@@ -103,7 +101,7 @@ public class ArrayExitTest {
                 DeclsVariable array1 = declsSonVariables1.get(0);
                 assertEquals("Incorrect variable name", "return.array",  array1.getVariableName());
                 assertEquals("Incorrect var-kind", "field array", array1.getVarKind());
-                assertEquals("Incorrect decType",  "main.array[]", array1.getDecType());
+                assertEquals("Incorrect decType",  "array[]", array1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", array1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", array1.getEnclosingVar());
                 assertFalse("This variable should not be an array", array1.isArray());
@@ -112,7 +110,7 @@ public class ArrayExitTest {
                 DeclsVariable array2 = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.array[..]",  array2.getVariableName());
                 assertEquals("Incorrect var-kind", "array", array2.getVarKind());
-                assertEquals("Incorrect decType",  "main.array[]", array2.getDecType());
+                assertEquals("Incorrect decType",  "array[]", array2.getDecType());
                 assertEquals("Incorrect repType", "hashcode[]", array2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.array", array2.getEnclosingVar());
                 assertTrue("This variable should be an array", array2.isArray());
@@ -120,7 +118,7 @@ public class ArrayExitTest {
 
                 // EXIT 2
                 DeclsExit declsExit2 = declsClassEnterAndExit.getDeclsExits().get(1);
-                String exitName2 = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                String exitName2 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200()";
                 assertEquals("Incorrect exit name", exitName2, declsExit2.getExitName());
 
                 // VARIABLES
@@ -129,7 +127,7 @@ public class ArrayExitTest {
                 DeclsVariable enterDeclsFatherVariable2 = declsExit2.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable2.isArray());
@@ -141,7 +139,7 @@ public class ArrayExitTest {
 
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable2.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable2.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", exitDeclsFatherVariable2.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200", exitDeclsFatherVariable2.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable2.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable2.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable2.isArray());

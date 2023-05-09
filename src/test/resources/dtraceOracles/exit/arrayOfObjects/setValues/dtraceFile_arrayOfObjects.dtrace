@@ -1,4 +1,4 @@
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::ENTER
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200():::ENTER
 input
 234676223
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::EXIT1
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200():::EXIT1
 input
 234676223
 1
@@ -26,7 +26,7 @@ return.arrayOfObjectsProperty[..]
 [813079814 813079845]
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::ENTER
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200&arrayOfObjectsProperty():::ENTER
 input
 234676223
 1
@@ -34,7 +34,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::EXIT2
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200&arrayOfObjectsProperty():::EXIT2
 input
 234676223
 1
@@ -51,7 +51,7 @@ return.property2
 "property2Array1"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::ENTER
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200&arrayOfObjectsProperty():::ENTER
 input
 234676223
 1
@@ -59,7 +59,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200&arrayOfObjectsProperty(main.arrayOfObjectsEndpoint&Input):::EXIT2
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200&arrayOfObjectsProperty():::EXIT2
 input
 234676223
 1

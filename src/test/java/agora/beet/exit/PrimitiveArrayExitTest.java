@@ -42,7 +42,7 @@ public class PrimitiveArrayExitTest {
             for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
 
                 Operation operation = operationEntry.getValue();
-                String operationEndpoint = path.getKey().replace("/", "");
+                String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
@@ -50,7 +50,7 @@ public class PrimitiveArrayExitTest {
                 // Extracting the input parameters
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
-                setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
                 List<DeclsClass> allDeclsClasses = getAllDeclsClasses();
@@ -61,14 +61,13 @@ public class PrimitiveArrayExitTest {
                 System.out.println(declsClassEnterAndExit);
 
                 // CLASS
-                assertEquals("Incorrect package name", packageName, declsClassEnterAndExit.getPackageName());
                 assertEquals("Incorrect class name", operationEndpoint, declsClassEnterAndExit.getClassName());
                 assertEquals("The size of the list of enters is not 1", 1, declsClassEnterAndExit.getDeclsEnters().size());
                 assertEquals("The size of the list of exits is not 1", 1, declsClassEnterAndExit.getDeclsExits().size());
 
                 // OBJECT (ONLY EXIT)
                 DeclsExit declsExit = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName = packageName + "." + operationEndpoint + "." + operationName + HIERARCHY_SEPARATOR + "200(" + packageName + "." + operationName + HIERARCHY_SEPARATOR + "Input" + ")";
+                String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200()";
 
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
                 assertEquals("The exit number is not correct", numberOfExits, declsExit.getExitNumber() + 1);
@@ -80,7 +79,7 @@ public class PrimitiveArrayExitTest {
                 DeclsVariable enterDeclsFatherVariable = declsExit.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress"+ HIERARCHY_SEPARATOR +"Input", enterDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", "findByAddress"+ HIERARCHY_SEPARATOR +"Input", enterDeclsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable.isArray());
@@ -93,7 +92,7 @@ public class PrimitiveArrayExitTest {
 
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", packageName + ".findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200", exitDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", "findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200", exitDeclsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());

@@ -1,4 +1,4 @@
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::ENTER
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200():::ENTER
 input
 445974941
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200(main.multipleOperationsEndpoint&Input):::EXIT1
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200():::EXIT1
 input
 445974941
 1
@@ -26,7 +26,7 @@ return.arrayOfObjectsProperty[..]
 [713048470 713048439]
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::ENTER
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200&arrayOfObjectsProperty():::ENTER
 input
 445974941
 1
@@ -34,7 +34,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::EXIT2
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200&arrayOfObjectsProperty():::EXIT2
 input
 445974941
 1
@@ -48,7 +48,7 @@ return.property1
 "property1Value1"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::ENTER
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200&arrayOfObjectsProperty():::ENTER
 input
 445974941
 1
@@ -56,7 +56,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&200&arrayOfObjectsProperty(main.multipleOperationsEndpoint&Input):::EXIT2
+/multipleOperationsEndpoint&multipleOperationsEndpoint&200&arrayOfObjectsProperty():::EXIT2
 input
 445974941
 1
@@ -70,7 +70,7 @@ return.property1
 "property1Value2"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::ENTER
+/multipleOperationsEndpoint&multipleOperationsEndpoint&400():::ENTER
 input
 316892222
 1
@@ -78,7 +78,7 @@ input.inputParameter
 "WRONGVALUE"
 1
 
-main.multipleOperationsEndpoint.multipleOperationsEndpoint&400(main.multipleOperationsEndpoint&Input):::EXIT3
+/multipleOperationsEndpoint&multipleOperationsEndpoint&400():::EXIT3
 input
 316892222
 1

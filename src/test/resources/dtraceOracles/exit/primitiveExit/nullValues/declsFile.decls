@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.primitiveExitEndpoint:::CLASS
+ppt /primitiveExitEndpoint:::CLASS
 ppt-type class
 
-ppt main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::ENTER
+ppt /primitiveExitEndpoint&primitiveExitEndpoint&200():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.primitiveExitEndpoint&Input
+	dec-type primitiveExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -16,11 +16,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.primitiveExitEndpoint.primitiveExitEndpoint&200(main.primitiveExitEndpoint&Input):::EXIT1
+ppt /primitiveExitEndpoint&primitiveExitEndpoint&200():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.primitiveExitEndpoint&Input
+	dec-type primitiveExitEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -29,7 +29,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.primitiveExitEndpoint&Output&200
+	dec-type primitiveExitEndpoint&Output&200
 	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty

@@ -1,4 +1,4 @@
-main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::ENTER
+/objectExitEndpoint&objectExitEndpoint&200():::ENTER
 input
 152571934
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.objectExitEndpoint.objectExitEndpoint&200(main.objectExitEndpoint&Input):::EXIT1
+/objectExitEndpoint&objectExitEndpoint&200():::EXIT1
 input
 152571934
 1

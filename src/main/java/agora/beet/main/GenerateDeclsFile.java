@@ -23,8 +23,8 @@ import java.util.stream.Collectors;
 
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "---";
-    private static String testCasesFilePath = "---";
+    private static String openApiSpecPath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/swagger_createPlaylist.yaml";
+    private static String testCasesFilePath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/50/Spotify_CreatePlaylist_50.csv";
     private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {};
@@ -34,8 +34,6 @@ public class GenerateDeclsFile {
     public static int numberOfExits = 1;
 
     private static List<DeclsClass> declsClasses = new ArrayList<>();
-
-    public static final String packageName = "main";
 
     public static final String HASHCODE_TYPE_NAME = "hashcode";
     public static final String STRING_TYPE_NAME = "java.lang.String";
@@ -77,7 +75,7 @@ public class GenerateDeclsFile {
 
             for (Entry<HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
-                String operationEndpoint = path.getKey().replace("/", "");
+                String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
                 String operationName = getOperationName(operation, operationEntry, operationEndpoint);
@@ -86,7 +84,7 @@ public class GenerateDeclsFile {
                 String objectName = operationName + HIERARCHY_SEPARATOR + "Input";
 
                 // Extracting enter and exits
-                DeclsClass.setDeclsClassEnterAndExit(packageName, operationEndpoint, operationName,
+                DeclsClass.setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
             }
@@ -139,8 +137,7 @@ public class GenerateDeclsFile {
 
                     for(DeclsClass declsClass: declsFile.getClasses()) {
                         // The enter and exits belong to the same class
-                        if(declsClass.getPackageName().equalsIgnoreCase(packageName) &&
-                                declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
+                        if(declsClass.getClassName().equalsIgnoreCase(testCase.getPath())){
 
                             // Get the correct declsExit by the responseCode
                             List<DeclsExit> declsExits = declsClass.getDeclsExits().stream()

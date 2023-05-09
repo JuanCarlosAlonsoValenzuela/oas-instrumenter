@@ -1,4 +1,4 @@
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200():::ENTER
 input
 199438654
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT1
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200():::EXIT1
 input
 199438654
 1
@@ -26,7 +26,7 @@ return.nestedArrayProperty[..]
 [143218481 143218450 null 143218388]
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::ENTER
 input
 199438654
 1
@@ -34,7 +34,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT2
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::EXIT2
 input
 199438654
 1
@@ -48,7 +48,7 @@ return.propertyOfArray
 1.0
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::ENTER
 input
 199438654
 1
@@ -56,7 +56,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT2
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::EXIT2
 input
 199438654
 1
@@ -70,7 +70,7 @@ return.propertyOfArray
 2.0
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::ENTER
 input
 199438654
 1
@@ -78,7 +78,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT2
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::EXIT2
 input
 199438654
 1
@@ -92,7 +92,7 @@ return.propertyOfArray
 3.0
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
 input
 199438654
 1
@@ -100,7 +100,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
 input
 199438654
 1
@@ -117,7 +117,7 @@ return.array[..]
 [739130503 739130534]
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
 input
 199438654
 1
@@ -125,7 +125,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
 input
 199438654
 1
@@ -142,7 +142,7 @@ return.array[..]
 [739130503]
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
 input
 199438654
 1
@@ -150,7 +150,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
 input
 199438654
 1
@@ -167,7 +167,7 @@ return.array[..]
 nonsensical
 2
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
 input
 199438654
 1
@@ -175,7 +175,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
 input
 199438654
 1
@@ -192,7 +192,7 @@ return.array[..]
 []
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
 input
 199438654
 1
@@ -200,7 +200,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT4
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
 input
 199438654
 1
@@ -217,7 +217,7 @@ return.array[..]
 [739130503 739130534]
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
 input
 199438654
 1
@@ -225,7 +225,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT4
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
 input
 199438654
 1
@@ -242,7 +242,7 @@ return.array[..]
 [null 739130534]
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
 input
 199438654
 1
@@ -250,7 +250,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT4
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
 input
 199438654
 1
@@ -267,7 +267,7 @@ return.array[..]
 nonsensical
 2
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
 input
 199438654
 1
@@ -275,7 +275,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT4
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
 input
 199438654
 1

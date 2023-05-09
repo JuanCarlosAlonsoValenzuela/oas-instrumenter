@@ -1,4 +1,4 @@
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::ENTER
 input
 962305817
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::EXIT1
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::EXIT1
 input
 962305817
 1
@@ -23,7 +23,7 @@ return.array[..]
 [994190832 994190863]
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::ENTER
 input
 962305817
 1
@@ -31,7 +31,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::EXIT2
 input
 962305817
 1
@@ -48,7 +48,7 @@ return.property2
 "firstValueOfProperty2"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::ENTER
 input
 962305817
 1
@@ -56,7 +56,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::EXIT2
 input
 962305817
 1

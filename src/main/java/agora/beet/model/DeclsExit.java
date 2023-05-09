@@ -18,7 +18,6 @@ import static agora.beet.main.GenerateDeclsFile.*;
 
 public class DeclsExit {
 
-    private String packageName;
     private String endpoint;
     private String operationName;
     private String statusCode;
@@ -30,9 +29,8 @@ public class DeclsExit {
     private boolean isNestedArray;  // Bad practice
 
     // Used when the exit is of type object
-    public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
+    public DeclsExit(String endpoint, String operationName, String variableNameInput,
                      DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String nameSuffix, String statusCode) {
-        this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
@@ -45,15 +43,14 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = false;
 
-        this.exitDeclsVariables = DeclsVariable.generateDeclsVariablesOfOutput("return", "return", packageName,
+        this.exitDeclsVariables = DeclsVariable.generateDeclsVariablesOfOutput("return", "return",
                 variableNameOutput + nameSuffix, mapOfProperties);
     }
 
     // Used when the exit is of type array (bad practice)
-    public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
+    public DeclsExit(String endpoint, String operationName, String variableNameInput,
                      DeclsVariable enterVariables, String variableNameOutput, ArraySchema arraySchema, String nameSuffix, String statusCode) {
 
-        this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
@@ -71,9 +68,8 @@ public class DeclsExit {
     }
 
     // Used when the exit is primitive (Bad pracice)
-    public DeclsExit(String packageName, String endpoint, String operationName, String variableNameInput,
+    public DeclsExit(String endpoint, String operationName, String variableNameInput,
                      DeclsVariable enterVariables, String variableNameOutput, String parameterType, String statusCode) {
-        this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
@@ -90,8 +86,7 @@ public class DeclsExit {
     }
 
     public String getExitName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + HIERARCHY_SEPARATOR + this.statusCode +  this.nameSuffix + "(" +
-                this.packageName + "." + this.variableNameInput + ")";
+        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR + this.statusCode +  this.nameSuffix + "()";
     }
 
     public String getStatusCode() {
@@ -100,14 +95,6 @@ public class DeclsExit {
 
     public void setStatusCode(String statusCode) {
         this.statusCode = statusCode;
-    }
-
-    public String getPackageName() {
-        return packageName;
-    }
-
-    public void setPackageName(String packageName) {
-        this.packageName = packageName;
     }
 
     public String getEndpoint() {

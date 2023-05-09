@@ -30,9 +30,9 @@ public class DeclsVariable {
     private boolean isArray;
     private List<DeclsVariable> enclosedVariables;
 
-    public static DeclsVariable getListOfDeclsVariables(String packageName, String objectName, String rootVariableName, Operation operation) {
+    public static DeclsVariable getListOfDeclsVariables(String objectName, String rootVariableName, Operation operation) {
         // Father parameter
-        DeclsVariable father = new DeclsVariable(rootVariableName, "variable", packageName + "." +
+        DeclsVariable father = new DeclsVariable(rootVariableName, "variable",
                 objectName, HASHCODE_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
@@ -58,7 +58,7 @@ public class DeclsVariable {
 
                     if(itemsDataType.equalsIgnoreCase(OBJECT_TYPE_NAME) || itemsDataType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {   // The content is an array or an object
                         List<DeclsVariable> declsVariables = getDeclsVariablesArray(rootVariableName, parameter.getName(),
-                                packageName + "." + parameter.getName(), HASHCODE_TYPE_NAME);
+                                parameter.getName(), HASHCODE_TYPE_NAME);
 
                         enclosedVariables.addAll(declsVariables);
 
@@ -153,8 +153,7 @@ public class DeclsVariable {
     // Used for both output and exit
     public static DeclsVariable generateDeclsVariablesOfArrayOutput(ArraySchema arraySchema, String objectName, String variableName, String varKind) {
 
-        DeclsVariable father = new DeclsVariable(variableName, varKind,
-                packageName + "." + objectName, HASHCODE_TYPE_NAME, null);
+        DeclsVariable father = new DeclsVariable(variableName, varKind, objectName, HASHCODE_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVars;
         String itemsDatatype = arraySchema.getItems().getType();
@@ -164,7 +163,7 @@ public class DeclsVariable {
             enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, translatedDatatype,
                     translatedDatatype);
         } else{
-            enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, packageName + "." + ARRAY_TYPE_NAME,
+            enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, ARRAY_TYPE_NAME,
                     HASHCODE_TYPE_NAME);
         }
 
@@ -178,7 +177,7 @@ public class DeclsVariable {
     // generateDeclsVariablesOfPrimitiveResponse(parameterType, objectName, "this", "variable")
     public static DeclsVariable generateDeclsVariablesOfPrimitiveResponse(String parameterType, String objectName,
                                                                           String variableName, String varKind) {
-        DeclsVariable father = new DeclsVariable(variableName, varKind, packageName + "." + objectName, HASHCODE_TYPE_NAME, null);
+        DeclsVariable father = new DeclsVariable(variableName, varKind, objectName, HASHCODE_TYPE_NAME, null);
 
         String translatedDatatype = translateDatatype(parameterType);
 
@@ -194,10 +193,10 @@ public class DeclsVariable {
 
     // Used for both output and exit
     // Creates the father variable
-    public static DeclsVariable generateDeclsVariablesOfOutput(String variableName, String varKind, String packageName,
+    public static DeclsVariable generateDeclsVariablesOfOutput(String variableName, String varKind,
                                                                      String variableNameOutput, Schema mapOfProperties) {
         DeclsVariable father = new DeclsVariable(variableName, varKind,
-                packageName + "." + variableNameOutput, HASHCODE_TYPE_NAME, null);
+                variableNameOutput, HASHCODE_TYPE_NAME, null);
 
         // Creates the son variables
         List<DeclsVariable> enclosedVars = generateDeclsVariablesOfOutput(mapOfProperties, variableName, varKind, variableNameOutput, false);
@@ -232,7 +231,7 @@ public class DeclsVariable {
                 if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                     // Generate the father variable
                     DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "field " + parameterName,
-                            packageName + "." + variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
+                            variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
 
                     // Recursive call for son variables
                     List<DeclsVariable> enclosedVariables =
@@ -282,7 +281,7 @@ public class DeclsVariable {
 
             // Generate the father variable
             List<DeclsVariable> declsVariables = getDeclsVariablesArray(variablePath, parameterName,
-                    packageName + "." + parameterName, HASHCODE_TYPE_NAME);
+                    parameterName, HASHCODE_TYPE_NAME);
 
             res.addAll(declsVariables);
 

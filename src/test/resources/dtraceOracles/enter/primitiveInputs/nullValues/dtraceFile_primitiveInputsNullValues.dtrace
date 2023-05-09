@@ -1,4 +1,4 @@
-main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::ENTER
+/primitiveInputsEndpoint/{stringInPath}&primitiveInputsEndpoint&200():::ENTER
 input
 1983026885
 1
@@ -15,7 +15,7 @@ input.booleanInForm
 nonsensical
 2
 
-main.primitiveInputsEndpoint{stringInPath}.primitiveInputsEndpoint&200(main.primitiveInputsEndpoint&Input):::EXIT1
+/primitiveInputsEndpoint/{stringInPath}&primitiveInputsEndpoint&200():::EXIT1
 input
 1983026885
 1

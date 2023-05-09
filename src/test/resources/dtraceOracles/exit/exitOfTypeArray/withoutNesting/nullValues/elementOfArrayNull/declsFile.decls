@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.exitOfTypeArrayEndpoint:::CLASS
+ppt /exitOfTypeArrayEndpoint:::CLASS
 ppt-type class
 
-ppt main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayEndpoint&Input
+	dec-type exitOfTypeArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -16,11 +16,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayEndpoint&Input
+	dec-type exitOfTypeArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -28,11 +28,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::EXIT1
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayEndpoint&Input
+	dec-type exitOfTypeArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -41,25 +41,25 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeArrayEndpoint&Output&200.array
+	dec-type exitOfTypeArrayEndpoint&Output&200.array
 	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode[]
 
-ppt main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeArrayEndpoint&Input
+	dec-type exitOfTypeArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -68,7 +68,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeArrayEndpoint&Output&200
+	dec-type exitOfTypeArrayEndpoint&Output&200
 	rep-type hashcode
 variable return.property1
 	var-kind field property1

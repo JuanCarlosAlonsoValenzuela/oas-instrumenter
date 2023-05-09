@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.users{user_id}playlists:::CLASS
+ppt /users/{user_id}/playlists:::CLASS
 ppt-type class
 
-ppt main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::ENTER
+ppt /users/{user_id}/playlists&createPlaylist&201():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -41,11 +41,11 @@ variable input.collaborative
 	dec-type boolean
 	rep-type boolean
 
-ppt main.users{user_id}playlists.createPlaylist&201&images(main.createPlaylist&Input):::ENTER
+ppt /users/{user_id}/playlists&createPlaylist&201&images():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -78,11 +78,11 @@ variable input.collaborative
 	dec-type boolean
 	rep-type boolean
 
-ppt main.users{user_id}playlists.createPlaylist&201&tracks&items(main.createPlaylist&Input):::ENTER
+ppt /users/{user_id}/playlists&createPlaylist&201&tracks&items():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -115,11 +115,11 @@ variable input.collaborative
 	dec-type boolean
 	rep-type boolean
 
-ppt main.users{user_id}playlists.createPlaylist&201(main.createPlaylist&Input):::EXIT1
+ppt /users/{user_id}/playlists&createPlaylist&201():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -153,7 +153,7 @@ variable input.collaborative
 	rep-type boolean
 variable return
 	var-kind return
-	dec-type main.createPlaylist&Output&201
+	dec-type createPlaylist&Output&201
 	rep-type hashcode
 variable return.primary_color
 	var-kind field primary_color
@@ -173,7 +173,7 @@ variable return.description
 variable return.external_urls
 	var-kind field external_urls
 	enclosing-var return
-	dec-type main.createPlaylist&Output&201&external_urls
+	dec-type createPlaylist&Output&201&external_urls
 	rep-type hashcode
 variable return.external_urls.spotify
 	var-kind field spotify
@@ -183,7 +183,7 @@ variable return.external_urls.spotify
 variable return.followers
 	var-kind field followers
 	enclosing-var return
-	dec-type main.createPlaylist&Output&201&followers
+	dec-type createPlaylist&Output&201&followers
 	rep-type hashcode
 variable return.followers.href
 	var-kind field href
@@ -208,13 +208,13 @@ variable return.id
 variable return.images
 	var-kind field images
 	enclosing-var return
-	dec-type main.images[]
+	dec-type images[]
 	rep-type hashcode
 variable return.images[..]
 	var-kind array
 	enclosing-var return.images
 	array 1
-	dec-type main.images[]
+	dec-type images[]
 	rep-type hashcode[]
 variable return.name
 	var-kind field name
@@ -224,7 +224,7 @@ variable return.name
 variable return.owner
 	var-kind field owner
 	enclosing-var return
-	dec-type main.createPlaylist&Output&201&owner
+	dec-type createPlaylist&Output&201&owner
 	rep-type hashcode
 variable return.owner.display_name
 	var-kind field display_name
@@ -234,7 +234,7 @@ variable return.owner.display_name
 variable return.owner.external_urls
 	var-kind field external_urls
 	enclosing-var return.owner
-	dec-type main.createPlaylist&Output&201&external_urls
+	dec-type createPlaylist&Output&201&external_urls
 	rep-type hashcode
 variable return.owner.external_urls.spotify
 	var-kind field spotify
@@ -244,7 +244,7 @@ variable return.owner.external_urls.spotify
 variable return.owner.followers
 	var-kind field followers
 	enclosing-var return.owner
-	dec-type main.createPlaylist&Output&201&followers
+	dec-type createPlaylist&Output&201&followers
 	rep-type hashcode
 variable return.owner.followers.href
 	var-kind field href
@@ -289,7 +289,7 @@ variable return.snapshot_id
 variable return.tracks
 	var-kind field tracks
 	enclosing-var return
-	dec-type main.createPlaylist&Output&201&tracks
+	dec-type createPlaylist&Output&201&tracks
 	rep-type hashcode
 variable return.tracks.href
 	var-kind field href
@@ -299,13 +299,13 @@ variable return.tracks.href
 variable return.tracks.items
 	var-kind field items
 	enclosing-var return.tracks
-	dec-type main.items[]
+	dec-type items[]
 	rep-type hashcode
 variable return.tracks.items[..]
 	var-kind array
 	enclosing-var return.tracks.items
 	array 1
-	dec-type main.items[]
+	dec-type items[]
 	rep-type hashcode[]
 variable return.tracks.limit
 	var-kind field limit
@@ -343,11 +343,11 @@ variable return.uri
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.users{user_id}playlists.createPlaylist&201&images(main.createPlaylist&Input):::EXIT2
+ppt /users/{user_id}/playlists&createPlaylist&201&images():::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -381,7 +381,7 @@ variable input.collaborative
 	rep-type boolean
 variable return
 	var-kind return
-	dec-type main.createPlaylist&Output&201&images
+	dec-type createPlaylist&Output&201&images
 	rep-type hashcode
 variable return.height
 	var-kind field height
@@ -399,11 +399,11 @@ variable return.width
 	dec-type int
 	rep-type int
 
-ppt main.users{user_id}playlists.createPlaylist&201&tracks&items(main.createPlaylist&Input):::EXIT3
+ppt /users/{user_id}/playlists&createPlaylist&201&tracks&items():::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.createPlaylist&Input
+	dec-type createPlaylist&Input
 	rep-type hashcode
 variable input.user_id
 	var-kind field user_id
@@ -437,7 +437,7 @@ variable input.collaborative
 	rep-type boolean
 variable return
 	var-kind return
-	dec-type main.createPlaylist&Output&201&tracks&items
+	dec-type createPlaylist&Output&201&tracks&items
 	rep-type hashcode
 variable return.added_at
 	var-kind field added_at
@@ -447,7 +447,7 @@ variable return.added_at
 variable return.added_by
 	var-kind field added_by
 	enclosing-var return
-	dec-type main.createPlaylist&Output&201&tracks&items&added_by
+	dec-type createPlaylist&Output&201&tracks&items&added_by
 	rep-type hashcode
 variable return.added_by.display_name
 	var-kind field display_name
@@ -457,7 +457,7 @@ variable return.added_by.display_name
 variable return.added_by.external_urls
 	var-kind field external_urls
 	enclosing-var return.added_by
-	dec-type main.createPlaylist&Output&201&tracks&items&external_urls
+	dec-type createPlaylist&Output&201&tracks&items&external_urls
 	rep-type hashcode
 variable return.added_by.external_urls.spotify
 	var-kind field spotify
@@ -467,7 +467,7 @@ variable return.added_by.external_urls.spotify
 variable return.added_by.followers
 	var-kind field followers
 	enclosing-var return.added_by
-	dec-type main.createPlaylist&Output&201&tracks&items&followers
+	dec-type createPlaylist&Output&201&tracks&items&followers
 	rep-type hashcode
 variable return.added_by.followers.href
 	var-kind field href

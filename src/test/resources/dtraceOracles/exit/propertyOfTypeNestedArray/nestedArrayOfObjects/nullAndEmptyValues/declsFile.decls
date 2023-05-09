@@ -1,14 +1,14 @@
 decl-version 2.0
 var-comparability implicit
 
-ppt main.exitOfTypeNestedArrayEndpoint:::CLASS
+ppt /exitOfTypeNestedArrayEndpoint:::CLASS
 ppt-type class
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -16,11 +16,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -28,11 +28,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -40,11 +40,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -52,11 +52,11 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT1
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -65,7 +65,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeNestedArrayEndpoint&Output&200
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200
 	rep-type hashcode
 variable return.stringProperty
 	var-kind field stringProperty
@@ -75,20 +75,20 @@ variable return.stringProperty
 variable return.nestedArrayProperty
 	var-kind field nestedArrayProperty
 	enclosing-var return
-	dec-type main.nestedArrayProperty[]
+	dec-type nestedArrayProperty[]
 	rep-type hashcode
 variable return.nestedArrayProperty[..]
 	var-kind array
 	enclosing-var return.nestedArrayProperty
 	array 1
-	dec-type main.nestedArrayProperty[]
+	dec-type nestedArrayProperty[]
 	rep-type hashcode[]
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT2
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty():::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -97,7 +97,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty
 	rep-type hashcode
 variable return.propertyOfArray
 	var-kind field propertyOfArray
@@ -105,11 +105,11 @@ variable return.propertyOfArray
 	dec-type double
 	rep-type double
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT3
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -118,25 +118,25 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array.array
 	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode[]
 
-ppt main.exitOfTypeNestedArrayEndpoint.exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array(main.exitOfTypeNestedArrayEndpoint&Input):::EXIT4
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
-	dec-type main.exitOfTypeNestedArrayEndpoint&Input
+	dec-type exitOfTypeNestedArrayEndpoint&Input
 	rep-type hashcode
 variable input.inputParameter
 	var-kind field inputParameter
@@ -145,17 +145,17 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type main.exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array
 	rep-type hashcode
 variable return.array
 	var-kind field array
 	enclosing-var return
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode
 variable return.array[..]
 	var-kind array
 	enclosing-var return.array
 	array 1
-	dec-type main.array[]
+	dec-type array[]
 	rep-type hashcode[]
 

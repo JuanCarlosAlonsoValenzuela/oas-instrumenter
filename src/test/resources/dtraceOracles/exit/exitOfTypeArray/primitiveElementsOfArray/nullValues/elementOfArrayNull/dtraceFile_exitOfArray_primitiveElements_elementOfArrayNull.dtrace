@@ -1,4 +1,4 @@
-main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint&200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint&Input):::ENTER
+/exitOfTypeArrayPrimitiveElementsEndpoint&exitOfTypeArrayPrimitiveElementsEndpoint&200.array():::ENTER
 input
 575057660
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayPrimitiveElementsEndpoint.exitOfTypeArrayPrimitiveElementsEndpoint&200.array(main.exitOfTypeArrayPrimitiveElementsEndpoint&Input):::EXIT1
+/exitOfTypeArrayPrimitiveElementsEndpoint&exitOfTypeArrayPrimitiveElementsEndpoint&200.array():::EXIT1
 input
 575057660
 1

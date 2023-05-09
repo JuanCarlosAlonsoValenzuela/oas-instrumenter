@@ -1,4 +1,4 @@
-main.operation1.operation1&200(main.operation1&Input):::ENTER
+/operation1&operation1&200():::ENTER
 input
 445974941
 1
@@ -6,7 +6,7 @@ input.parameterOperation1
 "inputOp1"
 1
 
-main.operation1.operation1&200(main.operation1&Input):::EXIT1
+/operation1&operation1&200():::EXIT1
 input
 445974941
 1
@@ -26,7 +26,7 @@ return.arrayOfObjectsPropertyOperation1[..]
 [736258612 736258643]
 1
 
-main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::ENTER
+/operation1&operation1&200&arrayOfObjectsPropertyOperation1():::ENTER
 input
 445974941
 1
@@ -34,7 +34,7 @@ input.parameterOperation1
 "inputOp1"
 1
 
-main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::EXIT2
+/operation1&operation1&200&arrayOfObjectsPropertyOperation1():::EXIT2
 input
 445974941
 1
@@ -48,7 +48,7 @@ return.property1Operation1
 "itemArray1"
 1
 
-main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::ENTER
+/operation1&operation1&200&arrayOfObjectsPropertyOperation1():::ENTER
 input
 445974941
 1
@@ -56,7 +56,7 @@ input.parameterOperation1
 "inputOp1"
 1
 
-main.operation1.operation1&200&arrayOfObjectsPropertyOperation1(main.operation1&Input):::EXIT2
+/operation1&operation1&200&arrayOfObjectsPropertyOperation1():::EXIT2
 input
 445974941
 1
@@ -70,7 +70,7 @@ return.property1Operation1
 "itemArray2"
 1
 
-main.operation2.operation2&200(main.operation2&Input):::ENTER
+/operation2&operation2&200():::ENTER
 input
 316892222
 1
@@ -78,7 +78,7 @@ input.parameterOperation2
 "inputOp2"
 1
 
-main.operation2.operation2&200(main.operation2&Input):::EXIT3
+/operation2&operation2&200():::EXIT3
 input
 316892222
 1

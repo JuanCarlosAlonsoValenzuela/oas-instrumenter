@@ -45,7 +45,7 @@ public class SimpleDtraceFileTest {
 
             for (Map.Entry<PathItem.HttpMethod, Operation> operationEntry: pathItem.readOperationsMap().entrySet()) {
                 Operation operation = operationEntry.getValue();
-                String operationEndpoint = path.getKey().replace("/", "");
+                String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
                 String operationName = GenerateDeclsFile.getOperationName(operation, operationEntry, operationEndpoint);
@@ -54,7 +54,7 @@ public class SimpleDtraceFileTest {
                 String objectName = operationName + GenerateDeclsFile.HIERARCHY_SEPARATOR + "Input";
 
                 // Extracting enter and exits
-                DeclsClass.setDeclsClassEnterAndExit(GenerateDeclsFile.packageName, operationEndpoint, operationName,
+                DeclsClass.setDeclsClassEnterAndExit(operationEndpoint, operationName,
                         objectName, operation);
 
             }
@@ -83,13 +83,12 @@ public class SimpleDtraceFileTest {
                 TestCase testCase = testCaseFileManager.getTestCase(CSVManager.getCSVRecord(testCasesLine));
                 for(DeclsClass declsClass: declsFile.getClasses()) {
                     // The enter and exits belong to the same class
-                    if(declsClass.getPackageName().equalsIgnoreCase(GenerateDeclsFile.packageName) &&
-                            declsClass.getClassName().equalsIgnoreCase(testCase.getPath().replace("/",""))){
+                    if(declsClass.getClassName().equalsIgnoreCase(testCase.getPath())){
                         DeclsEnter declsEnter = declsClass.getDeclsEnters().get(0);
 
                         // Checks in ENTER
                         String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
-                        Assert.assertEquals("Incorrect enter name", "main.airport.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200(main.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "Input):::ENTER", enterDtraceLines[0]);
+                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::ENTER", enterDtraceLines[0]);
                         assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
                         assertTrue(enterDtraceLines[2].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
@@ -116,7 +115,7 @@ public class SimpleDtraceFileTest {
                         String[] exitDtraceLines = declsExit.generateDtrace(testCase, declsEnter).split("\n");
 
                         // Checks in ENTER
-                        Assert.assertEquals("Incorrect enter name", "main.airport.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200(main.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "Input):::ENTER", exitDtraceLines[0]);
+                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::ENTER", exitDtraceLines[0]);
                         assertEquals("Incorrect wrapper name", "input", exitDtraceLines[1]);
                         assertTrue(exitDtraceLines[2].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[3]);
@@ -132,7 +131,7 @@ public class SimpleDtraceFileTest {
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[9]);
 
 
-                        Assert.assertEquals("Incorrect exit name", "main.airport.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200(main.findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "Input):::EXIT1", exitDtraceLines[11]);
+                        Assert.assertEquals("Incorrect exit name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::EXIT1", exitDtraceLines[11]);
                         assertEquals("Incorrect wrapper name", "input", exitDtraceLines[12]);
                         assertTrue(exitDtraceLines[13].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[14]);

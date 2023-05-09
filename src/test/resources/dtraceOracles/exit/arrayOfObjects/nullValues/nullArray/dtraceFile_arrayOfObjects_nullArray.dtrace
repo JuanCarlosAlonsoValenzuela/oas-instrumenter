@@ -1,4 +1,4 @@
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::ENTER
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200():::ENTER
 input
 492841661
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.arrayOfObjectsEndpoint.arrayOfObjectsEndpoint&200(main.arrayOfObjectsEndpoint&Input):::EXIT1
+/arrayOfObjectsEndpoint&arrayOfObjectsEndpoint&200():::EXIT1
 input
 492841661
 1

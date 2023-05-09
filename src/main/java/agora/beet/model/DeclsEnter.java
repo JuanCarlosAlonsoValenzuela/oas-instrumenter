@@ -10,7 +10,6 @@ import static agora.beet.model.DeclsExit.generateDtraceExitValueOfJSONArray;
 
 public class DeclsEnter {
 
-    private String packageName;
     private String endpoint;
     private String operationName;
     private String variableNameInput;
@@ -19,31 +18,21 @@ public class DeclsEnter {
 
     private DeclsVariable declsVariables;
 
-    public DeclsEnter(String packageName, String endpoint,
+    public DeclsEnter(String endpoint,
                       String operationName, String variableNameInput,
                       Operation operation, String rootVariableName,
                       String nameSuffix, String statusCode) {
-        this.packageName = packageName;
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
-        this.declsVariables = DeclsVariable.getListOfDeclsVariables(packageName, variableNameInput, rootVariableName, operation);
+        this.declsVariables = DeclsVariable.getListOfDeclsVariables(variableNameInput, rootVariableName, operation);
 
         this.nameSuffix = nameSuffix;
         this.statusCode = statusCode;
     }
 
     public String getEnterName() {
-        return this.packageName + "." + this.endpoint + "." + this.operationName + HIERARCHY_SEPARATOR + this.statusCode + this.nameSuffix + "(" +
-                this.packageName + "." + this.variableNameInput + ")";
-    }
-
-    public String getPackageName() {
-        return packageName;
-    }
-
-    public void setPackageName(String packageName) {
-        this.packageName = packageName;
+        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR + this.statusCode + this.nameSuffix + "()";
     }
 
     public String getEndpoint() {

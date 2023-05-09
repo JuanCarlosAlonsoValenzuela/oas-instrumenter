@@ -1,4 +1,4 @@
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::ENTER
 input
 833223098
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200.array(main.exitOfTypeArrayEndpoint&Input):::EXIT1
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::EXIT1
 input
 833223098
 1
@@ -23,7 +23,7 @@ return.array[..]
 [488632207 null]
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::ENTER
 input
 833223098
 1
@@ -31,7 +31,7 @@ input.inputParameter
 "parameterValue"
 1
 
-main.exitOfTypeArrayEndpoint.exitOfTypeArrayEndpoint&200(main.exitOfTypeArrayEndpoint&Input):::EXIT2
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200():::EXIT2
 input
 833223098
 1
