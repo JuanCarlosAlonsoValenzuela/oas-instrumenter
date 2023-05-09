@@ -30,6 +30,7 @@ public class VariableValues {
                 JSONObject jsonSonObject = (JSONObject) jsonSon;
                 return getPrimitiveValueFromHierarchy(jsonSonObject, hierarchy.subList(1, hierarchy.size()));
             } else {    // If JSONArray
+                // TODO: Complete
                 return null;
             }
         }
@@ -50,6 +51,7 @@ public class VariableValues {
 
             } else{     // If JSONArray
                 JSONArray jsonSonArray = (JSONArray) jsonSon;
+                // TODO: Complete
                 return null;
             }
         }
