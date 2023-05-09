@@ -2,7 +2,6 @@ package agora.beet.model;
 
 import agora.beet.util.ArrayNestingManager;
 import agora.beet.util.JSONManager;
-import agora.beet.util.TestCaseFileManager;
 import io.swagger.v3.oas.models.media.ArraySchema;
 import io.swagger.v3.oas.models.media.Schema;
 import org.json.simple.JSONArray;
@@ -14,7 +13,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
 import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArray;
+import static agora.beet.variable.ExitVariables.*;
 
 public class DeclsExit {
 
@@ -29,8 +31,8 @@ public class DeclsExit {
     private boolean isNestedArray;  // Bad practice
 
     // Used when the exit is of type object
-    public DeclsExit(String endpoint, String operationName, String variableNameInput,
-                     DeclsVariable enterVariables, String variableNameOutput, Schema mapOfProperties, String nameSuffix, String statusCode) {
+    public DeclsExit(String endpoint, String operationName, String variableNameInput, DeclsVariable enterVariables,
+                     String variableNameOutput, Schema mapOfProperties, String nameSuffix, String statusCode) {
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
@@ -43,13 +45,13 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = false;
 
-        this.exitDeclsVariables = DeclsVariable.generateDeclsVariablesOfOutput("return", "return",
+        this.exitDeclsVariables = generateDeclsVariablesOfExit("return", "return",
                 variableNameOutput + nameSuffix, mapOfProperties);
     }
 
     // Used when the exit is of type array (bad practice)
-    public DeclsExit(String endpoint, String operationName, String variableNameInput,
-                     DeclsVariable enterVariables, String variableNameOutput, ArraySchema arraySchema, String nameSuffix, String statusCode) {
+    public DeclsExit(String endpoint, String operationName, String variableNameInput, DeclsVariable enterVariables,
+                     String variableNameOutput, ArraySchema arraySchema, String nameSuffix, String statusCode) {
 
         this.endpoint = endpoint;
         this.operationName = operationName;
@@ -63,13 +65,13 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = true;
 
-        this.exitDeclsVariables = DeclsVariable.generateDeclsVariablesOfArrayOutput(arraySchema, variableNameOutput + nameSuffix, "return", "return");
+        this.exitDeclsVariables = generateDeclsVariablesOfArray(arraySchema, variableNameOutput + nameSuffix, "return", "return");
 
     }
 
     // Used when the exit is primitive (Bad pracice)
-    public DeclsExit(String endpoint, String operationName, String variableNameInput,
-                     DeclsVariable enterVariables, String variableNameOutput, String parameterType, String statusCode) {
+    public DeclsExit(String endpoint, String operationName, String variableNameInput, DeclsVariable enterVariables,
+                     String variableNameOutput, String parameterType, String statusCode) {
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
@@ -82,11 +84,13 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = false;
 
-        this.exitDeclsVariables = DeclsVariable.generateDeclsVariablesOfPrimitiveResponse(parameterType, variableNameOutput, "return", "return");
+        this.exitDeclsVariables = generateDeclsVariablesOfPrimitiveResponse(parameterType,
+                variableNameOutput, "return", "return");
     }
 
     public String getExitName() {
-        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR + this.statusCode +  this.nameSuffix + "()";
+        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR
+                + this.statusCode +  this.nameSuffix + "()";
     }
 
     public String getStatusCode() {
@@ -183,10 +187,14 @@ public class DeclsExit {
 
             if(this.isNestedArray) {    // (Bad practice) If the response is parseable to array and the exit is of type nestedArray
                 // Count the number of arrays (Nesting level)
-                int targetNestingLevel = (int) Arrays.stream(this.getNameSuffix().split("\\.")).filter(x-> x.equalsIgnoreCase("array")).count();
+                int targetNestingLevel = (int) Arrays
+                        .stream(this.getNameSuffix().split("\\."))
+                        .filter(x-> x.equalsIgnoreCase("array"))
+                        .count();
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
                 try {
-                    List<JSONArray> jsonArraysToGenerateDtrace = ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
+                    List<JSONArray> jsonArraysToGenerateDtrace = ArrayNestingManager
+                            .getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
 
                     // For all the elements of the list of jsonArrays, generate a dtrace
                     for(JSONArray element: jsonArraysToGenerateDtrace) {
@@ -325,114 +333,6 @@ public class DeclsExit {
         res = res + "\n" + enterDeclsVariables.generateDtraceEnter(testCase);
 
         res = res + "\n" + this.exitDeclsVariables.generateDtraceExit(testCase, jsonElement, false) + "\n\n";
-
-        return res;
-
-    }
-
-    public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype, String variableName) {
-        String value = "nonsensical";
-
-        // If elements == null, the elements are set to nonsensical
-        if(elements != null){
-            if(primitiveTypes.contains(dectype.replace("[]", ""))) { // If array of primitives
-                boolean isString = false;
-                if(dectype.replace("[]", "").equals(STRING_TYPE_NAME)) {
-                    isString = true;
-                }
-                value = "";
-                for(int i = 0; i < elements.size(); i++) {
-
-                    if(isString) {
-                        if(elements.get(i) == null || Arrays.asList(stringsToConsiderAsNull).contains(elements.get(i))) {
-                            value = value + " " + null;
-                        } else {
-                            value = value + " \"" + TestCaseFileManager.removeNewLineChars((String) elements.get(i)) + "\"";
-                        }
-                    } else {
-                        value = value + " " + elements.get(i);
-                    }
-                }
-
-                value = "[" + value.trim() + "]";
-
-            } else {    // If array of objects
-                String hashcode = "";
-                for(int i = 1; i <= elements.size(); i++) {
-                    if(elements.get(i-1) != null) {
-                        String v = "\"" + testCase.getTestCaseId() + HIERARCHY_SEPARATOR + variableName.replace("[..]", "") + HIERARCHY_SEPARATOR + "output" + HIERARCHY_SEPARATOR + i + "\"";
-                        v = v.replace(HIERARCHY_SEPARATOR, "").replace("_", "");
-                        hashcode = hashcode + Math.abs(v.hashCode()) + " ";
-                    } else {
-                        hashcode = hashcode + "null ";
-                    }
-
-                }
-
-                value = "[" + hashcode.trim() + "]";
-            }
-        }
-        return value;
-    }
-
-
-    public static List<Object> getListOfJsonElementsForDeclsExit(JSONObject json, List<String> elementRoute){
-
-        List<Object> res = new ArrayList<>();
-
-        String element = elementRoute.get(0);
-
-        if(json == null) {
-            throw new NullPointerException("The response of the test case cannot be null");
-        }
-
-        // If the target element is a nested array
-        List<String> elementArrayRoute = Arrays.stream(element.split("\\."))
-                .filter(e -> e.trim().length() > 0)
-                .collect(Collectors.toList());
-        // If the target element is a nested array
-        if(elementArrayRoute.size() > 1) {
-            // Get the nested arrays (i.e., value of the element)
-            JSONArray jsonArray = (JSONArray) json.get(elementArrayRoute.get(0));
-            // We increase the targetNestingLevel by one because the first level of nesting is already present in the father exit
-            int targetNestingLevel = (int) Arrays.stream(element.split("\\.")).filter(x->x.equalsIgnoreCase("array")).count() + 1;
-            List<JSONArray> jsonArraysToGenerateDtrace = ArrayNestingManager.getJSONArraysOfSpecifiedNestingLevel(jsonArray, targetNestingLevel, 1);
-            res.addAll(jsonArraysToGenerateDtrace);
-
-            return res;
-        }
-
-        Object jsonSon = json.get(element);
-
-        if(jsonSon instanceof  JSONObject) {        // If jsonSon is of type JSONObject
-            JSONObject jsonSonObject = (JSONObject) jsonSon;
-            if(elementRoute.size() == 1) {      // If element is the last element of elementRoute (i.e. is the object we are looking for)
-                res.add(jsonSonObject.get(element));    // Add JSONObject
-            } else {
-                // Recursive call if element is not the last element of elementRoute
-                res.addAll(getListOfJsonElementsForDeclsExit(jsonSonObject, elementRoute.subList(1, elementRoute.size())));
-            }
-        } else if(jsonSon instanceof JSONArray) {   // If jsonSon is of type JSONArray
-            JSONArray jsonSonArray = (JSONArray) jsonSon;
-
-            // Iterate over all elements of the JSONArray
-            for(int i = 0; i < jsonSonArray.size(); i++) {
-                Object jsonSonElement = jsonSonArray.get(i);
-
-                if(jsonSonElement instanceof JSONObject) {
-                    if(elementRoute.size()==1){
-                        res.add(jsonSonElement);       // Add JSONObject
-                    } else {
-                        res.addAll(getListOfJsonElementsForDeclsExit((JSONObject) jsonSonElement, elementRoute.subList(1, elementRoute.size())));
-                    }
-                } else if(jsonSonElement instanceof JSONArray) {        // This condition is reached when we are dealing with a nested array
-                    // Get all the properties of the nested array
-                    List<JSONObject> flatList = ArrayNestingManager.doBubbleSort((JSONArray) jsonSonElement);
-                    res.addAll(flatList);
-                }
-            }
-
-        }
 
         return res;
 

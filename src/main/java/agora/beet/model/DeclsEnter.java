@@ -1,12 +1,9 @@
 package agora.beet.model;
 
-import agora.beet.util.JSONManager;
 import io.swagger.v3.oas.models.Operation;
-import org.json.simple.JSONArray;
 
 import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
-import static agora.beet.main.GenerateDeclsFile.STRING_TYPE_NAME;
-import static agora.beet.model.DeclsExit.generateDtraceExitValueOfJSONArray;
+import static agora.beet.variable.EnterVariables.getListOfDeclsVariables;
 
 public class DeclsEnter {
 
@@ -25,14 +22,15 @@ public class DeclsEnter {
         this.endpoint = endpoint;
         this.operationName = operationName;
         this.variableNameInput = variableNameInput;
-        this.declsVariables = DeclsVariable.getListOfDeclsVariables(variableNameInput, rootVariableName, operation);
+        this.declsVariables = getListOfDeclsVariables(variableNameInput, rootVariableName, operation);
 
         this.nameSuffix = nameSuffix;
         this.statusCode = statusCode;
     }
 
     public String getEnterName() {
-        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR + this.statusCode + this.nameSuffix + "()";
+        return this.endpoint + HIERARCHY_SEPARATOR + this.operationName + HIERARCHY_SEPARATOR
+                + this.statusCode + this.nameSuffix + "()";
     }
 
     public String getEndpoint() {
@@ -93,19 +91,6 @@ public class DeclsEnter {
         res = res + "\n";
 
         return res;
-    }
-
-    public static String generateDtraceEnterValueOfArray(TestCase testCase, String elements, String dectype, String variableName) {
-        // Convert the input into a JSONArray in order to call the generateDtraceExitValueOfJSONArray
-        JSONArray valueArray = null;
-        if(dectype.replace("[]","").equals(STRING_TYPE_NAME)) {
-            // Add double quotes to all array elementsApply if the elements are of type string
-            valueArray = JSONManager.stringToJsonArray( "[\"" + elements.replace(",","\",\"") + "\"]");
-        } else {
-            valueArray = JSONManager.stringToJsonArray("[" + elements + "]");
-        }
-
-        return generateDtraceExitValueOfJSONArray(testCase, valueArray, dectype, variableName);
     }
 
 }
