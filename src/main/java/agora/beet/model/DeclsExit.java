@@ -180,7 +180,7 @@ public class DeclsExit {
     }
 
     public String generateDtrace(TestCase testCase, DeclsEnter declsEnter) {
-        String res = "";
+        StringBuilder res = new StringBuilder();
 
         String responseBody = testCase.getResponseBody();
 
@@ -201,7 +201,7 @@ public class DeclsExit {
 
                     // For all the elements of the list of jsonArrays, generate a dtrace
                     for(JSONArray element: jsonArraysToGenerateDtrace) {
-                        res = res + this.generateSingleDtraceEnterAndExitArray(element, testCase, declsEnter);
+                        res.append(this.generateSingleDtraceEnterAndExitArray(element, testCase, declsEnter));
                     }
 
                 } catch (IllegalArgumentException e) {
@@ -214,22 +214,22 @@ public class DeclsExit {
                 // Flatten the elements of the nested arrays
                 List<JSONObject> flatList = ArrayNestingManager.doBubbleSort(jsonArray);
                 // Write in res, generate dtraces from the list
-                res = res + this.generateSingleDtraceEnterAndExit(flatList, testCase, declsEnter);
+                res.append(this.generateSingleDtraceEnterAndExit(flatList, testCase, declsEnter));
 
             }
 
         } else {        // If the response is parseable to JSONObject (Expected practice)
             // Expected behaviour
             JSONObject json = JSONManager.stringToJsonObject(responseBody);
-            res = res + this.generateSingleDtraceEnterAndExit(Collections.singletonList(json), testCase, declsEnter);
+            res.append(this.generateSingleDtraceEnterAndExit(Collections.singletonList(json), testCase, declsEnter));
         }
 
-        return res;
+        return res.toString();
 
     }
 
     private String generateSingleDtraceEnterAndExit(List<JSONObject> jsonObjectList, TestCase testCase, DeclsEnter declsEnter){
-        String res = "";
+        StringBuilder res = new StringBuilder();
 
         for(JSONObject json: jsonObjectList) {
 
@@ -251,18 +251,18 @@ public class DeclsExit {
             for(Object jsonElement: nestedJsonObjects){
                 // There must be one Decls Enter per DeclsExit
                 if(jsonElement instanceof JSONObject) {     // If the element is of type JSONObject
-                    res = res + declsEnter.generateDtrace(testCase) + "\n";                         // DeclsEnter
-                    res = res + this.generateSingleDtraceExit(testCase, (JSONObject) jsonElement);   // DeclsExit
+                    res.append(declsEnter.generateDtrace(testCase)).append("\n");                         // DeclsEnter
+                    res.append(this.generateSingleDtraceExit(testCase, (JSONObject) jsonElement));   // DeclsExit
                 } else {    // If the element is of type JSONArray
                     // This function prints both the DeclsEnter and the DeclsExit
-                    res = res + this.generateSingleDtraceEnterAndExitArray((JSONArray) jsonElement, testCase, declsEnter);
+                    res.append(this.generateSingleDtraceEnterAndExitArray((JSONArray) jsonElement, testCase, declsEnter));
                 }
 
             }
 
         }
 
-        return res;
+        return res.toString();
 
     }
 

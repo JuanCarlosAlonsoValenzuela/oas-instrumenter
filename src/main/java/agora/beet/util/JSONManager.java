@@ -15,8 +15,7 @@ public class JSONManager {
 
         JSONParser parser = new JSONParser();
         try {
-            JSONArray jsonArray = (JSONArray) parser.parse(input);
-            return jsonArray;
+            return (JSONArray) parser.parse(input);
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
             System.exit(1);
@@ -29,8 +28,7 @@ public class JSONManager {
 
         JSONParser parser = new JSONParser();
         try {
-            JSONObject json = (JSONObject) parser.parse(input);
-            return  json;
+            return (JSONObject) parser.parse(input);
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
             System.exit(1);
@@ -43,11 +41,7 @@ public class JSONManager {
         JSONParser parser = new JSONParser();
 
         try{
-            if(parser.parse(input) instanceof JSONArray) {
-                return true;
-            } else {
-                return false;
-            }
+            return parser.parse(input) instanceof JSONArray;
         } catch (ParseException e) {
             System.err.println("Error converting the response body to string");
             System.exit(1);

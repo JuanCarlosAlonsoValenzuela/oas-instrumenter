@@ -201,10 +201,6 @@ public class GenerateDeclsFile {
         declsClasses.add(declsClass);
     }
 
-    public static void addNewDeclsClasses(List<DeclsClass> declsClassList){
-        declsClasses.addAll(declsClassList);
-    }
-
     public static List<DeclsClass> getAllDeclsClasses(){
         return declsClasses;
     }

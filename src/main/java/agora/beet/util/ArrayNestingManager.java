@@ -21,7 +21,7 @@ public class ArrayNestingManager {
 
         List<?> list = Arrays.asList(jsonArray.toArray());
 
-        List<JSONObject> flatList = list.stream().map(x-> {
+        return list.stream().map(x-> {
             List<JSONObject> r = new ArrayList<>();
             try {
                 if(x != null) {
@@ -32,8 +32,6 @@ public class ArrayNestingManager {
             }
             return r;
         }).flatMap(List::stream).collect(Collectors.toList());
-
-        return flatList;
 
     }
 

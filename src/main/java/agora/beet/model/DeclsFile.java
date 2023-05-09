@@ -42,13 +42,13 @@ public class DeclsFile {
     }
 
     public String toString() {
-        String res = "decl-version " + version + "\n" +
-                "var-comparability " + comparability + "\n";
+        StringBuilder res = new StringBuilder("decl-version " + version + "\n" +
+                "var-comparability " + comparability + "\n");
 
         for(DeclsClass declsClass: declsClasses) {
-            res = res + "\n" + declsClass + "\n";
+            res.append("\n").append(declsClass).append("\n");
         }
 
-        return res;
+        return res.toString();
     }
 }

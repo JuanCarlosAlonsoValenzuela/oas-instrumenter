@@ -93,18 +93,18 @@ public class DeclsClass {
     }
 
     public String toString() {
-        String res = "ppt " + className + ":::CLASS" + "\n" +
-                "ppt-type class" + "\n";
+        StringBuilder res = new StringBuilder("ppt " + className + ":::CLASS" + "\n" +
+                "ppt-type class" + "\n");
 
         for(DeclsEnter declsEnter: declsEnters) {
-            res = res + "\n" + declsEnter + "\n";
+            res.append("\n").append(declsEnter).append("\n");
         }
 
         for(DeclsExit declsExit: declsExits) {
-            res = res + "\n" + declsExit + "\n";
+            res.append("\n").append(declsExit).append("\n");
         }
 
-        return  res;
+        return res.toString();
     }
 
 }

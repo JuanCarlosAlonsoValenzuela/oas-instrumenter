@@ -124,18 +124,18 @@ public class DeclsVariable {
             array = "";
         }
 
-        String res = "variable " + variableName + "\n" +
+        StringBuilder res = new StringBuilder("variable " + variableName + "\n" +
                 "\t" + "var-kind " + varKind + "\n" +
                 enclosingVarString +
                 array +
                 "\t" + "dec-type " + decType + "\n" +
-                "\t" + "rep-type " + repType;
+                "\t" + "rep-type " + repType);
 
         for(DeclsVariable declsVariable: enclosedVariables) {
-            res = res + "\n" + declsVariable;
+            res.append("\n").append(declsVariable);
         }
 
-        return res;
+        return res.toString();
     }
 
     public String generateDtraceEnter(TestCase testCase) {
@@ -157,15 +157,15 @@ public class DeclsVariable {
             modified = "2";
         }
 
-        String res = this.variableName + "\n" +
-                value + "\n" + modified;
+        StringBuilder res = new StringBuilder(this.variableName + "\n" +
+                value + "\n" + modified);
 
         // Son variables
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
-            res = res + "\n" + declsVariable.generateDtraceEnter(testCase);
+            res.append("\n").append(declsVariable.generateDtraceEnter(testCase));
         }
 
-        return res;
+        return res.toString();
     }
 
     public String generateDtraceExit(TestCase testCase, JSONObject json, Boolean isElementOfArray) {
@@ -239,13 +239,13 @@ public class DeclsVariable {
             }
         }
 
-        String res;
+        StringBuilder res;
         if(isNonsensical) {
-            res = this.variableName + "\n" +
-                    value + "\n" + "2";
+            res = new StringBuilder(this.variableName + "\n" +
+                    value + "\n" + "2");
         } else {
-            res = this.variableName + "\n" +
-                    value + "\n" + "1";
+            res = new StringBuilder(this.variableName + "\n" +
+                    value + "\n" + "1");
         }
 
 
@@ -258,16 +258,16 @@ public class DeclsVariable {
 
                 for(int i=0; i<elements.size(); i++) {
                     JSONObject element = (JSONObject) elements.get(0);
-                    res = res + "\n" + declsVariable.generateDtraceExit(testCase, element, true);
+                    res.append("\n").append(declsVariable.generateDtraceExit(testCase, element, true));
                 }
 
 
             } else {    // The element was an object or primitive
-                res = res + "\n" + declsVariable.generateDtraceExit(testCase, json, false);
+                res.append("\n").append(declsVariable.generateDtraceExit(testCase, json, false));
             }
         }
 
-        return res;
+        return res.toString();
     }
 
 }
