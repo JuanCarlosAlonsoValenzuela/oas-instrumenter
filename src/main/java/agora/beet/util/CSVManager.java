@@ -7,6 +7,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class CSVManager {
 
     public static List<List<String>> readCSV(String path, Boolean includeFirstRow, char delimiter) {

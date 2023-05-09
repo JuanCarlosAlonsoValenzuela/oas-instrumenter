@@ -3,6 +3,9 @@ package agora.beet.variable;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.main.GenerateDeclsFile.STRING_TYPE_NAME;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class VariableUtils {
 
     // Converts the datatype name from OAS to daikon

@@ -7,6 +7,9 @@ import org.json.simple.JSONArray;
 import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
 import static agora.beet.main.GenerateDeclsFile.STRING_TYPE_NAME;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class EnterArray {
 
     public static String generateDtraceEnterValueOfArray(TestCase testCase, String elements, String dectype, String variableName) {

@@ -3,6 +3,9 @@ package agora.beet.util;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class StringManager {
 
     /**

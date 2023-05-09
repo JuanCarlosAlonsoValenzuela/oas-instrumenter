@@ -2,6 +2,9 @@ package agora.beet.model;
 
 import java.util.Map;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class TestCase {
 
     private String testCaseId;

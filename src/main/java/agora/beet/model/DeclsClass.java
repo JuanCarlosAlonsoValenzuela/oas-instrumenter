@@ -13,6 +13,9 @@ import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.pptNesting.NestedPpts.getAllNestedDeclsExits;
 import static agora.beet.variable.EnterVariables.getListOfDeclsVariables;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DeclsClass {
 
     private String className;

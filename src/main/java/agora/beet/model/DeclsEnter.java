@@ -5,6 +5,9 @@ import io.swagger.v3.oas.models.Operation;
 import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
 import static agora.beet.variable.EnterVariables.getListOfDeclsVariables;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DeclsEnter {
 
     private String endpoint;

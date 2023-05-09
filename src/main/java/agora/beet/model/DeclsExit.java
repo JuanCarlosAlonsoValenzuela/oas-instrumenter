@@ -18,6 +18,9 @@ import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArray;
 import static agora.beet.variable.ExitVariables.*;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DeclsExit {
 
     private String endpoint;

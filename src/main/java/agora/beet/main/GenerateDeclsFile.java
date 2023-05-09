@@ -21,6 +21,9 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class GenerateDeclsFile {
 
     private static String openApiSpecPath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/swagger_createPlaylist.yaml";

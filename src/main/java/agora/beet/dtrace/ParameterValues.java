@@ -14,6 +14,9 @@ import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
 import static agora.beet.util.JSONManager.stringToJsonObject;
 import static agora.beet.util.StringManager.decodeString;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class ParameterValues {
 
     private static String getEnterParameterValue(TestCase testCase, List<String> hierarchy) {

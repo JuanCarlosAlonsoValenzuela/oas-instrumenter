@@ -11,6 +11,9 @@ import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.ArrayVariables.getDeclsVariablesArray;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class NestedArrays {
 
     public static List<DeclsVariable> getDeclsVariablesOfNestedArray(Schema mapOfProperties , String variablePath,

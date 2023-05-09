@@ -13,6 +13,9 @@ import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.NestedArrays.getDeclsVariablesOfNestedArray;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class ExitVariables {
 
     // Used for both output and exit

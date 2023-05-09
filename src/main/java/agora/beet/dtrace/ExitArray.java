@@ -9,6 +9,9 @@ import java.util.Arrays;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class ExitArray {
 
     public static String generateDtraceExitValueOfJSONArray(TestCase testCase, JSONArray elements, String dectype,

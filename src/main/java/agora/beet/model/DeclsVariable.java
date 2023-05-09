@@ -12,6 +12,9 @@ import static agora.beet.dtrace.VariableValues.getPrimitiveValueFromHierarchy;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.util.TestCaseFileManager.removeNewLineChars;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DeclsVariable {
 
     private String variableName;

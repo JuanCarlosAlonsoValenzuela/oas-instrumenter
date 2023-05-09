@@ -9,6 +9,9 @@ import java.util.List;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class ArrayVariables {
 
     public static DeclsVariable generateDeclsVariablesOfArray(ArraySchema arraySchema, String objectName, String variableName, String varKind, String enclosingVar){

@@ -5,6 +5,9 @@ import org.json.simple.JSONObject;
 
 import java.util.List;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class VariableValues {
 
     // This class contains functions related to both input and output

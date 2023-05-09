@@ -12,6 +12,9 @@ import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class NestedPpts {
 
     public static List<DeclsExit> getAllNestedDeclsExits(String endpoint, String operationName, String variableNameInput,

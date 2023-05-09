@@ -2,6 +2,9 @@ package agora.beet.model;
 
 import java.util.List;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DeclsFile {
 
     private double version;

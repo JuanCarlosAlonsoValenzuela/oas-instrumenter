@@ -20,6 +20,9 @@ import static agora.beet.variable.ArrayVariables.getDeclsVariablesArray;
 import static agora.beet.variable.ExitVariables.generateDeclsVariablesOfExit;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class EnterVariables {
 
     public static DeclsVariable getListOfDeclsVariables(String objectName, String rootVariableName, Operation operation) {

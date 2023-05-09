@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 import static agora.beet.util.CSVManager.getCSVRecord;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class TestCaseFileManager {
 
     private final Integer testCaseIdIndex;
