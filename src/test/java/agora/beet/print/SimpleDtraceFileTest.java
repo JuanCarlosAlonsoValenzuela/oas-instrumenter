@@ -18,6 +18,9 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class SimpleDtraceFileTest {
 
     @Test

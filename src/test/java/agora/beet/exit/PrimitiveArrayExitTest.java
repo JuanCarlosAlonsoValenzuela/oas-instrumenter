@@ -19,6 +19,9 @@ import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class PrimitiveArrayExitTest {
 
     @Test

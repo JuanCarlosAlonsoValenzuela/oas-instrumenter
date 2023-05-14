@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.variable.VariableUtils.replaceSpecialCharactersFromVariableName;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
 /**
@@ -14,8 +15,9 @@ import static agora.beet.variable.VariableUtils.translateDatatype;
  */
 public class ArrayVariables {
 
-    public static DeclsVariable generateDeclsVariablesOfArray(ArraySchema arraySchema, String objectName, String variableName, String varKind, String enclosingVar){
-        DeclsVariable res = generateDeclsVariablesOfArray(arraySchema, objectName, variableName, varKind);
+    public static DeclsVariable generateDeclsVariablesOfArray(ArraySchema arraySchema, String variablePath,
+                                                              String variableName, String varKind, String enclosingVar, String dectype) {
+        DeclsVariable res = generateDeclsVariablesOfArrayExit(arraySchema, dectype, variableName, varKind, variablePath);
         res.setEnclosingVar(enclosingVar);
         return res;
     }
@@ -23,19 +25,32 @@ public class ArrayVariables {
 
     // Used when the return type is an array of objects (Bad practice)
     // Used for both output and exit
-    public static DeclsVariable generateDeclsVariablesOfArray(ArraySchema arraySchema, String objectName, String variableName, String varKind) {
+    public static DeclsVariable generateDeclsVariablesOfArrayExit(ArraySchema arraySchema, String decType,
+                                                                  String variableName, String varKind, String variablePath) {
 
-        DeclsVariable father = new DeclsVariable(variableName, varKind, objectName, HASHCODE_TYPE_NAME, null);
+        // In this case, the parentVariable is the variableName
+        DeclsVariable father = new DeclsVariable(variableName,
+                variablePath,
+                varKind,
+                decType,
+                HASHCODE_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVars;
         String itemsDatatype = arraySchema.getItems().getType();
 
         String translatedDatatype = translateDatatype(itemsDatatype);
+
+        String updatedVariablePath = variableName;
+        if (variablePath != null) {
+            updatedVariablePath = variablePath + "." + variableName;
+        }
+
+
         if(primitiveTypes.contains(translatedDatatype) && !itemsDatatype.equals(OBJECT_TYPE_NAME)) {
-            enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, translatedDatatype,
+            enclosedVars = getDeclsVariablesArray(updatedVariablePath, ARRAY_TYPE_NAME, translatedDatatype,
                     translatedDatatype);
         } else{
-            enclosedVars = getDeclsVariablesArray(variableName, ARRAY_TYPE_NAME, ARRAY_TYPE_NAME,
+            enclosedVars = getDeclsVariablesArray(updatedVariablePath, ARRAY_TYPE_NAME, ARRAY_TYPE_NAME,
                     HASHCODE_TYPE_NAME);
         }
 
@@ -50,13 +65,15 @@ public class ArrayVariables {
 
         String arrayIndicator = "[]";
 
-        String variableName = variablePath + "." + parameterName;
+//        String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
-        res.add(new DeclsVariable(variableName, "field " + parameterName, decType + arrayIndicator, HASHCODE_TYPE_NAME, variablePath));
+        res.add(new DeclsVariable(parameterName, variablePath,"field " + parameterName, decType + arrayIndicator, HASHCODE_TYPE_NAME, variablePath));
 
         // The enclosing var name contains the name of the variable (this.array)
-        res.add(new DeclsVariable(variableName + "[..]", ARRAY_TYPE_NAME, decType + arrayIndicator,
-                repType  + arrayIndicator, variableName));
+        DeclsVariable arrayElementsVariable = new DeclsVariable(parameterName, variablePath, ARRAY_TYPE_NAME, decType + arrayIndicator,
+                repType  + arrayIndicator, variablePath + "." + replaceSpecialCharactersFromVariableName(parameterName));
+        arrayElementsVariable.setVariableName(arrayElementsVariable.getVariableName() + "[..]");
+        res.add(arrayElementsVariable);
 
         return res;
     }

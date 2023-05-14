@@ -26,9 +26,9 @@ import java.util.stream.Collectors;
  */
 public class GenerateDeclsFile {
 
-    private static String openApiSpecPath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/swagger_createPlaylist.yaml";
+    private static String openApiSpecPath = "src/test/resources/Twitter/openapi.yaml";
     private static String testCasesFilePath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/50/Spotify_CreatePlaylist_50.csv";
-    private static boolean generateDtrace = true;
+    private static boolean generateDtrace = false;
 
     public static String[] stringsToConsiderAsNull = {};
     public static String HIERARCHY_SEPARATOR = "&";

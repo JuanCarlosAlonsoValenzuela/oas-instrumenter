@@ -27,7 +27,7 @@ public class EnterVariables {
 
     public static DeclsVariable getListOfDeclsVariables(String objectName, String rootVariableName, Operation operation) {
         // Father parameter
-        DeclsVariable father = new DeclsVariable(rootVariableName, "variable",
+        DeclsVariable father = new DeclsVariable(rootVariableName, null,"variable",
                 objectName, HASHCODE_TYPE_NAME, null);
 
         List<DeclsVariable> enclosedVariables = new ArrayList<>();
@@ -66,7 +66,7 @@ public class EnterVariables {
 
                     }
                 } else {    // Primitive type
-                    DeclsVariable declsVariable = new DeclsVariable(rootVariableName + "."+ parameter.getName(),
+                    DeclsVariable declsVariable = new DeclsVariable(parameter.getName(), rootVariableName,
                             "field " + parameter.getName(), translateDatatype(parameterType),
                             translateDatatype(parameterType), father.getVariableName());
                     enclosedVariables.add(declsVariable);
@@ -93,7 +93,8 @@ public class EnterVariables {
             Content content = requestBody.getContent();
             if (content != null) {
                 for (String key : content.keySet()) {
-                    res.addAll(getDeclsVariablesOfBodyAndFormParameters(operation, key, rootVariableName, objectName, sourceOfParameter));
+                    res.addAll(getDeclsVariablesOfBodyAndFormParameters(operation, key, rootVariableName, objectName, sourceOfParameter,
+                            objectName + "." + sourceOfParameter + "Array"));
                 }
 
             }
@@ -104,7 +105,7 @@ public class EnterVariables {
 
     private static List<DeclsVariable> getDeclsVariablesOfBodyAndFormParameters(Operation operation, String key,
                                                                                String rootVariableName, String objectName,
-                                                                               String sourceOfParameter) {
+                                                                               String sourceOfParameter, String dectype) {
         Schema schema = null;
 
         RequestBody requestBody = operation.getRequestBody();
@@ -116,8 +117,8 @@ public class EnterVariables {
                     String schemaType = mediaType.getSchema().getType();
                     if(schemaType != null && schemaType.equals("array")) {       // The parameter is of type array
                         ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();      // objectName = createPlaylist_Input    rootVariableName = this
-                        return Collections.singletonList(generateDeclsVariablesOfArray(arraySchema, objectName + "." + sourceOfParameter + "Array",
-                                rootVariableName + "." + sourceOfParameter, "variable", rootVariableName));
+                        return Collections.singletonList(generateDeclsVariablesOfArray(arraySchema, rootVariableName,
+                                sourceOfParameter, "variable", rootVariableName, dectype));
                     } else {                                                    // The body is of type object
                         schema = mediaType.getSchema();
                         if(schema.getProperties() == null) {

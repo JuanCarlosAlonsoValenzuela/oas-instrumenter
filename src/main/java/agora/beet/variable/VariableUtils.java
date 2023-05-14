@@ -29,4 +29,8 @@ public class VariableUtils {
 
     }
 
+    public static String replaceSpecialCharactersFromVariableName(String variableName) {
+        return variableName.replace(".", HIERARCHY_SEPARATOR);
+    }
+
 }

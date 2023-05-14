@@ -11,6 +11,7 @@ import static agora.beet.dtrace.VariableValues.getArrayFromHierarchy;
 import static agora.beet.dtrace.VariableValues.getPrimitiveValueFromHierarchy;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.util.TestCaseFileManager.removeNewLineChars;
+import static agora.beet.variable.VariableUtils.replaceSpecialCharactersFromVariableName;
 
 /**
  * @author Juan C. Alonso
@@ -25,9 +26,13 @@ public class DeclsVariable {
     private boolean isArray;
     private List<DeclsVariable> enclosedVariables;
 
-    public DeclsVariable(String variableName, String varKind, String decType, String repType, String enclosingVar) {
-        this.variableName = variableName;
-        this.varKind = varKind;
+    public DeclsVariable(String variableName, String variablePath, String varKind, String decType, String repType, String enclosingVar) {
+        if(variablePath == null) {
+            this.variableName = replaceSpecialCharactersFromVariableName(variableName);
+        } else {
+            this.variableName = variablePath + "." + replaceSpecialCharactersFromVariableName(variableName);
+        }
+        this.varKind = replaceSpecialCharactersFromVariableName(varKind);
         this.decType = decType;
         this.repType = repType;
         this.enclosingVar = enclosingVar;
@@ -36,8 +41,8 @@ public class DeclsVariable {
     }
 
     // Constructor with flags
-    public DeclsVariable(String variableName, String varKind, String decType, String repType, String enclosingVar, boolean isArray) {
-        this.variableName = variableName;
+    public DeclsVariable(String variableName, String variablePath, String varKind, String decType, String repType, String enclosingVar, boolean isArray) {
+        this.variableName = variablePath + "." + replaceSpecialCharactersFromVariableName(variableName);
         this.varKind = varKind;
 
         if(isArray) {

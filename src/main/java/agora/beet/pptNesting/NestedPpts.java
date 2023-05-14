@@ -18,7 +18,8 @@ import static agora.beet.variable.VariableUtils.translateDatatype;
 public class NestedPpts {
 
     public static List<DeclsExit> getAllNestedDeclsExits(String endpoint, String operationName, String variableNameInput,
-                                                         DeclsVariable enterVariables, String variableNameOutput, MediaType mediaType, String statusCode) {
+                                                         DeclsVariable enterVariables, String outputObjectName, MediaType mediaType,
+                                                         String statusCode) {
 
         List<DeclsExit> res = new ArrayList<>();
         String parameterType = mediaType.getSchema().getType();
@@ -27,11 +28,12 @@ public class NestedPpts {
         if(parameterType !=null && parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
+            // nameSuffix = parentVariable
             String nameSuffix = ".array";
 
             while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
-                DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
-                        arraySchema, nameSuffix, statusCode);
+                DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
+                        arraySchema, "array", nameSuffix, statusCode);
                 res.add(declsExit);
 
                 parameterType = arraySchema.getItems().getType();
@@ -46,7 +48,7 @@ public class NestedPpts {
 
         } else if(parameterType !=null && primitiveTypes.contains(translateDatatype(parameterType))) {
             DeclsExit primitiveExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables,
-                    variableNameOutput, parameterType, statusCode);
+                    outputObjectName, parameterType, statusCode);
             return Collections.singletonList(primitiveExit);
         }
 
@@ -61,12 +63,16 @@ public class NestedPpts {
             for(String nameSuffix: allSchemas.keySet()) {
                 if(allSchemas.get(nameSuffix).getProperties()==null){       // If the element is of type array, call the constructor that receives an ArraySchema
                     ArraySchema arraySchema = (ArraySchema) allSchemas.get(nameSuffix);
-                    DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, variableNameOutput,
-                            arraySchema, nameSuffix, statusCode);
+                    // OLD
+//                    DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
+//                            arraySchema, nameSuffix, statusCode);
+                    // NEW
+                    DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
+                            arraySchema, nameSuffix, nameSuffix, statusCode);
                     res.add(declsExit);
                 } else {    // If the element is of type object, call the constructor that receives an Schema
                     DeclsExit declsExit = new DeclsExit(endpoint, operationName,
-                            variableNameInput, enterVariables, variableNameOutput, allSchemas.get(nameSuffix), nameSuffix, statusCode);
+                            variableNameInput, enterVariables, outputObjectName, allSchemas.get(nameSuffix), nameSuffix, statusCode);
                     res.add(declsExit);
                 }
 

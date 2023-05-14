@@ -18,11 +18,11 @@ import static agora.beet.variable.VariableUtils.translateDatatype;
  */
 public class ExitVariables {
 
-    // Used for both output and exit
     // Creates the father variable
     public static DeclsVariable generateDeclsVariablesOfExit(String variableName, String varKind,
                                                              String variableNameOutput, Schema mapOfProperties) {
-        DeclsVariable father = new DeclsVariable(variableName, varKind,
+        // This variable has no parentVariable
+        DeclsVariable father = new DeclsVariable(variableName, null,varKind,
                 variableNameOutput, HASHCODE_TYPE_NAME, null);
 
         // Creates the son variables
@@ -33,7 +33,7 @@ public class ExitVariables {
     }
 
     // Recursive method
-    public static List<DeclsVariable> generateDeclsVariablesOfExit(Schema mapOfProperties, String variablePath,
+    public static List<DeclsVariable> generateDeclsVariablesOfExit(Schema mapOfProperties, String parentVariable,
                                                                    String varKind, String variableNameOutput,
                                                                    boolean isArray) {
         List<DeclsVariable> res = new ArrayList<>();
@@ -41,9 +41,9 @@ public class ExitVariables {
         // Warnings if properties == null
         if (properties == null) {
             if(mapOfProperties.getAdditionalProperties() == null) {
-                System.err.println("WARNING: No properties found for object: " + variablePath);
+                System.err.println("WARNING: No properties found for object: " + parentVariable);
             } else{
-                System.err.println("WARNING: Object: " + variablePath + " only contains additional properties");
+                System.err.println("WARNING: Object: " + parentVariable + " only contains additional properties");
             }
         } else {
             Set<String> parameterNames = properties.keySet();
@@ -55,12 +55,12 @@ public class ExitVariables {
                 // If there is an allOf, parameterType is null, but the schema contains all the properties
                 if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                     // Generate the father variable
-                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName, "field " + parameterName,
-                            variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, variablePath, isArray);
+                    DeclsVariable declsVariable = new DeclsVariable(parameterName, parentVariable, "field " + parameterName,
+                            variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, parentVariable, isArray);
 
                     // Recursive call for son variables
                     List<DeclsVariable> enclosedVariables =
-                            generateDeclsVariablesOfExit(schema, variablePath + "." + parameterName, varKind,
+                            generateDeclsVariablesOfExit(schema, parentVariable + "." + parameterName, varKind,
                                     variableNameOutput, false);
                     // Set enclosed variables
                     declsVariable.setEnclosedVariables(enclosedVariables);
@@ -70,7 +70,7 @@ public class ExitVariables {
                 } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // Array
 
                     // Obtain variables of nested arrays
-                    List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, variablePath,
+                    List<DeclsVariable> declsVariables = getDeclsVariablesOfNestedArray(mapOfProperties, parentVariable,
                             varKind,  parameterName, variableNameOutput);
                     // Add to list
                     res.addAll(declsVariables);
@@ -78,8 +78,8 @@ public class ExitVariables {
                 } else {    // Primitive type
 
                     // Create new variable
-                    DeclsVariable declsVariable = new DeclsVariable(variablePath + "." + parameterName,"field " + parameterName,
-                            translateDatatype(parameterType), translateDatatype(parameterType), variablePath, isArray);
+                    DeclsVariable declsVariable = new DeclsVariable(parameterName, parentVariable,"field " + parameterName,
+                            translateDatatype(parameterType), translateDatatype(parameterType), parentVariable, isArray);
                     // Add to list
                     res.add(declsVariable);
                 }
@@ -93,14 +93,14 @@ public class ExitVariables {
     // Used for both output and exit
     // generateDeclsVariablesOfPrimitiveResponse(parameterType, objectName, "this", "variable")
     public static DeclsVariable generateDeclsVariablesOfPrimitiveResponse(String parameterType, String objectName,
-                                                                          String variableName, String varKind) {
-        DeclsVariable father = new DeclsVariable(variableName, varKind, objectName, HASHCODE_TYPE_NAME, null);
+                                                                          String parentVariable, String varKind) {
+        DeclsVariable father = new DeclsVariable(parentVariable, null, varKind, objectName, HASHCODE_TYPE_NAME, null);
 
         String translatedDatatype = translateDatatype(parameterType);
 
-        DeclsVariable enclosedVar = new DeclsVariable(variableName + ".primitive", "field primitive",
+        DeclsVariable enclosedVar = new DeclsVariable("primitive", parentVariable,"field primitive",
                 translatedDatatype, translatedDatatype,
-                variableName, false);
+                parentVariable, false);
 
         father.setEnclosedVariables(Collections.singletonList(enclosedVar));
 

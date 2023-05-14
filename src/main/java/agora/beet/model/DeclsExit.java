@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArray;
+import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArrayExit;
 import static agora.beet.variable.ExitVariables.*;
 
 /**
@@ -54,7 +55,8 @@ public class DeclsExit {
 
     // Used when the exit is of type array (bad practice)
     public DeclsExit(String endpoint, String operationName, String variableNameInput, DeclsVariable enterVariables,
-                     String variableNameOutput, ArraySchema arraySchema, String nameSuffix, String statusCode) {
+                     String variableNameOutput,
+                     ArraySchema arraySchema, String variableName, String nameSuffix, String statusCode) {
 
         this.endpoint = endpoint;
         this.operationName = operationName;
@@ -68,11 +70,12 @@ public class DeclsExit {
         this.enterDeclsVariables = enterVariables;
         this.isNestedArray = true;
 
-        this.exitDeclsVariables = generateDeclsVariablesOfArray(arraySchema, variableNameOutput + nameSuffix, "return", "return");
+        this.exitDeclsVariables = generateDeclsVariablesOfArrayExit(arraySchema,
+                variableNameOutput + nameSuffix,"return", "return", null);
 
     }
 
-    // Used when the exit is primitive (Bad pracice)
+    // Used when the exit is primitive (Bad practice)
     public DeclsExit(String endpoint, String operationName, String variableNameInput, DeclsVariable enterVariables,
                      String variableNameOutput, String parameterType, String statusCode) {
         this.endpoint = endpoint;

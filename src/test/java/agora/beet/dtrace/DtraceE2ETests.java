@@ -14,6 +14,9 @@ import java.util.stream.Stream;
 import static agora.beet.main.GenerateDeclsFile.*;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ * @author Juan C. Alonso
+ */
 public class DtraceE2ETests {
 
     private static Stream<Arguments> dtraceGeneration() {
