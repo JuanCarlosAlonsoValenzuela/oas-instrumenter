@@ -45,6 +45,9 @@ paths:
               version:
                 description: "API version"
                 type: number
+              lat.lng:
+                description: "Coordinates"
+                type: string
 
 
 #        default:

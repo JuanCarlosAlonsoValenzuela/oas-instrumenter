@@ -260,3 +260,8 @@ definitions:
         type: array
         items:
           type: string
+      service.prices:
+        description: "Service prices"
+        type: array
+        items:
+          type: number

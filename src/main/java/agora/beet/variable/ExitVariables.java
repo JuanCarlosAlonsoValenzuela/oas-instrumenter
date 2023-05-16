@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import static agora.beet.main.GenerateDeclsFile.*;
 import static agora.beet.variable.NestedArrays.getDeclsVariablesOfNestedArray;
+import static agora.beet.variable.VariableUtils.encodeVariableName;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
 /**
@@ -56,11 +57,11 @@ public class ExitVariables {
                 if(parameterType == null || parameterType.equalsIgnoreCase(OBJECT_TYPE_NAME)) {  // Object
                     // Generate the father variable
                     DeclsVariable declsVariable = new DeclsVariable(parameterName, parentVariable, "field " + parameterName,
-                            variableNameOutput + HIERARCHY_SEPARATOR + parameterName, HASHCODE_TYPE_NAME, parentVariable, isArray);
+                            variableNameOutput + HIERARCHY_SEPARATOR + encodeVariableName(parameterName), HASHCODE_TYPE_NAME, parentVariable, isArray);
 
                     // Recursive call for son variables
                     List<DeclsVariable> enclosedVariables =
-                            generateDeclsVariablesOfExit(schema, parentVariable + "." + parameterName, varKind,
+                            generateDeclsVariablesOfExit(schema, parentVariable + "." + encodeVariableName(parameterName), varKind,
                                     variableNameOutput, false);
                     // Set enclosed variables
                     declsVariable.setEnclosedVariables(enclosedVariables);

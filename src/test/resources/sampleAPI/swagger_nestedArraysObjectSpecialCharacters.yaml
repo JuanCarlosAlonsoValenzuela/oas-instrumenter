@@ -59,7 +59,7 @@ definitions:
     description: DHL Service Point location collection
     type: object
     properties:
-      locations:
+      locations.data:
         type: array
         items:
           type: array

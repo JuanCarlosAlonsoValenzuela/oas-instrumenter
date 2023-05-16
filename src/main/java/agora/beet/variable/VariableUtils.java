@@ -29,7 +29,8 @@ public class VariableUtils {
 
     }
 
-    public static String replaceSpecialCharactersFromVariableName(String variableName) {
+    // Replaces special characters from variable name
+    public static String encodeVariableName(String variableName) {
         return variableName.replace(".", HIERARCHY_SEPARATOR);
     }
 

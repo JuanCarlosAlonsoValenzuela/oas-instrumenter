@@ -101,7 +101,7 @@ public class PrimitiveArrayExitTest {
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
 
                 // The array is counted twice (normal and [..])
-                assertEquals("Unexpected number of son variables", 5, exitDeclsFatherVariable.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 7, exitDeclsFatherVariable.getEnclosedVariables().size());
 
                 // Sons
                 List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
@@ -140,7 +140,7 @@ public class PrimitiveArrayExitTest {
                 assertEquals("Incorrect decType", "java.lang.String[]", serviceTypes1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", serviceTypes1.getRepType());
                 assertEquals("Incorrect enclosing var", "return", serviceTypes1.getEnclosingVar());
-                // The first ocurrence should not be an array (flaga array 1)
+                // The first occurrence should not be an array (flag array 1)
                 assertFalse("This variable should not be an array", serviceTypes1.isArray());
                 assertEquals("Unexpected number of son variables", 0, serviceTypes1.getEnclosedVariables().size());
 
@@ -150,9 +150,30 @@ public class PrimitiveArrayExitTest {
                 assertEquals("Incorrect decType", "java.lang.String[]", serviceTypes2.getDecType());
                 assertEquals("Incorrect repType", "java.lang.String[]", serviceTypes2.getRepType());
                 assertEquals("Incorrect enclosing var", "return.serviceTypes", serviceTypes2.getEnclosingVar());
-                // The first ocurrence should not be an array (flaga array 1)
+                // The second occurrence should be an array (flag array 1)
                 assertTrue("This variable should be an array", serviceTypes2.isArray());
                 assertEquals("Unexpected number of son variables", 0, serviceTypes2.getEnclosedVariables().size());
+
+                // service.definitions (array of primitives with special character)
+                DeclsVariable servicePrices1 = declsSonVariables.get(5);
+                assertEquals("Incorrect variable name", "return.service&prices", servicePrices1.getVariableName());
+                assertEquals("Incorrect var-kind", "field service&prices", servicePrices1.getVarKind());
+                assertEquals("Incorrect decType", "double[]", servicePrices1.getDecType());
+                assertEquals("Incorrect repType", "hashcode", servicePrices1.getRepType());
+                assertEquals("Incorrect enclosing var", "return", servicePrices1.getEnclosingVar());
+                // The first occurrence should not be an array (flaga array 1)
+                assertFalse("This variable should not be an array", servicePrices1.isArray());
+                assertEquals("Unexpected number of son variables", 0, servicePrices1.getEnclosedVariables().size());
+
+                DeclsVariable servicePrices2 = declsSonVariables.get(6);
+                assertEquals("Incorrect variable name", "return.service&prices[..]", servicePrices2.getVariableName());
+                assertEquals("Incorrect var-kind", "array", servicePrices2.getVarKind());
+                assertEquals("Incorrect decType", "double[]", servicePrices2.getDecType());
+                assertEquals("Incorrect repType", "double[]", servicePrices2.getRepType());
+                assertEquals("Incorrect enclosing var", "return.service&prices", servicePrices2.getEnclosingVar());
+                // The second occurrence should be an array (flag array 1)
+                assertTrue("This variable should be an array", servicePrices2.isArray());
+                assertEquals("Unexpected number of son variables", 0, servicePrices2.getEnclosedVariables().size());
 
             }
 

@@ -38,6 +38,9 @@ paths:
                         name:
                           description: "Location name"
                           type: string
+                        country.id:
+                          description: "Country id"
+                          type: string
                         topLevelDomain:
                           type: string
                         alpha2Code:

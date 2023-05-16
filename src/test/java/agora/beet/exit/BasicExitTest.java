@@ -119,7 +119,7 @@ public class BasicExitTest {
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
-                assertEquals("Unexpected number of son variables", 5, exitDeclsFatherVariable.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 6, exitDeclsFatherVariable.getEnclosedVariables().size());
 
                 // Sons (id, iata, icao, name, version)
                 List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
@@ -168,6 +168,16 @@ public class BasicExitTest {
                 assertEquals("Incorrect enclosing var", "return", version.getEnclosingVar());
                 assertFalse("This variable should not be an array", version.isArray());
                 assertEquals("Unexpected number of son variables", 0, version.getEnclosedVariables().size());
+
+                // Variable with special character (.)
+                DeclsVariable latLng = declsSonVariables.get(5);
+                assertEquals("Incorrect variable name", "return.lat&lng", latLng.getVariableName());
+                assertEquals("Incorrect var-kind", "field lat&lng", latLng.getVarKind());
+                assertEquals("Incorrect decType", "java.lang.String", latLng.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", latLng.getRepType());
+                assertEquals("Incorrect enclosing var", "return", latLng.getEnclosingVar());
+                assertFalse("This variable should not be an array", latLng.isArray());
+                assertEquals("Unexpected number of son variables", 0, latLng.getEnclosedVariables().size());
 
 
             }

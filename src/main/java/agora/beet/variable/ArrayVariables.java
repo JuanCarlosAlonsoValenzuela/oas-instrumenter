@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.variable.VariableUtils.replaceSpecialCharactersFromVariableName;
-import static agora.beet.variable.VariableUtils.translateDatatype;
+import static agora.beet.variable.VariableUtils.*;
 
 /**
  * @author Juan C. Alonso
@@ -40,9 +39,9 @@ public class ArrayVariables {
 
         String translatedDatatype = translateDatatype(itemsDatatype);
 
-        String updatedVariablePath = variableName;
+        String updatedVariablePath = encodeVariableName(variableName);
         if (variablePath != null) {
-            updatedVariablePath = variablePath + "." + variableName;
+            updatedVariablePath = variablePath + "." + encodeVariableName(variableName);
         }
 
 
@@ -65,13 +64,17 @@ public class ArrayVariables {
 
         String arrayIndicator = "[]";
 
+        if(!primitiveTypes.contains(decType)) {
+            decType = encodeVariableName(decType);
+        }
+
 //        String variableName = variablePath + "." + parameterName;
         // The enclosing var does not contain the name of the variable (this)
         res.add(new DeclsVariable(parameterName, variablePath,"field " + parameterName, decType + arrayIndicator, HASHCODE_TYPE_NAME, variablePath));
 
         // The enclosing var name contains the name of the variable (this.array)
         DeclsVariable arrayElementsVariable = new DeclsVariable(parameterName, variablePath, ARRAY_TYPE_NAME, decType + arrayIndicator,
-                repType  + arrayIndicator, variablePath + "." + replaceSpecialCharactersFromVariableName(parameterName));
+                repType  + arrayIndicator, variablePath + "." + encodeVariableName(parameterName));
         arrayElementsVariable.setVariableName(arrayElementsVariable.getVariableName() + "[..]");
         res.add(arrayElementsVariable);
 

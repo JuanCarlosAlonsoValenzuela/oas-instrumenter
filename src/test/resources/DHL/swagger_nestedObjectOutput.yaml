@@ -252,7 +252,15 @@ definitions:
               - postoffice
               - postbank
             example: servicepoint
-
+      lat.lng:
+        type: object
+        properties:
+          lat:
+            type: number
+          lng:
+            type: number
+          coordinates.info:
+            type: string
   supermodelIoLogisticsPUDOApiProblemDetail:
     title: Location Problem Detail
     description: >-

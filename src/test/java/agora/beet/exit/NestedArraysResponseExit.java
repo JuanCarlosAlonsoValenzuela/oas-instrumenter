@@ -151,7 +151,7 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());
-                assertEquals("Unexpected number of son variables", 29, exitDeclsFatherVariable.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 30, exitDeclsFatherVariable.getEnclosedVariables().size());
 
                 // Sons
                 List<DeclsVariable> declsSonVariables = exitDeclsFatherVariable.getEnclosedVariables();
@@ -163,6 +163,16 @@ public class NestedArraysResponseExit {
                 assertEquals("Incorrect enclosing var", "return", name.getEnclosingVar());
                 assertFalse("This variable should not be an array", name.isArray());
                 assertEquals("Unexpected number of son variables", 0, name.getEnclosedVariables().size());
+
+                // Variable with special characters
+                DeclsVariable countryId = declsSonVariables.get(1);
+                assertEquals("Incorrect variable name", "return.country&id", countryId.getVariableName());
+                assertEquals("Incorrect var-kind", "field country&id", countryId.getVarKind());
+                assertEquals("Incorrect decType", "java.lang.String", countryId.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", countryId.getRepType());
+                assertEquals("Incorrect enclosing var", "return", countryId.getEnclosingVar());
+                assertFalse("This variable should not be an array", countryId.isArray());
+                assertEquals("Unexpected number of son variables", 0, countryId.getEnclosedVariables().size());
 
             }
 

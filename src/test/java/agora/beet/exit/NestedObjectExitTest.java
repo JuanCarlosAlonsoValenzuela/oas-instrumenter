@@ -99,7 +99,7 @@ public class NestedObjectExitTest {
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());
 
                 // The array is counted twice (normal and [..])
-                assertEquals("Unexpected number of son variables", 2, exitDeclsFatherVariable1.getEnclosedVariables().size());
+                assertEquals("Unexpected number of son variables", 3, exitDeclsFatherVariable1.getEnclosedVariables().size());
 
                 List<DeclsVariable> declsSonVariables1 = exitDeclsFatherVariable1.getEnclosedVariables();
                 // url and location (of type object)
@@ -173,6 +173,48 @@ public class NestedObjectExitTest {
                 assertEquals("Incorrect enclosing var", "return.location.ids", ids2.getEnclosingVar());
                 assertTrue("This variable should be an array", ids2.isArray());
                 assertEquals("Unexpected number of son variables", 0, ids2.getEnclosedVariables().size());
+
+                // Variable of type object with special characters
+                DeclsVariable latLongObject = declsSonVariables1.get(2);
+                assertEquals("Incorrect variable name", "return.lat&lng", latLongObject.getVariableName());
+                assertEquals("Incorrect var-kind", "field lat&lng", latLongObject.getVarKind());
+                assertEquals("Incorrect decType", "findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"lat"+HIERARCHY_SEPARATOR+"lng", latLongObject.getDecType());
+                assertEquals("Incorrect repType", "hashcode", latLongObject.getRepType());
+                assertEquals("Incorrect enclosing var", "return", latLongObject.getEnclosingVar());
+                assertFalse("This variable should not be an array", latLongObject.isArray());
+                assertEquals("Unexpected number of son variables", 3, latLongObject.getEnclosedVariables().size());
+
+                List<DeclsVariable> songsOfLatLng = latLongObject.getEnclosedVariables();
+
+                // Enclosed variables of variable with special characters
+                DeclsVariable latVariable = songsOfLatLng.get(0);
+                assertEquals("Incorrect variable name", "return.lat" + HIERARCHY_SEPARATOR + "lng.lat",  latVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "field lat", latVariable.getVarKind());
+                assertEquals("Incorrect decType",  "double", latVariable.getDecType());
+                assertEquals("Incorrect repType", "double", latVariable.getRepType());
+                assertEquals("Incorrect enclosing var", "return.lat" + HIERARCHY_SEPARATOR + "lng", latVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", latVariable.isArray());
+                assertEquals("Unexpected number of son variables", 0, latVariable.getEnclosedVariables().size());
+
+                DeclsVariable lngVariable = songsOfLatLng.get(1);
+                assertEquals("Incorrect variable name", "return.lat" + HIERARCHY_SEPARATOR + "lng.lng",  lngVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "field lng", lngVariable.getVarKind());
+                assertEquals("Incorrect decType",  "double", lngVariable.getDecType());
+                assertEquals("Incorrect repType", "double", lngVariable.getRepType());
+                assertEquals("Incorrect enclosing var", "return.lat" + HIERARCHY_SEPARATOR + "lng", lngVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", lngVariable.isArray());
+                assertEquals("Unexpected number of son variables", 0, lngVariable.getEnclosedVariables().size());
+
+                DeclsVariable coordinatesInfoVariable = songsOfLatLng.get(2);
+                assertEquals("Incorrect variable name", "return.lat" + HIERARCHY_SEPARATOR + "lng.coordinates" + HIERARCHY_SEPARATOR + "info",  coordinatesInfoVariable.getVariableName());
+                assertEquals("Incorrect var-kind", "field coordinates" + HIERARCHY_SEPARATOR + "info", coordinatesInfoVariable.getVarKind());
+                assertEquals("Incorrect decType",  "java.lang.String", coordinatesInfoVariable.getDecType());
+                assertEquals("Incorrect repType", "java.lang.String", coordinatesInfoVariable.getRepType());
+                assertEquals("Incorrect enclosing var", "return.lat" + HIERARCHY_SEPARATOR + "lng", coordinatesInfoVariable.getEnclosingVar());
+                assertFalse("This variable should not be an array", coordinatesInfoVariable.isArray());
+                assertEquals("Unexpected number of son variables", 0, coordinatesInfoVariable.getEnclosedVariables().size());
+
+
 
                 // EXIT 2
                 DeclsExit declsExit2 = declsClassEnterAndExit.getDeclsExits().get(1);
