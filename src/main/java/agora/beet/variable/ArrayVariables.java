@@ -6,7 +6,7 @@ import io.swagger.v3.oas.models.media.ArraySchema;
 import java.util.ArrayList;
 import java.util.List;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.variable.VariableUtils.*;
 
 /**

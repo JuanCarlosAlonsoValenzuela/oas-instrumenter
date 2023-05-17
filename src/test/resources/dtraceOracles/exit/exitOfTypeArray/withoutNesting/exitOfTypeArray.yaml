@@ -47,5 +47,5 @@ definitions:
       properties:
         property1:
           type: string
-        property2:
+        property.2:
           type: string

@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -80,7 +80,7 @@ public class NestedObjectExitTest {
                 DeclsVariable enterDeclsFatherVariable1 = declsExit1.getEnterDeclsVariables();
                 assertEquals("Incorrect variable name", "input", enterDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "variable", enterDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", "findByAddress"+HIERARCHY_SEPARATOR+"Input", enterDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "findByAddress" + HIERARCHY_SEPARATOR + "Input", enterDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", enterDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", enterDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", enterDeclsFatherVariable1.isArray());
@@ -117,7 +117,8 @@ public class NestedObjectExitTest {
                 DeclsVariable locationObject = declsSonVariables1.get(1);
                 assertEquals("Incorrect variable name", "return.location", locationObject.getVariableName());
                 assertEquals("Incorrect var-kind", "field location", locationObject.getVarKind());
-                assertEquals("Incorrect decType", "findByAddress"+HIERARCHY_SEPARATOR+"Output"+HIERARCHY_SEPARATOR+"200"+HIERARCHY_SEPARATOR+"location", locationObject.getDecType());
+                assertEquals("Incorrect decType", "findByAddress" + HIERARCHY_SEPARATOR + "Output" +
+                        HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "location", locationObject.getDecType());
                 assertEquals("Incorrect repType", "hashcode", locationObject.getRepType());
                 assertEquals("Incorrect enclosing var", "return", locationObject.getEnclosingVar());
                 assertFalse("This variable should not be an array", locationObject.isArray());

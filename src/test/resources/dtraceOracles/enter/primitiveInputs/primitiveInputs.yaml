@@ -32,7 +32,7 @@ paths:
           in: query
           required: true
           type: number # double
-        - name: stringInPath
+        - name: string.In.Path
           in: path
           required: true
           type: string

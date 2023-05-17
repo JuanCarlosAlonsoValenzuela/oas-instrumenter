@@ -8,8 +8,8 @@ import io.swagger.v3.oas.models.media.Schema;
 
 import java.util.*;
 
-import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
+import static agora.beet.main.GenerateInstrumentation.*;
+import static agora.beet.main.GenerateInstrumentation.HIERARCHY_SEPARATOR;
 import static agora.beet.variable.VariableUtils.translateDatatype;
 
 /**
@@ -29,7 +29,7 @@ public class NestedPpts {
             // Get the schema as ArraySchema
             ArraySchema arraySchema = (ArraySchema) mediaType.getSchema();
             // nameSuffix = parentVariable
-            String nameSuffix = ".array";
+            String nameSuffix = ARRAY_NESTING_SEPARATOR + "array";
 
             while(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {
                 DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
@@ -43,7 +43,7 @@ public class NestedPpts {
                 } else {
                     mapOfProperties = arraySchema.getItems();
                 }
-                nameSuffix = nameSuffix + ".array";
+                nameSuffix = nameSuffix + ARRAY_NESTING_SEPARATOR + "array";
             }
 
         } else if(parameterType !=null && primitiveTypes.contains(translateDatatype(parameterType))) {
@@ -63,10 +63,6 @@ public class NestedPpts {
             for(String nameSuffix: allSchemas.keySet()) {
                 if(allSchemas.get(nameSuffix).getProperties()==null){       // If the element is of type array, call the constructor that receives an ArraySchema
                     ArraySchema arraySchema = (ArraySchema) allSchemas.get(nameSuffix);
-                    // OLD
-//                    DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
-//                            arraySchema, nameSuffix, statusCode);
-                    // NEW
                     DeclsExit declsExit = new DeclsExit(endpoint, operationName, variableNameInput, enterVariables, outputObjectName,
                             arraySchema, nameSuffix, nameSuffix, statusCode);
                     res.add(declsExit);
@@ -110,14 +106,14 @@ public class NestedPpts {
                 } else if(parameterType.equalsIgnoreCase(ARRAY_TYPE_NAME)) {    // If array
                     ArraySchema arraySchema = (ArraySchema) mapOfProperties.getProperties().get(parameterName);
                     String itemsDatatype = arraySchema.getItems().getType();
-                    String nestingSuffix = ".array";
+                    StringBuilder nestingSuffix = new StringBuilder(ARRAY_NESTING_SEPARATOR + "array");
 
                     // If there is an allOf, parameterType is null, but the schema contains all the properties
                     while(itemsDatatype != null && itemsDatatype.equals(ARRAY_TYPE_NAME)) {
                         arraySchema = (ArraySchema) arraySchema.getItems();
                         res.put(nameSuffix + HIERARCHY_SEPARATOR + parameterName + nestingSuffix, arraySchema);
                         itemsDatatype = arraySchema.getItems().getType();
-                        nestingSuffix = nestingSuffix + ".array";
+                        nestingSuffix.append(ARRAY_NESTING_SEPARATOR).append("array");
                     }
 
                     // If there is an allOf, parameterType is null, but the schema contains all the properties

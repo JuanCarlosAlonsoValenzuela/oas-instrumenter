@@ -5,7 +5,7 @@ input
 input.doubleInQuery
 1.0
 1
-input.stringInPath
+input.string&In&Path
 "stringInPathValue"
 1
 input.integerInHeader
@@ -22,7 +22,7 @@ input
 input.doubleInQuery
 1.0
 1
-input.stringInPath
+input.string&In&Path
 "stringInPathValue"
 1
 input.integerInHeader

@@ -1,4 +1,4 @@
-/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::ENTER
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200%array():::ENTER
 input
 962305817
 1
@@ -6,7 +6,7 @@ input.inputParameter
 "parameterValue"
 1
 
-/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::EXIT1
+/exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200%array():::EXIT1
 input
 962305817
 1
@@ -17,7 +17,7 @@ return
 1316850733
 1
 return.array
-1328792094
+1311834969
 1
 return.array[..]
 [994190832 994190863]
@@ -44,7 +44,7 @@ return
 return.property1
 "firstValueOfProperty1"
 1
-return.property2
+return.property&2
 "firstValueOfProperty2"
 1
 
@@ -69,6 +69,6 @@ return
 return.property1
 "secondValueOfProperty1"
 1
-return.property2
+return.property&2
 "secondValueOfProperty2"
 1

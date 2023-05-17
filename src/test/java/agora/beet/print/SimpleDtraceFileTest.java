@@ -1,6 +1,6 @@
 package agora.beet.print;
 
-import agora.beet.main.GenerateDeclsFile;
+import agora.beet.main.GenerateInstrumentation;
 import agora.beet.model.*;
 import agora.beet.util.CSVManager;
 import agora.beet.util.TestCaseFileManager;
@@ -25,10 +25,10 @@ public class SimpleDtraceFileTest {
 
     @Test
     public void testPrintSimpleDtraceFile() {
-        GenerateDeclsFile.deleteAllDeclsClasses();
-        GenerateDeclsFile.numberOfExits = 1;
+        GenerateInstrumentation.deleteAllDeclsClasses();
+        GenerateInstrumentation.numberOfExits = 1;
 
-        GenerateDeclsFile.deleteAllDeclsClasses();
+        GenerateInstrumentation.deleteAllDeclsClasses();
 
         String oasPath = "src/main/resources/AirportInfo/OpenAPISpec.yaml";
         String testCasesFilePath = "src/test/resources/airportInfo/testCases_simplified.csv";
@@ -51,10 +51,10 @@ public class SimpleDtraceFileTest {
                 String operationEndpoint = path.getKey();
 
                 // Set the operation name for the .decls file
-                String operationName = GenerateDeclsFile.getOperationName(operation, operationEntry, operationEndpoint);
+                String operationName = GenerateInstrumentation.getOperationName(operation, operationEntry, operationEndpoint);
 
                 // Extracting the input parameters
-                String objectName = operationName + GenerateDeclsFile.HIERARCHY_SEPARATOR + "Input";
+                String objectName = operationName + GenerateInstrumentation.HIERARCHY_SEPARATOR + "Input";
 
                 // Extracting enter and exits
                 DeclsClass.setDeclsClassEnterAndExit(operationEndpoint, operationName,
@@ -64,7 +64,7 @@ public class SimpleDtraceFileTest {
 
         }
 
-        DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, GenerateDeclsFile.getAllDeclsClasses());
+        DeclsFile declsFile = new DeclsFile(2.0, Comparability.implicit, GenerateInstrumentation.getAllDeclsClasses());
 
         try {
             // Generate dTrace file
@@ -91,7 +91,7 @@ public class SimpleDtraceFileTest {
 
                         // Checks in ENTER
                         String[] enterDtraceLines = declsEnter.generateDtrace(testCase).split("\n");
-                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::ENTER", enterDtraceLines[0]);
+                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "findAirports" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "200():::ENTER", enterDtraceLines[0]);
                         assertEquals("Incorrect wrapper name", "input", enterDtraceLines[1]);
                         assertTrue(enterDtraceLines[2].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", enterDtraceLines[3]);
@@ -118,7 +118,7 @@ public class SimpleDtraceFileTest {
                         String[] exitDtraceLines = declsExit.generateDtrace(testCase, declsEnter).split("\n");
 
                         // Checks in ENTER
-                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::ENTER", exitDtraceLines[0]);
+                        Assert.assertEquals("Incorrect enter name", "/airport" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "findAirports" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "200():::ENTER", exitDtraceLines[0]);
                         assertEquals("Incorrect wrapper name", "input", exitDtraceLines[1]);
                         assertTrue(exitDtraceLines[2].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[3]);
@@ -134,7 +134,7 @@ public class SimpleDtraceFileTest {
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[9]);
 
 
-                        Assert.assertEquals("Incorrect exit name", "/airport" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "findAirports" + GenerateDeclsFile.HIERARCHY_SEPARATOR + "200():::EXIT1", exitDtraceLines[11]);
+                        Assert.assertEquals("Incorrect exit name", "/airport" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "findAirports" + GenerateInstrumentation.HIERARCHY_SEPARATOR + "200():::EXIT1", exitDtraceLines[11]);
                         assertEquals("Incorrect wrapper name", "input", exitDtraceLines[12]);
                         assertTrue(exitDtraceLines[13].matches("^\\d+$"));
                         assertEquals("Incorrect end of trace", "1", exitDtraceLines[14]);

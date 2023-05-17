@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -70,7 +70,7 @@ public class ArrayExitTest {
                 // OBJECT (ONLY EXIT)
                 // EXIT 1
                 DeclsExit declsExit1 = declsClassEnterAndExit.getDeclsExits().get(0);
-                String exitName1 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200.array()";
+                String exitName1 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + ARRAY_NESTING_SEPARATOR + "array()";
                 assertEquals("Incorrect exit name", exitName1, declsExit1.getExitName());
 
                 // VARIABLES
@@ -90,7 +90,7 @@ public class ArrayExitTest {
                 DeclsVariable exitDeclsFatherVariable1 = declsExit1.getExitDeclsVariables();
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable1.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable1.getVarKind());
-                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array", exitDeclsFatherVariable1.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200" + ARRAY_NESTING_SEPARATOR + "array", exitDeclsFatherVariable1.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable1.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable1.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable1.isArray());

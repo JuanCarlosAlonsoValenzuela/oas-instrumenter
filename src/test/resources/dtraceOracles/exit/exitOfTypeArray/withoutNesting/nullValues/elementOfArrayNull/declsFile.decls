@@ -4,7 +4,7 @@ var-comparability implicit
 ppt /exitOfTypeArrayEndpoint:::CLASS
 ppt-type class
 
-ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::ENTER
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -28,7 +28,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200.array():::EXIT1
+ppt /exitOfTypeArrayEndpoint&exitOfTypeArrayEndpoint&200%array():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
@@ -41,7 +41,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeArrayEndpoint&Output&200.array
+	dec-type exitOfTypeArrayEndpoint&Output&200%array
 	rep-type hashcode
 variable return.array
 	var-kind field array
@@ -75,8 +75,8 @@ variable return.property1
 	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable return.property2
-	var-kind field property2
+variable return.property&2
+	var-kind field property&2
 	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String

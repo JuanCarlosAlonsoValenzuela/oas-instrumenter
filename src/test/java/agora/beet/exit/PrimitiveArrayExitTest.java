@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;

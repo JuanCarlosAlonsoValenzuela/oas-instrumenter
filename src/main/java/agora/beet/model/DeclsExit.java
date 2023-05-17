@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
-import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArray;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArrayExit;
 import static agora.beet.variable.ExitVariables.*;
 
@@ -194,7 +193,7 @@ public class DeclsExit {
             if(this.isNestedArray) {    // (Bad practice) If the response is parseable to array and the exit is of type nestedArray
                 // Count the number of arrays (Nesting level)
                 int targetNestingLevel = (int) Arrays
-                        .stream(this.getNameSuffix().split("\\."))
+                        .stream(this.getNameSuffix().split(ARRAY_NESTING_SEPARATOR))
                         .filter(x-> x.equalsIgnoreCase("array"))
                         .count();
                 // Count the number of arrays corresponding to the number of .arrays and return the dtrace
@@ -231,7 +230,7 @@ public class DeclsExit {
 
     }
 
-    private String generateSingleDtraceEnterAndExit(List<JSONObject> jsonObjectList, TestCase testCase, DeclsEnter declsEnter){
+    private String generateSingleDtraceEnterAndExit(List<JSONObject> jsonObjectList, TestCase testCase, DeclsEnter declsEnter) {
         StringBuilder res = new StringBuilder();
 
         for(JSONObject json: jsonObjectList) {

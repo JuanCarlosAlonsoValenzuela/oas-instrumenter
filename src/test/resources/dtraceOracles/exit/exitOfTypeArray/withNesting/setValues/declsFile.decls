@@ -4,7 +4,7 @@ var-comparability implicit
 ppt /exitOfTypeNestedArrayEndpoint:::CLASS
 ppt-type class
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array():::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -16,7 +16,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array.array():::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -28,7 +28,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array.array.array():::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array%array%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -52,7 +52,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array():::EXIT1
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array():::EXIT1
 ppt-type subexit
 variable input
 	var-kind variable
@@ -65,7 +65,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeNestedArrayEndpoint&Output&200.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200%array
 	rep-type hashcode
 variable return.array
 	var-kind field array
@@ -79,7 +79,7 @@ variable return.array[..]
 	dec-type array[]
 	rep-type hashcode[]
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array.array():::EXIT2
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array%array():::EXIT2
 ppt-type subexit
 variable input
 	var-kind variable
@@ -92,7 +92,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeNestedArrayEndpoint&Output&200.array.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200%array%array
 	rep-type hashcode
 variable return.array
 	var-kind field array
@@ -106,7 +106,7 @@ variable return.array[..]
 	dec-type array[]
 	rep-type hashcode[]
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200.array.array.array():::EXIT3
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200%array%array%array():::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
@@ -119,7 +119,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeNestedArrayEndpoint&Output&200.array.array.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200%array%array%array
 	rep-type hashcode
 variable return.array
 	var-kind field array

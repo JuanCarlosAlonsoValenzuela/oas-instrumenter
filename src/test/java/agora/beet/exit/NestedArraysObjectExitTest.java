@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -123,12 +123,12 @@ public class NestedArraysObjectExitTest {
                 assertTrue("This variable should be an array", location2.isArray());
                 assertEquals("Unexpected number of son variables", 0, location2.getEnclosedVariables().size());
 
-                String repeatedArray = ".array";
+                String repeatedArray = ARRAY_NESTING_SEPARATOR + "array";
 
                 exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" +
                         repeatedArray + "()";
 
-                DeclsExit declsExit = declsExits.get(1);
+                DeclsExit declsExit = declsExits.get(3);
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
 
                 // VARIABLES
@@ -176,12 +176,12 @@ public class NestedArraysObjectExitTest {
                 assertTrue("This variable should be an array", array2.isArray());
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
 
-                repeatedArray = ".array.array";
+                repeatedArray = ARRAY_NESTING_SEPARATOR + "array" + ARRAY_NESTING_SEPARATOR + "array";
 
                 exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations" +
                         repeatedArray + "()";
 
-                declsExit = declsExits.get(3);
+                declsExit = declsExits.get(2);
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
 
                 // VARIABLES
@@ -230,7 +230,7 @@ public class NestedArraysObjectExitTest {
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
 
 
-                DeclsExit finalDeclsExit = declsExits.get(2);
+                DeclsExit finalDeclsExit = declsExits.get(1);
                 exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" +
                         HIERARCHY_SEPARATOR + "locations" + "()";
                 assertEquals("Incorrect exit name", exitName, finalDeclsExit.getExitName());
@@ -398,7 +398,7 @@ public class NestedArraysObjectExitTest {
                 assertTrue("This variable should be an array", location2.isArray());
                 assertEquals("Unexpected number of son variables", 0, location2.getEnclosedVariables().size());
 
-                String repeatedArray = ".array.array";
+                String repeatedArray = ARRAY_NESTING_SEPARATOR + "array" + ARRAY_NESTING_SEPARATOR + "array";
 
                 exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations.data" +
                         repeatedArray + "()";
@@ -451,7 +451,7 @@ public class NestedArraysObjectExitTest {
                 assertTrue("This variable should be an array", array2.isArray());
                 assertEquals("Unexpected number of son variables", 0, array2.getEnclosedVariables().size());
 
-                repeatedArray = ".array";
+                repeatedArray = ARRAY_NESTING_SEPARATOR + "array";
 
                 exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + HIERARCHY_SEPARATOR + "locations.data" +
                         repeatedArray + "()";

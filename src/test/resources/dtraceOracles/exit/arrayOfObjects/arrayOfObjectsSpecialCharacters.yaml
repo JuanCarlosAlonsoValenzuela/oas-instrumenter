@@ -19,11 +19,11 @@ security:
   - "API Key": []
 
 paths:
-  '/objectExitEndpoint':
+  '/arrayOfObjectsEndpoint':
     x-summary: SampleEndpoint
     get:
       summary: Sample endpoint exit of type object
-      operationId: objectExitEndpoint
+      operationId: arrayOfObjectsEndpoint
       description: Get sample results
       produces:
         - application/json
@@ -45,37 +45,12 @@ definitions:
     properties:
       stringProperty:
         type: string
-      objectProperty:
-        type: object
-        properties:
-          arrayStringProperty:
-            type: array
-            items:
+      array.Of.Objects.Property:
+        type: array
+        items:
+          type: object
+          properties:
+            property.1:
               type: string
-          subObjectProperty:
-            type: object
-            properties:
-              stringProperty:
-                type: string
-              arrayDoubleProperty:
-                type: array
-                items:
-                  type: number  # double
-      object.specialchar:
-        type: object
-        properties:
-          string.property:
-            type: string
-          array.string.property:
-            type: array
-            items:
+            property.2:
               type: string
-          nested.object:
-            type: object
-            properties:
-              nested.double:
-                type: number
-              nested.array.double:
-                type: array
-                items:
-                  type: number

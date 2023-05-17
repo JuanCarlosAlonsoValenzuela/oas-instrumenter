@@ -36,8 +36,8 @@ variable return.stringProperty
 	enclosing-var return
 	dec-type java.lang.String
 	rep-type java.lang.String
-variable return.doubleProperty
-	var-kind field doubleProperty
+variable return.double&Property
+	var-kind field double&Property
 	enclosing-var return
 	dec-type double
 	rep-type double
@@ -46,8 +46,8 @@ variable return.integerProperty
 	enclosing-var return
 	dec-type int
 	rep-type int
-variable return.booleanProperty
-	var-kind field booleanProperty
+variable return.boolean&Property
+	var-kind field boolean&Property
 	enclosing-var return
 	dec-type boolean
 	rep-type boolean

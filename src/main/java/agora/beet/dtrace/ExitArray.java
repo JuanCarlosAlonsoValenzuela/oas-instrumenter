@@ -6,8 +6,8 @@ import org.json.simple.JSONArray;
 
 import java.util.Arrays;
 
-import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
+import static agora.beet.main.GenerateInstrumentation.*;
+import static agora.beet.main.GenerateInstrumentation.HIERARCHY_SEPARATOR;
 
 /**
  * @author Juan C. Alonso

@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -70,7 +70,7 @@ public class NestedArraysResponseExit {
                 List<DeclsExit> declsExits = declsClassEnterAndExit.getDeclsExits();
 
                 for(int i = 0; i < 3; i++) {
-                    String repeatedArray = new String(new char[i+1]).replace("\0", ".array");
+                    String repeatedArray = new String(new char[i+1]).replace("\0", ARRAY_NESTING_SEPARATOR + "array");
                     String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" +
                             repeatedArray + "()";
 
@@ -226,7 +226,7 @@ public class NestedArraysResponseExit {
                 List<DeclsExit> declsExits = declsClassEnterAndExit.getDeclsExits();
 
                 for(int i = 0; i < 2; i++) {
-                    String repeatedArray = new String(new char[i+1]).replace("\0", ".array");
+                    String repeatedArray = new String(new char[i+1]).replace("\0", ARRAY_NESTING_SEPARATOR + "array");
                     String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" +
                             repeatedArray + "()";
 
@@ -282,7 +282,8 @@ public class NestedArraysResponseExit {
 
                 DeclsExit declsExit = declsExits.get(2);
 
-                String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200.array.array.array()";
+                String exitName = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR +
+                        "200" + ARRAY_NESTING_SEPARATOR + "array" + ARRAY_NESTING_SEPARATOR + "array" + ARRAY_NESTING_SEPARATOR + "array()";
                 assertEquals("Incorrect exit name", exitName, declsExit.getExitName());
 
                 // VARIABLES
@@ -303,7 +304,9 @@ public class NestedArraysResponseExit {
                 // Father
                 assertEquals("Incorrect variable name", "return", exitDeclsFatherVariable.getVariableName());
                 assertEquals("Incorrect var-kind", "return", exitDeclsFatherVariable.getVarKind());
-                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" + HIERARCHY_SEPARATOR + "200.array.array.array", exitDeclsFatherVariable.getDecType());
+                assertEquals("Incorrect decType", "v1Name" + HIERARCHY_SEPARATOR + "Output" +
+                        HIERARCHY_SEPARATOR + "200" + ARRAY_NESTING_SEPARATOR + "array" + ARRAY_NESTING_SEPARATOR +
+                        "array" + ARRAY_NESTING_SEPARATOR + "array", exitDeclsFatherVariable.getDecType());
                 assertEquals("Incorrect repType", "hashcode", exitDeclsFatherVariable.getRepType());
                 assertNull("The enclosing var should be null", exitDeclsFatherVariable.getEnclosingVar());
                 assertFalse("This variable should not be an array", exitDeclsFatherVariable.isArray());

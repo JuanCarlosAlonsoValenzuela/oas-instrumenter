@@ -24,15 +24,16 @@ import java.util.stream.Collectors;
 /**
  * @author Juan C. Alonso
  */
-public class GenerateDeclsFile {
+public class GenerateInstrumentation {
 
-    private static String openApiSpecPath = "src/test/resources/sampleAPI/swagger_test.yaml";
-    private static String testCasesFilePath = "src/test/resources/evaluationOracles/Spotify/createPlaylist/50/Spotify_CreatePlaylist_50.csv";
-    private static boolean generateDtrace = false;
+    private static String openApiSpecPath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/arrayOfObjectsSpecialCharacters.yaml";
+    private static String testCasesFilePath = "src/test/resources/dtraceOracles/exit/arrayOfObjects/specialCharacters/testCase_arrayOfObjectsSpecialCharacters.csv";
+    private static boolean generateDtrace = true;
 
     public static String[] stringsToConsiderAsNull = {};
     public static String HIERARCHY_SEPARATOR = "&";
-    public static int bufferSize = 20; // This number will be multiplied by 1024
+    public static String ARRAY_NESTING_SEPARATOR = "%";
+    public static int bufferSize = 20;
 
     public static int numberOfExits = 1;
 

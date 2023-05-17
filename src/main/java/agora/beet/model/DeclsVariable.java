@@ -9,8 +9,9 @@ import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
 import static agora.beet.dtrace.ParameterValues.getValueOfParameterForDtraceFile;
 import static agora.beet.dtrace.VariableValues.getArrayFromHierarchy;
 import static agora.beet.dtrace.VariableValues.getPrimitiveValueFromHierarchy;
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.util.TestCaseFileManager.removeNewLineChars;
+import static agora.beet.variable.VariableUtils.decodeVariableName;
 import static agora.beet.variable.VariableUtils.encodeVariableName;
 
 /**
@@ -258,7 +259,7 @@ public class DeclsVariable {
         for(DeclsVariable declsVariable: this.getEnclosedVariables()) {
             if(varKind.equals(ARRAY_TYPE_NAME)) {
                 List<String> hierarchy = Arrays.asList(this.variableName.replace("[..]", "").split("\\."));
-                String key = hierarchy.get(hierarchy.size()-1);
+                String key = decodeVariableName(hierarchy.get(hierarchy.size()-1));
                 JSONArray elements = (JSONArray) json.get(key);
 
                 for(int i=0; i<elements.size(); i++) {

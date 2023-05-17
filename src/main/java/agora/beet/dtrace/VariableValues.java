@@ -5,6 +5,8 @@ import org.json.simple.JSONObject;
 
 import java.util.List;
 
+import static agora.beet.variable.VariableUtils.decodeVariableName;
+
 /**
  * @author Juan C. Alonso
  */
@@ -13,7 +15,7 @@ public class VariableValues {
     // This class contains functions related to both input and output
 
     public static String getPrimitiveValueFromHierarchy(JSONObject json, List<String> hierarchy) {
-        String key = hierarchy.get(0);
+        String key = decodeVariableName(hierarchy.get(0));
 
         if(hierarchy.size() == 1) {
 
@@ -38,7 +40,7 @@ public class VariableValues {
     }
 
     public static JSONArray getArrayFromHierarchy(JSONObject json, List<String> hierarchy) {
-        String key = hierarchy.get(0);
+        String key = decodeVariableName(hierarchy.get(0));
 
         if(hierarchy.size() ==1){
             return (JSONArray) json.get(key);

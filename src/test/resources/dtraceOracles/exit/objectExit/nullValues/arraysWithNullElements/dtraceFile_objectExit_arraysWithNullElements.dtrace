@@ -40,3 +40,27 @@ return.objectProperty.subObjectProperty.arrayDoubleProperty
 return.objectProperty.subObjectProperty.arrayDoubleProperty[..]
 [2.0 null]
 1
+return.object&specialchar
+1261379341
+1
+return.object&specialchar.string&property
+"String.value"
+1
+return.object&specialchar.array&string&property
+438884516
+1
+return.object&specialchar.array&string&property[..]
+["value.1" null]
+1
+return.object&specialchar.nested&object
+1956728751
+1
+return.object&specialchar.nested&object.nested&double
+1.0
+1
+return.object&specialchar.nested&object.nested&array&double
+329695500
+1
+return.object&specialchar.nested&object.nested&array&double[..]
+[null 3.0]
+1

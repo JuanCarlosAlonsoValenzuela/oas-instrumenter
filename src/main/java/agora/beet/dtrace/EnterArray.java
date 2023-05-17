@@ -5,7 +5,7 @@ import agora.beet.util.JSONManager;
 import org.json.simple.JSONArray;
 
 import static agora.beet.dtrace.ExitArray.generateDtraceExitValueOfJSONArray;
-import static agora.beet.main.GenerateDeclsFile.STRING_TYPE_NAME;
+import static agora.beet.main.GenerateInstrumentation.STRING_TYPE_NAME;
 
 /**
  * @author Juan C. Alonso

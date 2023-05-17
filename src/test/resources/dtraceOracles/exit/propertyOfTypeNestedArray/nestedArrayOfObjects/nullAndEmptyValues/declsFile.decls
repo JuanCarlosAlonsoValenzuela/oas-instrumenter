@@ -28,7 +28,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -40,7 +40,7 @@ variable input.inputParameter
 	dec-type java.lang.String
 	rep-type java.lang.String
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::ENTER
 ppt-type enter
 variable input
 	var-kind variable
@@ -105,7 +105,7 @@ variable return.propertyOfArray
 	dec-type double
 	rep-type double
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::EXIT3
 ppt-type subexit
 variable input
 	var-kind variable
@@ -118,7 +118,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty%array
 	rep-type hashcode
 variable return.array
 	var-kind field array
@@ -132,7 +132,7 @@ variable return.array[..]
 	dec-type array[]
 	rep-type hashcode[]
 
-ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
+ppt /exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::EXIT4
 ppt-type subexit
 variable input
 	var-kind variable
@@ -145,7 +145,7 @@ variable input.inputParameter
 	rep-type java.lang.String
 variable return
 	var-kind return
-	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty.array
+	dec-type exitOfTypeNestedArrayEndpoint&Output&200&nestedArrayProperty%array%array
 	rep-type hashcode
 variable return.array
 	var-kind field array

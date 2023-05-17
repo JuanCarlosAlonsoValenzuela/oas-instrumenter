@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.Collections;
 
-import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
+import static agora.beet.main.GenerateInstrumentation.HIERARCHY_SEPARATOR;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 

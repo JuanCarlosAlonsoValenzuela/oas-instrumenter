@@ -15,8 +15,8 @@ variable input.doubleInQuery
 	enclosing-var input
 	dec-type double
 	rep-type double
-variable input.stringInPath
-	var-kind field stringInPath
+variable input.string&In&Path
+	var-kind field string&In&Path
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String
@@ -42,8 +42,8 @@ variable input.doubleInQuery
 	enclosing-var input
 	dec-type double
 	rep-type double
-variable input.stringInPath
-	var-kind field stringInPath
+variable input.string&In&Path
+	var-kind field string&In&Path
 	enclosing-var input
 	dec-type java.lang.String
 	rep-type java.lang.String

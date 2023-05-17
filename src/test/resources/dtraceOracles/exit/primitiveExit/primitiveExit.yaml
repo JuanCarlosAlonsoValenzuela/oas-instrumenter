@@ -45,9 +45,9 @@ definitions:
     properties:
       stringProperty:
         type: string
-      doubleProperty:
+      double.Property:
         type: number # double
       integerProperty:
         type: integer # int
-      booleanProperty:
+      boolean.Property:
         type: boolean

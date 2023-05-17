@@ -19,12 +19,12 @@ return
 return.stringProperty
 null
 1
-return.doubleProperty
+return.double&Property
 nonsensical
 2
 return.integerProperty
 nonsensical
 2
-return.booleanProperty
+return.boolean&Property
 nonsensical
 2

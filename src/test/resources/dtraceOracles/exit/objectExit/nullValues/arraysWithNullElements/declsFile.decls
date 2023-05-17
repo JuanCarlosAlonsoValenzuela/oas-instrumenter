@@ -73,4 +73,46 @@ variable return.objectProperty.subObjectProperty.arrayDoubleProperty[..]
 	array 1
 	dec-type double[]
 	rep-type double[]
+variable return.object&specialchar
+	var-kind field object&specialchar
+	enclosing-var return
+	dec-type objectExitEndpoint&Output&200&object&specialchar
+	rep-type hashcode
+variable return.object&specialchar.string&property
+	var-kind field string&property
+	enclosing-var return.object&specialchar
+	dec-type java.lang.String
+	rep-type java.lang.String
+variable return.object&specialchar.array&string&property
+	var-kind field array&string&property
+	enclosing-var return.object&specialchar
+	dec-type java.lang.String[]
+	rep-type hashcode
+variable return.object&specialchar.array&string&property[..]
+	var-kind array
+	enclosing-var return.object&specialchar.array&string&property
+	array 1
+	dec-type java.lang.String[]
+	rep-type java.lang.String[]
+variable return.object&specialchar.nested&object
+	var-kind field nested&object
+	enclosing-var return.object&specialchar
+	dec-type objectExitEndpoint&Output&200&nested&object
+	rep-type hashcode
+variable return.object&specialchar.nested&object.nested&double
+	var-kind field nested&double
+	enclosing-var return.object&specialchar.nested&object
+	dec-type double
+	rep-type double
+variable return.object&specialchar.nested&object.nested&array&double
+	var-kind field nested&array&double
+	enclosing-var return.object&specialchar.nested&object
+	dec-type double[]
+	rep-type hashcode
+variable return.object&specialchar.nested&object.nested&array&double[..]
+	var-kind array
+	enclosing-var return.object&specialchar.nested&object.nested&array&double
+	array 1
+	dec-type double[]
+	rep-type double[]
 

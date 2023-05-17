@@ -14,7 +14,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Map;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.model.DeclsClass.setDeclsClassEnterAndExit;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -69,7 +69,7 @@ public class EnterReadParametersFromPathAndFormTest {
 
                 // OBJECT 1 (ONLY ENTER)
                 DeclsEnter declsEnter1 = declsClassEnterAndExit.getDeclsEnters().get(0);
-                String enterName1 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200.array()";
+                String enterName1 = operationEndpoint + HIERARCHY_SEPARATOR + operationName + HIERARCHY_SEPARATOR + "200" + ARRAY_NESTING_SEPARATOR + "array()";
 
                 assertEquals("Incorrect enter name", enterName1, declsEnter1.getEnterName());
 

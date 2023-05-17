@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.HASHCODE_TYPE_NAME;
+import static agora.beet.main.GenerateInstrumentation.*;
+import static agora.beet.main.GenerateInstrumentation.HASHCODE_TYPE_NAME;
 import static agora.beet.variable.ArrayVariables.generateDeclsVariablesOfArray;
 import static agora.beet.variable.ArrayVariables.getDeclsVariablesArray;
 import static agora.beet.variable.ExitVariables.generateDeclsVariablesOfExit;

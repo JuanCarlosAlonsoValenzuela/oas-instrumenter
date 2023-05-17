@@ -9,10 +9,9 @@ import org.json.simple.JSONObject;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static agora.beet.main.GenerateDeclsFile.*;
+import static agora.beet.main.GenerateInstrumentation.*;
 import static agora.beet.variable.NestedArrays.getDeclsVariablesOfNestedArray;
-import static agora.beet.variable.VariableUtils.encodeVariableName;
-import static agora.beet.variable.VariableUtils.translateDatatype;
+import static agora.beet.variable.VariableUtils.*;
 
 /**
  * @author Juan C. Alonso
@@ -113,14 +112,14 @@ public class ExitVariables {
 
         List<Object> res = new ArrayList<>();
 
-        String element = elementRoute.get(0);
+        String element = decodeVariableName(elementRoute.get(0));
 
         if(json == null) {
             throw new NullPointerException("The response of the test case cannot be null");
         }
 
         // If the target element is a nested array
-        List<String> elementArrayRoute = Arrays.stream(element.split("\\."))
+        List<String> elementArrayRoute = Arrays.stream(element.split(ARRAY_NESTING_SEPARATOR))
                 .filter(e -> e.trim().length() > 0)
                 .collect(Collectors.toList());
         // If the target element is a nested array
@@ -129,7 +128,7 @@ public class ExitVariables {
             JSONArray jsonArray = (JSONArray) json.get(elementArrayRoute.get(0));
             // We increase the targetNestingLevel by one because the first level of nesting is already present in the father exit
             int targetNestingLevel = (int) Arrays
-                    .stream(element.split("\\."))
+                    .stream(element.split(ARRAY_NESTING_SEPARATOR))
                     .filter(x->x.equalsIgnoreCase("array"))
                     .count() + 1;
             List<JSONArray> jsonArraysToGenerateDtrace = ArrayNestingManager

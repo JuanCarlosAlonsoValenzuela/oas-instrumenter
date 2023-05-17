@@ -5,7 +5,7 @@ input
 input.doubleInQuery
 nonsensical
 2
-input.stringInPath
+input.string&In&Path
 null
 1
 input.integerInHeader
@@ -22,7 +22,7 @@ input
 input.doubleInQuery
 nonsensical
 2
-input.stringInPath
+input.string&In&Path
 null
 1
 input.integerInHeader

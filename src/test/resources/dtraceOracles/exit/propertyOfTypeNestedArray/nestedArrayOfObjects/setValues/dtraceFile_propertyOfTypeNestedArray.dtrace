@@ -114,7 +114,7 @@ return.propertyOfArray
 4.0
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::ENTER
 input
 70355935
 1
@@ -122,7 +122,7 @@ input.inputParameter
 "parameterValue"
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::EXIT3
 input
 70355935
 1
@@ -133,13 +133,13 @@ return
 2130202356
 1
 return.array
-1993039049
+339711541
 1
 return.array[..]
 [1244689128 1244689159]
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::ENTER
 input
 70355935
 1
@@ -147,7 +147,7 @@ input.inputParameter
 "parameterValue"
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array():::EXIT3
 input
 70355935
 1
@@ -158,13 +158,13 @@ return
 2130202356
 1
 return.array
-1993039049
+339711541
 1
 return.array[..]
 [1244689128]
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::ENTER
 input
 70355935
 1
@@ -172,7 +172,7 @@ input.inputParameter
 "parameterValue"
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array.array():::EXIT3
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::EXIT4
 input
 70355935
 1
@@ -183,38 +183,13 @@ return
 2130202356
 1
 return.array
-1993039049
-1
-return.array[..]
-[1244689128]
-1
-
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
-input
-70355935
-1
-input.inputParameter
-"parameterValue"
-1
-
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
-input
-70355935
-1
-input.inputParameter
-"parameterValue"
-1
-return
-2130202356
-1
-return.array
-1314628692
+650988937
 1
 return.array[..]
 [1244689128 1244689159]
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::ENTER
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::ENTER
 input
 70355935
 1
@@ -222,7 +197,7 @@ input.inputParameter
 "parameterValue"
 1
 
-/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty.array():::EXIT4
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::EXIT4
 input
 70355935
 1
@@ -233,7 +208,32 @@ return
 2130202356
 1
 return.array
-1314628692
+650988937
+1
+return.array[..]
+[1244689128]
+1
+
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::ENTER
+input
+70355935
+1
+input.inputParameter
+"parameterValue"
+1
+
+/exitOfTypeNestedArrayEndpoint&exitOfTypeNestedArrayEndpoint&200&nestedArrayProperty%array%array():::EXIT4
+input
+70355935
+1
+input.inputParameter
+"parameterValue"
+1
+return
+2130202356
+1
+return.array
+650988937
 1
 return.array[..]
 [1244689128]

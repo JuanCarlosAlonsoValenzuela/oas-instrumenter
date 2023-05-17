@@ -9,10 +9,11 @@ import java.util.Map;
 
 import static agora.beet.dtrace.EnterArray.generateDtraceEnterValueOfArray;
 import static agora.beet.dtrace.VariableValues.getPrimitiveValueFromHierarchy;
-import static agora.beet.main.GenerateDeclsFile.*;
-import static agora.beet.main.GenerateDeclsFile.HIERARCHY_SEPARATOR;
+import static agora.beet.main.GenerateInstrumentation.*;
+import static agora.beet.main.GenerateInstrumentation.HIERARCHY_SEPARATOR;
 import static agora.beet.util.JSONManager.stringToJsonObject;
 import static agora.beet.util.StringManager.decodeString;
+import static agora.beet.variable.VariableUtils.decodeVariableName;
 
 /**
  * @author Juan C. Alonso
@@ -28,7 +29,7 @@ public class ParameterValues {
 
         String value = null;
 
-        String key = hierarchy.get(hierarchy.size()-1);
+        String key = decodeVariableName(hierarchy.get(hierarchy.size()-1));
         value = queryParametersValues.get(key);
         if(value == null) {
             value = pathParametersValues.get(key);
@@ -70,7 +71,7 @@ public class ParameterValues {
             if(hierarchy.size() > 1) {
                 value = getEnterParameterValue(testCase, hierarchy);
             } else {
-                value = variableName;
+                value = decodeVariableName(variableName);
             }
 
             if(repType.equals(STRING_TYPE_NAME) && value != null) {
