@@ -20,7 +20,7 @@ The image below shows an overview of AGORA, an approach for the automated genera
 
 As a result, Beet returns an instrumentation of the API requests consisting on a declaration file (describing the format of the API operations inputs and outputs) and a data trace file (specifying the values assigned to each input parameter and response field in each API call). This instrumentation is then processed by our customized version of Daikon, resulting in a set of likely invariants that can be potentially used as test oracles, once confirmed by the developer.
 
-![AGORA workflow](https://i.imgur.com/SdERJNS.png)
+![AGORA workflow](https://imgur.com/bOIIMyq.png)
 
 The following sections describe the functionality of Beet through a running example.
 
